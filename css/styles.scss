@@ -200,9 +200,17 @@ a.button:hover {
 }
 
 #footer {
-	height: 40px;
 	width: 100%;
 	background: #1c1f26;
+	padding: 20px 0 20px 0;
+}
+
+#footer p {
+	color: #aaa;
+	font-size: 12px;
+	line-height: 1em;
+	text-align: center;
+	margin-top: 5px;
 }
 
 .last a {
@@ -449,6 +457,10 @@ $start-opacity: 1;
 	opacity: $start-opacity;
 }
 
+.videoheader-container {
+	height: 100% !important;
+}
+
 video#bgvid {
 	position: absolute; left: 0; top: 0;
 	width: 100%; 
@@ -457,29 +469,29 @@ video#bgvid {
 	// z-index: -100;
 }
 
+$blurb-top: 60%;
 #blurb {
-	height: 100%;
+	position:relative;
+	top: $blurb-top;
+	width: 960px;
+	margin: 0 auto;
 }
 
-$blurb-top: 65%;
+
 #blurb .caption { 
 	color: white;
 	font: 30px "Oswald", Helvetica, Arial, sans-serif;
 	line-height: 1.1em;
-	position:relative;
-	top:$blurb-top;
 }
 
 .quote {
 	color: white;
-	margin: 30px 450px 0 0px;
+	margin: 30px 490px 0 0px;
 	font: "Merriweather", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.3em;
 	font-weight: 400;
 	font-style: italic;
-	position:relative;
-	top:$blurb-top;
 }
 
 .author {
@@ -490,30 +502,56 @@ $blurb-top: 65%;
 	line-height: 1.3em;
 	font-weight: 400;
 	font-style: italic;
-	position:relative;
-	top:$blurb-top;
 }
 
 #videocontrol {
 	color: white;
-	font: 20px "Oswald", Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	position:absolute;
-	top:85%;
-	margin-left: 10px;
+	margin-top: 30px;
+	display: block;
+	border: 1px solid #aaa;
+	width: 100px;
+	padding: 2px 10px 7px 10px;
 }
 
 #videocontrol a {
-	color: #868991;
+	display: block;
+	color: #aaa;
 	text-decoration: none;
+
+	// background: url(../img/playstop_off.png) 0 0 no-repeat;
+	// background-size: 20px auto;
 }
 
 #videocontrol a:visited {
-	color: #868991;
+	color: #aaa;
 }
 
 #videocontrol a:hover {
 	color: white;
+}
+
+#videocontrol img {
+	width: 20px;
+}
+
+.playbtn {
+	width: 20px;
+	margin: 12px 10px 0 5px;
+	// display: inline;
+	float: left;
+}
+
+#videocontrol p {
+	font: 20px "Oswald", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #aaa;
+	display: inline;
+	margin: -5px 0 0 10px;
+}
+
+#videocontrol .controllink {
+	// display: block;
+	// background: url(../img/playstop_off.png) 0 0 no-repeat; background-size: 20px;
 }
 
 
