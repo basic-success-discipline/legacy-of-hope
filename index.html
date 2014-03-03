@@ -23,16 +23,13 @@
 	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
 	<script type="text/javascript" src="js/jquery.nav.js"></script>
 	<script type="text/javascript">
-	
-
-	// $(window).on("canplay",function(event){
-	// 	console.log('canPlay');
-	//     if (active) {
-	//     	console.log('isactive');
-	//     	$('#bgvid')[0].play();
-	//     	$('#bgvid')
-	// 	}
-	// });
+		// $(window).on("canplay",function(event){
+		// 	console.log('canPlay');
+		//     if (active) {
+		//     	console.log('isactive');
+		//     	video[0].play();
+		// 	}
+		// });
 	</script>
 	
 </head>
@@ -313,6 +310,7 @@
 				<h5>Ben Vereen</h5>
 				<h5>Barbara Walters</h5>
 				<h5>Elie and Marion Wiesel</h5>
+				<h5>Dr. Sanjay Gupta</h5>
 			</div>
 			<div class="spacer">&nbsp;</div>
 		</div>		
@@ -401,6 +399,7 @@
 	<!--js stuff down here after the rest of the page has loaded-->
 	
 	<script type="text/javascript" src="js/device.min.js"></script>		
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
 	<script type="text/javascript">
 
     var iphone = false;
@@ -426,10 +425,28 @@
 	    }
 	})();
 
+	var videoPlayed = 'false';	
+
+	vis(function(){ // registers a handler for visibility changes
+		console.log('vis function');
+		videoPlayed = $.cookie('video_played');
+		console.log("cookie 'videoplayed': " + videoPlayed);
+		if (vis() && !active && videoPlayed != 'true') {
+			video[0].play();
+			active = true;
+		}
+		else {
+			video[0].pause();
+			active = false;
+		}
+	});
+
  	var active = vis(); 
 	var videobuilt = 0;
 	var video;
 	var videoPlaying = false;
+	videoPlayed = $.cookie('video_played');
+	console.log("cookie 'videoplayed': " + videoPlayed);
 	var now = 0, old = false;
 
 	function dimNavBar() {
@@ -440,16 +457,6 @@
 		$('#navbar').fadeTo(500, 1.0);  
 	}
 
-	vis(function(){ // registers a handler for visibility changes
-		if (vis() && !active) {
-			video.play();
-			active = true;
-		}
-		else {
-			video.pause();
-			active = false;
-		}
-	});
 
 	function buildVideo() {
 		if (videobuilt) return;
@@ -463,15 +470,6 @@
 
     	video = $('#bgvid');
     	video[0].volume = 1;
-
-	 //    video.on("canplay",function(event){
-		// 	console.log('canPlay');
-		//     if (active) {
-		//     	console.log('isactive');
-		//     	//video[0].volume = 0;
-		// 		video[0].play();
-		// 	}
-		// });
 
 		video.on("pause",function(event){
 			console.log('video paused');
@@ -489,6 +487,7 @@
 			fadeBlurbOut(500);
 			videoPlaying = true;
 			dimNavBar();
+			$.cookie('video_played', 'true', { expires: null });
 		});
 
 		video.on("ended",function(event){
@@ -508,10 +507,6 @@
     	$('#videoinner').html("");
     	videobuilt = 0;
     }
-
-    // $('#videoheader').click(function() {
-    // 	playPause();
-    // });
 
 
     function playPause() {
@@ -569,8 +564,7 @@
 	    }
 	});
 
-	
-	//$('#videoheader').click();
+	if (active && videoPlayed != 'true') video[0].play();
 
 	
 

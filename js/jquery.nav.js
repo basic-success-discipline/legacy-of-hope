@@ -116,7 +116,6 @@
 			
 			self.$nav.each(function() {
 				linkHref = self.getHash($(this));
-				window.console.log('linkHref: ' + linkHref);
 				topPos = $('#' + linkHref).offset().top;
 			
 				self.sections[linkHref] = Math.round(topPos) - self.config.scrollOffset;
