@@ -820,47 +820,47 @@
     }
 
 
-	// function buildVideo() {
-	// 	if (videobuilt) return;
-	// 	console.log("build video");
- //    	$('#videoinner').html("<video preload webkit-playsinline  poster=\"img/poster.jpg\" id=\"bgvid\">\n" +
-	//     	"<source src=\"videos/home.mp4\" type=\"video/mp4\">\n" +
-	//     	"<source src=\"videos/home.webm\" type=\"video/webm\">\n" +
-	//     	"</video>");
+	function buildVideo() {
+		if (videobuilt) return;
+		console.log("build video");
+    	$('#videoinner').html("<video preload webkit-playsinline  poster=\"img/poster.jpg\" id=\"bgvid\">\n" +
+	    	"<source src=\"videos/home.mp4\" type=\"video/mp4\">\n" +
+	    	"<source src=\"videos/home.webm\" type=\"video/webm\">\n" +
+	    	"</video>");
 
- //    	videobuilt = 1;
+    	videobuilt = 1;
 
- //    	video = $('#bgvid');
- //    	video[0].volume = 1;
+    	video = $('#bgvid');
+    	video[0].volume = 1;
 
-	// 	video.on("pause",function(event){
-	// 		console.log('video paused');
-	// 		if (iphone) fadeVideoOut(0);
-	// 		else fadeVideoOut(500);
-	// 		fadeBlurbIn(500);
-	// 		videoPlaying = false;
-	// 		showNavBar();
-	// 		video[0].currentTime = 0;
-	// 	});
+		video.on("pause",function(event){
+			console.log('video paused');
+			if (iphone) fadeVideoOut(0);
+			else fadeVideoOut(500);
+			fadeBlurbIn(500);
+			videoPlaying = false;
+			showNavBar();
+			video[0].currentTime = 0;
+		});
 
-	// 	video.on("playing",function(event){
-	// 		console.log('video playing');
-	// 		fadeVideoIn(500);
-	// 		fadeBlurbOut(500);
-	// 		videoPlaying = true;
-	// 		dimNavBar();
-	// 		$.cookie('video_played', 'true', { expires: null });
-	// 	});
+		video.on("playing",function(event){
+			console.log('video playing');
+			fadeVideoIn(500);
+			fadeBlurbOut(500);
+			videoPlaying = true;
+			dimNavBar();
+			$.cookie('video_played', 'true', { expires: null });
+		});
 
-	// 	video.on("ended",function(event){
-	// 		console.log('video ended');
-	// 		fadeVideoOut(iphone?0:1000);
-	// 		fadeBlurbIn(1250);
-	// 		videoPlaying = false;
-	// 		showNavBar();
-	// 		video[0].currentTime = 0;
-	// 	});
- //    }
+		video.on("ended",function(event){
+			console.log('video ended');
+			fadeVideoOut(iphone?0:1000);
+			fadeBlurbIn(1250);
+			videoPlaying = false;
+			showNavBar();
+			video[0].currentTime = 0;
+		});
+    }
 
 	function fadeVideoIn(duration) {
 	        $('#poster').fadeTo(duration, 0.0);
@@ -966,7 +966,7 @@
       });
 
 	$(document).ready(function(req, res) {
-	    //buildVideo();
+	    buildVideo();
 	 //    $(function() {
 		//     var BV = new $.BigVideo({useFlashForFirefox:false});
 		//     BV.init();
