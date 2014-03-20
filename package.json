@@ -1,0 +1,16 @@
+{
+  "name": "authserver",
+  "author": "Steve Sterling",
+  "homepage": "",
+  "description": "Legacy of Hope Concerts website",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~3.4.7",
+    "nodemailer": "~0.6.1",
+    "newrelic": "latest"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
