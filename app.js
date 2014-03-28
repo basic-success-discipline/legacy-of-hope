@@ -13,7 +13,7 @@ app.use(express.bodyParser());
 
 if ('development' === env) {
   	// Authenticator
-	app.use(express.basicAuth('testuser', 'lohc889'));
+	//app.use(express.basicAuth('testuser', 'lohc889'));
 
 	process.argv.forEach(function (val, index, array) {
 	  if (val=='local')

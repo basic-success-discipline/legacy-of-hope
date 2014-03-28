@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.4.2/buttons-min.css&pure/0.4.2/forms-min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- Icons -->	
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<!-- Pure Base, Buttons, Forms -->
 	
@@ -60,32 +61,54 @@
 	
 	<!-- Video Header Background -->
 	<section id="videoheader">
-		<div id="videoholder">
-			<img id="poster" src="img/poster.jpg"/>
-			<div id="videoinner">
+		<div id="videoholder" style=" background-color: rgba(28, 31, 38, 1)">
+			<img id="poster" src="img/poster1.png" />
+			<img id="nextposter"/>
+
+			
+			
+			
+
+			<div id="videoinner" >
 				<!-- <video preload webkit-playsinline  poster="img/poster.jpg" id="bgvid">
 	    			<source src="videos/home.mp4" type="video/mp4">
 	    			<source src="videos/home.webm" type="video/webm">
 	    		</video> -->
-			</div>		
-		</div> 		
+			</div>	
+
+			<div id="videocontrol">
+
+				<button class="sliderButton" id="playcontrol" onclick="playPause()"> 
+					<i class="fa fa-play"><p>play video</p></i> 
+				</button>
+
+				<div id="sliderButtons">
+					<button class="sliderButton" id="sliderButtonLeft" onclick="previousVideo()"> 
+						<i class="fa fa-chevron-left"></i> 
+					</button>
+					<button class="sliderButton" id="sliderButtonRight" onclick="nextVideo()"> 
+						<i class="fa  fa-chevron-right"></i> 
+					</button>	
+				</div>
+
+			</div>
+
+		</div> 	
+			
 	</section>
 	<div class="videoheader-content">
 		<div class="videoheader-container">
-			<div id="blurb">	
-				<div class="caption">CELEBRATING THE NELSON MANDELA<br>CHILDREN’S HOSPITAL</div>
+			
+			<div id="blurb">
+				
+				<div class="caption">CELEBRATING THE NELSON MANDELA CHILDREN’S HOSPITAL</div>
+
 				<div class="quote">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough.”
 				</div>	
-				<div id="videocontrol" onclick="playPause()">
-					<a href="#" class="controllink" >
-						<p id="playbtn">> play video</p>
-					</a>
-				</div>	
 			</div>
-			
 		</div>	
-	</div>	
-	<!-- End Video Header -->
+	</div>
+	
 		
 	<!-- Start Mission Section -->
 	<section id="mission" class="page">	
@@ -792,12 +815,39 @@
 	var videoPlaying = false;
 	var now = 0, old = false;
 
+	var videos = ["videos/video1.mp4", "videos/video2.mp4", "videos/video3.mp4"];
+	var webmVideos = ["videos/video1.webmhd.webm", "videos/video2.webmhd.webm", "videos/video3.webmhd.webm"];
+	var posters = ["img/poster1.png", "img/poster2.png","img/poster3.png"];
+
+	var captions = [	"CELEBRATING THE NELSON MANDELA CHILDREN’S HOSPITAL", 
+							
+							"SOUTH AFRICA'S YOUTH AMBASSADOR PERFORMS HER POEM",
+							
+							"HIGHLIGHTS FROM THE 2013 CAMPAIGN LAUNCH"];
+
+	var quotes = ["\"A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of 					African leaders to place the rights of children at the forefront. Nothing less would be enough.\"",
+						
+						"2012 South Africa's Got Talent winner Botlhale Boikanyo performs her poem to Nelson Mandela at the launch of the Legacy of Hope Foundation's fundraising campaign for the Nelson Mandela Children's Hospital, in New York City's Gotham Hall on Mandela Day 2013.",
+		 				
+		 				"Highlights from the launch of the Nelson Mandela Children's Hospital campaign on Mandela Day 2013 at Gotham Hall in New York City. Emcee Chuck Nice opened the event, which included speeches from Ben Vereen, Arun Gandhi, Nana Magomola, Susan Gossage and Eric Gast. Featuring live performances by Grammy Award-winning gospel artist Hezekiah Walker, South Africa's Got Talent 2012 Winner Botlhale Boikanyo and pop artist Jeffrey Gaines. "];
+    var whichVideo = 0;
+    var refreshTimeoutID;
+	var interval = 6000;
+
+
+
+
+
 	function dimNavBar() {
-		$('#navbar').fadeTo(500, 0.0);
+		if($(window).width()>480){
+			$('#navbar').fadeTo(500, 0.0);
+		}
 	}
 
 	function showNavBar() {
-		$('#navbar').fadeTo(500, 1.0);  
+		if($(window).width()>480){
+			$('#navbar').fadeTo(500, 1.0);  
+		}
 	}
 
 	function destroyVideo() {
@@ -809,86 +859,225 @@
 
     function playPause() {
     	console.log('clicked play/pause');
+     	if(iphone || !video){
+     		buildVideo();
+     	}
      	if (video[0].paused) {
-     		//console.log('click play');
-    		video[0].play();
+     		console.log('click play');
+
+     		
+    		video.fadeTo(500,1.0);
+    		
+    		if(android){
+				video.load();
+			}
+
+				video[0].play();
      	}
      	else {
-     		//console.log('click pause');
+     		console.log('click pause');
+
+			video.fadeTo(0,0.0);
     		video[0].pause();
+    		
+    		if(iphone){
+     			destroyVideo();
+     		}
      	}
     }
+
+    function switchVideo(){
+    	stopSlider();
+    	disableControlButtons();
+
+    	whichVideo = (whichVideo +1)%videos.length;
+    	fadeBlurbOut(500);
+    	
+    	$('#nextposter').fadeTo(0,0.0);
+    	$('#nextposter').attr("src",posters[whichVideo]);
+    	$('#poster').fadeTo(500,0.0,function(){
+
+	    	$('.caption').html(captions[whichVideo]);
+	    	$('.quote').html(quotes[whichVideo]);
+	    	$('#poster').attr("src",posters[whichVideo]);
+	    	if (!iphone){
+	    		destroyVideo();
+	    		video.remove();
+	    	}
+			$('#nextposter').fadeTo(500,1.0,function(){
+				$('#poster').fadeTo(0,1.0,function(){
+					$('#nextposter').fadeTo(0,0.0,function(){
+						
+					});
+				});
+				
+				if(!iphone){
+    				buildVideo();
+    			}
+    			//fadeBlurbIn(500);
+    			$('#blurb').fadeTo(500,1.0,function(){
+    				enableControlButtons();
+    				startSlider();
+    			})
+    			
+    			
+			});
+    	})
+    
+    	
+    	
+    }
+    function stopSlider(){
+    	clearTimeout(refreshTimeoutID);
+    }
+    function startSlider(){
+    	refreshTimeoutID = window.setTimeout(function(){switchVideo()}, interval);
+    }
+
+    function nextVideo(){
+    	console.log("next video");
+    	switchVideo();
+    }
+    function previousVideo(){
+
+    	console.log("previous video");
+    	whichVideo = (whichVideo + videos.length - 2)%videos.length;
+    	switchVideo();
+    }
+
+    function disableControlButtons(){
+    	document.getElementById("videocontrol").style.pointerEvents = 'none';
+    	disableSliderButtons();
+    }
+      function enableControlButtons(){
+    	document.getElementById("videocontrol").style.pointerEvents = 'auto';
+    	enableSliderButtons();
+    }
+    function disableSliderButtons(){
+		document.getElementById("sliderButtonRight").style.pointerEvents = 'none';
+		document.getElementById("sliderButtonLeft").style.pointerEvents = 'none';
+    }
+    function enableSliderButtons(){
+		document.getElementById("sliderButtonRight").style.pointerEvents = 'auto';
+		document.getElementById("sliderButtonLeft").style.pointerEvents = 'auto';
+    }
+
+    function fadeSliderButtonsOut(duration){
+    	disableSliderButtons();
+    	$('.sliderButton').fadeTo(duration,0.0);
+    }
+    function fadeSliderButtonsIn(duration){
+    	$('.sliderButton').fadeTo(duration,1.0, function(){
+    		enableSliderButtons();
+    	});
+    }
+
 
 
 	function buildVideo() {
 		if (videobuilt) return;
 		console.log("build video");
-    	$('#videoinner').html("<video preload webkit-playsinline  poster=\"img/poster.jpg\" id=\"bgvid\">\n" +
-	    	"<source src=\"videos/home.mp4\" type=\"video/mp4\">\n" +
-	    	"<source src=\"videos/home.webm\" type=\"video/webm\">\n" +
+		var mimetype="";
+		if(!android){
+			mimetype =  type="\"video/mp4\"";
+		}
+    	$('#videoinner').html("<video preload webkit-playsinline  poster=\"" + posters[whichVideo] + "\" id=\"bgvid\" style=\"opacity:0.0\">\n" +
+	    	"<source src=\""+ videos[whichVideo] + "\" "+ mimetype + ">\n" +
+	    	"<source src=\""+ webmVideos[whichVideo] + "\" type=\"video/webm\">\n" +
 	    	"</video>");
 
     	videobuilt = 1;
+
 
     	video = $('#bgvid');
     	video[0].volume = 1;
 
 		video.on("pause",function(event){
 			console.log('video paused');
-			if (iphone) fadeVideoOut(0);
-			else fadeVideoOut(500);
-			fadeBlurbIn(500);
+
 			videoPlaying = false;
-			showNavBar();
 			video[0].currentTime = 0;
+			$('#poster').fadeTo(500,1.0);
+			video.fadeTo(0,0.0,function(){
+				console.log('after fade');
+				destroyVideo();
+				if(!iphone){
+    				buildVideo();
+    			}
+    			fadeBlurbIn(500);
+				showNavBar();
+				startSlider();
+				fadeSliderButtonsIn(500);
+			});
+			$('#playcontrol').animate({'opacity': 0}, 500, function () {
+			    $('#playcontrol').html('<i class="fa fa-play"><p>play video</p></i>')
+			
+			}).animate({'opacity': 1}, 500);
+
 		});
 
 		video.on("playing",function(event){
 			console.log('video playing');
+			stopSlider();
+			fadeSliderButtonsOut(500);
 			fadeVideoIn(500);
 			fadeBlurbOut(500);
 			videoPlaying = true;
 			dimNavBar();
-			$.cookie('video_played', 'true', { expires: null });
+
+			//$.cookie('video_played', 'true', { expires: null });
 		});
 
 		video.on("ended",function(event){
 			console.log('video ended');
-			fadeVideoOut(iphone?0:1000);
-			fadeBlurbIn(1250);
 			videoPlaying = false;
-			showNavBar();
 			video[0].currentTime = 0;
+			$('#poster').fadeTo(500,1.0);
+			video.fadeTo(0,0.0,function(){
+				console.log('after fade');
+				destroyVideo();
+				if(!iphone){
+    				buildVideo();
+    			}
+    			fadeBlurbIn(500);
+				showNavBar();
+				startSlider();
+				fadeSliderButtonsIn(500);
+			});
+			$('#playcontrol').animate({'opacity': 0}, duration, function () {
+			    $('#playcontrol').html('<i class="fa fa-play"><p>play video</p></i>')
+			
+			}).animate({'opacity': 1}, 500);
+
 		});
+
     }
 
 	function fadeVideoIn(duration) {
 	        $('#poster').fadeTo(duration, 0.0);
-	        $('#videocontrol').animate({'opacity': 0}, duration, function () {
-			    $('#playbtn').text('x stop video');
+	        $('#playcontrol').animate({'opacity': 0}, duration, function () {
+			    $('#playcontrol').html('<i class="fa fa-stop"><p>stop video</p></i>')
 			}).animate({'opacity': 1}, duration);
 		}
 
-	    function fadeVideoOut(duration) {
-	        $('#poster').fadeTo(duration, 1.0, function() {
-	        	if (iphone) {
-	        		destroyVideo();
-	        		buildVideo();
-	        	}	
-	        });
-	        $('#videocontrol').animate({'opacity': 0}, duration, function () {
-			    $('#playbtn').text('> play video');
-			}).animate({'opacity': 1}, duration);
-	    }
+    function fadeVideoOut(duration) {
+        $('#poster').fadeTo(duration, 1.0, function() {
+        	if (iphone) {
+        		destroyVideo();
+        		buildVideo();
+        	}	
+        });
+        $('#playcontrol').animate({'opacity': 0}, duration, function () {
+		    $('#playcontrol').html('<i class="fa fa-play"><p>play video</p></i>');
+		}).animate({'opacity': 1}, duration);
+    }
 
 	    function fadeBlurbIn(duration) {
-	    	$('.caption').fadeTo(duration, 1.0);
-	    	$('.quote').fadeTo(duration, 1.0);
+	    	$('#blurb').fadeTo(duration,1.0);
 	    }
 
 	    function fadeBlurbOut(duration) {
-	    	$('.caption').fadeTo(duration, 0.0);
-	    	$('.quote').fadeTo(duration, 0.0);
+	    	$('#blurb').fadeTo(duration,0.0);
 	    }
 
 		$('#navbar').onePageNav({
@@ -966,12 +1155,11 @@
       });
 
 	$(document).ready(function(req, res) {
-	    buildVideo();
-	 //    $(function() {
-		//     var BV = new $.BigVideo({useFlashForFirefox:false});
-		//     BV.init();
-		//     BV.show('videos/home.mp4', {altSource:'videoss/home.webm'});
-		// });
+	    if(!iphone){
+	    	buildVideo();
+		}
+	    refreshTimeoutID = window.setTimeout(function(){switchVideo()}, interval);
+	 
 	});
 	
 
@@ -991,3 +1179,4 @@
 </body>
 
 </html>
+	
