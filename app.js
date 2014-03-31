@@ -34,7 +34,7 @@ app.post('/contact', function (req, res) {
 		args: ["-t", "eggast@legacyofhopeconcerts.org"]
 	});
 
-	console.log('sending data: ' + JSON.stringify(data));
+	//console.log('sending data: ' + JSON.stringify(data));
 	var text = 'name: ' + data['name'] + '\nemail: ' + data['email'] + '\nMessage: ' + data['message'];
 	if (data['sponsor']==='true') {
 		text += '\n\nSponsorship Interest: YES' + '\nCompany Name: ' + data['company'] + '\nPhone: ' + data['phone'] + '\nInterest: ' + data['interest']
@@ -44,7 +44,7 @@ app.post('/contact', function (req, res) {
 	//Mail options
 	mailOpts = {
 			from: req.body.name + ' <' + req.body.email + '>', //grab form data from the request body object
-			to: 'eggast@legacyofhopeconcerts.org',
+			to: 'eggast@legacyofhopeconcerts.org, jtrubenbach@gmail.com',
 			subject: 'Website contact form',
 			text: text
 	};
