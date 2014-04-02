@@ -500,17 +500,20 @@ header.band {
 // 	height: auto;
 // }
 
-#poster{
+#relativeposter{
 	position:relative;
 	width: 100%;
 	height: auto;
+	opacity:0.0;
 }
-#nextposter{
+.poster{
 	position:absolute;
 	top:0px;
 	width: 100%;
 	height: auto;
+	
 }
+
 
 $start-opacity: 1;
 .videoheader-content {

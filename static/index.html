@@ -62,8 +62,11 @@
 	<!-- Video Header Background -->
 	<section id="videoheader">
 		<div id="videoholder" style=" background-color: rgba(28, 31, 38, 1)">
-			<img id="poster" src="img/poster1.png" />
-			<img id="nextposter"/>
+			<img id="relativeposter" src="img/poster1.png" />
+			<img class="poster" id="poster1" src="img/poster1.png" />
+			<img class="poster" id="poster2" src="img/poster2.png" style="opacity:0.0"/>
+			<img class="poster" id="poster3" src="img/poster3.png" style="opacity:0.0"/>
+			<!-- <img id="nextposter"/> -->
 	
 
 			<div id="videoinner" >
@@ -815,6 +818,7 @@
 	var videos = ["videos/video1.mp4", "videos/video2.mp4", "videos/video3.mp4"];
 	var webmVideos = ["videos/video1.webmhd.webm", "videos/video2.webmhd.webm", "videos/video3.webmhd.webm"];
 	var posters = ["img/poster1.png", "img/poster2.png","img/poster3.png"];
+	var posterImgs = [$('#poster1'),$('#poster2'),$('#poster3') ];
 
 	var captions = [	"CELEBRATING THE NELSON MANDELA CHILDREN’S HOSPITAL", 
 							
@@ -828,6 +832,7 @@
 		 				
 		 				"Highlights from the launch of the Nelson Mandela Children's Hospital campaign on Mandela Day 2013 at Gotham Hall in New York City. Emcee Chuck Nice opened the event, which included speeches from Ben Vereen, Arun Gandhi, Nana Magomola, Susan Gossage and Eric Gast. Featuring live performances by Grammy Award-winning gospel artist Hezekiah Walker, South Africa's Got Talent 2012 Winner Botlhale Boikanyo and pop artist Jeffrey Gaines. "];
     var whichVideo = 0;
+    var prevVideo = 0;
     var refreshTimeoutID;
 	var interval = 6000;
 
@@ -890,24 +895,16 @@
     	whichVideo = (whichVideo +1)%videos.length;
     	fadeBlurbOut(500);
     	
-    	$('#nextposter').fadeTo(0,0.0);
-    	$('#nextposter').attr("src",posters[whichVideo]);
-    	$('#poster').fadeTo(500,0.0,function(){
+    	
+    	posterImgs[prevVideo].fadeTo(500,0.0,function(){
 
 	    	$('.caption').html(captions[whichVideo]);
 	    	$('.quote').html(quotes[whichVideo]);
-	    	$('#poster').attr("src",posters[whichVideo]);
 	    	if (!iphone){
 	    		destroyVideo();
 	    		video.remove();
 	    	}
-			$('#nextposter').fadeTo(500,1.0,function(){
-				$('#poster').fadeTo(0,1.0,function(){
-					$('#nextposter').fadeTo(0,0.0,function(){
-						
-					});
-				});
-				
+			posterImgs[whichVideo].fadeTo(500,1.0,function(){
 				if(!iphone){
     				buildVideo();
     			}
@@ -915,6 +912,7 @@
     			$('#blurb').fadeTo(500,1.0,function(){
     				enableControlButtons();
     				startSlider();
+    				prevVideo = whichVideo;
     			})
     			
     			
@@ -994,7 +992,7 @@
 
 			videoPlaying = false;
 			video[0].currentTime = 0;
-			$('#poster').fadeTo(500,1.0);
+			posterImgs[whichVideo].fadeTo(500,1.0);
 			video.fadeTo(0,0.0,function(){
 				console.log('after fade');
 				destroyVideo();
@@ -1029,7 +1027,7 @@
 			console.log('video ended');
 			videoPlaying = false;
 			video[0].currentTime = 0;
-			$('#poster').fadeTo(500,1.0);
+			posterImgs[whichVideo].fadeTo(500,1.0);
 			video.fadeTo(0,0.0,function(){
 				console.log('after fade');
 				destroyVideo();
@@ -1051,14 +1049,14 @@
     }
 
 	function fadeVideoIn(duration) {
-	        $('#poster').fadeTo(duration, 0.0);
+	        posterImgs[whichVideo].fadeTo(duration, 0.0);
 	        $('#playcontrol').animate({'opacity': 0}, duration, function () {
 			    $('#playcontrol').html('<i class="fa fa-stop"><p>stop video</p></i>')
 			}).animate({'opacity': 1}, duration);
 		}
 
     function fadeVideoOut(duration) {
-        $('#poster').fadeTo(duration, 1.0, function() {
+        posterImgs[whichVideo].fadeTo(duration, 1.0, function() {
         	if (iphone) {
         		destroyVideo();
         		buildVideo();
