@@ -861,9 +861,9 @@
 
     function playPause() {
     	console.log('clicked play/pause');
-     	if(iphone || !video){
+     	//if(iphone || !video){
      		buildVideo();
-     	}
+     	//}
      	if (video[0].paused) {
      		console.log('click play');
 
@@ -905,9 +905,9 @@
 	    		video.remove();
 	    	}
 			posterImgs[whichVideo].fadeTo(500,1.0,function(){
-				if(!iphone){
-    				buildVideo();
-    			}
+				// if(!iphone){
+    // 				buildVideo();
+    // 			}
     			//fadeBlurbIn(500);
     			$('#blurb').fadeTo(500,1.0,function(){
     				enableControlButtons();
@@ -996,9 +996,9 @@
 			video.fadeTo(0,0.0,function(){
 				console.log('after fade');
 				destroyVideo();
-				if(!iphone){
-    				buildVideo();
-    			}
+				// if(!iphone){
+    // 				buildVideo();
+    // 			}
     			fadeBlurbIn(500);
 				showNavBar();
 				startSlider();
@@ -1031,9 +1031,9 @@
 			video.fadeTo(0,0.0,function(){
 				console.log('after fade');
 				destroyVideo();
-				if(!iphone){
-    				buildVideo();
-    			}
+				// if(!iphone){
+    // 				buildVideo();
+    // 			}
     			fadeBlurbIn(500);
 				showNavBar();
 				startSlider();
