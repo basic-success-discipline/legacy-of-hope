@@ -941,6 +941,14 @@ video#bgvid {
   font: 30px "Oswald", Helvetica, Arial, sans-serif;
   line-height: 1.1em; }
 
+#blurb .caption2 {
+    color: white;
+    font: 16px "Oswald", Helvetica, Arial, sans-serif;
+    line-height: 1.1em;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
 .quote {
   color: white;
   margin: 30px 0px 0 0px;
@@ -1460,6 +1468,9 @@ Downloads
     font: 20px "Oswald", Helvetica, Arial, sans-serif;
     line-height: 1.1em;
     margin: 0 10px 0 10px; }
+
+    #blurb .caption2 {
+        margin: 0 10px 0 10px; }
 
   .quote {
     color: white;
