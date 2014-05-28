@@ -62,10 +62,11 @@
 	<!-- Video Header Background -->
 	<section id="videoheader">
 		<div id="videoholder" style=" background-color: rgba(28, 31, 38, 1)">
-			<img id="relativeposter" src="img/poster1.png" />
-			<img class="poster" id="poster1" src="img/poster1.png" />
+			<img id="relativeposter" src="img/maya-angelou.png" />
+			<!-- <img id="relativeposter" src="img/poster1.png" /> -->
+			<!-- <img class="poster" id="poster1" src="img/poster1.png" />
 			<img class="poster" id="poster2" src="img/poster2.png" style="opacity:0.0"/>
-			<img class="poster" id="poster3" src="img/poster3.png" style="opacity:0.0"/>
+			<img class="poster" id="poster3" src="img/poster3.png" style="opacity:0.0"/> -->
 			<!-- <img id="nextposter"/> -->
 	
 
@@ -78,7 +79,7 @@
 
 			<div id="videocontrol">
 
-				<button class="sliderButton" id="playcontrol" onclick="playPause()"> 
+				<!-- <button class="sliderButton" id="playcontrol" onclick="playPause()"> 
 					<i class="fa fa-play"><p>play video</p></i> 
 				</button>
 
@@ -89,7 +90,7 @@
 					<button class="sliderButton" id="sliderButtonRight" onclick="nextVideo()"> 
 						<i class="fa  fa-chevron-right"></i> 
 					</button>	
-				</div>
+				</div> -->
 
 			</div>
 
@@ -101,9 +102,9 @@
 			
 			<div id="blurb">
 				
-				<div class="caption">CELEBRATING THE NELSON MANDELA CHILDREN’S HOSPITAL</div>
+				<div class="caption">Maya Angelou 1928 - 2014</div>
 
-				<div class="quote">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough.”
+				<div class="quote" style="width:450px;font-size:20px;">We are deeply saddened by the loss of Dr. Maya Angelou. She was a wonderful woman, a prolific poet, and a ray of light in this world. We can't begin to value her significance as a Legacy of Hope Honorary Board member and our prayers are with everyone she touched and the world she enriched and leaves behind.
 				</div>	
 			</div>
 		</div>	
@@ -429,6 +430,7 @@
 					<h4>Brannon Phillips</h4>
 					<p class="job-position">Director: Communications Services America<br/>Celebrity Services Africa</p> 
 				</div>
+				
 			</div>
 			<div class="four columns">
 				<div class="production" >
@@ -458,6 +460,10 @@
 				<div class="production" >
 					<h4>David Stern</h4>
 					<p class="job-position">Associate</p> 
+				</div>
+				<div class="production" >
+					<h4>Kumar Kalantri</h4>
+					<p class="job-position">Coordinating Producer</p> 
 				</div>
 			</div>
 			<div class="spacer" >&nbsp;</div>
@@ -762,6 +768,10 @@
 				        <label>
 				            <span>Phone (required):</span>
 				            <input id="phone" type="text" name="phone" placeholder="Your Phone Number" />
+				        </label>
+				        <label>
+				            <span>Referrer:</span>
+				            <input id="referrer" type="text" name="referrer" placeholder="Who referred you?" />
 				        </label>
 				        <label>
 				            <span>Your Interest (required):</span>
@@ -1118,6 +1128,7 @@
 	            sponsor : $('#sponsor').is(":checked"),
 	            company : $('#company').val(),
 	            phone   : $('#phone').val(),
+	            referrer: $('#referrer').val(),
 	            interest : $('#interest').val()
 	        };
 
@@ -1150,10 +1161,10 @@
       });
 
 	$(document).ready(function(req, res) {
-	    if(!iphone){
-	    	buildVideo();
-		}
-	    refreshTimeoutID = window.setTimeout(function(){switchVideo()}, interval);
+	 //    if(!iphone){
+	 //    	buildVideo();
+		// }
+	 //    refreshTimeoutID = window.setTimeout(function(){switchVideo()}, interval);
 	 
 	});
 	

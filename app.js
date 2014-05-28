@@ -5,6 +5,7 @@ var express = require('express'),
 
 var app = express();
 var local = false;
+var auth = express.basicAuth('sponsor', 'lohc1049');
 
 app.set('basepath', '/index.html');
 app.use(express.bodyParser());
@@ -12,6 +13,7 @@ app.use(express.bodyParser());
 
 
 if ('development' === env) {
+	console.log('development');
   	// Authenticator
 	//app.use(express.basicAuth('testuser', 'lohc889'));
 
@@ -21,6 +23,7 @@ if ('development' === env) {
 	});
 }
 else if ('production' === env ) {
+	console.log('production');
     var newrelic = require('newrelic');
 }
 
@@ -37,14 +40,14 @@ app.post('/contact', function (req, res) {
 	//console.log('sending data: ' + JSON.stringify(data));
 	var text = 'name: ' + data['name'] + '\nemail: ' + data['email'] + '\nMessage: ' + data['message'];
 	if (data['sponsor']==='true') {
-		text += '\n\nSponsorship Interest: YES' + '\nCompany Name: ' + data['company'] + '\nPhone: ' + data['phone'] + '\nInterest: ' + data['interest']
+		text += '\n\nSponsorship Interest: YES' + '\nCompany Name: ' + data['company'] + '\nPhone: ' + data['phone'] + '\nReferrer: ' + data['referrer'] + '\nInterest: ' + data['interest'];
 	}
 	
 	
 	//Mail options
 	mailOpts = {
 			from: req.body.name + ' <' + req.body.email + '>', //grab form data from the request body object
-			to: 'eggast@legacyofhopeconcerts.org, jtrubenbach@gmail.com',
+			to: 'eggast@legacyofhopeconcerts.org, jtrubenbach@gmail.com, mrhoades@bespinholdings.com',
 			subject: 'Website contact form',
 			text: text
 	};
@@ -63,6 +66,12 @@ app.post('/contact', function (req, res) {
 			
 	});
 });
+
+if ('production' === env ) {
+    app.get('/sponsors', auth, function (req, res) {
+		res.sendfile(__dirname + '/static/sponsors.html');
+	});
+}
 
 app.use(express.static(__dirname + '/static'));
 
