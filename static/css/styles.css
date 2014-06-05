@@ -901,7 +901,7 @@ header.band {
   position: relative;
   width: 100%;
   height: auto;
-  opacity: 1.0; }
+  opacity: 0.0; }
 
 .poster {
   position: absolute;
@@ -942,12 +942,11 @@ video#bgvid {
   line-height: 1.1em; }
 
 #blurb .caption2 {
-    color: white;
-    font: 16px "Oswald", Helvetica, Arial, sans-serif;
-    line-height: 1.1em;
-    font-style: italic;
-    padding-bottom: 20px;
-}
+  color: white;
+  font: 30px "Oswald", Helvetica, Arial, sans-serif;
+  line-height: 1.1em;
+  font-style: italic;
+  padding-bottom: 20px; }
 
 .quote {
   color: white;
@@ -1469,8 +1468,8 @@ Downloads
     line-height: 1.1em;
     margin: 0 10px 0 10px; }
 
-    #blurb .caption2 {
-        margin: 0 10px 0 10px; }
+  #blurb .caption2 {
+    margin: 0 10px 0 10px; }
 
   .quote {
     color: white;

@@ -64,9 +64,11 @@
 		<div id="videoholder" style=" background-color: rgba(28, 31, 38, 1)">
 			<img id="relativeposter" src="img/maya-angelou.png" />
 			<!-- <img id="relativeposter" src="img/poster1.png" /> -->
-			<!-- <img class="poster" id="poster1" src="img/poster1.png" />
+			 <img class="poster" id="poster1" src="img/poster1.png" />
 			<img class="poster" id="poster2" src="img/poster2.png" style="opacity:0.0"/>
-			<img class="poster" id="poster3" src="img/poster3.png" style="opacity:0.0"/> -->
+			<img class="poster" id="poster3" src="img/poster3.png" style="opacity:0.0"/> 
+			<img class="poster" id="poster4" src="img/maya-angelou.png" style="opacity:0.0"/>
+			
 			<!-- <img id="nextposter"/> -->
 	
 
@@ -79,7 +81,7 @@
 
 			<div id="videocontrol">
 
-				<!-- <button class="sliderButton" id="playcontrol" onclick="playPause()"> 
+				<button class="sliderButton" id="playcontrol" onclick="playPause()"> 
 					<i class="fa fa-play"><p>play video</p></i> 
 				</button>
 
@@ -90,7 +92,7 @@
 					<button class="sliderButton" id="sliderButtonRight" onclick="nextVideo()"> 
 						<i class="fa  fa-chevron-right"></i> 
 					</button>	
-				</div> -->
+				</div>
 
 			</div>
 
@@ -102,10 +104,10 @@
 			
 			<div id="blurb">
 
-                <div class="caption2">In Memoriam</div>
-				<div class="caption">Maya Angelou 1928 - 2014</div>
+                <div class="caption2"></div>
+				<div class="caption">CELEBRATING THE NELSON MANDELA CHILDREN’S HOSPITAL</div>
 
-				<div class="quote" style="width:450px;font-size:20px;">We are deeply saddened by the loss of Dr. Maya Angelou. She was a wonderful woman, a prolific poet, and a ray of light in this world. We can't begin to value her significance as a Legacy of Hope Honorary Board member and our prayers are with everyone she touched and the world she enriched and leaves behind.
+				<div class="quote" style="width:450px;font-size:20px;">"A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of 					African leaders to place the rights of children at the forefront. Nothing less would be enough."
 				</div>	
 			</div>
 		</div>	
@@ -826,22 +828,26 @@
 	var videoPlaying = false;
 	var now = 0, old = false;
 
-	var videos = ["videos/video1.mp4", "videos/video2.mp4", "videos/video3.mp4"];
-	var webmVideos = ["videos/video1.webmhd.webm", "videos/video2.webmhd.webm", "videos/video3.webmhd.webm"];
-	var posters = ["img/poster1.png", "img/poster2.png","img/poster3.png"];
-	var posterImgs = [$('#poster1'),$('#poster2'),$('#poster3') ];
+	var videos = ["videos/video1.mp4", "videos/video2.mp4", "videos/video3.mp4", ""];
+	var webmVideos = ["videos/video1.webmhd.webm", "videos/video2.webmhd.webm", "videos/video3.webmhd.webm", ""];
+	var posters = ["img/poster1.png", "img/poster2.png","img/poster3.png", "img/maya-angelou.png"];
+	var posterImgs = [$('#poster1'),$('#poster2'),$('#poster3'), $('#poster4') ];
 
 	var captions = [	"CELEBRATING THE NELSON MANDELA CHILDREN’S HOSPITAL", 
 							
 							"SOUTH AFRICA'S YOUTH AMBASSADOR PERFORMS HER POEM",
 							
-							"HIGHLIGHTS FROM THE 2013 CAMPAIGN LAUNCH"];
+							"HIGHLIGHTS FROM THE 2013 CAMPAIGN LAUNCH",
+
+							"Maya Angelou 1928 - 2014"];
 
 	var quotes = ["\"A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of 					African leaders to place the rights of children at the forefront. Nothing less would be enough.\"",
 						
 						"2012 South Africa's Got Talent winner Botlhale Boikanyo performs her poem to Nelson Mandela at the launch of the Legacy of Hope Foundation's fundraising campaign for the Nelson Mandela Children's Hospital, in New York City's Gotham Hall on Mandela Day 2013.",
 		 				
-		 				"Highlights from the launch of the Nelson Mandela Children's Hospital campaign on Mandela Day 2013 at Gotham Hall in New York City. Emcee Chuck Nice opened the event, which included speeches from Ben Vereen, Arun Gandhi, Nana Magomola, Susan Gossage and Eric Gast. Featuring live performances by Grammy Award-winning gospel artist Hezekiah Walker, South Africa's Got Talent 2012 Winner Botlhale Boikanyo and pop artist Jeffrey Gaines. "];
+		 				"Highlights from the launch of the Nelson Mandela Children's Hospital campaign on Mandela Day 2013 at Gotham Hall in New York City. Emcee Chuck Nice opened the event, which included speeches from Ben Vereen, Arun Gandhi, Nana Magomola, Susan Gossage and Eric Gast. Featuring live performances by Grammy Award-winning gospel artist Hezekiah Walker, South Africa's Got Talent 2012 Winner Botlhale Boikanyo and pop artist Jeffrey Gaines. ",
+
+		 				"We are deeply saddened by the loss of Dr. Maya Angelou. She was a wonderful woman, a prolific poet, and a ray of light in this world. We can't begin to value her significance as a Legacy of Hope Honorary Board member and our prayers are with everyone she touched and the world she enriched and leaves behind."];
     var whichVideo = 0;
     var prevVideo = 0;
     var refreshTimeoutID;
@@ -905,12 +911,20 @@
 
     	whichVideo = (whichVideo +1)%videos.length;
     	fadeBlurbOut(500);
+    	if(whichVideo == 3){
+    		$('#playcontrol').animate({'opacity': 0}, 500); 
+    	}
     	
     	
     	posterImgs[prevVideo].fadeTo(500,0.0,function(){
 
 	    	$('.caption').html(captions[whichVideo]);
 	    	$('.quote').html(quotes[whichVideo]);
+	    	if(whichVideo == 3){ 				//If on Maya Angelou image, add caption 2 text
+	    		$('.caption2').html("In Memoriam");
+	    	}else{
+	    		$('.caption2').html("");
+	    	}
 	    	if (!iphone){
 	    		destroyVideo();
 	    		video.remove();
@@ -928,6 +942,9 @@
     			
     			
 			});
+			if (prevVideo==3){
+				$('#playcontrol').animate({'opacity': 1.0}, 500);
+			}
     	})
     
     	
@@ -1162,10 +1179,10 @@
       });
 
 	$(document).ready(function(req, res) {
-	 //    if(!iphone){
-	 //    	buildVideo();
-		// }
-	 //    refreshTimeoutID = window.setTimeout(function(){switchVideo()}, interval);
+	    if(!iphone){
+	    	buildVideo();
+		}
+	    refreshTimeoutID = window.setTimeout(function(){switchVideo()}, interval);
 	 
 	});
 	
