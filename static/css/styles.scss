@@ -536,7 +536,7 @@ video#bgvid {
 	// z-index: -100;
 }
 
-$blurb-top: 50%;
+$blurb-top: 40%;
 $blurb-left: 10%;
 #blurb {
 	position:relative;
@@ -555,7 +555,7 @@ $blurb-left: 10%;
 
 #blurb .caption2 {
   color: white;
-  font: 30px "Oswald", Helvetica, Arial, sans-serif;
+  font: 16px "Oswald", Helvetica, Arial, sans-serif;
   line-height: 1.1em;
   font-style: italic;
   padding-bottom: 20px;
@@ -582,7 +582,7 @@ $blurb-left: 10%;
 
 }
 
-$videocontrol-top: -125px;
+$videocontrol-top: -75px;
 
 #videocontrol {
 	width: 960px;
@@ -1885,7 +1885,7 @@ $videocontrol-top: -80px;
 
 	
 
-	$blurb-top: 35%;
+	$blurb-top: 20%;
 
 	#blurb {
 		top: $blurb-top;
