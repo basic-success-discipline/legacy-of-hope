@@ -1408,7 +1408,7 @@ Downloads
 /* TABLET (LANDSCAPE) */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   #blurb {
-    top: 40%;
+    top: 38%;
     max-width: 70%;
     margin: 0 30px 0 30px; }
 
@@ -1439,7 +1439,7 @@ Downloads
     margin-top: -4px; }
 
   #blurb {
-    top: 20%;
+    top: 16%;
     width: 80%;
     margin: 0; }
 

@@ -1122,7 +1122,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : landscape) { 
 
-	$blurb-top: 40%;
+	$blurb-top: 38%;
 	#blurb {
 		top: $blurb-top;
 		max-width: 70%;
@@ -1169,7 +1169,7 @@ and (orientation : landscape) {
 
 
 	
-$blurb-top: 20%;
+$blurb-top: 16%;
 #blurb {
 	top: $blurb-top;
 	width: 80%;
