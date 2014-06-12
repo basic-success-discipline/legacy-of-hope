@@ -1,0 +1,21 @@
+
+.parallaxwrapper{
+	//set height in specific div
+	width: 100%;
+	overflow: hidden;
+}
+
+.parallax{
+	width: 100%;
+}
+
+.parallaxbg{
+	//specify background in specific div
+	//background: url(../img/parallax1.png) 50% 50% fixed repeat-y; 
+		width: 100%;
+		//set height in specific div
+		// height: 300px;
+		margin: 0 auto;
+		position: absolute;
+		background-size: 120%;
+}

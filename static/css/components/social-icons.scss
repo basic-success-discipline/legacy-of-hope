@@ -1,0 +1,30 @@
+.social-icons {
+	text-align: right;
+	margin-top: 15px;
+}
+
+.social-icons a {
+	color: white;
+	font-size: 13px;
+	line-height: 1.7;
+	text-align: center;
+	text-decoration: none;
+	width: 23px;
+	height: 23px;
+	background: #2b3441;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	display: inline-block;
+	top: -3px;
+	position:relative;
+}
+
+.social-icons a:hover {
+	background-color: #358fe3;
+	color: white;
+}
+
+.social-icons a:visited {
+	background-color: #2b3441;
+}

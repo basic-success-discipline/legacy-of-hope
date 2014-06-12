@@ -1,0 +1,17 @@
+@import "navbar";
+
+$hero-height: 100%;
+.herowrapper{
+	height: $hero-height;
+	width: 100%;
+	overflow: hidden;
+}
+
+.heroimage{
+	width: 100%;
+}
+
+.blurb{
+	position: absolute;
+	//set position in specific div
+}
