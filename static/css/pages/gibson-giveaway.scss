@@ -54,7 +54,11 @@ $buffer: 20px;
 	position:absolute;
 	margin-top: -$buffer;
 }
-$about-height: 568px;
+
+.sixteen .columns{
+	width: 1000px;
+}
+$about-height: 500px;
 $guitar-image-height: 594px;
 #aboutguitar{
 	width: 100%;
@@ -98,9 +102,7 @@ p.strong{
 	position: absolute;
 }
 
-#aboutguitar .container .twelve.columns {
-	width: 2000px;
-}
+
 
 $artists-height: 300px;
 // #artistsparallaxwrapper{
@@ -181,6 +183,16 @@ $imgcol-width: 49.1%;
 	width: 100%;
 }
 
+table{
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+td{
+	padding: 0px 0px 0px 0px;
+}
+tr{
+	padding: 0px 0px 0px 0px;
+}
 #bottomsection td{
 	width: 100% - $imgcol-width;
 	text-align: right;
