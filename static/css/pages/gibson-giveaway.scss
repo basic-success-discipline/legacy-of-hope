@@ -8,7 +8,13 @@
 
 
 
-
+body{
+	overflow-x:hidden;
+	margin: 0px 0px 0px 0px;
+}
+#wrapper{
+	overflow-x: hidden;
+}
 
 $hero-height: 1000px;
 #heroparallaxwrapper{
@@ -58,13 +64,18 @@ $buffer: 20px;
 .sixteen .columns{
 	width: 1000px;
 }
-$about-height: 500px;
+$about-height: 565px;
 $guitar-image-height: 594px;
 #aboutguitar{
 	width: 100%;
 	height: $about-height;
 	top: $hero-height;
 	background-color: clear;
+}
+
+#aboutguitarcontainer{
+	height: $about-height;
+	left: -75px;
 }
 
 #aboutguitar h1{
@@ -100,6 +111,7 @@ p.strong{
 	float: right;
 	z-index: 2;
 	position: absolute;
+
 }
 
 
