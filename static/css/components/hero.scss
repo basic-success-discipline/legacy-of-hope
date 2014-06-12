@@ -1,17 +1,32 @@
 @import "navbar";
 
-$hero-height: 100%;
-.herowrapper{
+$hero-height: auto;
+.hero{
 	height: $hero-height;
 	width: 100%;
 	overflow: hidden;
+	margin-top: $navheight;
+
 }
 
-.heroimage{
+.heroimg{
 	width: 100%;
+
 }
 
 .blurb{
 	position: absolute;
 	//set position in specific div
+}
+
+$herobuffer: 20px;
+$page-border-top: 64px;
+.herobuffer{
+	width:100%;
+	height:$herobuffer*3;
+	background-color: white;
+	opacity: 0.3;
+	position:absolute;
+	margin-top: -($herobuffer + $page-border-top);
+
 }

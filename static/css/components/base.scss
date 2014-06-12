@@ -1,3 +1,4 @@
+@import "../skeleton";
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -24,4 +25,13 @@ body {
 
 a.button:hover {
 	background: #ab3009;
+}
+
+.container .columns{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.container .twelve.columns{
+	width: 960px;
 }
