@@ -8,8 +8,11 @@
 
 
 .herobg{
-	background: url(../../img/sibongile_hero.jpg) 50% 62% fixed repeat-y;
 	background-color: black;
+}
+.herobg img{
+	position: fixed;
+	top: $navheight;
 }
 #hamburger{
 	color: white;
