@@ -9,10 +9,19 @@
 
 .herobg{
 	background-color: black;
-}
-.herobg img{
 	position: fixed;
 	top: $navheight;
+	text-align: center;
+
+}
+$hero-width: 1200px;
+.herobg img{
+	position: relative;
+	width: $hero-width;
+	margin: auto;
+
+
+
 }
 #hamburger{
 	color: white;

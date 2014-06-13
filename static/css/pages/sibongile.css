@@ -394,7 +394,7 @@ nav {
   color: #358fe3; }
 
 .hero {
-  height: 645px;
+  height: 664px;
   width: 100%;
   overflow: hidden; }
 
@@ -417,11 +417,15 @@ nav {
   margin-top: -95px; }
 
 .herobg {
-  background-color: black; }
+  background-color: black;
+  position: fixed;
+  top: 50px;
+  text-align: center; }
 
 .herobg img {
-  position: fixed;
-  top: 50px; }
+  position: relative;
+  width: 1200px;
+  margin: auto; }
 
 #hamburger {
   color: white;
