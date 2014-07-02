@@ -3,7 +3,6 @@ function shareWithFacebook(el) {
 		encodeURIComponent(document.URL) + 
 		'" title="Facebook share" >' + el + '</a>')
 }
-
 function shareWithFacebookClick(width, height) {
     var leftPosition, topPosition;
     leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
@@ -43,4 +42,12 @@ function shareWithTwitterClick(width, height) {
     t = document.title;
     window.open('http://twitter.com/intent/tweet?u=' + encodeURIComponent(u) + '&text=' + encodeURIComponent('Check this out!'), 'sharer', windowFeatures);
     return false;
+}
+
+$('#submit').click(function(){
+  Boxy.get(this).hide();
+});
+
+function signupDialog() {
+  new Boxy($("#signup-dialog").html(), {title: "Dialog", modal: true});
 }

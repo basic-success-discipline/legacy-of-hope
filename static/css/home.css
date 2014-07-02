@@ -1,0 +1,1762 @@
+@import url(reset.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,Light);
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700,Light);
+@font-face {
+  font-family: 'Bebas';
+  src: url("../fonts/BEBAS___.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: "Oswald";
+  color: #151920;
+  background-color: #252525; }
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px; }
+
+h2 {
+  font-size: 30px;
+  font-weight: 400; }
+
+h3 {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  line-height: 1.3em; }
+
+h4 {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 45px;
+  line-height: 1.3em; }
+
+h5 {
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 45px;
+  line-height: 1.55em;
+  text-align: center; }
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.45em;
+  font-family: "Open Sans";
+  margin: 35px auto; }
+
+strong {
+  font-weight: bold !important; }
+
+a {
+  color: #358fe3;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  text-decoration: none; }
+
+a:hover {
+  color: #358fe3; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #252525;
+  position: relative; }
+
+.wrapper-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; }
+
+.wrapper-content {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative; }
+
+.wrapper-fix {
+  position: fixed;
+  width: 100%; }
+
+#navfix {
+  height: 50px;
+  z-index: 1000; }
+
+#navbar {
+  background-color: #1c1f26;
+  width: 100%;
+  position: relative;
+  height: 60px;
+  margin-top: -10px; }
+
+#navholder {
+  margin-top: 10px;
+  float: right; }
+
+.logo {
+  margin-top: 15px;
+  width: 170px;
+  position: relative;
+  z-index: 1001; }
+
+.links {
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle; }
+
+.links span {
+  display: inline;
+  margin: 0 15px 0 0;
+  float: left; }
+
+.links a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 8px; }
+
+.links a:hover {
+  color: #358fe3; }
+
+.menu-dropdown {
+  width: 229px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  opacity: 0.0;
+  visibility: hidden;
+  -webkit-transition: opacity .5s;
+  /* Safari */
+  transition: opacity .5s; }
+
+.menu-dropdown-background {
+  background-color: #414141;
+  width: 100%;
+  height: 100%;
+  opacity: .6; }
+
+#nav .menu-hamburger {
+  display: none; }
+
+#nav-dropdown {
+  text-align: right;
+  display: table;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 0px; }
+
+#nav-dropdown li {
+  display: block;
+  margin-right: 35px; }
+
+#nav-dropdown li a {
+  line-height: 1.7em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 8px;
+  z-index: 1000; }
+
+#nav-dropdown li a:hover {
+  color: #358fe3; }
+
+.ddclick {
+  position: absolute;
+  width: 100%;
+  height: 1000px; }
+
+.page {
+  padding-top: 64px;
+  position: relative;
+  background: white;
+  z-index: 5; }
+
+.herobuffer {
+  width: 100%;
+  height: 15px;
+  background-color: white;
+  opacity: 0.3;
+  position: absolute;
+  margin-top: -79px; }
+
+.prefooter {
+  width: 100%;
+  height: 60px;
+  background-color: #e46315;
+  font-style: italic;
+  font-size: 18px;
+  z-index: 1000;
+  position: relative; }
+
+.prefooter p {
+  margin: 10px auto 15px auto; }
+
+.pf1 {
+  float: left;
+  margin-top: 7px;
+  height: auto; }
+
+.pf2 {
+  display: table-cell;
+  float: right;
+  vertical-align: middle;
+  height: auto;
+  margin: 10px auto 15px auto; }
+
+.pf2 p {
+  float: right;
+  margin: 7px 10px 0 0; }
+
+.pf2 img {
+  float: right;
+  height: 35px;
+  margin: 0 10px 0 0; }
+
+.footer {
+  height: 60px;
+  width: 100%;
+  background-color: #1c1f26;
+  color: white;
+  z-index: 1000;
+  position: relative; }
+
+.footer p {
+  font-size: 12px;
+  margin-top: 24px;
+  font-style: italic;
+  margin-bottom: 0px; }
+
+.f1 {
+  float: left; }
+
+.f2 {
+  float: right; }
+
+.f2p-phone {
+  display: none; }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 479px) {
+  .wrapper-inner {
+    width: 320px;
+    margin: 0 auto; }
+
+  h1 {
+    text-align: center;
+    font-size: 25px; }
+
+  h2 {
+    font-size: 18px; }
+
+  h3 {
+    font-size: 16px; }
+
+  p {
+    text-align: justify;
+    line-height: 1.4em;
+    font-size: 15px; }
+
+  .wrapper-content {
+    width: 88%; }
+
+  #navfix {
+    height: 50px; }
+
+  #navbar {
+    height: 60px; }
+
+  .logo {
+    width: 200px;
+    margin-top: 15px; }
+
+  .links {
+    height: 50px; }
+
+  #nav span {
+    display: none;
+    vertical-align: middle; }
+
+  #navbar .logo {
+    margin-top: 12px; }
+
+  #nav .menu-hamburger {
+    display: inherit; }
+
+  .menu {
+    height: 18.51852px;
+    margin-top: 0px; }
+
+  .menu-dropdown {
+    width: 100%; }
+
+  .md {
+    width: 100%; }
+
+  #nav-dropdown li {
+    margin-right: 6%; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
+
+  .prefooter {
+    height: 140px;
+    padding-top: 6px;
+    z-index: 1000; }
+
+  .prefooter p {
+    text-align: center; }
+
+  .pf1 {
+    float: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px; }
+
+  .pf2 {
+    float: none;
+    display: block;
+    vertical-align: middle;
+    height: auto;
+    margin: 3px auto 0px auto;
+    text-align: center; }
+
+  .pf2 p {
+    display: none; }
+
+  .pf2 img {
+    float: none;
+    height: 45px;
+    margin: 0px auto; }
+
+  .footer {
+    height: 140px;
+    padding-top: 10px;
+    z-index: 1000; }
+
+  .footer p {
+    text-align: center;
+    font-size: 100%;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    margin-top: 17px; }
+
+  .f1 {
+    float: none; }
+
+  .f2 {
+    float: none; }
+
+  .f2p-phone {
+    display: inherit;
+    margin-bottom: 10px; }
+
+  .f2p-desktop {
+    display: none; } }
+@media only screen and (min-width: 480px) and (max-width: 567px) {
+  .wrapper-inner {
+    width: 480px;
+    margin: 0 auto; }
+
+  html {
+    -webkit-text-size-adjust: none; }
+
+  h1 {
+    text-align: center;
+    font-size: 20px; }
+
+  h2 {
+    font-size: 18px; }
+
+  h3 {
+    font-size: 16px; }
+
+  p {
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 14px; }
+
+  #navfix {
+    height: 40px; }
+
+  #navbar {
+    height: 50px; }
+
+  .logo {
+    width: 160px;
+    margin: 15px;
+    left: -15px; }
+
+  .links {
+    height: 40px; }
+
+  #nav span {
+    display: none; }
+
+  #nav .menu-hamburger {
+    display: inherit; }
+
+  .menu {
+    height: 14.81481px;
+    margin-top: 0px; }
+
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #navbar .logo {
+    margin-top: 12px; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
+
+  .prefooter {
+    height: 65px;
+    padding-top: 10px; }
+
+  .pf1 p {
+    font-size: 12px;
+    font-weight: 300; }
+
+  .pf2 p {
+    display: none; }
+
+  .pf2 img {
+    height: 30px; }
+
+  .footer {
+    height: 75px;
+    padding-top: 10px; }
+
+  .footer p {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px; }
+
+  .f1 {
+    float: none; }
+
+  .f2 {
+    float: none; }
+
+  .f2p-phone {
+    display: inherit; }
+
+  .f2p-desktop {
+    display: none; } }
+@media only screen and (min-width: 568px) and (max-width: 639px) {
+  .wrapper-inner {
+    width: 568px;
+    margin: 0 auto; }
+
+  html {
+    -webkit-text-size-adjust: none; }
+
+  h1 {
+    text-align: center;
+    font-size: 20px; }
+
+  h2 {
+    font-size: 18px; }
+
+  h3 {
+    font-size: 16px; }
+
+  p {
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 14px; }
+
+  #navfix {
+    height: 40px; }
+
+  #navbar {
+    height: 50px; }
+
+  .logo {
+    width: 160px;
+    margin: 15px;
+    left: -15px; }
+
+  .links {
+    height: 40px; }
+
+  #nav span {
+    display: none; }
+
+  #nav .menu-hamburger {
+    display: inherit; }
+
+  .menu {
+    height: 14.81481px;
+    margin-top: 0px; }
+
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #navbar .logo {
+    margin-top: 12px; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
+
+  .prefooter {
+    height: 65px;
+    padding-top: 10px; }
+
+  .pf1 p {
+    font-size: 14px;
+    font-weight: 300; }
+
+  .pf2 p {
+    display: none; }
+
+  .pf2 img {
+    height: 40px; }
+
+  .footer {
+    height: 75px;
+    padding-top: 10px; }
+
+  .footer p {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px; }
+
+  .f1 {
+    float: none; }
+
+  .f2 {
+    float: none; }
+
+  .f2p-phone {
+    display: inherit; }
+
+  .f2p-desktop {
+    display: none; } }
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  .wrapper-inner {
+    width: 640px;
+    margin: 0 auto; }
+
+  html {
+    -webkit-text-size-adjust: none; }
+
+  h1 {
+    text-align: center;
+    font-size: 20px; }
+
+  h2 {
+    font-size: 18px; }
+
+  h3 {
+    font-size: 16px; }
+
+  p {
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 14px; }
+
+  #navfix {
+    height: 40px; }
+
+  #navbar {
+    height: 50px; }
+
+  .logo {
+    width: 160px;
+    margin: 15px;
+    left: -15px; }
+
+  .links {
+    height: 40px; }
+
+  #nav span {
+    display: none; }
+
+  #nav .menu-hamburger {
+    display: inherit; }
+
+  .menu {
+    height: 14.81481px;
+    margin-top: 0px; }
+
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #navbar .logo {
+    margin-top: 12px; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
+
+  .prefooter {
+    height: 65px;
+    padding-top: 10px; }
+
+  .pf1 p {
+    font-size: 15px;
+    font-weight: 300; }
+
+  .pf2 p {
+    display: none; }
+
+  .pf2 img {
+    height: 40px; }
+
+  .footer {
+    height: 75px;
+    padding-top: 10px; }
+
+  .footer p {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px; }
+
+  .f1 {
+    float: none; }
+
+  .f2 {
+    float: none; }
+
+  .f2p-phone {
+    display: inherit; }
+
+  .f2p-desktop {
+    display: none; } }
+/* iPads (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper-inner {
+    width: 768px;
+    margin: 0 auto; }
+
+  h1 {
+    font-size: 24px; }
+
+  h3 {
+    font-size: 19px; }
+
+  p {
+    font-size: 17px; }
+
+  #nav span {
+    display: none; }
+
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #nav .menu-hamburger {
+    display: inherit; }
+
+  .logo {
+    margin-top: 15px; }
+
+  .pf2 {
+    margin-bottom: 0px; }
+
+  .pf1 p {
+    font-size: 15px; }
+
+  .pf2 p {
+    font-size: 15px; }
+
+  .pf2 img {
+    height: 40px; }
+
+  .f2 {
+    margin-top: 0px !important; } }
+/* iPads (landscape) ----------- */
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .wrapper-inner {
+    width: 1024px;
+    margin: 0 auto; }
+
+  h1 {
+    font-size: 35px; }
+
+  h3 {
+    font-size: 20px; }
+
+  p {
+    font-size: 17px; } }
+.logo {
+  margin-top: 16px; }
+
+@media only screen and (min-width: 1224px) {
+  .wrapper-inner {
+    width: 1200px;
+    margin: 0 auto; } }
+#nav .menu-home a {
+  color: #358fe3; }
+
+h5 {
+  color: white;
+  margin-top: 28px; }
+
+.herofix {
+  height: 565px;
+  top: 20px; }
+
+.hero {
+  background-color: black;
+  width: 100%;
+  height: 565px; }
+
+.hero img {
+  float: right;
+  height: 565px; }
+
+.heroblurbfix {
+  z-index: 1;
+  top: 220px; }
+
+.heroblurb {
+  color: white;
+  right: 0px;
+  float: left;
+  width: 560px; }
+
+.heroblurb p {
+  color: white; }
+
+.herop1 {
+  font-size: 16px;
+  font-style: italic;
+  margin-right: 190px;
+  text-align: justify; }
+
+.herop2 {
+  font-family: "Oswald";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+.herospacer {
+  height: 565px; }
+
+.page {
+  padding-top: 0px; }
+
+.herobuffer {
+  margin-top: -15px; }
+
+.page a {
+  text-align: justify;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 300;
+  float: right;
+  text-decoration: none;
+  color: black; }
+
+.cell {
+  position: relative;
+  float: left;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.cell img {
+  height: 100%;
+  width: 100%; }
+
+.cell:hover {
+  box-shadow: 0px 0px 50px 5px white;
+  z-index: 1000; }
+
+.copy {
+  position: absolute; }
+
+.pp {
+  display: none; }
+
+.mandeladay {
+  width: 100%;
+  height: 477px; }
+
+.mandeladay img {
+  float: left;
+  width: 50%; }
+
+.mandeladaycopy {
+  height: 100%;
+  width: 100%; }
+
+.mandeladaycopy h2 {
+  margin-top: 100px; }
+
+.mandeladaycopy h3 {
+  font-size: 26px; }
+
+.mandeladaycopy p {
+  margin-right: 60%;
+  text-align: justify; }
+
+.mandeladaycopy a {
+  margin-right: 60%; }
+
+.mission {
+  width: 300px;
+  height: 300px; }
+
+.missioncopy {
+  height: 27%;
+  width: 100%;
+  bottom: 0px;
+  left: 0px; }
+
+.hospital {
+  width: 300px;
+  height: 300px; }
+
+.hospitalcopy {
+  height: 27%;
+  width: 100%;
+  bottom: 0px;
+  left: 0px; }
+
+.video {
+  width: 300px;
+  height: 300px; }
+
+.textcode {
+  width: 300px;
+  height: 300px; }
+
+.textcodecopy {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px; }
+
+.textcodecopy h5 {
+  margin: 112px auto 0 auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+.concert {
+  width: 100%;
+  height: 423px; }
+
+.concertcopy {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0px; }
+
+.concertcopy h2 {
+  margin-top: 111px; }
+
+.concertcopy h3 {
+  font-size: 21px; }
+
+.concertcopy p {
+  margin-right: 72%;
+  text-align: justify; }
+
+.concertcopy a {
+  margin-right: 72%; }
+
+.app {
+  width: auto;
+  float: right;
+  height: 389px; }
+
+.appcopy {
+  width: 379px;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  text-align: center; }
+
+.appcopy h5 {
+  font-size: 18px;
+  font-family: "Open Sans";
+  margin: 105px 78px 47px 78px; }
+
+.appcopy img {
+  width: 153px;
+  height: auto;
+  margin: 0 75px 20px 75px; }
+
+.guitar {
+  width: auto;
+  float: right;
+  height: 389px; }
+
+.guitarcopy {
+  width: 39%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  text-align: center; }
+
+.gc1 {
+  margin-top: 170px; }
+
+.gc2 {
+  font-size: 35px; }
+
+.cellcontainer {
+  height: 1589px; }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 479px) {
+  #nav-dropdown .menu-home a {
+    color: #358fe3; }
+
+  .herofix {
+    height: 265px;
+    top: 40px; }
+
+  .hero {
+    height: 265px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 344.5px;
+    clip: rect(0px, 100%, 100%, 0px);
+    position: absolute;
+    top: -40px;
+    right: 0px; }
+
+  .heroblurb {
+    display: none; }
+
+  .herospacer {
+    height: 265px; }
+
+  .pp {
+    display: block; }
+
+  .no-pp {
+    display: none; }
+
+  .cell {
+    width: 100%;
+    text-align: center; }
+
+  .copy {
+    width: 100%;
+    text-align: center; }
+
+  .page img {
+    height: 100%;
+    width: 100%; }
+
+  .page h2 {
+    font-size: 20px; }
+
+  .page h5 {
+    font-size: 20px;
+    font-family: "Oswald";
+    color: black;
+    font-weight: 400; }
+
+  .mandeladay {
+    height: 253px; }
+
+  .mandeladay img {
+    content: url(../img/home_pp_mandeladay.jpg); }
+
+  .mandeladaycopy h2 {
+    margin-top: 99px; }
+
+  .mandeladaycopy h3 {
+    font-size: 17px; }
+
+  .concert {
+    height: 218px; }
+
+  .concertcopy {
+    width: 100%; }
+
+  .concertcopy h2 {
+    margin-top: 94px; }
+
+  .concertcopy h3 {
+    font-size: 14px; }
+
+  .mission {
+    height: 252px; }
+
+  .mission img {
+    content: url(../img/home_pp_mission.jpg); }
+
+  .missioncopy {
+    height: 100%; }
+
+  .missioncopy h5 {
+    margin-top: 110px; }
+
+  .guitar {
+    float: left;
+    height: 223px; }
+
+  .guitar img {
+    content: url(../img/home_pp_guitar.jpg); }
+
+  .gc1 {
+    margin-top: 84px; }
+
+  .gc2 {
+    font-size: 24px !important; }
+
+  .app {
+    float: left;
+    height: 223px; }
+
+  .appcopy img {
+    width: 131px; }
+
+  .appcopy h5 {
+    font-family: "Open Sans";
+    color: white;
+    margin: 10px 10px;
+    font-size: 15px;
+    margin-bottom: 35px; }
+
+  .appcopy img {
+    margin-right: 174px;
+    margin-left: 15px;
+    height: auto; }
+
+  .cellcontainer {
+    height: 1169px; } }
+/* MOBILE (LANDSCAPE)
+* ------------------------------------------------ */
+@media only screen and (min-width: 480px) and (max-width: 567px) {
+  .no-pl {
+    display: none; }
+
+  #nav .menu-home a {
+    color: white; }
+
+  #nav-dropdown .menu-home a {
+    color: #358fe3; }
+
+  #nav .menu-home {
+    display: inherit !important;
+    padding-right: 15px !important; }
+
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .heroblurb {
+    width: 200px !important; }
+
+  .heroblurb h3 {
+    text-align: center;
+    font-size: 15px !important; }
+
+  .heroblurbfix p {
+    display: none; }
+
+  .mandeladay {
+    height: 200px;
+    width: 100%; }
+
+  .mandeladaycopy {
+    text-align: center;
+    width: 50%; }
+
+  .mandeladay h2 {
+    font-size: 25px;
+    margin-top: 70px; }
+
+  .mandeladay h3 {
+    font-size: 22px; }
+
+  .mission {
+    height: 245px;
+    width: 50%; }
+
+  .missioncopy h5 {
+    font-size: 25px;
+    margin-top: 10px; }
+
+  .video {
+    height: 245px;
+    width: 50%; }
+
+  .concert {
+    height: 195px;
+    width: 100%; }
+
+  .concertcopy {
+    width: 39%;
+    text-align: center; }
+
+  .concertcopy h2 {
+    font-size: 25px;
+    margin-top: 80px; }
+
+  .concertcopy h3 {
+    font-size: 18px; }
+
+  .app {
+    height: 180px;
+    width: 50%;
+    float: right; }
+
+  .appcopy {
+    text-align: left; }
+
+  .appcopy img {
+    width: 80px;
+    margin-left: 30px !important; }
+
+  .appcopy h5 {
+    font-family: "Open Sans";
+    color: white;
+    margin-top: 15px;
+    margin-left: 15px !important;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 12px !important; }
+
+  .appcopy img {
+    margin-right: 174px;
+    margin-left: -26px;
+    height: auto; }
+
+  .guitar {
+    height: 180px;
+    width: 50%;
+    float: right; }
+
+  .gc1 {
+    margin-top: 70px;
+    font-size: 17px; }
+
+  .gc2 {
+    font-size: 20px !important; }
+
+  .cellcontainer {
+    height: 820px; } }
+@media only screen and (min-width: 568px) and (max-width: 639px) {
+  .no-pl {
+    display: none; }
+
+  #nav .menu-home a {
+    color: white; }
+
+  #nav-dropdown .menu-home a {
+    color: #358fe3; }
+
+  #nav .menu-home {
+    display: inherit !important;
+    padding-right: 15px !important; }
+
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .heroblurb {
+    width: 200px !important; }
+
+  .heroblurb h3 {
+    text-align: center;
+    font-size: 15px !important; }
+
+  .heroblurbfix p {
+    display: none; }
+
+  .mandeladay {
+    height: 200px;
+    width: 100%; }
+
+  .mandeladaycopy {
+    text-align: center;
+    width: 50%; }
+
+  .mandeladay h2 {
+    font-size: 25px;
+    margin-top: 70px; }
+
+  .mandeladay h3 {
+    font-size: 22px; }
+
+  .mission {
+    height: 245px;
+    width: 50%; }
+
+  .missioncopy h5 {
+    font-size: 25px;
+    margin-top: 10px; }
+
+  .video {
+    height: 245px;
+    width: 50%; }
+
+  .concert {
+    height: 195px;
+    width: 100%; }
+
+  .concertcopy {
+    width: 39%;
+    text-align: center; }
+
+  .concertcopy h2 {
+    font-size: 25px;
+    margin-top: 80px; }
+
+  .concertcopy h3 {
+    font-size: 18px; }
+
+  .app {
+    height: 180px;
+    width: 50%;
+    float: right; }
+
+  .appcopy {
+    text-align: left; }
+
+  .appcopy img {
+    width: 80px;
+    margin-left: 30px !important; }
+
+  .appcopy h5 {
+    font-family: "Open Sans";
+    color: white;
+    margin-top: 15px;
+    margin-left: 15px !important;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 12px !important; }
+
+  .appcopy img {
+    margin-right: 174px;
+    margin-left: -26px;
+    height: auto; }
+
+  .guitar {
+    height: 180px;
+    width: 50%;
+    float: right; }
+
+  .gc1 {
+    margin-top: 70px;
+    font-size: 17px; }
+
+  .gc2 {
+    font-size: 20px !important; }
+
+  .cellcontainer {
+    height: 820px; }
+
+  .hero img {
+    height: 416px;
+    top: -100px; }
+
+  .heroblurbfix {
+    top: 115px; }
+
+  .heroblurb {
+    width: 260px !important; }
+
+  .heroblurb h3 {
+    font-size: 18px !important; }
+
+  .mandeladay {
+    height: 246px; }
+
+  .mandeladay h2 {
+    font-size: 25px;
+    margin-top: 96px; }
+
+  .mission {
+    height: 284px; }
+
+  .missioncopy h5 {
+    margin-top: 16px; }
+
+  .video {
+    height: 284px; }
+
+  .concert {
+    height: 198px; }
+
+  .concertcopy h2 {
+    margin-top: 76px; }
+
+  .app {
+    height: 188px; }
+
+  .appcopy {
+    text-align: left; }
+
+  .appcopy img {
+    width: 110px;
+    margin-left: 27px; }
+
+  .appcopy h5 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 14px !important; }
+
+  .guitar {
+    height: 188px; }
+
+  .gc1 {
+    margin-top: 75px;
+    font-size: 19px; }
+
+  .gc2 {
+    font-size: 22px !important; }
+
+  .cellcontainer {
+    height: 916px; } }
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  .no-pl {
+    display: none; }
+
+  #nav .menu-home a {
+    color: white; }
+
+  #nav-dropdown .menu-home a {
+    color: #358fe3; }
+
+  #nav .menu-home {
+    display: inherit !important;
+    padding-right: 15px !important; }
+
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .heroblurb {
+    width: 200px !important; }
+
+  .heroblurb h3 {
+    text-align: center;
+    font-size: 15px !important; }
+
+  .heroblurbfix p {
+    display: none; }
+
+  .mandeladay {
+    height: 200px;
+    width: 100%; }
+
+  .mandeladaycopy {
+    text-align: center;
+    width: 50%; }
+
+  .mandeladay h2 {
+    font-size: 25px;
+    margin-top: 70px; }
+
+  .mandeladay h3 {
+    font-size: 22px; }
+
+  .mission {
+    height: 245px;
+    width: 50%; }
+
+  .missioncopy h5 {
+    font-size: 25px;
+    margin-top: 10px; }
+
+  .video {
+    height: 245px;
+    width: 50%; }
+
+  .concert {
+    height: 195px;
+    width: 100%; }
+
+  .concertcopy {
+    width: 39%;
+    text-align: center; }
+
+  .concertcopy h2 {
+    font-size: 25px;
+    margin-top: 80px; }
+
+  .concertcopy h3 {
+    font-size: 18px; }
+
+  .app {
+    height: 180px;
+    width: 50%;
+    float: right; }
+
+  .appcopy {
+    text-align: left; }
+
+  .appcopy img {
+    width: 80px;
+    margin-left: 30px !important; }
+
+  .appcopy h5 {
+    font-family: "Open Sans";
+    color: white;
+    margin-top: 15px;
+    margin-left: 15px !important;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 12px !important; }
+
+  .appcopy img {
+    margin-right: 174px;
+    margin-left: -26px;
+    height: auto; }
+
+  .guitar {
+    height: 180px;
+    width: 50%;
+    float: right; }
+
+  .gc1 {
+    margin-top: 70px;
+    font-size: 17px; }
+
+  .gc2 {
+    font-size: 20px !important; }
+
+  .cellcontainer {
+    height: 820px; }
+
+  .hero img {
+    height: 448px;
+    top: -100px; }
+
+  .heroblurbfix {
+    top: 125px; }
+
+  .heroblurb {
+    width: 295px !important; }
+
+  .heroblurb h3 {
+    font-size: 20px !important; }
+
+  .mandeladay {
+    height: 264px; }
+
+  .mandeladay h2 {
+    font-size: 25px;
+    margin-top: 100px; }
+
+  .mission {
+    height: 337px; }
+
+  .missioncopy h5 {
+    margin-top: 25px; }
+
+  .video {
+    height: 337px; }
+
+  .concert {
+    height: 235px; }
+
+  .concertcopy h2 {
+    margin-top: 100px; }
+
+  .app {
+    height: 223px; }
+
+  .appcopy img {
+    width: 131px; }
+
+  .appcopy h5 {
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 15px !important; }
+
+  .guitar {
+    height: 223px; }
+
+  .gc1 {
+    margin-top: 95px;
+    font-size: 21px; }
+
+  .gc2 {
+    font-size: 24px !important; }
+
+  .cellcontainer {
+    height: 1059px; } }
+/* iPads (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper-content {
+    width: 95%; }
+
+  #nav .menu-home a {
+    color: white; }
+
+  #nav-dropdown .menu-home a {
+    color: #358fe3; }
+
+  #nav .menu-home {
+    display: inherit !important;
+    padding-right: 15px !important; }
+
+  .heroblurb {
+    width: 340px; }
+
+  .heroblurb h3 {
+    font-weight: bold; }
+
+  .heroblurb p {
+    margin-right: 0px;
+    font-weight: 400;
+    line-height: 1.1em;
+    font-size: 15px; }
+
+  .mandeladay {
+    height: 320px; }
+
+  .mandeladaycopy h2 {
+    margin-top: 20px; }
+
+  .mandeladaycopy h3 {
+    font-size: 26px; }
+
+  .mandeladaycopy p {
+    margin-right: 52%;
+    margin-top: 25px; }
+
+  .mandeladaycopy a {
+    margin-right: 52%; }
+
+  .mission {
+    height: 192px;
+    width: 192px; }
+
+  .missioncopy h5 {
+    margin-top: 12px;
+    font-size: 15px; }
+
+  .hospital {
+    height: 192px;
+    width: 192px; }
+
+  .hospitalcopy h5 {
+    margin-top: 12px;
+    font-size: 15px; }
+
+  .video {
+    height: 192px;
+    width: 192px; }
+
+  .textcode {
+    height: 192px;
+    width: 192px; }
+
+  .textcodecopy h5 {
+    margin-top: 63px;
+    font-size: 13px; }
+
+  .concert {
+    height: 290px; }
+
+  .concertcopy h2 {
+    margin-top: 25px; }
+
+  .concertcopy h3 {
+    font-size: 26px; }
+
+  .concertcopy p {
+    margin-right: 65%; }
+
+  .concertcopy a {
+    margin-right: 65%; }
+
+  .app {
+    height: 254px;
+    width: 54%; }
+
+  .appcopy {
+    height: 100%;
+    width: 100%;
+    text-align: left; }
+
+  .appcopy img {
+    width: 131px;
+    margin-left: 68px; }
+
+  .appcopy h5 {
+    margin-bottom: 20px;
+    font-size: 15px !important;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 50%; }
+
+  .guitar {
+    height: 254px;
+    width: 46%; }
+
+  .gc1 {
+    margin-top: 105px;
+    font-size: 23px; }
+
+  .gc2 {
+    font-size: 25px !important; }
+
+  .cellcontainer {
+    height: 1056px; } }
+/* iPads (landscape) ----------- */
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  #nav .menu-home a {
+    color: #358fe3; }
+
+  .mandeladay {
+    height: 450px; }
+
+  .mandeladaycopy {
+    padding-left: 30px; }
+
+  .mandeladaycopy p {
+    margin-right: 60%;
+    text-align: justify; }
+
+  .mandeladaycopy a {
+    margin-right: 60%; }
+
+  .mission {
+    height: 256px;
+    width: 256px; }
+
+  .missioncopy h5 {
+    margin-top: 19px; }
+
+  .hospital {
+    height: 256px;
+    width: 256px; }
+
+  .hospitalcopy h5 {
+    margin-top: 19px; }
+
+  .video {
+    height: 256px;
+    width: 256px; }
+
+  .textcode {
+    height: 256px;
+    width: 256px; }
+
+  .textcodecopy h5 {
+    margin-top: 80px; }
+
+  .concert {
+    height: 400px; }
+
+  .concertcopy {
+    padding-left: 20px; }
+
+  .concertcopy h2 {
+    margin-top: 80px; }
+
+  .app {
+    height: 350px;
+    width: 54%; }
+
+  .appcopy {
+    height: 100%;
+    width: 100%;
+    text-align: left; }
+
+  .appcopy img {
+    width: 168px;
+    margin-left: 82px; }
+
+  .appcopy h5 {
+    margin-bottom: 20px;
+    margin-top: 70px;
+    margin-left: 30px;
+    width: 50%;
+    font-weight: 400; }
+
+  .guitar {
+    height: 350px;
+    width: 46%; }
+
+  .gc1 {
+    margin-top: 145px; }
+
+  .cellcontainer {
+    height: 1456px; } }
