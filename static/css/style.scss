@@ -1,0 +1,601 @@
+@import "reset.css";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,Light);
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700,Light);
+
+
+
+//  TYPOGRAPHY
+body {
+  font-family: "Oswald";
+  color: #151920;
+  background-color: #252525;
+}
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase; 
+}
+
+h1{
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400; 
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 10px; 
+  line-height: 1.3em;
+}
+
+h4{
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 45px;
+  line-height: 1.3em;
+}
+
+h5{
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 45px;
+  line-height: 1.55em;
+  text-align: center;
+
+}
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.45em;
+  font-family: "Open Sans";
+  margin: 35px auto; 
+}
+
+
+
+a {
+  color: #358fe3;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: #358fe3; 
+}
+
+
+
+
+
+
+
+//  WRAPPERS
+$wrapper-inner-width: 1200px;
+$wrapper-content-width: 960px;
+.wrapper {
+  width: 100%;
+  background-color: #252525; 
+}
+
+.wrapper-inner {
+  width: 100%;
+  max-width: $wrapper-inner-width;
+  margin: 0 auto;
+  position: relative; 
+}
+
+.wrapper-content {
+  width: 90%;
+  max-width: $wrapper-content-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper-fix {
+  position: fixed;
+  width: 100%; 
+}
+
+
+
+//  NAVIGATION BAR
+$navheight: 50px;
+$nav-overflow: 10px;
+$navcolor: #1c1f26;
+#navfix {
+  height: $navheight;
+  z-index: 1000; 
+}
+
+#navbar {
+  background-color: $navcolor;
+  width: 100%;
+  position: relative;
+  height: $navheight+$nav-overflow; 
+  margin-top: -$nav-overflow;
+}
+
+#navholder {
+  margin-top: $nav-overflow;
+  float: right; 
+}
+
+.logo {
+  margin-top: 5px + $nav-overflow;
+  width: 170px;
+  position: relative;
+  z-index: 1001;
+}
+
+.links {
+  height: $navheight;
+  display: table-cell;
+  vertical-align: middle; 
+
+}
+
+.links li {
+  display: inline;
+  margin: 0 15px 0 0; 
+}
+
+.links a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.links a:hover {
+  color: #358fe3; 
+}
+
+
+// PAGE
+
+
+$page-border-top: 64px;
+.page {
+  padding-top: $page-border-top;
+  position: relative;
+  background: white;
+  z-index: 5;
+}
+
+$herobuffer: 15px;
+.herobuffer{
+  width:100%;
+  height:$herobuffer;
+  background-color: white;
+  opacity: 0.3;
+  position:absolute;
+  margin-top: -($herobuffer + $page-border-top);
+}
+
+
+
+//FOOTERS
+
+$foot-height: 60px;
+.prefooter {
+  width: 100%;
+  height: $foot-height;
+  background-color: #e46315;
+  font-style: italic;
+  font-size: 18px;
+  z-index: 1000;
+  position: relative;
+}
+
+.prefooter p {
+  margin: 10px auto 15px auto; 
+}
+
+.pf1 {
+  float: left;
+  margin-top: 7px;
+  height: auto; 
+}
+
+.pf2 {
+  display: table-cell;
+  float: right;
+  vertical-align: middle;
+  height: auto;
+  margin: 10px auto 15px auto; 
+}
+
+.pf2 p {
+  float: right;
+  margin: 7px 10px 0 0; 
+}
+
+.pf2 img {
+  float: right;
+  height: 35px;
+  margin: 0 10px 0 0; 
+}
+
+.footer {
+  height: $foot-height;
+  width: 100%;
+  background-color: #1c1f26;
+  color: white;
+  z-index: 1000;
+  position: relative;
+}
+
+.footer p{
+  font-size: 12px;
+  margin-top: 24px;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+
+.f1{
+  float: left;
+}
+
+.f2{
+  float:right;
+}
+.f2p-phone{
+  display:none;
+}
+
+
+//  RESPONSIVE
+
+$phone-portrait: 320px;
+$phone-landscape: 480px;
+$phone-wide-landscape: 568px;
+$phone-even-wider-landscape: 640px;
+$tablet-portrait: 768px;
+$tablet-landscape: 1024px;
+$desktop: 1224px;
+
+
+
+
+
+/* Smartphones (portrait) ----------- */
+//  MOBILE (PORTRAIT)
+// * ------------------------------------------------
+
+$pp-navheight: 50px;
+ $pp-herobuffer: 20px;
+ $pp-foot-height: 140px;
+
+@media only screen and (orientation: portrait) and (max-device-width: $phone-landscape - 1px)  {
+
+
+  //  MOBILE -- PORTRAIT -- TYPOGRAPHY
+h1{
+    text-align: center;
+    font-size: 25px;
+}
+h2{
+  font-size: 18px;
+}
+h3{
+  font-size: 16px;
+}
+  p{
+    text-align: justify;
+    line-height: 1.4em;
+    font-size: 15px;
+  }
+strong { font-weight: bold !important; }
+
+
+//  MOBILE -- PORTRAIT -- WRAPPERS
+.wrapper-content{
+  width: 88%;
+}
+
+
+//  MOBILE -- PORTRAIT -- NAVIGATION BAR
+  #navfix{
+    height: $pp-navheight;
+  }
+  #navbar{
+    height: $pp-navheight+$nav-overflow;
+  }
+  .logo{
+    width: $pp-navheight * 4;
+    margin-top: 5px + $nav-overflow;
+  }
+  .links{
+    height: $pp-navheight;
+  }
+  #currentpage{
+    display:none;
+  }
+  .menu{
+    height: $pp-navheight/2.7;
+    margin-top: 0px;
+  }
+
+
+  //  MOBILE -- PORTRAIT -- PAGE
+
+.herobuffer{
+  height:$pp-herobuffer;
+  margin-top: -($pp-herobuffer + $page-border-top);
+}
+
+  //  MOBILE -- PORTRAIT -- FOOTERS
+ 
+  .prefooter{
+    height: $pp-foot-height;
+    padding-top: 6px;
+    z-index: 1000;
+ 	}
+  .prefooter p{
+    text-align: center;
+
+  }
+  .pf1{
+    float:inherit;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 10px;
+  }
+
+  .pf2 {
+    float: none;
+    display: block;
+    vertical-align: middle;
+    height: auto;
+    margin: 3px auto 0px auto;
+    text-align: center;
+  }
+
+  .pf2 p{
+    display: none;
+  }
+  .pf2 img { 
+    float: none;
+    height: 45px;
+    margin: 0px auto; 
+  }
+
+  .footer{
+    height: $pp-foot-height;
+    padding-top: 10px;
+    z-index: 1000;
+  }
+
+  .footer p{
+    text-align: center;
+    font-size: 100%;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom:  0px;
+
+  margin-top: 17px;
+  }
+  .f1{
+    float: none;
+  }
+  .f2{
+    float:none;
+  }
+  .f2p-phone{
+    display:inherit;
+    margin-bottom: 10px;
+  }
+  .f2p-desktop{
+    display:none;
+  }
+}
+
+$pl-navheight: 40px;
+$pl-herobuffer: 20px;
+
+
+// Mobile Landscape
+@media only screen and (orientation: landscape) and (max-device-width: $tablet-portrait - 1px)  {
+
+html{
+	-webkit-text-size-adjust: none ;
+}
+
+//  MOBILE -- LANDSCAPE -- TYPOGRAPHY
+h1{
+    text-align: center;
+    font-size: 20px;
+}
+h2{
+  font-size: 18px;
+}
+h3{
+  font-size: 16px;
+}
+  p{
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 14px;
+  }
+
+
+//  MOBILE -- LANDSCAPE -- NAVIGATION BAR
+
+#navfix{
+  height: $pl-navheight;
+}
+#navbar{
+  height: $pl-navheight+$nav-overflow;
+}
+.logo{
+  width: $pl-navheight * 4;
+  margin: 5px + $nav-overflow;
+  left: -15px;
+}
+.links{
+  height: $pl-navheight;
+}
+#currentpage{
+  display:none;
+}
+.menu{
+  height: $pl-navheight/2.7;
+  margin-top: 0px;
+}
+.menu{
+  height: $pl-navheight/2.7;
+  margin-top: 0px;
+}
+
+
+//  MOBILE -- LANDSCAPE -- PAGE
+.herobuffer{
+  height:$pl-herobuffer;
+  margin-top: -($pl-herobuffer + $page-border-top);
+}
+
+
+
+//  MOBILE -- LANDSCAPE -- FOOTERS
+
+.prefooter{
+  height: 65px;
+  padding-top: 10px;
+}
+.pf1 p{
+  font-size: 12px;
+  font-weight: 300;
+  //14 mobile refactor
+}
+.pf2 p{
+  display: none;
+}
+.pf2 img { 
+  height: 30px;
+  //40 mobile refactor
+}
+.footer{
+  height: 75px;
+  padding-top: 10px;
+}
+.footer p{
+  text-align: center;
+   font-size: 14px;
+  font-style: italic;
+  margin-top: 10px;
+}
+.f1{
+  float: none;
+}
+.f2{
+  float:none;
+}
+.f2p-phone{
+  display:inherit;
+}
+.f2p-desktop{
+  display:none;
+}
+}
+
+
+ //iphone 5
+ @media screen and (device-aspect-ratio: 40/71) {
+
+    .pf1 p{
+    font-size: 14px;
+  }
+
+  .pf2 img{
+    height: 36px;
+  }
+ }
+
+
+ //android
+@media only screen 
+and (min-device-width: $phone-wide-landscape + 1px) 
+and (max-device-width: $tablet-portrait - 1px)  {
+
+
+  .pf1 p{
+    font-size: 15px;
+  }
+
+  .pf2 img{
+    height: 40px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : $tablet-portrait) 
+and (max-device-width : $tablet-landscape) 
+and (orientation: portrait) {
+
+  h1{
+    font-size: 24px;
+  }
+
+  h3{
+    font-size: 19px;
+  }
+
+  p{
+    font-size: 17px;
+  }
+
+.pf2 {
+  margin-bottom: 0px;
+}
+    .pf1 p{
+    font-size: 15px;
+  }
+
+.pf2 p{
+  font-size: 15px;
+}
+  .pf2 img{
+    height: 40px;
+  }
+
+  .f2{
+    margin-top: 0px !important;
+  }
+
+
+
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : $tablet-portrait) 
+and (max-device-width : $tablet-landscape) 
+and (orientation:landscape) {
+
+// IPAD -- LANDSCAPE -- TYPOGRAPHY
+  h1{
+    font-size: 35px;
+  }
+  h3{
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 17px;
+  }
+  }
+
+
