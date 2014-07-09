@@ -389,7 +389,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -575,7 +575,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -616,6 +616,9 @@ a:hover {
   .prefooter {
     height: 65px;
     padding-top: 10px; }
+
+  .pf1 {
+    margin-top: 9px; }
 
   .pf1 p {
     font-size: 15px;
@@ -676,14 +679,19 @@ a:hover {
   .logo {
     margin-top: 15px; }
 
+  .pf1 {
+    margin-top: 10px; }
+
   .pf2 {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    margin-top: 10px; }
 
   .pf1 p {
     font-size: 15px; }
 
   .pf2 p {
-    font-size: 15px; }
+    font-size: 15px;
+    margin-top: 10px; }
 
   .pf2 img {
     height: 40px; }
@@ -714,15 +722,26 @@ a:hover {
 #nav .menu-guitar a {
   color: #358fe3; }
 
+.herofix {
+  height: 720px;
+  top: 50px; }
+
 .hero {
+  width: 100%;
+  height: 935.74959px;
   position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center 50px fixed;
-  background-size: 1200px 935.74959px;
-  height: 985.74959px; }
+  overflow: hidden; }
+
+.hero img {
+  width: 1200px;
+  position: absolute; }
+
+.herospacer {
+  height: 770px; }
 
 .heroblurbfix {
   z-index: 1;
-  top: 100px; }
+  top: 80px; }
 
 .heroblurb {
   color: white;
@@ -851,6 +870,24 @@ a:hover {
   .heroblurbfix {
     display: none; }
 
+  .herofix {
+    height: 265px;
+    top: 50px; }
+
+  .hero {
+    height: 265px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    width: 100%;
+    position: absolute; }
+
+  .herospacer {
+    height: 265px; }
+
   #guitar-desktop {
     display: none; }
 
@@ -914,10 +951,23 @@ a:hover {
   .heroblurbfix {
     display: none; }
 
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
   .hero {
-    position: relative;
-    background: url(../img/guitar_hero.jpg) no-repeat center -20px fixed;
-    background-size: 480px 374.29984px;
+    height: 320px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    top: -40px;
+    width: 100%;
+    position: absolute; }
+
+  .herospacer {
     height: 320px; }
 
   #guitar-desktop {
@@ -931,24 +981,29 @@ a:hover {
 
   #guitar-phone-landscape {
     display: inherit;
-    padding-top: 30px; }
+    padding-top: 25px; }
 
   .herobuffer {
-    margin-top: -50px; }
+    margin-top: -45px; }
+
+  .page h1 {
+    margin-bottom: 15px; }
 
   .page p {
-    margin-top: 0px; }
+    margin-top: 0px;
+    line-height: 1.45em;
+    font-size: 11px; }
 
   .plguitarimg1 {
     position: absolute;
     top: 0px;
     right: 15px;
     z-index: 10;
-    width: 200px; }
+    width: 230px; }
 
   .spacer1 {
-    width: 230px;
-    height: 260px; }
+    width: 260px;
+    height: 280px; }
 
   #generous {
     width: 100%;
@@ -963,7 +1018,6 @@ a:hover {
     margin: 0 auto; }
 
   #plguitarcopy1 {
-    font-size: 100%;
     text-align: center !important;
     font-style: italic;
     line-height: 1.6em !important;
@@ -985,7 +1039,7 @@ a:hover {
 
   .b-left {
     height: 479.20631px;
-    width: 52%;
+    width: calc(100% - $pl-bottom-divider + 20px);
     overflow: hidden;
     position: relative;
     display: table-cell; }
@@ -1043,10 +1097,23 @@ a:hover {
   .heroblurbfix {
     display: none; }
 
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
   .hero {
-    position: relative;
-    background: url(../img/guitar_hero.jpg) no-repeat center -20px fixed;
-    background-size: 480px 374.29984px;
+    height: 320px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    top: -55px;
+    width: 100%;
+    position: absolute; }
+
+  .herospacer {
     height: 320px; }
 
   #guitar-desktop {
@@ -1066,7 +1133,8 @@ a:hover {
     margin-top: -50px; }
 
   .page p {
-    margin-top: 0px; }
+    margin-top: 0px;
+    line-height: 1.45em; }
 
   .plguitarimg1 {
     position: absolute;
@@ -1092,7 +1160,6 @@ a:hover {
     margin: 0 auto; }
 
   #plguitarcopy1 {
-    font-size: 100%;
     text-align: center !important;
     font-style: italic;
     line-height: 1.6em !important;
@@ -1193,10 +1260,23 @@ a:hover {
   .heroblurbfix {
     display: none; }
 
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
   .hero {
-    position: relative;
-    background: url(../img/guitar_hero.jpg) no-repeat center -20px fixed;
-    background-size: 480px 374.29984px;
+    height: 320px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    top: -70px;
+    width: 100%;
+    position: absolute; }
+
+  .herospacer {
     height: 320px; }
 
   #guitar-desktop {
@@ -1242,7 +1322,6 @@ a:hover {
     margin: 0 auto; }
 
   #plguitarcopy1 {
-    font-size: 100%;
     text-align: center !important;
     font-style: italic;
     line-height: 1.6em !important;
@@ -1336,18 +1415,12 @@ a:hover {
     display: inherit !important;
     padding-right: 15px !important; }
 
-  .hero {
-    position: relative;
-    background: url(../img/guitar_hero.jpg) no-repeat center 50px fixed;
-    background-size: 768px 598.87974px;
-    height: 598.87974px; }
-
   .heroblurbfix {
     position: absolute;
     top: 100px; }
 
-  .heroblurb img {
-    width: 100px; }
+  .hero img {
+    left: -100px; }
 
   .tpgibson {
     display: inherit;
@@ -1478,18 +1551,12 @@ a:hover {
   #nav .menu-guitar a {
     color: #358fe3; }
 
-  .hero {
-    position: relative;
-    background: url(../img/guitar_hero.jpg) no-repeat center 50px fixed;
-    background-size: 1024px 798.50632px;
-    height: 798.50632px; }
+  .hero img {
+    top: -50px; }
 
   .heroblurbfix {
     position: absolute;
     top: 100px; }
-
-  .heroblurb img {
-    width: 140px; }
 
   .tpgibson {
     display: inherit;
@@ -1536,15 +1603,15 @@ a:hover {
 
   .b-left {
     max-height: 926.15992px !important;
-    width: 57%;
+    width: 56.5%;
     display: block; }
 
   .b-left p {
-    font-size: 16px;
+    font-size: 15px;
     margin-left: 40px; }
 
   .guitarcopy2 {
-    padding-bottom: 13px; }
+    padding-bottom: 20px; }
 
   .guitarcopy2 p {
     margin-right: 40px;
@@ -1554,4 +1621,6 @@ a:hover {
   .guitarimg5 {
     display: block;
     border: 0 0;
-    width: 99%; } }
+    width: 100%;
+    margin: none;
+    bottom: 0px; } }

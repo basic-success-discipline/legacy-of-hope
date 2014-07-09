@@ -389,7 +389,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -575,7 +575,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -616,6 +616,9 @@ a:hover {
   .prefooter {
     height: 65px;
     padding-top: 10px; }
+
+  .pf1 {
+    margin-top: 9px; }
 
   .pf1 p {
     font-size: 15px;
@@ -676,14 +679,19 @@ a:hover {
   .logo {
     margin-top: 15px; }
 
+  .pf1 {
+    margin-top: 10px; }
+
   .pf2 {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    margin-top: 10px; }
 
   .pf1 p {
     font-size: 15px; }
 
   .pf2 p {
-    font-size: 15px; }
+    font-size: 15px;
+    margin-top: 10px; }
 
   .pf2 img {
     height: 40px; }
@@ -768,17 +776,37 @@ a:hover {
 .mission2 h4 {
   clear: left; }
 
+.downloads {
+  width: calc(100% - 80px);
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-align: center; }
+
+.downloads .links {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; }
+
 .downloads h5 {
   display: inline;
   font-family: 'Oswald', sans-serif;
   color: #646464;
   font-size: 15px;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-right: 8px;
+  margin-left: 8px; }
 
 .downloads a {
   font-size: 15px;
   color: #358fe3;
-  vertical-align: middle; }
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 2.8em;
+  margin-right: 8px;
+  margin-left: 8px; }
 
 .downloads a:hover {
   color: #646464; }
@@ -844,16 +872,14 @@ a:hover {
     padding-bottom: 20px; }
 
   .downloads .links {
-    width: 100%;
+    width: 320px;
     margin: 0 auto;
     position: relative; }
 
-  .downloads span {
-    width: 100%;
-    text-align: center; }
-
   .downloads a {
-    line-height: 1.8em; } }
+    line-height: 1.8em;
+    text-align: center;
+    display: block; } }
 /* MOBILE (LANDSCAPE)
 * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -917,29 +943,14 @@ a:hover {
     text-align: center;
     font-size: 17px;
     width: 400px;
-    margin-left: auto; }
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
 
-  .downloads {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px; }
-
-  .downloads .links {
-    width: 100%;
-    margin: 0 auto;
-    position: relative; }
-
-  .downloads span {
-    width: 100%;
-    text-align: center;
-    float: none;
-    display: inline; }
-
-  .downloads h5 {
-    line-height: 1em; }
-
-  .downloads .links a {
-    vertical-align: middle; } }
+  .downloads .dl {
+    line-height: 1em;
+    display: block;
+    margin-bottom: 10px; } }
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   #nav-dropdown .menu-mission a {
@@ -955,30 +966,10 @@ a:hover {
   .hero img {
     left: -200px; }
 
-  .downloads {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px; }
-
-  .downloads .links {
-    width: 100%;
-    margin: 0 auto;
-    position: relative; }
-
-  .downloads span {
-    width: 100%;
-    text-align: center;
-    float: none;
-    display: inline; }
-
   .downloads .dl {
     line-height: 1em;
     display: block;
-    margin-bottom: 10px; }
-
-  .downloads .links a {
-    line-height: 2.5em;
-    vertical-align: middle; } }
+    margin-bottom: 10px; } }
 /* iPads (landscape) ----------- */
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   #nav .menu-mission a {
@@ -991,20 +982,4 @@ a:hover {
     font-size: 14px; }
 
   .downloads a {
-    font-size: 14px; }
-
-  .downloads {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px; }
-
-  .downloads .links {
-    width: 100%;
-    margin: 0 auto;
-    position: relative; }
-
-  .downloads span {
-    width: 100%;
-    text-align: center;
-    float: none;
-    display: inline; } }
+    font-size: 14px; } }

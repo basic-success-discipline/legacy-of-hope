@@ -389,7 +389,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -575,7 +575,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -616,6 +616,9 @@ a:hover {
   .prefooter {
     height: 65px;
     padding-top: 10px; }
+
+  .pf1 {
+    margin-top: 9px; }
 
   .pf1 p {
     font-size: 15px;
@@ -676,14 +679,19 @@ a:hover {
   .logo {
     margin-top: 15px; }
 
+  .pf1 {
+    margin-top: 10px; }
+
   .pf2 {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    margin-top: 10px; }
 
   .pf1 p {
     font-size: 15px; }
 
   .pf2 p {
-    font-size: 15px; }
+    font-size: 15px;
+    margin-top: 10px; }
 
   .pf2 img {
     height: 40px; }
@@ -948,9 +956,7 @@ body {
   font: 13px 'Open Sans', sans-serif;
   color: #1c1f26;
   line-height: 1em;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%; }
+  font-weight: 400; }
 
 h1 {
   font-family: 'Oswald', sans-serif;
@@ -958,7 +964,8 @@ h1 {
   line-height: 1.2em;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  -webkit-font-smoothing: antialiased; }
 
 h1.white {
   color: white; }
@@ -968,7 +975,8 @@ h3 {
   font-size: 24px;
   line-height: 1.4em;
   font-weight: 400;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  -webkit-font-smoothing: antialiased; }
 
 h3.white {
   color: white; }
@@ -981,7 +989,8 @@ h4 {
   font-size: 22px;
   line-height: 1.4em;
   font-weight: 400;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  -webkit-font-smoothing: antialiased; }
 
 h4.light {
   font-weight: 300; }
@@ -998,7 +1007,8 @@ h5 {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0px;
-  text-align: left; }
+  text-align: left;
+  -webkit-font-smoothing: antialiased; }
 
 .board h5 {
   margin-bottom: 5px; }
@@ -1013,6 +1023,9 @@ p {
   color: #666;
   text-align: justify;
   line-height: 1.5em; }
+
+.page p {
+  -webkit-font-smoothing: antialiased; }
 
 .prefooter p {
   color: black; }
@@ -1404,7 +1417,7 @@ h4.board {
     position: relative; }
 
   .hero img {
-    height: 360.8px;
+    height: 364.9px;
     position: absolute;
     right: 0px;
     width: auto; }
@@ -1425,7 +1438,11 @@ h4.board {
     margin-top: 20px; }
 
   .productionboard {
-    margin: 0 0 20px 0; } }
+    margin: 0 0 20px 0; }
+
+  .footer p {
+    margin-left: 0px;
+    line-height: 1.45em; } }
 /* iPads (landscape) ----------- */
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   .herofix {

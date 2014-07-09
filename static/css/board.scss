@@ -12,9 +12,7 @@ body {
 	color: #1c1f26;
 	line-height: 1em;
 	font-weight: 400;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
-	
+	// -webkit-text-size-adjust: 100%;	
 }
 h1 {
 	font-family: 'Oswald', sans-serif;
@@ -23,6 +21,7 @@ h1 {
 	text-transform: uppercase;
 	position: relative;
 	margin-bottom: 35px;
+	-webkit-font-smoothing: antialiased;
 }
 
 h1.white {
@@ -35,6 +34,7 @@ h3 {
 	line-height: 1.4em;
 	font-weight: 400;
 	margin-bottom: 0px;
+	-webkit-font-smoothing: antialiased;
 }
 
 h3.white {
@@ -50,6 +50,7 @@ h4 {
 	line-height: 1.4em;
 	font-weight: 400;
 	margin-bottom: 30px;
+	-webkit-font-smoothing: antialiased;
 }
 
 h4.light {
@@ -73,6 +74,7 @@ h5 {
 	font-weight: 600;
 	margin-bottom: 0px;
 	text-align: left;
+	-webkit-font-smoothing: antialiased;
 
 }
 
@@ -92,6 +94,10 @@ p {
 	color: #666;
 	text-align: justify;
 	line-height: 1.5em;
+}
+
+.page p{
+		-webkit-font-smoothing: antialiased;;
 }
 
 
@@ -624,7 +630,7 @@ $tp-hero-height: 410px;
 }
 .hero img{
 
-	height: $tp-hero-height * .88;
+	height: $tp-hero-height * .89;
 	position: absolute;
 	// top: -$tl-hero-offset;
 	right:0px;
@@ -652,6 +658,12 @@ $tp-hero-height: 410px;
 	}
 	.productionboard {
 		margin: 0 0 20px 0;
+	}
+
+	.footer p{
+		margin-left: 0px;
+		line-height: 1.45em;
+
 	}
 }
 

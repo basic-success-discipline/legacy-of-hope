@@ -389,7 +389,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -575,7 +575,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -616,6 +616,9 @@ a:hover {
   .prefooter {
     height: 65px;
     padding-top: 10px; }
+
+  .pf1 {
+    margin-top: 9px; }
 
   .pf1 p {
     font-size: 15px;
@@ -676,14 +679,19 @@ a:hover {
   .logo {
     margin-top: 15px; }
 
+  .pf1 {
+    margin-top: 10px; }
+
   .pf2 {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    margin-top: 10px; }
 
   .pf1 p {
     font-size: 15px; }
 
   .pf2 p {
-    font-size: 15px; }
+    font-size: 15px;
+    margin-top: 10px; }
 
   .pf2 img {
     height: 40px; }
@@ -717,14 +725,28 @@ h1 {
 h3 {
   clear: left; }
 
-.hero {
-  position: relative;
-  background: url(../img/sibongile_hero.jpg) no-repeat center 50px fixed;
-  background-size: 1200px 566.83417px;
-  height: 616.83417px; }
+.herofix {
+  height: 1000px;
+  top: 50px; }
 
-.deviceheros {
-  display: none; }
+.hero {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  overflow: hidden; }
+
+.hero img {
+  width: 100%;
+  height: auto;
+  position: absolute; }
+
+.herospacer {
+  height: auto; }
+
+.space-img {
+  margin-top: 50px;
+  visibility: hidden;
+  width: 100%; }
 
 #heroblurbfix {
   z-index: 1;
@@ -796,9 +818,6 @@ img.aol {
   .heroblurb {
     display: none; }
 
-  .hero {
-    display: none; }
-
   #phoneheroimg {
     display: inherit;
     width: 100%;
@@ -855,8 +874,11 @@ img.aol {
   .heroblurb {
     display: none; }
 
-  .hero {
-    display: none; }
+  .herofix {
+    top: 40px; }
+
+  .space-img {
+    margin-top: 40px; }
 
   #phonelandscapeheroimg {
     display: inherit;
@@ -905,16 +927,6 @@ img.aol {
   .heroblurb {
     display: none; }
 
-  .hero {
-    display: none; }
-
-  #ipadheroimg {
-    display: inherit;
-    width: 100%;
-    position: relative;
-    top: 50px;
-    margin-bottom: 50px; }
-
   .page {
     text-align: justify; }
 
@@ -934,9 +946,6 @@ img.aol {
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   .wrapper-content {
     width: 92%; }
-
-  #heroblurbfix {
-    position: relative; }
 
   .heroblurb h3 {
     font-size: 28px; }
