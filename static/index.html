@@ -15,6 +15,8 @@
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/home.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
 	<script src="js/modernizr.js"></script>
 	<script src="js/sharing.js"></script>
 
@@ -24,7 +26,20 @@
 <body>
 
 
+
 	<div class="wrapper"> 
+
+	<!-- video light box popup-->
+	<div id="light" class="lb-content wrapper-fix">	
+	<div class="wrapper-inner">
+	<div class="vidholder">
+	<a><i class="fa fa-times close-button"></i></a>
+		<iframe class="lb-video"  src="//www.youtube.com/embed/KrtR1bXF80A?controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+</div>
+	</div>
+	<div id="fade" class="black_overlay"></div>
+	<!--end video lightbox overlay-->
 
 		<section class="wrapper-fix" id="navfix">
 		 <div class="ddclick"></div>
@@ -78,7 +93,7 @@
 
 		<section class="wrapper-fix herofix">
 		<div class="wrapper-inner">
-			<div class="hero wrapper-inner">
+			<div class="hero ">
 				<img src="img/home_hero.png"/>
 			</div>
 			</div>
@@ -129,7 +144,8 @@
 					</div>
 					<div class="video cell no-pp">
 						<img src="img/home_video.jpg" class="videoimg"/>
-						<!-- <img src="img/video_play_icon.jpg" class="playicon"/> -->
+						<i class="fa fa-play-circle-o play-button fa-4x"></i>
+				
 					</div>
 					<div class="textcode cell no-pp no-pl">
 						<img src="img/home_textcode.jpg" class="textcodeimg"/>

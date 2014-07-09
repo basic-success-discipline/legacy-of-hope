@@ -13,10 +13,14 @@
   	<meta property="og:site_name" content="Legacy of Hope Concerts"/>
   	<meta property="og:description" content="This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before."/>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	
 	<link rel="stylesheet" href="css/concert.css" media="screen" type="text/css" />
-	<script src="js/modernizr.js"></script>
+	<link rel="stylesheet" href="css/boxy.css" media="screen" type="text/css" />
+	
+	<script src="js/modernizr.min.js"></script>
 	<script src="js/sharing.js"></script>
+	<script src="js/boxy.js"></script>
 
 </head>
 
@@ -32,7 +36,7 @@
             <img alt="" class="logo" src="img/LHlogo.png"/>
             <div id="navholder">
               <div id="nav" class="links">
-                <span class="menu-home"><a href="index.html">Home</a></span>
+                <span class="menu-home"><a href="home.html">Home</a></span>
                 <span class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></span>
                 <span class="menu-mission"><a href="mission.html">The Mission</a></span>
                 <span class="menu-concert"><a href="concert.html">The Concert</a></span>
@@ -49,7 +53,7 @@
               <div class="menu-dropdown-background"></div>
                <ul id="nav-dropdown" class="links">
 
-                <li class="menu-home"><a href="index.html">Home</a></li>
+                <li class="menu-home"><a href="home.html">Home</a></li>
                 <li class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></li>
                 <li class="menu-mission"><a href="mission.html">The Mission</a></li>
                 <li class="menu-concert"><a href="concert.html">The Concert</a></li>
@@ -61,7 +65,6 @@
               <script type='text/javascript' src="js/menu.js"></script>
       </div>
     </section>
-
 		<section class="wrapper-fix herofix">
 		<div class="wrapper-inner">
 			<div class="hero">
@@ -69,12 +72,10 @@
 			</div>
 			</div>
 		</section>
-
 		<section class="wrapper-inner">
 			<div class="herospacer"></div>
 			<div class="page">
 				<div class="herobuffer"></div>
-
 				<img src="img/concert_img1.png" class="concertimg1"/>
 				        <div class="spacer spacer1"></div>
         <div class="spacer spacer2"></div>
@@ -100,6 +101,41 @@
 			</div>
 		</div>
 
+		    <!-- POPUP DIALOGS-->
+		    <div id="signup-dialog" style="display:none">
+		        <div style="width:400;height:300">
+		            <input type="text" id="name">
+		            <input type="text" id="email">
+		            <button id='signup_submit'>Sign me up</button>
+		            <script>
+		            function showSignupForm() {
+					    window.signupForm = new Boxy($('#signup-dialog').html(), {
+					      title: "Sign up for updates", 
+					      modal: true
+					    });  
+		            }
+					$('#signup_submit').click(function(){
+						var $name  = $('#signup_name').val();
+						var $email = $('#signup_email').val();
+						if(!$name || !$email) {
+							alert('please fill in missing fields.');
+							return;
+						}
+						$.post('http://ec2-54-191-42-61.us-west-2.compute.amazonaws.com/auth/register', {
+							username    : $email,
+							password    : $email,
+							email       : $email,
+							autoconfirm : 1
+						}, function() {
+							alert('thank you for signing up for email updates from the Legacy of Hope.')
+							window.signupForm.hide();
+						});
+					});
+		            </script>
+		        </div>
+		    </div>
+		    <!-- END POPUP DIALOGS -->
+
 			<!-- FOOOTERS-->
 			<div class="prefooter">
 				<div class="wrapper-content">
@@ -120,7 +156,7 @@
 			<div class="footer">
 				<div class="wrapper-content">
 					<div class="f1">
-						<p><a href="#">Signup</a> to receive news and updates about upcoming events.</p>
+						<p><a href="javascript:showSignupForm()">Signup</a> to receive news and updates about upcoming events.</p>
 					</div>
 					<div class="f2">
 						<p class="f2p-desktop">© 2014 Legacy Of Hope Foundation - All Rights Reserved</p>

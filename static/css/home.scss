@@ -1,6 +1,64 @@
 @import "style.scss";
 
 
+
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+
+ 
+
+
+
+.lb-content {
+    display: none;
+    top: 200px;
+    height: 50%;
+    background-color: clear;
+    z-index:1002;
+    overflow: visible;
+}
+
+.vidholder{
+	width: 700px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.close-button{
+	float: right;
+	color: white;
+transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+}
+
+.close-button:hover{
+	color: #358fe3; 
+}
+
+
+.lb-video{
+	float:right;
+	width: 630px;
+	height: 472px;
+	margin-right: 30px;
+	margin-top: 15px;
+}
+
+
+
 #nav .menu-home a{
 	color: #358fe3; 
 }
@@ -14,18 +72,21 @@ h5{
 
 //  HERO
 
+.wrapper{
+	overflow-x: hidden;
+}
 $hero-height: 565px;
 $hero-offset: 20px;
 .herofix {
 	 height: $hero-height; 
 	 top: $hero-offset;
+	 overflow: hidden;
 }
+
 .hero{
-	background-color: black;
+background-color: black;
   width: 100%;
   height: $hero-height;
-
- 
 }
 .hero img{
 	float:right;
@@ -90,20 +151,25 @@ $page-border-top: 0px;
 .cell{
 	position: relative;
 	float: left;
-		-webkit-transition: all .5s ease-out;
-  -moz-transition: all .5s ease-out ;
-  -ms-transition: all .5s ease-out ;
-  -o-transition: all .5s ease-out ;
-  transition: all .5s ease-out ;
+
 }
 .cell img{
 	height: 100%;
 	width: 100%;
 }
 .cell:hover{
-	box-shadow: 0px 0px 50px 5px white;
+	box-shadow: 0px 0px 15px 1px white;
 	z-index: 1000;
+			-webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out ;
+  -ms-transition: all .5s ease-out ;
+  -o-transition: all .5s ease-out ;
+  transition: all .5s ease-out ;
+}
 
+.textcode:hover{
+	box-shadow: 0px 0px 0px 0px;
+	z-index: 1000;
 }
 .copy{
 	position: absolute;
@@ -178,6 +244,21 @@ $row2: 300px;
 	height: $row2;
 }
 
+.play-button{
+	position: absolute;
+	top: ($row2 - 65px)/2;
+	left: ($row2 - 55px)/2;
+color: white;
+
+
+}
+.play-button:hover{
+	color: #358fe3; 
+	  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+}
 .textcode{
 	width: $row2;
 	height: $row2;
@@ -238,14 +319,18 @@ $row4: 389px;
 	height: $row4;
 
 }
+.app:hover{
+	box-shadow: 0px 0px 0px 0px;
+	z-index: 1000;
+}
 .appcopy{
 	width: 379px;
 	height: 100%;
 	top: 0px;
 	left: 0px;
 	text-align: center;
-	
 }
+
 .appcopy h5{
   font-size: 18px;
   font-family: "Open Sans";
@@ -256,8 +341,18 @@ $row4: 389px;
 	width: 153px;
 	height: auto;
 	margin: 0 75px 20px 75px;
+
 }
 
+.appcopy img:hover{
+		box-shadow: 0px 0px 15px 1px white;
+	z-index: 1000;
+			-webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out ;
+  -ms-transition: all .5s ease-out ;
+  -o-transition: all .5s ease-out ;
+  transition: all .5s ease-out ;
+}
 
 
 
@@ -294,7 +389,24 @@ font-size: 35px;
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
+.lb-video{
+	width: 280px;
+	height: 210px;
+	margin-left: none;
+	margin-top: none;
+}
 
+.lb-content{
+	top: 150px;
+}
+.close-button{
+	display: none;
+}
+
+.vidholder{
+	width: 300px;
+	height: 240px;
+}
 #nav-dropdown .menu-home a{
 	color: #358fe3; 
 }
@@ -418,7 +530,7 @@ $row4: 223px;
 	font-size: 24px !important;
 }
 
-$row5: 223px;
+$row5: 215px;
 .app{
 	float: left;
 	height: $row5;
@@ -452,6 +564,21 @@ $row5: 223px;
 and (min-width: $phone-landscape) 
 and (max-width: $phone-wide-landscape - 1px)  {
 
+
+
+.lb-video{
+	width: 420px;
+	height: 315px;
+}
+
+.lb-content{
+	top: 10px;
+}
+
+.vidholder{
+	width: 480px;
+	height: 320px;
+}
 .no-pl{
 	display: none;
 }
@@ -547,7 +674,10 @@ $row2: 245px;
 	height: $row2;
 	width: 50%;
 }
-
+.play-button{
+	top: ($row2 - 65px)/2;
+	left: ($row2 - 55px)/2;
+}
 
 // $row3: 235px;
 $row3: 195px;
@@ -631,6 +761,21 @@ $row4: 180px;
  and (max-width: $phone-even-wider-landscape - 1px){
 
 
+
+
+.lb-video{
+	width: 420px;
+	height: 315px;
+}
+
+.lb-content{
+	top: 10px;
+}
+
+.vidholder{
+	width: 480px;
+	height: 320px;
+}
 
 .no-pl{
 	display: none;
@@ -845,6 +990,10 @@ $row2: 284px;
 	height: $row2;
 }
 
+.play-button{
+	top: ($row2 - 65px)/2;
+	left: ($row2 - 55px)/2;
+}
 $row3: 198px;
 .concert{
 	height: $row3;
@@ -895,6 +1044,20 @@ $row4: 188px;
 and (min-width: $phone-even-wider-landscape ) 
 and (max-width: $tablet-portrait - 1px)  {
 
+
+.lb-video{
+	width: 420px;
+	height: 315px;
+}
+
+.lb-content{
+	top: 10px;
+}
+
+.vidholder{
+	width: 480px;
+	height: 320px;
+}
 
 
 .no-pl{
@@ -1106,6 +1269,10 @@ $row2: 337px;
 .video{
 	height: $row2;
 }
+.play-button{
+	top: ($row2 - 65px)/2;
+	left: ($row2 - 55px)/2;
+}
 
 $row3: 235px;
 .concert{
@@ -1155,9 +1322,12 @@ and (min-width : $tablet-portrait)
 and (max-width : $tablet-landscape - 1px) {
 
 
+
+.lb-content{
+	top: 140px;
+}
 .wrapper-content{
 	width: 95%;
-	
 }
 
 
@@ -1195,15 +1365,17 @@ and (max-width : $tablet-landscape - 1px) {
 }
 .mandeladaycopy h2{
 	margin-top: 20px;
+	font-size: 24px;
 }
 
 .mandeladaycopy h3{
-	font-size: 26px;
+	font-size: 21px;
 
 }
 .mandeladaycopy p{
 	margin-right: 52%;
 	margin-top: 25px;
+	font-size: 16px;
 }
 .mandeladaycopy a{
 	margin-right: 52%;
@@ -1217,7 +1389,7 @@ $row2: 192px;
 	width: $row2;
 }
 .missioncopy h5{
-	margin-top: 12px;
+	margin-top: 15px;
 	font-size: 15px;
 }
 .hospital{
@@ -1225,12 +1397,16 @@ $row2: 192px;
 	width: $row2;
 }
 .hospitalcopy h5{
-	margin-top: 12px;
+	margin-top: 15px;
 	font-size: 15px;
 }
 .video{
 	height: $row2;
 	width: $row2;
+}
+.play-button{
+	top: ($row2 - 65px)/2;
+	left: ($row2 - 55px)/2;
 }
 .textcode{
 	height: $row2;
@@ -1246,20 +1422,22 @@ $row3: 290px;
 	height: $row3;
 }
 .concertcopy h2{
-	margin-top: 25px;
+	margin-top: 30px;
+	font-size: 26px;
 }
 
 .concertcopy h3{
-	font-size: 26px;
+	font-size: 18px;
 }
 .concertcopy p{
 	margin-right: 65%;
+	font-size: 16px;
 }
 .concertcopy a{
 	margin-right: 65%;
 }
 
-$row4: 254px;
+$row4: 244px;
 .app{
 	height: $row4;
 	width: 54%;
@@ -1310,6 +1488,11 @@ and (max-width : $desktop - 1px) {
 
 
 
+.lb-content{
+	top: 165px;
+}
+
+
 #nav .menu-home a{
 	color: #358fe3; 
 }
@@ -1350,6 +1533,12 @@ $row2: 256px;
 	height: $row2;
 	width: $row2;
 }
+.play-button{
+	position: absolute;
+	top: ($row2 - 65px)/2;
+	left: ($row2 - 55px)/2;
+}
+
 .textcode{
 	height: $row2;
 	width: $row2;

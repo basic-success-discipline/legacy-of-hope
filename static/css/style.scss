@@ -448,7 +448,7 @@ h3{
     height: $pp-foot-height;
     padding-top: 6px;
     z-index: 1000;
- 	}
+  }
   .prefooter p{
     text-align: center;
 
@@ -521,7 +521,7 @@ $pl-herobuffer: 20px;
   }
 
 html{
-	-webkit-text-size-adjust: none ;
+  -webkit-text-size-adjust: none ;
 }
 
 //  MOBILE -- LANDSCAPE -- TYPOGRAPHY
@@ -537,7 +537,7 @@ h3{
 }
   p{
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px;
   }
 
@@ -766,7 +766,7 @@ h3{
 }
   p{
     text-align: justify;
-    line-height: 1.2em;
+      line-height: 1.45em;
     font-size: 14px;
   }
 
@@ -822,6 +822,9 @@ h3{
 .prefooter{
   height: 65px;
   padding-top: 10px;
+}
+.pf1{
+  margin-top: 9px;
 }
 .pf1 p{
   font-size: 15px;
@@ -900,9 +903,12 @@ and (max-width : $tablet-landscape - 1px){
 // }
 
 
-
+.pf1{
+  margin-top: 10px;
+}
 .pf2 {
   margin-bottom: 0px;
+  margin-top: 10px;
 }
     .pf1 p{
     font-size: 15px;
@@ -910,6 +916,7 @@ and (max-width : $tablet-landscape - 1px){
 
 .pf2 p{
   font-size: 15px;
+  margin-top: 10px;
 }
   .pf2 img{
     height: 40px;
