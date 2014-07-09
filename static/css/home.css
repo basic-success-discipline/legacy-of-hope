@@ -389,7 +389,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -575,7 +575,7 @@ a:hover {
 
   p {
     text-align: justify;
-    line-height: 1.2em;
+    line-height: 1.45em;
     font-size: 14px; }
 
   #navfix {
@@ -616,6 +616,9 @@ a:hover {
   .prefooter {
     height: 65px;
     padding-top: 10px; }
+
+  .pf1 {
+    margin-top: 9px; }
 
   .pf1 p {
     font-size: 15px;
@@ -676,14 +679,19 @@ a:hover {
   .logo {
     margin-top: 15px; }
 
+  .pf1 {
+    margin-top: 10px; }
+
   .pf2 {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    margin-top: 10px; }
 
   .pf1 p {
     font-size: 15px; }
 
   .pf2 p {
-    font-size: 15px; }
+    font-size: 15px;
+    margin-top: 10px; }
 
   .pf2 img {
     height: 40px; }
@@ -711,6 +719,50 @@ a:hover {
   .wrapper-inner {
     width: 1200px;
     margin: 0 auto; } }
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80); }
+
+.lb-content {
+  display: none;
+  top: 200px;
+  height: 50%;
+  background-color: clear;
+  z-index: 1002;
+  overflow: visible; }
+
+.vidholder {
+  width: 700px;
+  height: 500px;
+  margin: 0 auto; }
+
+.close-button {
+  float: right;
+  color: white;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; }
+
+.close-button:hover {
+  color: #358fe3; }
+
+.lb-video {
+  float: right;
+  width: 630px;
+  height: 472px;
+  margin-right: 30px;
+  margin-top: 15px; }
+
 #nav .menu-home a {
   color: #358fe3; }
 
@@ -718,9 +770,13 @@ h5 {
   color: white;
   margin-top: 28px; }
 
+.wrapper {
+  overflow-x: hidden; }
+
 .herofix {
   height: 565px;
-  top: 20px; }
+  top: 20px;
+  overflow: hidden; }
 
 .hero {
   background-color: black;
@@ -775,19 +831,23 @@ h5 {
 
 .cell {
   position: relative;
-  float: left;
-  -webkit-transition: all .5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out; }
+  float: left; }
 
 .cell img {
   height: 100%;
   width: 100%; }
 
 .cell:hover {
-  box-shadow: 0px 0px 50px 5px white;
+  box-shadow: 0px 0px 15px 1px white;
+  z-index: 1000;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.textcode:hover {
+  box-shadow: 0px 0px 0px 0px;
   z-index: 1000; }
 
 .copy {
@@ -845,6 +905,19 @@ h5 {
   width: 300px;
   height: 300px; }
 
+.play-button {
+  position: absolute;
+  top: 117.5px;
+  left: 122.5px;
+  color: white; }
+
+.play-button:hover {
+  color: #358fe3;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; }
+
 .textcode {
   width: 300px;
   height: 300px; }
@@ -888,6 +961,10 @@ h5 {
   float: right;
   height: 389px; }
 
+.app:hover {
+  box-shadow: 0px 0px 0px 0px;
+  z-index: 1000; }
+
 .appcopy {
   width: 379px;
   height: 100%;
@@ -904,6 +981,15 @@ h5 {
   width: 153px;
   height: auto;
   margin: 0 75px 20px 75px; }
+
+.appcopy img:hover {
+  box-shadow: 0px 0px 15px 1px white;
+  z-index: 1000;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
 
 .guitar {
   width: auto;
@@ -928,6 +1014,22 @@ h5 {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
+  .lb-video {
+    width: 280px;
+    height: 210px;
+    margin-left: none;
+    margin-top: none; }
+
+  .lb-content {
+    top: 150px; }
+
+  .close-button {
+    display: none; }
+
+  .vidholder {
+    width: 300px;
+    height: 240px; }
+
   #nav-dropdown .menu-home a {
     color: #358fe3; }
 
@@ -1033,7 +1135,7 @@ h5 {
 
   .app {
     float: left;
-    height: 223px; }
+    height: 215px; }
 
   .appcopy img {
     width: 131px; }
@@ -1051,10 +1153,21 @@ h5 {
     height: auto; }
 
   .cellcontainer {
-    height: 1169px; } }
+    height: 1161px; } }
 /* MOBILE (LANDSCAPE)
 * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 567px) {
+  .lb-video {
+    width: 420px;
+    height: 315px; }
+
+  .lb-content {
+    top: 10px; }
+
+  .vidholder {
+    width: 480px;
+    height: 320px; }
+
   .no-pl {
     display: none; }
 
@@ -1127,6 +1240,10 @@ h5 {
     height: 245px;
     width: 50%; }
 
+  .play-button {
+    top: 90px;
+    left: 95px; }
+
   .concert {
     height: 195px;
     width: 100%; }
@@ -1183,6 +1300,17 @@ h5 {
   .cellcontainer {
     height: 820px; } }
 @media only screen and (min-width: 568px) and (max-width: 639px) {
+  .lb-video {
+    width: 420px;
+    height: 315px; }
+
+  .lb-content {
+    top: 10px; }
+
+  .vidholder {
+    width: 480px;
+    height: 320px; }
+
   .no-pl {
     display: none; }
 
@@ -1340,6 +1468,10 @@ h5 {
   .video {
     height: 284px; }
 
+  .play-button {
+    top: 109.5px;
+    left: 114.5px; }
+
   .concert {
     height: 198px; }
 
@@ -1374,6 +1506,17 @@ h5 {
   .cellcontainer {
     height: 916px; } }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
+  .lb-video {
+    width: 420px;
+    height: 315px; }
+
+  .lb-content {
+    top: 10px; }
+
+  .vidholder {
+    width: 480px;
+    height: 320px; }
+
   .no-pl {
     display: none; }
 
@@ -1531,6 +1674,10 @@ h5 {
   .video {
     height: 337px; }
 
+  .play-button {
+    top: 136px;
+    left: 141px; }
+
   .concert {
     height: 235px; }
 
@@ -1562,6 +1709,9 @@ h5 {
     height: 1059px; } }
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .lb-content {
+    top: 140px; }
+
   .wrapper-content {
     width: 95%; }
 
@@ -1591,14 +1741,16 @@ h5 {
     height: 320px; }
 
   .mandeladaycopy h2 {
-    margin-top: 20px; }
+    margin-top: 20px;
+    font-size: 24px; }
 
   .mandeladaycopy h3 {
-    font-size: 26px; }
+    font-size: 21px; }
 
   .mandeladaycopy p {
     margin-right: 52%;
-    margin-top: 25px; }
+    margin-top: 25px;
+    font-size: 16px; }
 
   .mandeladaycopy a {
     margin-right: 52%; }
@@ -1608,7 +1760,7 @@ h5 {
     width: 192px; }
 
   .missioncopy h5 {
-    margin-top: 12px;
+    margin-top: 15px;
     font-size: 15px; }
 
   .hospital {
@@ -1616,12 +1768,16 @@ h5 {
     width: 192px; }
 
   .hospitalcopy h5 {
-    margin-top: 12px;
+    margin-top: 15px;
     font-size: 15px; }
 
   .video {
     height: 192px;
     width: 192px; }
+
+  .play-button {
+    top: 63.5px;
+    left: 68.5px; }
 
   .textcode {
     height: 192px;
@@ -1635,19 +1791,21 @@ h5 {
     height: 290px; }
 
   .concertcopy h2 {
-    margin-top: 25px; }
-
-  .concertcopy h3 {
+    margin-top: 30px;
     font-size: 26px; }
 
+  .concertcopy h3 {
+    font-size: 18px; }
+
   .concertcopy p {
-    margin-right: 65%; }
+    margin-right: 65%;
+    font-size: 16px; }
 
   .concertcopy a {
     margin-right: 65%; }
 
   .app {
-    height: 254px;
+    height: 244px;
     width: 54%; }
 
   .appcopy {
@@ -1667,7 +1825,7 @@ h5 {
     width: 50%; }
 
   .guitar {
-    height: 254px;
+    height: 244px;
     width: 46%; }
 
   .gc1 {
@@ -1678,9 +1836,12 @@ h5 {
     font-size: 25px !important; }
 
   .cellcontainer {
-    height: 1056px; } }
+    height: 1046px; } }
 /* iPads (landscape) ----------- */
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .lb-content {
+    top: 165px; }
+
   #nav .menu-home a {
     color: #358fe3; }
 
@@ -1714,6 +1875,11 @@ h5 {
   .video {
     height: 256px;
     width: 256px; }
+
+  .play-button {
+    position: absolute;
+    top: 95.5px;
+    left: 100.5px; }
 
   .textcode {
     height: 256px;

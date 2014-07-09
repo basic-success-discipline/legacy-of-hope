@@ -12,17 +12,35 @@
 //  HERO
 
 $hero-dimensions: 1420/1821;
-$hero-height: $wrapper-inner-width * $hero-dimensions;
-.hero {
-  position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $navheight fixed;
-  background-size: $wrapper-inner-width $hero-height;
-  height: $hero-height + $navheight; 
+$hero-img-height: $wrapper-inner-width * $hero-dimensions;
+$hero-height: 720px;
+$hero-offset: 10px;
+.herofix {
+   height: $hero-height; 
+   top: $navheight;
 }
+.hero{
+  width: 100%;
+  height: $hero-img-height;
+  position: relative;
+    overflow:hidden;
+ 
+}
+.hero img{
+  width: 1200px;
+  position: absolute;
+}
+
+.herospacer{
+  height: $hero-height +$navheight;
+}
+
+
 .heroblurbfix {
   z-index: 1;
-  top: 100px; 
+  top: 80px; 
 }
+
 .heroblurb {
   color: white;
   float: left;
@@ -199,7 +217,29 @@ and (max-width: $phone-landscape - 1px)  {
 .heroblurbfix{
   display: none;
 }
+$pp-hero-height: 265px;
 
+.herofix {
+   height: $pp-hero-height; 
+   top: $pp-navheight;
+}
+.hero{
+  height: $pp-hero-height;
+  overflow:hidden;
+    background-color: white;
+  width: 100%;
+  position: relative;
+ 
+}
+.hero img{
+  width: 100%;
+  position: absolute;
+}
+
+
+.herospacer{
+  height: $pp-hero-height;
+}
 
 // MOBILE -- PORTRAIT -- PAGE
 #guitar-desktop{
@@ -298,17 +338,30 @@ and (max-width: $phone-wide-landscape - 1px)  {
   display: none;
 }
 
+$pl-hero-height: $phone-portrait;
 
-
-$hero-dimensions: 1420/1821;
-$hero-height: $phone-landscape * $hero-dimensions;
-$hero-offset: -20px;
-.hero {
+.herofix {
+   height: $pl-hero-height; 
+   top: $pl-navheight;
+}
+.hero{
+  height: $pl-hero-height;
+  overflow:hidden;
+    background-color: white;
+  width: 100%;
   position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $hero-offset fixed;
-  background-size: $phone-landscape $hero-height;
-  height: $phone-portrait; 
+ 
+}
+.hero img{
+  top: -40px;
+  width: 100%;
+  position: absolute;
 
+}
+
+
+.herospacer{
+  height: $pl-hero-height;
 }
 
 
@@ -327,7 +380,7 @@ $hero-offset: -20px;
   display: block;
 }
 
-$pl-padding-top: 30px;
+$pl-padding-top: 25px;
 #guitar-phone-landscape{
   display: inherit;
   padding-top: $pl-padding-top;
@@ -337,8 +390,14 @@ $pl-padding-top: 30px;
   margin-top: -($pl-herobuffer + $pl-padding-top);
 }
 
+.page h1{
+  margin-bottom: 15px;
+}
+
 .page p{
   margin-top: 0px;
+    line-height: 1.45em;
+    font-size: 11px;
 }
 
 .plguitarimg1{
@@ -346,12 +405,12 @@ $pl-padding-top: 30px;
   top: 0px;
   right: 15px;
   z-index: 10;
-  width: 200px;
+  width: 230px;
 }
 
 .spacer1{
-  width: 230px;
-  height: 260px;
+  width: 260px;
+  height: 280px;
 }
 #generous{
   width:100%;
@@ -366,7 +425,6 @@ $pl-padding-top: 30px;
   margin: 0 auto;
 }
 #plguitarcopy1{
-  font-size: 100%;
   text-align: center !important;
   font-style: italic;
   line-height: 1.6em !important;
@@ -396,7 +454,7 @@ $pl-bottom-divider: 48%;
 $pl-bottom-height: $pl-bottom-factor * $phone-landscape * (1536/2058) + $pl-bottom-factor * $phone-landscape * (428/322) + 1px;
 .b-left{
   height: $pl-bottom-height;
-  width: 100% - $pl-bottom-divider;
+  width: calc(100% - $pl-bottom-divider + 20px);
   overflow: hidden;
   position: relative;
   display: table-cell;
@@ -477,16 +535,30 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 }
 
 
+$pl-hero-height: $phone-portrait;
 
-$hero-dimensions: 1420/1821;
-$hero-height: $phone-landscape * $hero-dimensions;
-$hero-offset: -20px;
-.hero {
+.herofix {
+   height: $pl-hero-height; 
+   top: $pl-navheight;
+}
+.hero{
+  height: $pl-hero-height;
+  overflow:hidden;
+    background-color: white;
+  width: 100%;
   position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $hero-offset fixed;
-  background-size: $phone-landscape $hero-height;
-  height: $phone-portrait; 
+ 
+}
+.hero img{
+  top: -55px;
+  width: 100%;
+  position: absolute;
 
+}
+
+
+.herospacer{
+  height: $pl-hero-height;
 }
 
 
@@ -517,6 +589,7 @@ $pl-padding-top: 30px;
 
 .page p{
   margin-top: 0px;
+    line-height: 1.45em;
 }
 
 .plguitarimg1{
@@ -544,7 +617,6 @@ $pl-padding-top: 30px;
   margin: 0 auto;
 }
 #plguitarcopy1{
-  font-size: 100%;
   text-align: center !important;
   font-style: italic;
   line-height: 1.6em !important;
@@ -685,18 +757,33 @@ and (max-width: $tablet-portrait - 1px)  {
   display: none;
 }
 
+$pl-hero-height: $phone-portrait;
 
-
-$hero-dimensions: 1420/1821;
-$hero-height: $phone-landscape * $hero-dimensions;
-$hero-offset: -20px;
-.hero {
+.herofix {
+   height: $pl-hero-height; 
+   top: $pl-navheight;
+}
+.hero{
+  height: $pl-hero-height;
+  overflow:hidden;
+    background-color: white;
+  width: 100%;
   position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $hero-offset fixed;
-  background-size: $phone-landscape $hero-height;
-  height: $phone-portrait; 
+ 
+}
+.hero img{
+  top: -70px;
+  width: 100%;
+  position: absolute;
 
 }
+
+
+.herospacer{
+  height: $pl-hero-height;
+}
+
+
 
 
 
@@ -753,7 +840,6 @@ $pl-padding-top: 30px;
   margin: 0 auto;
 }
 #plguitarcopy1{
-  font-size: 100%;
   text-align: center !important;
   font-style: italic;
   line-height: 1.6em !important;
@@ -877,24 +963,15 @@ and (max-width : $tablet-landscape - 1px){
   padding-right: 15px !important;
 }
 
-// IPAD -- PORTRAIT -- HERO
-$hero-dimensions: 1420/1821;
-$hero-height: $tablet-portrait * $hero-dimensions;
-$hero-offset: -20px;
-.hero {
-  position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $navheight fixed;
-  background-size: $tablet-portrait $hero-height;
-  height:$tablet-portrait * $hero-dimensions ; 
 
-}
 .heroblurbfix {
   position: absolute;
   top: 100px;
 }
-.heroblurb img{
-  width:100px;
+.hero img{
+  left: -100px;
 }
+
 .tpgibson{
   display: inherit;
   width: 100px;
@@ -1066,22 +1143,13 @@ and (max-width: $desktop - 1px) {
 
 
 
-  // IPAD -- LANDSCAPE-- HERO
-$hero-dimensions: 1420/1821;
-$hero-height: $tablet-landscape * $hero-dimensions;
-.hero {
-  position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $navheight fixed;
-  background-size: $tablet-landscape $hero-height;
-  height:$tablet-landscape * $hero-dimensions ; 
 
+.hero img{
+  top:-50px;
 }
 .heroblurbfix {
   position: absolute;
   top: 100px
-}
-.heroblurb img{
-  width:140px;
 }
 .tpgibson{
   display: inherit;
@@ -1151,17 +1219,17 @@ $herobuffer: 15px;
 $tl-bottom-height: $bottom-factor * $tablet-landscape * (1536/2058) + $bottom-factor * $tablet-landscape * (913/685);
 .b-left{
   max-height: $tl-bottom-height !important;
-  width: ceil(100% - $bottom-divider);
+  width: 100% - $bottom-divider;
   display: block;
 
 
 }
 .b-left p{
-  font-size: 16px;
+  font-size: 15px;
   margin-left: 40px ;
 }
 .guitarcopy2{
-  padding-bottom: 13px;
+  padding-bottom: 20px;
 }
 .guitarcopy2 p{
   margin-right: 40px;
@@ -1172,7 +1240,9 @@ $tl-bottom-height: $bottom-factor * $tablet-landscape * (1536/2058) + $bottom-fa
 .guitarimg5{
   display: block;
   border: 0 0;
-  width:99%;
+  width:100%;
+  margin: none;
+  bottom: 0px;
 }
 
 }
