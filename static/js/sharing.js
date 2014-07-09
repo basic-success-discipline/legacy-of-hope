@@ -53,7 +53,7 @@ function showSignupForm() {
 
 function submitSignupForm() {
 	var $dlg = this;
-	var $email = document.getElementById('signup_email').value;
+	var $email = document.getElementsByClassName('register_email')[1].value;
 	if(!$email) {
 		alert('please fill in email field.');
 		return;
