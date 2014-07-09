@@ -884,7 +884,7 @@ h5 {
   width: 100%; }
 
 .mandeladaycopy h2 {
-  margin-top: 130px; }
+  margin-top: 120px; }
 
 .mandeladaycopy h3 {
   font-size: 26px; }
@@ -894,7 +894,9 @@ h5 {
   text-align: justify; }
 
 .mandeladaycopy a {
-  margin-right: 60%; }
+  margin-right: 60%;
+  pointer-events: none;
+  cursor: default; }
 
 .mission {
   width: 300px;
@@ -1191,6 +1193,11 @@ h5 {
     width: 480px;
     height: 320px; }
 
+  .close-button {
+    top: 35px;
+    position: absolute;
+    right: 0px; }
+
   .no-pl {
     display: none; }
 
@@ -1337,6 +1344,11 @@ h5 {
   .vidholder {
     width: 480px;
     height: 320px; }
+
+  .close-button {
+    top: 35px;
+    position: absolute;
+    right: 40px; }
 
   .no-pl {
     display: none; }
@@ -1547,6 +1559,11 @@ h5 {
   .vidholder {
     width: 480px;
     height: 320px; }
+
+  .close-button {
+    top: 35px;
+    position: absolute;
+    right: 70px; }
 
   .no-pl {
     display: none; }
