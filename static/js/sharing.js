@@ -53,11 +53,12 @@ function showSignupForm() {
 
 function submitSignupForm() {
 	var $dlg = this;
-	var $email = $('#signup_email').val();
+	var $email = document.getElementById('signup_email').value;
 	if(!$email) {
 		alert('please fill in email field.');
 		return;
 	}
+	return alert($email);
 	$.post('http://ec2-54-191-42-61.us-west-2.compute.amazonaws.com/auth/register', {
 		username    : $email,
 		password    : $email,
