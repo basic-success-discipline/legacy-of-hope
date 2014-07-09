@@ -44,10 +44,27 @@ function shareWithTwitterClick(width, height) {
     return false;
 }
 
-$('#submit').click(function(){
-  Boxy.get(this).hide();
-});
+function showSignupForm() {
+    window.signupForm = new Boxy($('#signup-dialog').html(), {
+      title: "Sign up for updates", 
+      modal: true
+    });
+}
 
-function signupDialog() {
-  new Boxy($("#signup-dialog").html(), {title: "Dialog", modal: true});
+function submitSignupForm() {
+	var $dlg = this;
+	var $email = $('#signup_email').val();
+	if(!$email) {
+		alert('please fill in email field.');
+		return;
+	}
+	$.post('http://ec2-54-191-42-61.us-west-2.compute.amazonaws.com/auth/register', {
+		username    : $email,
+		password    : $email,
+		email       : $email,
+		autoconfirm : 1
+	}, function() {
+		alert('thank you for signing up for email updates from the Legacy of Hope.')
+		Boxy.get($dlg).hide();
+	});
 }
