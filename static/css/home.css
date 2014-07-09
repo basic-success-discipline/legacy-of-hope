@@ -752,7 +752,8 @@ a:hover {
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear; }
+  -o-transition: all 0.3s linear;
+  cursor: pointer; }
 
 .close-button:hover {
   color: #358fe3; }
@@ -765,7 +766,9 @@ a:hover {
   margin-top: 15px; }
 
 #nav .menu-home a {
-  color: #358fe3; }
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; }
 
 h5 {
   color: white;
@@ -832,7 +835,8 @@ h5 {
 
 .cell {
   position: relative;
-  float: left; }
+  float: left;
+  cursor: pointer; }
 
 .cell img {
   height: 100%;
@@ -921,7 +925,8 @@ h5 {
 
 .textcode {
   width: 300px;
-  height: 300px; }
+  height: 300px;
+  cursor: auto; }
 
 .textcodecopy {
   width: 100%;
@@ -960,7 +965,8 @@ h5 {
 .app {
   width: auto;
   float: right;
-  height: 389px; }
+  height: 389px;
+  cursor: auto; }
 
 .app:hover {
   box-shadow: 0px 0px 0px 0px;
@@ -978,10 +984,14 @@ h5 {
   font-family: "Open Sans";
   margin: 105px 78px 47px 78px; }
 
+.appcopy a {
+  float: none; }
+
 .appcopy img {
   width: 153px;
   height: auto;
-  margin: 0 75px 20px 75px; }
+  margin: 0 75px 20px 75px;
+  cursor: pointer; }
 
 .appcopy img:hover {
   box-shadow: 0px 0px 15px 1px white;
@@ -1032,7 +1042,9 @@ h5 {
     height: 240px; }
 
   #nav-dropdown .menu-home a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 265px;
@@ -1176,11 +1188,15 @@ h5 {
     color: white; }
 
   #nav-dropdown .menu-home a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-home {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 320px;
@@ -1319,11 +1335,15 @@ h5 {
     color: white; }
 
   #nav-dropdown .menu-home a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-home {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 320px;
@@ -1525,11 +1545,15 @@ h5 {
     color: white; }
 
   #nav-dropdown .menu-home a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-home {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 320px;
@@ -1720,11 +1744,15 @@ h5 {
     color: white; }
 
   #nav-dropdown .menu-home a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-home {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurb {
     width: 340px; }

@@ -721,7 +721,9 @@ a:hover {
     width: 1200px;
     margin: 0 auto; } }
 #nav .menu-concert a {
-  color: #358fe3; }
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; }
 
 .herofix {
   height: 565px;
@@ -783,7 +785,9 @@ a:hover {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
   #nav-dropdown .menu-concert a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 275px;
@@ -823,14 +827,18 @@ a:hover {
 * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   #nav-dropdown .menu-concert a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-concert a {
     color: white; }
 
   #nav .menu-concert {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 280px;
@@ -865,14 +873,18 @@ a:hover {
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   #nav-dropdown .menu-concert a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-concert a {
     color: white; }
 
   #nav .menu-concert {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .concertimg1 {
     width: 69%;

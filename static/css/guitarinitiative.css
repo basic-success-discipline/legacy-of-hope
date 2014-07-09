@@ -721,7 +721,9 @@ a:hover {
     width: 1200px;
     margin: 0 auto; } }
 #nav .menu-guitar a {
-  color: #358fe3; }
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; }
 
 .herofix {
   height: 720px;
@@ -866,7 +868,9 @@ a:hover {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -940,14 +944,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -1086,14 +1094,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -1249,14 +1261,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -1407,14 +1423,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     position: absolute;

@@ -721,7 +721,9 @@ a:hover {
     width: 1200px;
     margin: 0 auto; } }
 #nav .menu-mission a {
-  color: #358fe3; }
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; }
 
 .herofix {
   height: 565px;
@@ -754,7 +756,7 @@ a:hover {
 
 .missioncopy1 h4 {
   font-size: 20px;
-  font-family: "Bebas";
+  font-weight: 400;
   color: #646464;
   margin-bottom: 0px; }
 
@@ -816,7 +818,9 @@ a:hover {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
   #nav-dropdown .menu-mission a {
-    color: #358fe3 !important; }
+    color: #358fe3 !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 265px;
@@ -886,10 +890,14 @@ a:hover {
 * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   #nav-dropdown .menu-mission a {
-    color: #358fe3 !important; }
+    color: #358fe3 !important;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-mission a {
-    color: white; }
+    color: white;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-mission {
     display: inherit !important;
@@ -956,14 +964,18 @@ a:hover {
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   #nav-dropdown .menu-mission a {
-    color: #358fe3 !important; }
+    color: #358fe3 !important;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-mission a {
     color: white; }
 
   #nav .menu-mission {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .hero img {
     left: -200px; }

@@ -726,6 +726,9 @@ h1 {
 h3 {
   clear: left; }
 
+#nav .menu-sibongile {
+  display: none; }
+
 .herofix {
   height: 1000px;
   top: 50px; }
@@ -872,6 +875,11 @@ img.aol {
   h3 {
     clear: none; }
 
+  #nav .menu-sibongile {
+    display: inherit;
+    cursor: default;
+    pointer-events: none; }
+
   .heroblurb {
     display: none; }
 
@@ -924,6 +932,11 @@ img.aol {
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .wrapper-content {
     width: 92%; }
+
+  #nav .menu-sibongile {
+    display: inherit;
+    cursor: default;
+    pointer-events: none; }
 
   .heroblurb {
     display: none; }

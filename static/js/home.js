@@ -8,6 +8,7 @@
               var vidbg2 = document.getElementsByClassName('lb-content')[0];
               var concert1 = document.getElementsByClassName('concert')[0];
               var concert2 = document.getElementsByClassName('concert')[1];
+              var googleIcon = document.getElementsByClassName('')[1];
               var guitar = document.getElementsByClassName('guitar')[0];
 
               mandeladay.onclick=function(){ 

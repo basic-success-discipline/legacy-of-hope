@@ -10,7 +10,9 @@ h3 {
 }
 
 
-
+#nav .menu-sibongile{
+  display: none;
+}
 
 
 //  HERO
@@ -232,7 +234,11 @@ h3{
 
 // MOBILE -- LANDSCAPE -- NAVIGATION BAR
 
-
+#nav .menu-sibongile{
+  display:inherit;
+  cursor: default;
+  pointer-events: none;
+}
 
 //  MOBILE -- LANDSCAPE -- HERO
 .heroblurb{
@@ -325,7 +331,11 @@ and (max-width : $tablet-landscape - 1px) {
   }
 
 // IPAD -- PORTRAIT -- NAVIGATION BAR
-
+#nav .menu-sibongile{
+  display:inherit;
+  cursor: default;
+  pointer-events: none;
+}
 
 // IPAD -- PORTRAIT -- HERO
   .heroblurb{

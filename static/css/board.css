@@ -951,7 +951,9 @@ a:hover {
   height: 0; }
 
 #nav .menu-team a {
-  color: #358fe3; }
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; }
 
 body {
   font: 13px 'Open Sans', sans-serif;
@@ -1096,7 +1098,9 @@ h4.board {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
   #nav-dropdown .menu-team a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   .page .wrapper-content {
     width: 100%; }
@@ -1163,14 +1167,18 @@ h4.board {
 * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 567px) {
   #nav-dropdown .menu-team a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-team a {
     color: white; }
 
   #nav .menu-team {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 230px;
@@ -1234,14 +1242,18 @@ h4.board {
 * ------------------------------------------------ */
 @media only screen and (min-width: 568px) and (max-width: 639px) {
   #nav-dropdown .menu-team a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-team a {
     color: white; }
 
   #nav .menu-team {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 270px;
@@ -1305,14 +1317,18 @@ h4.board {
 * ------------------------------------------------ */
 @media only screen and (min-width: 640px) and (max-width: 767px) {
   #nav-dropdown .menu-team a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-team a {
     color: white; }
 
   #nav .menu-team {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 305px;
@@ -1375,7 +1391,9 @@ h4.board {
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   #nav-dropdown .menu-team a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-team a {
     color: white; }
@@ -1405,7 +1423,9 @@ h4.board {
 
   #nav .menu-team {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .herofix {
     height: 410px; }

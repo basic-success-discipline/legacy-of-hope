@@ -2,22 +2,24 @@
 
 
 #nav .menu-concert a{
-  color: #358fe3; 
+	color: #358fe3; 
+	pointer-events: none;
+	cursor: default;
 }
 
 $hero-height: 565px;
 $hero-offset: 220px;
 .herofix {
-	 height: $hero-height; 
-	 top: $navheight;
+	height: $hero-height; 
+	top: $navheight;
 }
 .hero{
 	background-color: black;
-  width: 100%;
-  height: $hero-height;
-  position: relative;
-    overflow:hidden;
- 
+	width: 100%;
+	height: $hero-height;
+	position: relative;
+	overflow:hidden;
+	
 }
 .hero img{
 	width: 1200px;
@@ -32,7 +34,7 @@ $hero-offset: 220px;
 }
 
 .herospacer{
-  height: $hero-height;
+	height: $hero-height;
 }
 .concertimg1{
 	position: absolute;
@@ -45,13 +47,13 @@ $hero-offset: 220px;
 	margin-bottom: 0px;
 }
 .spacer{
-  display:block;
-  float:right;
-  clear:right;
+	display:block;
+	float:right;
+	clear:right;
 }
 .spacer img{
-  opacity: 0.0;
-  width: 100%;
+	opacity: 0.0;
+	width: 100%;
 }
 
 .spacer1{
@@ -78,57 +80,59 @@ $hero-offset: 220px;
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
-#nav-dropdown .menu-concert a{
-  color: #358fe3; 
-}
+	#nav-dropdown .menu-concert a{
+		color: #358fe3; 
+		pointer-events: none;
+		cursor: default;
+	}
 
 
 
-$pp-hero-height: 275px;
-$pp-hero-offset: 120px;
-.herofix {
-	 height: $pp-hero-height; 
-	 top: $pp-navheight;
-}
-.hero{
-  height: $pp-hero-height;
+	$pp-hero-height: 275px;
+	$pp-hero-offset: 120px;
+	.herofix {
+		height: $pp-hero-height; 
+		top: $pp-navheight;
+	}
+	.hero{
+		height: $pp-hero-height;
 
- 
-}
-.hero img{
-	height: $pp-hero-height * 1.3;
-	width: auto;
-	top:-$pp-hero-offset;
-}
-.herospacer{
-	height: $pp-hero-height;
-}
+		
+	}
+	.hero img{
+		height: $pp-hero-height * 1.3;
+		width: auto;
+		top:-$pp-hero-offset;
+	}
+	.herospacer{
+		height: $pp-hero-height;
+	}
 
-$pp-padding-top: 37px;
-.page{
-	padding-top: $pp-padding-top;
-	text-align: center;
-	padding-bottom: 30px;
-}
-.herobuffer{
-  margin-top: -($pp-herobuffer + $pp-padding-top);
-}
+	$pp-padding-top: 37px;
+	.page{
+		padding-top: $pp-padding-top;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	.herobuffer{
+		margin-top: -($pp-herobuffer + $pp-padding-top);
+	}
 
-.page p{
-	text-align: justify;
-}
+	.page p{
+		text-align: justify;
+	}
 
 
-.concertimg1{
-	display: none;
-}
-.spacer{
-	display:none;
-}
+	.concertimg1{
+		display: none;
+	}
+	.spacer{
+		display:none;
+	}
 
-.concertcopy1 p{
-	text-align: center;
-}
+	.concertcopy1 p{
+		text-align: center;
+	}
 }
 
 
@@ -138,28 +142,32 @@ $pp-padding-top: 37px;
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-#nav-dropdown .menu-concert a{
-  color: #358fe3; 
-}
-#nav .menu-concert a{
-  color: white; 
-}
+	#nav-dropdown .menu-concert a{
+		color: #358fe3; 
+		pointer-events: none;
+		cursor: default;
+	}
+	#nav .menu-concert a{
+		color: white; 
+	}
 
-#nav .menu-concert{
-	display: inherit !important;
-	padding-right: 15px !important;
-}
-$pl-hero-height: $phone-portrait - $pl-navheight;
-$pl-hero-offset: 100px;
-.herofix {
-	 height: $pl-hero-height; 
-	 top: $pl-navheight;
-}
-.hero{
-  height: $pl-hero-height;
- 
-}
-.hero img{
+	#nav .menu-concert{
+		display: inherit !important;
+		padding-right: 15px !important;
+		pointer-events: none;
+		cursor: default;
+	}
+	$pl-hero-height: $phone-portrait - $pl-navheight;
+	$pl-hero-offset: 100px;
+	.herofix {
+		height: $pl-hero-height; 
+		top: $pl-navheight;
+	}
+	.hero{
+		height: $pl-hero-height;
+		
+	}
+	.hero img{
 	// height: $pl-hero-height * 1.2;
 	width: 100%;
 	top:-$pl-hero-offset;
@@ -175,7 +183,7 @@ $pl-padding-top: 30px;
 	padding-bottom: 30px;
 }
 .herobuffer{
-  margin-top: -($pl-herobuffer + $pl-padding-top);
+	margin-top: -($pl-herobuffer + $pl-padding-top);
 }
 
 .page p{
@@ -197,31 +205,35 @@ $pl-padding-top: 30px;
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
-#nav-dropdown .menu-concert a{
-  color: #358fe3; 
-}
-#nav .menu-concert a{
-  color: white; 
-}
-
-
-#nav .menu-concert{
-	display: inherit !important;
-	padding-right: 15px !important;
-}
-.concertimg1{
-	width: 69%;
-	height: auto;
-}
-.concertcopy2{
-	max-width: 85%;
-	text-align: justify
-}
-
-.spacer3{
-	height: 200px;
-}
-
-
+	#nav-dropdown .menu-concert a{
+		color: #358fe3; 
+		pointer-events: none;
+		cursor: default;
 	}
+	#nav .menu-concert a{
+		color: white; 
+	}
+
+
+	#nav .menu-concert{
+		display: inherit !important;
+		padding-right: 15px !important;
+		pointer-events: none;
+		cursor: default;
+	}
+	.concertimg1{
+		width: 69%;
+		height: auto;
+	}
+	.concertcopy2{
+		max-width: 85%;
+		text-align: justify
+	}
+
+	.spacer3{
+		height: 200px;
+	}
+
+
+}
 
