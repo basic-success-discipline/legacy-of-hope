@@ -5,7 +5,9 @@
 //   min-width: 1200px;
 // }
 #nav .menu-guitar a{
-  color: #358fe3; 
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; 
 }
 
 
@@ -16,15 +18,15 @@ $hero-img-height: $wrapper-inner-width * $hero-dimensions;
 $hero-height: 720px;
 $hero-offset: 10px;
 .herofix {
-   height: $hero-height; 
-   top: $navheight;
+ height: $hero-height; 
+ top: $navheight;
 }
 .hero{
   width: 100%;
   height: $hero-img-height;
   position: relative;
-    overflow:hidden;
- 
+  overflow:hidden;
+  
 }
 .hero img{
   width: 1200px;
@@ -98,7 +100,7 @@ $hero-offset: 10px;
 
 #guitar-desktop p{
  text-align: justify;
-   line-height: 1.6;
+ line-height: 1.6;
 }
 
 $guitar-img2-overlap: 50px;
@@ -210,9 +212,11 @@ $bottom-height: $bottom-factor * $wrapper-inner-width * (1536/2058) + $bottom-fa
 and (max-width: $phone-landscape - 1px)  {
 
 
-#nav-dropdown .menu-guitar a{
-  color: #358fe3; 
-}
+  #nav-dropdown .menu-guitar a{
+    color: #358fe3; 
+    pointer-events: none;
+    cursor: default;
+  }
 // MOBILE -- PORTRAIT -- HERO
 .heroblurbfix{
   display: none;
@@ -220,16 +224,16 @@ and (max-width: $phone-landscape - 1px)  {
 $pp-hero-height: 265px;
 
 .herofix {
-   height: $pp-hero-height; 
-   top: $pp-navheight;
+ height: $pp-hero-height; 
+ top: $pp-navheight;
 }
 .hero{
   height: $pp-hero-height;
   overflow:hidden;
-    background-color: white;
+  background-color: white;
   width: 100%;
   position: relative;
- 
+  
 }
 .hero img{
   width: 100%;
@@ -322,13 +326,18 @@ and (max-width: $phone-wide-landscape - 1px)  {
 
 #nav-dropdown .menu-guitar a{
   color: #358fe3; 
+  pointer-events: none;
+  cursor: default;
 }
 #nav .menu-guitar a{
   color: white; 
+
 }
 #nav .menu-guitar{
   display: inherit !important;
   padding-right: 15px !important;
+  pointer-events: none;
+  cursor: default;
 }
 
 
@@ -341,16 +350,16 @@ and (max-width: $phone-wide-landscape - 1px)  {
 $pl-hero-height: $phone-portrait;
 
 .herofix {
-   height: $pl-hero-height; 
-   top: $pl-navheight;
+ height: $pl-hero-height; 
+ top: $pl-navheight;
 }
 .hero{
   height: $pl-hero-height;
   overflow:hidden;
-    background-color: white;
+  background-color: white;
   width: 100%;
   position: relative;
- 
+  
 }
 .hero img{
   top: -40px;
@@ -396,8 +405,8 @@ $pl-padding-top: 25px;
 
 .page p{
   margin-top: 0px;
-    line-height: 1.45em;
-    font-size: 11px;
+  line-height: 1.45em;
+  font-size: 11px;
 }
 
 .plguitarimg1{
@@ -504,9 +513,9 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 
 }
 //iphone 5 landscape
- @media only screen 
- and (min-width: $phone-wide-landscape) 
- and (max-width: $phone-even-wider-landscape - 1px){
+@media only screen 
+and (min-width: $phone-wide-landscape) 
+and (max-width: $phone-even-wider-landscape - 1px){
 
 
 
@@ -518,6 +527,8 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 
 #nav-dropdown .menu-guitar a{
   color: #358fe3; 
+  pointer-events: none;
+  cursor: default;
 }
 #nav .menu-guitar a{
   color: white; 
@@ -525,6 +536,8 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 #nav .menu-guitar{
   display: inherit !important;
   padding-right: 15px !important;
+  pointer-events: none;
+  cursor: default;
 }
 
 
@@ -538,16 +551,16 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 $pl-hero-height: $phone-portrait;
 
 .herofix {
-   height: $pl-hero-height; 
-   top: $pl-navheight;
+ height: $pl-hero-height; 
+ top: $pl-navheight;
 }
 .hero{
   height: $pl-hero-height;
   overflow:hidden;
-    background-color: white;
+  background-color: white;
   width: 100%;
   position: relative;
- 
+  
 }
 .hero img{
   top: -55px;
@@ -589,7 +602,7 @@ $pl-padding-top: 30px;
 
 .page p{
   margin-top: 0px;
-    line-height: 1.45em;
+  line-height: 1.45em;
 }
 
 .plguitarimg1{
@@ -712,7 +725,7 @@ $pl-guitarcopy2-height: $pl-bottom-factor* $phone-wide-landscape * (1536/2058);
   height: $pl-guitarcopy2-height;
 }
 .guitarcopy2 p{
-font-size: 13px;
+  font-size: 13px;
 }
 $pl-guitarcopy3-height: $pl-bottom-factor* $phone-wide-landscape * (428/322) - (1-$pl-bottom-factor) * $phone-wide-landscape * (252/320);
 #guitarcopy3{
@@ -721,15 +734,15 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-wide-landscape * (428/322) - (
 }
 
 #guitarcopy3 p{
-    font-size: 17px;
+  font-size: 17px;
 }
 }
 
 
  //android landscape
-@media only screen 
-and (min-width: $phone-even-wider-landscape ) 
-and (max-width: $tablet-portrait - 1px)  {
+ @media only screen 
+ and (min-width: $phone-even-wider-landscape ) 
+ and (max-width: $tablet-portrait - 1px)  {
 
 
 
@@ -742,6 +755,8 @@ and (max-width: $tablet-portrait - 1px)  {
 
 #nav-dropdown .menu-guitar a{
   color: #358fe3; 
+  pointer-events: none;
+  cursor: default;
 }
 #nav .menu-guitar a{
   color: white; 
@@ -749,6 +764,8 @@ and (max-width: $tablet-portrait - 1px)  {
 #nav .menu-guitar{
   display: inherit !important;
   padding-right: 15px !important;
+  pointer-events: none;
+  cursor: default;
 }
 
 //  MOBILE -- LANDSCAPE -- HERO
@@ -760,16 +777,16 @@ and (max-width: $tablet-portrait - 1px)  {
 $pl-hero-height: $phone-portrait;
 
 .herofix {
-   height: $pl-hero-height; 
-   top: $pl-navheight;
+ height: $pl-hero-height; 
+ top: $pl-navheight;
 }
 .hero{
   height: $pl-hero-height;
   overflow:hidden;
-    background-color: white;
+  background-color: white;
   width: 100%;
   position: relative;
- 
+  
 }
 .hero img{
   top: -70px;
@@ -954,6 +971,8 @@ and (max-width : $tablet-landscape - 1px){
 
 #nav-dropdown .menu-guitar a{
   color: #358fe3; 
+  pointer-events: none;
+  cursor: default;
 }
 #nav .menu-guitar a{
   color: white; 
@@ -961,6 +980,8 @@ and (max-width : $tablet-landscape - 1px){
 #nav .menu-guitar{
   display: inherit !important;
   padding-right: 15px !important;
+  pointer-events: none;
+  cursor: default;
 }
 
 
@@ -1007,7 +1028,7 @@ $tp-padding-top: 30px;
 .page{
   display: inherit;
   padding-top: $tp-padding-top;
-  }
+}
 
 .herobuffer{
   margin-top: -($herobuffer + $tp-padding-top);
@@ -1098,7 +1119,7 @@ $tp-bottom-height: $tp-bottom-factor * $tablet-portrait * (1536/2058) + ($tp-bot
 }
 #guitarcopy3 p{
   font-size: 18px;
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .guitarimg5{
@@ -1163,51 +1184,51 @@ and (max-width: $desktop - 1px) {
 
   // IPAD -- LANDSCAPE-- PAGE
 
-$tl-page-border-top: 40px;
-.page{
-  padding-top: $tl-page-border-top;
-}
-$herobuffer: 15px;
-.herobuffer{
-  margin-top: -($herobuffer + $tl-page-border-top);
-}
+  $tl-page-border-top: 40px;
+  .page{
+    padding-top: $tl-page-border-top;
+  }
+  $herobuffer: 15px;
+  .herobuffer{
+    margin-top: -($herobuffer + $tl-page-border-top);
+  }
 
-.page h1{
-  margin-bottom: 40px !important;
-}
+  .page h1{
+    margin-bottom: 40px !important;
+  }
 
-.guitarimg1{
-  right: 20px;
-  width: 495px;
-}
+  .guitarimg1{
+    right: 20px;
+    width: 495px;
+  }
 
-#spacer1{
-  height: 150px;
-  width: 440px;
-}
+  #spacer1{
+    height: 150px;
+    width: 440px;
+  }
 
-#spacer2{
-  height: 100px;
-  width: 470px;
-}
+  #spacer2{
+    height: 100px;
+    width: 470px;
+  }
 
-#spacer3{
-  height: 70px;
-  width: 510px;
-}
+  #spacer3{
+    height: 70px;
+    width: 510px;
+  }
 
-#spacer4{
-  height: 170px;
-  width: 530px;
-}
-#spacer5{
-  height: 10px;
-  width: 490px;
-}
+  #spacer4{
+    height: 170px;
+    width: 530px;
+  }
+  #spacer5{
+    height: 10px;
+    width: 490px;
+  }
 
-.guitarcopy1{
-  margin-bottom: 80px;
-}
+  .guitarcopy1{
+    margin-bottom: 80px;
+  }
 
 
 

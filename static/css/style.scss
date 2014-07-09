@@ -3,11 +3,11 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700,Light);
 
 @font-face {
-    font-family: 'Bebas';
-    src:url('../fonts/BEBAS___.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Bebas';
+  src:url('../fonts/BEBAS___.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 //  TYPOGRAPHY
@@ -177,14 +177,14 @@ $navcolor: #1c1f26;
 
 .menu-dropdown {
   width: 229px;
-  height: 200px;
+  height: 180px;
   position: absolute;
   top: 0px;
   right: 0px;
   opacity: 0.0;
   visibility: hidden;
   -webkit-transition: opacity .5s; /* Safari */
-    transition: opacity .5s;
+  transition: opacity .5s;
 }
 
 
@@ -214,16 +214,16 @@ $navcolor: #1c1f26;
   display: block;
   margin-right: 35px;
 }
- #nav-dropdown li a{
+#nav-dropdown li a{
   line-height: 1.7em;
-    font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 18px;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 8px;
-    z-index: 1000;
- }
+  z-index: 1000;
+}
 
 #nav-dropdown li a:hover {
   color: #358fe3; 
@@ -234,6 +234,15 @@ $navcolor: #1c1f26;
   width: 100%;
   height: 1000px;
 
+}
+
+
+#nav .menu-mandeladay{
+  display: none;
+}
+
+#nav-dropdown .menu-mandeladay{
+  display: none;
 }
 
 
@@ -299,7 +308,7 @@ $foot-height: 60px;
 .pf2 img {
   float: right;
   height: 35px;
-  margin: 0 10px 0 0; 
+  margin: 0 0 0 10px; 
 }
 
 .footer {
@@ -324,6 +333,7 @@ $foot-height: 60px;
 
 .f2{
   float:right;
+  margin-right: 6px;
 }
 .f2p-phone{
   display:none;
@@ -350,32 +360,32 @@ $desktop: 1224px;
 // * ------------------------------------------------
 
 $pp-navheight: 50px;
- $pp-herobuffer: 20px;
- $pp-foot-height: 140px;
+$pp-herobuffer: 20px;
+$pp-foot-height: 140px;
 
 @media only screen and (max-width: $phone-landscape - 1px)  {
 
 
-.wrapper-inner{
-  width: $phone-portrait;
-  margin: 0 auto;
-}
+  .wrapper-inner{
+    width: $phone-portrait;
+    margin: 0 auto;
+  }
 
 
 
 
   //  MOBILE -- PORTRAIT -- TYPOGRAPHY
 
-h1{
+  h1{
     text-align: center;
     font-size: 25px;
-}
-h2{
-  font-size: 18px;
-}
-h3{
-  font-size: 16px;
-}
+  }
+  h2{
+    font-size: 18px;
+  }
+  h3{
+    font-size: 16px;
+  }
   p{
     text-align: justify;
     line-height: 1.4em;
@@ -391,41 +401,41 @@ h3{
 
 
 //  MOBILE -- PORTRAIT -- NAVIGATION BAR
-  #navfix{
-    height: $pp-navheight;
-  }
-  #navbar{
-    height: $pp-navheight+$nav-overflow;
-  }
-  .logo{
-    width: $pp-navheight * 4;
-    margin-top: 5px + $nav-overflow;
-  }
-  .links{
-    height: $pp-navheight;
-  }
-  #nav span{
-    display:none;
-    vertical-align: middle;
-  }
+#navfix{
+  height: $pp-navheight;
+}
+#navbar{
+  height: $pp-navheight+$nav-overflow;
+}
+.logo{
+  width: $pp-navheight * 4;
+  margin-top: 5px + $nav-overflow;
+}
+.links{
+  height: $pp-navheight;
+}
+#nav span{
+  display:none;
+  vertical-align: middle;
+}
 
 #navbar .logo{
   margin-top: 12px;
 }
-  #nav .menu-hamburger{
+#nav .menu-hamburger{
   display:inherit;
 }
-  .menu{
-    height: $pp-navheight/2.7;
-    margin-top: 0px;
-  }
-  .menu-dropdown{
-    width: 100%;
-  }
-  .md{
-    width: 100%;
-  }
-  #nav-dropdown li{
+.menu{
+  height: $pp-navheight/2.7;
+  margin-top: 0px;
+}
+.menu-dropdown{
+  width: 100%;
+}
+.md{
+  width: 100%;
+}
+#nav-dropdown li{
   margin-right: 6%;
 }
 
@@ -437,13 +447,13 @@ h3{
 
   //  MOBILE -- PORTRAIT -- PAGE
 
-.herobuffer{
-  height:$pp-herobuffer;
-  margin-top: -($pp-herobuffer + $page-border-top);
-}
+  .herobuffer{
+    height:$pp-herobuffer;
+    margin-top: -($pp-herobuffer + $page-border-top);
+  }
 
   //  MOBILE -- PORTRAIT -- FOOTERS
- 
+
   .prefooter{
     height: $pp-foot-height;
     padding-top: 6px;
@@ -491,7 +501,7 @@ h3{
     line-height: 1.5;
     margin-bottom:  0px;
 
-  margin-top: 17px;
+    margin-top: 17px;
   }
   .f1{
     float: none;
@@ -515,10 +525,10 @@ $pl-herobuffer: 20px;
 // Mobile Landscape
 @media only screen and (min-width: $phone-landscape) and (max-width: $phone-wide-landscape - 1px)  {
 
-   .wrapper-inner{
-    width: $phone-landscape;
-    margin: 0 auto;
-  }
+ .wrapper-inner{
+  width: $phone-landscape;
+  margin: 0 auto;
+}
 
 html{
   -webkit-text-size-adjust: none ;
@@ -526,8 +536,8 @@ html{
 
 //  MOBILE -- LANDSCAPE -- TYPOGRAPHY
 h1{
-    text-align: center;
-    font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 h2{
   font-size: 18px;
@@ -535,11 +545,11 @@ h2{
 h3{
   font-size: 16px;
 }
-  p{
-    text-align: justify;
-    line-height: 1.45em;
-    font-size: 14px;
-  }
+p{
+  text-align: justify;
+  line-height: 1.45em;
+  font-size: 14px;
+}
 
 
 //  MOBILE -- LANDSCAPE -- NAVIGATION BAR
@@ -558,20 +568,20 @@ h3{
 .links{
   height: $pl-navheight;
 }
-  #nav span{
-    display:none;
-  }
-  #nav .menu-hamburger{
+#nav span{
+  display:none;
+}
+#nav .menu-hamburger{
   display:inherit;
 }
 .menu{
   height: $pl-navheight/2.7;
   margin-top: 0px;
 }
- #nav span {
-    line-height: 1.0em;
-    vertical-align: middle;
-  }
+#nav span {
+  line-height: 1.0em;
+  vertical-align: middle;
+}
 #navbar .logo{
   margin-top: 12px;
 }
@@ -609,7 +619,7 @@ h3{
 }
 .footer p{
   text-align: center;
-   font-size: 14px;
+  font-size: 14px;
   font-style: italic;
   margin-top: 10px;
 }
@@ -635,14 +645,14 @@ h3{
     width: $phone-wide-landscape;
     margin: 0 auto;
   }
-html{
-  -webkit-text-size-adjust: none ;
-}
+  html{
+    -webkit-text-size-adjust: none ;
+  }
 
 //  MOBILE -- LANDSCAPE -- TYPOGRAPHY
 h1{
-    text-align: center;
-    font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 h2{
   font-size: 18px;
@@ -650,11 +660,11 @@ h2{
 h3{
   font-size: 16px;
 }
-  p{
-    text-align: justify;
-    line-height: 1.2em;
-    font-size: 14px;
-  }
+p{
+  text-align: justify;
+  line-height: 1.2em;
+  font-size: 14px;
+}
 
 
 //  MOBILE -- LANDSCAPE -- NAVIGATION BAR
@@ -673,20 +683,20 @@ h3{
 .links{
   height: $pl-navheight;
 }
-  #nav span{
-    display:none;
-  }
-  #nav .menu-hamburger{
+#nav span{
+  display:none;
+}
+#nav .menu-hamburger{
   display:inherit;
 }
 .menu{
   height: $pl-navheight/2.7;
   margin-top: 0px;
 }
- #nav span {
-    line-height: 1.0em;
-    vertical-align: middle;
-  }
+#nav span {
+  line-height: 1.0em;
+  vertical-align: middle;
+}
 #navbar .logo{
   margin-top: 12px;
 }
@@ -722,7 +732,7 @@ h3{
 }
 .footer p{
   text-align: center;
-   font-size: 14px;
+  font-size: 14px;
   font-style: italic;
   margin-top: 10px;
 }
@@ -738,16 +748,16 @@ h3{
 .f2p-desktop{
   display:none;
 }
- }
+}
 
 
 //android
 @media only screen and (min-width: $phone-even-wider-landscape ) and (max-width: $tablet-portrait - 1px)  {
 
-   .wrapper-inner{
-    width: $phone-even-wider-landscape;
-    margin: 0 auto;
-  }
+ .wrapper-inner{
+  width: $phone-even-wider-landscape;
+  margin: 0 auto;
+}
 
 html{
   -webkit-text-size-adjust: none ;
@@ -755,8 +765,8 @@ html{
 
 //  MOBILE -- LANDSCAPE -- TYPOGRAPHY
 h1{
-    text-align: center;
-    font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 h2{
   font-size: 18px;
@@ -764,11 +774,11 @@ h2{
 h3{
   font-size: 16px;
 }
-  p{
-    text-align: justify;
-      line-height: 1.45em;
-    font-size: 14px;
-  }
+p{
+  text-align: justify;
+  line-height: 1.45em;
+  font-size: 14px;
+}
 
 
 //  MOBILE -- LANDSCAPE -- NAVIGATION BAR
@@ -787,20 +797,20 @@ h3{
 .links{
   height: $pl-navheight;
 }
-  #nav span{
-    display:none;
-  }
-  #nav .menu-hamburger{
+#nav span{
+  display:none;
+}
+#nav .menu-hamburger{
   display:inherit;
 }
 .menu{
   height: $pl-navheight/2.7;
   margin-top: 0px;
 }
-  #nav span {
-    line-height: 1.0em;
-    vertical-align: middle;
-  }
+#nav span {
+  line-height: 1.0em;
+  vertical-align: middle;
+}
 #navbar .logo{
   margin-top: 12px;
 }
@@ -842,7 +852,7 @@ h3{
 }
 .footer p{
   text-align: center;
-   font-size: 14px;
+  font-size: 14px;
   font-style: italic;
   margin-top: 10px;
 }
@@ -858,7 +868,7 @@ h3{
 .f2p-desktop{
   display:none;
 }
- }
+}
 
 
 /* iPads (portrait) ----------- */
@@ -867,32 +877,32 @@ and (min-width : $tablet-portrait)
 and (max-width : $tablet-landscape - 1px){
 
 
-   .wrapper-inner{
-    width: $tablet-portrait;
-    margin: 0 auto;
-  }
-  h1{
-    font-size: 24px;
-  }
+ .wrapper-inner{
+  width: $tablet-portrait;
+  margin: 0 auto;
+}
+h1{
+  font-size: 24px;
+}
 
-  h3{
-    font-size: 19px;
-  }
+h3{
+  font-size: 19px;
+}
 
-  p{
-    font-size: 17px;
-  }
+p{
+  font-size: 17px;
+}
 
-  
-  #nav span{
-    display:none;
-  }
-  #nav span {
-    line-height: 1.0em;
-    vertical-align: middle;
 
-  }
-  #nav .menu-hamburger{
+#nav span{
+  display:none;
+}
+#nav span {
+  line-height: 1.0em;
+  vertical-align: middle;
+
+}
+#nav .menu-hamburger{
   display:inherit;
 }
 .logo{
@@ -910,21 +920,21 @@ and (max-width : $tablet-landscape - 1px){
   margin-bottom: 0px;
   margin-top: 10px;
 }
-    .pf1 p{
-    font-size: 15px;
-  }
+.pf1 p{
+  font-size: 15px;
+}
 
 .pf2 p{
   font-size: 15px;
   margin-top: 10px;
 }
-  .pf2 img{
-    height: 40px;
-  }
+.pf2 img{
+  height: 40px;
+}
 
-  .f2{
-    margin-top: 0px !important;
-  }
+.f2{
+  margin-top: 0px !important;
+}
 
 
 
@@ -938,31 +948,31 @@ and (max-width: $desktop - 1px) {
 
 
 
-   .wrapper-inner{
-    width: $tablet-landscape;
-    margin: 0 auto;
-  }
+ .wrapper-inner{
+  width: $tablet-landscape;
+  margin: 0 auto;
+}
 // IPAD -- LANDSCAPE -- TYPOGRAPHY
-  h1{
-    font-size: 35px;
-  }
-  h3{
-    font-size: 20px;
-  }
+h1{
+  font-size: 35px;
+}
+h3{
+  font-size: 20px;
+}
 
-  p{
-    font-size: 17px;
-  }
-  }
+p{
+  font-size: 17px;
+}
+}
 
-  .logo{
-    margin-top: 16px;
-  }
+.logo{
+  margin-top: 16px;
+}
 
 
   //Desktop
-@media only screen  
-and (min-width : $desktop) {
+  @media only screen  
+  and (min-width : $desktop) {
 
    .wrapper-inner{
     width: $wrapper-inner-width;

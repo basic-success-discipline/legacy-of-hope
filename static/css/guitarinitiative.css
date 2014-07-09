@@ -130,7 +130,7 @@ a:hover {
 
 .menu-dropdown {
   width: 229px;
-  height: 200px;
+  height: 180px;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -180,6 +180,12 @@ a:hover {
   width: 100%;
   height: 1000px; }
 
+#nav .menu-mandeladay {
+  display: none; }
+
+#nav-dropdown .menu-mandeladay {
+  display: none; }
+
 .page {
   padding-top: 64px;
   position: relative;
@@ -225,7 +231,7 @@ a:hover {
 .pf2 img {
   float: right;
   height: 35px;
-  margin: 0 10px 0 0; }
+  margin: 0 0 0 10px; }
 
 .footer {
   height: 60px;
@@ -245,7 +251,8 @@ a:hover {
   float: left; }
 
 .f2 {
-  float: right; }
+  float: right;
+  margin-right: 6px; }
 
 .f2p-phone {
   display: none; }
@@ -720,7 +727,9 @@ a:hover {
     width: 1200px;
     margin: 0 auto; } }
 #nav .menu-guitar a {
-  color: #358fe3; }
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; }
 
 .herofix {
   height: 720px;
@@ -865,7 +874,9 @@ a:hover {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -939,14 +950,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -1085,14 +1100,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -1248,14 +1267,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     display: none; }
@@ -1406,14 +1429,18 @@ a:hover {
     max-width: 95%; }
 
   #nav-dropdown .menu-guitar a {
-    color: #358fe3; }
+    color: #358fe3;
+    pointer-events: none;
+    cursor: default; }
 
   #nav .menu-guitar a {
     color: white; }
 
   #nav .menu-guitar {
     display: inherit !important;
-    padding-right: 15px !important; }
+    padding-right: 15px !important;
+    pointer-events: none;
+    cursor: default; }
 
   .heroblurbfix {
     position: absolute;
