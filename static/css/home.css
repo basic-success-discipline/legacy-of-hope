@@ -1193,6 +1193,11 @@ h5 {
     width: 480px;
     height: 320px; }
 
+  .close-button {
+    top: 35px;
+    position: absolute;
+    right: 0px; }
+
   .no-pl {
     display: none; }
 
@@ -1339,6 +1344,11 @@ h5 {
   .vidholder {
     width: 480px;
     height: 320px; }
+
+  .close-button {
+    top: 35px;
+    position: absolute;
+    right: 40px; }
 
   .no-pl {
     display: none; }
@@ -1549,6 +1559,11 @@ h5 {
   .vidholder {
     width: 480px;
     height: 320px; }
+
+  .close-button {
+    top: 35px;
+    position: absolute;
+    right: 70px; }
 
   .no-pl {
     display: none; }

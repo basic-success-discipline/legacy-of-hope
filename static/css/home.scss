@@ -601,6 +601,11 @@ and (max-width: $phone-wide-landscape - 1px)  {
 		width: 480px;
 		height: 320px;
 	}
+	.close-button{
+		top: 35px;
+		position: absolute;
+		right: 0px;
+	}
 	.no-pl{
 		display: none;
 	}
@@ -801,6 +806,11 @@ and (max-width: $phone-even-wider-landscape - 1px){
 	.vidholder{
 		width: 480px;
 		height: 320px;
+	}
+		.close-button{
+		top: 35px;
+		position: absolute;
+		right: 40px;
 	}
 
 	.no-pl{
@@ -1088,6 +1098,11 @@ $row4: 188px;
  		width: 480px;
  		height: 320px;
  	}
+ 		.close-button{
+		top: 35px;
+		position: absolute;
+		right: 70px;
+	}
 
 
  	.no-pl{
