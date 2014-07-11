@@ -32,17 +32,3 @@
          }  
 
 
-var openContact = document.getElementsByClassName('open-contact')[0];
-var closeContact = document.getElementsByClassName('close-contact')[0];
-var contact = document.getElementById('contact');
-var contactfade = document.getElementById('contactfade');
-     openContact.onclick=function(){
-                contact.style.display='block';
-                contactfade.style.display='block';
-              };
-              contactfade.onclick=function(){
-                contact.style.display='none';
-                contactfade.style.display='none';
-              };
-            
-

@@ -27,6 +27,10 @@ else if ('production' === env ) {
     var newrelic = require('newrelic');
 }
 
+// app.get('/contact', function (req, res) {
+// 	res.json({test:'test'});
+// });
+
 app.post('/contact', function (req, res) {
 	console.log('contact emailer');
 	var mailOpts, smtpTrans;
