@@ -1186,3 +1186,155 @@ a:hover {
   .wrapper-inner {
     width: 1200px;
     margin: 0 auto; } }
+.wrapper {
+  overflow-x: hidden; }
+
+.herofix {
+  height: 565px;
+  top: 20px;
+  overflow: hidden; }
+
+.hero {
+  background-color: black;
+  width: 100%;
+  height: 565px; }
+
+.hero img {
+  float: right;
+  height: 565px; }
+
+.herospacer {
+  height: 565px; }
+
+.heroblurbfix {
+  z-index: 1;
+  top: 250px;
+  height: 315px; }
+
+.heroblurb {
+  color: white;
+  position: absolute;
+  left: 50px;
+  width: 100px; }
+
+.page {
+  padding-bottom: 64px; }
+
+.page img {
+  margin-bottom: 20px; }
+
+.page a {
+  white-space: nowrap; }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 479px) {
+  .herofix {
+    height: 265px;
+    top: 40px; }
+
+  .hero {
+    height: 265px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 344.5px;
+    clip: rect(0px, 100%, 100%, 0px);
+    position: absolute;
+    top: -40px;
+    right: 0px; }
+
+  .herospacer {
+    height: 265px; }
+
+  .heroblurb {
+    display: none; }
+
+  .page {
+    text-align: center; } }
+	/* MOBILE (LANDSCAPE)
+* ------------------------------------------------ */
+@media only screen and (min-width: 480px) and (max-width: 567px) {
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .page {
+    text-align: center; } }
+@media only screen and (min-width: 568px) and (max-width: 639px) {
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .page {
+    text-align: center; } }
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .heroblurb {
+    width: 200px !important; }
+
+  .heroblurb h3 {
+    text-align: center;
+    font-size: 15px !important; }
+
+  .page {
+    text-align: center; } }
