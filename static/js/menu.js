@@ -14,17 +14,14 @@
                 if(!open){
                 dd.style.opacity='1.0';
                 dd.style.visibility='visible';
-                open= true;
+                open = true;
                 $('.ddclick').css("visibility", "visible");
 
               }
               else{
                   closeMenu();
               }
-              };
-
-
-              
+              };  
 
          function closeMenu(){
                  dd.style.opacity='0.0';
@@ -32,4 +29,20 @@
                 open= false;
                 $('.ddclick').css('visibility', 'hidden');
                 
-         }    
+         }  
+
+
+var openContact = document.getElementsByClassName('open-contact')[0];
+var closeContact = document.getElementsByClassName('close-contact')[0];
+var contact = document.getElementById('contact');
+var contactfade = document.getElementById('contactfade');
+     openContact.onclick=function(){
+                contact.style.display='block';
+                contactfade.style.display='block';
+              };
+              contactfade.onclick=function(){
+                contact.style.display='none';
+                contactfade.style.display='none';
+              };
+            
+
