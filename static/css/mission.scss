@@ -152,8 +152,8 @@ and (max-width: $phone-landscape - 1px)  {
 	}
 	.hero img{
 
-		height: $pp-hero-height * .8;
-		width: auto;
+		height: auto;
+		width: calc(100% + 50px);
 		position: absolute;
 		left:-50px;
 	}
@@ -258,8 +258,8 @@ and (max-width: $tablet-portrait - 1px)  {
 	}
 	.hero img{
 
-		height: $pl-hero-height * 1.0;
-		width: auto;
+		height: auto;
+		width: calc(100% + 50px);
 		position: absolute;
 		left:-50px;
 	}
