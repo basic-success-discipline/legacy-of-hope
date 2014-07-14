@@ -134,25 +134,28 @@ $bottom-factor: .435;
 $bottom-divider: 43.5%;
 .bottomsection{
   margin-top: -1px;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
 }
-.guitarimg3{
-  width: $bottom-divider;
+.right{
+    width: $bottom-divider;
   float:right;
 }
-
-.guitarimg4{
-  width: $bottom-divider;
-  float:right;
-  clear:right;
+.right img{
+  width: 100%;
+  display: block;
 }
 
-$bottom-height: $bottom-factor * $wrapper-inner-width * (1536/2058) + $bottom-factor * $wrapper-inner-width * (913/685);
-.b-left{
-  height: $bottom-height;
+.left{
   width: 100% - $bottom-divider;
+  height: 100%;
 
+}
+
+.top{
+     height: calc(100% - 438px);
+
+     overflow: scroll;
 }
 .guitarcopy2{
   padding-top: 40px;
@@ -163,12 +166,21 @@ $bottom-height: $bottom-factor * $wrapper-inner-width * (1536/2058) + $bottom-fa
   line-height: 1.1;
   margin: 0px 50px 35px 120px;
 }
+
+.bottom{
+  // height: $left-bottom-divider;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 #guitarcopy3{
   width: 100%;
   text-align: right;
   background-color: #EDEFF2;
   padding-top: 35px;
   padding-bottom: 40px;
+  height: 80px;
 }
 #guitarcopy3 p{
   font-size: 21px;
@@ -189,8 +201,10 @@ $bottom-height: $bottom-factor * $wrapper-inner-width * (1536/2058) + $bottom-fa
 }
 .guitarimg5{
   width: 100%;
+  bottom: 0px;
+  display: block;
 }
-.tpguitarimgbottom{
+.tpguitarimg5{
   display: none;
 }
 
@@ -261,7 +275,7 @@ $pp-padding-top: 30px;
 
 .ppimg{
   width: 100%;
-  display: block
+  display: block;
 }
 
 .ppguitarimg1{
@@ -447,32 +461,24 @@ $pl-padding-top: 25px;
 
 
 //  MOBILE -- LANDSCAPE -- BOTTOM SECTION
-$pl-bottom-factor: .48;
+
 $pl-bottom-divider: 48%;
-.plguitarimg4{
-  width: $pl-bottom-divider;
-  float:right;
+.right{
+   width: $pl-bottom-divider;
+}
+.right img {
   display: block;
 }
-.plguitarimg5{
-  width: $pl-bottom-divider;
-  float:right;
-  clear:right;
-  display: block;
+
+.left{
+  width: 100% - $pl-bottom-divider;
 }
-$pl-bottom-height: $pl-bottom-factor * $phone-landscape * (1536/2058) + $pl-bottom-factor * $phone-landscape * (428/322) + 1px;
-.b-left{
-  height: $pl-bottom-height;
-  width: calc(100% - $pl-bottom-divider + 20px);
-  overflow: hidden;
-  position: relative;
-  display: table-cell;
-}
-$pl-guitarcopy2-height: $pl-bottom-factor* $phone-landscape * (1536/2058);
+
+
 .guitarcopy2{
   padding-top: 0px;
   text-align: justify;
-  height: $pl-guitarcopy2-height;
+  height: calc(100% - 380px);
 }
 .guitarcopy2 p{
   font-size: 10px;
@@ -480,17 +486,16 @@ $pl-guitarcopy2-height: $pl-bottom-factor* $phone-landscape * (1536/2058);
   margin: 0px 10px 0px 10px;
   padding-top: 15px;
 }
-$pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl-bottom-factor) * $phone-landscape * (252/320);
+
 #guitarcopy3{
   width: 100%;
   text-align: right;
   background-color: #EDEFF2;
   padding-top: 25px;
   padding-bottom: 25px;
-  height: $pl-guitarcopy3-height;
+  height: 70px;
 }
 #guitarcopy3 p{
-  // font-size: 17px;
   font-size: 14px;
   line-height: 1.2;
   text-align: right;
@@ -502,8 +507,6 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 }
 .plguitarimg6{
   width: 100%;
-  position: absolute;
-  bottom: 0px;
 }
 .plguitarimg7{
   width:100%;
@@ -643,51 +646,42 @@ $pl-padding-top: 30px;
 
 
 //  MOBILE -- LANDSCAPE -- BOTTOM SECTION
-$pl-bottom-factor: .48;
 $pl-bottom-divider: 48%;
-.plguitarimg4{
+
+.right{
+
   width: $pl-bottom-divider;
-  float:right;
-  display: block;
-}
-.plguitarimg5{
-  width: $pl-bottom-divider;
-  float:right;
-  clear:right;
-  display: block;
-}
-$pl-bottom-height: $pl-bottom-factor * $phone-landscape * (1536/2058) + $pl-bottom-factor * $phone-landscape * (428/322) + 1px;
-.b-left{
-  height: $pl-bottom-height;
+  }
+  .right img{
+    display: block;
+  }
+
+.left{
   width: 100% - $pl-bottom-divider;
-  overflow: hidden;
-  position: relative;
-  display: table-cell;
 }
-$pl-guitarcopy2-height: $pl-bottom-factor* $phone-landscape * (1536/2058);
+
 .guitarcopy2{
   padding-top: 0px;
   text-align: justify;
-  height: $pl-guitarcopy2-height;
+  height: calc(100% - 170px);
 }
 .guitarcopy2 p{
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.3;
   margin: 0px 10px 0px 10px;
   padding-top: 15px;
 }
-$pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl-bottom-factor) * $phone-landscape * (252/320);
+
 #guitarcopy3{
   width: 100%;
   text-align: right;
   background-color: #EDEFF2;
   padding-top: 30px;
   padding-bottom: 25px;
-  height: $pl-guitarcopy3-height;
+  height: 70px;
 }
 #guitarcopy3 p{
-  // font-size: 17px;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.2;
   text-align: right;
   margin-right: 10px;
@@ -698,8 +692,6 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 }
 .plguitarimg6{
   width: 100%;
-  position: absolute;
-  bottom: 0px;
 }
 .plguitarimg7{
   width:100%;
@@ -716,26 +708,6 @@ $hero-offset: -20px;
 
 }
 
-$pl-bottom-height: $pl-bottom-factor * $phone-wide-landscape * (1536/2058) + $pl-bottom-factor * $phone-wide-landscape * (428/322) + 1px;
-.b-left{
-  height: $pl-bottom-height;
-}
-$pl-guitarcopy2-height: $pl-bottom-factor* $phone-wide-landscape * (1536/2058);
-.guitarcopy2{
-  height: $pl-guitarcopy2-height;
-}
-.guitarcopy2 p{
-  font-size: 13px;
-}
-$pl-guitarcopy3-height: $pl-bottom-factor* $phone-wide-landscape * (428/322) - (1-$pl-bottom-factor) * $phone-wide-landscape * (252/320);
-#guitarcopy3{
-  height: $pl-guitarcopy3-height;
-
-}
-
-#guitarcopy3 p{
-  font-size: 17px;
-}
 }
 
 
@@ -870,50 +842,42 @@ $pl-padding-top: 30px;
 
 
 //  MOBILE -- LANDSCAPE -- BOTTOM SECTION
-$pl-bottom-factor: .48;
 $pl-bottom-divider: 48%;
-.plguitarimg4{
-  width: $pl-bottom-divider;
-  float:right;
+.right{
+   width: $pl-bottom-divider;
+}
+.right img {
   display: block;
 }
-.plguitarimg5{
-  width: $pl-bottom-divider;
-  float:right;
-  clear:right;
-  display: block;
-}
-$pl-bottom-height: $pl-bottom-factor * $phone-landscape * (1536/2058) + $pl-bottom-factor * $phone-landscape * (428/322) + 1px;
-.b-left{
-  height: $pl-bottom-height;
+
+.left{
   width: 100% - $pl-bottom-divider;
-  overflow: hidden;
-  position: relative;
-  display: table-cell;
 }
-$pl-guitarcopy2-height: $pl-bottom-factor* $phone-landscape * (1536/2058);
+
+
+
+
 .guitarcopy2{
   padding-top: 0px;
   text-align: justify;
-  height: $pl-guitarcopy2-height;
+  height: calc(100% - 170px);
 }
 .guitarcopy2 p{
-  font-size: 10px;
+  font-size: 15px;
   line-height: 1.3;
   margin: 0px 10px 0px 10px;
   padding-top: 15px;
 }
-$pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl-bottom-factor) * $phone-landscape * (252/320);
+
 #guitarcopy3{
   width: 100%;
   text-align: right;
   background-color: #EDEFF2;
   padding-top: 40px;
   padding-bottom: 25px;
-  height: $pl-guitarcopy3-height;
+  height: 70px;
 }
 #guitarcopy3 p{
-  // font-size: 17px;
   font-size: 17px;
   line-height: 1.2;
   text-align: right;
@@ -925,34 +889,12 @@ $pl-guitarcopy3-height: $pl-bottom-factor* $phone-landscape * (428/322) - (1-$pl
 }
 .plguitarimg6{
   width: 100%;
-  position: absolute;
-  bottom: 0px;
 }
 .plguitarimg7{
   width:100%;
 }
 
-$hero-height: $phone-even-wider-landscape * $hero-dimensions;
-.hero {
-  background-size: $phone-even-wider-landscape $hero-height;
-}
 
-$pl-bottom-height: $pl-bottom-factor * $phone-even-wider-landscape * (1536/2058) + $pl-bottom-factor * $phone-even-wider-landscape * (428/322);
-.b-left{
-  height: $pl-bottom-height;
-  width: 1000px;
-}
-$pl-guitarcopy2-height: $pl-bottom-factor* $phone-even-wider-landscape * (1536/2058);
-.guitarcopy2{
-  height: $pl-guitarcopy2-height;
-}
-.guitarcopy2 p{
-  font-size: 15px;
-}
-$pl-guitarcopy3-height: $pl-bottom-factor* $phone-even-wider-landscape * (428/322) - (1-$pl-bottom-factor) * $phone-even-wider-landscape * (252/320);
-#guitarcopy3{
-  height: $pl-guitarcopy3-height;
-}
 }
 
 
@@ -1071,34 +1013,17 @@ $tp-padding-top: 30px;
 
 
 // IPAD -- PORTRAIT -- BOTTOM SECTION
-.bottomsection{
-  display: block;
-}
-$tp-bottom-factor: .485;
+
 $tp-bottom-divider: 48.5%;
-.guitarimg3{
+.right{
   width: $tp-bottom-divider;
-  float:right;
-  display: block;
 }
 
-$tp-guitarimg4-factor: .25;
-$tp-guitarimg4-grow: 25%;
-.guitarimg4{
-  width: $tp-bottom-divider + $tp-guitarimg4-grow;
-  clear:right;
-  position: absolute;
-  display: table-cell;
-  right: 0px;
-  top: $tablet-portrait * $tp-bottom-factor * (1536/2048);
-  clip:rect(0px,($tp-bottom-factor + $tp-guitarimg4-factor) *$tablet-portrait,($tp-bottom-factor + $tp-guitarimg4-factor)*$tablet-portrait *(913/685),($tp-bottom-factor + $tp-guitarimg4-factor) *$tablet-portrait - ($tp-bottom-factor * $tablet-portrait));
-}
-$tp-bottom-height: $tp-bottom-factor * $tablet-portrait * (1536/2058) + ($tp-bottom-factor + $tp-guitarimg4-factor) * $tablet-portrait * (913/685) + 1px;
-.b-left{
-  height: $tp-bottom-height;
+.left{
   width: 100% - $tp-bottom-divider;
-  overflow: hidden;
-  position: relative;
+}
+.top{
+  height: calc(100% - 170px);
 }
 .guitarcopy2{
   padding-top: 30px;
@@ -1108,15 +1033,8 @@ $tp-bottom-height: $tp-bottom-factor * $tablet-portrait * (1536/2058) + ($tp-bot
   font-size: 17px;
   line-height: 1.1;
   margin: 0px 20px 20px 20px;
-
 }
-#guitarcopy3{
-  height: 100px;
-  position: absolute;
-  bottom: 0px;
-  padding-top: 55px;
 
-}
 #guitarcopy3 p{
   font-size: 18px;
   margin-right: 20px;
@@ -1125,12 +1043,9 @@ $tp-bottom-height: $tp-bottom-factor * $tablet-portrait * (1536/2058) + ($tp-bot
 .guitarimg5{
   display: none;
 }
-$tp-guitar-bottom-height: 380px;
-.tpguitarimgbottom{
-  height: $tp-guitar-bottom-height;
+.tpguitarimg5{
   width: 100%;
   display: block;
-  position: relative;
 }
 .tpguitarimgbottom img{
   display: block;
@@ -1230,41 +1145,6 @@ and (max-width: $desktop - 1px) {
     margin-bottom: 80px;
   }
 
-
-
-
-
-// IPAD -- LANDSCAPE -- BOTTOM SECTION
-
-
-$tl-bottom-height: $bottom-factor * $tablet-landscape * (1536/2058) + $bottom-factor * $tablet-landscape * (913/685);
-.b-left{
-  max-height: $tl-bottom-height !important;
-  width: 100% - $bottom-divider;
-  display: block;
-
-
-}
-.b-left p{
-  font-size: 15px;
-  margin-left: 40px ;
-}
-.guitarcopy2{
-  padding-bottom: 20px;
-}
-.guitarcopy2 p{
-  margin-right: 40px;
-  text-align: justify;
-  margin-bottom: 22px;
-}
-
-.guitarimg5{
-  display: block;
-  border: 0 0;
-  width:100%;
-  margin: none;
-  bottom: 0px;
-}
 
 }
 

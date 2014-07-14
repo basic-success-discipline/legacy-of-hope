@@ -580,6 +580,31 @@ $foot-height: 60px;
 
 
 
+// Tables
+
+.table{
+  display: table;
+  position: relative;
+  width: 100%;
+}
+
+.row{
+  display: table-row;
+  position: relative;
+
+}
+
+.cell{
+  display: table-cell;
+}
+
+.rowspan{
+     position: absolute;
+      top: 0;
+      bottom: 0;
+}
+
+
 
 //  RESPONSIVE
 
@@ -607,10 +632,10 @@ $pp-foot-height: 140px;
 @media only screen and (max-width: $phone-landscape - 1px)  {
 
 
-  .wrapper-inner{
-    width: $phone-portrait;
-    margin: 0 auto;
-  }
+  // .wrapper-inner{
+  //   width: $phone-portrait;
+  //   margin: 0 auto;
+  // }
 
 
 
@@ -770,10 +795,10 @@ $pl-herobuffer: 20px;
 // Mobile Landscape
 @media only screen and (min-width: $phone-landscape) and (max-width: $phone-wide-landscape - 1px)  {
 
- .wrapper-inner{
-  width: $phone-landscape;
-  margin: 0 auto;
-}
+//  .wrapper-inner{
+//   width: $phone-landscape;
+//   margin: 0 auto;
+// }
 
 html{
   -webkit-text-size-adjust: none ;
@@ -891,10 +916,10 @@ p{
  //iphone 5
  @media only screen and (min-width: $phone-wide-landscape) and (max-width: $phone-even-wider-landscape - 1px){
 
-   .wrapper-inner{
-    width: $phone-wide-landscape;
-    margin: 0 auto;
-  }
+  //  .wrapper-inner{
+  //   width: $phone-wide-landscape;
+  //   margin: 0 auto;
+  // }
   html{
     -webkit-text-size-adjust: none ;
   }
@@ -1008,10 +1033,10 @@ p{
 //android
 @media only screen and (min-width: $phone-even-wider-landscape ) and (max-width: $tablet-portrait - 1px)  {
 
- .wrapper-inner{
-  width: $phone-even-wider-landscape;
-  margin: 0 auto;
-}
+//  .wrapper-inner{
+//   width: $phone-even-wider-landscape;
+//   margin: 0 auto;
+// }
 
 html{
   -webkit-text-size-adjust: none ;
@@ -1135,10 +1160,10 @@ and (min-width : $tablet-portrait)
 and (max-width : $tablet-landscape - 1px){
 
 
- .wrapper-inner{
-  width: $tablet-portrait;
-  margin: 0 auto;
-}
+//  .wrapper-inner{
+//   width: $tablet-portrait;
+//   margin: 0 auto;
+// }
 h1{
   font-size: 24px;
 }
@@ -1210,10 +1235,10 @@ and (max-width: $desktop - 1px) {
 
 
 
- .wrapper-inner{
-  width: $tablet-landscape;
-  margin: 0 auto;
-}
+//  .wrapper-inner{
+//   width: $tablet-landscape;
+//   margin: 0 auto;
+// }
 // IPAD -- LANDSCAPE -- TYPOGRAPHY
 h1{
   font-size: 35px;
@@ -1236,10 +1261,10 @@ p{
   @media only screen  
   and (min-width : $desktop) {
 
-   .wrapper-inner{
-    width: $wrapper-inner-width;
-    margin: 0 auto;
+  //  .wrapper-inner{
+  //   width: $wrapper-inner-width;
+  //   margin: 0 auto;
 
-  }
+  // }
 }
 
