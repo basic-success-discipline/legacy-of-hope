@@ -179,13 +179,14 @@ $page-border-top: 0px;
 $row1: 477px;
 .mandeladay{
 	width: 100%;
-	height:477px;
+	height:auto;
 	cursor: default;
 
 }
 .mandeladay img{
 	float:left;
 	width: 50%;
+	display: block;
 }
 .mandeladaycopy{
 	height: 100%;
@@ -213,9 +214,12 @@ $row1: 477px;
 
 $row2: 300px;
 
+.row2 img{
+ 	display: block;
+}
 .mission{
 	width: $row2;
-	height: $row2;
+	height: auto;
 }
 
 .missioncopy{
@@ -229,7 +233,7 @@ $row2: 300px;
 
 .hospital{
 	width: $row2;
-	height: $row2;
+	height: auto;
 }
 .hospitalcopy{
 	height: 27%;
@@ -241,8 +245,9 @@ $row2: 300px;
 
 .video{
 	width: $row2;
-	height: $row2;
+	height: auto;
 }
+
 
 .play-button{
 	position: absolute;
@@ -261,7 +266,7 @@ $row2: 300px;
 }
 .textcode{
 	width: $row2;
-	height: $row2;
+	height: auto;
 	cursor: auto;
 }
 .textcodecopy{
@@ -284,7 +289,10 @@ $row3: 423px;
 
 .concert{
 	width: 100%;
-	height: $row3;
+	height: auto;
+}
+.concert img{
+	display: block;
 }
 
 .concertcopy{
@@ -314,12 +322,23 @@ $row3: 423px;
 
 $row4: 389px;
 
+.row4{
+	position: relative;
+	overflow: hidden;
+}
 .app{
 	width: auto;
 	float: right;
-	height: $row4;
+	height: 102%;
 	cursor: auto;
+	overflow: hidden;
+	position: absolute;
 
+}
+
+.app img{
+	display: block;
+	height: 100%;
 }
 .app:hover{
 	box-shadow: 0px 0px 0px 0px;
@@ -348,6 +367,7 @@ $row4: 389px;
 	height: auto;
 	margin: 0 75px 20px 75px;
 	cursor: pointer;
+	display: block;
 
 }
 
@@ -366,7 +386,9 @@ $row4: 389px;
 .guitar{
 	width: auto;
 	float: right;
-	height: $row4;
+	position: relative;
+	height: 100%;
+	background-size: cover;
 }
 .guitarcopy{
 	width: 39%;
@@ -382,10 +404,14 @@ $row4: 389px;
 .gc2{
 	font-size: 35px;
 }
-
-.cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+.guitar img{
+	display: block;
+	height: 101%;	
 }
+
+// .cellcontainer{
+// 	height: $row1 + $row2 + $row3 + $row4;
+// }
 
 
 
