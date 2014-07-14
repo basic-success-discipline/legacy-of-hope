@@ -114,23 +114,27 @@ p {
 
 $hero-height: 565px;
 .herofix {
-	height: $hero-height; 
+	height: auto; 
 	top: $navheight;
 }
 .hero{
 	width: 100%;
-	height: $hero-height;
+	height: auto;
 	position: relative;
 	overflow:hidden;
 	
 }
 .hero img{
-	width: 1200px;
-	position: absolute;
+	width: 100%;
 }
 
 .herospacer{
-	height: $hero-height +$navheight;
+	height: auto;
+}
+.herospacer img{
+	margin-top: $navheight;
+	visibility: hidden;
+	width: 100%;
 }
 
 
@@ -193,6 +197,15 @@ h4.board {
 and (max-width: $phone-landscape - 1px)  {
 
 
+
+.herospacer img{
+	margin-top: $pp-navheight;
+}
+
+.herofix {
+	top: $pp-navheight;
+}
+
 	#nav-dropdown .menu-team a{
 		color: #358fe3; 
 		pointer-events: none;
@@ -232,28 +245,7 @@ and (max-width: $phone-landscape - 1px)  {
 	}
 
 
-	$pp-hero-height: 150px;
-	.herofix {
-		height: $pp-hero-height; 
-		top: $pp-navheight;
-	}
-	.hero{
-		width: 100%;
-  // height: $pl-hero-height;
-  position: relative;
-  overflow:hidden;
-  
-}
-.hero img{
-	height: $pp-hero-height;
-	width: auto;
-	position: absolute;
-	left: 0px;
-}
-
-.herospacer{
-	height: $pp-hero-height +$pp-navheight;
-}	
+	
 
 .director {
 	margin: 0px 0 15px 0;
@@ -285,201 +277,6 @@ and (max-width: $phone-landscape - 1px)  {
 * ------------------------------------------------ */
 @media only screen 
 and (min-width: $phone-landscape) 
-and (max-width: $phone-wide-landscape - 1px)  {
-
-	#nav-dropdown .menu-team a{
-		color: #358fe3; 
-		pointer-events: none;
-		cursor: default;
-	}
-	#nav .menu-team a{
-		color: white; 
-	}
-
-	#nav .menu-team{
-		display: inherit !important;
-		padding-right: 15px !important;
-		pointer-events: none;
-		cursor: default;
-	}
-
-	$pl-hero-height: 230px;
-	.herofix {
-		height: $pl-hero-height; 
-		top: $pl-navheight;
-	}
-	.hero{
-		width: 100%;
-  // height: $pl-hero-height;
-  position: relative;
-  overflow:hidden;
-  
-}
-.hero img{
-	height: $pl-hero-height;
-	width: auto;
-	position: absolute;
-	left: 0px;
-}
-
-.herospacer{
-	height: $pl-hero-height +$pl-navheight;
-}
-
-h1, h2, h3, h4, h5, p {
-	margin: 0 10px 0 10px;
-	text-align: center;
-}
-
-h1 {
-	font-size: 25px;
-	margin-bottom: 40px;
-}
-h3 {
-	font-size: 18px;
-}
-
-h4 {
-	font-size: 14px;
-}
-
-p {
-	margin-top: 15px;
-	font-size: 16px;
-	line-height: 1.4em;
-	text-align: justify;
-}	
-#ambassador h3 {
-	margin-bottom: 20px;
-}
-.director {
-	margin: 0px 0 15px 0;
-}
-.job-position {
-	text-align: center;
-
-}
-.spacer{
-	margin: 50px 10px 30px 10px;
-}
-
-#ambassador {
-	margin-top: 20px;
-}
-
-#ambassador h3 {
-	margin-bottom: 20px;
-}
-
-.productionboard {
-	margin: 0 0 20px 0;
-}
-
-}
-
-
-/* MOBILE (LANDSCAPE) iphone 5
-* ------------------------------------------------ */
-@media only screen 
-and (min-width: $phone-wide-landscape) 
-and (max-width: $phone-even-wider-landscape - 1px)  {
-
-
-	#nav-dropdown .menu-team a{
-		color: #358fe3; 
-		pointer-events: none;
-		cursor: default;
-	}
-	#nav .menu-team a{
-		color: white; 
-	}
-
-	#nav .menu-team{
-		display: inherit !important;
-		padding-right: 15px !important;
-		pointer-events: none;
-		cursor: default;
-	}
-
-	$pl-hero-height: 270px;
-	.herofix {
-		height: $pl-hero-height; 
-		top: $pl-navheight;
-	}
-	.hero{
-		width: 100%;
-  // height: $pl-hero-height;
-  position: relative;
-  overflow:hidden;
-  
-}
-.hero img{
-	height: $pl-hero-height;
-	width: auto;
-	position: absolute;
-	left: 0px;
-}
-
-.herospacer{
-	height: $pl-hero-height +$pl-navheight;
-}
-
-h1, h2, h3, h4, h5, p {
-	margin: 0 10px 0 10px;
-	text-align: center;
-}
-
-h1 {
-	font-size: 25px;
-	margin-bottom: 40px;
-}
-h3 {
-	font-size: 18px;
-}
-
-h4 {
-	font-size: 14px;
-}
-
-p {
-	margin-top: 15px;
-	font-size: 16px;
-	line-height: 1.4em;
-	text-align: justify;
-}	
-#ambassador h3 {
-	margin-bottom: 20px;
-}
-.director {
-	margin: 0px 0 15px 0;
-}
-.job-position {
-	text-align: center;
-
-}
-.spacer{
-	margin: 50px 10px 30px 10px;
-}
-
-#ambassador {
-	margin-top: 20px;
-}
-
-#ambassador h3 {
-	margin-bottom: 20px;
-}
-
-.productionboard {
-	margin: 0 0 20px 0;
-}
-
-}
-
-
-/* MOBILE (LANDSCAPE) android
-* ------------------------------------------------ */
-@media only screen 
-and (min-width: $phone-even-wider-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
 	#nav-dropdown .menu-team a{
@@ -491,7 +288,6 @@ and (max-width: $tablet-portrait - 1px)  {
 		color: white; 
 	}
 
-
 	#nav .menu-team{
 		display: inherit !important;
 		padding-right: 15px !important;
@@ -499,28 +295,6 @@ and (max-width: $tablet-portrait - 1px)  {
 		cursor: default;
 	}
 
-	$pl-hero-height: 305px;
-	.herofix {
-		height: $pl-hero-height; 
-		top: $pl-navheight;
-	}
-	.hero{
-		width: 100%;
-  // height: $pl-hero-height;
-  position: relative;
-  overflow:hidden;
-  
-}
-.hero img{
-	height: $pl-hero-height;
-	width: auto;
-	position: absolute;
-	left: 0px;
-}
-
-.herospacer{
-	height: $pl-hero-height +$pl-navheight;
-}
 
 h1, h2, h3, h4, h5, p {
 	margin: 0 10px 0 10px;
@@ -545,6 +319,15 @@ p {
 	line-height: 1.4em;
 	text-align: justify;
 }	
+
+
+.herospacer img{
+	margin-top: $pl-navheight;
+}
+
+.herofix {
+	top: $pl-navheight;
+}
 #ambassador h3 {
 	margin-bottom: 20px;
 }
@@ -572,6 +355,9 @@ p {
 }
 
 }
+
+
+
 
 
 
@@ -633,34 +419,6 @@ and (max-width : $tablet-landscape - 1px) {
 	}
 
 
-
-	$tp-hero-height: 410px;
-
-
-	.herofix {
-		height: $tp-hero-height; 
-	 // top: $pp-hero-offset;
-	}
-	.hero{
-		height: $tp-hero-height;
-		overflow:hidden;
-		background-color: white;
-		width: 100%;
-		position: relative;
-		
-	}
-	.hero img{
-
-		height: $tp-hero-height * .89;
-		position: absolute;
-	// top: -$tl-hero-offset;
-	right:0px;
-	width: auto;
-}
-
-.herospacer{
-	height: $tp-hero-height;
-}
 .director {
 	margin: 0px 0 15px 0;
 }
@@ -693,34 +451,6 @@ and (max-width : $tablet-landscape - 1px) {
 and (min-width : $tablet-landscape) 
 and (max-width : $desktop - 1px) {
 
-
-	$tl-hero-height: 525px;
-
-
-	.herofix {
-		height: $tl-hero-height; 
-	 // top: $pp-hero-offset;
-	}
-	.hero{
-		height: $tl-hero-height;
-		overflow:hidden;
-		background-color: white;
-		width: 100%;
-		position: relative;
-		
-	}
-	.hero img{
-
-		height: $tl-hero-height * .92;
-		position: absolute;
-	// top: -$tl-hero-offset;
-	right:0px;
-	width: auto;
-}
-
-.herospacer{
-	height: $tl-hero-height;
-}
 
 .director {
 	margin: 0px 0 15px 0;
