@@ -9,7 +9,7 @@
 
 .lb-content {
 	display: none;
-	top: 200px;
+	top: calc((100% - 472px)/2);
 	height: 50%;
 	background-color: clear;
 	z-index:1002;
@@ -18,7 +18,7 @@
 
 .vidholder{
 	width: 700px;
-	height: 500px;
+	height: 100%;
 	margin: 0 auto;
 }
 
@@ -433,15 +433,15 @@ and (max-width: $phone-landscape - 1px)  {
 	}
 
 	.lb-content{
-		top: 150px;
+		top: calc((100% - 210px)/2);
 	}
 	.close-button{
 		display: none;
 	}
 
 	.vidholder{
-		width: 300px;
-		height: 240px;
+		width: 280px;
+		// height: 240px;
 	}
 	#nav-dropdown .menu-home a{
 		color: #358fe3; 
@@ -624,12 +624,12 @@ and (max-width: $phone-wide-landscape - 1px)  {
 	}
 
 	.lb-content{
-		top: 10px;
+		top: calc((100% - 315px)/2);
 	}
 
 	.vidholder{
 		width: 480px;
-		height: 320px;
+		// height: 320px;
 	}
 	.close-button{
 		top: 35px;
@@ -827,12 +827,12 @@ and (max-width: $phone-even-wider-landscape - 1px){
 	}
 
 	.lb-content{
-		top: 10px;
+		top: calc((100% - 315px)/2);
 	}
 
 	.vidholder{
 		width: 480px;
-		height: 320px;
+		// height: 320px;
 	}
 		.close-button{
 		top: 35px;
@@ -1115,12 +1115,12 @@ $row4: 188px;
  	}
 
  	.lb-content{
- 		top: 10px;
+ 		top: calc((100% - 315px)/2);
  	}
 
  	.vidholder{
  		width: 480px;
- 		height: 320px;
+ 		// height: 320px;
  	}
  		.close-button{
 		top: 35px;
@@ -1394,7 +1394,7 @@ and (max-width : $tablet-landscape - 1px) {
 
 
 	.lb-content{
-		top: 140px;
+		top: calc((100% - 472px)/2);
 	}
 	.wrapper-content{
 		width: 95%;
@@ -1562,7 +1562,7 @@ and (max-width : $desktop - 1px) {
 
 
 	.lb-content{
-		top: 165px;
+		top: calc((100% - 472px)/2);
 	}
 
 

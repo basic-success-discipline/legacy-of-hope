@@ -1177,7 +1177,7 @@ a:hover {
 
 .lb-content {
   display: none;
-  top: 200px;
+  top: calc((100% - 472px)/2);
   height: 50%;
   background-color: clear;
   z-index: 1002;
@@ -1185,7 +1185,7 @@ a:hover {
 
 .vidholder {
   width: 700px;
-  height: 500px;
+  height: 100%;
   margin: 0 auto; }
 
 .close-button {
@@ -1278,8 +1278,7 @@ h5 {
 .cell {
   position: relative;
   float: left;
-  cursor: pointer;
-  display: block; }
+  cursor: pointer; }
 
 .cell img {
   height: 100%;
@@ -1503,14 +1502,13 @@ h5 {
     margin-top: none; }
 
   .lb-content {
-    top: 150px; }
+    top: calc((100% - 210px)/2); }
 
   .close-button {
     display: none; }
 
   .vidholder {
-    width: 300px;
-    height: 240px; }
+    width: 280px; }
 
   #nav-dropdown .menu-home a {
     color: #358fe3;
@@ -1650,11 +1648,10 @@ h5 {
     height: 315px; }
 
   .lb-content {
-    top: 10px; }
+    top: calc((100% - 315px)/2); }
 
   .vidholder {
-    width: 480px;
-    height: 320px; }
+    width: 480px; }
 
   .close-button {
     top: 35px;
@@ -1787,11 +1784,10 @@ h5 {
     height: 315px; }
 
   .lb-content {
-    top: 10px; }
+    top: calc((100% - 315px)/2); }
 
   .vidholder {
-    width: 480px;
-    height: 320px; }
+    width: 480px; }
 
   .close-button {
     top: 35px;
@@ -1966,11 +1962,10 @@ h5 {
     height: 315px; }
 
   .lb-content {
-    top: 10px; }
+    top: calc((100% - 315px)/2); }
 
   .vidholder {
-    width: 480px;
-    height: 320px; }
+    width: 480px; }
 
   .close-button {
     top: 35px;
@@ -2138,7 +2133,7 @@ h5 {
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .lb-content {
-    top: 140px; }
+    top: calc((100% - 472px)/2); }
 
   .wrapper-content {
     width: 95%; }
@@ -2247,7 +2242,7 @@ h5 {
 /* iPads (landscape) ----------- */
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   .lb-content {
-    top: 165px; }
+    top: calc((100% - 472px)/2); }
 
   #nav .menu-home a {
     color: #358fe3; }
