@@ -1260,7 +1260,8 @@ h5 {
   height: 565px; }
 
 .page {
-  padding-top: 0px; }
+  padding-top: 0px;
+  background-color: #1c1f26; }
 
 .herobuffer {
   margin-top: -15px; }
@@ -1277,7 +1278,8 @@ h5 {
 .cell {
   position: relative;
   float: left;
-  cursor: pointer; }
+  cursor: pointer;
+  display: block; }
 
 .cell img {
   height: 100%;

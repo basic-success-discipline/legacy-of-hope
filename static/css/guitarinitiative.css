@@ -1227,7 +1227,7 @@ a:hover {
 #guitar-phone-landscape {
   display: none; }
 
-.guitarimg1 {
+.guitarimgholder {
   position: absolute;
   top: 0px;
   right: 44px;
@@ -1852,18 +1852,6 @@ a:hover {
   .gibsondesktop {
     display: none; }
 
-  .tpherobuffer {
-    display: inherit;
-    height: 30px;
-    width: 100%;
-    background-color: white;
-    opacity: 0.3;
-    position: absolute;
-    bottom: 0px; }
-
-  .page {
-    overflow: hidden; }
-
   .page h1 {
     font-size: 36px;
     margin-bottom: 10px !important; }
@@ -1873,11 +1861,14 @@ a:hover {
     padding-top: 30px; }
 
   .herobuffer {
-    margin-top: -45px; }
+    margin-top: -45px;
+    display: block; }
 
-  .guitarimg1 {
-    right: -245px;
-    height: 600px; }
+  .guitarimgholder {
+    width: 260px;
+    overflow: hidden;
+    height: 600px;
+    right: 0px; }
 
   .guitarcopy1 p {
     text-align: left;
