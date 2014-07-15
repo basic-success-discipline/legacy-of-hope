@@ -1339,7 +1339,7 @@ h5 {
   display: block; }
 
 .mission {
-  width: 300px;
+  width: 25%;
   height: auto; }
 
 .missioncopy {
@@ -1349,7 +1349,7 @@ h5 {
   left: 0px; }
 
 .hospital {
-  width: 300px;
+  width: 25%;
   height: auto; }
 
 .hospitalcopy {
@@ -1359,13 +1359,13 @@ h5 {
   left: 0px; }
 
 .video {
-  width: 300px;
+  width: 25%;
   height: auto; }
 
 .play-button {
   position: absolute;
-  top: 117.5px;
-  left: 122.5px;
+  top: 42%;
+  left: 42%;
   color: white; }
 
 .play-button:hover {
@@ -1376,7 +1376,7 @@ h5 {
   -o-transition: all 0.3s linear; }
 
 .textcode {
-  width: 300px;
+  width: 25%;
   height: auto;
   cursor: auto; }
 
@@ -1422,9 +1422,9 @@ h5 {
   overflow: hidden; }
 
 .app {
-  width: auto;
+  width: 55%;
   float: right;
-  height: 102%;
+  height: auto;
   cursor: auto;
   overflow: hidden;
   position: absolute; }
@@ -1469,10 +1469,10 @@ h5 {
   transition: all 0.5s ease-out; }
 
 .guitar {
-  width: auto;
+  width: 45%;
   float: right;
   position: relative;
-  height: 100%;
+  height: auto;
   background-size: cover; }
 
 .guitarcopy {
@@ -1490,7 +1490,7 @@ h5 {
 
 .guitar img {
   display: block;
-  height: 101%; }
+  height: auto; }
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
@@ -1522,7 +1522,7 @@ h5 {
   .hero {
     height: 265px;
     overflow: hidden;
-    background-color: white;
+    background-color: black;
     width: 100%;
     position: relative; }
 
@@ -1543,6 +1543,9 @@ h5 {
     display: block; }
 
   .no-pp {
+    display: none; }
+
+  .mandeladay .no-pp {
     display: none; }
 
   .cell {
@@ -1566,32 +1569,36 @@ h5 {
     color: black;
     font-weight: 400; }
 
-  .mandeladay {
-    height: 253px; }
+  .page {
+    position: relative; }
 
-  .mandeladay img {
-    content: url(../img/home_pp_mandeladay.jpg); }
+  .row {
+    width: 100%; }
+
+  .mandeladay {
+    width: 100%; }
+
+  .mandeladayimg {
+    content: url(../img/home_pp_mandeladay.jpg);
+    width: 100%; }
 
   .mandeladaycopy h2 {
-    margin-top: 99px; }
+    margin-top: 36%; }
 
   .mandeladaycopy h3 {
     font-size: 17px; }
-
-  .concert {
-    height: 218px; }
 
   .concertcopy {
     width: 100%; }
 
   .concertcopy h2 {
-    margin-top: 94px; }
+    margin-top: 31%; }
 
   .concertcopy h3 {
     font-size: 14px; }
 
   .mission {
-    height: 252px; }
+    width: 100%; }
 
   .mission img {
     content: url(../img/home_pp_mission.jpg); }
@@ -1600,24 +1607,24 @@ h5 {
     height: 100%; }
 
   .missioncopy h5 {
-    margin-top: 110px; }
+    margin-top: 32.5%; }
 
   .guitar {
     float: left;
-    height: 223px; }
+    width: 100%; }
 
   .guitar img {
     content: url(../img/home_pp_guitar.jpg); }
 
   .gc1 {
-    margin-top: 84px; }
+    margin-top: 25%; }
 
   .gc2 {
     font-size: 24px !important; }
 
   .app {
     float: left;
-    height: 215px; }
+    position: relative; }
 
   .appcopy img {
     width: 131px; }
@@ -1632,10 +1639,7 @@ h5 {
   .appcopy img {
     margin-right: 174px;
     margin-left: 15px;
-    height: auto; }
-
-  .cellcontainer {
-    height: 1161px; } }
+    height: auto; } }
 /* MOBILE (LANDSCAPE)
 * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 567px) {
@@ -1705,7 +1709,6 @@ h5 {
     display: none; }
 
   .mandeladay {
-    height: 200px;
     width: 100%; }
 
   .mandeladaycopy {
@@ -1720,7 +1723,6 @@ h5 {
     font-size: 22px; }
 
   .mission {
-    height: 245px;
     width: 50%; }
 
   .missioncopy h5 {
@@ -1728,15 +1730,9 @@ h5 {
     margin-top: 10px; }
 
   .video {
-    height: 245px;
     width: 50%; }
 
-  .play-button {
-    top: 90px;
-    left: 95px; }
-
   .concert {
-    height: 195px;
     width: 100%; }
 
   .concertcopy {
@@ -1751,8 +1747,6 @@ h5 {
     font-size: 18px; }
 
   .app {
-    height: 180px;
-    width: 50%;
     float: right; }
 
   .appcopy {
@@ -1777,8 +1771,6 @@ h5 {
     height: auto; }
 
   .guitar {
-    height: 180px;
-    width: 50%;
     float: right; }
 
   .gc1 {
@@ -1786,10 +1778,7 @@ h5 {
     font-size: 17px; }
 
   .gc2 {
-    font-size: 20px !important; }
-
-  .cellcontainer {
-    height: 820px; } }
+    font-size: 20px !important; } }
 @media only screen and (min-width: 568px) and (max-width: 639px) {
   .lb-video {
     width: 420px;
@@ -1857,7 +1846,6 @@ h5 {
     display: none; }
 
   .mandeladay {
-    height: 200px;
     width: 100%; }
 
   .mandeladaycopy {
@@ -1872,7 +1860,6 @@ h5 {
     font-size: 22px; }
 
   .mission {
-    height: 245px;
     width: 50%; }
 
   .missioncopy h5 {
@@ -1880,11 +1867,9 @@ h5 {
     margin-top: 10px; }
 
   .video {
-    height: 245px;
     width: 50%; }
 
   .concert {
-    height: 195px;
     width: 100%; }
 
   .concertcopy {
@@ -1899,8 +1884,6 @@ h5 {
     font-size: 18px; }
 
   .app {
-    height: 180px;
-    width: 50%;
     float: right; }
 
   .appcopy {
@@ -1925,8 +1908,6 @@ h5 {
     height: auto; }
 
   .guitar {
-    height: 180px;
-    width: 50%;
     float: right; }
 
   .gc1 {
@@ -1935,9 +1916,6 @@ h5 {
 
   .gc2 {
     font-size: 20px !important; }
-
-  .cellcontainer {
-    height: 820px; }
 
   .hero img {
     height: 416px;
@@ -1952,34 +1930,15 @@ h5 {
   .heroblurb h3 {
     font-size: 18px !important; }
 
-  .mandeladay {
-    height: 246px; }
-
   .mandeladay h2 {
     font-size: 25px;
     margin-top: 96px; }
 
-  .mission {
-    height: 284px; }
-
   .missioncopy h5 {
     margin-top: 16px; }
 
-  .video {
-    height: 284px; }
-
-  .play-button {
-    top: 109.5px;
-    left: 114.5px; }
-
-  .concert {
-    height: 198px; }
-
   .concertcopy h2 {
     margin-top: 76px; }
-
-  .app {
-    height: 188px; }
 
   .appcopy {
     text-align: left; }
@@ -1993,18 +1952,12 @@ h5 {
     text-align: left;
     font-size: 14px !important; }
 
-  .guitar {
-    height: 188px; }
-
   .gc1 {
     margin-top: 75px;
     font-size: 19px; }
 
   .gc2 {
-    font-size: 22px !important; }
-
-  .cellcontainer {
-    height: 916px; } }
+    font-size: 22px !important; } }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
   .lb-video {
     width: 420px;
@@ -2072,7 +2025,6 @@ h5 {
     display: none; }
 
   .mandeladay {
-    height: 200px;
     width: 100%; }
 
   .mandeladaycopy {
@@ -2087,7 +2039,6 @@ h5 {
     font-size: 22px; }
 
   .mission {
-    height: 245px;
     width: 50%; }
 
   .missioncopy h5 {
@@ -2095,11 +2046,9 @@ h5 {
     margin-top: 10px; }
 
   .video {
-    height: 245px;
     width: 50%; }
 
   .concert {
-    height: 195px;
     width: 100%; }
 
   .concertcopy {
@@ -2114,8 +2063,6 @@ h5 {
     font-size: 18px; }
 
   .app {
-    height: 180px;
-    width: 50%;
     float: right; }
 
   .appcopy {
@@ -2140,8 +2087,6 @@ h5 {
     height: auto; }
 
   .guitar {
-    height: 180px;
-    width: 50%;
     float: right; }
 
   .gc1 {
@@ -2150,9 +2095,6 @@ h5 {
 
   .gc2 {
     font-size: 20px !important; }
-
-  .cellcontainer {
-    height: 820px; }
 
   .hero img {
     height: 448px;
@@ -2167,34 +2109,15 @@ h5 {
   .heroblurb h3 {
     font-size: 20px !important; }
 
-  .mandeladay {
-    height: 264px; }
-
   .mandeladay h2 {
     font-size: 25px;
     margin-top: 100px; }
 
-  .mission {
-    height: 337px; }
-
   .missioncopy h5 {
     margin-top: 25px; }
 
-  .video {
-    height: 337px; }
-
-  .play-button {
-    top: 136px;
-    left: 141px; }
-
-  .concert {
-    height: 235px; }
-
   .concertcopy h2 {
     margin-top: 100px; }
-
-  .app {
-    height: 223px; }
 
   .appcopy img {
     width: 131px; }
@@ -2204,18 +2127,12 @@ h5 {
     text-align: center;
     font-size: 15px !important; }
 
-  .guitar {
-    height: 223px; }
-
   .gc1 {
     margin-top: 95px;
     font-size: 21px; }
 
   .gc2 {
-    font-size: 24px !important; }
-
-  .cellcontainer {
-    height: 1059px; } }
+    font-size: 24px !important; } }
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .lb-content {
@@ -2241,17 +2158,10 @@ h5 {
   .heroblurb {
     width: 340px; }
 
-  .heroblurb h3 {
-    font-weight: bold; }
-
   .heroblurb p {
     margin-right: 0px;
-    font-weight: 400;
     line-height: 1.1em;
     font-size: 15px; }
-
-  .mandeladay {
-    height: 320px; }
 
   .mandeladaycopy h2 {
     margin-top: 80px;
@@ -2269,39 +2179,32 @@ h5 {
     margin-right: 52%; }
 
   .mission {
-    height: 192px;
-    width: 192px; }
+    width: 25%; }
 
   .missioncopy h5 {
     margin-top: 15px;
     font-size: 15px; }
 
   .hospital {
-    height: 192px;
-    width: 192px; }
+    width: 25%; }
 
   .hospitalcopy h5 {
     margin-top: 15px;
     font-size: 15px; }
 
   .video {
-    height: 192px;
-    width: 192px; }
+    width: 25%; }
 
   .play-button {
-    top: 63.5px;
-    left: 68.5px; }
+    top: 38%;
+    left: 38%; }
 
   .textcode {
-    height: 192px;
-    width: 192px; }
+    width: 25%; }
 
   .textcodecopy h5 {
     margin-top: 63px;
     font-size: 13px; }
-
-  .concert {
-    height: 290px; }
 
   .concertcopy h2 {
     margin-top: 30px;
@@ -2316,10 +2219,6 @@ h5 {
 
   .concertcopy a {
     margin-right: 65%; }
-
-  .app {
-    height: 244px;
-    width: 54%; }
 
   .appcopy {
     height: 100%;
@@ -2337,19 +2236,12 @@ h5 {
     margin-left: 30px;
     width: 50%; }
 
-  .guitar {
-    height: 244px;
-    width: 46%; }
-
   .gc1 {
     margin-top: 105px;
     font-size: 23px; }
 
   .gc2 {
-    font-size: 25px !important; }
-
-  .cellcontainer {
-    height: 1046px; } }
+    font-size: 25px !important; } }
 /* iPads (landscape) ----------- */
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   .lb-content {
@@ -2357,9 +2249,6 @@ h5 {
 
   #nav .menu-home a {
     color: #358fe3; }
-
-  .mandeladay {
-    height: 450px; }
 
   .mandeladaycopy {
     padding-left: 30px; }
@@ -2372,47 +2261,31 @@ h5 {
     margin-right: 60%; }
 
   .mission {
-    height: 256px;
-    width: 256px; }
+    width: 25%; }
 
   .missioncopy h5 {
     margin-top: 19px; }
 
   .hospital {
-    height: 256px;
-    width: 256px; }
+    width: 25%; }
 
   .hospitalcopy h5 {
     margin-top: 19px; }
 
   .video {
-    height: 256px;
-    width: 256px; }
-
-  .play-button {
-    position: absolute;
-    top: 95.5px;
-    left: 100.5px; }
+    width: 25%; }
 
   .textcode {
-    height: 256px;
-    width: 256px; }
+    width: 25%; }
 
   .textcodecopy h5 {
     margin-top: 80px; }
-
-  .concert {
-    height: 400px; }
 
   .concertcopy {
     padding-left: 20px; }
 
   .concertcopy h2 {
     margin-top: 80px; }
-
-  .app {
-    height: 350px;
-    width: 54%; }
 
   .appcopy {
     height: 100%;
@@ -2430,12 +2303,5 @@ h5 {
     width: 50%;
     font-weight: 400; }
 
-  .guitar {
-    height: 350px;
-    width: 46%; }
-
   .gc1 {
-    margin-top: 145px; }
-
-  .cellcontainer {
-    height: 1456px; } }
+    margin-top: 145px; } }

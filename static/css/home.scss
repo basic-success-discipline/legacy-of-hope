@@ -218,7 +218,7 @@ $row2: 300px;
  	display: block;
 }
 .mission{
-	width: $row2;
+	width: 25%;
 	height: auto;
 }
 
@@ -232,7 +232,7 @@ $row2: 300px;
 
 
 .hospital{
-	width: $row2;
+	width: 25%;
 	height: auto;
 }
 .hospitalcopy{
@@ -244,15 +244,15 @@ $row2: 300px;
 
 
 .video{
-	width: $row2;
+	width: 25%;
 	height: auto;
 }
 
 
 .play-button{
 	position: absolute;
-	top: ($row2 - 65px)/2;
-	left: ($row2 - 55px)/2;
+	top: 42%;
+	left: 42%;
 	color: white;
 
 
@@ -265,7 +265,7 @@ $row2: 300px;
 	-o-transition: all 0.3s linear; 
 }
 .textcode{
-	width: $row2;
+	width: 25%;
 	height: auto;
 	cursor: auto;
 }
@@ -322,14 +322,16 @@ $row3: 423px;
 
 $row4: 389px;
 
+$guitar-divider: 55%;
+
 .row4{
 	position: relative;
 	overflow: hidden;
 }
 .app{
-	width: auto;
+	width: $guitar-divider;
 	float: right;
-	height: 102%;
+	height: auto;
 	cursor: auto;
 	overflow: hidden;
 	position: absolute;
@@ -384,10 +386,10 @@ $row4: 389px;
 
 
 .guitar{
-	width: auto;
+	width: 100% - $guitar-divider;
 	float: right;
 	position: relative;
-	height: 100%;
+	height: auto;
 	background-size: cover;
 }
 .guitarcopy{
@@ -406,7 +408,7 @@ $row4: 389px;
 }
 .guitar img{
 	display: block;
-	height: 101%;	
+	height: auto;	
 }
 
 // .cellcontainer{
@@ -455,7 +457,7 @@ and (max-width: $phone-landscape - 1px)  {
 	.hero{
 		height: $pp-hero-height;
 		overflow:hidden;
-		background-color: white;
+		background-color: black;
 		width: 100%;
 		position: relative;
 
@@ -483,6 +485,10 @@ and (max-width: $phone-landscape - 1px)  {
 		display: none;
 	}
 
+	.mandeladay .no-pp{
+		display: none;
+	}
+
 	.cell{
 		width: 100%;
 		text-align: center;
@@ -506,16 +512,24 @@ and (max-width: $phone-landscape - 1px)  {
 		font-weight: 400; 
 	}
 
-	$row1: 253px;
-	.mandeladay{
-		height: $row1;
+	.page{
+		position: relative;
 	}
-	.mandeladay img{
+	$row1: 253px;
+	.row {
+		width: 100%;
+	}
+	.mandeladay{
+		//height: $row1;
+		width: 100%;
+	}
+	.mandeladayimg{
 		content: url(../img/home_pp_mandeladay.jpg);
+		width: 100%;
 	}
 
 	.mandeladaycopy h2{
-		margin-top: 99px;
+		margin-top: 36%;
 	}
 	.mandeladaycopy h3{
 		font-size: 17px;
@@ -523,13 +537,13 @@ and (max-width: $phone-landscape - 1px)  {
 
 	$row2: 218px;
 	.concert{
-		height: $row2;
+		//height: $row2;
 	}
 	.concertcopy{
 		width:100%;
 	}
 	.concertcopy h2{ 
-		margin-top: 94px;
+		margin-top: 31%;
 	}
 	.concertcopy h3{ 
 		font-size: 14px;
@@ -537,7 +551,8 @@ and (max-width: $phone-landscape - 1px)  {
 
 	$row3: 252px;
 	.mission{
-		height: $row3;
+		//height: $row3;
+		width: 100%;
 	}
 	.mission img{
 		content: url(../img/home_pp_mission.jpg);
@@ -547,19 +562,19 @@ and (max-width: $phone-landscape - 1px)  {
 		height: 100%;
 	}
 	.missioncopy h5{
-		margin-top: 110px;
+		margin-top: 32.5%;
 	}
 
 	$row4: 223px;
 	.guitar{
 		float: left;
-		height: 223px;
+		width: 100%;
 	}
 	.guitar img{
 		content: url(../img/home_pp_guitar.jpg);
 	}
 	.gc1{
-		margin-top: 84px;
+		margin-top: 25%;
 	}
 	.gc2{
 		font-size: 24px !important;
@@ -568,7 +583,8 @@ and (max-width: $phone-landscape - 1px)  {
 	$row5: 215px;
 	.app{
 		float: left;
-		height: $row5;
+		position: relative;
+		//height: $row5;
 	}
 	.appcopy img{
 		width: 131px;
@@ -588,7 +604,7 @@ and (max-width: $phone-landscape - 1px)  {
 	}
 
 	.cellcontainer{
-		height: $row1 + $row2 + $row3 + $row4 + $row5;
+		//height: $row1 + $row2 + $row3 + $row4 + $row5;
 	}
 
 }
@@ -688,7 +704,7 @@ $pl-hero-offset: 50px;
 //$row1: 264px;
 $row1: 200px;
 .mandeladay{
-	height: $row1;
+	//height: $row1;
 	width:100%;
 }
 .mandeladaycopy{
@@ -706,7 +722,7 @@ $row1: 200px;
 $row2: 245px;
 
 .mission{
-	height: $row2;
+	//height: $row2;
 	width: 50%;
 }
 .missioncopy h5{
@@ -715,18 +731,15 @@ $row2: 245px;
 	margin-top: 10px;
 }
 .video{
-	height: $row2;
+	//height: $row2;
 	width: 50%;
 }
-.play-button{
-	top: ($row2 - 65px)/2;
-	left: ($row2 - 55px)/2;
-}
+
 
 // $row3: 235px;
 $row3: 195px;
 .concert{
-	height: $row3;
+	//height: $row3;
 	width: 100%;
 }
 .concertcopy{
@@ -745,8 +758,8 @@ $row3: 195px;
 // $row4: 223px;
 $row4: 180px;
 .app{
-	height: $row4;
-	width: 50%;
+	//height: $row4;
+	// width: 50%;
 	float:right;
 }
 .appcopy{
@@ -776,8 +789,8 @@ $row4: 180px;
 	height: auto;
 }
 .guitar{
-	height: $row4;
-	width: 50%;
+	//height: $row4;
+	// width: 50%;
 	float: right;
 }
 
@@ -793,7 +806,7 @@ $row4: 180px;
 }
 
 .cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+	//height: $row1 + $row2 + $row3 + $row4;
 }
 
 }
@@ -894,7 +907,7 @@ $pl-hero-offset: 50px;
 //$row1: 264px;
 $row1: 200px;
 .mandeladay{
-	height: $row1;
+	//height: $row1;
 	width:100%;
 }
 .mandeladaycopy{
@@ -912,7 +925,7 @@ $row1: 200px;
 $row2: 245px;
 
 .mission{
-	height: $row2;
+	//height: $row2;
 	width: 50%;
 }
 .missioncopy h5{
@@ -921,7 +934,7 @@ $row2: 245px;
 	margin-top: 10px;
 }
 .video{
-	height: $row2;
+	//height: $row2;
 	width: 50%;
 }
 
@@ -929,7 +942,7 @@ $row2: 245px;
 // $row3: 235px;
 $row3: 195px;
 .concert{
-	height: $row3;
+	//height: $row3;
 	width: 100%;
 }
 .concertcopy{
@@ -948,8 +961,8 @@ $row3: 195px;
 // $row4: 223px;
 $row4: 180px;
 .app{
-	height: $row4;
-	width: 50%;
+	//height: $row4;
+	// width: 50%;
 	float:right;
 }
 .appcopy{
@@ -979,8 +992,8 @@ $row4: 180px;
 	height: auto;
 }
 .guitar{
-	height: $row4;
-	width: 50%;
+	//height: $row4;
+	// width: 50%;
 	float: right;
 }
 
@@ -996,7 +1009,7 @@ $row4: 180px;
 }
 
 .cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+	//height: $row1 + $row2 + $row3 + $row4;
 }
 
 
@@ -1023,7 +1036,7 @@ $pl-hero-offset:100px;
 
 $row1: 246px;
 .mandeladay{
-	height: $row1;
+	//height: $row1;
 }
 .mandeladay h2{
 	font-size: 25px; 
@@ -1034,22 +1047,19 @@ $row1: 246px;
 $row2: 284px;
 
 .mission{
-	height: $row2;
+	//height: $row2;
 }
 .missioncopy h5{
 	margin-top: 16px;
 }
 .video{
-	height: $row2;
+	//height: $row2;
 }
 
-.play-button{
-	top: ($row2 - 65px)/2;
-	left: ($row2 - 55px)/2;
-}
+
 $row3: 198px;
 .concert{
-	height: $row3;
+	//height: $row3;
 }
 .concertcopy h2{
 	margin-top: 76px;
@@ -1057,7 +1067,7 @@ $row3: 198px;
 
 $row4: 188px;
 .app{
-	height: $row4;
+	//height: $row4;
 }
 .appcopy{
 	text-align: left;
@@ -1074,7 +1084,7 @@ $row4: 188px;
 
 
 .guitar{
-	height: $row4;
+	//height: $row4;
 }
 
 .gc1{
@@ -1086,7 +1096,7 @@ $row4: 188px;
 }
 
 .cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+	//height: $row1 + $row2 + $row3 + $row4;
 }
 
 }
@@ -1186,7 +1196,7 @@ $pl-hero-offset: 50px;
 //$row1: 264px;
 $row1: 200px;
 .mandeladay{
-	height: $row1;
+	//height: $row1;
 	width:100%;
 }
 .mandeladaycopy{
@@ -1204,7 +1214,7 @@ $row1: 200px;
 $row2: 245px;
 
 .mission{
-	height: $row2;
+	//height: $row2;
 	width: 50%;
 }
 .missioncopy h5{
@@ -1213,7 +1223,7 @@ $row2: 245px;
 	margin-top: 10px;
 }
 .video{
-	height: $row2;
+	//height: $row2;
 	width: 50%;
 }
 
@@ -1221,7 +1231,7 @@ $row2: 245px;
 // $row3: 235px;
 $row3: 195px;
 .concert{
-	height: $row3;
+	//height: $row3;
 	width: 100%;
 }
 .concertcopy{
@@ -1240,8 +1250,8 @@ $row3: 195px;
 // $row4: 223px;
 $row4: 180px;
 .app{
-	height: $row4;
-	width: 50%;
+	//height: $row4;
+	// width: 50%;
 	float:right;
 }
 .appcopy{
@@ -1271,8 +1281,8 @@ $row4: 180px;
 	height: auto;
 }
 .guitar{
-	height: $row4;
-	width: 50%;
+	// height: $row4;
+	// width: 50%;
 	float: right;
 }
 
@@ -1288,7 +1298,7 @@ $row4: 180px;
 }
 
 .cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+	//height: $row1 + $row2 + $row3 + $row4;
 }
 
 // Edit here
@@ -1312,7 +1322,7 @@ $pl-hero-offset:100px;
 }
 $row1: 264px;
 .mandeladay{
-	height: $row1;
+	// height: $row1;
 }
 .mandeladay h2{
 	font-size: 25px; 
@@ -1323,22 +1333,19 @@ $row1: 264px;
 $row2: 337px;
 
 .mission{
-	height: $row2;
+	// height: $row2;
 }
 .missioncopy h5{
 	margin-top: 25px;
 }
 .video{
-	height: $row2;
+	// height: $row2;
 }
-.play-button{
-	top: ($row2 - 65px)/2;
-	left: ($row2 - 55px)/2;
-}
+
 
 $row3: 235px;
 .concert{
-	height: $row3;
+	// height: $row3;
 }
 .concertcopy h2{
 	margin-top: 100px;
@@ -1346,7 +1353,7 @@ $row3: 235px;
 
 $row4: 223px;
 .app{
-	height: $row4;
+	// height: $row4;
 }
 .appcopy{
 	// text-align: center;
@@ -1361,7 +1368,7 @@ $row4: 223px;
 }
 
 .guitar{
-	height: $row4;
+	// height: $row4;
 }
 
 .gc1{
@@ -1373,7 +1380,7 @@ $row4: 223px;
 }
 
 .cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+	//height: $row1 + $row2 + $row3 + $row4;
 }
 }
 
@@ -1412,12 +1419,8 @@ and (max-width : $tablet-landscape - 1px) {
 		width: 340px;
 	}
 
-	.heroblurb h3{
-		font-weight: bold;
-	}
 	.heroblurb p{
 		margin-right: 0px;
-		font-weight: 400;
 		line-height: 1.1em;
 		font-size: 15px;
 	}
@@ -1427,7 +1430,8 @@ and (max-width : $tablet-landscape - 1px) {
 
 	$row1: 320px;
 	.mandeladay{
-		height: $row1;
+		// height: $row1;
+
 	}
 	.mandeladaycopy h2{
 		// margin-top: 20px;
@@ -1452,32 +1456,33 @@ and (max-width : $tablet-landscape - 1px) {
 	$row2: 192px;
 
 	.mission{
-		height: $row2;
-		width: $row2;
+		// height: $row2;
+		width: 25%;
 	}
 	.missioncopy h5{
 		margin-top: 15px;
 		font-size: 15px;
 	}
 	.hospital{
-		height: $row2;
-		width: $row2;
+		// height: $row2;
+		width: 25%;
 	}
 	.hospitalcopy h5{
 		margin-top: 15px;
 		font-size: 15px;
 	}
 	.video{
-		height: $row2;
-		width: $row2;
+		// height: $row2;
+		width: 25%;
 	}
 	.play-button{
-		top: ($row2 - 65px)/2;
-		left: ($row2 - 55px)/2;
+		top: 38%;
+		left: 38%;
 	}
+
 	.textcode{
-		height: $row2;
-		width: $row2;
+		// height: $row2;
+		width: 25%;
 	}
 	.textcodecopy h5{
 		margin-top: 63px;
@@ -1486,7 +1491,7 @@ and (max-width : $tablet-landscape - 1px) {
 
 	$row3: 290px;
 	.concert{
-		height: $row3;
+		// height: $row3;
 	}
 	.concertcopy h2{
 		margin-top: 30px;
@@ -1506,8 +1511,8 @@ and (max-width : $tablet-landscape - 1px) {
 
 	$row4: 244px;
 	.app{
-		height: $row4;
-		width: 54%;
+		// height: $row4;
+		// width: 54%;
 	}
 	.appcopy{
 		height: 100%;
@@ -1528,8 +1533,8 @@ and (max-width : $tablet-landscape - 1px) {
 }
 
 .guitar{
-	height: $row4;
-	width: 46%;
+	// height: $row4;
+	// width: 46%;
 }
 
 .gc1{
@@ -1542,7 +1547,7 @@ and (max-width : $tablet-landscape - 1px) {
 
 
 .cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+	//height: $row1 + $row2 + $row3 + $row4;
 }
 
 }
@@ -1565,7 +1570,7 @@ and (max-width : $desktop - 1px) {
 	}
 	$row1: 450px;
 	.mandeladay{
-		height: $row1;
+		// height: $row1;
 	}
 	.mandeladaycopy{
 		padding-left: 30px;
@@ -1583,32 +1588,28 @@ and (max-width : $desktop - 1px) {
 	$row2: 256px;
 
 	.mission{
-		height: $row2;
-		width: $row2;
+		// height: $row2;
+		width: 25%;
 	}
 	.missioncopy h5{
 		margin-top: 19px;
 	}
 	.hospital{
-		height: $row2;
-		width: $row2;
+		// height: $row2;
+		width: 25%;
 	}
 	.hospitalcopy h5{
 		margin-top: 19px;
 	}
 	.video{
-		height: $row2;
-		width: $row2;
-	}
-	.play-button{
-		position: absolute;
-		top: ($row2 - 65px)/2;
-		left: ($row2 - 55px)/2;
+		// height: $row2;
+		width: 25%;
 	}
 
+
 	.textcode{
-		height: $row2;
-		width: $row2;
+		// height: $row2;
+		width: 25%;
 	}
 	.textcodecopy h5{
 		margin-top: 80px;
@@ -1617,7 +1618,7 @@ and (max-width : $desktop - 1px) {
 
 	$row3: 400px;
 	.concert{
-		height: $row3;
+		// height: $row3;
 	}
 	.concertcopy{
 		padding-left: 20px;
@@ -1628,8 +1629,8 @@ and (max-width : $desktop - 1px) {
 
 	$row4: 350px;
 	.app{
-		height: $row4;
-		width: 54%;
+		// height: $row4;
+	
 	}
 	.appcopy{
 		height: 100%;
@@ -1650,8 +1651,8 @@ and (max-width : $desktop - 1px) {
 }
 
 .guitar{
-	height: $row4;
-	width: 46%;
+	// height: $row4;
+	
 }
 
 .gc1{
@@ -1660,7 +1661,7 @@ and (max-width : $desktop - 1px) {
 
 
 .cellcontainer{
-	height: $row1 + $row2 + $row3 + $row4;
+	//height: $row1 + $row2 + $row3 + $row4;
 }
 }
 
