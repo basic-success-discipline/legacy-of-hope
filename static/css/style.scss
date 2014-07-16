@@ -114,6 +114,7 @@ $wrapper-content-width: 960px;
 .wrapper-fix {
   position: fixed;
   width: 100%; 
+  max-width: $wrapper-inner-width;
 }
 
 
@@ -122,12 +123,15 @@ $wrapper-content-width: 960px;
 $navheight: 50px;
 $nav-overflow: 10px;
 $navcolor: #1c1f26;
-#navfix {
+.navfix, .navspacer {
   height: $navheight;
+}
+
+.navfix{
   z-index: 1000; 
 }
 
-#navbar {
+.navbar {
   background-color: $navcolor;
   width: 100%;
   position: relative;
@@ -135,7 +139,7 @@ $navcolor: #1c1f26;
   margin-top: -$nav-overflow;
 }
 
-#navholder {
+.navholder {
   margin-top: $nav-overflow;
   float: right; 
 }
@@ -157,10 +161,8 @@ $navcolor: #1c1f26;
 
 .links span {
   display: inline;
-  margin: 0 15px 0 0; 
+  margin: 0 0 0 15px; 
   float: left;
-
-
 }
 
 
@@ -182,8 +184,11 @@ $navcolor: #1c1f26;
   cursor: pointer;
 }
 
+.dropdown-wrapper{
+  position: relative;
+}
 .menu-dropdown {
-  width: 229px;
+  width: 100%;
   height: 180px;
   position: absolute;
   top: 0px;
@@ -197,16 +202,23 @@ $navcolor: #1c1f26;
 
 .menu-dropdown-background{
   background-color: #414141;
-  width: 100%;
+  width: 229px;
   height: 100%;
   opacity: .6;
+  float: right;
+  margin-right: 10px
+
 
 }
-#nav .menu-hamburger{
+.nav .menu-hamburger{
   display:none;
 }
 
-#nav-dropdown{
+.menu-content{
+  position: absolute;
+  top: 0px;
+}
+.nav-dropdown{
   text-align: right;
   display: table;
   width: 100%;
@@ -215,13 +227,12 @@ $navcolor: #1c1f26;
   position: absolute;
   top: 0px;
 
-
 }
-#nav-dropdown li{
+.nav-dropdown li{
   display: block;
-  margin-right: 35px;
+  
 }
-#nav-dropdown li a{
+.nav-dropdown li a{
   line-height: 1.7em;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
@@ -232,7 +243,7 @@ $navcolor: #1c1f26;
   z-index: 1000;
 }
 
-#nav-dropdown li a:hover {
+.nav-dropdown li a:hover {
   color: #358fe3; 
 }
 
@@ -242,15 +253,54 @@ $navcolor: #1c1f26;
   height: 1000px;
 
 }
-
-
-#nav .menu-mandeladay{
+.nav .menu-mandeladay{
   display: none;
 }
 
-#nav-dropdown .menu-mandeladay{
+.nav-dropdown .menu-mandeladay{
   display: none;
 }
+
+.nav-dropdown .currentpage a, .nav .currentpage a{
+  color: #358fe3;
+  pointer-events: none;
+  cursor: default; 
+}
+
+
+
+
+
+
+// HERO
+
+.herofix{
+  width: auto;
+}
+.hero{
+  width: 100%;
+}
+.hero img{
+  width: 100%;
+}
+
+$herobuffer: 15px;
+
+.herospacer img{
+  display: block;
+  margin-bottom: -$herobuffer;
+  visibility: hidden;
+  width: 100%;
+}
+
+.herobuffer{
+  width:100%;
+  height:$herobuffer;
+  background-color: white;
+  opacity: 0.3;
+}
+
+
 
 
 // PAGE
@@ -264,15 +314,7 @@ $page-border-top: 64px;
   z-index: 5;
 }
 
-$herobuffer: 15px;
-.herobuffer{
-  width:100%;
-  height:$herobuffer;
-  background-color: white;
-  opacity: 0.3;
-  position:absolute;
-  margin-top: -($herobuffer + $page-border-top);
-}
+
 
 
 
@@ -599,9 +641,9 @@ $foot-height: 60px;
 }
 
 .rowspan{
-     position: absolute;
-      top: 0;
-      bottom: 0;
+ position: absolute;
+ top: 0;
+ bottom: 0;
 }
 
 
@@ -625,23 +667,12 @@ $desktop: 1224px;
 //  MOBILE (PORTRAIT)
 // * ------------------------------------------------
 
-$pp-navheight: 50px;
-$pp-herobuffer: 20px;
 $pp-foot-height: 140px;
 
 @media only screen and (max-width: $phone-landscape - 1px)  {
 
 
-  // .wrapper-inner{
-  //   width: $phone-portrait;
-  //   margin: 0 auto;
-  // }
-
-
-
-
   //  MOBILE -- PORTRAIT -- TYPOGRAPHY
-
   h1{
     text-align: center;
     font-size: 25px;
@@ -667,46 +698,21 @@ $pp-foot-height: 140px;
 
 
 //  MOBILE -- PORTRAIT -- NAVIGATION BAR
-#navfix{
-  height: $pp-navheight;
-}
-#navbar{
-  height: $pp-navheight+$nav-overflow;
-}
-.logo{
-  width: $pp-navheight * 3.4;
-  padding-top: 4px;
-}
-.links{
-  height: $pp-navheight;
-}
-#nav span{
+
+.nav span{
   display:none;
   vertical-align: middle;
 }
-
-#navbar .logo{
-  margin-top: 12px;
-}
-#nav .menu-hamburger{
-  display:inherit;
-}
-#nav .open-contact{
+.nav .open-contact{
   display: inherit; 
   padding-right: 8px;
 }
-.menu{
-  height: $pp-navheight/2.7;
-  margin-top: 0px;
+.nav .menu-hamburger{
+  display:inherit;
 }
-.menu-dropdown{
+.menu-dropdown-background{
   width: 100%;
-}
-.md{
-  width: 100%;
-}
-#nav-dropdown li{
-  margin-right: 6%;
+  margin-right: 0;
 }
 
 
@@ -715,12 +721,11 @@ $pp-foot-height: 140px;
 
 
 
-  //  MOBILE -- PORTRAIT -- PAGE
 
-  .herobuffer{
-    height:$pp-herobuffer;
-    margin-top: -($pp-herobuffer + $page-border-top);
-  }
+
+
+
+
 
   //  MOBILE -- PORTRAIT -- FOOTERS
 
@@ -788,17 +793,11 @@ $pp-foot-height: 140px;
   }
 }
 
-$pl-navheight: 40px;
-$pl-herobuffer: 20px;
 
 
 // Mobile Landscape
 @media only screen and (min-width: $phone-landscape) and (max-width: $phone-wide-landscape - 1px)  {
 
-//  .wrapper-inner{
-//   width: $phone-landscape;
-//   margin: 0 auto;
-// }
 
 html{
   -webkit-text-size-adjust: none ;
@@ -824,49 +823,29 @@ p{
 
 //  MOBILE -- LANDSCAPE -- NAVIGATION BAR
 
-#navfix{
-  height: $pl-navheight;
-}
-#navbar{
-  height: $pl-navheight+$nav-overflow;
-}
-.logo{
-  width: $pl-navheight * 4;
-  margin-top: 5px + $nav-overflow;
-  left: -15px;
-}
-.links{
-  height: $pl-navheight;
-}
-#nav span{
+
+.nav span{
   display:none;
 }
-#nav .menu-hamburger{
+.nav .menu-hamburger{
   display:inherit;
 }
-#nav .open-contact{
+.nav .open-contact{
   display: inherit; 
   padding-right: 15px;
 
 }
-.menu{
-  height: $pl-navheight/2.7;
-  margin-top: 0px;
+
+
+.nav .currentpage{
+  display: inherit;
+  padding-right: 15px;
 }
-#nav span {
-  line-height: 1.0em;
-  vertical-align: middle;
-}
-#navbar .logo{
-  margin-top: 12px;
+.nav .currentpage a{
+  color: white; 
 }
 
 
-//  MOBILE -- LANDSCAPE -- PAGE
-.herobuffer{
-  height:$pl-herobuffer;
-  margin-top: -($pl-herobuffer + $page-border-top);
-}
 
 
 
@@ -944,48 +923,27 @@ p{
 
 //  MOBILE -- LANDSCAPE -- NAVIGATION BAR
 
-#navfix{
-  height: $pl-navheight;
-}
-#navbar{
-  height: $pl-navheight+$nav-overflow;
-}
-.logo{
-  width: $pl-navheight * 4;
-  margin: 5px + $nav-overflow;
-  left: -15px;
-}
-.links{
-  height: $pl-navheight;
-}
-#nav span{
+.nav span{
   display:none;
 }
-#nav .menu-hamburger{
+.nav .menu-hamburger{
   display:inherit;
 }
-#nav .open-contact{
+.nav .open-contact{
   display: inherit;
   padding-right: 15px; 
 }
-.menu{
-  height: $pl-navheight/2.7;
-  margin-top: 0px;
+.nav .currentpage a{
+  color: white; 
 }
-#nav span {
-  line-height: 1.0em;
-  vertical-align: middle;
-}
-#navbar .logo{
-  margin-top: 12px;
+
+.nav .currentpage{
+  display: inherit;
+  padding-right: 15px;
 }
 
 
-//  MOBILE -- LANDSCAPE -- PAGE
-.herobuffer{
-  height:$pl-herobuffer;
-  margin-top: -($pl-herobuffer + $page-border-top);
-}
+
 
 
 
@@ -1062,51 +1020,27 @@ p{
 
 //  MOBILE -- LANDSCAPE -- NAVIGATION BAR
 
-#navfix{
-  height: $pl-navheight;
-}
-#navbar{
-  height: $pl-navheight+$nav-overflow;
-}
-.logo{
-  width: $pl-navheight * 4;
-  margin: 5px + $nav-overflow;
-  left: -15px;
-}
-.links{
-  height: $pl-navheight;
-}
-#nav span{
+.nav span{
   display:none;
 }
-#nav .menu-hamburger{
+.nav .menu-hamburger{
   display:inherit;
 }
-#nav .open-contact{
+.nav .open-contact{
   display: inherit; 
   padding-right: 15px;
 }
-.menu{
-  height: $pl-navheight/2.7;
-  margin-top: 0px;
+.nav .currentpage a{
+  color: white; 
 }
-#nav span {
-  line-height: 1.0em;
-  vertical-align: middle;
-}
-#navbar .logo{
-  margin-top: 12px;
+.nav .currentpage{
+  display: inherit;
+  padding-right: 15px;
 }
 
 
 
 
-
-//  MOBILE -- LANDSCAPE -- PAGE
-.herobuffer{
-  height:$pl-herobuffer;
-  margin-top: -($pl-herobuffer + $page-border-top);
-}
 
 
 
@@ -1177,27 +1111,23 @@ p{
 }
 
 
-#nav span{
+.nav span{
   display:none;
 }
-#nav span {
-  line-height: 1.0em;
-  vertical-align: middle;
-
-}
-#nav .menu-hamburger{
+.nav .menu-hamburger{
   display:inherit;
 }
-#nav .open-contact{
+.nav .open-contact{
   display: inherit; 
   padding-right: 15px;
 }
-.logo{
-  margin-top: 15px;
+.nav .currentpage a{
+  color: white; 
 }
-//   #nav.links{
-//   display: table-cell;
-// }
+.nav .currentpage{
+  display: inherit;
+  padding-right: 15px;
+}
 
 
 .pf1{
@@ -1222,10 +1152,6 @@ p{
 .f2{
   margin-top: 0px !important;
 }
-
-
-
-
 }
 
 /* iPads (landscape) ----------- */
@@ -1234,11 +1160,6 @@ and (min-width: $tablet-landscape)
 and (max-width: $desktop - 1px) {
 
 
-
-//  .wrapper-inner{
-//   width: $tablet-landscape;
-//   margin: 0 auto;
-// }
 // IPAD -- LANDSCAPE -- TYPOGRAPHY
 h1{
   font-size: 35px;
@@ -1250,21 +1171,8 @@ h3{
 p{
   font-size: 17px;
 }
+
+
 }
 
-.logo{
-  margin-top: 16px;
-}
-
-
-  //Desktop
-  @media only screen  
-  and (min-width : $desktop) {
-
-  //  .wrapper-inner{
-  //   width: $wrapper-inner-width;
-  //   margin: 0 auto;
-
-  // }
-}
 

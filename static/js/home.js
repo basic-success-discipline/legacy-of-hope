@@ -24,11 +24,6 @@
                 document.getElementById('light').style.display='block';
                 document.getElementById('fade').style.display='block';
               };
-              // closeVideo.onclick=function(){
-              //   document.getElementById('light').style.display='none';
-              //   document.getElementById('fade').style.display='none';
-              //   $('.lb-video').attr('src', '//www.youtube.com/embed/KrtR1bXF80A?controls=0&rel=0');
-              // };
               vidbg1.onclick=function(){
                 document.getElementById('light').style.display='none';
                 document.getElementById('fade').style.display='none';
@@ -41,8 +36,6 @@
               };
                 concert1.onclick=function(){ 
                  window.location="concert.html";
-              
-              
               };
                  concert2.onclick=function(){ 
                  window.location="concert.html";

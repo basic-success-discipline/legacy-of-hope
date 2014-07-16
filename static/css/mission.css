@@ -1432,9 +1432,6 @@ a:hover {
     pointer-events: none;
     cursor: default; }
 
-  .hero img {
-    left: -200px; }
-
   .downloads .dl {
     line-height: 1em;
     display: block;
@@ -1443,9 +1440,6 @@ a:hover {
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   #nav .menu-mission a {
     color: #358fe3 !important; }
-
-  .hero img {
-    left: -100px; }
 
   .downloads h5 {
     font-size: 14px; }

@@ -2,12 +2,6 @@
 @import "skeleton/skeleton.scss";
 
 
-#nav .menu-team a{
-	color: #358fe3;
-	pointer-events: none;
-	cursor: default; 
-}
-
 
 body {
 	font: 13px 'Open Sans', sans-serif;
@@ -112,30 +106,8 @@ p {
 }
 
 
-$hero-height: 565px;
-.herofix {
-	height: auto; 
-	top: $navheight;
-}
-.hero{
-	width: 100%;
-	height: auto;
-	position: relative;
-	overflow:hidden;
-	
-}
-.hero img{
-	width: 100%;
-}
 
-.herospacer{
-	height: auto;
-}
-.herospacer img{
-	margin-top: $navheight;
-	visibility: hidden;
-	width: 100%;
-}
+
 
 
 .director {
@@ -198,19 +170,6 @@ and (max-width: $phone-landscape - 1px)  {
 
 
 
-.herospacer img{
-	margin-top: $pp-navheight;
-}
-
-.herofix {
-	top: $pp-navheight;
-}
-
-	#nav-dropdown .menu-team a{
-		color: #358fe3; 
-		pointer-events: none;
-		cursor: default;
-	}
 
 	.page .wrapper-content{
 		width: 100%;
@@ -247,6 +206,9 @@ and (max-width: $phone-landscape - 1px)  {
 
 	
 
+
+	
+
 .director {
 	margin: 0px 0 15px 0;
 }
@@ -279,21 +241,7 @@ and (max-width: $phone-landscape - 1px)  {
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-	#nav-dropdown .menu-team a{
-		color: #358fe3; 
-		pointer-events: none;
-		cursor: default;
-	}
-	#nav .menu-team a{
-		color: white; 
-	}
 
-	#nav .menu-team{
-		display: inherit !important;
-		padding-right: 15px !important;
-		pointer-events: none;
-		cursor: default;
-	}
 
 
 h1, h2, h3, h4, h5, p {
@@ -321,13 +269,7 @@ p {
 }	
 
 
-.herospacer img{
-	margin-top: $pl-navheight;
-}
 
-.herofix {
-	top: $pl-navheight;
-}
 #ambassador h3 {
 	margin-bottom: 20px;
 }
@@ -367,14 +309,7 @@ p {
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
-	#nav-dropdown .menu-team a{
-		color: #358fe3; 
-		pointer-events: none;
-		cursor: default;
-	}
-	#nav .menu-team a{
-		color: white; 
-	}
+
 
 
 
@@ -410,13 +345,6 @@ and (max-width : $tablet-landscape - 1px) {
 		text-align: justify;
 	}	
 
-
-	#nav .menu-team{
-		display: inherit !important;
-		padding-right: 15px !important;
-		pointer-events: none;
-		cursor: default;
-	}
 
 
 .director {

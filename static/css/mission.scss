@@ -340,9 +340,9 @@ and (max-width : $tablet-landscape - 1px) {
 
 
 
-	.hero img{
-		left:-200px;
-	}
+	// .hero img{
+	// 	left:-200px;
+	// }
 
 
 	.downloads .dl {
@@ -369,9 +369,6 @@ and (max-width : $desktop - 1px) {
 
 	}
 
-	.hero img{
-		left:-100px;
-	}
 	.downloads h5{
 		font-size: 14px;
 	}
