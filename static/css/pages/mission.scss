@@ -1,48 +1,23 @@
-@import "style.scss";
+@import "../variables.scss";
 
 
-#nav .menu-mission a{
-	color: #358fe3; 
-	pointer-events: none;
-	cursor: default;
-}
-$hero-height: 565px;
-.herofix {
-	height: $hero-height; 
-	top: $navheight;
-}
-.hero{
-	width: 100%;
-	height: $hero-height;
-	position: relative;
-	overflow:hidden;
-	
-}
-.hero img{
-	width: 1200px;
-	position: absolute;
-}
+// PAGE
 
-.herospacer{
-	height: $hero-height +$navheight;
-}
-
-.gray{
-	background-color: #EDEFF2;
-}
 .page{
 	padding-bottom: 35px;
 }
-
+.gray{
+	background-color: #EDEFF2;
+}
 .missioncopy1 {
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	height: auto;
+	position: relative;
 }
 .missioncopy1 h4{
 	font-size: 20px;
-// font-family:"Bebas";
 font-weight: 400;
 color: #646464;
 margin-bottom: 0px;
@@ -51,21 +26,19 @@ margin-bottom: 0px;
 	font-family: "Open Sans";
 	font-size: 14px;
 	margin-bottom: 0px;
-
 }
-
-
-
-
-
-
 .missionimg1{
 	width: 100%;
 	height: auto;
 	display: block;
+	position: relative;
 }
 
 
+
+
+
+// HOSPITAL
 .mission2 h1{
 	float:left;
 }
@@ -76,6 +49,11 @@ margin-bottom: 0px;
 	clear:left;
 }
 
+
+
+
+// DOWNLOADS
+
 .downloads{
 	width: calc(100% - 80px);
 	height: auto;
@@ -84,6 +62,7 @@ margin-bottom: 0px;
 	padding-right: 40px;
 	padding-left: 40px;
 	text-align: center;
+	position: relative;
 }
 .downloads .links{
 	margin-right: auto;
@@ -113,62 +92,19 @@ margin-bottom: 0px;
 .downloads a:hover{
 	color: #646464;
 }
-// .downloads span{
-// 	width: 100%;
-// 	text-align:center;
-// 	float:none;
-// 	display:inline;
-// }
 
 
 
 
-
-/* Smartphones (portrait) ----------- */
-//  MOBILE (PORTRAIT)
-// * ------------------------------------------------
+// MOBILE - PORTRAIT
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
-	#nav-dropdown .menu-mission a{
-		color: #358fe3 !important; 
-		pointer-events: none;
-		cursor: default;
-	}
-
-	$pp-hero-height: 265px;
-
-	.herofix {
-		height: $pp-hero-height; 
-		top: $pp-navheight;
-	}
-	.hero{
-		height: $pp-hero-height;
-		overflow:hidden;
-		background-color: white;
-		width: 100%;
-		position: relative;
-		
-	}
-	.hero img{
-
-		height: auto;
-		width: calc(100% + 50px);
-		position: absolute;
-		left:-50px;
-	}
-
-
-	.herospacer{
-		height: $pp-hero-height;
-	}
-	$page-border-top: 40px;
+	
+	// MOBILE - PORTRAIT - PAGE
 	.page {
-		padding-top: $page-border-top;
+		padding-top: 40px;
 		
-	}
-	.herobuffer{
-		margin-top: -($pp-herobuffer + $page-border-top);
 	}
 	.missioncopy1 h4{
 		font-size: 16px;
@@ -181,6 +117,9 @@ and (max-width: $phone-landscape - 1px)  {
 		margin-bottom: -20px;
 	}
 
+
+
+// MOBILE - PORTRAIT - HOSPITAL
 	.mission2{
 		padding-top: 20px;
 	}
@@ -197,6 +136,10 @@ and (max-width: $phone-landscape - 1px)  {
 		text-align: center;
 		font-size: 14px;
 	}
+
+
+
+	// MOBILE - PORTRAIT - DOWNLOADS
 
 	.downloads{
 		text-align: center;
@@ -218,63 +161,18 @@ and (max-width: $phone-landscape - 1px)  {
 }
 
 
-/* MOBILE (LANDSCAPE)
-* ------------------------------------------------ */
+// MOBILE - LANDSCAPE
+
 @media only screen 
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
 
+// MOBILE - LANDSCAPE - PAGE
 
-	#nav-dropdown .menu-mission a{
-		color: #358fe3 !important; 
-		pointer-events: none;
-		cursor: default;
-	}
-	#nav .menu-mission a{
-		color: white; 
-		pointer-events: none;
-		cursor: default;
-	}
-	#nav .menu-mission{
-		display: inherit !important;
-
-		padding-right: 15px !important;
-	}
-
-	$pl-hero-height: $phone-portrait;
-
-	.herofix {
-		height: $pl-hero-height; 
-		top: $pl-navheight;
-	}
-	.hero{
-		height: $pl-hero-height;
-		overflow:hidden;
-		background-color: white;
-		width: 100%;
-		position: relative;
-		
-	}
-	.hero img{
-
-		height: auto;
-		width: calc(100% + 50px);
-		position: absolute;
-		left:-50px;
-	}
-
-
-	.herospacer{
-		height: $pl-hero-height;
-	}
-	$page-border-top: 40px;
 	.page {
-		padding-top: $page-border-top;
+		padding-top: 40px;
 		
-	}
-	.herobuffer{
-		margin-top: -($pl-herobuffer + $page-border-top);
 	}
 	.missioncopy1 h4{
 		font-size: 16px;
@@ -287,6 +185,8 @@ and (max-width: $tablet-portrait - 1px)  {
 		margin-bottom: -20px;
 	}
 
+
+// MOBILE - LANDSCAPE - HOSPITAL
 	.mission2{
 		padding-top: 20px;
 	}
@@ -308,6 +208,8 @@ and (max-width: $tablet-portrait - 1px)  {
 		float: none;
 	}
 
+
+// MOBILE - LANDSCAPE - DOWNLOADS
 	.downloads .dl {
 		line-height: 1em;
 		display: block;
@@ -316,34 +218,17 @@ and (max-width: $tablet-portrait - 1px)  {
 
 }
 
-/* iPads (portrait) ----------- */
+
+
+
+
+// TABLET - PORTRAIT
 @media only screen 
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
 
-	#nav-dropdown .menu-mission a{
-		color: #358fe3 !important; 
-		pointer-events: none;
-		cursor: default;
-	}
-	#nav .menu-mission a{
-		color: white; 
-	}
-	#nav .menu-mission{
-		display: inherit !important;
-		padding-right: 15px !important;
-		pointer-events: none;
-		cursor: default;
-	}
-
-
-
-
-	// .hero img{
-	// 	left:-200px;
-	// }
-
+	// TABLET - PORTRAIT - DOWNLOADS
 
 	.downloads .dl {
 		line-height: 1em;
@@ -358,16 +243,13 @@ and (max-width : $tablet-landscape - 1px) {
 }
 
 
-/* iPads (landscape) ----------- */
+// TABLET - LANDSCAPE
 @media only screen 
 and (min-width : $tablet-landscape) 
 and (max-width : $desktop - 1px) {
 
 
-	#nav .menu-mission a{
-		color: #358fe3 !important; 
-
-	}
+	// TABLET - LANDSCAPE - DOWNLOADS
 
 	.downloads h5{
 		font-size: 14px;
