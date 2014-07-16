@@ -33,7 +33,6 @@
 //  PAGE
 .page {
   padding-bottom: 30px; 
-
 }
 
 .page h3{
@@ -222,15 +221,15 @@ and (max-width : $tablet-landscape - 1px) {
 
 
 // TABLET -- PORTRAIT -- WRAPPERS
-  .wrapper-content{
-    width: 92%;
-  }
+.wrapper-content{
+  width: 92%;
+}
 
 
 // IPAD -- PORTRAIT -- HEROBLURB
-  .heroblurb{
-    display: none;
-  }
+.heroblurb{
+  display: none;
+}
 
 
   // IPAD -- PORTRAIT -- PAGE
@@ -264,7 +263,7 @@ and (max-width : $desktop - 1px) {
 
   // TABLET -- LANDSCAPE -- WRAPPERS
 
-    .wrapper-content{
+  .wrapper-content{
     width: 92%;
   }
 
@@ -274,7 +273,7 @@ and (max-width : $desktop - 1px) {
   }
 
   // TABLET -- LANDSCAPE -- PAGE
-    .sibongileimg1{
+  .sibongileimg1{
     width: 268px;
   }
 

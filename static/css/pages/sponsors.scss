@@ -12,7 +12,7 @@
 
 // HERO
 .hero{
-	  overflow: auto;
+	overflow: auto;
 }
 .hero img, .herospacer img{
 	width: 75%;
@@ -30,7 +30,7 @@
 	margin-bottom: 20px;
 }
 .page a{
-		white-space:nowrap;
+	white-space:nowrap;
 }
 
 
@@ -50,11 +50,11 @@ and (max-width: $phone-landscape - 1px)  {
 }
 
 	// MOBILE - PORTRAIT - PAGE
-.page {
-	text-align:center;
-}
-
+	.page {
+		text-align:center;
 	}
+
+}
 
 
 

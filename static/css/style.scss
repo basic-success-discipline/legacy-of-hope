@@ -274,6 +274,7 @@ a:hover {
 .hero{
   width: 100%;
   background-color: black;
+
 }
 .hero img{
   width: 100%;
@@ -505,109 +506,109 @@ a:hover {
   padding: 20px 30px 20px 30px;
   font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #888;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-  }
-  .legacy-frm h1 {
-    padding: 0px 0px 10px 0px;
-    display: block;
-    color: white;
-    margin: 0px -30px 30px -30px;
-  }
-  .legacy-frm h1>span {
-    display: block;
-    font-size: 11px;
-  }
-  .legacy-frm label {
-    display: block;
-    margin: 0px 0px 5px;
-    color: white;
-  }
-  .legacy-frm label>span {
-    float: left;
-    width: 200px; 
-    text-align: right;
-    padding-right: 10px;
-    margin-top: 10px;
-    color: white;
-    font-family: "OpenSans", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-  }
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.legacy-frm h1 {
+  padding: 0px 0px 10px 0px;
+  display: block;
+  color: white;
+  margin: 0px -30px 30px -30px;
+}
+.legacy-frm h1>span {
+  display: block;
+  font-size: 11px;
+}
+.legacy-frm label {
+  display: block;
+  margin: 0px 0px 5px;
+  color: white;
+}
+.legacy-frm label>span {
+  float: left;
+  width: 200px; 
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+  color: white;
+  font-family: "OpenSans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
 
-  .legacy-frm label.error {
-    color: red;
-    padding-top: 0px;
-    padding-left: 240px;
-    margin-bottom: 30px;
-    margin-top: 0px;
-    text-align: left;
-    font-style: italic;
+.legacy-frm label.error {
+  color: red;
+  padding-top: 0px;
+  padding-left: 240px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  text-align: left;
+  font-style: italic;
 
-  }
-  .legacy-frm input[type="text"], .legacy-frm input[type="email"], .legacy-frm textarea, .legacy-frm select {
-    border: 1px solid #CCC;
-    color: black;
-    height: 20px;
-    margin-bottom: 16px;
-    margin-right: 6px;
-    margin-top: 2px;
-    outline: 0 none;
-    padding: 6px 12px;
-    width: 68%;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    font: normal 14px/14px "OpenSans", Helvetica, Arial, sans-serif;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  }
+}
+.legacy-frm input[type="text"], .legacy-frm input[type="email"], .legacy-frm textarea, .legacy-frm select {
+  border: 1px solid #CCC;
+  color: black;
+  height: 20px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 6px 12px;
+  width: 68%;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font: normal 14px/14px "OpenSans", Helvetica, Arial, sans-serif;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
 
-  .legacy-frm input[type="checkbox"] {
-    color: black;
-    height: 30px;
-    margin-bottom: 16px;
-    margin-right: 6px;
-    margin-top: 2px;
-    outline: 0 none;
-    padding: 6px 12px;
-    width: 68%;
-    font: normal 14px/14px "OpenSans", Helvetica, Arial, sans-serif;
-  }
+.legacy-frm input[type="checkbox"] {
+  color: black;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 6px 12px;
+  width: 68%;
+  font: normal 14px/14px "OpenSans", Helvetica, Arial, sans-serif;
+}
 
-  .legacy-frm select {
-    background: #FFF url('down-arrow.png') no-repeat right;
-    appearance:none;
-    -webkit-appearance:none; 
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    width: 72%;
-    height: 30px;
-    color: black;
-  }
-  .legacy-frm textarea{
-    height:100px;
-    color: black;
-  }
+.legacy-frm select {
+  background: #FFF url('down-arrow.png') no-repeat right;
+  appearance:none;
+  -webkit-appearance:none; 
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  width: 72%;
+  height: 30px;
+  color: black;
+}
+.legacy-frm textarea{
+  height:100px;
+  color: black;
+}
 
-  .legacy-frm .button {
-    background: #FFF;
-    border: 1px solid #CCC;
-    padding: 10px 25px 10px 25px;
-    color: #333;
-    border-radius: 4px;
-  }
-  .legacy-frm .button:hover {
-    color: #333;
-    background-color: #EBEBEB;
-    border-color: #ADADAD;
-  }
+.legacy-frm .button {
+  background: #FFF;
+  border: 1px solid #CCC;
+  padding: 10px 25px 10px 25px;
+  color: #333;
+  border-radius: 4px;
+}
+.legacy-frm .button:hover {
+  color: #333;
+  background-color: #EBEBEB;
+  border-color: #ADADAD;
+}
 
-  #sponsorarea {
-    display:none;
-  }
+#sponsorarea {
+  display:none;
+}
 
 
 
@@ -766,9 +767,9 @@ a:hover {
 @media only screen and (min-width: $phone-landscape) and (max-width: $phone-wide-landscape - 1px)  {
 
 
-html{
-  -webkit-text-size-adjust: none ;
-}
+  html{
+    -webkit-text-size-adjust: none ;
+  }
 
 //  MOBILE -- LANDSCAPE -- TYPOGRAPHY
 h1{
@@ -949,9 +950,9 @@ p{
 @media only screen and (min-width: $phone-even-wider-landscape ) and (max-width: $tablet-portrait - 1px)  {
 
 
-html{
-  -webkit-text-size-adjust: none ;
-}
+  html{
+    -webkit-text-size-adjust: none ;
+  }
 
 //  ANDROID -- LANDSCAPE -- TYPOGRAPHY
 h1{
