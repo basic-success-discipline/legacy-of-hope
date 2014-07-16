@@ -1,57 +1,7 @@
-@import "style.scss";
+@import "../variables.scss";
 
 
 
-
-
-
-
-
-.lb-content {
-	display: none;
-	top: calc((100% - 472px)/2);
-	height: 50%;
-	background-color: clear;
-	z-index:1002;
-	overflow: visible;
-}
-
-.vidholder{
-	width: 700px;
-	height: 100%;
-	margin: 0 auto;
-}
-
-.close-button{
-	float: right;
-	color: white;
-	transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	-webkit-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear; 
-	cursor: pointer;
-}
-
-.close-button:hover{
-	color: #358fe3; 
-}
-
-
-.lb-video{
-	float:right;
-	width: 630px;
-	height: 472px;
-	margin-right: 30px;
-	// margin-top: 15px;
-}
-
-
-
-#nav .menu-home a{
-	color: #358fe3; 
-	pointer-events: none;
-	cursor: default;
-}
 // TYPOGRAPHY
 h5{
 	color: white;
@@ -60,29 +10,27 @@ h5{
 
 
 
-//  HERO
+//  WRAPPERS
 
 .wrapper{
 	overflow-x: hidden;
 }
-$hero-height: 565px;
-$hero-offset: 20px;
-.herofix {
-	height: $hero-height; 
-	top: $hero-offset;
-	overflow: hidden;
-}
 
+
+
+// HERO
 .hero{
-	background-color: black;
-	width: 100%;
-	height: $hero-height;
+	  overflow: auto;
+}
+.hero img, .herospacer img{
+	width: 75%;
 }
 .hero img{
-	float:right;
-	height: $hero-height;
+	float: right;
 }
 
+
+//  HEROBLURB
 .heroblurbfix {
 	z-index: 1;
 	top: 220px; 
@@ -114,21 +62,10 @@ $hero-offset: 20px;
 
 
 // PAGE
-.herospacer{
-	height: $hero-height;
-}
-
-$page-border-top: 0px;
 .page {
-	padding-top: $page-border-top;
+	padding-top: 0px;
 	background-color: $navcolor;
-
 }
-.herobuffer{
-	margin-top: -($herobuffer + $page-border-top);
-}
-
-
 .page a{
 	text-align: justify;
 	font-family: "Open Sans";
@@ -137,7 +74,6 @@ $page-border-top: 0px;
 	float: right;
 	text-decoration: none;
 	color: black;
-
 }
 .cell{
 	position: relative;
@@ -148,6 +84,7 @@ $page-border-top: 0px;
 .cell img{
 	height: 100%;
 	width: 100%;
+	display:block;
 }
 .cell:hover{
 	box-shadow: 0px 0px 15px 1px white;
@@ -158,7 +95,6 @@ $page-border-top: 0px;
 	-o-transition: all .5s ease-out ;
 	transition: all .5s ease-out ;
 }
-
 .textcode:hover{
 	box-shadow: 0px 0px 0px 0px;
 	z-index: 1000;
@@ -170,31 +106,27 @@ $page-border-top: 0px;
 .copy{
 	position: absolute;
 }
-
 .pp{
 	display: none;
 }
 
 
+
 // PAGE -- ROW 1
-$row1: 477px;
 .mandeladay{
 	width: 100%;
 	height:auto;
 	cursor: default;
-
 }
 .mandeladay img{
 	float:left;
 	width: 50%;
-	display: block;
 }
 .mandeladaycopy{
 	height: 100%;
 	width: 100%;
 }
 .mandeladaycopy h2{
-	// margin-top: 100px;
 	margin-top: 120px;
 }
 .mandeladaycopy h3{
@@ -211,27 +143,18 @@ $row1: 477px;
 }
 
 
+
 // PAGE -- ROW 2
-
-$row2: 300px;
-
-.row2 img{
- 	display: block;
-}
 .mission{
 	width: 25%;
 	height: auto;
 }
-
 .missioncopy{
 	height: 27%;
 	width: 100%;
 	bottom: 0px;
 	left: 0px;
 }
-
-
-
 .hospital{
 	width: 25%;
 	height: auto;
@@ -242,21 +165,15 @@ $row2: 300px;
 	bottom: 0px;
 	left: 0px;
 }
-
-
 .video{
 	width: 25%;
 	height: auto;
 }
-
-
 .play-button{
 	position: absolute;
 	top: 42%;
 	left: 42%;
 	color: white;
-
-
 }
 .play-button:hover{
 	color: #358fe3; 
@@ -278,24 +195,17 @@ $row2: 300px;
 }
 .textcodecopy h5{
 	margin: 112px auto 0 auto;
-	
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
 
 
+
 // PAGE -- ROW 3
-
-$row3: 423px;
-
 .concert{
 	width: 100%;
 	height: auto;
 }
-.concert img{
-	display: block;
-}
-
 .concertcopy{
 	width: 100%;
 	height: 100%;
@@ -307,85 +217,26 @@ $row3: 423px;
 }
 .concertcopy h3{
 	font-size: 21px;
-
 }
 .concertcopy p{
 	margin-right: 72%;
 	text-align: justify;
 }
-
 .concertcopy a{
 	margin-right: 72%;
 }
 
 
+
+
 // PAGE -- ROW 4
 
-$row4: 389px;
 
 $guitar-divider: 55%;
-
 .row4{
 	position: relative;
 	overflow: hidden;
 }
-.app{
-	width: $guitar-divider;
-	float: right;
-	height: auto;
-	cursor: auto;
-	overflow: hidden;
-	position: absolute;
-
-}
-
-.app img{
-	display: block;
-	height: 100%;
-}
-.app:hover{
-	box-shadow: 0px 0px 0px 0px;
-	z-index: 1000;
-}
-.appcopy{
-	width: 379px;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	text-align: center;
-}
-
-.appcopy h5{
-	font-size: 18px;
-	font-family: "Open Sans";
-	margin: 105px 78px 47px 78px;
-
-}
-
-.appcopy a{
-	float: none;
-}
-.appcopy img{
-	width: 153px;
-	height: auto;
-	margin: 0 75px 20px 75px;
-	cursor: pointer;
-	display: block;
-
-}
-
-.appcopy img:hover{
-	box-shadow: 0px 0px 15px 1px white;
-	z-index: 1000;
-	-webkit-transition: all .5s ease-out;
-	-moz-transition: all .5s ease-out ;
-	-ms-transition: all .5s ease-out ;
-	-o-transition: all .5s ease-out ;
-	transition: all .5s ease-out ;
-}
-
-
-
 .guitar{
 	width: 100% - $guitar-divider;
 	float: right;
@@ -403,102 +254,113 @@ $guitar-divider: 55%;
 .gc1{
 	margin-top: 170px;
 }
-
 .gc2{
 	font-size: 35px;
 }
 .guitar img{
-	display: block;
 	height: auto;	
 }
+.app{
+	width: $guitar-divider;
+	float: right;
+	height: auto;
+	cursor: auto;
+	overflow: hidden;
+	position: absolute;
 
-// .cellcontainer{
-// 	height: $row1 + $row2 + $row3 + $row4;
-// }
+}
+.app img{
+	height: 100%;
+}
+.app:hover{
+	box-shadow: 0px 0px 0px 0px;
+	z-index: 1000;
+}
+.appcopy{
+	width: 379px;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+.appcopy h5{
+	font-size: 18px;
+	font-family: "Open Sans";
+	margin: 105px 78px 47px 78px;
+}
+.appcopy a{
+	float: none;
+}
+.appcopy img{
+	width: 153px;
+	height: auto;
+	margin: 0 75px 20px 75px;
+	cursor: pointer;
+}
+.appcopy img:hover{
+	box-shadow: 0px 0px 15px 1px white;
+	z-index: 1000;
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out ;
+	-ms-transition: all .5s ease-out ;
+	-o-transition: all .5s ease-out ;
+	transition: all .5s ease-out ;
+}
 
 
 
 
-/* Smartphones (portrait) ----------- */
-//  MOBILE (PORTRAIT)
-// * ------------------------------------------------
+
+//   VIDEO LIGHTBOX
+.lb-content {
+	display: none;
+	top: calc((100% - 472px)/2);
+	height: 50%;
+	background-color: clear;
+	z-index:1002;
+	overflow: visible;
+}
+.vidholder{
+	width: 700px;
+	height: 100%;
+	margin: 0 auto;
+}
+.lb-video{
+	float:right;
+	width: 630px;
+	height: 472px;
+	margin-right: 30px;
+}
+
+
+
+
+// MOBILE - PORTRAIT
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
-	.lb-video{
-		width: 280px;
-		height: 210px;
-		margin-left: none;
-		margin-top: none;
-	}
 
-	.lb-content{
-		top: calc((100% - 210px)/2);
-	}
-	.close-button{
-		display: none;
-	}
 
-	.vidholder{
-		width: 280px;
-		// height: 240px;
-	}
-	#nav-dropdown .menu-home a{
-		color: #358fe3; 
-		pointer-events: none;
-		cursor: default;
-	}
-	$pp-hero-height: 265px;
-	$pp-hero-offset:40px;
 
-	.herofix {
-		height: $pp-hero-height; 
-		top: $pp-hero-offset;
-	}
-	.hero{
-		height: $pp-hero-height;
-		overflow:hidden;
-		background-color: black;
-		width: 100%;
-		position: relative;
+// MOBILE - PORTRAIT - HERO
+.hero img, .herospacer img{
+	width: 100%;
+	margin-left: -100px;
+	float: none;
+}
 
-	}
-	.hero img{
 
-		height: $pp-hero-height * 1.3;
-		clip: rect(0px, 100% , 100%, 0px);
-		position: absolute;
-		top: -$pp-hero-offset;
-		right:0px;
-	}
-
+	//  HEROBLURB
 	.heroblurb {
 		display: none;
 	}
-	.herospacer{
-		height: $pp-hero-height;
-	}
 
-	.pp{
-		display: block;
-	}
-	.no-pp {
-		display: none;
-	}
 
-	.mandeladay .no-pp{
-		display: none;
-	}
 
-	.cell{
-		width: 100%;
-		text-align: center;
+	//  PAGE
+	.page{
+		position: relative;
 	}
-	.copy{
-		width: 100%;
-		text-align:center;
-	}
-
 	.page img{
 		height: 100%;
 		width: 100%;
@@ -512,23 +374,37 @@ and (max-width: $phone-landscape - 1px)  {
 		color: black;
 		font-weight: 400; 
 	}
-
-	.page{
-		position: relative;
+		.cell{
+		width: 100%;
+		text-align: center;
 	}
-	$row1: 253px;
+	.copy{
+		width: 100%;
+		text-align:center;
+	}
+	.pp{
+		display: block;
+	}
+	.no-pp {
+		display: none;
+	}
+	.mandeladay .no-pp{
+		display: none;
+	}
+	
+
+
+	// MOBILE - PORTRAIT - ROW 1
 	.row {
 		width: 100%;
 	}
 	.mandeladay{
-		//height: $row1;
 		width: 100%;
 	}
 	.mandeladayimg{
-		content: url(../img/home_pp_mandeladay.jpg);
+		content: url(../../img/home_pp_mandeladay.jpg);
 		width: 100%;
 	}
-
 	.mandeladaycopy h2{
 		margin-top: 36%;
 	}
@@ -536,10 +412,7 @@ and (max-width: $phone-landscape - 1px)  {
 		font-size: 17px;
 	}
 
-	$row2: 218px;
-	.concert{
-		//height: $row2;
-	}
+	// MOBILE - PORTRAIT - ROW 2
 	.concertcopy{
 		width:100%;
 	}
@@ -550,15 +423,15 @@ and (max-width: $phone-landscape - 1px)  {
 		font-size: 14px;
 	}
 
-	$row3: 252px;
+
+
+	// MOBILE - PORTRAIT - ROW 3
 	.mission{
-		//height: $row3;
 		width: 100%;
 	}
 	.mission img{
-		content: url(../img/home_pp_mission.jpg);
+		content: url(../../img/home_pp_mission.jpg);
 	}
-
 	.missioncopy{
 		height: 100%;
 	}
@@ -566,13 +439,15 @@ and (max-width: $phone-landscape - 1px)  {
 		margin-top: 32.5%;
 	}
 
-	$row4: 223px;
+
+
+	// MOBILE - PORTRAIT - ROW 4
 	.guitar{
 		float: left;
 		width: 100%;
 	}
 	.guitar img{
-		content: url(../img/home_pp_guitar.jpg);
+		content: url(../../img/home_pp_guitar.jpg);
 	}
 	.gc1{
 		margin-top: 25%;
@@ -581,11 +456,12 @@ and (max-width: $phone-landscape - 1px)  {
 		font-size: 24px !important;
 	}
 
-	$row5: 215px;
+
+
+	// MOBILE - PORTRAIT - ROW 5
 	.app{
 		float: left;
 		position: relative;
-		//height: $row5;
 	}
 	.appcopy img{
 		width: 131px;
@@ -597,115 +473,65 @@ and (max-width: $phone-landscape - 1px)  {
 		font-size: 15px;
 		margin-bottom: 35px;
 	}
-
 	.appcopy img{
 		margin-right: 174px;
 		margin-left: 15px;
 		height: auto;
 	}
 
-	.cellcontainer{
-		//height: $row1 + $row2 + $row3 + $row4 + $row5;
-	}
 
+
+
+	// MOBILE - PORTRAIT - VIDEO LIGHTBOX
+	.lb-video{
+		width: 280px;
+		height: 210px;
+		margin-left: none;
+		margin-top: none;
+	}
+	.lb-content{
+		top: calc((100% - 210px)/2);
+	}
+	.vidholder{
+		width: 280px;
+	}
 }
 
-/* MOBILE (LANDSCAPE)
-* ------------------------------------------------ */
+
+
+// MOBILE - LANDSCAPE
 @media only screen 
 and (min-width: $phone-landscape) 
 and (max-width: $phone-wide-landscape - 1px)  {
 
 
 
-	.lb-video{
-		width: 420px;
-		height: 315px;
-	}
 
-	.lb-content{
-		top: calc((100% - 315px)/2);
-	}
-
-	.vidholder{
-		width: 480px;
-		// height: 320px;
-	}
-	.close-button{
-		top: 35px;
-		position: absolute;
-		right: 0px;
-	}
-	.no-pl{
-		display: none;
-	}
-
-
-// MOBILE -- LANDSCAPE -- NAVIGATION
-#nav .menu-home a{
-	color: white; 
-}
-#nav-dropdown .menu-home a{
-	color: #358fe3; 
-	pointer-events: none;
-	cursor: default;
-}
-#nav .menu-home{
-	display: inherit !important;
-	padding-right: 15px !important;
-	pointer-events: none;
-	cursor: default;
-}
-
-$pl-hero-height: $phone-portrait;
-// $pl-hero-offset:100px;
-$pl-hero-offset: 50px;
-
-.herofix {
-	height: $pl-hero-height; 
-	top: $pl-navheight;
-}
-.hero{
-	height: $pl-hero-height;
-	background-color: black;
-	width: 100%;
-	position: relative;
-
-}
-.hero img{
-
-	// height: $pl-hero-height * 1.4;
-	height: $pl-hero-height * 1.1;
-	position: absolute;
-	top: -1 * $pl-hero-offset;
-	right: 20px;
-
-}
-
-.herospacer{
-	height: $pl-hero-height;
-}
+// MOBILE - LANDSCAPE - HEROBLURB
 
 .heroblurbfix{
 	// top:125px;
 	top: 140px;
 }
 .heroblurb{
-	// width: 295px;
 	width: 200px !important;
 }
 .heroblurb h3{
 	text-align: center;
-	// font-size: 20px;
 	font-size: 15px !important;
 }
 .heroblurbfix p{
 	display: none;
 }
-//$row1: 264px;
-$row1: 200px;
+
+// MOBILE - LANDSCAPE - PAGE
+	.no-pl{
+		display: none;
+	}
+
+
+// MOBILE - LANDSCAPE - ROw 1
 .mandeladay{
-	//height: $row1;
 	width:100%;
 }
 .mandeladaycopy{
@@ -719,28 +545,27 @@ $row1: 200px;
 .mandeladay h3{
 	font-size: 22px;
 }
-// $row2: 337px;
-$row2: 245px;
 
+
+
+
+// MOBILE - LANDSCAPE - ROW 2
 .mission{
-	//height: $row2;
 	width: 50%;
 }
 .missioncopy h5{
 	font-size: 25px;
-	// margin-top: 25px;
 	margin-top: 10px;
 }
 .video{
-	//height: $row2;
 	width: 50%;
 }
 
 
-// $row3: 235px;
-$row3: 195px;
+
+
+// MOBILE - LANDSCAPE - ROW 3
 .concert{
-	//height: $row3;
 	width: 100%;
 }
 .concertcopy{
@@ -749,26 +574,23 @@ $row3: 195px;
 }
 .concertcopy h2{
 	font-size: 25px;
-	// margin-top: 100px;
 	margin-top: 80px;
 }
 .concertcopy h3{
 	font-size: 18px;
 }
 
-// $row4: 223px;
-$row4: 180px;
+
+
+
+// MOBILE - LANDSCAPE - ROW 4
 .app{
-	//height: $row4;
-	// width: 50%;
 	float:right;
 }
 .appcopy{
 	text-align: left;
-
 }
 .appcopy img{
-	// width: 131px;
 	width: 80px;
 	margin-left: 30px !important;
 }
@@ -777,252 +599,54 @@ $row4: 180px;
 	color: white;
 	margin-top: 15px;
 	margin-left: 15px !important;
-	// margin-bottom: 35px;
 	margin-bottom: 20px;
 	text-align: left;
-	// font-size: 15px;
 	font-size: 12px !important;
 }
-
 .appcopy img{
 	margin-right: 174px;
 	margin-left: -26px;
 	height: auto;
 }
 .guitar{
-	//height: $row4;
-	// width: 50%;
 	float: right;
 }
-
 .gc1{
-	// margin-top: 95px;
 	margin-top: 70px; 
-	// font-size: 21px;
 	font-size: 17px;
 }
 .gc2{
-	// font-size: 24px !important;
 	font-size: 20px !important;
 }
 
-.cellcontainer{
-	//height: $row1 + $row2 + $row3 + $row4;
-}
+
+
+// MOBILE - LANDSCAPE - VIDEO LIGHTBOX
+	.lb-video{
+		width: 420px;
+		height: 315px;
+	}
+	.lb-content{
+		top: calc((100% - 315px)/2);
+	}
+	.vidholder{
+		width: 480px;
+	}
 
 }
 
 
-//iphone 5 landscape
+
+
+
+// IPHONE 5 - LANDSCAPE
 @media only screen 
 and (min-width: $phone-wide-landscape) 
 and (max-width: $phone-even-wider-landscape - 1px){
 
 
 
-
-	.lb-video{
-		width: 420px;
-		height: 315px;
-	}
-
-	.lb-content{
-		top: calc((100% - 315px)/2);
-	}
-
-	.vidholder{
-		width: 480px;
-		// height: 320px;
-	}
-		.close-button{
-		top: 35px;
-		position: absolute;
-		right: 40px;
-	}
-
-	.no-pl{
-		display: none;
-	}
-
-// MOBILE -- LANDSCAPE -- NAVIGATION
-#nav .menu-home a{
-	color: white; 
-}
-#nav-dropdown .menu-home a{
-	color: #358fe3; 
-	pointer-events: none;
-	cursor: default;
-}
-#nav .menu-home{
-	display: inherit !important;
-	padding-right: 15px !important;
-	pointer-events: none;
-	cursor: default;
-}
-
-$pl-hero-height: $phone-portrait;
-// $pl-hero-offset:100px;
-$pl-hero-offset: 50px;
-
-.herofix {
-	height: $pl-hero-height; 
-	top: $pl-navheight;
-}
-.hero{
-	height: $pl-hero-height;
-	background-color: black;
-	width: 100%;
-	position: relative;
-
-}
-.hero img{
-
-	// height: $pl-hero-height * 1.4;
-	height: $pl-hero-height * 1.1;
-	position: absolute;
-	top: -1 * $pl-hero-offset;
-	right: 20px;
-
-}
-
-.herospacer{
-	height: $pl-hero-height;
-}
-
-.heroblurbfix{
-	// top:125px;
-	top: 140px;
-}
-.heroblurb{
-	// width: 295px;
-	width: 200px !important;
-}
-.heroblurb h3{
-	text-align: center;
-	// font-size: 20px;
-	font-size: 15px !important;
-}
-.heroblurbfix p{
-	display: none;
-}
-//$row1: 264px;
-$row1: 200px;
-.mandeladay{
-	//height: $row1;
-	width:100%;
-}
-.mandeladaycopy{
-	text-align:center;
-	width: 50%;
-}
-.mandeladay h2{
-	font-size: 25px; 
-	margin-top: 70px;
-}
-.mandeladay h3{
-	font-size: 22px;
-}
-// $row2: 337px;
-$row2: 245px;
-
-.mission{
-	//height: $row2;
-	width: 50%;
-}
-.missioncopy h5{
-	font-size: 25px;
-	// margin-top: 25px;
-	margin-top: 10px;
-}
-.video{
-	//height: $row2;
-	width: 50%;
-}
-
-
-// $row3: 235px;
-$row3: 195px;
-.concert{
-	//height: $row3;
-	width: 100%;
-}
-.concertcopy{
-	width: 39%;
-	text-align: center;
-}
-.concertcopy h2{
-	font-size: 25px;
-	// margin-top: 100px;
-	margin-top: 80px;
-}
-.concertcopy h3{
-	font-size: 18px;
-}
-
-// $row4: 223px;
-$row4: 180px;
-.app{
-	//height: $row4;
-	// width: 50%;
-	float:right;
-}
-.appcopy{
-	text-align: left;
-
-}
-.appcopy img{
-	// width: 131px;
-	width: 80px;
-	margin-left: 30px !important;
-}
-.appcopy h5{
-	font-family: "Open Sans";
-	color: white;
-	margin-top: 15px;
-	margin-left: 15px !important;
-	// margin-bottom: 35px;
-	margin-bottom: 20px;
-	text-align: left;
-	// font-size: 15px;
-	font-size: 12px !important;
-}
-
-.appcopy img{
-	margin-right: 174px;
-	margin-left: -26px;
-	height: auto;
-}
-.guitar{
-	//height: $row4;
-	// width: 50%;
-	float: right;
-}
-
-.gc1{
-	// margin-top: 95px;
-	margin-top: 70px; 
-	// font-size: 21px;
-	font-size: 17px;
-}
-.gc2{
-	// font-size: 24px !important;
-	font-size: 20px !important;
-}
-
-.cellcontainer{
-	//height: $row1 + $row2 + $row3 + $row4;
-}
-
-
-/// Edit here
-$pl-hero-height: $phone-portrait;
-$pl-hero-offset:100px;
-.hero img{
-
-	height: $pl-hero-height * 1.3;
-	top: -1 * $pl-hero-offset;
-
-}
+// IPHONE 5  - LANDSCAPE - HEROBLURB
 .heroblurbfix{
 	top:115px;
 }
@@ -1030,64 +654,96 @@ $pl-hero-offset:100px;
 	width: 260px !important;
 }
 .heroblurb h3{
+	text-align: center;
 	font-size: 18px !important;
+}
+.heroblurbfix p{
+	display: none;
 }
 
 
 
-$row1: 246px;
+// IPHONE 5  - LANDSCAPE - PAGE
+
+	.no-pl{
+		display: none;
+	}
+
+
+// IPHONE 5  - LANDSCAPE - ROW 1
 .mandeladay{
-	//height: $row1;
+	width:100%;
+}
+.mandeladaycopy{
+	text-align:center;
+	width: 50%;
 }
 .mandeladay h2{
 	font-size: 25px; 
 	margin-top: 96px;
 }
+.mandeladay h3{
+	font-size: 22px;
+}
 
 
-$row2: 284px;
-
+// IPHONE 5  - LANDSCAPE - ROW 2
 .mission{
-	//height: $row2;
+	width: 50%;
 }
 .missioncopy h5{
+	font-size: 25px;
 	margin-top: 16px;
 }
 .video{
-	//height: $row2;
+	width: 50%;
 }
 
 
-$row3: 198px;
+
+// IPHONE 5  - LANDSCAPE - ROW 3
 .concert{
-	//height: $row3;
+	width: 100%;
+}
+.concertcopy{
+	width: 39%;
+	text-align: center;
 }
 .concertcopy h2{
+	font-size: 25px;
 	margin-top: 76px;
 }
+.concertcopy h3{
+	font-size: 18px;
+}
 
-$row4: 188px;
+
+// IPHONE 5  - LANDSCAPE - ROW 4
 .app{
-	//height: $row4;
+	float:right;
 }
 .appcopy{
 	text-align: left;
 }
 .appcopy img{
 	width: 110px;
-	margin-left: 27px;
+	margin-left: 30px !important;
+	margin-right: 174px;
+	margin-left: -26px;
+	height: auto;
 }
 .appcopy h5{
+	font-family: "Open Sans";
+	color: white;
+	margin-top: 15px;
+	margin-left: 15px !important;
 	margin-bottom: 20px;
 	text-align: left;
 	font-size: 14px !important;
 }
-
-
 .guitar{
-	//height: $row4;
+	float: right;
 }
-
 .gc1{
 	margin-top: 75px; 
 	font-size: 19px;
@@ -1096,108 +752,59 @@ $row4: 188px;
 	font-size: 22px !important;
 }
 
-.cellcontainer{
-	//height: $row1 + $row2 + $row3 + $row4;
-}
+
+
+
+	//  IPHONE 5 - LANDSCAPE - VIDEO LIGHTBOX
+	.lb-video{
+		width: 420px;
+		height: 315px;
+	}
+	.lb-content{
+		top: calc((100% - 315px)/2);
+	}
+	.vidholder{
+		width: 480px;
+	}
 
 }
 
 
- //android landscape
+ // ANDROID - LANDSCAPE
  @media only screen 
  and (min-width: $phone-even-wider-landscape ) 
  and (max-width: $tablet-portrait - 1px)  {
 
 
- 	.lb-video{
- 		width: 420px;
- 		height: 315px;
- 	}
-
- 	.lb-content{
- 		top: calc((100% - 315px)/2);
- 	}
-
- 	.vidholder{
- 		width: 480px;
- 		// height: 320px;
- 	}
- 		.close-button{
-		top: 35px;
-		position: absolute;
-		right: 70px;
-	}
 
 
- 	.no-pl{
- 		display: none;
- 	}
-
-
- 	#nav .menu-home a{
- 		color: white; 
- 	}
- 	#nav-dropdown .menu-home a{
- 		color: #358fe3; 
- 		pointer-events: none;
- 		cursor: default;
- 	}
- 	#nav .menu-home{
- 		display: inherit !important;
- 		padding-right: 15px !important;
- 		pointer-events: none;
- 		cursor: default;
- 	}
-
- 	$pl-hero-height: $phone-portrait;
-// $pl-hero-offset:100px;
-$pl-hero-offset: 50px;
-
-.herofix {
-	height: $pl-hero-height; 
-	top: $pl-navheight;
-}
-.hero{
-	height: $pl-hero-height;
-	background-color: black;
-	width: 100%;
-	position: relative;
-
-}
-.hero img{
-
-	// height: $pl-hero-height * 1.4;
-	height: $pl-hero-height * 1.1;
-	position: absolute;
-	top: -1 * $pl-hero-offset;
-	right: 20px;
-
-}
-
-.herospacer{
-	height: $pl-hero-height;
-}
-
+ // ANDROID  - LANDSCAPE - HEROBLURB
 .heroblurbfix{
-	// top:125px;
-	top: 140px;
+	top:125px;
 }
 .heroblurb{
-	// width: 295px;
-	width: 200px !important;
+	width: 295px !important;
 }
 .heroblurb h3{
 	text-align: center;
-	// font-size: 20px;
-	font-size: 15px !important;
+	font-size: 20px !important;
 }
 .heroblurbfix p{
 	display: none;
 }
-//$row1: 264px;
-$row1: 200px;
+
+
+
+
+// ANDROID  - LANDSCAPE - PAGE
+
+	.no-pl{
+		display: none;
+	}
+
+
+// ANDROID - LANDSCAPE - ROW 1
 .mandeladay{
-	//height: $row1;
 	width:100%;
 }
 .mandeladaycopy{
@@ -1206,33 +813,29 @@ $row1: 200px;
 }
 .mandeladay h2{
 	font-size: 25px; 
-	margin-top: 70px;
+	margin-top: 100px;
 }
 .mandeladay h3{
 	font-size: 22px;
 }
-// $row2: 337px;
-$row2: 245px;
 
+
+// ANDROID  - LANDSCAPE - ROW 2
 .mission{
-	//height: $row2;
 	width: 50%;
 }
 .missioncopy h5{
 	font-size: 25px;
-	// margin-top: 25px;
-	margin-top: 10px;
+	margin-top: 25px;
 }
 .video{
-	//height: $row2;
 	width: 50%;
 }
 
 
-// $row3: 235px;
-$row3: 195px;
+
+// ANDROID  - LANDSCAPE - ROW 3
 .concert{
-	//height: $row3;
 	width: 100%;
 }
 .concertcopy{
@@ -1241,137 +844,40 @@ $row3: 195px;
 }
 .concertcopy h2{
 	font-size: 25px;
-	// margin-top: 100px;
-	margin-top: 80px;
+	margin-top: 100px;
+
 }
 .concertcopy h3{
 	font-size: 18px;
 }
 
-// $row4: 223px;
-$row4: 180px;
+
+// ANDROID  - LANDSCAPE - ROW 4
 .app{
-	//height: $row4;
-	// width: 50%;
 	float:right;
 }
 .appcopy{
 	text-align: left;
-
 }
 .appcopy img{
-	// width: 131px;
-	width: 80px;
+	width: 131px;
 	margin-left: 30px !important;
+	margin-right: 174px;
+	margin-left: -26px;
+	height: auto;
 }
 .appcopy h5{
 	font-family: "Open Sans";
 	color: white;
 	margin-top: 15px;
 	margin-left: 15px !important;
-	// margin-bottom: 35px;
-	margin-bottom: 20px;
-	text-align: left;
-	// font-size: 15px;
-	font-size: 12px !important;
-}
-
-.appcopy img{
-	margin-right: 174px;
-	margin-left: -26px;
-	height: auto;
-}
-.guitar{
-	// height: $row4;
-	// width: 50%;
-	float: right;
-}
-
-.gc1{
-	// margin-top: 95px;
-	margin-top: 70px; 
-	// font-size: 21px;
-	font-size: 17px;
-}
-.gc2{
-	// font-size: 24px !important;
-	font-size: 20px !important;
-}
-
-.cellcontainer{
-	//height: $row1 + $row2 + $row3 + $row4;
-}
-
-// Edit here
-
-$pl-hero-height: $phone-portrait;
-$pl-hero-offset:100px;
-.hero img{
-
-	height: $pl-hero-height * 1.4;
-	top: -1 * $pl-hero-offset;
-
-}
-.heroblurbfix{
-	top:125px;
-}
-.heroblurb{
-	width: 295px !important;
-}
-.heroblurb h3{
-	font-size: 20px !important;
-}
-$row1: 264px;
-.mandeladay{
-	// height: $row1;
-}
-.mandeladay h2{
-	font-size: 25px; 
-	margin-top: 100px;
-}
-
-
-$row2: 337px;
-
-.mission{
-	// height: $row2;
-}
-.missioncopy h5{
-	margin-top: 25px;
-}
-.video{
-	// height: $row2;
-}
-
-
-$row3: 235px;
-.concert{
-	// height: $row3;
-}
-.concertcopy h2{
-	margin-top: 100px;
-}
-
-$row4: 223px;
-.app{
-	// height: $row4;
-}
-.appcopy{
-	// text-align: center;
-}
-.appcopy img{
-	width: 131px;
-}
-.appcopy h5{
 	margin-bottom: 35px;
 	text-align: center;
 	font-size: 15px !important;
 }
-
 .guitar{
-	// height: $row4;
+	float: right;
 }
-
 .gc1{
 	margin-top: 95px; 
 	font-size: 21px;
@@ -1380,46 +886,48 @@ $row4: 223px;
 	font-size: 24px !important;
 }
 
-.cellcontainer{
-	//height: $row1 + $row2 + $row3 + $row4;
-}
+
+
+
+
+
+
+
+// ANDROID - LANDSCAPE - VIDEO LIGHTBOX
+
+ 	.lb-video{
+ 		width: 420px;
+ 		height: 315px;
+ 	}
+ 	.lb-content{
+ 		top: calc((100% - 315px)/2);
+ 	}
+ 	.vidholder{
+ 		width: 480px;
+ 	}
 }
 
 
-/* iPads (portrait) ----------- */
+
+
+// TABLET - PORTRAIT
 @media only screen 
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
 
 
-	.lb-content{
-		top: calc((100% - 472px)/2);
-	}
+// TABLET - PORTRAIT - WRAPPERS
 	.wrapper-content{
 		width: 95%;
 	}
 
 
-	#nav .menu-home a{
-		color: white; 
-	}
-	#nav-dropdown .menu-home a{
-		color: #358fe3;
-		pointer-events: none;
-		cursor: default; 
-	}
-	#nav .menu-home{
-		display: inherit !important;
-		padding-right: 15px !important;
-		pointer-events: none;
-		cursor: default;
-
-	}
+	
+	// TABLET - PORTRAIT - HEROBLURB
 	.heroblurb{
 		width: 340px;
 	}
-
 	.heroblurb p{
 		margin-right: 0px;
 		line-height: 1.1em;
@@ -1429,20 +937,13 @@ and (max-width : $tablet-landscape - 1px) {
 
 
 
-	$row1: 320px;
-	.mandeladay{
-		// height: $row1;
-
-	}
+	// TABLET - PORTRAIT - ROW 1
 	.mandeladaycopy h2{
-		// margin-top: 20px;
 		margin-top: 80px;
 		font-size: 24px;
 	}
-
 	.mandeladaycopy h3{
 		font-size: 21px;
-
 	}
 	.mandeladaycopy p{
 		margin-right: 52%;
@@ -1454,10 +955,8 @@ and (max-width : $tablet-landscape - 1px) {
 	}
 
 
-	$row2: 192px;
-
+// TABLET - PORTRAIT - ROW 2
 	.mission{
-		// height: $row2;
 		width: 25%;
 	}
 	.missioncopy h5{
@@ -1465,7 +964,6 @@ and (max-width : $tablet-landscape - 1px) {
 		font-size: 15px;
 	}
 	.hospital{
-		// height: $row2;
 		width: 25%;
 	}
 	.hospitalcopy h5{
@@ -1473,16 +971,13 @@ and (max-width : $tablet-landscape - 1px) {
 		font-size: 15px;
 	}
 	.video{
-		// height: $row2;
 		width: 25%;
 	}
 	.play-button{
 		top: 38%;
 		left: 38%;
 	}
-
 	.textcode{
-		// height: $row2;
 		width: 25%;
 	}
 	.textcodecopy h5{
@@ -1490,15 +985,14 @@ and (max-width : $tablet-landscape - 1px) {
 		font-size: 13px;
 	}
 
-	$row3: 290px;
-	.concert{
-		// height: $row3;
-	}
+
+
+
+	// TABLET - PORTRAIT - ROW 3
 	.concertcopy h2{
 		margin-top: 30px;
 		font-size: 26px;
 	}
-
 	.concertcopy h3{
 		font-size: 18px;
 	}
@@ -1510,16 +1004,12 @@ and (max-width : $tablet-landscape - 1px) {
 		margin-right: 65%;
 	}
 
-	$row4: 244px;
-	.app{
-		// height: $row4;
-		// width: 54%;
-	}
+
+// TABLET - PORTRAIT - ROW 4
 	.appcopy{
 		height: 100%;
 		width: 100%;
 		text-align: left;
-	// text-align: center;
 }
 .appcopy img{
 	width: 131px;
@@ -1532,12 +1022,6 @@ and (max-width : $tablet-landscape - 1px) {
 	margin-left: 30px;
 	width: 50%;
 }
-
-.guitar{
-	// height: $row4;
-	// width: 46%;
-}
-
 .gc1{
 	margin-top: 105px; 
 	font-size: 23px;
@@ -1547,36 +1031,28 @@ and (max-width : $tablet-landscape - 1px) {
 }
 
 
-.cellcontainer{
-	//height: $row1 + $row2 + $row3 + $row4;
-}
+
+// TABLET - PORTRAIT - VIDEO LIGHTBOX
+	.lb-content{
+		top: calc((100% - 472px)/2);
+	}
 
 }
 
 
-/* iPads (landscape) ----------- */
+// TABLET - LANDSCAPE
 @media only screen 
 and (min-width : $tablet-landscape) 
 and (max-width : $desktop - 1px) {
 
 
 
-	.lb-content{
-		top: calc((100% - 472px)/2);
-	}
 
 
-	#nav .menu-home a{
-		color: #358fe3; 
-	}
-	$row1: 450px;
-	.mandeladay{
-		// height: $row1;
-	}
+// TABLET - LANDSCAPE - ROW 1
 	.mandeladaycopy{
 		padding-left: 30px;
 	}
-
 	.mandeladaycopy p{
 		margin-right: 60%;
 		text-align: justify;
@@ -1586,30 +1062,23 @@ and (max-width : $desktop - 1px) {
 	}
 
 
-	$row2: 256px;
-
+// TABLET - LANDSCAPE - ROW 2
 	.mission{
-		// height: $row2;
 		width: 25%;
 	}
 	.missioncopy h5{
 		margin-top: 19px;
 	}
 	.hospital{
-		// height: $row2;
 		width: 25%;
 	}
 	.hospitalcopy h5{
 		margin-top: 19px;
 	}
 	.video{
-		// height: $row2;
 		width: 25%;
 	}
-
-
 	.textcode{
-		// height: $row2;
 		width: 25%;
 	}
 	.textcodecopy h5{
@@ -1617,10 +1086,7 @@ and (max-width : $desktop - 1px) {
 	}
 
 
-	$row3: 400px;
-	.concert{
-		// height: $row3;
-	}
+	// TABLET - LANDSCAPE - ROW 3
 	.concertcopy{
 		padding-left: 20px;
 	}
@@ -1628,16 +1094,12 @@ and (max-width : $desktop - 1px) {
 		margin-top: 80px;
 	}
 
-	$row4: 350px;
-	.app{
-		// height: $row4;
-	
-	}
+
+	// TABLET - LANDSCAPE - ROW 4
 	.appcopy{
 		height: 100%;
 		width: 100%;
 		text-align: left;
-	// text-align: center;
 }
 .appcopy img{
 	width: 168px;
@@ -1650,20 +1112,16 @@ and (max-width : $desktop - 1px) {
 	width: 50%;
 	font-weight: 400;
 }
-
-.guitar{
-	// height: $row4;
-	
-}
-
 .gc1{
 	margin-top: 145px; 
 }
 
 
-.cellcontainer{
-	//height: $row1 + $row2 + $row3 + $row4;
-}
+// TABLET - LANDSCAPE - VIDEO LIGHTBOX
+
+	.lb-content{
+		top: calc((100% - 472px)/2);
+	}
 }
 
 

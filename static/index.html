@@ -8,20 +8,24 @@
 	<title>Home - Legacy of Hope</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui">
 
+	<!-- OPEN GRAPH TAGS -->
 	<meta property="og:title" content="Home - Legacy of Hope"/>
 	<meta property="og:image" content="http://legacyofhopeconcerts.org/img/thumb_home.png"/>
 	<meta property="og:site_name" content="Legacy of Hope Concerts"/>
 	<meta property="og:description" content="The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope."/>
 
+
+
+	<!-- SCRIPTS -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<link rel="stylesheet" href="css/home.css" media="screen" type="text/css" />
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script src="js/sharing.js"></script>	
+
+	<!-- CSS -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
-	<script src="js/modernizr.js"></script>
-	<script src="js/sharing.js"></script>	
-	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-
-
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="css/pages/home.css" media="screen" type="text/css" />
 
 </head>
 
@@ -31,7 +35,194 @@
 
 	<div class="wrapper"> 
 
-		<!-- video light box popup-->
+
+
+
+		<!-- NAVIGATION BAR -->
+
+
+		<div class="wrapper-inner">
+			<section class="wrapper-fix navfix">
+				<div class="ddclick"></div>
+				<nav class="navbar">
+					<div class="wrapper-content">
+						<img alt="" class="logo" src="img/LHlogo.png"/>
+						<div class="navholder">
+							<div class="nav links">
+								<span class="menu-home currentpage"><a href="index.html">Home</a></span>
+								<span class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></span>
+								<span class="menu-mission"><a href="mission.html">The Mission</a></span>
+								<span class="menu-concert"><a href="concert.html">The Concert</a></span>
+								<span class="menu-guitar"><a href="guitarinitiative.html">The Guitar Initiative</a></span>
+								<span class="menu-team"><a href="board.html">The Team</a></span>
+								<span class="open-contact"><a><i class="fa fa-envelope-o" style="font-size: 20px"></i></a></span>
+								<span class="menu-hamburger"><a><i class="fa fa-bars menu" style="font-size: 20px"></i></a></span>
+							</div>
+						</div>	
+					</div>
+				</nav>
+				<div class="dropdown-wrapper">
+					<div class="menu-dropdown ">
+						<div class="menu-dropdown-background"></div>
+						<div class="wrapper-content">
+							<ul class="links nav-dropdown">
+								<li class="menu-home currentpage"><a href="index.html">Home</a></li>
+								<li class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></li>
+								<li class="menu-mission"><a href="mission.html">The Mission</a></li>
+								<li class="menu-concert currentpage"><a href="concert.html">The Concert</a></li>
+								<li class="menu-guitar"><a href="guitarinitiative.html">The Guitar Initiative</a></li>
+								<li class="menu-team"><a href="board.html">The Team</a></li>
+							</ul>
+						</div> 
+					</div>
+				</div>
+				<script type='text/javascript' src="js/menu.js"></script>
+			</section>
+			<div class="navspacer"></div>
+			<!-- END NAVIGATION BAR -->
+
+
+
+
+
+
+			<section class="wrapper-fix heroblurbfix">
+				<div class="wrapper-inner">
+					<div class="wrapper-content">
+						<div class="heroblurb">
+							<h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+							<p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+							<p class="herop2">- Nelson Mandela</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- HERO -->
+
+
+
+
+
+			<div class="wrapper-fix herofix">
+				<div class="hero ">
+					<img src="img/home_hero.png"/>
+				</div>
+			</div>
+			<div class="herospacer"><img src="img/home_hero.png"/></div>
+			<div class="herobuffer"></div>
+			<script src="js/hero.js"></script>
+			<!-- END HERO -->
+
+
+
+
+
+			<!-- PAGE -->
+
+
+
+
+			<div class="page">
+			<div class="table">
+					<div class="row row1">
+						<div class="mandeladay cell">
+							<img src="img/home_mandela_day_back.jpg" class="mandeladaybackimg no-pp"/>
+							<img src="img/home_mandela_day.jpg" class="mandeladayimg"/>
+							<div class="copy mandeladaycopy">
+								<div class="wrapper-content">
+
+									<h2><b>Mandela Day 2014</b></h2>
+									<h3>July 18th, Los Angeles</h3>
+									<p class="no-pp no-pl">This historic event is in support of Nelson Mandela's wish for the 5th dedicated children's hospital on the whole continent of Africa.</p>
+									<a href="mandeladay.html" class="no-pp no-pl">coming soon</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row row2">
+						<div class="concert pp cell "><img src="img/home_pp_concert.jpg" class="concertimg"/>
+							<div class="copy concertcopy">
+								<div class="wrapper-content">
+									<h2>The Concert</h2>
+									<h3>2014</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row row2">
+						<div class="mission cell">
+							<img src="img/home_mission.jpg" class="missionimg"/>
+							<div class="copy missioncopy">
+								<h5>Our Mission</h5>
+							</div>
+						</div>
+						<div class="hospital cell no-pp no-pl">
+							<img src="img/home_hospital.jpg" class="hospitalimg"/>
+							<div class="copy hospitalcopy">
+								<h5>The Children's Hospital</h5>
+							</div>
+						</div>
+						<div class="video cell no-pp">
+							<img src="img/home_video.jpg" class="videoimg"/>
+							<i class="fa fa-play-circle-o play-button fa-4x"></i>
+
+						</div>
+						<div class="textcode cell no-pp no-pl">
+							<img src="img/home_textcode.jpg" class="textcodeimg"/>
+							<div class="copy textcodecopy">
+								<h5>Text "Mandela" to 50555<br>to support<br>Nelson Mandela's Legacy</h5>
+							</div>
+						</div>
+					</div>
+
+					<div class="row3 row">
+						<div class="concert cell no-pp">
+							<img src="img/home_concert.jpg" class="concertimg"/>
+							<div class="copy concertcopy">
+								<div class="wrapper-content">
+									<h2>The Concert</h2>
+									<h3>2014</h3>
+									<p class="no-pl">COMING SOON</p>
+									<!-- <a href="concert.html" class="no-pl">more ></a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row row4">
+						<div class="guitar cell">
+							<img src="img/home_guitar.jpg" class="guitarimg"/>
+							<div class="copy guitarcopy">
+								<h2 class="gc1">The Guitar</h2>
+								<h2 class="gc2">Initiative</h2>
+							</div>
+						</div>
+						<div class="app cell">
+							<img src="img/home_app.jpg" class="appimg"/>
+							<div class="copy appcopy">
+								<h5>Get the Legacy of Hope Mobile App</h5>
+								<a href="https://play.google.com/store/apps/details?id=com.bigbluecouch.MandelaLegacy" target="_blank"><img src="img/google_play_icon.png"/></a>
+								<img src="img/apple_appstore_icon.png" class="google-play-icon"/>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+
+
+		<!-- VIDEO LIGHTBOX-->
 		<div id="light" class="lb-content wrapper-fix">	
 			<div class="wrapper-inner">
 				<div class="vidholder">
@@ -40,166 +231,21 @@
 			</div>
 		</div>
 		<div id="fade" class="black_overlay"></div>
-		<!--end video lightbox overlay-->
-
-		<section class="wrapper-fix" id="navfix">
-			<div class="ddclick"></div>
-			<div class="wrapper-inner">
-				<nav id="navbar">
-					<div class="wrapper-content">
-						<img alt="" class="logo" src="img/LHlogo.png"/>
-						<div id="navholder">
-							<div id="nav" class="links">
-								<span class="menu-home"><a href="index.html">Home</a></span>
-								<span class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></span>
-								<span class="menu-mission"><a href="mission.html">The Mission</a></span>
-								<span class="menu-concert"><a href="concert.html">The Concert</a></span>
-								<span class="menu-guitar"><a href="guitarinitiative.html">The Guitar Initiative</a></span>
-								<span class="menu-team"><a href="board.html">The Team</a></span>
-								<span class="open-contact"><a><i class="fa fa-envelope-o" style="font-size: 20px"></i></a></span>
-								<span class="menu-hamburger"><a><i class="fa fa-bars menu" style="font-size: 20px"></i></a></span>
-
-							</div>
-
-						</div>	
-					</div>
-				</nav>
-				<div class="wrapper-content md">
-					<div class="menu-dropdown">
-						<div class="menu-dropdown-background"></div>
-						<ul id="nav-dropdown" class="links">
-
-							<li class="menu-home"><a href="index.html">Home</a></li>
-							<li class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></li>
-							<li class="menu-mission"><a href="mission.html">The Mission</a></li>
-							<li class="menu-concert"><a href="concert.html">The Concert</a></li>
-							<li class="menu-guitar"><a href="guitarinitiative.html">The Guitar Initiative</a></li>
-							<li class="menu-team"><a href="board.html">The Team</a></li>
-						</ul>
-					</div>
-				</div>
-				<script type='text/javascript' src="js/menu.js"></script>
-			</div>
-		</section>
-
-		<section class="wrapper-fix heroblurbfix">
-			<div class="wrapper-inner">
-				<div class="wrapper-content">
-					<div class="heroblurb">
-						<h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-						<p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
-						<p class="herop2">- Nelson Mandela</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="wrapper-fix herofix">
-			<div class="wrapper-inner">
-				<div class="hero ">
-					<img src="img/home_hero.png"/>
-				</div>
-			</div>
-		</section>
-
-		<section class="wrapper-inner">
-			<div class="herospacer"></div>
-			<div class="page">
-
-			<div class="table">
-				<div class="herobuffer"></div>
-				<div class="row row1">
-					<div class="mandeladay cell">
-						<img src="img/home_mandela_day_back.jpg" class="mandeladaybackimg no-pp"/>
-						<img src="img/home_mandela_day.jpg" class="mandeladayimg"/>
-						<div class="copy mandeladaycopy">
-							<div class="wrapper-content">
-
-								<h2><b>Mandela Day 2014</b></h2>
-								<h3>July 18th, Los Angeles</h3>
-								<p class="no-pp no-pl">This historic event is in support of Nelson Mandela's wish for the 5th dedicated children's hospital on the whole continent of Africa.</p>
-								<a href="mandeladay.html" class="no-pp no-pl">coming soon</a>
-							</div>
-						</div>
-
-					</div>
-					</div>
-
-					<div class="row row2">
-					<div class="concert pp cell "><img src="img/home_pp_concert.jpg" class="concertimg"/>
-						<div class="copy concertcopy">
-							<div class="wrapper-content">
-								<h2>The Concert</h2>
-								<h3>2014</h3>
-							</div>
-						</div>
-					</div>
-					</div>
-
-					<div class="row row2">
-					<div class="mission cell">
-						<img src="img/home_mission.jpg" class="missionimg"/>
-						<div class="copy missioncopy">
-							<h5>Our Mission</h5>
-						</div>
-					</div>
-					<div class="hospital cell no-pp no-pl">
-						<img src="img/home_hospital.jpg" class="hospitalimg"/>
-						<div class="copy hospitalcopy">
-							<h5>The Children's Hospital</h5>
-						</div>
-					</div>
-					<div class="video cell no-pp">
-						<img src="img/home_video.jpg" class="videoimg"/>
-						<i class="fa fa-play-circle-o play-button fa-4x"></i>
-
-					</div>
-					<div class="textcode cell no-pp no-pl">
-						<img src="img/home_textcode.jpg" class="textcodeimg"/>
-						<div class="copy textcodecopy">
-							<h5>Text "Mandela" to 50555<br>to support<br>Nelson Mandela's Legacy</h5>
-						</div>
-					</div>
-					</div>
-
-					<div class="row3 row">
-					<div class="concert cell no-pp">
-						<img src="img/home_concert.jpg" class="concertimg"/>
-						<div class="copy concertcopy">
-							<div class="wrapper-content">
-								<h2>The Concert</h2>
-								<h3>2014</h3>
-								<p class="no-pl">COMING SOON</p>
-								<!-- <a href="concert.html" class="no-pl">more ></a> -->
-							</div>
-						</div>
-					</div>
-					</div>
+		<!--END VIDEO LIGHTBOX-->
 
 
-					<div class="row row4">
-					<div class="guitar cell">
-						<img src="img/home_guitar.jpg" class="guitarimg"/>
-						<div class="copy guitarcopy">
-							<h2 class="gc1">The Guitar</h2>
-							<h2 class="gc2">Initiative</h2>
-						</div>
-					</div>
-					<div class="app cell">
-						<img src="img/home_app.jpg" class="appimg"/>
-						<div class="copy appcopy">
-							<h5>Get the Legacy of Hope Mobile App</h5>
-							<a href="https://play.google.com/store/apps/details?id=com.bigbluecouch.MandelaLegacy" target="_blank"><img src="img/google_play_icon.png"/></a>
-							<img src="img/apple_appstore_icon.png" class="google-play-icon"/>
-						</div>
-					</div>
-					
-				</div>
-
-</div>
-			</div>
 
 			<script src="js/home.js"type='text/javascript'></script>
+
+
+
+
+
+
+
+			<!-- FOOOTERS-->
+
+
 
 
 			<div class="prefooter">
@@ -213,7 +259,7 @@
 						</script>
 						<script type='text/javascript'>
 							shareWithFacebook('<img src="img/facebook-icon.png"/>');
-						</script>
+						</script> 
 						<p>Spread the Word</p>
 					</div>
 				</div>
@@ -230,6 +276,19 @@
 				</div>
 			</div>
 		</section>
+		<!-- END FOOTERS -->
+
+
+
+
+
+
+
+		<!-- CONTACT FORM -->
+
+
+
+
 
 		<div id="contact">
 			<div id="contactfade" class="black_overlay"></div>
@@ -243,13 +302,10 @@
 								<span>Your Name (required):</span>
 								<input id="name" type="text" name="name" placeholder="Your Full Name" minlength="2" required/>
 							</label>
-							
 							<label>
 								<span>Your Email (required):</span>
 								<input id="email" type="email" name="email" placeholder="Valid Email Address" required/>
 							</label>
-
-
 							<label for="email2">
 								<span>Confirm Email (required):</span>
 								<input name="email2" id="email2" type="email" placeholder="Confirm Your Email" required>
@@ -279,23 +335,24 @@
 									<span>Your Interest (required):</span>
 									<textarea id="interest" name="interest" placeholder="Your Particular Interest" ></textarea>
 								</label>
-							</div> 
-
+							</div>
 							<div id="contactresult" style="display:none;"></div>
-							
 							<label style="margin-top:20px;">
 								<input type="submit" class="pure-button pure-button-primary" value="Send" /> 
 								<input type="reset" class="pure-button" value="Reset" /> 
 							</label> 
-							
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script type='text/javascript' src="js/contact.js"></script>
+		<!-- END CONTACT FORM -->
 
-		
+
+
+
+
 	</div>
 </body>
 
