@@ -276,11 +276,12 @@ a:hover {
 }
 .hero img{
   width: 100%;
+  position: absolute;
 }
 
 .herospacer img{
   display: block;
-  margin-bottom: -$herobuffer;
+  margin-bottom: -$herobuffer - 1px;
   visibility: hidden;
   width: 100%;
 }

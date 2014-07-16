@@ -439,11 +439,12 @@ a:hover {
   width: 100%; }
 
 .hero img {
-  width: 100%; }
+  width: 100%;
+  position: absolute; }
 
 .herospacer img {
   display: block;
-  margin-bottom: -15px;
+  margin-bottom: -16px;
   visibility: hidden;
   width: 100%; }
 

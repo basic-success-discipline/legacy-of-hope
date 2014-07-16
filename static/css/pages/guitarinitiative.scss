@@ -1,42 +1,14 @@
-@import "style.scss";
+@import "../variables.scss";
 
-//  WRAPPERS
-// .guitar-wrapper{
-//   min-width: 1200px;
-// }
-#nav .menu-guitar a{
-  color: #358fe3;
-  pointer-events: none;
-  cursor: default; 
+
+
+//HERO
+.hero img, .herospacer img{
+  margin-top: -20px;
+  margin-bottom: -300px;
 }
 
-
-//  HERO
-
-$hero-dimensions: 1420/1821;
-$hero-img-height: $wrapper-inner-width * $hero-dimensions;
-$hero-height: 720px;
-$hero-offset: 10px;
-.herofix {
- height: $hero-height; 
- top: $navheight;
-}
-.hero{
-  width: 100%;
-  height: $hero-img-height;
-  position: relative;
-  overflow:hidden;
-  
-}
-.hero img{
-  width: 1200px;
-  position: absolute;
-}
-
-.herospacer{
-  height: $hero-height +$navheight;
-}
-
+// HEROBLURB
 
 .heroblurbfix {
   z-index: 1;
@@ -67,23 +39,19 @@ $hero-offset: 10px;
 
 
 
-//  PAGE  -   TOP SECTION
+//  PAGE  
 #guitar-phone-portrait{
   display: none;
 }
 #guitar-phone-landscape{
   display: none;
 }
-
-
 .guitarimgholder{
     position: absolute;
   top: 0px;
   right: 44px;
   z-index: 10;
 }
-
-
 .spacer{
   display:block;
   float:right;
@@ -92,7 +60,6 @@ $hero-offset: 10px;
 .spacer img{
   opacity: 0.0;
 }
-
 #guitar-desktop h1{
   text-align: center;
   margin-bottom: 50px;
@@ -134,7 +101,6 @@ $bottom-factor: .435;
 $bottom-divider: 43.5%;
 .bottomsection{
   margin-top: -1px;
-  // overflow: hidden;
   position: relative;
 }
 .right{
@@ -151,10 +117,8 @@ $bottom-divider: 43.5%;
   height: 100%;
 
 }
-
 .top{
      height: calc(100% - 438px);
-
      overflow: scroll;
 }
 .guitarcopy2{
@@ -168,7 +132,6 @@ $bottom-divider: 43.5%;
 }
 
 .bottom{
-  // height: $left-bottom-divider;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -219,69 +182,38 @@ $bottom-divider: 43.5%;
 
 
 
-/* Smartphones (portrait) ----------- */
-//  MOBILE (PORTRAIT)
-// * ------------------------------------------------
+// MOBILE - PORTRAIT
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
-
-  #nav-dropdown .menu-guitar a{
-    color: #358fe3; 
-    pointer-events: none;
-    cursor: default;
-  }
-// MOBILE -- PORTRAIT -- HERO
+// MOBILE - POTRAIT - HERO
+.hero img, .herospacer img{
+  margin-top: 0px;
+  margin-bottom: -$herobuffer;
+}
+ 
+// MOBILE -- PORTRAIT -- HEROBLURB
 .heroblurbfix{
   display: none;
 }
-$pp-hero-height: 265px;
 
-.herofix {
- height: $pp-hero-height; 
- top: $pp-navheight;
-}
-.hero{
-  height: $pp-hero-height;
-  overflow:hidden;
-  background-color: white;
-  width: 100%;
-  position: relative;
-  
-}
-.hero img{
-  width: 100%;
-  position: absolute;
-}
-
-
-.herospacer{
-  height: $pp-hero-height;
-}
 
 // MOBILE -- PORTRAIT -- PAGE
 #guitar-desktop{
   display: none;
 }
-$pp-padding-top: 30px;
+
 #guitar-phone-portrait{
   display: inherit;
-  padding-top: $pp-padding-top;
+  padding-top: 30px;
 }
-
-.herobuffer{
-  margin-top: -($pp-herobuffer + $pp-padding-top);
-}
-
 .ppimg{
   width: 100%;
   display: block;
 }
-
 .ppguitarimg1{
   width: 100%;
 }
-
 #generous{
   text-align: center;
   font-style: italic;
@@ -301,22 +233,9 @@ $pp-padding-top: 30px;
   text-align: center;
   margin:auto auto;
 }
-
 #ppcopy1{
   margin-top: 60px;
 }
-
-
-$hero-dimensions: 1420/1821;
-$hero-height: $phone-portrait * $hero-dimensions;
-.hero {
-  position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $pp-navheight fixed;
-  background-size: $phone-portrait $hero-height;
-  height: $hero-height + $pp-navheight; 
-
-}
-
 
 }
 
@@ -338,55 +257,20 @@ and (max-width: $phone-wide-landscape - 1px)  {
 }
 
 
-#nav-dropdown .menu-guitar a{
-  color: #358fe3; 
-  pointer-events: none;
-  cursor: default;
-}
-#nav .menu-guitar a{
-  color: white; 
 
-}
-#nav .menu-guitar{
-  display: inherit !important;
-  padding-right: 15px !important;
-  pointer-events: none;
-  cursor: default;
+
+// MOBILE - LANDSCAPE - HERO
+.hero img, .herospacer img{
+  margin-top: -70px;
+  margin-bottom: -100px;
 }
 
 
-//  MOBILE -- LANDSCAPE -- HERO
+//  MOBILE -- LANDSCAPE - HEROBLURB
 
 .heroblurbfix{
   display: none;
 }
-
-$pl-hero-height: $phone-portrait;
-
-.herofix {
- height: $pl-hero-height; 
- top: $pl-navheight;
-}
-.hero{
-  height: $pl-hero-height;
-  overflow:hidden;
-  background-color: white;
-  width: 100%;
-  position: relative;
-  
-}
-.hero img{
-  top: -40px;
-  width: 100%;
-  position: absolute;
-
-}
-
-
-.herospacer{
-  height: $pl-hero-height;
-}
-
 
 
 
@@ -397,32 +281,22 @@ $pl-hero-height: $phone-portrait;
 }
 #guitar-phone-landscape{
   display: inherit; 
-
 }
 #guitar-phone-landscape img{
   display: block;
 }
-
-$pl-padding-top: 25px;
 #guitar-phone-landscape{
   display: inherit;
-  padding-top: $pl-padding-top;
+  padding-top: 25px;
 }
-
-.herobuffer{
-  margin-top: -($pl-herobuffer + $pl-padding-top);
-}
-
 .page h1{
   margin-bottom: 15px;
 }
-
 .page p{
   margin-top: 0px;
   line-height: 1.45em;
   font-size: 11px;
 }
-
 .plguitarimg1{
   position: absolute;
   top: 0px;
@@ -430,7 +304,6 @@ $pl-padding-top: 25px;
   z-index: 10;
   width: 230px;
 }
-
 .spacer1{
   width: 260px;
   height: 280px;
@@ -453,7 +326,6 @@ $pl-padding-top: 25px;
   line-height: 1.6em !important;
   float: right;
 }
-
 .plguitarimg3{
   width: 100%;
 }
@@ -469,12 +341,9 @@ $pl-bottom-divider: 48%;
 .right img {
   display: block;
 }
-
 .left{
   width: 100% - $pl-bottom-divider;
 }
-
-
 .guitarcopy2{
   padding-top: 0px;
   text-align: justify;
@@ -486,7 +355,6 @@ $pl-bottom-divider: 48%;
   margin: 0px 10px 0px 10px;
   padding-top: 15px;
 }
-
 #guitarcopy3{
   width: 100%;
   text-align: right;
@@ -511,70 +379,34 @@ $pl-bottom-divider: 48%;
 .plguitarimg7{
   width:100%;
 }
-
-
-
 }
-//iphone 5 landscape
+
+
+
+// IPHONE 5 - LANDSCAPE
 @media only screen 
 and (min-width: $phone-wide-landscape) 
 and (max-width: $phone-even-wider-landscape - 1px){
 
 
 
-//  MOBILE -- LANDSCAPE -- WRAPPERS
+// IPHONE 5 - LANDSCAPE - WRAPPERS
 .wrapper-content{
   max-width: 95%;
 }
 
 
-#nav-dropdown .menu-guitar a{
-  color: #358fe3; 
-  pointer-events: none;
-  cursor: default;
-}
-#nav .menu-guitar a{
-  color: white; 
-}
-#nav .menu-guitar{
-  display: inherit !important;
-  padding-right: 15px !important;
-  pointer-events: none;
-  cursor: default;
+
+// IPHONE 5 - LANDSCAPE - HERO
+.hero img, .herospacer img{
+  margin-top: -70px;
+  margin-bottom: -100px;
 }
 
-
-//  MOBILE -- LANDSCAPE -- HERO
+// IPHONE 5 - LANDSCAPE -- HEROBLURB
 
 .heroblurbfix{
   display: none;
-}
-
-
-$pl-hero-height: $phone-portrait;
-
-.herofix {
- height: $pl-hero-height; 
- top: $pl-navheight;
-}
-.hero{
-  height: $pl-hero-height;
-  overflow:hidden;
-  background-color: white;
-  width: 100%;
-  position: relative;
-  
-}
-.hero img{
-  top: -55px;
-  width: 100%;
-  position: absolute;
-
-}
-
-
-.herospacer{
-  height: $pl-hero-height;
 }
 
 
@@ -593,21 +425,14 @@ $pl-hero-height: $phone-portrait;
   display: block;
 }
 
-$pl-padding-top: 30px;
 #guitar-phone-landscape{
   display: inherit;
-  padding-top: $pl-padding-top;
+  padding-top: 30px;
 }
-
-.herobuffer{
-  margin-top: -($pl-herobuffer + $pl-padding-top);
-}
-
 .page p{
   margin-top: 0px;
   line-height: 1.45em;
 }
-
 .plguitarimg1{
   position: absolute;
   top: 0px;
@@ -615,7 +440,6 @@ $pl-padding-top: 30px;
   z-index: 10;
   width: 200px;
 }
-
 .spacer1{
   width: 230px;
   height: 260px;
@@ -638,28 +462,23 @@ $pl-padding-top: 30px;
   line-height: 1.6em !important;
   float: right;
 }
-
 .plguitarimg3{
   width: 100%;
 }
 
 
 
-//  MOBILE -- LANDSCAPE -- BOTTOM SECTION
+//  IPHONE 5 -- LANDSCAPE -- BOTTOM SECTION
 $pl-bottom-divider: 48%;
-
 .right{
-
   width: $pl-bottom-divider;
   }
   .right img{
     display: block;
   }
-
 .left{
   width: 100% - $pl-bottom-divider;
 }
-
 .guitarcopy2{
   padding-top: 0px;
   text-align: justify;
@@ -697,21 +516,10 @@ $pl-bottom-divider: 48%;
   width:100%;
 }
 
-
-$hero-height: $phone-wide-landscape * $hero-dimensions;
-$hero-offset: -20px;
-.hero {
-  position: relative;
-  background: url(../img/guitar_hero.jpg) no-repeat center $hero-offset fixed;
-  background-size: $phone-wide-landscape $hero-height;
-  height: $phone-portrait; 
-
-}
-
 }
 
 
- //android landscape
+ //ANDROID - LANDSCAPE
  @media only screen 
  and (min-width: $phone-even-wider-landscape ) 
  and (max-width: $tablet-portrait - 1px)  {
@@ -719,91 +527,46 @@ $hero-offset: -20px;
 
 
 
-//  MOBILE -- LANDSCAPE -- WRAPPERS
+//  ANDROID -- LANDSCAPE -- WRAPPERS
 .wrapper-content{
   max-width: 95%;
 }
 
 
-#nav-dropdown .menu-guitar a{
-  color: #358fe3; 
-  pointer-events: none;
-  cursor: default;
-}
-#nav .menu-guitar a{
-  color: white; 
-}
-#nav .menu-guitar{
-  display: inherit !important;
-  padding-right: 15px !important;
-  pointer-events: none;
-  cursor: default;
+
+
+// ANDROID - LANDSCAPE - HERO
+.hero img, .herospacer img{
+  margin-top: -70px;
+  margin-bottom: -100px;
 }
 
-//  MOBILE -- LANDSCAPE -- HERO
+//  ANDROID -- LANDSCAPE -- HEROBLURB
 
 .heroblurbfix{
   display: none;
 }
 
-$pl-hero-height: $phone-portrait;
-
-.herofix {
- height: $pl-hero-height; 
- top: $pl-navheight;
-}
-.hero{
-  height: $pl-hero-height;
-  overflow:hidden;
-  background-color: white;
-  width: 100%;
-  position: relative;
-  
-}
-.hero img{
-  top: -70px;
-  width: 100%;
-  position: absolute;
-
-}
-
-
-.herospacer{
-  height: $pl-hero-height;
-}
 
 
 
-
-
-
-
-//  MOBILE -- LANDSCAPE -- PAGE
+//  ANDROID -- LANDSCAPE -- PAGE
 #guitar-desktop{
   display: none;
 }
 #guitar-phone-landscape{
   display: inherit; 
-
 }
 #guitar-phone-landscape img{
   display: block;
 }
-
-$pl-padding-top: 30px;
 #guitar-phone-landscape{
   display: inherit;
-  padding-top: $pl-padding-top;
+  padding-top: 30px;
 }
-
-.herobuffer{
-  margin-top: -($pl-herobuffer + $pl-padding-top);
-}
-
 .page p{
   margin-top: 0px;
 }
-
 .plguitarimg1{
   position: absolute;
   top: 0px;
@@ -811,7 +574,6 @@ $pl-padding-top: 30px;
   z-index: 10;
   width: 200px;
 }
-
 .spacer1{
   width: 230px;
   height: 260px;
@@ -834,14 +596,13 @@ $pl-padding-top: 30px;
   line-height: 1.6em !important;
   float: right;
 }
-
 .plguitarimg3{
   width: 100%;
 }
 
 
 
-//  MOBILE -- LANDSCAPE -- BOTTOM SECTION
+//  ANDROID -- LANDSCAPE -- BOTTOM SECTION
 $pl-bottom-divider: 48%;
 .right{
    width: $pl-bottom-divider;
@@ -849,14 +610,9 @@ $pl-bottom-divider: 48%;
 .right img {
   display: block;
 }
-
 .left{
   width: 100% - $pl-bottom-divider;
 }
-
-
-
-
 .guitarcopy2{
   padding-top: 0px;
   text-align: justify;
@@ -868,7 +624,6 @@ $pl-bottom-divider: 48%;
   margin: 0px 10px 0px 10px;
   padding-top: 15px;
 }
-
 #guitarcopy3{
   width: 100%;
   text-align: right;
@@ -893,48 +648,35 @@ $pl-bottom-divider: 48%;
 .plguitarimg7{
   width:100%;
 }
-
-
 }
 
 
 
-/* iPads (portrait) ----------- */
+// TABLET - PORTRAIT
 @media only screen 
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px){
 
 
-// IPAD -- PORTRAIT -- WRAPPERS
+// TABLET -- PORTRAIT -- WRAPPERS
 
 .wrapper-content{
   max-width: 95%;
 }
 
-#nav-dropdown .menu-guitar a{
-  color: #358fe3; 
-  pointer-events: none;
-  cursor: default;
-}
-#nav .menu-guitar a{
-  color: white; 
-}
-#nav .menu-guitar{
-  display: inherit !important;
-  padding-right: 15px !important;
-  pointer-events: none;
-  cursor: default;
-}
 
 
+//TABLET - PORTRAIT - HERO
+.hero img, .herospacer img{
+  margin-top: 0px;
+  margin-bottom: -$herobuffer;
+}
+
+// TABLET - PORTRAIT - HEROBLURB
 .heroblurbfix {
   position: absolute;
   top: 100px;
 }
-.hero img{
-  left: -100px;
-}
-
 .tpgibson{
   display: inherit;
   width: 100px;
@@ -947,56 +689,39 @@ and (max-width : $tablet-landscape - 1px){
 
 
 
-// IPAD -- PORTRAIT -- PAGE -- TOP SECTION
+// TABLET -- PORTRAIT -- PAGE 
 
 .page h1{
   font-size: 36px;
   margin-bottom: 10px !important;
 }
-
-.page p{
-}
-
-$tp-padding-top: 30px;
 .page{
   display: inherit;
-  padding-top: $tp-padding-top;
+  padding-top: 30px;
 }
-
-.herobuffer{
-  margin-top: -($herobuffer + $tp-padding-top);
-  display: block;
-}
-
 .guitarimgholder{
   width: 260px;
   overflow: hidden;
   height: 600px;
   right: 0px;
 }
-
-
 .guitarcopy1 p {
   text-align: left;
   margin-top: 60px;
   margin-bottom: 110px;
 }
-
 #spacer1{
   height: 170px;
   width: 180px
 }
-
 #spacer2{
   height: 75px;
   width: 210px;
 }
-
 #spacer3{
   height: 72px;
   width: 240px;
 }
-
 #spacer4{
   height: 180px;
   width: 280px;
@@ -1009,13 +734,12 @@ $tp-padding-top: 30px;
 
 
 
-// IPAD -- PORTRAIT -- BOTTOM SECTION
+// TABLET-- PORTRAIT -- BOTTOM SECTION
 
 $tp-bottom-divider: 48.5%;
 .right{
   width: $tp-bottom-divider;
 }
-
 .left{
   width: 100% - $tp-bottom-divider;
 }
@@ -1031,12 +755,10 @@ $tp-bottom-divider: 48.5%;
   line-height: 1.1;
   margin: 0px 20px 20px 20px;
 }
-
 #guitarcopy3 p{
   font-size: 18px;
   margin-right: 20px;
 }
-
 .guitarimg5{
   display: none;
 }
@@ -1058,28 +780,25 @@ $tp-bottom-divider: 48.5%;
 }
 
 
-/* iPads (landscape) ----------- */
+// TABLET - LANDSCAPE
 @media only screen 
 and (min-width: $tablet-landscape) 
 and (max-width: $desktop - 1px) {
 
-// IPAD -- PORTRAIT -- WRAPPERS
-
-
+// TABLET - LANDSCAPE -- WRAPPERS
 .wrapper-content{
   width: 93%;
 }
 
-#nav .menu-guitar a{
-  color: #358fe3; 
+
+
+//TABLET - LANDSCAPE - HERO
+.hero img, .herospacer img{
+  margin-top: -20px;
+  margin-bottom: -150px;
 }
 
-
-
-
-.hero img{
-  top:-50px;
-}
+// TABLET - LANDSCAPE - HEROBLURB
 .heroblurbfix {
   position: absolute;
   top: 100px
@@ -1094,41 +813,30 @@ and (max-width: $desktop - 1px) {
 
 
 
-  // IPAD -- LANDSCAPE-- PAGE
+  // TABLET -- LANDSCAPE-- PAGE
 
-  $tl-page-border-top: 40px;
   .page{
-    padding-top: $tl-page-border-top;
+    padding-top: 40px;
   }
-  $herobuffer: 15px;
-  .herobuffer{
-    margin-top: -($herobuffer + $tl-page-border-top);
-  }
-
   .page h1{
     margin-bottom: 40px !important;
   }
-
   .guitarimg1{
     right: 20px;
     width: 495px;
   }
-
   #spacer1{
     height: 150px;
     width: 440px;
   }
-
   #spacer2{
     height: 100px;
     width: 470px;
   }
-
   #spacer3{
     height: 70px;
     width: 510px;
   }
-
   #spacer4{
     height: 170px;
     width: 530px;
@@ -1137,7 +845,6 @@ and (max-width: $desktop - 1px) {
     height: 10px;
     width: 490px;
   }
-
   .guitarcopy1{
     margin-bottom: 80px;
   }

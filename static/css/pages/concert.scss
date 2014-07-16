@@ -3,12 +3,7 @@
 
 
 // HERO
-
-.hero img{
-	top: -200px;
-	position: absolute;
-}
-.herospacer img{
+.hero img, .herospacer img{
 	margin-top: -200px;
 }
 
@@ -67,10 +62,7 @@ and (max-width: $phone-landscape - 1px)  {
 
 //  MOBILE - PORTRAIT - HERO
 
-.hero img{
-	top: 0px;
-}
-.herospacer img{
+.hero img, .herospacer img{
 	margin-top: 0px;
 }
 
@@ -106,11 +98,7 @@ and (max-width: $tablet-portrait - 1px)  {
 	
 
 //  MOBILE - LANDSCAPE - HERO
-.hero img{
-	top: -100px;
-	position: absolute;
-}
-.herospacer img{
+.hero img, .herospacer img{
 	margin-top: -100px;
 }
 

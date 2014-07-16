@@ -1,8 +1,4 @@
-.hero img {
-  top: -200px;
-  position: absolute; }
-
-.herospacer img {
+.hero img, .herospacer img {
   margin-top: -200px; }
 
 .page {
@@ -43,10 +39,7 @@
   max-width: 780px; }
 
 @media only screen and (max-width: 479px) {
-  .hero img {
-    top: 0px; }
-
-  .herospacer img {
+  .hero img, .herospacer img {
     margin-top: 0px; }
 
   .page {
@@ -66,11 +59,7 @@
   .concertcopy1 p {
     text-align: center; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .hero img {
-    top: -100px;
-    position: absolute; }
-
-  .herospacer img {
+  .hero img, .herospacer img {
     margin-top: -100px; }
 
   .page {
