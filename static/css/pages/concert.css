@@ -1,0 +1,99 @@
+.hero img {
+  top: -200px;
+  position: absolute; }
+
+.herospacer img {
+  margin-top: -200px; }
+
+.page {
+  padding-bottom: 400px; }
+
+.concertimg1 {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 50%; }
+
+.drop-margin {
+  margin-bottom: 0px; }
+
+.spacer {
+  display: block;
+  float: right;
+  clear: right; }
+
+.spacer img {
+  opacity: 0.0;
+  width: 100%; }
+
+.spacer1 {
+  height: 80px;
+  width: 50%; }
+
+.spacer2 {
+  height: 160px;
+  width: 50%; }
+
+.spacer3 {
+  height: 260px;
+  width: 25%;
+  display: none; }
+
+.concertcopy2 {
+  max-width: 780px; }
+
+@media only screen and (max-width: 479px) {
+  .hero img {
+    top: 0px; }
+
+  .herospacer img {
+    margin-top: 0px; }
+
+  .page {
+    padding-top: 37px;
+    text-align: center;
+    padding-bottom: 200px; }
+
+  .page p {
+    text-align: justify; }
+
+  .concertimg1 {
+    display: none; }
+
+  .spacer {
+    display: none; }
+
+  .concertcopy1 p {
+    text-align: center; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .hero img {
+    top: -100px;
+    position: absolute; }
+
+  .herospacer img {
+    margin-top: -100px; }
+
+  .page {
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 300px; }
+
+  .page p {
+    text-align: justify; }
+
+  .concertimg1 {
+    display: none; }
+
+  .spacer {
+    display: none; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .concertimg1 {
+    width: 69%;
+    height: auto; }
+
+  .concertcopy2 {
+    max-width: 85%;
+    text-align: justify; }
+
+  .spacer3 {
+    height: 200px; } }

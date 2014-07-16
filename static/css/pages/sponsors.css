@@ -314,23 +314,20 @@ a:hover {
 
 .wrapper-fix {
   position: fixed;
-  width: 100%;
-  max-width: 1200px; }
+  width: 100%; }
 
-.navfix, .navspacer {
-  height: 50px; }
-
-.navfix {
+#navfix {
+  height: 50px;
   z-index: 1000; }
 
-.navbar {
+#navbar {
   background-color: #1c1f26;
   width: 100%;
   position: relative;
   height: 60px;
   margin-top: -10px; }
 
-.navholder {
+#navholder {
   margin-top: 10px;
   float: right; }
 
@@ -348,7 +345,7 @@ a:hover {
 
 .links span {
   display: inline;
-  margin: 0 0 0 15px;
+  margin: 0 15px 0 0;
   float: left; }
 
 .links a {
@@ -358,17 +355,15 @@ a:hover {
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 8px;
+  vertical-align: top;
   line-height: 1em; }
 
 .links a:hover {
   color: #358fe3;
   cursor: pointer; }
 
-.dropdown-wrapper {
-  position: relative; }
-
 .menu-dropdown {
-  width: 100%;
+  width: 229px;
   height: 180px;
   position: absolute;
   top: 0px;
@@ -381,20 +376,14 @@ a:hover {
 
 .menu-dropdown-background {
   background-color: #414141;
-  width: 229px;
+  width: 100%;
   height: 100%;
-  opacity: .6;
-  float: right;
-  margin-right: 10px; }
+  opacity: .6; }
 
-.nav .menu-hamburger {
+#nav .menu-hamburger {
   display: none; }
 
-.menu-content {
-  position: absolute;
-  top: 0px; }
-
-.nav-dropdown {
+#nav-dropdown {
   text-align: right;
   display: table;
   width: 100%;
@@ -403,10 +392,11 @@ a:hover {
   position: absolute;
   top: 0px; }
 
-.nav-dropdown li {
-  display: block; }
+#nav-dropdown li {
+  display: block;
+  margin-right: 35px; }
 
-.nav-dropdown li a {
+#nav-dropdown li a {
   line-height: 1.7em;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
@@ -416,7 +406,7 @@ a:hover {
   margin-top: 8px;
   z-index: 1000; }
 
-.nav-dropdown li a:hover {
+#nav-dropdown li a:hover {
   color: #358fe3; }
 
 .ddclick {
@@ -424,40 +414,25 @@ a:hover {
   width: 100%;
   height: 1000px; }
 
-.nav .menu-mandeladay {
+#nav .menu-mandeladay {
   display: none; }
 
-.nav-dropdown .menu-mandeladay {
+#nav-dropdown .menu-mandeladay {
   display: none; }
-
-.nav-dropdown .currentpage a, .nav .currentpage a {
-  color: #358fe3;
-  pointer-events: none;
-  cursor: default; }
-
-.hero {
-  width: 100%; }
-
-.hero img {
-  width: 100%; }
-
-.herospacer img {
-  display: block;
-  margin-bottom: -15px;
-  visibility: hidden;
-  width: 100%; }
-
-.herobuffer {
-  width: 100%;
-  height: 15px;
-  background-color: white;
-  opacity: 0.3; }
 
 .page {
   padding-top: 64px;
   position: relative;
   background: white;
   z-index: 5; }
+
+.herobuffer {
+  width: 100%;
+  height: 15px;
+  background-color: white;
+  opacity: 0.3;
+  position: absolute;
+  margin-top: -79px; }
 
 .prefooter {
   width: 100%;
@@ -516,6 +491,7 @@ a:hover {
 .f2p-phone {
   display: none; }
 
+/*Contact------------------------------------------*/
 .black_overlay {
   position: absolute;
   top: 0%;
@@ -738,6 +714,7 @@ a:hover {
   top: 0;
   bottom: 0; }
 
+/* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
   h1 {
     text-align: center;
@@ -757,20 +734,49 @@ a:hover {
   .wrapper-content {
     width: 88%; }
 
-  .nav span {
+  #navfix {
+    height: 50px; }
+
+  #navbar {
+    height: 60px; }
+
+  .logo {
+    width: 170px;
+    padding-top: 4px; }
+
+  .links {
+    height: 50px; }
+
+  #nav span {
     display: none;
     vertical-align: middle; }
 
-  .nav .open-contact {
+  #navbar .logo {
+    margin-top: 12px; }
+
+  #nav .menu-hamburger {
+    display: inherit; }
+
+  #nav .open-contact {
     display: inherit;
     padding-right: 8px; }
 
-  .nav .menu-hamburger {
-    display: inherit; }
+  .menu {
+    height: 18.51852px;
+    margin-top: 0px; }
 
-  .menu-dropdown-background {
-    width: 100%;
-    margin-right: 0; }
+  .menu-dropdown {
+    width: 100%; }
+
+  .md {
+    width: 100%; }
+
+  #nav-dropdown li {
+    margin-right: 6%; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
 
   .prefooter {
     height: 140px;
@@ -846,22 +852,44 @@ a:hover {
     line-height: 1.45em;
     font-size: 14px; }
 
-  .nav span {
+  #navfix {
+    height: 40px; }
+
+  #navbar {
+    height: 50px; }
+
+  .logo {
+    width: 160px;
+    margin-top: 15px;
+    left: -15px; }
+
+  .links {
+    height: 40px; }
+
+  #nav span {
     display: none; }
 
-  .nav .menu-hamburger {
+  #nav .menu-hamburger {
     display: inherit; }
 
-  .nav .open-contact {
+  #nav .open-contact {
     display: inherit;
     padding-right: 15px; }
 
-  .nav .currentpage {
-    display: inherit;
-    padding-right: 15px; }
+  .menu {
+    height: 14.81481px;
+    margin-top: 0px; }
 
-  .nav .currentpage a {
-    color: white; }
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #navbar .logo {
+    margin-top: 12px; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
 
   .prefooter {
     height: 65px;
@@ -917,22 +945,44 @@ a:hover {
     line-height: 1.2em;
     font-size: 14px; }
 
-  .nav span {
+  #navfix {
+    height: 40px; }
+
+  #navbar {
+    height: 50px; }
+
+  .logo {
+    width: 160px;
+    margin: 15px;
+    left: -15px; }
+
+  .links {
+    height: 40px; }
+
+  #nav span {
     display: none; }
 
-  .nav .menu-hamburger {
+  #nav .menu-hamburger {
     display: inherit; }
 
-  .nav .open-contact {
+  #nav .open-contact {
     display: inherit;
     padding-right: 15px; }
 
-  .nav .currentpage a {
-    color: white; }
+  .menu {
+    height: 14.81481px;
+    margin-top: 0px; }
 
-  .nav .currentpage {
-    display: inherit;
-    padding-right: 15px; }
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #navbar .logo {
+    margin-top: 12px; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
 
   .prefooter {
     height: 65px;
@@ -988,22 +1038,44 @@ a:hover {
     line-height: 1.45em;
     font-size: 14px; }
 
-  .nav span {
+  #navfix {
+    height: 40px; }
+
+  #navbar {
+    height: 50px; }
+
+  .logo {
+    width: 160px;
+    margin: 15px;
+    left: -15px; }
+
+  .links {
+    height: 40px; }
+
+  #nav span {
     display: none; }
 
-  .nav .menu-hamburger {
+  #nav .menu-hamburger {
     display: inherit; }
 
-  .nav .open-contact {
+  #nav .open-contact {
     display: inherit;
     padding-right: 15px; }
 
-  .nav .currentpage a {
-    color: white; }
+  .menu {
+    height: 14.81481px;
+    margin-top: 0px; }
 
-  .nav .currentpage {
-    display: inherit;
-    padding-right: 15px; }
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #navbar .logo {
+    margin-top: 12px; }
+
+  .herobuffer {
+    height: 20px;
+    margin-top: -84px; }
 
   .prefooter {
     height: 65px;
@@ -1043,6 +1115,7 @@ a:hover {
 
   .f2p-desktop {
     display: none; } }
+/* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   h1 {
     font-size: 24px; }
@@ -1053,22 +1126,22 @@ a:hover {
   p {
     font-size: 17px; }
 
-  .nav span {
+  #nav span {
     display: none; }
 
-  .nav .menu-hamburger {
+  #nav span {
+    line-height: 1.0em;
+    vertical-align: middle; }
+
+  #nav .menu-hamburger {
     display: inherit; }
 
-  .nav .open-contact {
+  #nav .open-contact {
     display: inherit;
     padding-right: 15px; }
 
-  .nav .currentpage a {
-    color: white; }
-
-  .nav .currentpage {
-    display: inherit;
-    padding-right: 15px; }
+  .logo {
+    margin-top: 15px; }
 
   .pf1 {
     margin-top: 10px; }
@@ -1089,6 +1162,7 @@ a:hover {
 
   .f2 {
     margin-top: 0px !important; } }
+/* iPads (landscape) ----------- */
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   h1 {
     font-size: 35px; }
@@ -1098,3 +1172,158 @@ a:hover {
 
   p {
     font-size: 17px; } }
+.logo {
+  margin-top: 16px; }
+
+.wrapper {
+  overflow-x: hidden; }
+
+.herofix {
+  height: 565px;
+  top: 20px;
+  overflow: hidden; }
+
+.hero {
+  background-color: black;
+  width: 100%;
+  height: 565px; }
+
+.hero img {
+  float: right;
+  height: 565px; }
+
+.herospacer {
+  height: 565px; }
+
+.heroblurbfix {
+  z-index: 1;
+  top: 250px;
+  height: 315px; }
+
+.heroblurb {
+  color: white;
+  position: absolute;
+  left: 50px;
+  width: 100px; }
+
+.page {
+  padding-bottom: 64px; }
+
+.page img {
+  margin-bottom: 20px; }
+
+.page a {
+  white-space: nowrap; }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 479px) {
+  .herofix {
+    height: 265px;
+    top: 40px; }
+
+  .hero {
+    height: 265px;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 344.5px;
+    clip: rect(0px, 100%, 100%, 0px);
+    position: absolute;
+    top: -40px;
+    right: 0px; }
+
+  .herospacer {
+    height: 265px; }
+
+  .heroblurb {
+    display: none; }
+
+  .page {
+    text-align: center; } }
+	/* MOBILE (LANDSCAPE)
+* ------------------------------------------------ */
+@media only screen and (min-width: 480px) and (max-width: 567px) {
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .page {
+    text-align: center; } }
+@media only screen and (min-width: 568px) and (max-width: 639px) {
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .page {
+    text-align: center; } }
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  .herofix {
+    height: 320px;
+    top: 40px; }
+
+  .hero {
+    height: 320px;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+
+  .hero img {
+    height: 352px;
+    position: absolute;
+    top: -50px;
+    right: 20px; }
+
+  .herospacer {
+    height: 320px; }
+
+  .heroblurbfix {
+    top: 140px; }
+
+  .heroblurb {
+    width: 200px !important; }
+
+  .heroblurb h3 {
+    text-align: center;
+    font-size: 15px !important; }
+
+  .page {
+    text-align: center; } }

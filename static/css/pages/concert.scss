@@ -1,0 +1,157 @@
+@import "../variables.scss";
+
+
+
+// HERO
+
+.hero img{
+	top: -200px;
+	position: absolute;
+}
+.herospacer img{
+	margin-top: -200px;
+}
+
+
+
+
+// PAGE
+.page{
+	padding-bottom: 400px;
+}
+
+.concertimg1{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 50%;
+}
+.drop-margin{
+	margin-bottom: 0px;
+}
+.spacer{
+	display:block;
+	float:right;
+	clear:right;
+}
+.spacer img{
+	opacity: 0.0;
+	width: 100%;
+}
+
+.spacer1{
+	height:80px;
+	width:50%;
+}
+.spacer2{
+	height:160px;
+	width:50%;
+}
+.spacer3{
+	height:260px;
+	width:25%;
+	display:none;
+}
+.concertcopy2{
+	max-width:780px;
+}
+
+
+
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+
+//  MOBILE - PORTRAIT - HERO
+
+.hero img{
+	top: 0px;
+}
+.herospacer img{
+	margin-top: 0px;
+}
+
+
+
+//  MOBILE - PORTRAIT - PAGE
+
+.page{
+	padding-top: 37px;
+	text-align: center;
+	padding-bottom: 200px;
+}
+.page p{
+	text-align: justify;
+}
+.concertimg1{
+	display: none;
+}
+.spacer{
+	display:none;
+}
+.concertcopy1 p{
+	text-align: center;
+}
+}
+
+
+//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+	
+
+//  MOBILE - LANDSCAPE - HERO
+.hero img{
+	top: -100px;
+	position: absolute;
+}
+.herospacer img{
+	margin-top: -100px;
+}
+
+
+//  MOBILE - LANDSCAPE - PAGE	
+.page{
+	padding-top: 30px;
+	text-align: center;
+	padding-bottom: 300px;
+}
+.page p{
+	text-align: justify;
+}
+.concertimg1{
+	display: none;
+}
+.spacer{
+	display: none;
+}
+
+}
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+	
+	// TABLET - PORTRAIT - PAGE
+	.concertimg1{
+		width: 69%;
+		height: auto;
+	}
+	.concertcopy2{
+		max-width: 85%;
+		text-align: justify
+	}
+	.spacer3{
+		height: 200px;
+	}
+
+
+}
+

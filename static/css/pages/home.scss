@@ -1,0 +1,1671 @@
+@import "style.scss";
+
+
+
+
+
+
+
+
+.lb-content {
+	display: none;
+	top: calc((100% - 472px)/2);
+	height: 50%;
+	background-color: clear;
+	z-index:1002;
+	overflow: visible;
+}
+
+.vidholder{
+	width: 700px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.close-button{
+	float: right;
+	color: white;
+	transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear; 
+	cursor: pointer;
+}
+
+.close-button:hover{
+	color: #358fe3; 
+}
+
+
+.lb-video{
+	float:right;
+	width: 630px;
+	height: 472px;
+	margin-right: 30px;
+	// margin-top: 15px;
+}
+
+
+
+#nav .menu-home a{
+	color: #358fe3; 
+	pointer-events: none;
+	cursor: default;
+}
+// TYPOGRAPHY
+h5{
+	color: white;
+	margin-top: 28px;
+}
+
+
+
+//  HERO
+
+.wrapper{
+	overflow-x: hidden;
+}
+$hero-height: 565px;
+$hero-offset: 20px;
+.herofix {
+	height: $hero-height; 
+	top: $hero-offset;
+	overflow: hidden;
+}
+
+.hero{
+	background-color: black;
+	width: 100%;
+	height: $hero-height;
+}
+.hero img{
+	float:right;
+	height: $hero-height;
+}
+
+.heroblurbfix {
+	z-index: 1;
+	top: 220px; 
+}
+
+.heroblurb {
+	color: white;
+	right: 0px;
+	float: left;
+	width: 560px; 
+}
+.heroblurb p {
+	color: white;
+}
+.herop1{
+	font-size: 16px;
+	font-style: italic;
+	margin-right: 560px - 370px;
+	text-align: justify;
+}
+.herop2{
+	font-family: "Oswald";
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+// PAGE
+.herospacer{
+	height: $hero-height;
+}
+
+$page-border-top: 0px;
+.page {
+	padding-top: $page-border-top;
+	background-color: $navcolor;
+
+}
+.herobuffer{
+	margin-top: -($herobuffer + $page-border-top);
+}
+
+
+.page a{
+	text-align: justify;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-weight: 300;
+	float: right;
+	text-decoration: none;
+	color: black;
+
+}
+.cell{
+	position: relative;
+	float: left;
+	cursor: pointer;
+
+}
+.cell img{
+	height: 100%;
+	width: 100%;
+}
+.cell:hover{
+	box-shadow: 0px 0px 15px 1px white;
+	z-index: 1000;
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out ;
+	-ms-transition: all .5s ease-out ;
+	-o-transition: all .5s ease-out ;
+	transition: all .5s ease-out ;
+}
+
+.textcode:hover{
+	box-shadow: 0px 0px 0px 0px;
+	z-index: 1000;
+}
+.mandeladay:hover{
+	box-shadow: 0px 0px 0px 0px;
+	z-index: 1000;
+}
+.copy{
+	position: absolute;
+}
+
+.pp{
+	display: none;
+}
+
+
+// PAGE -- ROW 1
+$row1: 477px;
+.mandeladay{
+	width: 100%;
+	height:auto;
+	cursor: default;
+
+}
+.mandeladay img{
+	float:left;
+	width: 50%;
+	display: block;
+}
+.mandeladaycopy{
+	height: 100%;
+	width: 100%;
+}
+.mandeladaycopy h2{
+	// margin-top: 100px;
+	margin-top: 120px;
+}
+.mandeladaycopy h3{
+	font-size: 26px;
+}
+.mandeladaycopy p{
+	margin-right: 60%;
+	text-align: justify;
+}
+.mandeladaycopy a{
+	margin-right: 60%;
+	pointer-events: none;
+	cursor: default;
+}
+
+
+// PAGE -- ROW 2
+
+$row2: 300px;
+
+.row2 img{
+ 	display: block;
+}
+.mission{
+	width: 25%;
+	height: auto;
+}
+
+.missioncopy{
+	height: 27%;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+}
+
+
+
+.hospital{
+	width: 25%;
+	height: auto;
+}
+.hospitalcopy{
+	height: 27%;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+}
+
+
+.video{
+	width: 25%;
+	height: auto;
+}
+
+
+.play-button{
+	position: absolute;
+	top: 42%;
+	left: 42%;
+	color: white;
+
+
+}
+.play-button:hover{
+	color: #358fe3; 
+	transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear; 
+}
+.textcode{
+	width: 25%;
+	height: auto;
+	cursor: auto;
+}
+.textcodecopy{
+	width: 100%;
+	height:100%;
+	top: 0px;
+	left: 0px;
+}
+.textcodecopy h5{
+	margin: 112px auto 0 auto;
+	
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+// PAGE -- ROW 3
+
+$row3: 423px;
+
+.concert{
+	width: 100%;
+	height: auto;
+}
+.concert img{
+	display: block;
+}
+
+.concertcopy{
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	bottom: 0px;
+}
+.concertcopy h2{
+	margin-top: 111px;
+}
+.concertcopy h3{
+	font-size: 21px;
+
+}
+.concertcopy p{
+	margin-right: 72%;
+	text-align: justify;
+}
+
+.concertcopy a{
+	margin-right: 72%;
+}
+
+
+// PAGE -- ROW 4
+
+$row4: 389px;
+
+$guitar-divider: 55%;
+
+.row4{
+	position: relative;
+	overflow: hidden;
+}
+.app{
+	width: $guitar-divider;
+	float: right;
+	height: auto;
+	cursor: auto;
+	overflow: hidden;
+	position: absolute;
+
+}
+
+.app img{
+	display: block;
+	height: 100%;
+}
+.app:hover{
+	box-shadow: 0px 0px 0px 0px;
+	z-index: 1000;
+}
+.appcopy{
+	width: 379px;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+
+.appcopy h5{
+	font-size: 18px;
+	font-family: "Open Sans";
+	margin: 105px 78px 47px 78px;
+
+}
+
+.appcopy a{
+	float: none;
+}
+.appcopy img{
+	width: 153px;
+	height: auto;
+	margin: 0 75px 20px 75px;
+	cursor: pointer;
+	display: block;
+
+}
+
+.appcopy img:hover{
+	box-shadow: 0px 0px 15px 1px white;
+	z-index: 1000;
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out ;
+	-ms-transition: all .5s ease-out ;
+	-o-transition: all .5s ease-out ;
+	transition: all .5s ease-out ;
+}
+
+
+
+.guitar{
+	width: 100% - $guitar-divider;
+	float: right;
+	position: relative;
+	height: auto;
+	background-size: cover;
+}
+.guitarcopy{
+	width: 39%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+.gc1{
+	margin-top: 170px;
+}
+
+.gc2{
+	font-size: 35px;
+}
+.guitar img{
+	display: block;
+	height: auto;	
+}
+
+// .cellcontainer{
+// 	height: $row1 + $row2 + $row3 + $row4;
+// }
+
+
+
+
+/* Smartphones (portrait) ----------- */
+//  MOBILE (PORTRAIT)
+// * ------------------------------------------------
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+	.lb-video{
+		width: 280px;
+		height: 210px;
+		margin-left: none;
+		margin-top: none;
+	}
+
+	.lb-content{
+		top: calc((100% - 210px)/2);
+	}
+	.close-button{
+		display: none;
+	}
+
+	.vidholder{
+		width: 280px;
+		// height: 240px;
+	}
+	#nav-dropdown .menu-home a{
+		color: #358fe3; 
+		pointer-events: none;
+		cursor: default;
+	}
+	$pp-hero-height: 265px;
+	$pp-hero-offset:40px;
+
+	.herofix {
+		height: $pp-hero-height; 
+		top: $pp-hero-offset;
+	}
+	.hero{
+		height: $pp-hero-height;
+		overflow:hidden;
+		background-color: black;
+		width: 100%;
+		position: relative;
+
+	}
+	.hero img{
+
+		height: $pp-hero-height * 1.3;
+		clip: rect(0px, 100% , 100%, 0px);
+		position: absolute;
+		top: -$pp-hero-offset;
+		right:0px;
+	}
+
+	.heroblurb {
+		display: none;
+	}
+	.herospacer{
+		height: $pp-hero-height;
+	}
+
+	.pp{
+		display: block;
+	}
+	.no-pp {
+		display: none;
+	}
+
+	.mandeladay .no-pp{
+		display: none;
+	}
+
+	.cell{
+		width: 100%;
+		text-align: center;
+	}
+	.copy{
+		width: 100%;
+		text-align:center;
+	}
+
+	.page img{
+		height: 100%;
+		width: 100%;
+	}
+	.page h2{
+		font-size: 20px;
+	}
+	.page h5{
+		font-size: 20px;
+		font-family: "Oswald";
+		color: black;
+		font-weight: 400; 
+	}
+
+	.page{
+		position: relative;
+	}
+	$row1: 253px;
+	.row {
+		width: 100%;
+	}
+	.mandeladay{
+		//height: $row1;
+		width: 100%;
+	}
+	.mandeladayimg{
+		content: url(../img/home_pp_mandeladay.jpg);
+		width: 100%;
+	}
+
+	.mandeladaycopy h2{
+		margin-top: 36%;
+	}
+	.mandeladaycopy h3{
+		font-size: 17px;
+	}
+
+	$row2: 218px;
+	.concert{
+		//height: $row2;
+	}
+	.concertcopy{
+		width:100%;
+	}
+	.concertcopy h2{ 
+		margin-top: 31%;
+	}
+	.concertcopy h3{ 
+		font-size: 14px;
+	}
+
+	$row3: 252px;
+	.mission{
+		//height: $row3;
+		width: 100%;
+	}
+	.mission img{
+		content: url(../img/home_pp_mission.jpg);
+	}
+
+	.missioncopy{
+		height: 100%;
+	}
+	.missioncopy h5{
+		margin-top: 32.5%;
+	}
+
+	$row4: 223px;
+	.guitar{
+		float: left;
+		width: 100%;
+	}
+	.guitar img{
+		content: url(../img/home_pp_guitar.jpg);
+	}
+	.gc1{
+		margin-top: 25%;
+	}
+	.gc2{
+		font-size: 24px !important;
+	}
+
+	$row5: 215px;
+	.app{
+		float: left;
+		position: relative;
+		//height: $row5;
+	}
+	.appcopy img{
+		width: 131px;
+	}
+	.appcopy h5{
+		font-family: "Open Sans";
+		color: white;
+		margin: 10px 10px;
+		font-size: 15px;
+		margin-bottom: 35px;
+	}
+
+	.appcopy img{
+		margin-right: 174px;
+		margin-left: 15px;
+		height: auto;
+	}
+
+	.cellcontainer{
+		//height: $row1 + $row2 + $row3 + $row4 + $row5;
+	}
+
+}
+
+/* MOBILE (LANDSCAPE)
+* ------------------------------------------------ */
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $phone-wide-landscape - 1px)  {
+
+
+
+	.lb-video{
+		width: 420px;
+		height: 315px;
+	}
+
+	.lb-content{
+		top: calc((100% - 315px)/2);
+	}
+
+	.vidholder{
+		width: 480px;
+		// height: 320px;
+	}
+	.close-button{
+		top: 35px;
+		position: absolute;
+		right: 0px;
+	}
+	.no-pl{
+		display: none;
+	}
+
+
+// MOBILE -- LANDSCAPE -- NAVIGATION
+#nav .menu-home a{
+	color: white; 
+}
+#nav-dropdown .menu-home a{
+	color: #358fe3; 
+	pointer-events: none;
+	cursor: default;
+}
+#nav .menu-home{
+	display: inherit !important;
+	padding-right: 15px !important;
+	pointer-events: none;
+	cursor: default;
+}
+
+$pl-hero-height: $phone-portrait;
+// $pl-hero-offset:100px;
+$pl-hero-offset: 50px;
+
+.herofix {
+	height: $pl-hero-height; 
+	top: $pl-navheight;
+}
+.hero{
+	height: $pl-hero-height;
+	background-color: black;
+	width: 100%;
+	position: relative;
+
+}
+.hero img{
+
+	// height: $pl-hero-height * 1.4;
+	height: $pl-hero-height * 1.1;
+	position: absolute;
+	top: -1 * $pl-hero-offset;
+	right: 20px;
+
+}
+
+.herospacer{
+	height: $pl-hero-height;
+}
+
+.heroblurbfix{
+	// top:125px;
+	top: 140px;
+}
+.heroblurb{
+	// width: 295px;
+	width: 200px !important;
+}
+.heroblurb h3{
+	text-align: center;
+	// font-size: 20px;
+	font-size: 15px !important;
+}
+.heroblurbfix p{
+	display: none;
+}
+//$row1: 264px;
+$row1: 200px;
+.mandeladay{
+	//height: $row1;
+	width:100%;
+}
+.mandeladaycopy{
+	text-align:center;
+	width: 50%;
+}
+.mandeladay h2{
+	font-size: 25px; 
+	margin-top: 70px;
+}
+.mandeladay h3{
+	font-size: 22px;
+}
+// $row2: 337px;
+$row2: 245px;
+
+.mission{
+	//height: $row2;
+	width: 50%;
+}
+.missioncopy h5{
+	font-size: 25px;
+	// margin-top: 25px;
+	margin-top: 10px;
+}
+.video{
+	//height: $row2;
+	width: 50%;
+}
+
+
+// $row3: 235px;
+$row3: 195px;
+.concert{
+	//height: $row3;
+	width: 100%;
+}
+.concertcopy{
+	width: 39%;
+	text-align: center;
+}
+.concertcopy h2{
+	font-size: 25px;
+	// margin-top: 100px;
+	margin-top: 80px;
+}
+.concertcopy h3{
+	font-size: 18px;
+}
+
+// $row4: 223px;
+$row4: 180px;
+.app{
+	//height: $row4;
+	// width: 50%;
+	float:right;
+}
+.appcopy{
+	text-align: left;
+
+}
+.appcopy img{
+	// width: 131px;
+	width: 80px;
+	margin-left: 30px !important;
+}
+.appcopy h5{
+	font-family: "Open Sans";
+	color: white;
+	margin-top: 15px;
+	margin-left: 15px !important;
+	// margin-bottom: 35px;
+	margin-bottom: 20px;
+	text-align: left;
+	// font-size: 15px;
+	font-size: 12px !important;
+}
+
+.appcopy img{
+	margin-right: 174px;
+	margin-left: -26px;
+	height: auto;
+}
+.guitar{
+	//height: $row4;
+	// width: 50%;
+	float: right;
+}
+
+.gc1{
+	// margin-top: 95px;
+	margin-top: 70px; 
+	// font-size: 21px;
+	font-size: 17px;
+}
+.gc2{
+	// font-size: 24px !important;
+	font-size: 20px !important;
+}
+
+.cellcontainer{
+	//height: $row1 + $row2 + $row3 + $row4;
+}
+
+}
+
+
+//iphone 5 landscape
+@media only screen 
+and (min-width: $phone-wide-landscape) 
+and (max-width: $phone-even-wider-landscape - 1px){
+
+
+
+
+	.lb-video{
+		width: 420px;
+		height: 315px;
+	}
+
+	.lb-content{
+		top: calc((100% - 315px)/2);
+	}
+
+	.vidholder{
+		width: 480px;
+		// height: 320px;
+	}
+		.close-button{
+		top: 35px;
+		position: absolute;
+		right: 40px;
+	}
+
+	.no-pl{
+		display: none;
+	}
+
+// MOBILE -- LANDSCAPE -- NAVIGATION
+#nav .menu-home a{
+	color: white; 
+}
+#nav-dropdown .menu-home a{
+	color: #358fe3; 
+	pointer-events: none;
+	cursor: default;
+}
+#nav .menu-home{
+	display: inherit !important;
+	padding-right: 15px !important;
+	pointer-events: none;
+	cursor: default;
+}
+
+$pl-hero-height: $phone-portrait;
+// $pl-hero-offset:100px;
+$pl-hero-offset: 50px;
+
+.herofix {
+	height: $pl-hero-height; 
+	top: $pl-navheight;
+}
+.hero{
+	height: $pl-hero-height;
+	background-color: black;
+	width: 100%;
+	position: relative;
+
+}
+.hero img{
+
+	// height: $pl-hero-height * 1.4;
+	height: $pl-hero-height * 1.1;
+	position: absolute;
+	top: -1 * $pl-hero-offset;
+	right: 20px;
+
+}
+
+.herospacer{
+	height: $pl-hero-height;
+}
+
+.heroblurbfix{
+	// top:125px;
+	top: 140px;
+}
+.heroblurb{
+	// width: 295px;
+	width: 200px !important;
+}
+.heroblurb h3{
+	text-align: center;
+	// font-size: 20px;
+	font-size: 15px !important;
+}
+.heroblurbfix p{
+	display: none;
+}
+//$row1: 264px;
+$row1: 200px;
+.mandeladay{
+	//height: $row1;
+	width:100%;
+}
+.mandeladaycopy{
+	text-align:center;
+	width: 50%;
+}
+.mandeladay h2{
+	font-size: 25px; 
+	margin-top: 70px;
+}
+.mandeladay h3{
+	font-size: 22px;
+}
+// $row2: 337px;
+$row2: 245px;
+
+.mission{
+	//height: $row2;
+	width: 50%;
+}
+.missioncopy h5{
+	font-size: 25px;
+	// margin-top: 25px;
+	margin-top: 10px;
+}
+.video{
+	//height: $row2;
+	width: 50%;
+}
+
+
+// $row3: 235px;
+$row3: 195px;
+.concert{
+	//height: $row3;
+	width: 100%;
+}
+.concertcopy{
+	width: 39%;
+	text-align: center;
+}
+.concertcopy h2{
+	font-size: 25px;
+	// margin-top: 100px;
+	margin-top: 80px;
+}
+.concertcopy h3{
+	font-size: 18px;
+}
+
+// $row4: 223px;
+$row4: 180px;
+.app{
+	//height: $row4;
+	// width: 50%;
+	float:right;
+}
+.appcopy{
+	text-align: left;
+
+}
+.appcopy img{
+	// width: 131px;
+	width: 80px;
+	margin-left: 30px !important;
+}
+.appcopy h5{
+	font-family: "Open Sans";
+	color: white;
+	margin-top: 15px;
+	margin-left: 15px !important;
+	// margin-bottom: 35px;
+	margin-bottom: 20px;
+	text-align: left;
+	// font-size: 15px;
+	font-size: 12px !important;
+}
+
+.appcopy img{
+	margin-right: 174px;
+	margin-left: -26px;
+	height: auto;
+}
+.guitar{
+	//height: $row4;
+	// width: 50%;
+	float: right;
+}
+
+.gc1{
+	// margin-top: 95px;
+	margin-top: 70px; 
+	// font-size: 21px;
+	font-size: 17px;
+}
+.gc2{
+	// font-size: 24px !important;
+	font-size: 20px !important;
+}
+
+.cellcontainer{
+	//height: $row1 + $row2 + $row3 + $row4;
+}
+
+
+/// Edit here
+$pl-hero-height: $phone-portrait;
+$pl-hero-offset:100px;
+.hero img{
+
+	height: $pl-hero-height * 1.3;
+	top: -1 * $pl-hero-offset;
+
+}
+.heroblurbfix{
+	top:115px;
+}
+.heroblurb{
+	width: 260px !important;
+}
+.heroblurb h3{
+	font-size: 18px !important;
+}
+
+
+
+$row1: 246px;
+.mandeladay{
+	//height: $row1;
+}
+.mandeladay h2{
+	font-size: 25px; 
+	margin-top: 96px;
+}
+
+
+$row2: 284px;
+
+.mission{
+	//height: $row2;
+}
+.missioncopy h5{
+	margin-top: 16px;
+}
+.video{
+	//height: $row2;
+}
+
+
+$row3: 198px;
+.concert{
+	//height: $row3;
+}
+.concertcopy h2{
+	margin-top: 76px;
+}
+
+$row4: 188px;
+.app{
+	//height: $row4;
+}
+.appcopy{
+	text-align: left;
+}
+.appcopy img{
+	width: 110px;
+	margin-left: 27px;
+}
+.appcopy h5{
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 14px !important;
+}
+
+
+.guitar{
+	//height: $row4;
+}
+
+.gc1{
+	margin-top: 75px; 
+	font-size: 19px;
+}
+.gc2{
+	font-size: 22px !important;
+}
+
+.cellcontainer{
+	//height: $row1 + $row2 + $row3 + $row4;
+}
+
+}
+
+
+ //android landscape
+ @media only screen 
+ and (min-width: $phone-even-wider-landscape ) 
+ and (max-width: $tablet-portrait - 1px)  {
+
+
+ 	.lb-video{
+ 		width: 420px;
+ 		height: 315px;
+ 	}
+
+ 	.lb-content{
+ 		top: calc((100% - 315px)/2);
+ 	}
+
+ 	.vidholder{
+ 		width: 480px;
+ 		// height: 320px;
+ 	}
+ 		.close-button{
+		top: 35px;
+		position: absolute;
+		right: 70px;
+	}
+
+
+ 	.no-pl{
+ 		display: none;
+ 	}
+
+
+ 	#nav .menu-home a{
+ 		color: white; 
+ 	}
+ 	#nav-dropdown .menu-home a{
+ 		color: #358fe3; 
+ 		pointer-events: none;
+ 		cursor: default;
+ 	}
+ 	#nav .menu-home{
+ 		display: inherit !important;
+ 		padding-right: 15px !important;
+ 		pointer-events: none;
+ 		cursor: default;
+ 	}
+
+ 	$pl-hero-height: $phone-portrait;
+// $pl-hero-offset:100px;
+$pl-hero-offset: 50px;
+
+.herofix {
+	height: $pl-hero-height; 
+	top: $pl-navheight;
+}
+.hero{
+	height: $pl-hero-height;
+	background-color: black;
+	width: 100%;
+	position: relative;
+
+}
+.hero img{
+
+	// height: $pl-hero-height * 1.4;
+	height: $pl-hero-height * 1.1;
+	position: absolute;
+	top: -1 * $pl-hero-offset;
+	right: 20px;
+
+}
+
+.herospacer{
+	height: $pl-hero-height;
+}
+
+.heroblurbfix{
+	// top:125px;
+	top: 140px;
+}
+.heroblurb{
+	// width: 295px;
+	width: 200px !important;
+}
+.heroblurb h3{
+	text-align: center;
+	// font-size: 20px;
+	font-size: 15px !important;
+}
+.heroblurbfix p{
+	display: none;
+}
+//$row1: 264px;
+$row1: 200px;
+.mandeladay{
+	//height: $row1;
+	width:100%;
+}
+.mandeladaycopy{
+	text-align:center;
+	width: 50%;
+}
+.mandeladay h2{
+	font-size: 25px; 
+	margin-top: 70px;
+}
+.mandeladay h3{
+	font-size: 22px;
+}
+// $row2: 337px;
+$row2: 245px;
+
+.mission{
+	//height: $row2;
+	width: 50%;
+}
+.missioncopy h5{
+	font-size: 25px;
+	// margin-top: 25px;
+	margin-top: 10px;
+}
+.video{
+	//height: $row2;
+	width: 50%;
+}
+
+
+// $row3: 235px;
+$row3: 195px;
+.concert{
+	//height: $row3;
+	width: 100%;
+}
+.concertcopy{
+	width: 39%;
+	text-align: center;
+}
+.concertcopy h2{
+	font-size: 25px;
+	// margin-top: 100px;
+	margin-top: 80px;
+}
+.concertcopy h3{
+	font-size: 18px;
+}
+
+// $row4: 223px;
+$row4: 180px;
+.app{
+	//height: $row4;
+	// width: 50%;
+	float:right;
+}
+.appcopy{
+	text-align: left;
+
+}
+.appcopy img{
+	// width: 131px;
+	width: 80px;
+	margin-left: 30px !important;
+}
+.appcopy h5{
+	font-family: "Open Sans";
+	color: white;
+	margin-top: 15px;
+	margin-left: 15px !important;
+	// margin-bottom: 35px;
+	margin-bottom: 20px;
+	text-align: left;
+	// font-size: 15px;
+	font-size: 12px !important;
+}
+
+.appcopy img{
+	margin-right: 174px;
+	margin-left: -26px;
+	height: auto;
+}
+.guitar{
+	// height: $row4;
+	// width: 50%;
+	float: right;
+}
+
+.gc1{
+	// margin-top: 95px;
+	margin-top: 70px; 
+	// font-size: 21px;
+	font-size: 17px;
+}
+.gc2{
+	// font-size: 24px !important;
+	font-size: 20px !important;
+}
+
+.cellcontainer{
+	//height: $row1 + $row2 + $row3 + $row4;
+}
+
+// Edit here
+
+$pl-hero-height: $phone-portrait;
+$pl-hero-offset:100px;
+.hero img{
+
+	height: $pl-hero-height * 1.4;
+	top: -1 * $pl-hero-offset;
+
+}
+.heroblurbfix{
+	top:125px;
+}
+.heroblurb{
+	width: 295px !important;
+}
+.heroblurb h3{
+	font-size: 20px !important;
+}
+$row1: 264px;
+.mandeladay{
+	// height: $row1;
+}
+.mandeladay h2{
+	font-size: 25px; 
+	margin-top: 100px;
+}
+
+
+$row2: 337px;
+
+.mission{
+	// height: $row2;
+}
+.missioncopy h5{
+	margin-top: 25px;
+}
+.video{
+	// height: $row2;
+}
+
+
+$row3: 235px;
+.concert{
+	// height: $row3;
+}
+.concertcopy h2{
+	margin-top: 100px;
+}
+
+$row4: 223px;
+.app{
+	// height: $row4;
+}
+.appcopy{
+	// text-align: center;
+}
+.appcopy img{
+	width: 131px;
+}
+.appcopy h5{
+	margin-bottom: 35px;
+	text-align: center;
+	font-size: 15px !important;
+}
+
+.guitar{
+	// height: $row4;
+}
+
+.gc1{
+	margin-top: 95px; 
+	font-size: 21px;
+}
+.gc2{
+	font-size: 24px !important;
+}
+
+.cellcontainer{
+	//height: $row1 + $row2 + $row3 + $row4;
+}
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+
+
+	.lb-content{
+		top: calc((100% - 472px)/2);
+	}
+	.wrapper-content{
+		width: 95%;
+	}
+
+
+	#nav .menu-home a{
+		color: white; 
+	}
+	#nav-dropdown .menu-home a{
+		color: #358fe3;
+		pointer-events: none;
+		cursor: default; 
+	}
+	#nav .menu-home{
+		display: inherit !important;
+		padding-right: 15px !important;
+		pointer-events: none;
+		cursor: default;
+
+	}
+	.heroblurb{
+		width: 340px;
+	}
+
+	.heroblurb p{
+		margin-right: 0px;
+		line-height: 1.1em;
+		font-size: 15px;
+	}
+
+
+
+
+	$row1: 320px;
+	.mandeladay{
+		// height: $row1;
+
+	}
+	.mandeladaycopy h2{
+		// margin-top: 20px;
+		margin-top: 80px;
+		font-size: 24px;
+	}
+
+	.mandeladaycopy h3{
+		font-size: 21px;
+
+	}
+	.mandeladaycopy p{
+		margin-right: 52%;
+		margin-top: 25px;
+		font-size: 16px;
+	}
+	.mandeladaycopy a{
+		margin-right: 52%;
+	}
+
+
+	$row2: 192px;
+
+	.mission{
+		// height: $row2;
+		width: 25%;
+	}
+	.missioncopy h5{
+		margin-top: 15px;
+		font-size: 15px;
+	}
+	.hospital{
+		// height: $row2;
+		width: 25%;
+	}
+	.hospitalcopy h5{
+		margin-top: 15px;
+		font-size: 15px;
+	}
+	.video{
+		// height: $row2;
+		width: 25%;
+	}
+	.play-button{
+		top: 38%;
+		left: 38%;
+	}
+
+	.textcode{
+		// height: $row2;
+		width: 25%;
+	}
+	.textcodecopy h5{
+		margin-top: 63px;
+		font-size: 13px;
+	}
+
+	$row3: 290px;
+	.concert{
+		// height: $row3;
+	}
+	.concertcopy h2{
+		margin-top: 30px;
+		font-size: 26px;
+	}
+
+	.concertcopy h3{
+		font-size: 18px;
+	}
+	.concertcopy p{
+		margin-right: 65%;
+		font-size: 16px;
+	}
+	.concertcopy a{
+		margin-right: 65%;
+	}
+
+	$row4: 244px;
+	.app{
+		// height: $row4;
+		// width: 54%;
+	}
+	.appcopy{
+		height: 100%;
+		width: 100%;
+		text-align: left;
+	// text-align: center;
+}
+.appcopy img{
+	width: 131px;
+	margin-left: 68px;
+}
+.appcopy h5{
+	margin-bottom: 20px;
+	font-size: 15px !important;
+	margin-top: 20px;
+	margin-left: 30px;
+	width: 50%;
+}
+
+.guitar{
+	// height: $row4;
+	// width: 46%;
+}
+
+.gc1{
+	margin-top: 105px; 
+	font-size: 23px;
+}
+.gc2{
+	font-size: 25px !important;
+}
+
+
+.cellcontainer{
+	//height: $row1 + $row2 + $row3 + $row4;
+}
+
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-width : $tablet-landscape) 
+and (max-width : $desktop - 1px) {
+
+
+
+	.lb-content{
+		top: calc((100% - 472px)/2);
+	}
+
+
+	#nav .menu-home a{
+		color: #358fe3; 
+	}
+	$row1: 450px;
+	.mandeladay{
+		// height: $row1;
+	}
+	.mandeladaycopy{
+		padding-left: 30px;
+	}
+
+	.mandeladaycopy p{
+		margin-right: 60%;
+		text-align: justify;
+	}
+	.mandeladaycopy a{
+		margin-right: 60%;
+	}
+
+
+	$row2: 256px;
+
+	.mission{
+		// height: $row2;
+		width: 25%;
+	}
+	.missioncopy h5{
+		margin-top: 19px;
+	}
+	.hospital{
+		// height: $row2;
+		width: 25%;
+	}
+	.hospitalcopy h5{
+		margin-top: 19px;
+	}
+	.video{
+		// height: $row2;
+		width: 25%;
+	}
+
+
+	.textcode{
+		// height: $row2;
+		width: 25%;
+	}
+	.textcodecopy h5{
+		margin-top: 80px;
+	}
+
+
+	$row3: 400px;
+	.concert{
+		// height: $row3;
+	}
+	.concertcopy{
+		padding-left: 20px;
+	}
+	.concertcopy h2{
+		margin-top: 80px;
+	}
+
+	$row4: 350px;
+	.app{
+		// height: $row4;
+	
+	}
+	.appcopy{
+		height: 100%;
+		width: 100%;
+		text-align: left;
+	// text-align: center;
+}
+.appcopy img{
+	width: 168px;
+	margin-left: 82px;
+}
+.appcopy h5{
+	margin-bottom: 20px;
+	margin-top: 70px;
+	margin-left: 30px;
+	width: 50%;
+	font-weight: 400;
+}
+
+.guitar{
+	// height: $row4;
+	
+}
+
+.gc1{
+	margin-top: 145px; 
+}
+
+
+.cellcontainer{
+	//height: $row1 + $row2 + $row3 + $row4;
+}
+}
+
+
+
+
