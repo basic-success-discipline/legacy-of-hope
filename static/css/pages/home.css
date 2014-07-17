@@ -11,23 +11,23 @@ h5 {
 .hero img {
   float: right; }
 
-.heroblurbfix {
+.heroblurb-wrapper {
   z-index: 1;
-  top: 220px; }
+  top: 40%; }
 
 .heroblurb {
   color: white;
-  right: 0px;
-  float: left;
-  width: 560px; }
+  width: 100%;
+  position: absolute;
+  top: 11%; }
 
-.heroblurb p {
-  color: white; }
+.heroblurb p, .heroblurb h3 {
+  max-width: 55%;
+  margin-left: 0; }
 
 .herop1 {
   font-size: 16px;
   font-style: italic;
-  margin-right: 190px;
   text-align: justify; }
 
 .herop2 {
@@ -399,17 +399,11 @@ h5 {
   .vidholder {
     width: 280px; } }
 @media only screen and (min-width: 480px) and (max-width: 567px) {
-  .heroblurbfix {
-    top: 140px; }
-
-  .heroblurb {
-    width: 200px !important; }
-
   .heroblurb h3 {
     text-align: center;
     font-size: 15px !important; }
 
-  .heroblurbfix p {
+  .heroblurb p {
     display: none; }
 
   .no-pl {
@@ -497,17 +491,11 @@ h5 {
   .vidholder {
     width: 480px; } }
 @media only screen and (min-width: 568px) and (max-width: 639px) {
-  .heroblurbfix {
-    top: 115px; }
-
-  .heroblurb {
-    width: 260px !important; }
-
   .heroblurb h3 {
     text-align: center;
     font-size: 18px !important; }
 
-  .heroblurbfix p {
+  .heroblurb p {
     display: none; }
 
   .no-pl {
@@ -593,17 +581,11 @@ h5 {
   .vidholder {
     width: 480px; } }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
-  .heroblurbfix {
-    top: 125px; }
-
-  .heroblurb {
-    width: 295px !important; }
-
   .heroblurb h3 {
     text-align: center;
     font-size: 20px !important; }
 
-  .heroblurbfix p {
+  .heroblurb p {
     display: none; }
 
   .no-pl {
@@ -689,11 +671,7 @@ h5 {
   .vidholder {
     width: 480px; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .heroblurb {
-    width: 340px; }
-
   .heroblurb p {
-    margin-right: 0px;
     line-height: 1.1em;
     font-size: 15px; }
 
@@ -780,6 +758,9 @@ h5 {
   .lb-content {
     top: calc((100% - 472px)/2); } }
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .heroblurb h3 {
+    font-size: 24px; }
+
   .mandeladaycopy {
     padding-left: 30px; }
 

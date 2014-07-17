@@ -28,24 +28,24 @@ h5{
 
 
 //  HEROBLURB
-.heroblurbfix {
+.heroblurb-wrapper {
 	z-index: 1;
-	top: 220px; 
+	top: 40%; 
 }
 
 .heroblurb {
 	color: white;
-	right: 0px;
-	float: left;
-	width: 560px; 
+	width: 100%;
+	position: absolute;
+	top: 11%; 
 }
-.heroblurb p {
-	color: white;
+.heroblurb p, .heroblurb h3{
+	max-width: 55%;
+	margin-left: 0;
 }
 .herop1{
 	font-size: 16px;
 	font-style: italic;
-	margin-right: 560px - 370px;
 	text-align: justify;
 }
 .herop2{
@@ -506,18 +506,13 @@ and (max-width: $phone-wide-landscape - 1px)  {
 
 // MOBILE - LANDSCAPE - HEROBLURB
 
-.heroblurbfix{
-	// top:125px;
-	top: 140px;
-}
-.heroblurb{
-	width: 200px !important;
-}
+
+
 .heroblurb h3{
 	text-align: center;
 	font-size: 15px !important;
 }
-.heroblurbfix p{
+.heroblurb p{
 	display: none;
 }
 
@@ -644,17 +639,12 @@ and (max-width: $phone-even-wider-landscape - 1px){
 
 
 // IPHONE 5  - LANDSCAPE - HEROBLURB
-.heroblurbfix{
-	top:115px;
-}
-.heroblurb{
-	width: 260px !important;
-}
+
 .heroblurb h3{
 	text-align: center;
 	font-size: 18px !important;
 }
-.heroblurbfix p{
+.heroblurb p{
 	display: none;
 }
 
@@ -776,17 +766,12 @@ and (max-width: $phone-even-wider-landscape - 1px){
 
 
  // ANDROID  - LANDSCAPE - HEROBLURB
-.heroblurbfix{
-	top:125px;
-}
-.heroblurb{
-	width: 295px !important;
-}
+
 .heroblurb h3{
 	text-align: center;
 	font-size: 20px !important;
 }
-.heroblurbfix p{
+.heroblurb p{
 	display: none;
 }
 
@@ -916,11 +901,7 @@ and (max-width : $tablet-landscape - 1px) {
 
 	
 	// TABLET - PORTRAIT - HEROBLURB
-	.heroblurb{
-		width: 340px;
-	}
 	.heroblurb p{
-		margin-right: 0px;
 		line-height: 1.1em;
 		font-size: 15px;
 	}
@@ -1038,7 +1019,9 @@ and (max-width : $desktop - 1px) {
 
 
 
-
+.heroblurb h3{
+	font-size: 24px;
+}
 
 // TABLET - LANDSCAPE - ROW 1
 	.mandeladaycopy{
