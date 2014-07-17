@@ -11,15 +11,14 @@
 
 
 // HERO
-.hero{
-	overflow: auto;
+.hero, .herospacer{
+	  overflow: hidden;
 }
 .hero img, .herospacer img{
 	width: 75%;
-}
-.hero img{
 	float: right;
 }
+
 
 //PAGE
 
@@ -61,7 +60,7 @@ and (max-width: $phone-landscape - 1px)  {
 // MOBILE - LANDSCAPE
 @media only screen 
 and (min-width: $phone-landscape) 
-and (max-width: $phone-wide-landscape - 1px)  {
+and (max-width: $tablet-portrait - 1px)  {
 
 
 

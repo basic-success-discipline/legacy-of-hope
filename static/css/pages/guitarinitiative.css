@@ -225,7 +225,11 @@
 
   #generous p {
     text-align: center;
-    font-style: italic; }
+    font-style: italic;
+    margin-bottom: 10px; }
+
+  #generous img {
+    margin-bottom: 10px; }
 
   .plguitarimg2 {
     width: 100px;
@@ -322,7 +326,11 @@
 
   #generous p {
     text-align: center;
-    font-style: italic; }
+    font-style: italic;
+    margin-bottom: 10px; }
+
+  #generous img {
+    margin-bottom: 10px; }
 
   .plguitarimg2 {
     width: 100px;
@@ -418,7 +426,11 @@
 
   #generous p {
     text-align: center;
-    font-style: italic; }
+    font-style: italic;
+    margin-bottom: 10px; }
+
+  #generous img {
+    margin-bottom: 10px; }
 
   .plguitarimg2 {
     width: 100px;

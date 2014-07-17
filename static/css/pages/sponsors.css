@@ -1,13 +1,11 @@
 .wrapper {
   overflow-x: hidden; }
 
-.hero {
-  overflow: auto; }
+.hero, .herospacer {
+  overflow: hidden; }
 
 .hero img, .herospacer img {
-  width: 75%; }
-
-.hero img {
+  width: 75%;
   float: right; }
 
 .page {
@@ -27,6 +25,6 @@
 
   .page {
     text-align: center; } }
-@media only screen and (min-width: 480px) and (max-width: 567px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   .page {
     text-align: center; } }

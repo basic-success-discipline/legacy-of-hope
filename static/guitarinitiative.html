@@ -19,12 +19,14 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
   <script src="js/sharing.js"></script>
+  <script src="js/boxy.js"></script>
 
 
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/boxy.css" media="screen" type="text/css" >
   <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="css/pages/guitarinitiative.css" media="screen" type="text/css" />
 
@@ -256,7 +258,16 @@
 
 
 
-
+      <!-- POPUP DIALOGS-->
+        <div id="signup-dialog" style="display:none">
+            <div style="width:400;height:300"><form>
+                Enter your email address below to receive updates from the Legacy of Hope<br/>
+                <input type="text" class="register_email" placeholder='Enter your email address'>
+                <button onClick='javascript:submitSignupForm()' id='signup_submit'>Sign me up</button>
+            </form></div>
+        </div>
+        
+        <!-- END POPUP DIALOGS -->
 
 
 
@@ -285,7 +296,7 @@
       <div class="footer">
         <div class="wrapper-content">
           <div class="f1">
-            <p><a href="#">Signup</a> to receive news and updates about upcoming events.</p>
+            <p><a href="javascript:showSignupForm()">Signup</a> to receive news and updates about upcoming events.</p>
           </div>
           <div class="f2">
             <p class="f2p-desktop">© 2014 Legacy Of Hope Foundation - All Rights Reserved</p>
