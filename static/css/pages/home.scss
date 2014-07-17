@@ -1,30 +1,19 @@
 @import "../variables.scss";
 
-
-
-// TYPOGRAPHY
 h5{
 	color: white;
-	margin-top: 28px;
+	// margin-top: 28px;
 }
 
-
-
-//  WRAPPERS
-
-
-
-
 // HERO
-.hero{
-	  overflow: auto;
+.hero, .herospacer{
+	  overflow: hidden;
 }
 .hero img, .herospacer img{
 	width: 75%;
-}
-.hero img{
 	float: right;
 }
+
 
 
 //  HEROBLURB
@@ -102,6 +91,8 @@ h5{
 }
 .copy{
 	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 .pp{
 	display: none;
@@ -124,7 +115,7 @@ h5{
 	width: 100%;
 }
 .mandeladaycopy h2{
-	margin-top: 120px;
+	margin-top: 11%;
 }
 .mandeladaycopy h3{
 	font-size: 26px;
@@ -152,6 +143,10 @@ h5{
 	bottom: 0px;
 	left: 0px;
 }
+.missioncopy h5{
+	color: white;
+	margin-top: 7.5%;
+}
 .hospital{
 	width: 25%;
 	height: auto;
@@ -161,6 +156,10 @@ h5{
 	width: 100%;
 	bottom: 0px;
 	left: 0px;
+}
+.hospitalcopy h5{
+	color: white;
+	margin-top: 7.5%;
 }
 .video{
 	width: 25%;
@@ -191,7 +190,9 @@ h5{
 	left: 0px;
 }
 .textcodecopy h5{
-	margin: 112px auto 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 33%;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
@@ -210,7 +211,7 @@ h5{
 	bottom: 0px;
 }
 .concertcopy h2{
-	margin-top: 111px;
+	margin-top: 11%;
 }
 .concertcopy h3{
 	font-size: 21px;
@@ -249,7 +250,7 @@ $guitar-divider: 55%;
 	text-align: center;
 }
 .gc1{
-	margin-top: 170px;
+	margin-top: 70%;
 }
 .gc2{
 	font-size: 35px;
@@ -284,6 +285,8 @@ $guitar-divider: 55%;
 	font-size: 18px;
 	font-family: "Open Sans";
 	margin: 105px 78px 47px 78px;
+		color: white;
+	margin-top: 7.5%;
 }
 .appcopy a{
 	float: none;
@@ -532,7 +535,8 @@ and (max-width: $phone-wide-landscape - 1px)  {
 }
 .mandeladay h2{
 	font-size: 25px; 
-	margin-top: 70px;
+	
+	margin-top: 32%;
 }
 .mandeladay h3{
 	font-size: 22px;
@@ -546,8 +550,8 @@ and (max-width: $phone-wide-landscape - 1px)  {
 	width: 50%;
 }
 .missioncopy h5{
-	font-size: 25px;
-	margin-top: 10px;
+	font-size: 23px;
+	margin-top: 6%;
 }
 .video{
 	width: 50%;
@@ -566,7 +570,7 @@ and (max-width: $phone-wide-landscape - 1px)  {
 }
 .concertcopy h2{
 	font-size: 25px;
-	margin-top: 80px;
+	margin-top: 35%
 }
 .concertcopy h3{
 	font-size: 18px;
@@ -604,7 +608,6 @@ and (max-width: $phone-wide-landscape - 1px)  {
 	float: right;
 }
 .gc1{
-	margin-top: 70px; 
 	font-size: 17px;
 }
 .gc2{
@@ -667,7 +670,7 @@ and (max-width: $phone-even-wider-landscape - 1px){
 }
 .mandeladay h2{
 	font-size: 25px; 
-	margin-top: 96px;
+		margin-top: 32%;
 }
 .mandeladay h3{
 	font-size: 22px;
@@ -680,7 +683,6 @@ and (max-width: $phone-even-wider-landscape - 1px){
 }
 .missioncopy h5{
 	font-size: 25px;
-	margin-top: 16px;
 }
 .video{
 	width: 50%;
@@ -698,7 +700,7 @@ and (max-width: $phone-even-wider-landscape - 1px){
 }
 .concertcopy h2{
 	font-size: 25px;
-	margin-top: 76px;
+	margin-top: 35%
 }
 .concertcopy h3{
 	font-size: 18px;
@@ -732,7 +734,6 @@ and (max-width: $phone-even-wider-landscape - 1px){
 	float: right;
 }
 .gc1{
-	margin-top: 75px; 
 	font-size: 19px;
 }
 .gc2{
@@ -795,7 +796,7 @@ and (max-width: $phone-even-wider-landscape - 1px){
 }
 .mandeladay h2{
 	font-size: 25px; 
-	margin-top: 100px;
+		margin-top: 32%;
 }
 .mandeladay h3{
 	font-size: 22px;
@@ -808,7 +809,6 @@ and (max-width: $phone-even-wider-landscape - 1px){
 }
 .missioncopy h5{
 	font-size: 25px;
-	margin-top: 25px;
 }
 .video{
 	width: 50%;
@@ -826,7 +826,7 @@ and (max-width: $phone-even-wider-landscape - 1px){
 }
 .concertcopy h2{
 	font-size: 25px;
-	margin-top: 100px;
+	margin-top: 35%;
 
 }
 .concertcopy h3{
@@ -861,7 +861,6 @@ and (max-width: $phone-even-wider-landscape - 1px){
 	float: right;
 }
 .gc1{
-	margin-top: 95px; 
 	font-size: 21px;
 }
 .gc2{
@@ -911,7 +910,7 @@ and (max-width : $tablet-landscape - 1px) {
 
 	// TABLET - PORTRAIT - ROW 1
 	.mandeladaycopy h2{
-		margin-top: 80px;
+		margin-top: 6%;
 		font-size: 24px;
 	}
 	.mandeladaycopy h3{
@@ -932,14 +931,12 @@ and (max-width : $tablet-landscape - 1px) {
 		width: 25%;
 	}
 	.missioncopy h5{
-		margin-top: 15px;
 		font-size: 15px;
 	}
 	.hospital{
 		width: 25%;
 	}
 	.hospitalcopy h5{
-		margin-top: 15px;
 		font-size: 15px;
 	}
 	.video{
@@ -953,7 +950,6 @@ and (max-width : $tablet-landscape - 1px) {
 		width: 25%;
 	}
 	.textcodecopy h5{
-		margin-top: 63px;
 		font-size: 13px;
 	}
 
@@ -962,7 +958,7 @@ and (max-width : $tablet-landscape - 1px) {
 
 	// TABLET - PORTRAIT - ROW 3
 	.concertcopy h2{
-		margin-top: 30px;
+		margin-top: 7%;
 		font-size: 26px;
 	}
 	.concertcopy h3{
@@ -995,7 +991,6 @@ and (max-width : $tablet-landscape - 1px) {
 	width: 50%;
 }
 .gc1{
-	margin-top: 105px; 
 	font-size: 23px;
 }
 .gc2{
@@ -1040,14 +1035,8 @@ and (max-width : $desktop - 1px) {
 	.mission{
 		width: 25%;
 	}
-	.missioncopy h5{
-		margin-top: 19px;
-	}
 	.hospital{
 		width: 25%;
-	}
-	.hospitalcopy h5{
-		margin-top: 19px;
 	}
 	.video{
 		width: 25%;
@@ -1055,18 +1044,14 @@ and (max-width : $desktop - 1px) {
 	.textcode{
 		width: 25%;
 	}
-	.textcodecopy h5{
-		margin-top: 80px;
-	}
+
 
 
 	// TABLET - LANDSCAPE - ROW 3
 	.concertcopy{
 		padding-left: 20px;
 	}
-	.concertcopy h2{
-		margin-top: 80px;
-	}
+
 
 
 	// TABLET - LANDSCAPE - ROW 4
@@ -1085,9 +1070,6 @@ and (max-width : $desktop - 1px) {
 	margin-left: 30px;
 	width: 50%;
 	font-weight: 400;
-}
-.gc1{
-	margin-top: 145px; 
 }
 
 

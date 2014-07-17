@@ -436,7 +436,7 @@ a:hover {
   pointer-events: none;
   cursor: default; }
 
-.hero {
+.hero, .herospacer {
   width: 100%;
   background-color: black; }
 
