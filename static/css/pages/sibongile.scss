@@ -220,11 +220,6 @@ and (min-width : $tablet-portrait)
 and (max-width : $tablet-landscape - 1px) {
 
 
-// TABLET -- PORTRAIT -- WRAPPERS
-.wrapper-content{
-  width: 92%;
-}
-
 
 // IPAD -- PORTRAIT -- HEROBLURB
 .heroblurb{
@@ -259,13 +254,6 @@ and (min-width : $tablet-landscape)
 and (max-width : $desktop - 1px) {
 
 
-
-
-  // TABLET -- LANDSCAPE -- WRAPPERS
-
-  .wrapper-content{
-    width: 92%;
-  }
 
   // TABLET -- LANDSCAPE -- HEROBLURB
   .heroblurb h3{

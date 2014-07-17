@@ -142,9 +142,6 @@ img.aol {
     float: none;
     width: 100px; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .wrapper-content {
-    width: 92%; }
-
   .heroblurb {
     display: none; }
 
@@ -164,9 +161,6 @@ img.aol {
   .actions p {
     font-style: italic; } }
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
-  .wrapper-content {
-    width: 92%; }
-
   .heroblurb h3 {
     font-size: 28px; }
 

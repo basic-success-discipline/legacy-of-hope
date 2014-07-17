@@ -181,9 +181,6 @@
 /* MOBILE (LANDSCAPE)
 * ------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 567px) {
-  .wrapper-content {
-    max-width: 95%; }
-
   .hero img, .herospacer img {
     margin-top: -70px;
     margin-bottom: -100px; }
@@ -288,9 +285,6 @@
   .plguitarimg7 {
     width: 100%; } }
 @media only screen and (min-width: 568px) and (max-width: 639px) {
-  .wrapper-content {
-    max-width: 95%; }
-
   .hero img, .herospacer img {
     margin-top: -70px;
     margin-bottom: -100px; }
@@ -391,9 +385,6 @@
   .plguitarimg7 {
     width: 100%; } }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
-  .wrapper-content {
-    max-width: 95%; }
-
   .hero img, .herospacer img {
     margin-top: -70px;
     margin-bottom: -100px; }
@@ -493,9 +484,6 @@
   .plguitarimg7 {
     width: 100%; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .wrapper-content {
-    max-width: 95%; }
-
   .hero img, .herospacer img {
     margin-top: 0px;
     margin-bottom: -15px; }
@@ -591,9 +579,6 @@
   .tpguitarimgbottom2 {
     left: 0px; } }
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
-  .wrapper-content {
-    width: 93%; }
-
   .hero img, .herospacer img {
     margin-top: -20px;
     margin-bottom: -150px; }

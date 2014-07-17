@@ -251,10 +251,6 @@ $pl-bottom-divider: 48%;
 and (min-width: $phone-landscape) 
 and (max-width: $phone-wide-landscape - 1px)  {
 
-//  MOBILE -- LANDSCAPE -- WRAPPERS
-.wrapper-content{
-  max-width: 95%;
-}
 
 
 
@@ -390,13 +386,6 @@ and (max-width: $phone-even-wider-landscape - 1px){
 
 
 
-// IPHONE 5 - LANDSCAPE - WRAPPERS
-.wrapper-content{
-  max-width: 95%;
-}
-
-
-
 // IPHONE 5 - LANDSCAPE - HERO
 .hero img, .herospacer img{
   margin-top: -70px;
@@ -527,12 +516,6 @@ $pl-bottom-divider: 48%;
 
 
 
-//  ANDROID -- LANDSCAPE -- WRAPPERS
-.wrapper-content{
-  max-width: 95%;
-}
-
-
 
 
 // ANDROID - LANDSCAPE - HERO
@@ -658,11 +641,6 @@ and (min-width : $tablet-portrait)
 and (max-width : $tablet-landscape - 1px){
 
 
-// TABLET -- PORTRAIT -- WRAPPERS
-
-.wrapper-content{
-  max-width: 95%;
-}
 
 
 
@@ -784,12 +762,6 @@ $tp-bottom-divider: 48.5%;
 @media only screen 
 and (min-width: $tablet-landscape) 
 and (max-width: $desktop - 1px) {
-
-// TABLET - LANDSCAPE -- WRAPPERS
-.wrapper-content{
-  width: 93%;
-}
-
 
 
 //TABLET - LANDSCAPE - HERO

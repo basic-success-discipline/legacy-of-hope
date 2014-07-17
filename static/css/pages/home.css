@@ -2,9 +2,6 @@ h5 {
   color: white;
   margin-top: 28px; }
 
-.wrapper {
-  overflow-x: hidden; }
-
 .hero {
   overflow: auto; }
 
@@ -692,9 +689,6 @@ h5 {
   .vidholder {
     width: 480px; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .wrapper-content {
-    width: 95%; }
-
   .heroblurb {
     width: 340px; }
 

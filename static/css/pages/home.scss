@@ -12,9 +12,6 @@ h5{
 
 //  WRAPPERS
 
-.wrapper{
-	overflow-x: hidden;
-}
 
 
 
@@ -915,12 +912,6 @@ and (max-width: $phone-even-wider-landscape - 1px){
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
-
-
-// TABLET - PORTRAIT - WRAPPERS
-	.wrapper-content{
-		width: 95%;
-	}
 
 
 	
