@@ -141,8 +141,8 @@ $bottom-divider: 43.5%;
   width: 100%;
   text-align: right;
   background-color: #EDEFF2;
-  padding-top: 35px;
-  padding-bottom: 40px;
+  padding-top: 5%;
+  padding-bottom: 6%;
   height: 80px;
 }
 #guitarcopy3 p{
@@ -224,8 +224,8 @@ and (max-width: $phone-landscape - 1px)  {
 }
 #guitarcopy3{
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 5%;
+  padding-bottom: 9%;
 }
 #guitarcopy3 p{
   font-size: 17px;
@@ -352,11 +352,8 @@ $pl-bottom-divider: 48%;
   padding-top: 15px;
 }
 #guitarcopy3{
-  width: 100%;
-  text-align: right;
-  background-color: #EDEFF2;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 8%;
+  padding-bottom: 2%;
   height: 70px;
 }
 #guitarcopy3 p{
@@ -368,6 +365,7 @@ $pl-bottom-divider: 48%;
   margin-top: 0px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+
 }
 .plguitarimg6{
   width: 100%;
@@ -481,15 +479,12 @@ $pl-bottom-divider: 48%;
 }
 
 #guitarcopy3{
-  width: 100%;
-  text-align: right;
-  background-color: #EDEFF2;
-  padding-top: 30px;
-  padding-bottom: 25px;
+  padding-top: 8%;
+  padding-bottom: 4%;
   height: 70px;
 }
 #guitarcopy3 p{
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.2;
   text-align: right;
   margin-right: 10px;
@@ -608,15 +603,12 @@ $pl-bottom-divider: 48%;
   padding-top: 15px;
 }
 #guitarcopy3{
-  width: 100%;
-  text-align: right;
-  background-color: #EDEFF2;
-  padding-top: 40px;
-  padding-bottom: 25px;
+  padding-top: 8%;
+  padding-bottom: 4%;
   height: 70px;
 }
 #guitarcopy3 p{
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.2;
   text-align: right;
   margin-right: 10px;
