@@ -4,7 +4,8 @@
 
 .heroblurbfix {
   z-index: 1;
-  top: 80px; }
+  top: 2.6%;
+  position: absolute; }
 
 .heroblurb {
   color: white;
@@ -14,17 +15,15 @@
 .heroblurb p {
   color: white;
   font-size: 14px;
-  margin: 15px auto;
+  margin: 0px auto;
   font-style: italic; }
 
+.heroblurb h1 {
+  margin-bottom: 15px; }
+
 .heroblurb img {
-  width: 120px; }
-
-.tpgibson {
-  display: none; }
-
-.tpherobuffer {
-  display: none; }
+  margin-top: 5px;
+  width: 110px; }
 
 #guitar-phone-portrait {
   display: none; }
@@ -479,17 +478,9 @@
     margin-top: 0px;
     margin-bottom: -15px; }
 
-  .heroblurbfix {
-    position: absolute;
-    top: 100px; }
-
-  .tpgibson {
-    display: inherit;
-    width: 100px;
-    margin: 0 auto; }
-
-  .gibsondesktop {
-    display: none; }
+  .heroblurb h1 {
+    font-size: 30px;
+    margin-bottom: 10px; }
 
   .page h1 {
     font-size: 36px;
@@ -573,17 +564,6 @@
   .hero img, .herospacer img {
     margin-top: -20px;
     margin-bottom: -150px; }
-
-  .heroblurbfix {
-    position: absolute;
-    top: 100px; }
-
-  .tpgibson {
-    display: inherit;
-    margin: 0 auto; }
-
-  .gibsondesktop {
-    display: none; }
 
   .page {
     padding-top: 40px; }
