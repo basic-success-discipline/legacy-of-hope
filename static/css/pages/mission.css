@@ -53,7 +53,7 @@
   margin-left: auto;
   text-align: center; }
 
-.downloads h5 {
+.downloads .links h5 {
   display: inline;
   font-family: 'Oswald', sans-serif;
   color: #646464;
@@ -63,7 +63,7 @@
   margin-left: 8px;
   vertical-align: middle; }
 
-.downloads a {
+.downloads .links a {
   font-size: 15px;
   color: #358fe3;
   vertical-align: middle;
@@ -72,7 +72,7 @@
   margin-right: 8px;
   margin-left: 8px; }
 
-.downloads a:hover {
+.downloads .links a:hover {
   color: #646464; }
 
 @media only screen and (max-width: 479px) {

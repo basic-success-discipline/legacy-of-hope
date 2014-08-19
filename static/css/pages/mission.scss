@@ -70,7 +70,7 @@ margin: 0 auto;
 	margin-left: auto;
 	text-align: center;
 }
-.downloads h5{
+.downloads .links h5{
 	display:inline;
 	font-family: 'Oswald', sans-serif;
 	color: #646464;
@@ -81,7 +81,7 @@ margin: 0 auto;
 	vertical-align: middle;
 
 }
-.downloads a{
+.downloads .links a{
 	font-size: 15px;
 	color: #358fe3;
 	vertical-align: middle;
@@ -90,7 +90,7 @@ margin: 0 auto;
 	margin-right: 8px;
 	margin-left: 8px;
 }
-.downloads a:hover{
+.downloads .links a:hover{
 	color: #646464;
 }
 
