@@ -28,12 +28,11 @@
 
 .spacer2 {
   height: 160px;
-  width: 50%; }
+  width: 40%; }
 
 .spacer3 {
   height: 260px;
-  width: 25%;
-  display: none; }
+  width: 25%; }
 
 .concertcopy2 {
   max-width: 780px; }
@@ -77,7 +76,6 @@
     display: none; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .concertimg1 {
-    width: 69%;
     height: auto; }
 
   .concertcopy2 {
