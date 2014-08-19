@@ -344,22 +344,25 @@ a:hover {
 .links {
   height: 50px;
   display: table-cell;
-  padding-top: 3px;
-  vertical-align: middle; }
+  padding-top: 14px;
+  vertical-align: top; }
 
 .links span {
   display: inline;
   margin: 0 0 0 15px;
-  float: left; }
+  float: left;
+  vertical-align: middle; }
 
 .links a {
   font-family: 'Oswald', sans-serif;
-  font-size: 15px;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 8px;
-  line-height: 1em; }
+  margin-top: 5px;
+  line-height: 1em;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .links a:hover {
   color: #358fe3;
@@ -499,7 +502,6 @@ a:hover {
   width: 100%;
   background-color: #1c1f26;
   color: white;
-  z-index: 1000;
   position: relative; }
 
 .footer p {
@@ -554,6 +556,18 @@ a:hover {
   position: relative;
   z-index: 1002; }
 
+.close-contact {
+  position: absolute;
+  top: 10px;
+  right: 12px; }
+
+.close-contact a {
+  color: white; }
+
+.close-contact a:hover {
+  color: #358fe3;
+  cursor: pointer; }
+
 .contact-tabs {
   margin-bottom: 35px; }
 
@@ -570,10 +584,25 @@ a:hover {
   font-weight: 600;
   text-transform: uppercase; }
 
-.adress {
-  color: #868991;
-  font-size: 22px;
-  margin-top: 10px; }
+.contactinfo {
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-bottom: 70px;
+  height: 80px; }
+
+.contactinfo h1 {
+  font-size: 20px;
+  text-transform: none;
+  margin: 0px !important;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 5px !important; }
+
+.contactinfo h2 {
+  font-size: 12px;
+  text-transform: none;
+  margin-bottom: 0px;
+  font-family: 'Open Sans', sans-serif; }
 
 .lines {
   width: 76%;
@@ -617,6 +646,102 @@ a:hover {
   color: white;
   text-align: center;
   font: normal 14px/14px "OpenSans", Helvetica, Arial, sans-serif; }
+
+.contactbutton {
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: #444;
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #999;
+  border: 0 rgba(0, 0, 0, 0);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer; }
+
+.primarybutton {
+  background-color: #0078e7;
+  color: #fff; }
+
+.donate {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.lb {
+  width: 100%;
+  height: 110%;
+  position: fixed;
+  top: 0px;
+  left: 0%;
+  z-index: 1000;
+  overflow: scroll;
+  display: none; }
+
+.black-overlay {
+  width: 100%;
+  height: 110%;
+  position: fixed;
+  background-color: black;
+  opacity: .4; }
+
+.lb-container {
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+.lightbox {
+  height: auto;
+  background-color: white;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  border-radius: 20px; }
+
+.lightbox h1 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  margin-bottom: 0px; }
+
+.lightbox h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center; }
+
+.lightbox p {
+  text-align: center;
+  padding-top: 5px;
+  margin-top: 0px; }
+
+.lightbox h4 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px; }
+
+.lightbox .contactinfo {
+  color: black;
+  margin-bottom: 40px; }
+
+.lightbox .donate-spacer {
+  clear: both;
+  border-bottom: solid #ccc 1px;
+  margin: 20px 30px 20px 30px; }
+
+.lightbox a {
+  cursor: pointer; }
+
+.lightbox .contactinfo h1 {
+  font-size: 20px;
+  text-transform: none;
+  margin: 0px !important;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 5px !important; }
+
+.lightbox .contactinfo h2 {
+  font-size: 12px;
+  text-transform: none;
+  margin-bottom: 0px;
+  font-family: 'Open Sans', sans-serif; }
 
 /* #### legacy Form #### */
 .legacy-frm {
@@ -723,23 +848,6 @@ a:hover {
 #sponsorarea {
   display: none; }
 
-.table {
-  display: table;
-  position: relative;
-  width: 100%; }
-
-.row {
-  display: table-row;
-  position: relative; }
-
-.cell {
-  display: table-cell; }
-
-.rowspan {
-  position: absolute;
-  top: 0;
-  bottom: 0; }
-
 @media only screen and (max-width: 479px) {
   h1 {
     text-align: center;
@@ -762,10 +870,6 @@ a:hover {
   .nav span {
     display: none;
     vertical-align: middle; }
-
-  .nav .open-contact {
-    display: inherit;
-    padding-right: 8px; }
 
   .nav .menu-hamburger {
     display: inherit; }
@@ -806,8 +910,7 @@ a:hover {
 
   .footer {
     height: 140px;
-    padding-top: 10px;
-    z-index: 1000; }
+    padding-top: 10px; }
 
   .footer p {
     text-align: center;
@@ -853,10 +956,6 @@ a:hover {
 
   .nav .menu-hamburger {
     display: inherit; }
-
-  .nav .open-contact {
-    display: inherit;
-    padding-right: 15px; }
 
   .nav .currentpage {
     display: inherit;
@@ -925,10 +1024,6 @@ a:hover {
   .nav .menu-hamburger {
     display: inherit; }
 
-  .nav .open-contact {
-    display: inherit;
-    padding-right: 15px; }
-
   .nav .currentpage a {
     color: white; }
 
@@ -996,10 +1091,6 @@ a:hover {
   .nav .menu-hamburger {
     display: inherit; }
 
-  .nav .open-contact {
-    display: inherit;
-    padding-right: 15px; }
-
   .nav .currentpage a {
     color: white; }
 
@@ -1060,10 +1151,6 @@ a:hover {
 
   .nav .menu-hamburger {
     display: inherit; }
-
-  .nav .open-contact {
-    display: inherit;
-    padding-right: 15px; }
 
   .nav .currentpage a {
     color: white; }

@@ -49,7 +49,7 @@ h5{
 
 // PAGE
 .page {
-	padding-top: 0px;
+	padding-top: 0px !important;
 	background-color: $navcolor;
 }
 .page a{
@@ -94,9 +94,36 @@ h5{
 	width: 100%;
 	height: 100%;
 }
-.pp{
-	display: none;
+// Tables
+
+.table{
+  display: table;
+  position: relative;
+  width: 100%;
 }
+
+.row{
+  display: table-row;
+  position: relative;
+
+}
+
+.cell{
+  display: table-cell;
+}
+
+.rowspan{
+ position: absolute;
+ top: 0;
+ bottom: 0;
+}
+
+// end tables
+.pp{
+	display: none ;
+}
+
+
 
 
 

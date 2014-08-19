@@ -7,6 +7,10 @@ var contactfade = document.getElementById('contactfade');
                 contact.style.display='block';
                 contactfade.style.display='block';
               };
+              closeContact.onclick=function(){
+                contact.style.display='none';
+                contactfade.style.display='none';
+              };
               contactfade.onclick=function(){
                 contact.style.display='none';
                 contactfade.style.display='none';

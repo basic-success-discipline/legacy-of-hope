@@ -33,7 +33,7 @@ h5 {
   -webkit-font-smoothing: antialiased; }
 
 .page {
-  padding-top: 0px;
+  padding-top: 0px !important;
   background-color: #1c1f26; }
 
 .page a {
@@ -76,6 +76,23 @@ h5 {
   position: absolute;
   width: 100%;
   height: 100%; }
+
+.table {
+  display: table;
+  position: relative;
+  width: 100%; }
+
+.row {
+  display: table-row;
+  position: relative; }
+
+.cell {
+  display: table-cell; }
+
+.rowspan {
+  position: absolute;
+  top: 0;
+  bottom: 0; }
 
 .pp {
   display: none; }

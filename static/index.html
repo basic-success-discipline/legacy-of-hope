@@ -26,8 +26,8 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/boxy.css" media="screen" type="text/css" >
-	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 	<link rel="stylesheet" href="css/pages/home.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 
 </head>
 
@@ -51,14 +51,22 @@
 						<a href="index.html"><img alt="" class="logo" src="img/LHlogo.png"/></a>
 						<div class="navholder">
 							<div class="nav links">
-								<span class="menu-home currentpage"><a href="index.html">Home</a></span>
-								<span class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></span>
-								<span class="menu-mission"><a href="mission.html">The Mission</a></span>
-								<span class="menu-concert"><a href="concert.html">The Concert</a></span>
-								<span class="menu-guitar"><a href="guitarinitiative.html">The Guitar Initiative</a></span>
-								<span class="menu-team"><a href="board.html">The Team</a></span>
-								<span class="open-contact"><a><i class="fa fa-envelope-o" style="font-size: 20px"></i></a></span>
-								<span class="menu-hamburger"><a><i class="fa fa-bars menu" style="font-size: 20px"></i></a></span>
+								<!-- <span class="menu-home currentpage"><a href="index.html">Home</a></span> -->
+								<!-- <span class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></span> -->
+								<span class="menu-mission"><a href="mission.html">Mission</a></span>
+								<span class="menu-about"><a href="mission.html#about">About</a></span>
+								
+								<span class="menu-concert"><a href="concert.html">Concert</a></span>
+								<span class="menu-board" ><a href="board.html">Board</a></span>
+								<span class="menu-production" ><a href="board.html#production">Production</a></span>
+
+								<!-- <span class="menu-guitar"><a href="guitarinitiative.html">The Guitar Initiative</a></span> -->
+								<!-- <span class="menu-team"><a href="board.html">The Team</a></span> -->
+								<span class="open-contact"><a>Contact</a></span>
+								<span class="menu-donate" ><a>Donate</a></span>
+								<span class="social-icons"><a href="https://www.facebook.com/LegacyOfHopeNelsonMandela" target="_blank" class="external"><i class="fa fa-facebook"></i></a></span>
+								<span class="social-icons"><a href="https://twitter.com/Mandela_LOH" target="_blank" class="external"><i class="fa fa-twitter"></i></a></span>
+								<span class="menu-hamburger"><a><i class="fa fa-bars menu" style="font-size: 15px"></i></a></span>
 							</div>
 						</div>	
 					</div>
@@ -68,12 +76,17 @@
 						<div class="menu-dropdown-background"></div>
 						<div class="wrapper-content">
 							<ul class="links nav-dropdown">
-								<li class="menu-home currentpage"><a href="index.html">Home</a></li>
+								<li class="menu-mission" ><a href="mission.html">Mission</a></li>
+								<li class="menu-about"><a href="mission.html#about">About</a></li>
+								<li class="menu-concert" ><a href="concert.html">Concert</a></li>
+								<li class="menu-board" ><a href="board.html">Board</a></li>
+								<li class="menu-production"><a href="board.html#production">Production</a></li>
+								<!-- <li class="menu-home currentpage"><a href="index.html">Home</a></li>
 								<li class="menu-mandeladay"><a href="mandeladay.html">Mandela Day 2014</a></li>
 								<li class="menu-mission"><a href="mission.html">The Mission</a></li>
 								<li class="menu-concert"><a href="concert.html">The Concert</a></li>
 								<li class="menu-guitar"><a href="guitarinitiative.html">The Guitar Initiative</a></li>
-								<li class="menu-team"><a href="board.html">The Team</a></li>
+								<li class="menu-team"><a href="board.html">The Team</a></li> -->
 							</ul>
 						</div> 
 					</div>
@@ -82,6 +95,47 @@
 			</section>
 			<div class="navspacer"></div>
 			<!-- END NAVIGATION BAR -->
+
+
+<!-- Donate lightbox -->
+<div class="lb">
+  <div class="black-overlay"></div>
+  <div class="lb-container container">
+    <div class="lightbox twelve columns">
+      <h1>Support the Legacy of Hope Foundation</h1>
+      <div class="donate-spacer">&nbsp;</div>
+      <div class="donate-cells">
+        <div class="six columns">
+          <h3>Paypal</h3>
+          <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="GE2HK3NWKFER2">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+        <div class="five columns">
+          <h3>TextCode</h3>
+          <p >Text 'Mandela' to 50555</p>
+        </div>
+      </div>
+      <div class="donate-spacer">&nbsp;</div>
+      <lr>
+
+        <div class="contactinfo">
+          <h1> Legacy of Hope Foundation</h1>
+          <h2>399 W.  Broadway Suite 2A</h2>
+          <h2>New York, New York 10012</h2>
+          <h2>jt(at)legacyofhopeconcerts.org</h2>
+          <h2>(949) 463 1795</h2>
+
+        </div>
+        <h4>EIN: 46-0826445</h4>
+        <div style="text-align:center; width: 100%;"><button class="contactbutton primarybutton" >Close</button></div>
+        <script type='text/javascript' src="js/donate.js"></script>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -106,19 +160,19 @@
 			<div class="wrapper-fix herofix">
 				<div class="hero ">
 					<img src="img/home_hero.png"/>
-				
+
 				</div>
 			</div>
 			<div class="herospacer">
-			<img src="img/home_hero.png"/>
-					<div class="heroblurb">
-						<div class="wrapper-content">
-							<h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-							<p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
-							<p class="herop2">- Nelson Mandela</p>
-						</div>
-						</div>
-						</div>
+				<img src="img/home_hero.png"/>
+				<div class="heroblurb">
+					<div class="wrapper-content">
+						<h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+						<p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+						<p class="herop2">- Nelson Mandela</p>
+					</div>
+				</div>
+			</div>
 			<div class="herobuffer"></div>
 			<script src="js/hero.js"></script>
 			<!-- END HERO -->
@@ -133,7 +187,7 @@
 
 
 			<div class="page">
-			<div class="table">
+				<div class="table">
 					<div class="row row1">
 						<div class="mandeladay cell">
 							<img src="img/home_mandela_day_back.jpg" class="mandeladaybackimg no-pp"/>
@@ -230,147 +284,154 @@
 
 
 
-		<!-- VIDEO LIGHTBOX-->
-		<div id="light" class="lb-content wrapper-fix">	
-			<div class="wrapper-inner">
-				<div class="vidholder">
-					<iframe class="lb-video"  src="//www.youtube.com/embed/KrtR1bXF80A?controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+			<!-- VIDEO LIGHTBOX-->
+			<div id="light" class="lb-content wrapper-fix">	
+				<div class="wrapper-inner">
+					<div class="vidholder">
+						<iframe class="lb-video"  src="//www.youtube.com/embed/KrtR1bXF80A?controls=0&rel=0" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="fade" class="black_overlay"></div>
-		<!--END VIDEO LIGHTBOX-->
+			<div id="fade" class="black_overlay"></div>
+			<!--END VIDEO LIGHTBOX-->
 
 
-		<!-- script for index.html -->
-		<script src="js/home.js"type='text/javascript'></script>
+			<!-- script for index.html -->
+			<script src="js/home.js"type='text/javascript'></script>
 
 
 
 
 			<!-- POPUP DIALOGS-->
-		    <div id="signup-dialog" style="display:none">
-		        <div style="width:400;height:300"><form>
-		            Enter your email address below to receive updates from the Legacy of Hope<br/>
-		            <input type="text" class="register_email" placeholder='Enter your email address'>
-		            <button onClick='javascript:submitSignupForm()' id='signup_submit'>Sign me up</button>
-		        </form></div>
-		    </div>
-		    
-		    <!-- END POPUP DIALOGS -->
+			<div id="signup-dialog" style="display:none">
+				<div style="width:400;height:300"><form>
+					Enter your email address below to receive updates from the Legacy of Hope<br/>
+					<input type="text" class="register_email" placeholder='Enter your email address'>
+					<button onClick='javascript:submitSignupForm()' id='signup_submit'>Sign me up</button>
+				</form></div>
+			</div>
+
+			<!-- END POPUP DIALOGS -->
 
 
-		<!-- FOOOTERS-->
+			<!-- FOOOTERS-->
 
 
 
 
-		<div class="prefooter">
-			<div class="wrapper-content">
-				<div class="pf1">
-					<p>Text “Mandela” to 50555 to support Nelson Mandela's Legacy</p>
-				</div>
-				<div class="pf2">   
-					<script type='text/javascript'>
-						shareWithTwitter('<img src="img/twitter-icon.png"/>', 'Check out this awesome page');
-					</script>
-					<script type='text/javascript'>
-						shareWithFacebook('<img src="img/facebook-icon.png"/>');
-					</script> 
-					<p>Spread the Word</p>
+			<div class="prefooter">
+				<div class="wrapper-content">
+					<div class="pf1">
+						<p>Text “Mandela” to 50555 to support Nelson Mandela's Legacy</p>
+					</div>
+					<div class="pf2">   
+						<script type='text/javascript'>
+							shareWithTwitter('<img src="img/twitter-icon.png"/>', 'Check out this awesome page');
+						</script>
+						<script type='text/javascript'>
+							shareWithFacebook('<img src="img/facebook-icon.png"/>');
+						</script> 
+						<p>Spread the Word</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="footer">
-			<div class="wrapper-content">
-				<div class="f1">
-					<p><a href="javascript:showSignupForm()">Signup</a> to receive news and updates about upcoming events.</p>
-				</div>
-				<div class="f2">
-					<p class="f2p-desktop">© 2014 Legacy Of Hope Foundation - All Rights Reserved</p>
-					<p class="f2p-phone">© 2014 Legacy Of Hope Foundation</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END FOOTERS -->
-
-
-
-
-
-
-
-	<!-- CONTACT FORM -->
-
-
-
-
-
-	<div id="contact">
-		<div id="contactfade" class="black_overlay"></div>
-		<div class="pattern"></div>
-		<div class="container contact-inner">
-			<div class="twelve columns">
-				<div class="card">
-					<form class="legacy-frm" id="contact-form">
-						<h1>Contact Us</h1>
-						<label>
-							<span>Your Name (required):</span>
-							<input id="name" type="text" name="name" placeholder="Your Full Name" minlength="2" required/>
-						</label>
-						<label>
-							<span>Your Email (required):</span>
-							<input id="email" type="email" name="email" placeholder="Valid Email Address" required/>
-						</label>
-						<label for="email2">
-							<span>Confirm Email (required):</span>
-							<input name="email2" id="email2" type="email" placeholder="Confirm Your Email" required>
-						</label>
-						<label>
-							<span>Message (required):</span>
-							<textarea id="message" name="message" placeholder="Your Message to Us" required></textarea>
-						</label> 
-						<label>
-							<span>Sponsor :</span>
-							<input type="checkbox" name="sponsor" id="sponsor"/>
-						</label> 
-						<div id="sponsorarea">
-							<label>
-								<span>Company Name (required):</span>
-								<input id="company" type="text" name="company" placeholder="Your Company Name" />
-							</label>
-							<label>
-								<span>Phone (required):</span>
-								<input id="phone" type="text" name="phone" placeholder="Your Phone Number" />
-							</label>
-							<label>
-								<span>Referrer:</span>
-								<input id="referrer" type="text" name="referrer" placeholder="Who referred you?" />
-							</label>
-							<label>
-								<span>Your Interest (required):</span>
-								<textarea id="interest" name="interest" placeholder="Your Particular Interest" ></textarea>
-							</label>
-						</div>
-						<div id="contactresult" style="display:none;"></div>
-						<label style="margin-top:20px;">
-							<input type="submit" class="pure-button pure-button-primary" value="Send" /> 
-							<input type="reset" class="pure-button" value="Reset" /> 
-						</label> 
-					</form>
+			<div class="footer">
+				<div class="wrapper-content">
+					<div class="f1">
+						<p><a href="javascript:showSignupForm()">Signup</a> to receive news and updates about upcoming events.</p>
+					</div>
+					<div class="f2">
+						<p class="f2p-desktop">© 2014 Legacy Of Hope Foundation - All Rights Reserved</p>
+						<p class="f2p-phone">© 2014 Legacy Of Hope Foundation</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<script type='text/javascript' src="js/contact.js"></script>
-	<!-- END CONTACT FORM -->
+		</section>
+		<!-- END FOOTERS -->
 
 
 
 
 
+
+
+		
+<!-- CONTACT FORM -->
+<div id="contact">
+  <div id="contactfade" class="black_overlay"></div>
+  <div class="pattern"></div>
+  <div class="container contact-inner">
+    <div class="twelve columns">
+      <div class="card">
+
+        <form class="legacy-frm" id="contact-form">
+        <div class="close-contact"><a onclick=""><i class="fa fa-times"></i></a></div>
+          <h1>Contact Us</h1>
+
+          <div class="contactinfo">
+            <h1> Legacy of Hope Foundation</h1>
+            <h2>399 W.  Broadway Suite 2A</h2>
+            <h2>New York, New York 10012</h2>
+            <h2>jt(at)legacyofhopeconcerts.org</h2>
+            <h2>(949) 463 1795</h2>
+          </div>
+          
+          <label>
+            <span>Your Name (required):</span>
+            <input id="name" type="text" name="name" placeholder="Your Full Name" minlength="2" required/>
+          </label>
+          <label>
+            <span>Your Email (required):</span>
+            <input id="email" type="email" name="email" placeholder="Valid Email Address" required/>
+          </label>
+          <label for="email2">
+            <span>Confirm Email (required):</span>
+            <input name="email2" id="email2" type="email" placeholder="Confirm Your Email" required>
+          </label>
+          <label>
+            <span>Message (required):</span>
+            <textarea id="message" name="message" placeholder="Your Message to Us" required></textarea>
+          </label> 
+          <label>
+            <span>Sponsor Enquiry:</span>
+            <input type="checkbox" name="sponsor" id="sponsor"/>
+          </label> 
+          <div id="sponsorarea">
+            <label>
+              <span>Company Name (required):</span>
+              <input id="company" type="text" name="company" placeholder="Your Company Name" />
+            </label>
+            <label>
+              <span>Phone (required):</span>
+              <input id="phone" type="text" name="phone" placeholder="Your Phone Number" />
+            </label>
+            <label>
+              <span>Referrer:</span>
+              <input id="referrer" type="text" name="referrer" placeholder="Who referred you?" />
+            </label>
+            <label>
+              <span>Your Interest (required):</span>
+              <textarea id="interest" name="interest" placeholder="Your Particular Interest" ></textarea>
+            </label>
+          </div>
+          <div id="contactresult" style="display:none;"></div>
+          <label style="margin-top:20px;">
+            <input type="submit" class="contactbutton primarybutton" value="Send" /> 
+            <input type="reset" class="contactbutton" value="Reset" /> 
+          </label> 
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
+<script type='text/javascript' src="js/contact.js"></script>
+<!-- END CONTACT FORM -->
+
+
+
+
+
+	</div>
 </body>
 
 </html>
