@@ -466,7 +466,7 @@ width: 100%;
 color: white;
 text-align: center;
 margin-bottom: 70px;
-height: 80px;
+// height: 80px;
 
 }
 
@@ -623,6 +623,7 @@ text-align: center;
 padding-top: 5px;
 margin-top: 0px;
 margin-bottom: 0px;
+line-height: 1.15em;
 }
 
 
@@ -653,16 +654,19 @@ cursor: pointer;
 
 
  .lightbox .contactinfo h1{
-    font-size: 20px;
+    font-size: 15px;
     text-transform: none;
     margin: 0px !important;
     font-family: 'Open Sans', sans-serif;
     padding-bottom: 5px !important;
+    color: #323232;
   }
   .lightbox .contactinfo h2{
-    font-size: 12px;
+    font-size: 18px;
     text-transform: none;
     margin-bottom: 0px;
+    font-weight: 100;
+    line-height: 1.15em;
     font-family: 'Open Sans', sans-serif;
   }
 
