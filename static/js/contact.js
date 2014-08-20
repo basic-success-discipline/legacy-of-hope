@@ -1,9 +1,14 @@
 
 var openContact = document.getElementsByClassName('open-contact')[0];
+var openContact1 = document.getElementsByClassName('open-contact')[1];
 var closeContact = document.getElementsByClassName('close-contact')[0];
 var contact = document.getElementById('contact');
 var contactfade = document.getElementById('contactfade');
      openContact.onclick=function(){
+                contact.style.display='block';
+                contactfade.style.display='block';
+              };
+                openContact1.onclick=function(){
                 contact.style.display='block';
                 contactfade.style.display='block';
               };
