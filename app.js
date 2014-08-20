@@ -51,7 +51,7 @@ app.post('/contact', function (req, res) {
 	//Mail options
 	mailOpts = {
 			from: req.body.name + ' <' + req.body.email + '>', //grab form data from the request body object
-			to: 'eggast@legacyofhopeconcerts.org, jtrubenbach@gmail.com, mrhoades@bespinholdings.com',
+			to: 'eggast@legacyofhopeconcerts.org, jtrubenbach@gmail.com',
 			subject: 'Website contact form',
 			text: text
 	};
