@@ -14,7 +14,8 @@ router.get('/', function(req, res) {
   	title: "Home - Legacy of Hope",
   	thumb_img: "thumb_home.png",
   	description: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
-  	stylesheet: "home.css"
+  	stylesheet: "home.css",
+    currentpage: "menu-home"
   });
 });
 
@@ -23,7 +24,8 @@ router.get('/board', function(req, res) {
   	title: "Board of Directors - Legacy of Hope",
   	thumb_img: "thumb_board.png",
   	description: "The Legacy of Hope board of Directors.",
-  	stylesheet: "board.css"
+  	stylesheet: "board.css",
+    currentpage: "menu-board"
   });
 });
 
@@ -32,7 +34,8 @@ router.get('/concert', function(req, res) {
   	title: "Concert - Legacy of Hope",
   	thumb_img: "thumb_concerts.png",
   	description: "This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before.",
-  	stylesheet: "concert.css"
+  	stylesheet: "concert.css",
+    currentpage: "menu-concert"
   });
 });
 
@@ -41,7 +44,18 @@ router.get('/guitarinitiative', function(req, res) {
   	title: "The Guitar Initiative - Legacy of Hope",
   	thumb_img: "thumb_guitarinitiative.png",
   	description: "The Guitar Initiative is a campaign to increase awareness and support for Nelson Mandela’s Legacy of Hope, through the medium of music. The Initiative has two main goals: to obtain musician and celebrity endorsements, and to produce ongoing recordings by artists to benefit the Children’s Hospital and its young patients.",
-  	stylesheet: "guitarinitiative.css"
+  	stylesheet: "guitarinitiative.css",
+    currentpage: "menu-guitar"
+  });
+});
+
+router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
+  res.render('legacy-of-hope-nmcht-concert', {
+    title: "Sibongile - Legacy of Hope",
+    thumb_img: "thumb_sibongile.png",
+    description: "The loss of Sibongile Mkhabela’s son spurred her on in the almost impossible dream of creating the Nelson Mandela Children’s Hospital in South Africa.",
+    stylesheet: "sibongile.css",
+    currentpage: "menu-sibongile"
   });
 });
 
@@ -50,7 +64,8 @@ router.get('/mission', function(req, res) {
   	title: "Our Mission - Legacy of Hope",
   	thumb_img: "thumb_mission.png",
   	description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
-  	stylesheet: "mission.css"
+  	stylesheet: "mission.css",
+    currentpage: "menu-mission"
   });
 });
 
@@ -67,18 +82,20 @@ router.get('/sponsors', function(req, res) {
   	title: "Sponsors - Legacy of Hope",
   	thumb_img: "thumb_mission.png",
   	description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
-  	stylesheet: "sponsors.css"
+  	stylesheet: "sponsors.css",
+    currentpage: "menu-sponsors"
   });
 });
 
 
 //make error page
 router.get('*', function(req, res) {
-  res.render('sponsors', {
-    title: "Sponsors - Legacy of Hope",
-    thumb_img: "thumb_mission.png",
-    description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
-    stylesheet: "sponsors.css"
+ res.render('index', {
+    title: "Home - Legacy of Hope",
+    thumb_img: "thumb_home.png",
+    description: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
+    stylesheet: "home.css",
+    currentpage: "menu-home"
   });
 });
 

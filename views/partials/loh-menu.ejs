@@ -58,5 +58,14 @@
       <div class="navspacer"></div>
       <!-- END NAVIGATION BAR -->
 
+    
+      <script type='text/javascript'>
+          if (document.getElementsByClassName('<%= currentpage %>').length>0){
+            document.getElementsByClassName('<%= currentpage %>')[0].className +=' currentpage';
+            document.getElementsByClassName('<%= currentpage %>')[1].className +=' currentpage';
+         }
+    </script>
+ 
+
     <% include loh-donate %>
     <% include loh-contact %>
