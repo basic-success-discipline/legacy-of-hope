@@ -338,8 +338,8 @@ a:hover {
 .logo {
   margin-top: 15px;
   width: 170px;
-  position: relative;
-  z-index: 1001; }
+  z-index: 1001;
+  float: left; }
 
 .links {
   height: 50px;

@@ -140,13 +140,15 @@ a:hover {
 .navholder {
   margin-top: $nav-overflow;
   float: right; 
+  // position: relative;
 }
 
 .logo {
   margin-top: 5px + $nav-overflow;
   width: 170px;
-  position: relative;
+  // position: relative;
   z-index: 1001;
+  float: left;
 }
 
 .links {
