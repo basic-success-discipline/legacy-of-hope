@@ -15,10 +15,10 @@
               //    window.location="mandeladay.html";
               // };
                mission.onclick=function(){ 
-                 window.location="mission.html";
+                 window.location="mission";
               };
                 hospital.onclick=function(){ 
-                 window.location="mission.html#hospital";
+                 window.location="mission#about";
               };
               video.onclick=function(){
                 document.getElementById('light').style.display='block';
@@ -35,13 +35,13 @@
                 $('.lb-video').attr('src', '//www.youtube.com/embed/KrtR1bXF80A?controls=0&rel=0');
               };
                 concert1.onclick=function(){ 
-                 window.location="concert.html";
+                 window.location="concert";
               };
                  concert2.onclick=function(){ 
-                 window.location="concert.html";
+                 window.location="concert";
               };
                 guitar.onclick=function(){ 
-                 window.location="guitarinitiative.html";
+                 window.location="guitarinitiative";
               };
 
 
