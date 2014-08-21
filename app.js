@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var debug = require('debug')('legacyofhopeconcerts');
 
 
 
@@ -13,6 +14,7 @@ var users = require('./routes/users');
 var app = express();
 
 var env = process.env.NODE_ENV || 'development';
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -80,7 +82,11 @@ else if ('production' === env ) {
 
 
 
+app.set('port', process.env.PORT || 3000);
 
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
 
 
 

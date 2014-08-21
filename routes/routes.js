@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var utils = require('../utils.js');
 
 
 
@@ -53,6 +54,14 @@ router.get('/mission', function(req, res) {
   });
 });
 
+
+
+
+
+
+
+
+router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
 router.get('/sponsors', function(req, res) {
   res.render('sponsors', {
   	title: "Sponsors - Legacy of Hope",
@@ -61,6 +70,18 @@ router.get('/sponsors', function(req, res) {
   	stylesheet: "sponsors.css"
   });
 });
+
+
+//make error page
+router.get('*', function(req, res) {
+  res.render('sponsors', {
+    title: "Sponsors - Legacy of Hope",
+    thumb_img: "thumb_mission.png",
+    description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+    stylesheet: "sponsors.css"
+  });
+});
+
 
 
 
