@@ -53,7 +53,7 @@ router.get('/guitarinitiative', function(req, res) {
 
 
 router.get('/aol/legacy-of-hope-nmcht-concert.html', function(req, res) {
-  res.redirect('../legacy-of-hope-nmcht-concert');
+  res.redirect('/legacy-of-hope-nmcht-concert');
 });
 
 
@@ -92,16 +92,12 @@ router.get('/sponsors', function(req, res) {
 });
 
 
+
 //make error page
 router.get('*', function(req, res) {
- res.render('index', {
-    title: "Home - Legacy of Hope",
-    thumb_img: "thumb_home.png",
-    description: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
-    stylesheet: "home.css",
-    currentpage: "menu-home"
-  });
+  res.redirect('/');
 });
+
 
 
 
