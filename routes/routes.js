@@ -6,6 +6,7 @@ var utils = require('../utils.js');
 
 
 
+
 /* GET METHODS */
 
 
@@ -49,6 +50,13 @@ router.get('/guitarinitiative', function(req, res) {
   });
 });
 
+
+
+router.get('/aol/legacy-of-hope-nmcht-concert.html', function(req, res) {
+  res.redirect('../legacy-of-hope-nmcht-concert');
+});
+
+
 router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
   res.render('legacy-of-hope-nmcht-concert', {
     title: "Sibongile - Legacy of Hope",
@@ -59,6 +67,7 @@ router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
   });
 });
 
+
 router.get('/mission', function(req, res) {
   res.render('mission', {
   	title: "Our Mission - Legacy of Hope",
@@ -68,11 +77,6 @@ router.get('/mission', function(req, res) {
     currentpage: "menu-mission"
   });
 });
-
-
-
-
-
 
 
 
