@@ -1,0 +1,189 @@
+@import "../variables.scss";
+
+h5{
+	color: white;
+	// margin-top: 28px;
+}
+
+
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+
+        
+// HERO
+.hero, .herospacer{
+	  overflow: hidden;
+}
+.hero img, .herospacer img{
+	width: 75%;
+	float: right;
+}
+
+
+
+//  HEROBLURB
+.heroblurb-wrapper {
+	z-index: 1;
+	top: 40%; 
+}
+
+.heroblurb {
+	color: white;
+	width: 100%;
+	position: absolute;
+	top: 11%; 
+}
+.heroblurb p, .heroblurb h3{
+	max-width: 55%;
+	margin-left: 0;
+}
+.herop1{
+	font-size: 16px;
+	font-style: italic;
+	text-align: justify;
+}
+.herop2{
+	font-family: "Oswald";
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+// PAGE
+.page {
+	padding-top: 77px;
+	
+}
+
+.page .wrapper-content{
+	overflow:auto;
+	padding-bottom: 97px;
+}
+
+.about{
+	width: 65%;
+	height: auto;
+	float:left;
+	background-color: red;
+	height: 100px;
+
+}
+
+
+.fundraiser{
+	width: 28%;
+	margin-left: 35px;
+	float:right;
+	height: 100px;
+	background-color: green;
+}
+
+.sponsors{
+	height: 280px;
+	background-color: #F2F3F3;
+	width: 100%;
+}
+
+
+// MOBILE - PORTRAIT
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+
+
+
+// MOBILE - PORTRAIT - HERO
+.hero img, .herospacer img{
+	width: 100%;
+	margin-left: -100px;
+	float: none;
+}
+
+
+	//  HEROBLURB
+	.heroblurb {
+		display: none;
+	}
+
+
+
+	//  PAGE
+	.page{
+		position: relative;
+	}
+	
+}
+
+
+
+// MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+
+
+
+// MOBILE - LANDSCAPE - HEROBLURB
+
+
+
+.heroblurb h3{
+	text-align: center;
+	font-size: 15px !important;
+}
+.heroblurb p{
+	display: none;
+}
+
+
+
+}
+
+
+
+
+
+
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+
+
+	
+	// TABLET - PORTRAIT - HEROBLURB
+	.heroblurb p{
+		line-height: 1.1em;
+		font-size: 15px;
+	}
+
+
+
+
+}
+
+
+// TABLET - LANDSCAPE
+@media only screen 
+and (min-width : $tablet-landscape) 
+and (max-width : $desktop - 1px) {
+
+
+
+.heroblurb h3{
+	font-size: 24px;
+}
+
+
+}
+
+
+
+

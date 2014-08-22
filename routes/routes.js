@@ -11,11 +11,11 @@ var utils = require('../utils.js');
 
 
 router.get('/', function(req, res) {
-  res.render('index', {
+  res.render('home', {
   	title: "Home - Legacy of Hope",
   	thumb_img: "thumb_home.png",
   	description: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
-  	stylesheet: "home.css",
+  	stylesheet: "home2.css",
     currentpage: "menu-home"
   });
 });

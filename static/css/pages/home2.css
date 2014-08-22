@@ -1,0 +1,95 @@
+h5 {
+  color: white; }
+
+.banner {
+  position: relative;
+  overflow: auto; }
+
+.banner li {
+  list-style: none; }
+
+.banner ul li {
+  float: left; }
+
+.hero, .herospacer {
+  overflow: hidden; }
+
+.hero img, .herospacer img {
+  width: 75%;
+  float: right; }
+
+.heroblurb-wrapper {
+  z-index: 1;
+  top: 40%; }
+
+.heroblurb {
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 11%; }
+
+.heroblurb p, .heroblurb h3 {
+  max-width: 55%;
+  margin-left: 0; }
+
+.herop1 {
+  font-size: 16px;
+  font-style: italic;
+  text-align: justify; }
+
+.herop2 {
+  font-family: "Oswald";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+.page {
+  padding-top: 77px; }
+
+.page .wrapper-content {
+  overflow: auto;
+  padding-bottom: 97px; }
+
+.about {
+  width: 65%;
+  height: auto;
+  float: left;
+  background-color: red;
+  height: 100px; }
+
+.fundraiser {
+  width: 28%;
+  margin-left: 35px;
+  float: right;
+  height: 100px;
+  background-color: green; }
+
+.sponsors {
+  height: 280px;
+  background-color: #F2F3F3;
+  width: 100%; }
+
+@media only screen and (max-width: 479px) {
+  .hero img, .herospacer img {
+    width: 100%;
+    margin-left: -100px;
+    float: none; }
+
+  .heroblurb {
+    display: none; }
+
+  .page {
+    position: relative; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .heroblurb h3 {
+    text-align: center;
+    font-size: 15px !important; }
+
+  .heroblurb p {
+    display: none; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .heroblurb p {
+    line-height: 1.1em;
+    font-size: 15px; } }
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .heroblurb h3 {
+    font-size: 24px; } }
