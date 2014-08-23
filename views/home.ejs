@@ -16,39 +16,89 @@
 
 
       <!-- HERO -->
-
-      <div class="banner">
-        <ul>
-          <li>
-            <img src="/img/home_hero.png"/>
-          </li>
-          <li><img src="/img/home_hero.png"/></li>
-          <li><img src="/img/home_hero.png"/></li>
-        </ul>
+        <div class="banner">
+          <ul>
+            <li>
+              <div class="hero">
+                <img src="/img/home_hero.png"/>
+                <div class="heroblurb">
+                  <div class="wrapper-content">
+                    <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+                    <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+                    <p class="herop2">- Nelson Mandela</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="hero ">
+                <img src="/img/home_hero.png"/>
+                <div class="heroblurb">
+                  <div class="wrapper-content">
+                    <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+                    <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+                    <p class="herop2">- Nelson Mandela</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="hero ">
+                <img src="/img/home_hero.png"/>
+                <div class="heroblurb">
+                  <div class="wrapper-content">
+                    <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+                    <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+                    <p class="herop2">- Nelson Mandela</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <div class="herobuffer"></div>
-        <script src="/js/hero.js"></script>
         <script type="text/javascript">
-          $(function() {
-            alert("ready");
+         
             $('.banner').unslider({
-              speed: 500,               //  The speed to animate each slide (in milliseconds)
-           
-  delay: 3000,              //  The delay between slide animations (in milliseconds)
-  complete: function() {},  //  A function that gets called after every slide animation
-  keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-  dots: true,               //  Display dot navigation
-  fluid: true              //  Support responsive design. May break non-responsive designs);
-          });
-          });
-          </script>
-          <!-- END HERO -->
+              speed: 500,                
+              dots: true,               
+              fluid: true,
+              pause: true          
+            });
+
+
+
+      
+        </script>
 
 
 
 
 
+
+
+        <!-- PAGE -->
+
+        <div class="page">
+          <div class="wrapper-content">
+            <div class="about">
+
+            </div>
+            <div class="fundraiser">
+            </div>
+          </div>
+          <div class="sponsors"></div>
         </div>
-      </body>
+        <!-- END PAGE -->
 
-      </html>
+
+
+
+
+
+        <% include partials/loh-footer %>
+      </div>
+    </body>
+
+    </html>
