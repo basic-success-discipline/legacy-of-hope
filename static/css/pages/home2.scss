@@ -95,36 +95,109 @@ h5{
 // PAGE
 .page {
 	padding-top: 77px;
+	padding-bottom: 97px;
 	
 }
 
-.page .wrapper-content{
-	overflow:auto;
-	padding-bottom: 97px;
-}
 
-.about{
-	width: 65%;
+
+
+.container .about{
 	height: auto;
 	float:left;
-	background-color: red;
-	height: 100px;
-
+	position: relative;
+	margin-bottom: 70px;
+	margin-left:0px;
 }
 
 
-.fundraiser{
-	width: 28%;
-	margin-left: 35px;
+
+.container .about p{
+	text-align: justify;
+}
+
+.container .about a{
+	color: #323232;
+}
+
+.container .about a:hover{
+	color: #358fe3;
+}
+
+.container .fundraiser{
 	float:right;
 	height: 100px;
 	background-color: green;
+	margin-bottom: 70px;
+	margin-right: 0px;
+}
+
+
+
+.learnmore{
+	width: 100%;
+}
+
+.learnmore span{
+	width: 100%;
+
+	background-color: green;
+}
+.learnmore a{
+	text-align:center;
+
+}
+
+.container  .card{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.container  .card:nth-child(3){
+	margin-left: 30px;
+	margin-right: 30px;
+}
+$cardpadding: 0px;
+.latestnews a{
+	padding: $cardpadding;
+	position: relative;
+	box-sizing:border-box;
+	border-radius: 5px;	
+}
+
+.latestnews a img{
+	width: 100%;
+	  margin-bottom: 10px;
+}
+.latestnews a h5{
+	color: #323232;
+	text-align: left;
+	transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+  margin-bottom: 10px;
+}
+.latestnews a p{
+	color: initial;
+	transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+  margin-bottom: 0px;
+  margin-top: 0px;
+}	
+
+
+.latestnews a:hover p, .latestnews a:hover h5{
+	color: #358fe3;
 }
 
 .sponsors{
 	height: 280px;
 	background-color: #F2F3F3;
 	width: 100%;
+
 }
 
 

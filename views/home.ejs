@@ -4,6 +4,7 @@
 <head>
  <% include partials/loh-head %>
  <script type="text/javascript" src="/js/unslider.min.js"></script>
+ <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
 </head>
 
 <body>
@@ -59,7 +60,6 @@
 
         <div class="herobuffer"></div>
         <script type="text/javascript">
-         
             $('.banner').unslider({
               speed: 500,                
               dots: true,               
@@ -67,9 +67,9 @@
               pause: true          
             });
 
-
-
-      
+            $('.cardcopy').ellipsis({
+    row: 2
+});
         </script>
 
 
@@ -81,12 +81,38 @@
         <!-- PAGE -->
 
         <div class="page">
-          <div class="wrapper-content">
-            <div class="about">
+         
+          <div class="container">
+            <div class="eight columns about">
+            <h1>The Legacy of Hope</h1>
+            <p>The Legacy of Hope Foundation provides medical care and facilities for underserved children and communities around the world. In that spirit, please join us in our global campaign to fulfill the last living wish of Nelson Mandela—to help build the Nelson Mandela Children’s Hospital.</p>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+            <p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.</p>
+            <a href="/mission" style="float:left;">Learn more about our mission ></a>
+            <a href="/mission#about" style="float:right;">Learn more about the hospital ></a>
+            </div>
+            <div class="four columns fundraiser">
+            </div>
+          </div>
 
-            </div>
-            <div class="fundraiser">
-            </div>
+
+          <div class="container latestnews">
+          <h4><u>Latest News</u></h4>
+          <% for (var i = 0; i < 3; i++) { %>
+          <a class="four columns card" href="/mandeladay">
+            <img src="/img/card_mandela_day.jpg"/>
+            <h5>Mandela Day 2014</h5>
+            <p class="cardcopy">Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.
+            tiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam</p>
+          </a>
+          <% } %>
+          </div>
+          
+        <script type="text/javascript">
+            $('.cardcopy').ellipsis({
+                row: 3
+              });
+        </script>
           </div>
           <div class="sponsors"></div>
         </div>
