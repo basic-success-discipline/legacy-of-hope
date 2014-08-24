@@ -3,18 +3,19 @@ h5 {
 
 .banner {
   position: relative;
-  overflow: auto;
-  height: 100%; }
+  overflow: auto; }
 
 .banner li {
-  list-style: none; }
+  list-style: none;
+  float: none; }
 
 .banner ul li {
   float: left; }
 
 .hero, .herospacer {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  height: 100% !important; }
 
 .hero img, .herospacer img {
   width: 75%;

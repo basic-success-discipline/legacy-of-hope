@@ -3,8 +3,11 @@
 
 <head>
  <% include partials/loh-head %>
- <script type="text/javascript" src="/js/unslider.min.js"></script>
+
  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
+
+ <!-- This script is modified specifically for this page at line 73 -->
+ <script type="text/javascript" src="/js/unslider.js"></script>
 </head>
 
 <body>
@@ -21,7 +24,7 @@
         <ul>
           <li>
             <div class="hero">
-              <img src="/img/home_hero.png"/>
+              <img src="/img/home_hero.png" />
               <div class="heroblurb">
                 <div class="wrapper-content">
                   <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
@@ -58,85 +61,86 @@
         </ul>
       </div>
 
+
       <div class="herobuffer"></div>
       <script type="text/javascript">
+      // A $( document ).ready() block.
+      $(function() {
+
         $('.banner').unslider({
-          speed: 500,                
+          speed: 500,               
           dots: true,               
           fluid: true,
           pause: true          
         });
+      });
+    </script>
 
+
+
+
+
+
+
+    <!-- PAGE -->
+
+    <div class="page">
+
+      <div class="container">
+        <div class="eight columns about">
+          <h1>The Legacy of Hope</h1>
+          <p>The Legacy of Hope Foundation provides medical care and facilities for underserved children and communities around the world. In that spirit, please join us in our global campaign to fulfill the last living wish of Nelson Mandela—to help build the Nelson Mandela Children’s Hospital.</p>
+          <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+          <p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.</p>
+          <a href="/mission" style="float:left;">Learn more about our mission ></a>
+          <a href="/mission#about" style="float:right;">Learn more about the hospital ></a>
+        </div>
+        <div class="four columns fundraiser">
+        </div>
+      </div>
+
+
+      <div class="container latestnews">
+        <h4><u>Latest News</u></h4>
+        <% for (var i = 0; i < cardimg.length; i++) { %>
+        <a class="four columns card" href="<%= cardlink[i] %>">
+          <img src="<%= cardimg[i] %>"/>
+          <h5><%= cardtitle[i] %></h5>
+          <p class="cardcopy"><%= cardcopy[i] %></p>
+        </a>
+        <% } %>
+      </div>
+
+      <script type="text/javascript">
         $('.cardcopy').ellipsis({
-          row: 2
+          row: 3
         });
       </script>
 
 
 
-
-
-
-
-      <!-- PAGE -->
-
-      <div class="page">
-
-        <div class="container">
-          <div class="eight columns about">
-            <h1>The Legacy of Hope</h1>
-            <p>The Legacy of Hope Foundation provides medical care and facilities for underserved children and communities around the world. In that spirit, please join us in our global campaign to fulfill the last living wish of Nelson Mandela—to help build the Nelson Mandela Children’s Hospital.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
-            <p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.</p>
-            <a href="/mission" style="float:left;">Learn more about our mission ></a>
-            <a href="/mission#about" style="float:right;">Learn more about the hospital ></a>
-          </div>
-          <div class="four columns fundraiser">
-          </div>
-        </div>
-
-
-        <div class="container latestnews">
-          <h4><u>Latest News</u></h4>
-          <% for (var i = 0; i < cardimg.length; i++) { %>
-          <a class="four columns card" href="<%= cardlink[i] %>">
-            <img src="<%= cardimg[i] %>"/>
-            <h5><%= cardtitle[i] %></h5>
-            <p class="cardcopy"><%= cardcopy[i] %></p>
-          </a>
-          <% } %>
-        </div>
-
-        <script type="text/javascript">
-          $('.cardcopy').ellipsis({
-            row: 3
-          });
-        </script>
-
-
-
-        <div class="honorary container">
-          <div class="left arrow" ><h4><</h4></div>
-          <div class="right arrow"><h4>></h4></div>
-          
-          <h4><u>Meet the Honorary Board</u></h4>
-          <div class="inner-container">
-            <% var panels = Math.ceil(boardimg.length/4); %>
-            <div class="content-container" style="width: <%= panels *100 %>%;)">
-              <% for (var i = 0; i < boardimg.length; i++) { %>
-              <div class="three columns board">
-                <img src="<%= boardimg[i] %>"/>
-              </div>
-              <% } %>
-
+      <div class="honorary container">
+        <div class="left arrow" ><h4><</h4></div>
+        <div class="right arrow"><h4>></h4></div>
+        
+        <h4><u>Meet the Honorary Board</u></h4>
+        <div class="inner-container">
+          <% var panels = Math.ceil(boardimg.length/4); %>
+          <div class="content-container" style="width: <%= panels *100 %>%;)">
+            <% for (var i = 0; i < boardimg.length; i++) { %>
+            <div class="three columns board">
+              <img src="<%= boardimg[i] %>"/>
             </div>
+            <% } %>
+
           </div>
         </div>
+      </div>
 
-        <script type="text/javascript">
-          var currentpanel = 0;
-          $('.right').click(function(){
-            if(currentpanel < <%= panels - 1 %>){
+      <script type="text/javascript">
+        var currentpanel = 0;
+        $('.right').click(function(){
+          if(currentpanel < <%= panels - 1 %>){
             var scroll = $('.inner-container').width();
             scroll += currentpanel*scroll;
             currentpanel++;
@@ -146,35 +150,35 @@
              }, 500);
             })
           }
-          });
+        });
         
-          $('.left').click(function(){
-             if(currentpanel > 0 ){
-            var scroll = $('.inner-container').width();
-             scroll -= currentpanel*scroll;
-            currentpanel--;
-            $('.board').each(function() {
-              $(this).animate({
-               left: scroll
-             }, 500);
-            })
-          }
-          });
+        $('.left').click(function(){
+         if(currentpanel > 0 ){
+          var scroll = $('.inner-container').width();
+          scroll -= currentpanel*scroll;
+          currentpanel--;
+          $('.board').each(function() {
+            $(this).animate({
+             left: scroll
+           }, 500);
+          })
+        }
+      });
         
 
-        </script>
-      </div>
-      <div class="sponsors"></div>
+      </script>
     </div>
-    <!-- END PAGE -->
-
-
-
-
-
-
-    <% include partials/loh-footer %>
+    <div class="sponsors"></div>
   </div>
+  <!-- END PAGE -->
+
+
+
+
+
+
+  <% include partials/loh-footer %>
+</div>
 </body>
 
 </html>
