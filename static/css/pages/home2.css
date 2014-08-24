@@ -14,8 +14,7 @@ h5 {
 
 .hero, .herospacer {
   overflow: hidden;
-  position: relative;
-  height: 100% !important; }
+  position: relative; }
 
 .hero img, .herospacer img {
   width: 75%;
@@ -178,7 +177,24 @@ h5 {
 .sponsors {
   height: 280px;
   background-color: #F2F3F3;
+  width: 100%;
+  line-height: 280px; }
+
+.sponsors .sponsor {
+  position: absolute; }
+
+.aol img {
   width: 100%; }
+
+.sponsors .container span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: right;
+  width: 100%; }
+
+.aol p {
+  font-size: 12px; }
 
 @media only screen and (max-width: 479px) {
   .hero img, .herospacer img {
