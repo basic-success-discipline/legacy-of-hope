@@ -21,6 +21,8 @@ router.get('/', function(req, res) {
     cardimg: ["/img/card_mandela_day.jpg"],
     cardtitle: ["Mandela Day 2014"],
     cardcopy: ["Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam."],
+    carddate: ["July 18, 2014"],
+    cardlikes: ["528"],
     boardimg: ["/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png"]
   });
 });

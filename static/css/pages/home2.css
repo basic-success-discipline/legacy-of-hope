@@ -146,6 +146,24 @@ h5 {
 .latestnews a:hover p, .latestnews a:hover h5 {
   color: #358fe3; }
 
+.latestnews .card .bottom {
+  height: 30px;
+  line-height: 30px; }
+
+.latestnews .card .bottom span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: right;
+  width: 100%; }
+
+.latestnews .card .date {
+  float: left; }
+
+.latestnews .card i {
+  float: right;
+  margin-top: 8px; }
+
 .honorary {
   position: relative; }
 

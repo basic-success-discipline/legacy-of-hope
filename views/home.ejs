@@ -95,7 +95,19 @@
           <a href="/mission" style="float:left;">Learn more about our mission ></a>
           <a href="/mission#about" style="float:right;">Learn more about the hospital ></a>
         </div>
+
+
         <div class="four columns fundraiser">
+          <h4>Fundraising Status</h4>
+          <hr/>
+          <img src="/img/fundraiser_thermometer.png"/>
+          <p>$100M is needed to  build the Nelson Mandela Children's Hospital</p>
+          <p>$70M has been raised around the world to date</p>
+          <p>$30M is still needed</p>
+          <h3><a>Give Here!</a> Help fulfill Nelson Mandela's dream</h3>
+          <p>Support The Legacy of Hope Foundation</p>
+          <div class="donate">
+          </div>
         </div>
       </div>
 
@@ -107,6 +119,15 @@
           <img src="<%= cardimg[i] %>"/>
           <h5><%= cardtitle[i] %></h5>
           <p class="cardcopy"><%= cardcopy[i] %></p>
+          <hr style="border: dashed 1px #DEDEDE; "/>
+          <div class="bottom">
+          <span>
+          <p class="date"><%= carddate[i] %></p>
+          <i class="fa fa-heart">  <%= cardlikes[i] %></i>
+          </span>
+          </div>
+          <hr style="border: solid 1px #DEDEDE;"/>
+
         </a>
         <% } %>
       </div>
