@@ -104,6 +104,9 @@ h5 {
 .learnmore a {
   text-align: center; }
 
+.latestnews {
+  margin-bottom: 90px; }
+
 .container .card {
   margin-left: 0px;
   margin-right: 0px; }
@@ -112,7 +115,7 @@ h5 {
   margin-left: 30px;
   margin-right: 30px; }
 
-.latestnews a {
+.container .latestnews a {
   padding: 0px;
   position: relative;
   box-sizing: border-box;
@@ -142,6 +145,34 @@ h5 {
 
 .latestnews a:hover p, .latestnews a:hover h5 {
   color: #358fe3; }
+
+.honorary {
+  position: relative; }
+
+.honorary .arrow {
+  position: absolute;
+  top: 50%;
+  cursor: pointer; }
+
+.honorary .right {
+  right: -30px; }
+
+.honorary .left {
+  left: -30px; }
+
+.honorary .inner-container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 250px;
+  margin-left: -10px;
+  width: 100%; }
+
+.honorary .content-container {
+  height: 100%; }
+
+.honorary .board img {
+  width: 100%;
+  margin-bottom: 100px; }
 
 .sponsors {
   height: 280px;

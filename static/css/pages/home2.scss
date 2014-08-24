@@ -102,6 +102,7 @@ h5{
 
 
 
+
 .container .about{
 	height: auto;
 	float:left;
@@ -148,6 +149,10 @@ h5{
 
 }
 
+.latestnews{
+	margin-bottom: 90px;
+}
+
 .container  .card{
 	margin-left: 0px;
 	margin-right: 0px;
@@ -158,7 +163,7 @@ h5{
 	margin-right: 30px;
 }
 $cardpadding: 0px;
-.latestnews a{
+.container .latestnews a{
 	padding: $cardpadding;
 	position: relative;
 	box-sizing:border-box;
@@ -191,6 +196,43 @@ $cardpadding: 0px;
 
 .latestnews a:hover p, .latestnews a:hover h5{
 	color: #358fe3;
+}
+
+
+.honorary{
+	position: relative;
+}
+
+.honorary .arrow{
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+}
+
+.honorary .right{
+	right: -30px;
+}
+
+.honorary .left{
+	left: -30px;
+}
+
+.honorary .inner-container{
+	overflow-x:hidden;
+	overflow-y:hidden;
+	height: 250px;
+	margin-left: -10px;
+	width: 100%;
+}
+
+.honorary .content-container{
+
+	height: 100%;
+}
+
+.honorary .board img{
+	width: 100%;
+	margin-bottom: 100px;
 }
 
 .sponsors{
