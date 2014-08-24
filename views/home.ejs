@@ -92,15 +92,17 @@
           <p>The Legacy of Hope Foundation provides medical care and facilities for underserved children and communities around the world. In that spirit, please join us in our global campaign to fulfill the last living wish of Nelson Mandela—to help build the Nelson Mandela Children’s Hospital.</p>
           <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
           <p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.</p>
-          <a href="/mission" style="float:left;">Learn more about our mission ></a>
-          <a href="/mission#about" style="float:right;">Learn more about the hospital ></a>
+          <a href="/mission" class="left">Learn more about our mission ></a>
+          <a href="/mission#about" class="right">Learn more about the hospital ></a>
         </div>
 
 
         <div class="four columns fundraiser">
-          <h4>Fundraising Status</h4>
-          <hr/>
-          <img src="/img/fundraiser_thermometer.png"/>
+          <h4 style="clear:right">Fundraising Status</h4>
+          <hr />
+          <div style="float:right; position: relative; height:250px; width: 60px;">
+          <span class="thermometer">$70M</span>
+         </div>
           <p>$100M is needed to  build the Nelson Mandela Children's Hospital</p>
           <p>$70M has been raised around the world to date</p>
           <p>$30M is still needed</p>
@@ -114,7 +116,7 @@
 
       <div class="container latestnews">
         <h4><u>Latest News</u></h4>
-        <% for (var i = 0; i < cardimg.length; i++) { %>
+        <% for (var i = 0; i < (cardimg.length <= 3 ? cardimg.length : 3); i++) { %>
         <a class="four columns card" href="<%= cardlink[i] %>">
           <img src="<%= cardimg[i] %>"/>
           <h5><%= cardtitle[i] %></h5>
@@ -122,8 +124,8 @@
           <hr style="border: dashed 1px #DEDEDE; "/>
           <div class="bottom">
           <span>
-          <p class="date"><%= carddate[i] %></p>
-          <i class="fa fa-heart">  <%= cardlikes[i] %></i>
+          <p class="date" style="vertical-align: text-top;"><%= carddate[i] %></p>
+          <p class="likes"><i class="fa fa-heart"> </i> <%= cardlikes[i] %></p>
           </span>
           </div>
           <hr style="border: solid 1px #DEDEDE;"/>

@@ -17,12 +17,12 @@ router.get('/', function(req, res) {
   	description: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
   	stylesheet: "home2.css",
     currentpage: "menu-home",
-    cardlink: ["/mandeladay"],
-    cardimg: ["/img/card_mandela_day.jpg"],
-    cardtitle: ["Mandela Day 2014"],
-    cardcopy: ["Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam."],
-    carddate: ["July 18, 2014"],
-    cardlikes: ["528"],
+    cardlink: ["/mandeladay", "/mandeladay"],
+    cardimg: ["/img/card_mandela_day.jpg", "/img/card_mandela_day.jpg", "/img/card_mandela_day.jpg"],
+    cardtitle: ["Mandela Day 2014","Mandela Day 2014","Mandela Day 2014"],
+    cardcopy: ["Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.", "Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.", "Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam."],
+    carddate: ["July 18, 2014", "July 18, 2014", "July 18, 2014"],
+    cardlikes: ["528", "528", "523"],
     boardimg: ["/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png", "/img/board_hopkins.png"]
   });
 });

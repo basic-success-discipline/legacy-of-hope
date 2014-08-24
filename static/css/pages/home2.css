@@ -84,15 +84,63 @@ h5 {
 .container .about a {
   color: #323232; }
 
+.container .about a.left {
+  float: left; }
+
+.container .about a.right {
+  float: right; }
+
 .container .about a:hover {
   color: #358fe3; }
 
 .container .fundraiser {
   float: right;
-  height: 100px;
-  background-color: green;
   margin-bottom: 70px;
   margin-right: 0px; }
+
+.thermometer {
+  margin: 50% 0 0 50%;
+  left: -15px;
+  top: 0px;
+  width: 22px;
+  height: 150px;
+  display: block;
+  font: bold 14px/152px helvetica, arial, sans-serif;
+  text-indent: 36px;
+  background: -webkit-linear-gradient(top, white 0%, white 30%, #db3f02 30%, #db3f02 100%);
+  border-radius: 20px 22px 0 0;
+  border: 5px solid #4a1c03;
+  border-bottom: none;
+  position: absolute;
+  box-shadow: inset 0 0 0 4px #fff;
+  color: #4a1c03; }
+
+/* Thermometer Bulb */
+.thermometer:before {
+  content: ' ';
+  width: 44px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  top: 142px;
+  left: -16px;
+  z-index: -1;
+  /* Place the bulb under the column */
+  background: #db3f02;
+  border-radius: 44px;
+  border: 5px solid #4a1c03;
+  box-shadow: inset 0 0 0 4px #fff; }
+
+/* This piece here connects the column with the bulb */
+.thermometer:after {
+  content: ' ';
+  width: 14px;
+  height: 7px;
+  display: block;
+  position: absolute;
+  top: 146px;
+  left: 4px;
+  background: #db3f02; }
 
 .learnmore {
   width: 100%; }
@@ -107,11 +155,12 @@ h5 {
 .latestnews {
   margin-bottom: 90px; }
 
-.container .card {
+.latestnews .card {
   margin-left: 0px;
-  margin-right: 0px; }
+  margin-right: 0px;
+  margin-bottom: 20px; }
 
-.container .card:nth-child(3) {
+.latestnews .card:nth-child(3) {
   margin-left: 30px;
   margin-right: 30px; }
 
@@ -160,9 +209,9 @@ h5 {
 .latestnews .card .date {
   float: left; }
 
-.latestnews .card i {
+.latestnews .card .likes {
   float: right;
-  margin-top: 8px; }
+  display: inline-block; }
 
 .honorary {
   position: relative; }
@@ -204,12 +253,15 @@ h5 {
 .aol img {
   width: 100%; }
 
+.container:nth-child(1) .aol img {
+  margin-top: 20px; }
+
 .sponsors .container span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  text-align: right;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .aol p {
   font-size: 12px; }
@@ -224,14 +276,88 @@ h5 {
     display: none; }
 
   .page {
-    position: relative; } }
+    position: relative; }
+
+  .page .container .about a {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px; }
+
+  .latestnews.container .four.columns {
+    margin-left: 0px; }
+
+  .honorary .left.arrow {
+    left: -10px; }
+
+  .honorary .right.arrow {
+    right: -10px; }
+
+  .honorary .inner-container {
+    margin-left: 0px; }
+
+  .honorary .inner-container {
+    height: auto; }
+
+  .honorary.container .three.columns {
+    width: 150px; }
+
+  .honorary.container .board img {
+    margin-bottom: 0;
+    display: block; }
+
+  .sponsors {
+    height: 400px;
+    padding-top: 50px; }
+
+  .sponsors .container .aol span {
+    text-align: center; }
+
+  .sponsors .container .three.columns {
+    width: 150px;
+    float: none; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .heroblurb h3 {
     text-align: center;
     font-size: 15px !important; }
 
   .heroblurb p {
-    display: none; } }
+    display: none; }
+
+  .page .container .about a {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px; }
+
+  .latestnews.container .four.columns {
+    margin-left: 0px; }
+
+  .honorary .inner-container {
+    margin-left: 0px; }
+
+  .honorary .inner-container {
+    height: auto; }
+
+  .honorary.container .three.columns {
+    width: 210px; }
+
+  .honorary.container .board img {
+    margin-bottom: 0;
+    display: block; }
+
+  .sponsors {
+    height: 380px;
+    padding-top: 50px; }
+
+  .sponsors .container .aol span {
+    text-align: center; }
+
+  .sponsors .container .three.columns {
+    width: 210px;
+    float: none; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .heroblurb p {
     line-height: 1.1em;
