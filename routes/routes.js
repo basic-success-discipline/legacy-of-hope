@@ -18,16 +18,13 @@ router.get('/', function(req, res) {
   	stylesheet: "home2.css",
     currentpage: "menu-home",
     board: ["/img/board_hopkins.png", 
+            "/img/board_bridges.png", 
+            "/img/board_vereen.png", 
+            "/img/board_portman.png",
             "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png", 
-            "/img/board_hopkins.png"],
+            "/img/board_bridges.png", 
+            "/img/board_vereen.png", 
+            "/img/board_portman.png"],
     stories: [
             {
               title: "Mandela Day 2014",
@@ -38,13 +35,22 @@ router.get('/', function(req, res) {
               link: "/mandeladay"
             },
             {
-              title: "Mandela Day 2015",
-              image: "/img/card_mandela_day.jpg",
+              title: "The Gibson Guitar Initiative",
+              image: "/img/card_guitar_initiative.jpg",
               blurb: "Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.",
-              date: "July 18, 2014",
-              likes : "528",
-              link: "/mandeladay"
-            }], 
+              date: "July 1, 2014",
+              likes : "566",
+              link: "/guitarinitiative"
+            },
+            {
+              title: "The Legacy of Hope Concert",
+              image: "/img/card_concert.jpg",
+              blurb: "Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.",
+              date: "December 13, 2014",
+              likes : "654",
+              link: "/concert"
+            }
+            ], 
 
     
   });

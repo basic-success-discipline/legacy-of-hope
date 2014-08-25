@@ -197,7 +197,15 @@ h5 {
   font-family: "Open Sans";
   color: white;
   text-transform: uppercase;
-  border: 0px; }
+  border: 0px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; }
+
+.fundraiser .donatebox .donate button:hover {
+  background-color: #358fe3; }
 
 .learnmore {
   width: 100%; }

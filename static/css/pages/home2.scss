@@ -246,9 +246,17 @@ h5{
   color: rgb( 255, 255, 255 );
   text-transform: uppercase;
   border: 0px;
+  cursor: pointer;
+  	transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
 
 }
 
+.fundraiser .donatebox .donate button:hover{
+	background-color: #358fe3;
+}
 
 
 .learnmore{
@@ -564,6 +572,7 @@ and (max-width: $tablet-portrait - 1px)  {
 	padding-left:81px;
 	padding-right: 85px;
 }
+
 
 .latestnews.container .four.columns{
 	margin-left: 0px;
