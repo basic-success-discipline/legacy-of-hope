@@ -265,6 +265,8 @@ h5{
 
 }
 
+
+
 .latestnews{
 	margin-bottom: 90px;
 }
@@ -287,9 +289,21 @@ $cardpadding: 0px;
 	border-radius: 5px;	
 }
 
+
+.latestnews a .stretchy-wrapper{
+	width: 100%;
+	height: 0px;
+	padding-bottom: 79%;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
 .latestnews a img{
 	width: 100%;
-	  margin-bottom: 10px;
+    top: 0; 
+    left: 0; 
+    right: 0;
+
 }
 .latestnews a h5{
 	color: #323232;
@@ -357,7 +371,7 @@ $cardpadding: 0px;
 .honorary .inner-container{
 	overflow-x:hidden;
 	overflow-y:hidden;
-	height: 250px;
+	height: 200px;
 	margin-left: -10px;
 	width: 100%;
 }
@@ -367,9 +381,24 @@ $cardpadding: 0px;
 	height: 100%;
 }
 
+.honorary .board .stretchy-wrapper{
+	width: 100%;
+	padding-bottom: 73%;
+	overflow: hidden;
+	height: 0px;
+}
+
 .honorary .board img{
 	width: 100%;
-	margin-bottom: 100px;
+    top: 0; 
+    left: 0; 
+    right: 0;
+	margin-bottom: 40px;
+
+}
+
+.honorary .board img{
+	
 }
 
 .sponsors{
