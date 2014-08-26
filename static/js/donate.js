@@ -1,12 +1,16 @@
 $('.menu-donate').click(function(){
-    $('.lb').show(500, "swing");
+    showDonate();
    });
-   // $('.contactbutton').click(function(){
-   //  $('.lb').hide(500, "swing");
-   // });
+   $('.closedonate').click(function(){
+    $('.lb').hide(500, "swing");
+   });
 $('.donateboxbutton').click(function(){
-    $('.lb').show(500, "swing");
+    
    });
+
+var showDonate = function(){
+  $('.lb').show(500, "swing");
+}
 
   $('.black-overlay').click(function(){
     $('.lb').hide(500, "swing");
