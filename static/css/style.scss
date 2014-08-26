@@ -397,11 +397,11 @@ a:hover {
 
 // SIDEBAR
 
-.sidebar{
-  float:right;
-  margin-bottom: 70px;
+.container .sidebar{
   margin-right: 0px;
+  float:right;
 }
+
 
 .sidebar h4 {
   font-size: 18px;
@@ -1337,7 +1337,12 @@ p{
   padding-right: 15px;
 }
 
-
+//MOBILE -- LANDSCAPE -- SIDEBAR
+.sidebar .donatebox {
+  padding-left:81px;
+  padding-right: 85px;
+  margin-top: 90px;
+}
 
 
 //  IPHONE 5 -- LANDSCAPE -- FOOTERS
@@ -1429,7 +1434,12 @@ p{
 
 
 
-
+//MOBILE -- LANDSCAPE -- SIDEBAR
+.sidebar .donatebox {
+  padding-left:81px;
+  padding-right: 85px;
+  margin-top: 90px;
+}
 
 
 

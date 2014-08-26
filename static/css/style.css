@@ -523,10 +523,9 @@ a:hover {
 .maincopy a:hover {
   color: #358fe3; }
 
-.sidebar {
-  float: right;
-  margin-bottom: 70px;
-  margin-right: 0px; }
+.container .sidebar {
+  margin-right: 0px;
+  float: right; }
 
 .sidebar h4 {
   font-size: 18px;
@@ -1257,6 +1256,11 @@ a:hover {
     display: inherit;
     padding-right: 15px; }
 
+  .sidebar .donatebox {
+    padding-left: 81px;
+    padding-right: 85px;
+    margin-top: 90px; }
+
   .prefooter {
     height: 65px;
     padding-top: 10px; }
@@ -1323,6 +1327,11 @@ a:hover {
   .nav .currentpage {
     display: inherit;
     padding-right: 15px; }
+
+  .sidebar .donatebox {
+    padding-left: 81px;
+    padding-right: 85px;
+    margin-top: 90px; }
 
   .prefooter {
     height: 65px;
