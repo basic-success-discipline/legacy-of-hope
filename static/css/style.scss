@@ -190,6 +190,32 @@ a:hover {
 .dropdown-wrapper{
   position: relative;
 }
+
+.navbar .menu-donate{
+  background-color: #358fe3; 
+  padding:8px;
+  padding-top: 5px;
+  margin-top: -6px;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+  cursor: pointer;
+  
+}
+.navbar .links .menu-donate:hover{
+  background-color: rgb(204, 89, 37);
+}
+
+.navbar .links .menu-donate a{
+  font-size: 12px;
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+.navbar .links .menu-donate a:hover{
+  color: white;
+}
 .menu-dropdown {
   width: 100%;
   height: 195px;
@@ -200,6 +226,7 @@ a:hover {
   visibility: hidden;
   -webkit-transition: opacity .5s; /* Safari */
   transition: opacity .5s;
+
 }
 
 
@@ -314,6 +341,173 @@ a:hover {
   background: white;
   z-index: 5;
 }
+
+
+
+
+// SIDEBAR
+
+.sidebar{
+  float:right;
+  margin-bottom: 70px;
+  margin-right: 0px;
+}
+
+.sidebar h4 {
+  font-size: 18px;
+  font-family: "Oswald";
+  color: rgb( 25, 25, 25 );
+  font-weight: 500;
+  clear: right;
+  margin-bottom: 0px;
+  line-height: 36px;
+  vertical-align: text-bottom;
+}
+
+
+
+.sidebar .missionstatement{
+  margin-bottom: 46px;
+    text-align: center;
+}
+
+.sidebar .missionstatement h4{
+  text-align: left;
+}
+.sidebar .missionstatement p{
+  font-size: 13px;
+  font-family: "Open Sans";
+  color: rgb( 31, 34, 41 );
+  line-height: 1.333;
+  text-align: justify;
+    margin-top: 0px;
+    margin-bottom: 10px;
+ 
+}
+
+.sidebar .missionstatement a{
+  font-size: 13px;
+  font-family: "Open Sans";
+  color: rgb( 31, 34, 41 );
+  line-height: 1.333;
+  font-weight: bold;
+ border-bottom: 1px solid #000;
+ padding-bottom: 3px;
+ 
+}
+
+.sidebar .fundraiser .thermometer {
+    margin:20px 0 0 50%;
+    left:-15px;
+    top:0px;
+    width:22px;
+    height:150px;
+    display:block;
+    font:bold 14px/152px "Oswald", arial, sans-serif;
+    text-indent: 36px;
+    background: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
+    border-radius:20px 22px 0 0;
+    border:3px solid #4a1c03;
+    border-bottom:none;
+    position:absolute;
+    box-shadow:inset 0 0 0 4px #fff;
+    color:#4a1c03;
+}
+/* Thermometer Bulb */
+ .sidebar .fundraiser .thermometer:before {
+    content:' ';
+    width:44px;
+    height:44px;
+    display:block;
+    position:absolute;
+    top:144px;
+    left:-14px;
+    z-index:-1;
+    /* Place the bulb under the column */
+    background:#db3f02;
+    border-radius:44px;
+    border:3px solid #4a1c03;
+    box-shadow:inset 0 0 0 4px #fff;
+}
+/* This piece here connects the column with the bulb */
+ .sidebar .fundraiser .thermometer:after {
+    content:' ';
+    width:14px;
+    height:7px;
+    display:block;
+    position:absolute;
+    top:146px;
+    left:4px;
+    background:#db3f02;
+}
+
+.sidebar .fundraiser p{
+  font-size: 16px;
+  font-family: "Oswald";
+  color: rgb( 25, 25, 25 );
+  line-height: 1.375;
+
+  margin-bottom: 22px;
+  font-weight: 300;
+
+
+}
+
+.sidebar .donatebox{
+  width: 100%;
+  height: auto;
+  background-color: #f2f3f3;
+  border-left: solid 4px #5B95C8;
+  margin-top: 50px;
+  padding-left: 14px;
+  padding-right: 11px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  box-sizing: border-box;
+
+}
+
+
+.sidebar .donatebox h3 {
+  font-size: 23px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.sidebar .donatebox p {
+  font-size: 13px;
+  font-family: "Open Sans";
+  margin-bottom: 15px;
+
+}
+.sidebar .donatebox .donate{
+  margin-bottom: 0px;
+}
+
+.sidebar .donatebox .donate button{
+  border-radius: 3px;
+  background-color: rgb( 76, 76, 76 );
+  width: 102px;
+  height: 28px;
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb( 255, 255, 255 );
+  text-transform: uppercase;
+  border: 0px;
+  cursor: pointer;
+    transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+
+}
+
+.sidebar .donatebox .donate button:hover{
+  background-color: #358fe3;
+}
+
+
 
 
 
@@ -973,6 +1167,13 @@ p{
   color: white; 
 }
 
+
+//MOBILE -- LANDSCAPE -- SIDEBAR
+.sidebar .donatebox {
+  padding-left:81px;
+  padding-right: 85px;
+  margin-top: 90px;
+}
 
 
 
