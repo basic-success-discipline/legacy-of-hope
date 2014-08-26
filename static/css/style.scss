@@ -343,6 +343,56 @@ a:hover {
 }
 
 
+// MAIN COPY
+
+
+.maincopy{
+  height: auto;
+  float:left;
+  position: relative;
+  margin-bottom: 70px;
+  
+}
+
+.container .maincopy{
+  margin-left:0px;
+}
+
+.maincopy h1{
+  margin-bottom: 2px;
+}
+.maincopy h3{
+  font-size: 21px;
+
+}
+
+.maincopy p{
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.maincopy b{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.maincopy a{
+  color: #323232;
+}
+
+.maincopy a.left{
+  float:left;
+}
+
+.maincopy a.right{
+  float:right;
+}
+.maincopy a:hover{
+  color: #358fe3;
+}
+
 
 
 // SIDEBAR
@@ -485,7 +535,10 @@ a:hover {
   margin-bottom: 0px;
 }
 
-.sidebar .donatebox .donate button{
+.sidebar .donatebox .donatebuttonholder{
+  text-align: center;
+}
+.sidebar .donatebox button{
   border-radius: 3px;
   background-color: rgb( 76, 76, 76 );
   width: 102px;
@@ -496,16 +549,18 @@ a:hover {
   text-transform: uppercase;
   border: 0px;
   cursor: pointer;
-    transition: all 0.3s linear;
+  transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear; 
 
 }
 
-.sidebar .donatebox .donate button:hover{
+.sidebar .donatebox button:hover{
   background-color: #358fe3;
 }
+
+
 
 
 
@@ -1048,6 +1103,15 @@ cursor: pointer;
 
 
 
+.maincopy a{
+  float: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
 
 
 
@@ -1173,6 +1237,16 @@ p{
   padding-left:81px;
   padding-right: 85px;
   margin-top: 90px;
+}
+
+
+
+  .maincopy a{
+  float: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 

@@ -29,6 +29,9 @@
   display: block;
   position: relative; }
 
+.missionstatement {
+  display: none; }
+
 .mission2 h1 {
   float: left; }
 

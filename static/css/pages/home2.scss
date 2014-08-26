@@ -99,34 +99,6 @@ h5{
 }
 
 
-
-.container .about{
-	height: auto;
-	float:left;
-	position: relative;
-	margin-bottom: 70px;
-	margin-left:0px;
-}
-
-.container .about h1{
-	margin-bottom: 2px;
-}
-.container .about h3{
-	font-size: 21px;
-
-}
-
-.container .about p{
-	text-align: justify;
-	font-size: 16px;
-	line-height: 1.6em;
-}
-
-.container .about b{
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
 .container .about img{
 	float:right; 
 	width: 348px; 
@@ -135,20 +107,6 @@ h5{
 	margin-top: -15px;
 }
 
-.container .about a{
-	color: #323232;
-}
-
-.container .about a.left{
-	float:left;
-}
-
-.container .about a.right{
-	float:right;
-}
-.container .about a:hover{
-	color: #358fe3;
-}
 
 
 .learnmore{
@@ -383,13 +341,7 @@ h3{
 	width: 100%;
 	margin-bottom: 30px;
 }
-	.page .container .about a{
-	float: none;
-	width: 100%;
-	display: block;
-	text-align: center;
-	margin-bottom: 30px;
-}
+
 
 .latestnews.container .four.columns{
 	margin-left: 0px;
@@ -467,13 +419,7 @@ h3{
 	width: 100%;
 	margin-bottom: 30px;
 }
-	.page .container .about a{
-	float: none;
-	width: 100%;
-	display: block;
-	text-align: center;
-	margin-bottom: 30px;
-}
+
 
 
 
