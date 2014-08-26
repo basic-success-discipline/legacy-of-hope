@@ -21,10 +21,10 @@ router.get('/', function(req, res) {
             "/img/board_bridges.png", 
             "/img/board_vereen.png", 
             "/img/board_portman.png",
-            "/img/board_hopkins.png", 
-            "/img/board_bridges.png", 
-            "/img/board_vereen.png", 
-            "/img/board_portman.png"],
+            "/img/board_portman.png",
+            "/img/board_vereen.png",
+            "/img/board_bridges.png",
+            "/img/board_hopkins.png"],
     stories: [
             {
               title: "Mandela Day 2014",

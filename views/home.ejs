@@ -88,70 +88,65 @@
     <div class="page">
 
       <div class="container">
+
+
         <div class="eight columns about">
           <h1>The Legacy of Hope</h1>
-          <p>The Legacy of Hope Foundation provides medical care and facilities for underserved children and communities around the world. In that spirit, please join us in our global campaign to fulfill the last living wish of Nelson Mandela—to help build the Nelson Mandela Children’s Hospital.</p>
-          <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
-          <p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.</p>
-          <a href="/mission" class="left">Learn more about our mission ></a>
-          <a href="/mission#about" class="right">Learn more about the hospital ></a>
-        </div>
+          <h3>December 13th, 2014</h3>
+          <p>The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa. This will be the fifth dedicated children’s hospital serving the entire continent of Africa.</p>
+          <p>The LEGACY OF HOPE CONCERT will feature 10 premier artist/performers and will be broadcast and streamed worldwide. Interspersed with never before seen documentaries within the performances, these vignettes celebrate Nelson Mandela’s love of children and his dream of free and accessible healthcare for the children of South Africa. </p>
+
+          <img src="/img/home_barclays.jpg" />
+
+          <p><b>WHERE:</b><br>Barclays Center, New York City</p>
+
+          <p><b>WHEN:</b><br>Saturday, December 13th, 2014. </p>
 
 
-        <div class="four columns fundraiser">
-          <h4 style="">Fundraising Status</h4>
-          <hr size="3" color="#3E3F4"style="margin-bottom: 35px;")/>
-          <div style="float:right; position: relative; height:250px; width: 60px; margin-top: -35px;">
-          <span class="thermometer">$70M</span>
-         </div>
-          <p>$100M is needed to  build the Nelson Mandela Children's Hospital</p>
-          <p>$70M has been raised around the world to date</p>
-          <p>$30M is still needed</p>
+          <p>Stay tune for Ticket sales.</p>
 
-         
-          <div class="donatebox">
 
-          
-           <h3><a>Give Here!</a> Help fulfill Nelson Mandela's dream</h3>
-          <p>Support The Legacy of Hope Foundation</p>
-          <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="GE2HK3NWKFER2">
-                  <button name="submit" alt="PayPal - The safer, easier way to pay online!">Donate</button>
-                  
-                </form>
+          <p style="font-size: 15px; line-height: 1.9;"><b>EXECUTIVE PRODUCER:</b><br>This concert and media event will be produced by noted music producer, Eric Gast, CEO</p>
+
+                <!-- <a href="/mission" class="left">Learn more about our mission ></a>
+                <a href="/mission#about" class="right">Learn more about the hospital ></a> -->
+          </div>
+
+
+          <div class="four columns sidebar">
+
+          <div class="missionstatement">
+          <h4>Legacy of Hope</h4>
+            <hr size="2" color="#3E3F4"style="margin-bottom: 10px; margin-top: 0;")/>
+            <p>The Legacy of Hope Foundation provides medical care and facilities for underserved children and communities around the world. In that spirit, please join us in our global campaign to fulfill the last living wish of Nelson Mandela—to help build the first Nelson Mandela Children’s Hospital.</p>
+
+            <a href="/mission">Learn more about our mission</a>
+            </div>
+            <div class="fundraiser">
+
+            <h4>Fundraising Status</h4>
+            <hr size="2" color="#3E3F4"style="margin-bottom: 35px; margin-top: 0;")/>
+            <div style="float:right; position: relative; height:215px; width: 90px; margin-top: -35px; margin-left: 20px;">
+              <span class="thermometer"></span>
+            </div>
+            <p>$100M is needed to build the Nelson Mandela’s children’s hospital</p>
+            <p>We're pleased to announce that over half of the funds have been raised to date.</p>
+            </div>
+
+            <div class="donatebox">
+
+
+             <h3><a>Give Here!</a> Help fulfill Nelson Mandela's dream</h3>
+             <p>Support The Legacy of Hope Foundation</p>
+             <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="GE2HK3NWKFER2">
+              <button name="submit" alt="PayPal - The safer, easier way to pay online!">Donate</button>
+              
+            </form>
           </div>
         </div>
       </div>
-
-
-      <div class="container latestnews">
-        <h4><u>Latest News</u></h4>
-        <% for (var i = 0; i < (stories.length <= 3 ? stories.length : 3); i++) { %>
-        <a class="four columns card" href="<%= stories[i].link %>">
-          <div class="stretchy-wrapper">
-          <img src="<%= stories[i].image %>"/>
-          </div>
-          <h5><%= stories[i].title %></h5>
-          <p class="cardcopy"><%= stories[i].blurb %></p>
-          <hr style="border: dashed 1px #DEDEDE; "/>
-          <div class="bottom">
-          <span>
-          <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
-          <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p>
-          </span>
-          </div>
-          <hr style="border: solid 1px #DEDEDE;"/>
-
-        </a>
-        <% } %>
-      </div>
-
-      <script type="text/javascript">
-        $('.cardcopy').ellipsis({
-          row: 3
-        });
-      </script>
 
 
 
@@ -166,7 +161,7 @@
             <% for (var i = 0; i < board.length; i++) { %>
             <div class="three columns board">
               <div class="stretchy-wrapper">
-              <img src="<%= board[i] %>"/>
+                <img src="<%= board[i] %>"/>
               </div>
             </div>
             <% } %>
@@ -189,7 +184,7 @@
             })
           }
         });
-        
+
         $('.left').click(function(){
          if(currentpanel > 0 ){
           var scroll = $('.inner-container').width();
@@ -202,47 +197,82 @@
           })
         }
       });
-        
+
 
       </script>
+
+
+
+
+      <div class="container latestnews">
+        <h4><u>Latest News</u></h4>
+        <% for (var i = 0; i < (stories.length <= 3 ? stories.length : 3); i++) { %>
+        <a class="four columns card" href="<%= stories[i].link %>">
+          <div class="stretchy-wrapper">
+            <img src="<%= stories[i].image %>"/>
+          </div>
+          <h5><%= stories[i].title %></h5>
+          <p class="cardcopy"><%= stories[i].blurb %></p>
+          <hr style="border: dashed 1px #DEDEDE; "/>
+          <div class="bottom">
+            <span>
+              <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
+              <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p>
+            </span>
+          </div>
+          <hr style="border: solid 1px #DEDEDE;"/>
+
+        </a>
+        <% } %>
+      </div>
+
+      <script type="text/javascript">
+        $('.cardcopy').ellipsis({
+          row: 3
+        });
+      </script>
+
+
+
+      
     </div>
     <div class="sponsors">
       <div class="container">
-      <div class="sponsor aol">
-      <span>
-        <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
-        <div class="five columns">
-        <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
-        <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+        <div class="sponsor aol">
+          <span>
+            <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
+            <div class="five columns">
+              <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
+              <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+            </div>
+          </span>
         </div>
-        </span>
-      </div>
       </div>
 
-      
+
       <div class="container">
-      <div class="sponsor aol">
-      <span>
-        <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
-        <div class="five columns">
-        <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
-        <p> risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+        <div class="sponsor aol">
+          <span>
+            <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
+            <div class="five columns">
+              <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
+              <p> risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+            </div>
+          </span>
         </div>
-        </span>
-      </div>
       </div>
 
       <div class="container">
-      <div class="sponsor aol">
-      
-      <span>
-        <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
-        <div class="five columns">
-        <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
-        <p>Dblandit tempus porttitor.</p>
+        <div class="sponsor aol">
+
+          <span>
+            <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
+            <div class="five columns">
+              <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
+              <p>Dblandit tempus porttitor.</p>
+            </div>
+          </span>
         </div>
-        </span>
-      </div>
       </div>
 
     </div>
@@ -256,25 +286,25 @@
       var nextSponsor = function(){
         $('.sponsor').eq(current).fadeOut(500, function(){
           current = (current +1) % $('.sponsor').length
-                  $('.sponsor').eq(current).fadeIn(500);
-                setTimeout(function(){nextSponsor()}, 3000);
+          $('.sponsor').eq(current).fadeIn(500);
+          setTimeout(function(){nextSponsor()}, 3000);
         });
 
       }
 
       $( document ).ready(function() {
-          setTimeout(function(){nextSponsor()}, 3000);
-});
+        setTimeout(function(){nextSponsor()}, 3000);
+      });
     </script>
-  <!-- END PAGE -->
+    <!-- END PAGE -->
 
 
 
 
 
 
-  <% include partials/loh-footer %>
-</div>
+    <% include partials/loh-footer %>
+  </div>
 </body>
 
 </html>

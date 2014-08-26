@@ -78,8 +78,27 @@ h5 {
   margin-bottom: 70px;
   margin-left: 0px; }
 
+.container .about h1 {
+  margin-bottom: 2px; }
+
+.container .about h3 {
+  font-size: 21px; }
+
 .container .about p {
-  text-align: justify; }
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.6em; }
+
+.container .about b {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.container .about img {
+  float: right;
+  width: 348px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: -15px; }
 
 .container .about a {
   color: #323232; }
@@ -93,12 +112,12 @@ h5 {
 .container .about a:hover {
   color: #358fe3; }
 
-.container .fundraiser {
+.container .sidebar {
   float: right;
   margin-bottom: 70px;
   margin-right: 0px; }
 
-.container .fundraiser h4 {
+.container .sidebar h4 {
   font-size: 18px;
   font-family: "Oswald";
   color: #191919;
@@ -108,17 +127,33 @@ h5 {
   line-height: 36px;
   vertical-align: text-bottom; }
 
-.container .fundraiser p {
-  font-size: 18px;
-  font-family: "Oswald";
-  color: #191919;
-  line-height: 1.375;
+.container .sidebar .missionstatement {
+  margin-bottom: 46px;
+  text-align: center; }
+
+.container .sidebar .missionstatement h4 {
+  text-align: left; }
+
+.container .sidebar .missionstatement p {
+  font-size: 13px;
+  font-family: "Open Sans";
+  color: #1f2229;
+  line-height: 1.333;
+  text-align: justify;
   margin-top: 0px;
-  margin-bottom: 22px;
-  font-weight: 300; }
+  margin-bottom: 10px; }
+
+.container .sidebar .missionstatement a {
+  font-size: 13px;
+  font-family: "Open Sans";
+  color: #1f2229;
+  line-height: 1.333;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px; }
 
 .thermometer {
-  margin: 50% 0 0 50%;
+  margin: 20px 0 0 50%;
   left: -15px;
   top: 0px;
   width: 22px;
@@ -126,7 +161,7 @@ h5 {
   display: block;
   font: bold 14px/152px "Oswald", arial, sans-serif;
   text-indent: 36px;
-  background: -webkit-linear-gradient(top, white 0%, white 30%, #db3f02 30%, #db3f02 100%);
+  background: -webkit-linear-gradient(top, white 0%, white 50%, #db3f02 50%, #db3f02 100%);
   border-radius: 20px 22px 0 0;
   border: 3px solid #4a1c03;
   border-bottom: none;
@@ -161,12 +196,20 @@ h5 {
   left: 4px;
   background: #db3f02; }
 
-.fundraiser .donatebox {
+.container .sidebar .fundraiser p {
+  font-size: 16px;
+  font-family: "Oswald";
+  color: #191919;
+  line-height: 1.375;
+  margin-bottom: 22px;
+  font-weight: 300; }
+
+.sidebar .donatebox {
   width: 100%;
   height: auto;
   background-color: #f2f3f3;
   border-left: solid 4px #5B95C8;
-  margin-top: 95px;
+  margin-top: 50px;
   padding-left: 14px;
   padding-right: 11px;
   padding-top: 20px;
@@ -174,21 +217,21 @@ h5 {
   text-align: left;
   box-sizing: border-box; }
 
-.fundraiser .donatebox h3 {
+.sidebar .donatebox h3 {
   font-size: 23px;
   line-height: 1.1;
   font-weight: 400;
   margin-bottom: 15px; }
 
-.fundraiser .donatebox p {
+.sidebar .donatebox p {
   font-size: 13px;
   font-family: "Open Sans";
   margin-bottom: 15px; }
 
-.fundraiser .donatebox .donate {
+.sidebar .donatebox .donate {
   margin-bottom: 0px; }
 
-.fundraiser .donatebox .donate button {
+.sidebar .donatebox .donate button {
   border-radius: 3px;
   background-color: #4c4c4c;
   width: 102px;
@@ -204,7 +247,7 @@ h5 {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear; }
 
-.fundraiser .donatebox .donate button:hover {
+.sidebar .donatebox .donate button:hover {
   background-color: #358fe3; }
 
 .learnmore {
@@ -218,7 +261,7 @@ h5 {
   text-align: center; }
 
 .latestnews {
-  margin-bottom: 90px; }
+  margin-bottom: 40px; }
 
 .latestnews .card {
   margin-left: 0px;
@@ -288,7 +331,8 @@ h5 {
   display: inline-block; }
 
 .honorary {
-  position: relative; }
+  position: relative;
+  margin-bottom: 40px; }
 
 .honorary .arrow {
   position: absolute;
@@ -372,6 +416,11 @@ h5 {
   .page {
     position: relative; }
 
+  .page .container .about img {
+    margin-left: auto;
+    width: 100%;
+    margin-bottom: 30px; }
+
   .page .container .about a {
     float: none;
     width: 100%;
@@ -419,6 +468,11 @@ h5 {
   .heroblurb p {
     display: none; }
 
+  .page .container .about img {
+    margin-left: auto;
+    width: 100%;
+    margin-bottom: 30px; }
+
   .page .container .about a {
     float: none;
     width: 100%;
@@ -426,9 +480,10 @@ h5 {
     text-align: center;
     margin-bottom: 30px; }
 
-  .fundraiser .donatebox {
+  .sidebar .donatebox {
     padding-left: 81px;
-    padding-right: 85px; }
+    padding-right: 85px;
+    margin-top: 90px; }
 
   .latestnews.container .four.columns {
     margin-left: 0px; }
