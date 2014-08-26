@@ -114,6 +114,16 @@ router.get('/mission', function(req, res) {
   });
 });
 
+router.get('/hospital', function(req, res) {
+  res.render('hospital', {
+    title: "The Hospital - Legacy of Hope",
+    thumb_img: "thumb_hospital.png",
+    description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+    stylesheet: "hospital.css",
+    currentpage: "menu-hospital"
+  });
+});
+
 
 
 router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));

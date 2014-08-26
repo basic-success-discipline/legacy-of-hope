@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+
+// PAGE
+
+.page{
+	padding-bottom: 35px;
+}
+
+
+.missionstatement{
+	display: none;
+}
+
+
+.container .hospitalphoto{
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.maincopy{
+	margin-bottom: 0px;
+}
+
+.maincopy p:nth-child(5){
+	margin-bottom: 0;
+}
