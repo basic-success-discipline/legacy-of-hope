@@ -7,10 +7,13 @@ var contactfade = document.getElementById('contactfade');
      openContact.onclick=function(){
                 contact.style.display='block';
                 contactfade.style.display='block';
+                $('html,body').animate({scrollTop:0},500);
               };
                 openContact1.onclick=function(){
                 contact.style.display='block';
                 contactfade.style.display='block';
+                closeMenu();
+                $('html,body').animate({scrollTop:0},500);
               };
               closeContact.onclick=function(){
                 contact.style.display='none';
