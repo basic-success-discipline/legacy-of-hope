@@ -105,8 +105,9 @@ h5 {
   width: 348px;
   margin-left: 20px;
   margin-bottom: 10px;
-  margin-top: -15px;
-  border-radius: 6px; }
+  margin-top: 0px;
+  border-radius: 6px;
+  border: 3px solid #358fe3; }
 
 .learnmore {
   width: 100%; }
@@ -117,6 +118,9 @@ h5 {
 
 .learnmore a {
   text-align: center; }
+
+.sidebar .missionstatement {
+  display: block; }
 
 .honorary {
   position: relative;
@@ -138,7 +142,7 @@ h4.subheading hr {
 
 .honorary .arrow {
   position: absolute;
-  top: 50%;
+  top: 53%;
   cursor: pointer; }
 
 .honorary .arrow h3 {
@@ -203,7 +207,7 @@ h4.subheading hr {
 .latestnews a .stretchy-wrapper {
   width: 100%;
   height: 0px;
-  padding-bottom: 77%;
+  padding-bottom: 74%;
   margin-bottom: 24px;
   overflow: hidden;
   border-radius: 6px; }
@@ -232,7 +236,7 @@ h4.subheading hr {
   color: initial;
   font-size: 12px;
   font-family: "Open Sans";
-  line-height: 1.875;
+  line-height: 1.475;
   text-align: justify;
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;

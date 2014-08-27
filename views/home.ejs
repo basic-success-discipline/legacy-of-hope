@@ -118,15 +118,15 @@
 
           <img src="/img/home_barclays.jpg" />
 
-          <p><b>WHERE:</b><br>Barclays Center, New York City</p>
+          <p><b>WHERE:</b><br>Barclays Center, New York City<br></p>
 
-          <p><b>WHEN:</b><br>Saturday, December 13th, 2014. </p>
-
-
-          <p>Stay tune for Ticket sales.</p>
+          <p><br><b>WHEN:</b><br>Saturday, December 13th, 2014.</p>
 
 
-          <p style="font-size: 15px; line-height: 1.9;"><b>EXECUTIVE PRODUCER:</b><br>This concert and media event will be produced by noted music producer, Eric Gast, CEO</p>
+          <p><br><br>Stay tune for Ticket sales.</p>
+
+
+          <p style="font-size: 15px; line-height: 1.9;"><b>EXECUTIVE PRODUCER:</b><br>This concert and media event will be produced by noted music producer, Eric Gast, CEO of the Legacy of Hope Foundation</p>
 
                 <!-- <a href="/mission" class="left">Learn more about our mission ></a>
                 <a href="/mission#about" class="right">Learn more about the hospital ></a> -->
@@ -138,11 +138,11 @@
             </div>
 
             <div class="honorary container">
-              <div class="left arrow" ><h3><</h3></div>
-              <div class="right arrow"><h3>></h3></div>
+              <div class="left arrow" ><i class="fa fa-chevron-left 6x"></i></div>
+              <div class="right arrow"><i class="fa fa-chevron-right 6x"></i></div>
 
               <div style="width: 100%">
-                <h4 class="subheading">Meet the Honorary Board<hr size="3" color="#3E3F4"></h4>
+                <h4 class="subheading">Meet the Honorary Board<hr size="2" color="#3E3F4"></h4>
               </div>
 
               <div class="inner-container">
@@ -197,7 +197,7 @@
 
             <div class="container latestnews" style="display: block">
               <div style="width: 100%">
-                <h4 class="subheading">Latest News<hr size="3" color="#3E3F4"></h4>
+                <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4>
               </div>
               <% for (var i = 0; i < (stories.length <= 3 ? stories.length : 3); i++) { %>
               <a class="four columns card" href="<%= stories[i].link %>">
@@ -243,7 +243,7 @@
               </div>
             </div>
 
-
+<!-- 
             <div class="container">
               <div class="sponsor aol">
                 <span >
@@ -267,28 +267,28 @@
                    </div>
                 </span>
               </div>
-            </div>
+            </div> -->
 
           </div>
 
           <script type="text/javascript">
-            var current = 0;
-            for (var i =1; i < $('.sponsor').length;i++){
-              $('.sponsor').eq(i).fadeOut(0);
-            }
+            // var current = 0;
+            // for (var i =1; i < $('.sponsor').length;i++){
+            //   $('.sponsor').eq(i).fadeOut(0);
+            // }
 
-            var nextSponsor = function(){
-              $('.sponsor').eq(current).fadeOut(500, function(){
-                current = (current +1) % $('.sponsor').length
-                $('.sponsor').eq(current).fadeIn(500);
-                setTimeout(function(){nextSponsor()}, 3000);
-              });
+            // var nextSponsor = function(){
+            //   $('.sponsor').eq(current).fadeOut(500, function(){
+            //     current = (current +1) % $('.sponsor').length
+            //     $('.sponsor').eq(current).fadeIn(500);
+            //     setTimeout(function(){nextSponsor()}, 3000);
+            //   });
 
-            }
+            // }
 
-            $( document ).ready(function() {
-              setTimeout(function(){nextSponsor()}, 3000);
-            });
+            // $( document ).ready(function() {
+            //   setTimeout(function(){nextSponsor()}, 3000);
+            // });
           </script>
           <!-- END PAGE -->
 

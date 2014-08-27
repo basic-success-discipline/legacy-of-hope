@@ -9,6 +9,24 @@
 .gray{
 	background-color: #EDEFF2;
 }
+
+.maincopy{
+	text-align: center;
+}
+
+
+.sidebar .sidebox.execsumbox {
+	display: block;
+}
+
+.container .missionphotos{
+	width: 100%;
+	margin-top: 65px;
+	margin-bottom: 65px;
+}
+
+
+
 .missioncopy1 {
 	text-align: center;
 	padding-top: 40px;
@@ -22,6 +40,7 @@ font-weight: 400;
 color: #646464;
 max-width: 680px;
 margin: 0 auto;
+margin-bottom: 20px;
 }
 .missioncopy1 h5{
 	font-family: "Open Sans";
@@ -35,31 +54,12 @@ margin: 0 auto;
 	position: relative;
 }
 
-.missionstatement {
-	display: none;
-}
-
-
-.container .missionphotos{
-	width: 100%;
-	margin-top: 65px;
-	margin-bottom: 65px;
-}
 
 
 
 
 
-// HOSPITAL
-.mission2 h1{
-	float:left;
-}
-.missionimg2{
-	float: right;
-}
-.mission2 h4{
-	clear:left;
-}
+
 
 
 

@@ -196,8 +196,8 @@ a:hover {
 .navbar .menu-donate{
   background-color: #358fe3; 
   padding:8px;
-  padding-top: 5px;
-  margin-top: -6px;
+  padding-top: 3px;
+  margin-top: -5px;
   border-radius: 3px;
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -207,7 +207,7 @@ a:hover {
   
 }
 .navbar .links .menu-donate:hover{
-  background-color: rgb(204, 89, 37);
+  background-color: rgb(74, 174, 57);
 }
 
 .navbar .links .menu-donate a{
@@ -363,17 +363,18 @@ a:hover {
 }
 
 .maincopy h1{
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 .maincopy h3{
-  font-size: 21px;
+  font-size: 20px;
+  color: #4f4f4f;
 
 }
 
 .maincopy p{
   text-align: justify;
   font-size: 15px;
-  line-height: 1.6em;
+  line-height: 1.5em;
   margin-bottom: 25px;
   margin-top: 30px;
 }
@@ -427,6 +428,7 @@ a:hover {
 .sidebar .missionstatement{
   margin-bottom: 46px;
     text-align: center;
+    display: none;
 }
 
 .sidebar .missionstatement h4{
@@ -513,12 +515,14 @@ a:hover {
  letter-spacing: 1px;
   margin-bottom: 22px;
   margin-top: 30px;
-  font-weight: 300;
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 
 
 }
 
-.sidebar .donatebox{
+.sidebar .sidebox{
   width: 100%;
   height: auto;
   background-color: #f2f3f3;
@@ -532,16 +536,30 @@ a:hover {
   box-sizing: border-box;
 
 }
+.sidebar .sidebox.execsumbox {
+  padding-bottom: 9px;
+  display: none;
+}
 
 
-.sidebar .donatebox h3 {
+
+
+.sidebar .sidebox h3 {
   font-size: 18px;
   line-height: 1.1;
   font-weight: 400;
   margin-bottom: 15px;
   margin-right: 20px;
+  letter-spacing: 0.5px;
 }
-.sidebar .donatebox p {
+
+.sidebar .sidebox.execsumbox h3{
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+
+.sidebar .sidebox p {
   font-size: 12px;
   font-family: "Open Sans";
   margin-bottom: 15px;
@@ -549,19 +567,20 @@ a:hover {
   font-weight: 500;
 
 }
-.sidebar .donatebox .donate{
+.sidebar .sidebox.donatebox .donate{
   margin-bottom: 0px;
 }
 
-.sidebar .donatebox .donatebuttonholder{
+.sidebar .sidebox .donatebuttonholder{
   text-align: center;
 }
-.sidebar .donatebox button{
+.sidebar .sidebox button{
   border-radius: 3px;
   background-color: rgb( 76, 76, 76 );
   width: 102px;
   height: 28px;
   font-size: 14px;
+  font-weight: 200;
   font-family: "Open Sans";
   color: rgb( 255, 255, 255 );
   text-transform: uppercase;
@@ -574,7 +593,7 @@ a:hover {
 
 }
 
-.sidebar .donatebox button:hover{
+.sidebar .sidebox button:hover{
   background-color: #358fe3;
 }
 
@@ -1149,7 +1168,7 @@ cursor: pointer;
 .container .sidebar{
   padding-left: 0;
 }
-.sidebar .donatebox {
+.sidebar .sidebox {
   margin-top: 90px;
   margin-bottom: 40px;
 
@@ -1282,7 +1301,7 @@ p{
   padding-left: 0;
 }
 
-.sidebar .donatebox {
+.sidebar .sidebox {
   padding-left:81px;
   padding-right: 85px;
   margin-top: 90px;
@@ -1392,7 +1411,7 @@ p{
 .container .sidebar{
   padding-left: 0;
 }
-.sidebar .donatebox {
+.sidebar .sidebox {
   padding-left:81px;
   padding-right: 85px;
   margin-top: 90px;
@@ -1496,7 +1515,7 @@ p{
 }
 
 
-.sidebar .donatebox {
+.sidebar .sidebox {
   padding-left:81px;
   padding-right: 85px;
   margin-top: 90px;
