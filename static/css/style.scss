@@ -593,7 +593,6 @@ a:hover {
   background-color: #e46315;
   font-style: italic;
   font-size: 18px;
-  z-index: 100;
   position: relative;
 }
 
@@ -1145,6 +1144,11 @@ cursor: pointer;
 }
 
 //MOBILE -- LANDSCAPE -- SIDEBAR
+
+
+.container .sidebar{
+  padding-left: 0;
+}
 .sidebar .donatebox {
   margin-top: 90px;
   margin-bottom: 40px;
@@ -1160,7 +1164,6 @@ cursor: pointer;
   .prefooter{
     height: $pp-foot-height;
     padding-top: 6px;
-    z-index: 1000;
   }
   .prefooter p{
     text-align: center;
@@ -1274,6 +1277,11 @@ p{
 
 
 //MOBILE -- LANDSCAPE -- SIDEBAR
+
+.container .sidebar{
+  padding-left: 0;
+}
+
 .sidebar .donatebox {
   padding-left:81px;
   padding-right: 85px;
@@ -1380,6 +1388,10 @@ p{
 }
 
 //MOBILE -- LANDSCAPE -- SIDEBAR
+
+.container .sidebar{
+  padding-left: 0;
+}
 .sidebar .donatebox {
   padding-left:81px;
   padding-right: 85px;
@@ -1478,6 +1490,12 @@ p{
 
 
 //MOBILE -- LANDSCAPE -- SIDEBAR
+
+.container .sidebar{
+  padding-left: 0;
+}
+
+
 .sidebar .donatebox {
   padding-left:81px;
   padding-right: 85px;

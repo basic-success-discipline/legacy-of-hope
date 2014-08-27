@@ -141,8 +141,11 @@ h4.subheading hr {
   top: 50%;
   cursor: pointer; }
 
+.honorary .arrow h3 {
+  font-weight: bold; }
+
 .honorary .right {
-  right: -30px; }
+  right: -15px; }
 
 .honorary .left {
   left: -30px; }
@@ -162,7 +165,8 @@ h4.subheading hr {
   padding-bottom: 73%;
   overflow: hidden;
   height: 0px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  box-sizing: border-box; }
 
 .honorary .board img {
   width: 100%;
@@ -301,6 +305,11 @@ h4.subheading hr {
   position: relative;
   text-align: center; }
 
+.sponsors .container span div {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .aol p {
   font-size: 12px; }
 
@@ -346,19 +355,20 @@ h4.subheading hr {
     width: 150px; }
 
   .honorary.container .board img {
+    border-radius: 6px;
     margin-bottom: 0;
     display: block; }
 
-  .sponsors {
-    height: 400px;
-    padding-top: 50px; }
+  .honorary .stretchy-wrapper {
+    padding-left: 15px;
+    padding-right: 15px; }
 
-  .sponsors .container .aol span {
-    text-align: center; }
+  .sponsors .container span div {
+    width: 100%; }
 
-  .sponsors .container .three.columns {
-    width: 150px;
-    float: none; } }
+  .sponsors .container span div img {
+    width: 100px;
+    margin-top: 0; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   h3 {
     text-align: center; }
@@ -394,19 +404,20 @@ h4.subheading hr {
     width: 210px; }
 
   .honorary.container .board img {
+    border-radius: 6px;
     margin-bottom: 0;
     display: block; }
 
-  .sponsors {
-    height: 380px;
-    padding-top: 50px; }
+  .honorary .stretchy-wrapper {
+    padding-left: 15px;
+    padding-right: 15px; }
 
-  .sponsors .container .aol span {
-    text-align: center; }
+  .sponsors .container span div {
+    width: 100%; }
 
-  .sponsors .container .three.columns {
-    width: 210px;
-    float: none; } }
+  .sponsors .container span div img {
+    width: 100px;
+    margin-top: 0; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .heroblurb p {
     line-height: 1.1em;

@@ -686,7 +686,6 @@ a:hover {
   background-color: #e46315;
   font-style: italic;
   font-size: 18px;
-  z-index: 100;
   position: relative; }
 
 .prefooter p {
@@ -1119,14 +1118,16 @@ a:hover {
     text-align: center;
     margin-bottom: 30px; }
 
+  .container .sidebar {
+    padding-left: 0; }
+
   .sidebar .donatebox {
     margin-top: 90px;
     margin-bottom: 40px; }
 
   .prefooter {
     height: 140px;
-    padding-top: 6px;
-    z-index: 1000; }
+    padding-top: 6px; }
 
   .prefooter p {
     text-align: center; }
@@ -1209,6 +1210,9 @@ a:hover {
   .nav .currentpage a {
     color: white; }
 
+  .container .sidebar {
+    padding-left: 0; }
+
   .sidebar .donatebox {
     padding-left: 81px;
     padding-right: 85px;
@@ -1289,6 +1293,9 @@ a:hover {
     display: inherit;
     padding-right: 15px; }
 
+  .container .sidebar {
+    padding-left: 0; }
+
   .sidebar .donatebox {
     padding-left: 81px;
     padding-right: 85px;
@@ -1361,6 +1368,9 @@ a:hover {
   .nav .currentpage {
     display: inherit;
     padding-right: 15px; }
+
+  .container .sidebar {
+    padding-left: 0; }
 
   .sidebar .donatebox {
     padding-left: 81px;
