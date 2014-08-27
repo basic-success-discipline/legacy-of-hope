@@ -5,6 +5,7 @@
  <% include partials/loh-head %>
 
  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
+<script type="text/javascript" src="/js/countdown.js"></script>
 
  <!-- This script is modified specifically for this page at line 73 -->
  <script type="text/javascript" src="/js/unslider.js"></script>
@@ -24,20 +25,48 @@
       <div class="banner">
         <ul>
           <li>
-            <div class="hero">
-              <img src="/img/home_hero.png" />
+            <div class="hero first">
+              <img src="/img/home_hero1.png"/>
+
               <div class="heroblurb">
                 <div class="wrapper-content">
-                  <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-                  <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
-                  <p class="herop2">- Nelson Mandela</p>
+                  <h1>Concert Begins in</h1>
+                  <div id="countdown"></div>
+                  <script>
+                  var myCountdown1 = new Countdown({
+                    year: 2014, 
+                    month: 12, 
+                    day: 13, 
+                    rangeLo: "minutes", 
+                    rangeHi: "days", 
+                    target: "countdown",
+                    width : 112,      // Defaults to 200 x 30 pixels, you can specify a custom size here
+                    height   : 70, 
+                    numberMarginTop: 0,
+                     padding  : .50,
+                    hideLine: true,
+                    labelText: {minute: "mins", hour: "hrs", day: "days"},
+                    numbers: {
+                      font: "Oswald",
+                      color: "#FFFFFF",
+                      bkgd: "clear"
+                    },
+                     labels : {
+                             font   : "Open Sans",
+                             color  : "#358fe3",
+                             textScale  : 2.0,
+                             weight: "100"
+                           }
+                    });
+                  </script>
+
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="hero ">
-              <img src="/img/home_hero.png"/>
+            <div class="hero second">
+              <img src="/img/home_hero2.png" />
               <div class="heroblurb">
                 <div class="wrapper-content">
                   <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
@@ -47,18 +76,8 @@
               </div>
             </div>
           </li>
-          <li>
-            <div class="hero ">
-              <img src="/img/home_hero.png"/>
-              <div class="heroblurb">
-                <div class="wrapper-content">
-                  <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-                  <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
-                  <p class="herop2">- Nelson Mandela</p>
-                </div>
-              </div>
-            </div>
-          </li>
+
+
         </ul>
       </div>
 
