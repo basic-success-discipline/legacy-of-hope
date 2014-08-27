@@ -91,7 +91,7 @@
 
 
         <div class="eight columns maincopy about">
-          <h1>The Legacy of Hope</h1>
+          <h1>The Legacy of Hope Concert</h1>
           <h3>December 13th, 2014</h3>
           <p>The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa. This will be the fifth dedicated children’s hospital serving the entire continent of Africa.</p>
           <p>The LEGACY OF HOPE CONCERT will feature 10 premier artist/performers and will be broadcast and streamed worldwide. Interspersed with never before seen documentaries within the performances, these vignettes celebrate Nelson Mandela’s love of children and his dream of free and accessible healthcare for the children of South Africa. </p>
@@ -110,168 +110,174 @@
 
                 <!-- <a href="/mission" class="left">Learn more about our mission ></a>
                 <a href="/mission#about" class="right">Learn more about the hospital ></a> -->
-          </div>
+              </div>
 
 
-          <% include partials/loh-sidebar %>
+              <% include partials/loh-sidebar %>
 
-          </div>
+            </div>
 
-      <div class="honorary container">
-        <div class="left arrow" ><h4><</h4></div>
-        <div class="right arrow"><h4>></h4></div>
+            <div class="honorary container">
+              <div class="left arrow" ><h3><</h3></div>
+              <div class="right arrow"><h3>></h3></div>
 
-        <h4><u>Meet the Honorary Board</u></h4>
-        <div class="inner-container">
-          <% var panels = Math.ceil(board.length/4); %>
-          <div class="content-container" style="width: <%= panels *100 %>%;)">
-            <% for (var i = 0; i < board.length; i++) { %>
-            <div class="three columns board">
-              <div class="stretchy-wrapper">
-                <img src="<%= board[i] %>"/>
+              <div style="width: 100%">
+                <h4 class="subheading">Meet the Honorary Board<hr size="3" color="#3E3F4"></h4>
+              </div>
+
+              <div class="inner-container">
+                <% var panels = Math.ceil(board.length/4); %>
+                <div class="content-container" style="width: <%= panels *100 %>%;)">
+                  <% for (var i = 0; i < board.length; i++) { %>
+                  <div class="three columns board">
+                    <div class="stretchy-wrapper">
+                      <img src="<%= board[i] %>"/>
+                    </div>
+                  </div>
+                  <% } %>
+
+                </div>
               </div>
             </div>
-            <% } %>
+
+            <script type="text/javascript">
+              var currentpanel = 0;
+              $('.right').click(function(){
+                if(currentpanel < <%= panels - 1 %>){
+                  var scroll = $('.inner-container').width();
+                  scroll += currentpanel*scroll;
+                  currentpanel++;
+                  $('.board').each(function() {
+                    $(this).animate({
+                     left: scroll * -1
+                   }, 500);
+                  })
+                }
+              });
+
+              $('.left').click(function(){
+               if(currentpanel > 0 ){
+                var scroll = $('.inner-container').width();
+                scroll -= currentpanel*scroll;
+                currentpanel--;
+                $('.board').each(function() {
+                  $(this).animate({
+                   left: scroll
+                 }, 500);
+                })
+              }
+            });
+
+
+            </script>
+
+
+
+
+            <div class="container latestnews" style="display: block">
+              <div style="width: 100%">
+                <h4 class="subheading">Latest News<hr size="3" color="#3E3F4"></h4>
+              </div>
+              <% for (var i = 0; i < (stories.length <= 3 ? stories.length : 3); i++) { %>
+              <a class="four columns card" href="<%= stories[i].link %>">
+                <div class="stretchy-wrapper">
+                  <img src="<%= stories[i].image %>"/>
+                </div>
+                <h5><%= stories[i].title %></h5>
+                <p class="cardcopy"><%= stories[i].blurb %></p>
+
+                <hr style="border: dashed 1px #DEDEDE; "/>
+                <div class="bottom">
+                  <span>
+                    <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
+                    <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p>
+                  </span>
+                </div>
+                <hr style="border: solid 1px #DEDEDE;"/>
+
+              </a>
+              <% } %>
+            </div>
+
+            <script type="text/javascript">
+              $('.cardcopy').ellipsis({
+                row: 3
+              });
+            </script>
+
+
+
 
           </div>
-        </div>
-      </div>
-
-      <script type="text/javascript">
-        var currentpanel = 0;
-        $('.right').click(function(){
-          if(currentpanel < <%= panels - 1 %>){
-            var scroll = $('.inner-container').width();
-            scroll += currentpanel*scroll;
-            currentpanel++;
-            $('.board').each(function() {
-              $(this).animate({
-               left: scroll * -1
-             }, 500);
-            })
-          }
-        });
-
-        $('.left').click(function(){
-         if(currentpanel > 0 ){
-          var scroll = $('.inner-container').width();
-          scroll -= currentpanel*scroll;
-          currentpanel--;
-          $('.board').each(function() {
-            $(this).animate({
-             left: scroll
-           }, 500);
-          })
-        }
-      });
+          <div class="sponsors">
+            <div class="container">
+              <div class="sponsor aol">
+                <span>
+                  <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
+                  <div class="five columns">
+                    <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
+                    <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+                  </div>
+                </span>
+              </div>
+            </div>
 
 
-      </script>
+            <div class="container">
+              <div class="sponsor aol">
+                <span>
+                  <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
+                  <div class="five columns">
+                    <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
+                    <p> risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
+                  </div>
+                </span>
+              </div>
+            </div>
 
+            <div class="container">
+              <div class="sponsor aol">
 
+                <span>
+                  <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
+                  <div class="five columns">
+                    <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
+                    <p>Dblandit tempus porttitor.</p>
+                  </div>
+                </span>
+              </div>
+            </div>
 
-
-      <div class="container latestnews">
-        <h4><u>Latest News</u></h4>
-        <% for (var i = 0; i < (stories.length <= 3 ? stories.length : 3); i++) { %>
-        <a class="four columns card" href="<%= stories[i].link %>">
-          <div class="stretchy-wrapper">
-            <img src="<%= stories[i].image %>"/>
           </div>
-          <h5><%= stories[i].title %></h5>
-          <p class="cardcopy"><%= stories[i].blurb %></p>
-          <hr style="border: dashed 1px #DEDEDE; "/>
-          <div class="bottom">
-            <span>
-              <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
-              <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p>
-            </span>
-          </div>
-          <hr style="border: solid 1px #DEDEDE;"/>
 
-        </a>
-        <% } %>
-      </div>
+          <script type="text/javascript">
+            var current = 0;
+            for (var i =1; i < $('.sponsor').length;i++){
+              $('.sponsor').eq(i).fadeOut(0);
+            }
 
-      <script type="text/javascript">
-        $('.cardcopy').ellipsis({
-          row: 3
-        });
-      </script>
+            var nextSponsor = function(){
+              $('.sponsor').eq(current).fadeOut(500, function(){
+                current = (current +1) % $('.sponsor').length
+                $('.sponsor').eq(current).fadeIn(500);
+                setTimeout(function(){nextSponsor()}, 3000);
+              });
+
+            }
+
+            $( document ).ready(function() {
+              setTimeout(function(){nextSponsor()}, 3000);
+            });
+          </script>
+          <!-- END PAGE -->
 
 
 
-      
-    </div>
-    <div class="sponsors">
-      <div class="container">
-        <div class="sponsor aol">
-          <span>
-            <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
-            <div class="five columns">
-              <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
-              <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
-            </div>
-          </span>
+
+
+
+          <% include partials/loh-footer %>
         </div>
-      </div>
+      </body>
 
-
-      <div class="container">
-        <div class="sponsor aol">
-          <span>
-            <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
-            <div class="five columns">
-              <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
-              <p> risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
-            </div>
-          </span>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="sponsor aol">
-
-          <span>
-            <img src="/img/aol_logo.png" class="three columns offset-by-two"/>
-            <div class="five columns">
-              <h5><strong>AOL</strong> is a proud partner of the <strong>Legacy of Hope</strong></h5>
-              <p>Dblandit tempus porttitor.</p>
-            </div>
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-    <script type="text/javascript">
-      var current = 0;
-      for (var i =1; i < $('.sponsor').length;i++){
-        $('.sponsor').eq(i).fadeOut(0);
-      }
-
-      var nextSponsor = function(){
-        $('.sponsor').eq(current).fadeOut(500, function(){
-          current = (current +1) % $('.sponsor').length
-          $('.sponsor').eq(current).fadeIn(500);
-          setTimeout(function(){nextSponsor()}, 3000);
-        });
-
-      }
-
-      $( document ).ready(function() {
-        setTimeout(function(){nextSponsor()}, 3000);
-      });
-    </script>
-    <!-- END PAGE -->
-
-
-
-
-
-
-    <% include partials/loh-footer %>
-  </div>
-</body>
-
-</html>
+      </html>

@@ -494,7 +494,8 @@ a:hover {
   margin-bottom: 70px; }
 
 .container .maincopy {
-  margin-left: 0px; }
+  margin-left: 0px;
+  padding-right: -9px; }
 
 .maincopy h1 {
   margin-bottom: 2px; }
@@ -504,8 +505,10 @@ a:hover {
 
 .maincopy p {
   text-align: justify;
-  font-size: 16px;
-  line-height: 1.6em; }
+  font-size: 15px;
+  line-height: 1.6em;
+  margin-bottom: 25px;
+  margin-top: 30px; }
 
 .maincopy b {
   font-weight: bold;
@@ -525,7 +528,9 @@ a:hover {
 
 .container .sidebar {
   margin-right: 0px;
-  float: right; }
+  float: right;
+  padding-left: 31px;
+  box-sizing: border-box; }
 
 .sidebar h4 {
   font-size: 18px;
@@ -545,7 +550,7 @@ a:hover {
   text-align: left; }
 
 .sidebar .missionstatement p {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Open Sans";
   color: #1f2229;
   line-height: 1.333;
@@ -561,6 +566,13 @@ a:hover {
   font-weight: bold;
   border-bottom: 1px solid #000;
   padding-bottom: 3px; }
+
+.sidebar .fundraiser img {
+  width: 45px;
+  float: right;
+  margin-right: 10px;
+  margin-left: 30px;
+  margin-top: -5px; }
 
 .sidebar .fundraiser .thermometer {
   margin: 20px 0 0 50%;
@@ -610,8 +622,10 @@ a:hover {
   font-size: 16px;
   font-family: "Oswald";
   color: #191919;
-  line-height: 1.375;
+  line-height: 1.225;
+  letter-spacing: 1px;
   margin-bottom: 22px;
+  margin-top: 30px;
   font-weight: 300; }
 
 .sidebar .donatebox {
@@ -628,15 +642,18 @@ a:hover {
   box-sizing: border-box; }
 
 .sidebar .donatebox h3 {
-  font-size: 23px;
+  font-size: 18px;
   line-height: 1.1;
   font-weight: 400;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-right: 20px; }
 
 .sidebar .donatebox p {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Open Sans";
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: 500; }
 
 .sidebar .donatebox .donate {
   margin-bottom: 0px; }
