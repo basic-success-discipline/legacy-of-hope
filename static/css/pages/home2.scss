@@ -141,6 +141,7 @@ h5{
 	margin-left: 20px; 
 	margin-bottom: 10px;
 	margin-top: -15px;
+	border-radius: 6px;
 }
 
 
@@ -221,6 +222,7 @@ h4.subheading hr{
 	padding-bottom: 73%;
 	overflow: hidden;
 	height: 0px;
+	border-radius: 6px
 }
 
 .honorary .board img{
@@ -230,6 +232,15 @@ h4.subheading hr{
     right: 0;
 	margin-bottom: 40px;
 
+}
+
+.honorary .board p{
+	margin-top: 10px;
+	text-align: center;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  
 }
 
 
@@ -269,6 +280,7 @@ $cardpadding: 0px;
 	padding-bottom: 77%;
 	margin-bottom: 24px;
 	overflow: hidden;
+	border-radius: 6px;
 }
 
 .latestnews a img{
@@ -276,6 +288,7 @@ $cardpadding: 0px;
     top: 0; 
     left: 0; 
     right: 0;
+
 
 }
 .latestnews a h5{
@@ -300,13 +313,13 @@ $cardpadding: 0px;
 	font-size: 12px;
   font-family: "Open Sans";
   line-height: 1.875;
-  margin-right: 40px;
+  // margin-right: 40px;
   text-align: justify;
 	transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear; 
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   margin-top: 0px;
 }	
 
@@ -353,25 +366,28 @@ $cardpadding: 0px;
 
 
 .sponsors{
-	height: 280px;
+	// height: 280px;
+	height: 158px;	
 	background-color: #F2F3F3;
 	width: 100%;
-	line-height: 280px;
+	line-height: 158px;
 
 }
 
 .sponsors .sponsor{
 	position: absolute;
+	width: 100%;
+
 }
 
 .aol img{
-		width: 100%;
+		width: 150px;
+		display: inline-block;
+		float:left;
+		margin-right: 30px;
+		margin-top: -10px;
 }
-.container:nth-child(1) .aol img{
 
-	margin-top:20px;
-
-}
 
 .sponsors .aol h5{
 	color: black;
@@ -379,6 +395,7 @@ $cardpadding: 0px;
   font-weight: 400;
   font-family: "Open Sans";
   text-align: center;
+  margin-top: 40px;
 }
 .sponsors .aol h5 strong{
 	font-size: 16px;
@@ -392,7 +409,11 @@ $cardpadding: 0px;
   line-height: normal;
   width: 100%;
   position: relative;
+  text-align: center;
 }
+
+
+
 
 .aol p{
 	font-size: 12px;
@@ -412,6 +433,10 @@ h3{
 	width: 100%;
 	margin-left: -100px;
 	float: none;
+}
+
+.hero.first img{
+	margin-left: 0;
 }
 
 
@@ -505,7 +530,13 @@ h3{
 	display: none;
 }
 
+.hero.first .heroblurb{
+		left: 8%;
+	}
 
+.hero.first .heroblurb h1{
+		text-align: left;
+	}
 .page .container .about img{
 	margin-left: auto;
 	width: 100%;
@@ -575,6 +606,10 @@ and (max-width : $tablet-landscape - 1px) {
 	.heroblurb p{
 		line-height: 1.1em;
 		font-size: 15px;
+	}
+
+	.hero.first .heroblurb{
+		left: 8%;
 	}
 
 

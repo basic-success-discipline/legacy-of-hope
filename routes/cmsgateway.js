@@ -4,19 +4,19 @@ var home = {
   	description	: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
   	stylesheet	: "home2.css",
     currentpage	: "menu-home",
-    board: ["/img/board_hopkins.png", 
-            "/img/board_bridges.png", 
-            "/img/board_vereen.png", 
-            "/img/board_portman.png",
-            "/img/board_portman.png",
-            "/img/board_vereen.png",
-            "/img/board_bridges.png",
-            "/img/board_hopkins.png"],
+    board: [
+    {name: "Charlize Theron", image: "/img/board_theron.png"},
+    {name: "Barbara Walters", image: "/img/board_walters.png"},
+    {name: "Ben Vereen", image: "/img/board_vereen.png"},
+    {name: "Natalie Portman", image: "/img/board_portman.png"},
+    {name: "Anthony Hopkins", image: "/img/board_hopkins.png"},
+    {name: "Ruby Bridges", image: "/img/board_bridges.png"}
+   ],
     stories: [
         {
           title: "Mandela Day 2014",
           image: "/img/card_mandela_day.jpg",
-          blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          blurb: "The Legacy of Hope Foundation hosted an evening of entertainment on Mandela Day to support a global campaign to fulfill the last living wish of Nelson Mandela—to build Africa’s 4th dedicated children’s hospital in Johannesburg, South Africa in 2016. ",
           date: "July 18, 2014",
           likes : "528",
           link: "/mandeladay"
@@ -24,7 +24,7 @@ var home = {
         {
           title: "The Gibson Guitar Initiative",
           image: "/img/card_guitar_initiative.jpg",
-          blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          blurb: "The Guitar Initiative is a campaign to increase awareness and support for Nelson Mandela’s Legacy of Hope, through the medium of music. This campaign is supported by Gibson and managed by veteran music producer and executive producer of Legacy of Hope Concerts, Eric Gast. ",
           date: "July 1, 2014",
           likes : "566",
           link: "/guitarinitiative"
@@ -32,7 +32,7 @@ var home = {
         {
           title: "The Legacy of Hope Concert",
           image: "/img/card_concert.jpg",
-          blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          blurb: "Join Legacy of Hope for a worldwide simulcast concert in support of raising $30M for the Nelson Mandela Children’s Hospital. The concert will feature a collection of the world’s most talented and respected musicians and will be broadcast around the world in celebration of Mr. Mandela’s Legacy.",
           date: "December 13, 2014",
           likes : "654",
           link: "/concert"

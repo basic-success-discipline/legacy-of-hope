@@ -697,6 +697,12 @@ a:hover {
   margin-top: 7px;
   height: auto; }
 
+.pf1 a {
+  text-decoration: underline;
+  font-weight: 400;
+  color: black;
+  cursor: pointer; }
+
 .pf2 {
   display: table-cell;
   float: right;
