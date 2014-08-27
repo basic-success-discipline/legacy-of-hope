@@ -691,9 +691,16 @@ a:hover {
   display: none;
 }
 
+
+
 .contact-inner{
   position: relative;
+}
 
+.contact-inner h1{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 38px
 }
 #contact .pattern {
   height: 100%;
@@ -956,7 +963,7 @@ cursor: pointer;
 .legacy-frm {
   margin-right: auto;
   margin-left: auto;
-  background-color:rgba(28, 31, 38, 0.75);
+  background-color:rgba(28, 31, 38, 1);
   padding: 20px 30px 20px 30px;
   font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #888;
@@ -1141,6 +1148,7 @@ cursor: pointer;
 .sidebar .donatebox {
   margin-top: 90px;
   margin-bottom: 40px;
+
 }
 
 
