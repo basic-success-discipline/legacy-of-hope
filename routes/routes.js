@@ -16,33 +16,24 @@ router.get('/', function(req, res) {
 });
 
 router.get('/board', function(req, res) {
-  res.render('board', {
-  	title: "Board of Directors - Legacy of Hope",
-  	thumb_img: "thumb_board.png",
-  	description: "The Legacy of Hope board of Directors.",
-  	stylesheet: "board.css",
-    currentpage: "menu-board"
-  });
+  cmsgateway.getPageData('cms', 'board', 
+    function(err, data) {
+      res.render('board', data);
+    });
 });
 
 router.get('/concert', function(req, res) {
-  res.render('concert', {
-  	title: "Concert - Legacy of Hope",
-  	thumb_img: "thumb_concerts.png",
-  	description: "This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before.",
-  	stylesheet: "concert.css",
-    currentpage: "menu-concert"
-  });
+  cmsgateway.getPageData('cms', 'concert', 
+    function(err, data) {
+      res.render('concert', data);
+    });
 });
 
 router.get('/guitarinitiative', function(req, res) {
-  res.render('guitarinitiative', {
-  	title: "The Guitar Initiative - Legacy of Hope",
-  	thumb_img: "thumb_guitarinitiative.png",
-  	description: "The Guitar Initiative is a campaign to increase awareness and support for Nelson Mandela’s Legacy of Hope, through the medium of music. The Initiative has two main goals: to obtain musician and celebrity endorsements, and to produce ongoing recordings by artists to benefit the Children’s Hospital and its young patients.",
-  	stylesheet: "guitarinitiative.css",
-    currentpage: "menu-guitar"
-  });
+  cmsgateway.getPageData('cms', 'guitarinitiative', 
+    function(err, data) {
+      res.render('guitarinitiative', data);
+    });
 });
 
 
@@ -53,47 +44,35 @@ router.get('/aol/legacy-of-hope-nmcht-concert.html', function(req, res) {
 
 
 router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
-  res.render('legacy-of-hope-nmcht-concert', {
-    title: "Sibongile - Legacy of Hope",
-    thumb_img: "thumb_sibongile.png",
-    description: "The loss of Sibongile Mkhabela’s son spurred her on in the almost impossible dream of creating the Nelson Mandela Children’s Hospital in South Africa.",
-    stylesheet: "sibongile.css",
-    currentpage: "menu-sibongile"
-  });
+  cmsgateway.getPageData('cms', 'legacy-of-hope-nmcht-concert', 
+    function(err, data) {
+      res.render('legacy-of-hope-nmcht-concert', data);
+    });
 });
 
 
 router.get('/mission', function(req, res) {
-  res.render('mission', {
-  	title: "Our Mission - Legacy of Hope",
-  	thumb_img: "thumb_mission.png",
-  	description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
-  	stylesheet: "mission.css",
-    currentpage: "menu-mission"
-  });
+  cmsgateway.getPageData('cms', 'mission', 
+    function(err, data) {
+      res.render('mission', data);
+    });
 });
 
 router.get('/hospital', function(req, res) {
-  res.render('hospital', {
-    title: "The Hospital - Legacy of Hope",
-    thumb_img: "thumb_hospital.png",
-    description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
-    stylesheet: "hospital.css",
-    currentpage: "menu-hospital"
-  });
+  cmsgateway.getPageData('cms', 'hospital', 
+    function(err, data) {
+      res.render('hospital', data);
+    });
 });
 
 
 
 router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
 router.get('/sponsors', function(req, res) {
-  res.render('sponsors', {
-  	title: "Sponsors - Legacy of Hope",
-  	thumb_img: "thumb_mission.png",
-  	description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
-  	stylesheet: "sponsors.css",
-    currentpage: "menu-sponsors"
-  });
+cmsgateway.getPageData('cms', 'sponsors', 
+    function(err, data) {
+      res.render('sponsors', data);
+    });
 });
 
 

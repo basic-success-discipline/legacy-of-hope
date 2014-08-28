@@ -40,10 +40,87 @@ var home = {
     ]
 };
 
+var board = {
+    title: "Board of Directors - Legacy of Hope",
+    thumb_img: "thumb_board.png",
+    description: "The Legacy of Hope board of Directors.",
+    stylesheet: "board.css",
+    currentpage: "menu-board"
+  };
+  var concert = {
+    title: "Concert - Legacy of Hope",
+    thumb_img: "thumb_concerts.png",
+    description: "This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before.",
+    stylesheet: "concert.css",
+    currentpage: "menu-concert"
+  };
+var guitarinitiative = {
+    title: "The Guitar Initiative - Legacy of Hope",
+    thumb_img: "thumb_guitarinitiative.png",
+    description: "The Guitar Initiative is a campaign to increase awareness and support for Nelson Mandela’s Legacy of Hope, through the medium of music. The Initiative has two main goals: to obtain musician and celebrity endorsements, and to produce ongoing recordings by artists to benefit the Children’s Hospital and its young patients.",
+    stylesheet: "guitarinitiative.css",
+    currentpage: "menu-guitar"
+  };
+var legacy_of_hope_nmcht_concert = {
+    title: "Sibongile - Legacy of Hope",
+    thumb_img: "thumb_sibongile.png",
+    description: "The loss of Sibongile Mkhabela’s son spurred her on in the almost impossible dream of creating the Nelson Mandela Children’s Hospital in South Africa.",
+    stylesheet: "sibongile.css",
+    currentpage: "menu-sibongile"
+  };
+var mission = {
+    title: "Our Mission - Legacy of Hope",
+    thumb_img: "thumb_mission.png",
+    description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+    stylesheet: "mission.css",
+    currentpage: "menu-mission"
+  };
+var hospital = {
+    title: "The Hospital - Legacy of Hope",
+    thumb_img: "thumb_hospital.png",
+    description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+    stylesheet: "hospital.css",
+    currentpage: "menu-hospital"
+  };
+var sponsors = {
+    title: "Sponsors - Legacy of Hope",
+    thumb_img: "thumb_mission.png",
+    description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+    stylesheet: "sponsors.css",
+    currentpage: "menu-sponsors"
+  };
+
+
 exports.getPageData = function(category, page, callback) {
 	if(category === 'cms') {
-		if(page === 'home') callback(null, home);
-		else if(page === 'whatever') callback(null, home);
-		else callback({error:'invalid page'});
+    switch (page){
+      case 'home':
+        callback(null, home);
+        break;
+      case 'board':
+        callback(null, board);
+        break;
+      case 'concert':
+        callback(null, concert);
+        break;
+      case 'guitarinitiative':
+        callback(null, guitarinitiative);
+        break;
+      case 'legacy-of-hope-nmcht-concert':
+        callback(null, legacy_of_hope_nmcht_concert);
+        break;
+      case 'mission':
+        callback(null, mission);
+        break;
+      case 'hospital':
+        callback(null, hospital);
+        break;
+      case 'sponsors':
+        callback(null, sponsors);
+        break;
+      default:
+        callback(null, home);
+        break;
+    }
 	} else callback({error:'invalid category'});
 };
