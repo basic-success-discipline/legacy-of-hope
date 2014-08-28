@@ -5,7 +5,9 @@ h5 {
   position: relative;
   overflow: auto;
   margin-bottom: -15px;
-  max-width: 1200px; }
+  max-width: 1200px;
+  width: 100% !important;
+  height: 100% !important; }
 
 .banner li {
   list-style: none;
