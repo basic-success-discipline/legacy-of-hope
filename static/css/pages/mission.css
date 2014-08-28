@@ -7,6 +7,9 @@
 .maincopy {
   text-align: center; }
 
+.maincopy h1 {
+  text-align: left; }
+
 .sidebar .sidebox.execsumbox {
   display: block; }
 
