@@ -5,7 +5,7 @@
  <% include partials/loh-head %>
 
  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
-<script type="text/javascript" src="/js/countdown.js"></script>
+
 
  <!-- This script is modified specifically for this page at line 73 -->
  <script type="text/javascript" src="/js/unslider.js"></script>
@@ -30,66 +30,55 @@
 
               <div class="heroblurb">
                 <div class="wrapper-content">
-                  <h1>Concert Begins in</h1>
-                  <div id="countdown"></div>
-                  <script>
-                  var myCountdown1 = new Countdown({
-                    year: 2014, 
-                    month: 12, 
-                    day: 13, 
-                    rangeLo: "minutes", 
-                    rangeHi: "days", 
-                    target: "countdown",
-                    width : 112,      // Defaults to 200 x 30 pixels, you can specify a custom size here
-                    height   : 70, 
-                    numberMarginTop: 0,
-                    padding  : .50,
-                    hideLine: true,
-                    labelText: {minute: "mins", hour: "hrs", day: "days"},
-                    numbers: {
-                      font: "Oswald",
-                      color: "#FFFFFF",
-                      bkgd: "clear"
-                    },
-                     labels : {
-                             font   : "Open Sans",
-                             color  : "#358fe3",
-                             textScale  : 2.0,
-                             weight: "100"
-                           }
-                    });
-                  </script>
+                  <div class="countdown">
+                    <h1>Concert Begins in</h1>
+                    <span class="days">
+                      <div id="days"></div>
+                      <h2>days</h2>
+                    </span>
+                    <span class="hours">
+                      <div id="hours"></div>
+                      <h2>hrs</h2>
+                    </span>
 
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="hero second">
-              <img src="/img/home_hero2.png" />
-              <div class="heroblurb">
-                <div class="wrapper-content">
-                  <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-                  <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
-                  <p class="herop2">- Nelson Mandela</p>
-                </div>
-              </div>
-            </div>
-          </li>
+                    <span class="minutes">
+                      <div id="minutes"></div>
+                      <h2>mins</h2>
+                    </span>
+                  </div>
+                   <script type="text/javascript" src="/js/countdown.js"></script>
 
 
-        </ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+  <div class="hero second">
+    <img src="/img/home_hero2.png" />
+    <div class="heroblurb">
+      <div class="wrapper-content">
+        <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+        <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+        <p class="herop2">- Nelson Mandela</p>
       </div>
+    </div>
+  </div>
+</li>
 
 
-      <div class="herobuffer"></div>
-      <script type="text/javascript">
+</ul>
+</div>
+
+
+<div class="herobuffer"></div>
+<script type="text/javascript">
       // A $( document ).ready() block.
       $(function() {
 
         $('.banner').unslider({
           speed: 500,  
-          delay: 5000,             
+          delay: 500000,             
           dots: true,               
           fluid: true,
           pause: true          
@@ -235,10 +224,10 @@
               <div class="sponsor aol">
                 <span>
                   <div>
-                  <img src="/img/aol_logo.png"/>
-         
+                    <img src="/img/aol_logo.png"/>
+
                     <h5><strong>AOL</strong><br> is a proud sponsor of <nobr><strong> The Legacy of Hope</strong></nobr></h5>
-                   </div>
+                  </div>
                 </span>
               </div>
             </div>
@@ -289,16 +278,16 @@
             // $( document ).ready(function() {
             //   setTimeout(function(){nextSponsor()}, 3000);
             // });
-          </script>
-          <!-- END PAGE -->
+</script>
+<!-- END PAGE -->
 
 
 
 
 
 
-          <% include partials/loh-footer %>
-        </div>
-      </body>
+<% include partials/loh-footer %>
+</div>
+</body>
 
-      </html>
+</html>

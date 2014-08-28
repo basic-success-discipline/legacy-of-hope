@@ -68,7 +68,6 @@ h5{
 
 .hero.first .heroblurb {
 	color: white;
-	width: 36%;
 	position: absolute;
 	left: 15%;
 	top: 33%;
@@ -79,24 +78,39 @@ h5{
   color: rgb(51, 148 ,239);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin-bottom: 6px;
+    margin-bottom: 17px;
 
 }
 
-.hero.first #countdown{
-	margin-left: -33px;
+.hero.first .countdown{
 	width: 200px;
-	padding-right: 12px;
+	position: relative;
+}
+.hero.first .countdown span{
+	display: table-cell;
+	width: 65px;
+	font-size: 30px;
 }
 
-.hero.first #countdown span{
-	    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+
+.hero.first .countdown h2{
+	font-family: "Open Sans", sans-serif;
+	color: #358fe3;
+	font-weight: 400;
+	text-transform: none;
+	font-size: 18px;
+	margin-top: 17px;                       
+}
+.hero.first .countdown .hours{
+	text-align: center;
+}
+.hero.first .countdown .minutes{
+	text-align: right;
 }
 
-#Container_jbeeb_9, #TextBox_jbeeb_11{
-	margin-left: -7px;
-}
+
+
+
 .hero.second .heroblurb {
 	color: white;
 	width: 100%;
