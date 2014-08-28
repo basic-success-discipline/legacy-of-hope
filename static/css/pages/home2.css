@@ -4,7 +4,8 @@ h5 {
 .banner {
   position: relative;
   overflow: auto;
-  margin-bottom: -15px; }
+  margin-bottom: -15px;
+  max-width: 1200px; }
 
 .banner li {
   list-style: none;
@@ -68,7 +69,8 @@ h5 {
 .hero.first .countdown span {
   display: table-cell;
   width: 65px;
-  font-size: 30px; }
+  font-size: 30px;
+  visibility: hidden; }
 
 .hero.first .countdown h2 {
   font-family: "Open Sans", sans-serif;
@@ -78,11 +80,17 @@ h5 {
   font-size: 18px;
   margin-top: 17px; }
 
-.hero.first .countdown .hours {
-  text-align: center; }
+.hero.first .countdown .hours, #hours {
+  text-align: center;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s; }
 
-.hero.first .countdown .minutes {
-  text-align: right; }
+.hero.first .countdown .minutes, #minutes {
+  text-align: right;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s; }
 
 .hero.second .heroblurb {
   color: white;
@@ -108,6 +116,32 @@ h5 {
   font-family: "Oswald";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
+
+.herospacer a {
+  top: 45%;
+  position: absolute; }
+
+.herospacer a img {
+  width: 100%;
+  float: none;
+  display: block;
+  margin-bottom: 0;
+  visibility: visible;
+  opacity: 0.5; }
+
+.herospacer a img:hover {
+  opacity: 1;
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; }
+
+.herospacer a.prev {
+  left: 20px;
+  margin-top: -2px; }
+
+.herospacer a.next {
+  right: 20px; }
 
 .page {
   padding-top: 77px;

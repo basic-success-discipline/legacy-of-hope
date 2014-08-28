@@ -310,6 +310,8 @@ a:hover {
 
 .hero, .herospacer{
   width: 100%;
+}
+.hero{
   background-color: black;
 }
 
@@ -331,7 +333,10 @@ a:hover {
   height:$herobuffer;
   background-color: white;
   opacity: 0.3;
-}
+}'
+
+
+
 
 
 

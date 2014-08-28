@@ -10,6 +10,9 @@
  <!-- This script is modified specifically for this page at line 73 -->
  <script type="text/javascript" src="/js/unslider.js"></script>
 
+ <link rel="stylesheet" href="/css/animate.css">
+
+
 </head>
 
 <body>
@@ -22,12 +25,13 @@
 
 
       <!-- HERO -->
-      <div class="banner">
+      <div style="position:fixed;">
+
+      <div class="banner" >
         <ul>
           <li>
             <div class="hero first">
               <img src="/img/home_hero1.png"/>
-
               <div class="heroblurb">
                 <div class="wrapper-content">
                   <div class="countdown">
@@ -46,44 +50,69 @@
                       <h2>mins</h2>
                     </span>
                   </div>
-                   <script type="text/javascript" src="/js/countdown.js"></script>
-
-
-</div>
-</div>
-</div>
-</li>
-<li>
-  <div class="hero second">
-    <img src="/img/home_hero2.png" />
-    <div class="heroblurb">
-      <div class="wrapper-content">
-        <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-        <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
-        <p class="herop2">- Nelson Mandela</p>
+                  <script type="text/javascript" src="/js/countdown.js"></script>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="hero second">
+              <img src="/img/home_hero2.png" />
+              <div class="heroblurb">
+                <div class="wrapper-content">
+                  <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+                  <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+                  <p class="herop2">- Nelson Mandela</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
-</li>
+      </div>
 
+      <div class="herospacer">
+      <img src="/img/home_hero1.png"/>
+            <a href="#" class="unslider-arrow prev" ><img src="/img/left_arrow.png"/></a>
+            <a href="#" class="unslider-arrow next"><img src="/img/right_arrow.png"/></a>
+      </div>
+      <div class="herobuffer"></div>
+      <script type="text/javascript">
 
-</ul>
-</div>
-
-
-<div class="herobuffer"></div>
-<script type="text/javascript">
-      // A $( document ).ready() block.
-      $(function() {
-
-        $('.banner').unslider({
-          speed: 500,  
-          delay: 500000,             
-          dots: true,               
-          fluid: true,
-          pause: true          
+      var first = true;
+      $('.prev').fadeOut(0, "linear");
+       var unslider =  $('.banner').unslider({
+          speed: 600,  
+          delay: 10000,             
+          dots: false, 
+          complete: function() {
+            updateArrows();
+          } ,             
+          fluid: true        
         });
-      });
+
+       $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        
+        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        unslider.data('unslider')[fn]();
+        unslider.data('unslider').start();
+      
+    });
+       var updateArrows = function(){
+          
+        if(first){
+          $('.next').fadeOut(100, "linear");
+          $('.prev').fadeIn(100, "linear");
+            first=false;
+          
+        }else{
+           $('.prev').fadeOut(100, "linear");
+          $('.next').fadeIn(100, "linear");
+          first=true;
+        }
+
+      };
     </script>
 
 

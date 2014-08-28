@@ -28,6 +28,17 @@
                       seconds = parseInt(seconds_left % 60);
 
                       // format countdown string + set tag value
+                      $('.days').css('visibility', 'visible');
+                      $('.hours').css('visibility', 'visible');
+                      $('.minutes').css('visibility', 'visible');
+
+                      $('.days').addClass('animated bounceIn');
+                      $('.hours').addClass('animated bounceIn');
+                      $('.minutes').addClass('animated bounceIn');
+
+                      $('#days').addClass('animated swing');
+                      $('#hours').addClass('animated swing');
+                      $('#minutes').addClass('animated swing');
                       tdays.innerHTML = days;
                       thours.innerHTML = hours;
                       tminutes.innerHTML = minutes; 

@@ -463,7 +463,9 @@ a:hover {
   cursor: default; }
 
 .hero, .herospacer {
-  width: 100%;
+  width: 100%; }
+
+.hero {
   background-color: black; }
 
 .hero img {
