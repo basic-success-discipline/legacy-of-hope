@@ -323,7 +323,8 @@ h4.subheading hr {
   height: 158px;
   background-color: #F2F3F3;
   width: 100%;
-  line-height: 158px; }
+  line-height: 158px;
+  position: relative; }
 
 .sponsors .sponsor {
   position: absolute;
