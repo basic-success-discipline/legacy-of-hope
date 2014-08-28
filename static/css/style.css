@@ -277,7 +277,7 @@ p {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.45em;
-  font-family: "Helvetica Neue";
+  font-family: "Open Sans";
   margin: 35px auto; }
 
 strong {
@@ -388,7 +388,7 @@ a:hover {
 
 .navbar .links .menu-donate a {
   font-size: 12px;
-  font-family: "Helvetica Neue";
+  font-family: "Open Sans";
   font-weight: 600; }
 
 .navbar .links .menu-donate a:hover {
@@ -555,7 +555,7 @@ a:hover {
 
 .sidebar .missionstatement p {
   font-size: 12px;
-  font-family: "Helvetica Neue";
+  font-family: "Open Sans";
   color: #1f2229;
   line-height: 1.333;
   text-align: justify;
@@ -564,7 +564,7 @@ a:hover {
 
 .sidebar .missionstatement a {
   font-size: 13px;
-  font-family: "Helvetica Neue";
+  font-family: "Open Sans";
   color: #1f2229;
   line-height: 1.333;
   font-weight: bold;
@@ -664,7 +664,7 @@ a:hover {
 
 .sidebar .sidebox p {
   font-size: 12px;
-  font-family: "Helvetica Neue";
+  font-family: "Open Sans";
   margin-bottom: 15px;
   margin-top: 15px;
   font-weight: 500; }
@@ -682,7 +682,7 @@ a:hover {
   height: 28px;
   font-size: 14px;
   font-weight: 200;
-  font-family: "Helvetica Neue";
+  font-family: "Open Sans";
   color: white;
   text-transform: uppercase;
   border: 0px;
@@ -782,7 +782,7 @@ a:hover {
   position: relative; }
 
 .contact-inner h1 {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 38px; }
 
@@ -835,14 +835,14 @@ a:hover {
   font-size: 20px;
   text-transform: none;
   margin: 0px !important;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding-bottom: 5px !important; }
 
 .contactinfo h2 {
   font-size: 12px;
   text-transform: none;
   margin-bottom: 0px;
-  font-family: 'Helvetica Neue', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 .lines {
   width: 76%;
@@ -938,12 +938,12 @@ a:hover {
 
 .lightbox h1 {
   text-align: center;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 30px;
   margin-bottom: 0px; }
 
 .lightbox h3 {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 22px;
   margin-bottom: 10px;
   text-align: center; }
@@ -957,7 +957,7 @@ a:hover {
 
 .lightbox h4 {
   text-align: center;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 30px; }
 
 .lightbox .contactinfo {
@@ -976,7 +976,7 @@ a:hover {
   font-size: 15px;
   text-transform: none;
   margin: 0px !important;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding-bottom: 5px !important;
   color: #323232; }
 
@@ -986,7 +986,7 @@ a:hover {
   margin-bottom: 0px;
   font-weight: 100;
   line-height: 1.15em;
-  font-family: 'Helvetica Neue', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 /* #### legacy Form #### */
 .legacy-frm {
@@ -994,7 +994,7 @@ a:hover {
   margin-left: auto;
   background-color: #1c1f26;
   padding: 20px 30px 20px 30px;
-  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 12px "Open Sans", Helvetica, Arial, sans-serif;
   color: #888;
   border-radius: 5px;
   -webkit-border-radius: 5px;
