@@ -11,3 +11,19 @@
 
 .maincopy p:nth-child(5) {
   margin-bottom: 0; }
+
+.page .label {
+  clear: both;
+  text-align: center;
+  background-color: #FAFAFA;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 10px; }
+
+.page .label i {
+  font-style: italic; }
+
+.page .label p {
+  margin: 0 auto; }
