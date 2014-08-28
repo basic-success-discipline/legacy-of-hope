@@ -53,7 +53,7 @@
 		//  Pass a jQuery element as the context with .call(), and the index as a parameter: Unslider.calculate.call($('li:first'), 0)
 		this.calculate = function(index) {
 			var me = $(this),
-				width = me.outerWidth(), height = me.outerHeight();
+				width = $('.herospacer').outerWidth(), height = $('.herospacer').outerHeight(); // modified by Jcobb
 
 			
 			//  Add it to the sizes list
@@ -69,7 +69,7 @@
 			//  Set the main element
 			this.el.css({
 				overflow: 'hidden',
-				width: _.max[0],
+				width: $('.herospacer').outerWidth(),
 				height: _.max[0] * 453/732 * ($(window).width()>=480 ? .62 : 1)  //modified by JCobb
 			});
 			
