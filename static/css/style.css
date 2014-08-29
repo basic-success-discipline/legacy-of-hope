@@ -305,7 +305,8 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .wrapper-content {
   width: 90%;
@@ -316,7 +317,8 @@ a:hover {
 .wrapper-fix {
   position: fixed;
   width: 100%;
-  max-width: 1200px; }
+  max-width: 1200px;
+  overflow: hidden; }
 
 .navfix, .navspacer {
   height: 50px; }
@@ -482,6 +484,12 @@ a:hover {
   height: 15px;
   background-color: white;
   opacity: 0.3; }
+
+.safari.herospacer img {
+  visibility: visible; }
+
+.safari .hero {
+  display: none; }
 
 .page {
   padding-top: 64px;
@@ -1243,7 +1251,9 @@ a:hover {
 
   .prefooter {
     height: 65px;
-    padding-top: 10px; }
+    padding-top: 10px;
+    z-index: 6;
+    position: relative; }
 
   .pf1 p {
     font-size: 12px;
@@ -1257,7 +1267,9 @@ a:hover {
 
   .footer {
     height: 75px;
-    padding-top: 10px; }
+    padding-top: 10px;
+    z-index: 6;
+    position: relative; }
 
   .footer p {
     text-align: center;

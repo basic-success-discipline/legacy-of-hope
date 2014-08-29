@@ -105,6 +105,7 @@ a:hover {
   max-width: $wrapper-inner-width;
   margin: 0 auto;
   position: relative; 
+  overflow: hidden;
 }
 
 .wrapper-content {
@@ -118,6 +119,7 @@ a:hover {
   position: fixed;
   width: 100%; 
   max-width: $wrapper-inner-width;
+    overflow: hidden;
 }
 
 
@@ -335,6 +337,13 @@ a:hover {
   opacity: 0.3;
 }
 
+.safari.herospacer img{
+  visibility: visible;
+}
+
+.safari .hero{
+  display: none;
+}
 
 
 
@@ -1330,6 +1339,9 @@ p{
 .prefooter{
   height: 65px;
   padding-top: 10px;
+  z-index: 6;
+  position: relative;
+
 }
 .pf1 p{
   font-size: 12px;
@@ -1344,6 +1356,8 @@ p{
 .footer{
   height: 75px;
   padding-top: 10px;
+  z-index: 6;
+  position: relative;
 }
 .footer p{
   text-align: center;

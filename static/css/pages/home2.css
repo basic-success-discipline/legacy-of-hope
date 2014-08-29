@@ -22,6 +22,12 @@ h5 {
   width: 62%;
   float: right; }
 
+.safari.herospacer img {
+  visibility: hidden; }
+
+.safari .hero {
+  display: block; }
+
 .dots {
   position: absolute;
   left: 0;
@@ -63,12 +69,12 @@ h5 {
   margin-bottom: 17px; }
 
 .hero.first .countdown {
-  width: 200px;
+  width: 215px;
   position: relative; }
 
 .hero.first .countdown span {
   display: table-cell;
-  width: 65px;
+  width: 67px;
   font-size: 30px;
   visibility: hidden; }
 
@@ -127,7 +133,10 @@ h5 {
   display: block;
   margin-bottom: 0;
   visibility: visible;
-  opacity: 0.5; }
+  opacity: .5; }
+
+.safari.herospacer a img {
+  visibility: visible; }
 
 .herospacer a img:hover {
   opacity: 1;

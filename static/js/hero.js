@@ -1,5 +1,7 @@
-var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod|Android|BlackBerry|IEMobile)/g) ? true : false );
-if (iOS){
-  document.getElementsByClassName('hero')[0].style.display='none';
-  document.getElementsByClassName('herospacer')[0].getElementsByTagName('img')[0].style.visibility = "visible";
+var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) 
+{
+	
+  $('.herofix').addClass("safari");
+  $('.herospacer').addClass("safari");
 }
