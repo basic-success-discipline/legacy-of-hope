@@ -18,10 +18,9 @@
   color: white;
   line-height: 1.8;
   font-size: 16px;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue Light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
   text-align: left; }
 
 .md .maincopy a {
@@ -33,15 +32,17 @@
   color: white; }
 
 .md .label h4 {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue Medium";
   margin-bottom: 3px;
-  font-size: 15px; }
+  font-size: 15px;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .md .label p {
   font-size: 14px;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue Light Italic";
   line-height: 1.5;
-  font-style: italic;
   margin-top: 3px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -95,7 +96,7 @@
   color: white;
   line-height: 1.8;
   font-size: 16px;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue Light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400; }
@@ -109,11 +110,11 @@
   text-align: center; }
 
 .copy p strong {
-  font-weight: 600;
-  font-style: italic; }
+  font-family: "Helvetica Neue Medium Italic";
+  font-weight: normal; }
 
 .md .first.copy {
-  max-width: 790px;
+  max-width: 770px;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
@@ -238,7 +239,8 @@
 
 .md .second.copy p {
   font-size: 18px;
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: "Helvetica Neue Light"; }
 
 .md .second.copy p strong {
   font-weight: 400;
