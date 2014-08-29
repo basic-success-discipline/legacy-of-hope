@@ -61,7 +61,7 @@
               <div class="heroblurb">
                 <div class="wrapper-content">
                   <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-                  <p class="herop1">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
+                  <p class="herop1 randomquote">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
                   <p class="herop2">- Nelson Mandela</p>
                 </div>
               </div>
@@ -88,6 +88,9 @@
           dots: false, 
           complete: function() {
             updateArrows();
+            if(first){
+              randomQuote();
+            }
           } ,             
           fluid: true        
         });
@@ -114,6 +117,16 @@
         }
 
       };
+
+      var qs = [];
+      <% for (var i=0; i<quotes.length; i++){ %>
+        qs[<%= i %>] = "<%= quotes[i] %>";
+      <% } %>
+      var randomQuote = function(){
+
+        var rand = Math.floor(Math.random() * qs.length);
+        $('.randomquote').html(qs[rand]);
+      }
     </script>
 
 

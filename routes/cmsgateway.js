@@ -37,6 +37,14 @@ var home = {
           likes : "654",
           link: "/concert"
         }
+    ],
+    quotes:[
+    "This is quote one",
+    "This is quote two",
+    "This is quote three",
+    "This is quote four",
+    "This is quote five",
+    "This is quote six"
     ]
 };
 
