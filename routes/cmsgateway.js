@@ -68,6 +68,16 @@ var legacy_of_hope_nmcht_concert = {
     stylesheet: "sibongile.css",
     currentpage: "menu-sibongile"
   };
+
+  var mandeladay = {
+    title: "Mandela Day 2014 - Legacy of Hope",
+    thumb_img: "thumb_mandeladay.png",
+    description: "Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Theatre to celebrate the ongoing work of Nelson Mandela.",
+    stylesheet: "mandeladay.css",
+    currentpage: "menu-mandeladay"
+  };
+
+
 var mission = {
     title: "Our Mission - Legacy of Hope",
     thumb_img: "thumb_mission.png",
@@ -108,6 +118,9 @@ exports.getPageData = function(category, page, callback) {
         break;
       case 'legacy-of-hope-nmcht-concert':
         callback(null, legacy_of_hope_nmcht_concert);
+        break;
+      case 'mandeladay':
+        callback(null, mandeladay);
         break;
       case 'mission':
         callback(null, mission);

@@ -72,7 +72,7 @@ strong { font-weight: bold ; }
 
 
 a {
-  color: #358fe3;
+  color: $loh-blue;
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
@@ -81,7 +81,7 @@ a {
 }
 
 a:hover {
-  color: #358fe3; 
+  color: $loh-blue; 
 }
 
 
@@ -185,7 +185,7 @@ a:hover {
 }
 
 .links a:hover {
-  color: #358fe3; 
+  color: $loh-blue; 
   cursor: pointer;
 }
 
@@ -194,7 +194,7 @@ a:hover {
 }
 
 .navbar .menu-donate{
-  background-color: #358fe3; 
+  background-color: $loh-blue; 
   padding:8px;
   padding-top: 3px;
   margin-top: -5px;
@@ -278,7 +278,7 @@ a:hover {
 
 
 .nav-dropdown li a:hover {
-  color: #358fe3; 
+  color: $loh-blue; 
 }
 
 .ddclick{
@@ -296,7 +296,7 @@ a:hover {
 }
 
 .nav-dropdown .currentpage a, .nav .currentpage a{
-  color: #358fe3;
+  color: $loh-blue;
   pointer-events: none;
   cursor: default; 
 }
@@ -402,7 +402,7 @@ a:hover {
   float:right;
 }
 .maincopy a:hover{
-  color: #358fe3;
+  color: $loh-blue;
 }
 
 
@@ -599,7 +599,7 @@ a:hover {
 }
 
 .sidebar .sidebox button:hover{
-  background-color: #358fe3;
+  background-color: $loh-blue;
 }
 
 
@@ -748,7 +748,7 @@ a:hover {
   color: white;
 }
 .close-contact a:hover{
- color: #358fe3; 
+ color: $loh-blue; 
  cursor: pointer;
 }
 

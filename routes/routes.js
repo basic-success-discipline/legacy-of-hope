@@ -51,6 +51,13 @@ router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
 });
 
 
+router.get('/mandeladay', function(req, res) {
+  cmsgateway.getPageData('cms', 'mandeladay', 
+    function(err, data) {
+      res.render('mandeladay', data);
+    });
+});
+
 router.get('/mission', function(req, res) {
   cmsgateway.getPageData('cms', 'mission', 
     function(err, data) {

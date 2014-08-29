@@ -103,7 +103,7 @@ h5{
 
 .hero.first .countdown h2{
 	font-family: "Open Sans", sans-serif;
-	color: #358fe3;
+	color: $loh-blue;
 	font-weight: 400;
 	text-transform: none;
 	font-size: 18px;
@@ -201,7 +201,7 @@ opacity: .5
 	margin-bottom: 10px;
 	margin-top: 0px;
 	border-radius: 6px;
-	border: 3px solid #358fe3;
+	border: 3px solid $loh-blue;
 }
 
 
@@ -401,7 +401,7 @@ $cardpadding: 0px;
 
 
 .latestnews a:hover p, .latestnews a:hover h5{
-	color: #358fe3;
+	color: $loh-blue;
 }
 
 
