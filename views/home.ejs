@@ -62,7 +62,7 @@
                 <div class="wrapper-content">
                   <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
                   <p class="herop1 randomquote">“A specialized, dedicated children’s hospital will be a credible demonstration of the commitment of African leaders to place the rights of children at the forefront. Nothing less would be enough."</p>
-                  <p class="herop2">- Nelson Mandela</p>
+                  <p class="herop2 randomquoteauthor">- Nelson Mandela</p>
                 </div>
               </div>
             </div>
@@ -120,13 +120,25 @@
 
       var qs = [];
       <% for (var i=0; i<quotes.length; i++){ %>
-        qs[<%= i %>] = "<%= quotes[i] %>";
+        qs[<%= i %>] = "<%= quotes[i].quote %>";
       <% } %>
+
+      var qas = [];
+      <% for (var i=0; i<quotes.length; i++){ %>
+        qas[<%= i %>] = "<%= quotes[i].author %>";
+      <% } %>
+
+
       var randomQuote = function(){
 
         var rand = Math.floor(Math.random() * qs.length);
-        $('.randomquote').html(qs[rand]);
+        $('.randomquote').html('"' + qs[rand] + '"');
+        $('.randomquoteauthor').html("- " + qas[rand]);
       }
+
+      $( document ).ready(function() {
+           randomQuote();
+      });
     </script>
 
 
