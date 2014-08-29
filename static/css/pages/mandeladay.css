@@ -4,28 +4,56 @@
 .md .maincopy {
   color: white; }
 
+.md .maincopy h1 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300; }
+
+.md .maincopy h3 {
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .md .maincopy p {
-  line-height: 1.5;
-  text-align: left;
-  font-size: 18px;
+  color: white;
+  line-height: 1.8;
+  font-size: 16px;
   font-family: "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400; }
+  font-weight: 400;
+  text-align: left; }
 
-.Legacy_of_Hope_hosted_dignitaries__celebrities_ {
-  font-size: 18px;
-  line-height: 1.556;
-  text-align: left;
+.md .maincopy a {
+  color: #358fe3;
+  text-decoration: underline; }
+
+.md .label {
   position: absolute;
-  left: 122.625px;
-  top: 822.574px;
-  width: 429px;
-  height: 213px;
-  z-index: 48; }
+  color: white; }
+
+.md .label h4 {
+  font-family: "Helvetica Neue";
+  margin-bottom: 3px;
+  font-size: 15px; }
+
+.md .label p {
+  font-size: 14px;
+  font-family: "Helvetica Neue";
+  line-height: 1.5;
+  font-style: italic;
+  margin-top: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .md .choir {
   width: 100%; }
+
+.md .choirlabel.label {
+  top: 500px;
+  right: 4%;
+  max-width: 200px;
+  text-align: center; }
 
 .md .row.one {
   width: 100%;
@@ -63,34 +91,6 @@
   width: 70%;
   top: 120px; }
 
-.md .label {
-  position: absolute;
-  color: white; }
-
-.md .label h4 {
-  font-family: "Helvetica Neue";
-  margin-bottom: 3px;
-  font-size: 17px; }
-
-.md .label p {
-  font-size: 15px;
-  font-family: "Helvetica Neue";
-  line-height: 1.5;
-  font-style: italic;
-  margin-top: 3px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.CHUCK_NICE_popular_comic_and_radio_personality_ {
-  font-size: 14px;
-  color: white;
-  text-transform: uppercase;
-  text-align: left;
-  position: absolute;
-  left: 860.401px;
-  top: 908.002px;
-  z-index: 24; }
-
 .md .copy p {
   color: white;
   line-height: 1.8;
@@ -101,15 +101,16 @@
   font-weight: 400; }
 
 .chuck.label {
-  left: 68%;
-  top: 200px; }
+  right: 4%;
+  top: 200px;
+  width: 250px; }
 
 .copy p {
   text-align: center; }
 
 .copy p strong {
-  font-weight: initial;
-  color: #358fe3; }
+  font-weight: 600;
+  font-style: italic; }
 
 .md .first.copy {
   max-width: 790px;
@@ -128,12 +129,12 @@
   height: auto; }
 
 .md .row.two .spacer img {
-  width: 63%; }
+  width: 40%; }
 
 .md img.boikanyo {
-  right: -40px;
+  right: 15%;
   position: absolute;
-  width: 70%;
+  width: 40%;
   top: 0px; }
 
 .md .botlhale.label {
@@ -181,12 +182,15 @@
 
 .vidlightbox .vidholder {
   position: fixed;
-  top: calc((100% - 315px)/2);
-  left: calc((100% - 560px)/2);
+  width: 1200px;
+  top: calc((100% - (1200px * 0.5625))/2);
+  left: calc((100% - 1200px)/2);
   text-align: center; }
 
 .vidlightbox .vid {
-  display: none; }
+  display: none;
+  width: 1200px;
+  height: calc(1200px * 0.5625); }
 
 .vidlightbox a.closevideo {
   text-align: center;
@@ -208,23 +212,23 @@
 
 .md img.vega {
   position: absolute;
-  top: -80px;
+  top: -130px;
   width: 33%; }
 
 .md .tata.label {
-  top: 175px;
+  top: 125px;
   left: 28%; }
 
 .md img.poe {
   position: absolute;
-  top: 80px;
+  top: 100px;
   width: 43%;
   right: 0; }
 
 .md .poelabel.label {
-  top: 310px;
-  right: 45%;
-  text-align: right; }
+  top: 330px;
+  right: 30%;
+  text-align: center; }
 
 .md .second.copy {
   margin-top: 145px;
@@ -235,6 +239,11 @@
 .md .second.copy p {
   font-size: 18px;
   font-weight: 400; }
+
+.md .second.copy p strong {
+  font-weight: 400;
+  color: #358fe3;
+  font-style: normal; }
 
 .md .donatebuttonholder {
   text-align: center; }
@@ -261,4 +270,42 @@
 
 .md .powerfist {
   width: 100%;
-  margin-top: -50px; }
+  margin-top: -50px;
+  display: block; }
+
+@media only screen and (max-width: 479px) {
+  .vidlightbox .vidholder {
+    width: 320px;
+    top: calc((100% - (320px * 0.5625))/2);
+    left: calc((100% - 320px)/2); }
+
+  .vidlightbox .vid {
+    width: 320px;
+    height: calc(320px * 0.5625); } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .vidlightbox .vidholder {
+    width: 480px;
+    top: calc((100% - (480px * 0.5625))/2);
+    left: calc((100% - 480px)/2); }
+
+  .vidlightbox .vid {
+    width: 480px;
+    height: calc(480px * 0.5625); } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .vidlightbox .vidholder {
+    width: 768px;
+    top: calc((100% - (768px * 0.5625))/2);
+    left: calc((100% - 768px)/2); }
+
+  .vidlightbox .vid {
+    width: 768px;
+    height: calc(768px * 0.5625); } }
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .vidlightbox .vidholder {
+    width: 1024px;
+    top: calc((100% - (1024px * 0.5625))/2);
+    left: calc((100% - 1024px)/2); }
+
+  .vidlightbox .vid {
+    width: 1024px;
+    height: calc(1024px * 0.5625); } }
