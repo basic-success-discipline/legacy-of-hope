@@ -52,7 +52,7 @@
           <div class="botlhale label">
             <h4>Botlhale Boikanyo</h4>
             <p>performing “His Day is Done”,<br>a tribute poem for Nelson Mandela<br>by Dr. Maya Angelou </p>
-            <button class="sliderButton" id="playcontrol" onclick="playPause()"> 
+            <button class="playcontrol"> 
              <i class="fa fa-play"><p>play video</p></i> 
            </button>
          </div>
@@ -60,6 +60,37 @@
          <img class="boikanyo" src="img/md_boikanyo.png"/>
        </div>
      </div>
+
+
+     <div class="vidlightbox closevideo">
+      <div class="vidholder">
+        <iframe class="vid vfade" width="560" height="315" src="//www.youtube.com/embed/_ggi16qgVkE?rel=0" frameborder="0" allowfullscreen>
+          
+        </iframe>
+        <a class="closevideo vfade" href="#">close</a>
+        </div>
+
+     </div>
+
+
+
+     <script type="text/javascript">
+          $('.playcontrol').click(function(){
+            $('.vidlightbox').fadeIn(0, function(){
+              $('.vfade').fadeIn(0);
+            });
+          });
+
+          $('.closevideo').click(function(){
+            $('.vfade').fadeOut(0, function(){
+              $('.vidlightbox').fadeOut(0);
+            });
+            $('.vid').attr('src', '//www.youtube.com/embed/_ggi16qgVkE?rel=0');
+          })
+
+
+
+     </script>
 
 
 
