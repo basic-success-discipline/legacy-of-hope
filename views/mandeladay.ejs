@@ -3,68 +3,70 @@
 
 <head>
 
-<% include partials/loh-head %>
+  <% include partials/loh-head %>
 
 </head>
 
 <body>
   <div class="wrapper"> 
     <div class="wrapper-inner md">
-        <% include partials/loh-menu %>
+      <% include partials/loh-menu %>
 
-        <img class="choir" src="img/md_choir.png"/>
-         <div class="row one">
+      <img class="choir" src="img/md_choir.png"/>
+      <div class="row one">
         <div class="wrapper-content">
-        <div class="maincopy">
-        <div class="spacers">
-        <div class="spacer one"><img ></div>
-        <div class="spacer two"><img /></div>
-        <div class="spacer three"><img /></div>
-        <div class="spacer four"><img /></div>
-        </div>
-        
+          <div class="maincopy">
+            <div class="spacers">
+              <div class="spacer one"><img ></div>
+              <div class="spacer two"><img /></div>
+              <div class="spacer three"><img /></div>
+              <div class="spacer four"><img /></div>
+            </div>
+            
 
-        <h1>Mandela Day 2014</h1>
-        <h3>July 18th, Los Angeles</h3>
-        <p>Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Theatre to celebrate the ongoing work of Nelson Mandela. During the event, the Legacy of Hope announced plans for a worldwide simulcast concert scheduled to take place in New York and Capetown on December 13th, 2014 in support of the ongoing Nelson Mandela Children’s Hospital campaign project.</p>
-        </div>
+            <h1>Mandela Day 2014</h1>
+            <h3>July 18th, Los Angeles</h3>
+            <p>Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Theatre to celebrate the ongoing work of Nelson Mandela. During the event, the Legacy of Hope announced plans for a worldwide simulcast concert scheduled to take place in New York and Capetown on December 13th, 2014 in support of the ongoing Nelson Mandela Children’s Hospital campaign project.</p>
+          </div>
         </div>
 
         <img class="nice" src="img/md_nice.png"/>
 
         <div class="chuck label">
-        <h4>Chuck Nice</h4>
-        <p>popular comic and radio personality<br>hosted the gala event</p>
+          <h4>Chuck Nice</h4>
+          <p>popular comic and radio personality<br>hosted the gala event</p>
         </div>
-        </div>
-        <div class="wrapper-content">
+      </div>
+      <div class="wrapper-content">
         <div class="first copy">
-        <p>The evening included performances by speakers and artists including: <strong>Ruby Bridges</strong>, American civil rights icon, <strong>Tata Vega</strong>, noted singer from ‘20 Feet from Stardom’, <strong>Poe</strong>, popular singer/songwriter, <strong>Botlhale Boikanyo</strong>, award-winning South African poet and Legacy of Hope Youth Ambassador, talented English tenor <strong>Thomas Spencer-Wortley</strong>; and the acclaimed <strong>Bryant Temple African Methodist Episcopal Church Choir</strong>.</p>
+          <p>The evening included performances by speakers and artists including: <strong>Ruby Bridges</strong>, American civil rights icon, <strong>Tata Vega</strong>, noted singer from ‘20 Feet from Stardom’, <strong>Poe</strong>, popular singer/songwriter, <strong>Botlhale Boikanyo</strong>, award-winning South African poet and Legacy of Hope Youth Ambassador, talented English tenor <strong>Thomas Spencer-Wortley</strong>; and the acclaimed <strong>Bryant Temple African Methodist Episcopal Church Choir</strong>.</p>
         </div>
-        </div>
+      </div>
 
-        <div class="row two">
+      <div class="row two">
         <div class="wrapper-content">
+          <div class="spacers">
+            <div class="spacer one"><img src="img/md_boikanyo.png"></div>
+          </div>
+          
+          <div class="botlhale label">
+            <h4>Botlhale Boikanyo</h4>
+            <p>performing “His Day is Done”,<br>a tribute poem for Nelson Mandela<br>by Dr. Maya Angelou </p>
+            <button class="sliderButton" id="playcontrol" onclick="playPause()"> 
+             <i class="fa fa-play"><p>play video</p></i> 
+           </button>
+         </div>
+
+         <img class="boikanyo" src="img/md_boikanyo.png"/>
+       </div>
+     </div>
+
+
+
+     <div class="row three">
+      <div class="wrapper-content">
         <div class="spacers">
-        <div class="spacer one"><img src="img/md_boikanyo.png"></div>
-        </div>
-        
-        <div class="botlhale label">
-          <h4>Botlhale Boikanyo</h4>
-          <p>performing “His Day is Done”,<br>a tribute poem for Nelson Mandela<br>by Dr. Maya Angelou </p>
-          <div class="playcontrol"></div>
-        </div>
-
-        <img class="boikanyo" src="img/md_boikanyo.png"/>
-        </div>
-        </div>
-
-
-
-        <div class="row three">
-        <div class="wrapper-content">
-        <div class="spacers">
-        <div class="spacer one"><img src="img/md_poe.png"></div>
+          <div class="spacer one"><img src="img/md_poe.png"></div>
         </div>
 
         <img class="vega" src="img/md_vega.png"/>
@@ -83,24 +85,24 @@
 
 
 
-        </div>
-        </div>
-
-        <div class="wrapper-content">
-         <div class="second copy">
-        <p>Thank you for participating in this wonderful event.<br>If you’ve enjoyed our story, please consider supporting <nobr><strong>The Legacy of Hope Foundation</strong></nobr></p>
-        </div>
-        
-                <div class="donatebuttonholder">
-              <button onclick="showDonate()" >Give Now</button>
-              </div>
-       
-
-        </div>
-        <img class="powerfist" src="img/md_powerfist.png"/>
-
-
-      <% include partials/loh-footer %>
+      </div>
     </div>
-  </body>
-  </html>
+
+    <div class="wrapper-content">
+     <div class="second copy">
+      <p>Thank you for participating in this wonderful event.<br>If you’ve enjoyed our story, please consider supporting <nobr><strong>The Legacy of Hope Foundation</strong></nobr></p>
+    </div>
+    
+    <div class="donatebuttonholder">
+      <button onclick="showDonate()" >Give Now</button>
+    </div>
+    
+
+  </div>
+  <img class="powerfist" src="img/md_powerfist.png"/>
+
+
+  <% include partials/loh-footer %>
+</div>
+</body>
+</html>
