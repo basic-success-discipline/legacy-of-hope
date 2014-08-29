@@ -61,7 +61,7 @@ var concert = {
   title: "Concert - Legacy of Hope",
   thumb_img: "thumb_concerts.png",
   description: "This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before.",
-  stylesheet: "concert.css",
+  stylesheet: "concert2.css",
   currentpage: "menu-concert"
 };
 var guitarinitiative = {

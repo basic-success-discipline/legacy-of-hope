@@ -19,6 +19,7 @@
   line-height: 1.8;
   font-size: 16px;
   font-family: "Helvetica Neue Light";
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left; }
@@ -35,13 +36,14 @@
   font-family: "Helvetica Neue Medium";
   margin-bottom: 3px;
   font-size: 15px;
-  font-weight: 100;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 .md .label p {
   font-size: 14px;
   font-family: "Helvetica Neue Light Italic";
+  font-weight: normal;
   line-height: 1.5;
   margin-top: 3px;
   -webkit-font-smoothing: antialiased;
@@ -97,6 +99,7 @@
   line-height: 1.8;
   font-size: 16px;
   font-family: "Helvetica Neue Light";
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400; }
@@ -239,8 +242,8 @@
 
 .md .second.copy p {
   font-size: 18px;
-  font-weight: 400;
-  font-family: "Helvetica Neue Light"; }
+  font-family: "Helvetica Neue Light";
+  font-weight: normal; }
 
 .md .second.copy p strong {
   font-weight: 400;

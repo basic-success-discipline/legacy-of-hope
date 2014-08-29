@@ -22,10 +22,11 @@ router.get('/board', function(req, res) {
     });
 });
 
+
 router.get('/concert', function(req, res) {
   cmsgateway.getPageData('cms', 'concert', 
     function(err, data) {
-      res.render('concert', data);
+      res.render('concert2', data);
     });
 });
 
