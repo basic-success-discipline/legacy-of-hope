@@ -93,6 +93,10 @@ img.stage{
 	width: 67px;
 	font-size: 30px;
 	visibility: hidden;
+		transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
 }
 
 
@@ -105,30 +109,36 @@ img.stage{
 	margin-top: 17px;                       
 }
 
+#days, #hours, #minutes{
+		transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
+}
 .c .countdown .days h2, #days{
 	text-align: left;
 }
 .c .countdown .hours h2, #hours{
 	text-align: center;
-	-webkit-animation-delay: 1s;
-	-moz-animation-delay: 1s;
-	-o-animation-delay: 1s;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
 }
 .c .countdown .hours{
-	-webkit-animation-delay: 1s;
-	-moz-animation-delay: 1s;
-	-o-animation-delay: 1s;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
 }
 .c .countdown .minutes h2, #minutes{
 	text-align: right;
-	-webkit-animation-delay: 2s;
-	-moz-animation-delay: 2s;
-	-o-animation-delay: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
 }
 .c .countdown .minutes{
-	-webkit-animation-delay: 2s;
-	-moz-animation-delay: 2s;
-	-o-animation-delay: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
 }
 
 

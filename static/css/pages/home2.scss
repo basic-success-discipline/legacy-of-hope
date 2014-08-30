@@ -122,8 +122,18 @@ h5{
 	width: 67px;
 	font-size: 30px;
 	visibility: hidden;
+		transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
 }
 
+#days, #hours, #minutes{
+		transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
+}
 
 .hero.first .countdown h2{
 	font-family: "Open Sans", sans-serif;
@@ -135,15 +145,15 @@ h5{
 }
 .hero.first .countdown .hours, #hours{
 	text-align: center;
-	-webkit-animation-delay: 1s;
-	-moz-animation-delay: 1s;
-	-o-animation-delay: 1s;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
 }
 .hero.first .countdown .minutes, #minutes{
 	text-align: right;
-	-webkit-animation-delay: 2s;
-	-moz-animation-delay: 2s;
-	-o-animation-delay: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
 }
 
 
@@ -220,15 +230,10 @@ text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.hero.third .bottom.heroblurb  i{
-		transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear; 
-}
 
 
-.hero.third .bottom.heroblurb a:hover i{
+
+.hero.third .bottom.heroblurb a:hover{
 	color: $loh-blue;
 }
 
