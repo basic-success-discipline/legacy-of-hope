@@ -747,6 +747,8 @@ a:hover {
 
 .pf1 {
   float: left;
+  width: 100%;
+  text-align: center;
   margin-top: 7px;
   height: auto; }
 
@@ -782,8 +784,9 @@ a:hover {
 .footer p {
   font-size: 12px;
   margin-top: 24px;
-  font-style: italic;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .f1 {
   float: left; }
@@ -794,6 +797,13 @@ a:hover {
 
 .f2p-phone {
   display: none; }
+
+.f2 p {
+  display: inline-block; }
+
+.f2 img {
+  display: inline-block;
+  margin-bottom: -3px; }
 
 .black_overlay {
   position: fixed;
