@@ -319,6 +319,9 @@ a {
 a:hover {
   color: #358fe3; }
 
+em {
+  color: #358fe3 !important; }
+
 .wrapper {
   width: 100%;
   height: 100%;
