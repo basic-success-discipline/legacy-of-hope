@@ -256,6 +256,13 @@
                     $(this).animate({
                      left: scroll * -1
                    }, 500);
+                    if(currentpanel==<%= panels - 1 %>){
+                    $('.left').fadeIn(0,'linear');
+                    $('.right').fadeOut(0,'linear');
+                  }else{
+                    $('.left').fadeIn(0,'linear');
+                    $('.right').fadeIn(0,'linear');
+                  }
                   })
                 }
               });
@@ -269,9 +276,20 @@
                   $(this).animate({
                    left: scroll
                  }, 500);
+                  if(currentpanel==0){
+                    $('.left').fadeOut(0,'linear');
+                    $('.right').fadeIn(0,'linear');
+                  }else{
+                    $('.left').fadeIn(0,'linear');
+                    $('.right').fadeIn(0,'linear');
+                  }
                 })
               }
             });
+              $( document ).ready(function() {
+                $('.left').fadeOut(0,'linear');
+               });
+
 
 
             </script>
