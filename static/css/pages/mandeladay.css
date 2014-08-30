@@ -197,13 +197,14 @@
   height: calc(1200px * 0.5625); }
 
 .vidlightbox a.closevideo {
-  text-align: center;
-  font-size: 20px;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  font-size: 30px;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
-  margin-top: 20px;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 200; }
 
