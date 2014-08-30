@@ -6,7 +6,7 @@ img.stage {
   margin-bottom: -35px; }
 
 .c {
-  max-width: 48%;
+  max-width: 575px;
   color: white; }
 
 .c h1, .c h2, .c h3, .c h4 {
@@ -47,7 +47,7 @@ img.stage {
   line-height: 1.8; }
 
 .c .countdown {
-  width: 215px;
+  width: 203px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
