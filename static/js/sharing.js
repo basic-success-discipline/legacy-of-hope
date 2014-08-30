@@ -56,15 +56,12 @@ function submitSignupForm() {
 	var $email = document.getElementsByClassName('register_email')[1].value;
 	if(!$email) {
 		alert('please fill in email field.');
-		return true;
+		return false;
 	}
-	$.post('http://ec2-54-191-42-61.us-west-2.compute.amazonaws.com/auth/register', {
-		username    : $email,
-		password    : $email,
-		email       : $email,
-		autoconfirm : 1
-	}, function() {
-		alert('thank you for signing up for email updates from the Legacy of Hope.')
-		Boxy.get($dlg).hide();
-	});
+	$.post('/register', { email : $email }, 
+		function() {
+			alert('thank you for signing up for email updates from the Legacy of Hope.')
+			$('a.close').click();
+		});
+	return false;
 }
