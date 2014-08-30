@@ -1,0 +1,169 @@
+.wrapper-inner {
+  background-color: black; }
+
+img.stage {
+  width: 100%;
+  margin-bottom: -35px; }
+
+.c {
+  max-width: 48%;
+  color: white; }
+
+.c h1, .c h2, .c h3, .c h4 {
+  text-align: center; }
+
+.c h1 {
+  font-size: 45px;
+  margin-bottom: 0; }
+
+.c h1 strong {
+  font-weight: normal;
+  color: #358fe3; }
+
+.c h2 {
+  font-size: 42px;
+  margin-left: -0px;
+  word-spacing: -4px;
+  margin-top: 1px;
+  margin-bottom: 1px; }
+
+.c h3 {
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 15px; }
+
+.c h4 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 24px;
+  color: #a0a0a0; }
+
+.c p {
+  text-align: justify;
+  font-family: "Helvetica Neue Light";
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8; }
+
+.c .countdown {
+  width: 215px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 70px; }
+
+.countdown h1 {
+  font-size: 26px;
+  font-family: "Oswald";
+  color: #3394ef;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 17px;
+  text-align: left; }
+
+.c .countdown span {
+  display: table-cell;
+  width: 67px;
+  font-size: 30px;
+  visibility: hidden; }
+
+.c .countdown h2 {
+  font-family: "Open Sans", sans-serif;
+  color: #358fe3;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 18px;
+  margin-top: 17px; }
+
+.c .countdown .days h2, #days {
+  text-align: left; }
+
+.c .countdown .hours h2, #hours {
+  text-align: center;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s; }
+
+.c .countdown .hours {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s; }
+
+.c .countdown .minutes h2, #minutes {
+  text-align: right;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s; }
+
+.c .countdown .minutes {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s; }
+
+.c .label {
+  color: white; }
+
+.c .label h4 {
+  font-family: "Helvetica Neue Medium";
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white; }
+
+.c .label p {
+  font-size: 14px;
+  font-family: "Helvetica Neue Light Italic";
+  font-weight: normal;
+  line-height: 1.5;
+  margin-top: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center; }
+
+.c img.barclays {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px; }
+
+p.copy {
+  text-align: center;
+  font-family: "Helvetica Neue Light";
+  font-size: 18px; }
+
+p.first.copy {
+  margin-bottom: 70px; }
+
+p.second.copy strong {
+  font-weight: normal;
+  color: #358fe3;
+  font-family: "Helvetica Neue Medium"; }
+
+p.second.copy {
+  margin-bottom: 15px; }
+
+.c .donatebuttonholder {
+  text-align: center;
+  margin-bottom: 170px; }
+
+.c .donatebuttonholder button {
+  border-radius: 3px;
+  padding-top: 4px;
+  background-color: #358fe3;
+  width: 90px;
+  height: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border: 0px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  font-size: 14px; }
+
+.md .donatebuttonholder button:hover {
+  background-color: #4aae39; }

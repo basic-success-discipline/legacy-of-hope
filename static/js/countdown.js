@@ -32,13 +32,13 @@
                       $('.hours').css('visibility', 'visible');
                       $('.minutes').css('visibility', 'visible');
 
-                      $('.days').addClass('animated bounceIn');
-                      $('.hours').addClass('animated bounceIn');
-                      $('.minutes').addClass('animated bounceIn');
+                      $('.days').addClass('animated fadeIn');
+                      $('.hours').addClass('animated fadeIn');
+                      $('.minutes').addClass('animated fadeIn');
 
-                      $('#days').addClass('animated swing');
-                      $('#hours').addClass('animated swing');
-                      $('#minutes').addClass('animated swing');
+                      $('#days').addClass('animated fadeIn');
+                      $('#hours').addClass('animated fadeIn');
+                      $('#minutes').addClass('animated fadeIn');
                       tdays.innerHTML = days;
                       thours.innerHTML = hours;
                       tminutes.innerHTML = minutes; 
