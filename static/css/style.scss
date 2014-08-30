@@ -677,8 +677,36 @@ a:hover {
   position: relative;
 }
 
+.prefooter .donatebuttonholder{
+  // text-align: center;
+}
+.prefooter .donatebuttonholder  button{
+  border-radius: 3px;
+  padding-top: 4px;
+  background-color: $loh-blue; 
+  width: 90px;
+  height: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: rgb( 255, 255, 255 );
+  text-transform: uppercase;
+  border: 0px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+  font-size: 14px;
+
+}
+
+
+.prefooter  .donatebuttonholder button:hover{
+  background-color: rgb(74, 174, 57);
+}
+
 .prefooter p {
   margin: 10px auto 15px auto; 
+  display: inline-block;
 }
 
 .pf1 {
