@@ -195,8 +195,11 @@
                 <div class="content-container" style="width: <%= panels *100 %>%;)">
                   <% for (var i = 0; i < board.length; i++) { %>
                   <div class="three columns board">
-                    <div class="stretchy-wrapper">
+                  
+                    <div class="boardwindow">
+                      <div class="innerwindow">
                       <img src="<%= board[i].image %>"/>
+                    </div>
                     </div>
                     <p><%= board[i].name %></p>
                   </div>

@@ -5,12 +5,32 @@ var home = {
  stylesheet	: "home2.css",
  currentpage	: "menu-home",
  board: [
- {name: "Charlize Theron", image: "/img/board_theron.png"},
- {name: "Barbara Walters", image: "/img/board_walters.png"},
- {name: "Ben Vereen", image: "/img/board_vereen.png"},
- {name: "Natalie Portman", image: "/img/board_portman.png"},
- {name: "Anthony Hopkins", image: "/img/board_hopkins.png"},
- {name: "Ruby Bridges", image: "/img/board_bridges.png"}
+ {name: "Dr. Maya Angelou", image: "img/board_angelou.jpg"},
+ {name: "Ruby Bridges", image: "img/board_bridges.png"},
+ {name: "Christy Turlington Burns", image: "img/board_turlington_burns.jpg"},
+ {name: "Ed Burns", image: "img/board_burns.jpg"}, 
+ {name: "Viola Davis", image: "img/board_davis.jpg"}, 
+ {name: "Dame Judi Dench", image: "img/board_dench.jpg"}, 
+ {name: "Arun Gandhi", image: "img/board_gandhi.jpg"}, 
+ {name: "Whoopi Goldberg", image: "img/board_goldberg.jpg"}, 
+ {name: "Dr. Sanjay Gupta", image: "img/board_gupta.jpg"}, 
+ {name: "Katherine Heigl", image: "img/board_heigl.jpg"}, 
+ {name: "Sir Anthony Hopkins", image: "img/board_hopkins.jpg"},
+ {name: "Ashley Judd", image: "img/board_judd.jpg"}, 
+ {name: "Nicole Kidman", image: "img/board_kidman.jpg"}, 
+ {name: "Larry King", image: "img/board_king.jpg"}, 
+{name: "Sir Ben Kingsley", image: "img/board_kingsley.jpg"},
+{name: "Salma Hayek Pinault", image: "img/board_hayek_pinault.jpg"},
+ {name: "Natalie Portman", image: "img/board_portman.jpg"},
+  {name: "Susan Sarandon", image: "img/board_sarandon.jpg"},
+    {name: "Octavia Spencer", image: "img/board_spencer.jpg"},
+ {name: "Charlize Theron", image: "img/board_theron.jpg"},
+  {name: "Ben Vereen", image: "img/board_vereen.jpg"},
+ {name: "Barbara Walters", image: "img/board_walters.jpg"},
+ {name: "Elie and Marion Wiesel", image: "img/board_wiesel.jpg"},
+
+ 
+ 
  ],
  stories: [
  {
