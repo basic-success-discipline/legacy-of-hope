@@ -15,6 +15,10 @@ var app = express();
 var env = process.env.NODE_ENV || 'development';
 
 
+//safari has a caching problem...this disables caching, but I don't want to do it for all cases
+//app.disable('etag');
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

@@ -5,7 +5,7 @@ h5 {
   position: relative;
   overflow: auto;
   margin-bottom: -15px;
-  max-width: 1200px; }
+  max-width: 1202px; }
 
 .banner li {
   list-style: none;
@@ -177,7 +177,8 @@ h5 {
 
 a.unslider-arrow {
   top: 45%;
-  position: absolute; }
+  position: absolute;
+  z-index: 1000; }
 
 a.unslider-arrow img {
   width: 100%;

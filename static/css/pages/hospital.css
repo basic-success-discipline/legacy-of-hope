@@ -1,3 +1,66 @@
+.banner {
+  position: relative;
+  overflow: auto;
+  margin-bottom: -15px;
+  max-width: 1200px; }
+
+.banner li {
+  list-style: none;
+  float: none; }
+
+.banner ul li {
+  float: left; }
+
+.safari.herospacer img {
+  visibility: hidden; }
+
+.herospacer {
+  margin-bottom: -15px;
+  position: relative; }
+
+.safari .hero {
+  display: block; }
+
+a.unslider-arrow {
+  top: 45%;
+  position: absolute; }
+
+a.unslider-arrow img {
+  width: 100%;
+  float: none;
+  display: block;
+  margin-bottom: 0;
+  visibility: visible;
+  opacity: .5; }
+
+a.unslider-arrow img:hover {
+  opacity: 1;
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; }
+
+a.unslider-arrow.prev {
+  right: 20px;
+  margin-top: -2px; }
+
+a.unslider-arrow.next {
+  left: 20px; }
+
+.herospacer.left {
+  margin-left: calc(-100% + 70px);
+  float: left; }
+
+.herospacer.right {
+  margin-right: calc(-100% + 70px);
+  float: right; }
+
+.page {
+  clear: both; }
+
+.herobuffer {
+  clear: both; }
+
 .page {
   padding-bottom: 35px; }
 

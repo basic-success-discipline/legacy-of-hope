@@ -4,7 +4,7 @@
 <head>
 
   <% include partials/loh-head %>
-
+ <script type="text/javascript" src="/js/unslider.js"></script>
 </head>
 
 <body>
@@ -12,20 +12,95 @@
     <div class="wrapper-inner">
       <% include partials/loh-menu %>
 
-
-
-
       <!-- HERO -->
-
       <div class="wrapper-fix herofix">
-        <div class="hero ">
-          <img src="img/hospital_hero.jpg"/>
-        </div>
+
+      <div class="banner" >
+        <ul>
+          <li>
+            <div class="hero first">
+              <img src="img/hospital_hero1.png"/>
+              
+            </div>
+          </li>
+          <li>
+            <div class="hero second">
+              <img src="img/hospital_hero2.png" />
+            </div>
+          </li>
+          <li>
+            <div class="hero third">
+              <img src="img/hospital_hero3.png" />
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="herospacer"><img src="img/hospital_hero.jpg"/></div>
+      </div>
+
+      <div class="herospacer left">
+      <img src="/img/hospital_hero1.png"/>
+            <a href="#" class="unslider-arrow prev" ><img src="/img/left_arrow.png"/></a>
+            </div>
+      
+      <div class="herospacer right">
+      <img src="/img/hospital_hero1.png"/>
+             <a href="#" class="unslider-arrow next"><img src="/img/right_arrow.png"/></a>
+            </div>
+     
+     
+       <script type="text/javascript" src="/js/hero.js"></script>
       <div class="herobuffer"></div>
-      <script src="js/hero.js"></script>
-      <!-- END HERO -->
+      <script type="text/javascript">
+
+      var index = 0;
+      var numslides =3;
+      var auto = true;
+      var dir = 'next';
+      $('.prev').fadeOut(0, "linear");
+       var unslider =  $('.banner').unslider({
+          speed: 600,  
+          delay: 10000,             
+          dots: false, 
+          complete: function() {
+            updateArrows(dir);
+            dir='next';
+          } ,             
+          fluid: true        
+        });
+
+       $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        
+        dir = fn;
+        unslider.data('unslider')[fn]();
+        unslider.data('unslider').start();
+      
+    });
+       var updateArrows = function(dr){
+          
+         if(dr=='next'){
+          index = (index+1) % numslides;
+         } else{
+          index--;
+         }
+          
+
+        if(index==numslides-1){
+          $('.next').fadeOut(100, "linear");
+          $('.prev').fadeIn(100, "linear");
+           
+          
+        }else if (index==0){
+           $('.prev').fadeOut(100, "linear");
+          $('.next').fadeIn(100, "linear");
+        }
+        else{
+           $('.prev').fadeIn(100, "linear");
+          $('.next').fadeIn(100, "linear");
+        }
+
+      };
+    </script>
 
 
 

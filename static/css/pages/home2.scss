@@ -10,10 +10,14 @@ h5{
 	position: relative; 
 	overflow: auto;
 	margin-bottom: - $herobuffer; 
-	max-width: $wrapper-inner-width;
+	max-width: $wrapper-inner-width + 2px;
+	
 	// width: 100% !important;
 }
-.banner li { list-style: none; float: none }
+.banner li { 
+	list-style: none; 
+	float: none;
+	}
 .banner ul li { float: left;  }
 
 
@@ -236,6 +240,7 @@ text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 a.unslider-arrow{
 	top: 45%;
 	position: absolute;
+	z-index: 1000;
 }
 a.unslider-arrow img{
 	width: 100%;

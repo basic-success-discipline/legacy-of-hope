@@ -8,7 +8,7 @@
 
 
  <!-- This script is modified specifically for this page at line 73  and line 56-->
- <script type="text/javascript" src="/js/unslider.js"></script>
+ <script type="text/javascript" src="/js/home.unslider.js"></script>
 
  
 
@@ -138,18 +138,15 @@
         if(index==numslides-1){
           $('.next').fadeOut(100, "linear");
           $('.prev').fadeIn(100, "linear");
-          $('.secret').fadeIn(0, "linear");
            
           
         }else if (index==0){
            $('.prev').fadeOut(100, "linear");
           $('.next').fadeIn(100, "linear");
-          $('.secret').fadeOut(0, "linear");
         }
         else{
            $('.prev').fadeIn(100, "linear");
           $('.next').fadeIn(100, "linear");
-          $('.secret').fadeOut(0, "linear");
         }
 
       };
@@ -164,12 +161,16 @@
         qas[<%= i %>] = "<%= quotes[i].author %>";
       <% } %>
 
-
+      var randprime = -1
       var randomQuote = function(){
 
         var rand = Math.floor(Math.random() * qs.length);
-        $('.randomquote').html('"' + qs[rand] + '"');
-        $('.randomquoteauthor').html("- " + qas[rand]);
+        while(rand==randprime){
+            rand = Math.floor(Math.random() * qs.length);
+        }
+          $('.randomquote').html('"' + qs[rand] + '"');
+          $('.randomquoteauthor').html("- " + qas[rand]);
+          randprime = rand;
       }
 
       $( document ).ready(function() {
