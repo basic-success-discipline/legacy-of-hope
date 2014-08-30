@@ -184,8 +184,7 @@ h5 {
 
 a.unslider-arrow {
   top: 45%;
-  position: absolute;
-  z-index: 1000; }
+  position: absolute; }
 
 a.unslider-arrow img {
   width: 100%;
