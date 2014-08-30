@@ -115,7 +115,8 @@
             }
             dir='next';
           } ,             
-          fluid: true        
+          fluid: true ,
+          keys: false       
         });
 
        $('.unslider-arrow').click(function() {
@@ -129,7 +130,7 @@
        var updateArrows = function(dr){
           
          if(dr=='next'){
-          index = (index+1) % numslides;
+          index = (index + 1) % numslides;
          } else{
           index--;
          }
@@ -175,6 +176,7 @@
 
       $( document ).ready(function() {
            randomQuote();
+           $('.herospacer').fadeIn(0,"linear");
       });
     </script>
 

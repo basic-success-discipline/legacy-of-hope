@@ -31,6 +31,9 @@ h5 {
 .herospacer {
   margin-bottom: -15px; }
 
+.herospacer.left {
+  display: block !important; }
+
 .safari .hero {
   display: block; }
 
