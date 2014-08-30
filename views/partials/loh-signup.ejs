@@ -1,9 +1,9 @@
-      <!-- POPUP DIALOGS-->
-      <div id="signup-dialog" style="display:none">
-        <div style="width:400;height:300"><form>
-          Enter your email address below to receive updates from the Legacy of Hope<br/>
-          <input type="text" class="register_email" placeholder='Enter your email address'>
-          <button onClick='javascript:submitSignupForm()' id='signup_submit'>Sign me up</button>
-        </form></div>
-      </div>
-      <!-- END POPUP DIALOGS -->
+<!-- POPUP DIALOGS-->
+<div id="signup-dialog" style="display:none">
+	<div style="width:400;height:300"><form onsubmit="return submitSignupForm()">
+	  Enter your email address below to receive updates from the Legacy of Hope<br/>
+	  <input type="text" class="register_email" placeholder='Enter your email address'>
+	  <input type='submit' id='signup_submit' value='Sign me up'></input>
+	</form></div>
+</div>
+<!-- END POPUP DIALOGS -->

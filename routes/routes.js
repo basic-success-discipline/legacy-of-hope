@@ -1,4 +1,5 @@
 var express = require('express');
+var request = require('request');
 var router = express.Router();
 var utils = require('../utils.js');
 var cmsgateway = require('./cmsgateway.js');
@@ -143,7 +144,26 @@ router.post('/contact', function (req, res) {
     });
 });
 
-
+/**
+ * register proxy endpoint. Routes registrations to back-end server
+ */
+router.post('/register', function(req, res) {
+  var registerUrl = 'http://ec2-54-191-42-61.us-west-2.compute.amazonaws.com/auth/register';
+  var formValues = {
+    username    : req.body.email,
+    password    : req.body.email,
+    email       : req.body.email,
+    autoconfirm : 1
+  }
+  request.post(registerUrl,  { form : formValues },
+    function(err, data) {
+      if(err) res.json(err);
+      else {
+        console.log(JSON.stringify(data, null, 4));
+        res.json(data);
+      }
+    });
+});
 
 
 
