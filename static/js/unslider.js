@@ -70,7 +70,7 @@
 			this.el.css({
 				overflow: 'hidden',
 				width: $('.herospacer').outerWidth(),
-				height: _.max[0] * 453/732 * ($(window).width()>=480 ? .62 : 1)  //modified by JCobb
+				height: _.max[0] * 453/732 * ($(window).width()>=480 ? .64 : 1)  //modified by JCobb
 			});
 			
 			//  Set the relative widths

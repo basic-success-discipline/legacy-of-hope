@@ -68,30 +68,52 @@
               </div>
             </div>
           </li>
+          <li>
+            <div class="hero third">
+              <img src="img/home_hero3.png" />
+              <div class="heroblurb top">
+                  <h3>The Nelson Mandela Children's Hospital</h3>
+                  </div>
+                 <div class="heroblurb bottom"> 
+                  <p >A crucially needed pediatric hospital in South Africa is long overdue</p>
+                  <p ><a href="/hospital">find out more &nbsp<i class="fa fa-chevron-right 6x" ></i></a></p>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
       </div>
 
-      <div class="herospacer">
+      <div class="herospacer left">
       <img src="/img/home_hero1.png"/>
             <a href="#" class="unslider-arrow prev" ><img src="/img/left_arrow.png"/></a>
-            <a href="#" class="unslider-arrow next"><img src="/img/right_arrow.png"/></a>
-      </div>
+            </div>
+      
+      <div class="herospacer right">
+      <img src="/img/home_hero1.png"/>
+             <a href="#" class="unslider-arrow next"><img src="/img/right_arrow.png"/></a>
+            </div>
+     
+     
        <script type="text/javascript" src="/js/hero.js"></script>
       <div class="herobuffer"></div>
       <script type="text/javascript">
 
-      var first = true;
+      var index = 0;
+      var numslides =3;
+      var auto = true;
+      var dir = 'next';
       $('.prev').fadeOut(0, "linear");
        var unslider =  $('.banner').unslider({
           speed: 600,  
           delay: 10000,             
           dots: false, 
           complete: function() {
-            updateArrows();
-            if(first){
+            updateArrows(dir);
+            if(index!=1){
               randomQuote();
             }
+            dir='next';
           } ,             
           fluid: true        
         });
@@ -99,22 +121,35 @@
        $('.unslider-arrow').click(function() {
         var fn = this.className.split(' ')[1];
         
-        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        dir = fn;
         unslider.data('unslider')[fn]();
         unslider.data('unslider').start();
       
     });
-       var updateArrows = function(){
+       var updateArrows = function(dr){
           
-        if(first){
+         if(dr=='next'){
+          index = (index+1) % numslides;
+         } else{
+          index--;
+         }
+          
+
+        if(index==numslides-1){
           $('.next').fadeOut(100, "linear");
           $('.prev').fadeIn(100, "linear");
-            first=false;
+          $('.secret').fadeIn(0, "linear");
+           
           
-        }else{
+        }else if (index==0){
            $('.prev').fadeOut(100, "linear");
           $('.next').fadeIn(100, "linear");
-          first=true;
+          $('.secret').fadeOut(0, "linear");
+        }
+        else{
+           $('.prev').fadeIn(100, "linear");
+          $('.next').fadeIn(100, "linear");
+          $('.secret').fadeOut(0, "linear");
         }
 
       };

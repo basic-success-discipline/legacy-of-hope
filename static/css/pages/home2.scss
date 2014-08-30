@@ -24,13 +24,24 @@ h5{
 	  position: relative;
 }
 .hero img, .herospacer img{
-	width: 62%;
+	width: 64%;
 	float: right;
+}
+
+.hero.third img{
+	width: 100%;
+
 }
 
 .safari.herospacer img{
   visibility: hidden;
 }
+
+
+.herospacer{
+	margin-bottom: -$herobuffer;
+}
+
 
 
 
@@ -162,12 +173,71 @@ h5{
 }
 
 
+.hero.third .heroblurb{
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	color: white;
+}
 
-.herospacer a{
+.hero.third .top.heroblurb{
+	top: 20%;
+}
+.hero.third .top.heroblurb h3{
+	font-size: 26px;
+text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+}
+
+
+.hero.third .bottom.heroblurb{
+	top: 68%;
+}
+
+.hero.third .bottom.heroblurb p{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	max-width: 330px;
+	font-family: "Oswald";
+	font-size: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+	 -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hero.third .bottom.heroblurb a{
+	margin-top: 0px;
+	font-family: "Open Sans";
+	text-transform: none;
+	color: white;
+	font-size: 16px;
+	font-style: italic;
+	 -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hero.third .bottom.heroblurb  i{
+		transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
+}
+
+
+.hero.third .bottom.heroblurb a:hover i{
+	color: $loh-blue;
+}
+
+
+
+
+
+
+a.unslider-arrow{
 	top: 45%;
 	position: absolute;
 }
-.herospacer a img{
+a.unslider-arrow img{
 	width: 100%;
 	float: none;
 	display: block ;
@@ -175,10 +245,8 @@ margin-bottom: 0;
 visibility: visible;
 opacity: .5;
 }
-.safari.herospacer a img{
-	visibility: visible;
-}
-.herospacer a img:hover{
+
+a.unslider-arrow img:hover{
 	opacity: 1;
 	transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -186,14 +254,35 @@ opacity: .5;
   -o-transition: all 0.1s linear; 
 	}
 
-.herospacer a.prev{
-	left: 20px;
-
+a.unslider-arrow.prev{
+	right: 20px;
 	margin-top: -2px;
 }
 
-.herospacer a.next{
-	right: 20px;
+ a.unslider-arrow.next{
+	left: 20px;
+}
+
+
+
+
+.herospacer.left{
+	margin-left: calc(-100% + 70px);
+	float: left;
+	
+}
+
+.herospacer.right{
+	margin-right: calc(-100% + 70px);
+	float:right;
+	
+}
+
+.page{
+	clear: both;
+}
+.herobuffer{
+	clear:both;
 }
 
 
