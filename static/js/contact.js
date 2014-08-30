@@ -68,7 +68,7 @@ var contactfade = document.getElementById('contactfade');
 	          }
 	          else {
 	          	console.log('status: ' + data['status']);
-	          	$('#contactresult').html( "<p>You're email has been sent. Thanks for contacting us!</p>" );
+	          	$('#contactresult').html( "<p>Your email has been sent. Thanks for contacting us!</p>" );
 	          	$('#contactresult').toggle();
 	          	$('#contactresult').delay(3000).fadeOut(2200);
 	          	$('#contact-form')[0].reset();
