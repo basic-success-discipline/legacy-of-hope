@@ -78,7 +78,7 @@
 			
 			if(this.opts.delay !== f) {
 				this.start();
-				this.el.hover(this.stop, this.start);
+				// this.el.hover(this.stop, this.start);
 			}
 			
 			//  Custom keyboard support
