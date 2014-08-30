@@ -122,6 +122,12 @@ h4.board {
 .page {
   padding-bottom: 20px; }
 
+.container.friends .production {
+  margin-bottom: 20px; }
+
+.container.friends .spacer {
+  height: 0; }
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 479px) {
   .page .wrapper-content {
