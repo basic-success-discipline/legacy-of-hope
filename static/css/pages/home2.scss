@@ -299,6 +299,21 @@ h4.subheading hr{
 	height: 100%;
 }
 
+
+.boardwindow{
+	width: 210px;;
+	height: 153px;
+	box-sizing: border-box;
+	padding: 10px;
+}
+ .boardwindow .innerwindow{
+ 	border-radius: 6px;
+ 	height: 100%;
+ 	width: 100%;
+ 	overflow: hidden;
+ }
+
+
 .honorary .board .stretchy-wrapper{
 	width: 100%;
 	padding-bottom: 73%;
@@ -587,6 +602,20 @@ h3{
 	padding-right: 15px;
 }
 
+.boardwindow{
+	width: 150px;;
+	height: 109px;
+	box-sizing: border-box;
+	padding: 10px;
+}
+ .boardwindow .innerwindow{
+ 	border-radius: 6px;
+ 	height: 100%;
+ 	width: 100%;
+ 	overflow: hidden;
+ }
+
+
 
 
 .sponsors .container span div{
@@ -700,6 +729,20 @@ and (min-width : $tablet-portrait)
 and (max-width : $tablet-landscape - 1px) {
 
 
+
+
+
+	.honorary .arrow{
+		top: 100%;
+
+	}
+
+	.honorary .right.arrow{
+		right: 30%;
+	}
+	.honorary .left.arrow{
+		left: 30%;
+	}
 
 	
 	// TABLET - PORTRAIT - HEROBLURB

@@ -220,6 +220,18 @@ h4.subheading hr {
 .honorary .content-container {
   height: 100%; }
 
+.boardwindow {
+  width: 210px;
+  height: 153px;
+  box-sizing: border-box;
+  padding: 10px; }
+
+.boardwindow .innerwindow {
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
 .honorary .board .stretchy-wrapper {
   width: 100%;
   padding-bottom: 73%;
@@ -424,6 +436,18 @@ h4.subheading hr {
     padding-left: 15px;
     padding-right: 15px; }
 
+  .boardwindow {
+    width: 150px;
+    height: 109px;
+    box-sizing: border-box;
+    padding: 10px; }
+
+  .boardwindow .innerwindow {
+    border-radius: 6px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; }
+
   .sponsors .container span div {
     width: 100%; }
 
@@ -480,6 +504,15 @@ h4.subheading hr {
     width: 100px;
     margin-top: 0; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .honorary .arrow {
+    top: 100%; }
+
+  .honorary .right.arrow {
+    right: 30%; }
+
+  .honorary .left.arrow {
+    left: 30%; }
+
   .heroblurb p {
     line-height: 1.1em;
     font-size: 15px; }
