@@ -465,6 +465,11 @@ h4.subheading hr {
     margin-left: -100px;
     float: none; }
 
+  .hero.third img {
+    margin-left: 0;
+    width: 148%;
+    margin-left: -24%; }
+
   .hero.first img {
     margin-left: 0; }
 
@@ -481,6 +486,9 @@ h4.subheading hr {
 
   .latestnews.container .four.columns {
     margin-left: 0px; }
+
+  .latestnews .card:nth-child(2) {
+    display: none; }
 
   .honorary .left.arrow {
     left: -10px; }
@@ -518,12 +526,15 @@ h4.subheading hr {
     width: 100%;
     overflow: hidden; }
 
+  .sponsors {
+    height: 180px; }
+
   .sponsors .container span div {
     width: 100%; }
 
   .sponsors .container span div img {
     width: 100px;
-    margin-top: 10px;
+    margin-top: 18px;
     float: none;
     text-align: center; }
 
@@ -553,6 +564,9 @@ h4.subheading hr {
 
   .latestnews.container .four.columns {
     margin-left: 0px; }
+
+  .latestnews .card:nth-child(2) {
+    display: none; }
 
   .honorary .inner-container {
     margin-left: 0px; }

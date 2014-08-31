@@ -1218,7 +1218,7 @@ em {
     margin-bottom: 40px; }
 
   .prefooter {
-    height: 140px;
+    height: 100px;
     padding-top: 6px; }
 
   .prefooter p {
@@ -1247,13 +1247,12 @@ em {
     margin: 0px auto; }
 
   .footer {
-    height: 140px;
+    height: 100px;
     padding-top: 10px; }
 
   .footer p {
     text-align: center;
     font-size: 100%;
-    font-style: italic;
     line-height: 1.5;
     margin-bottom: 0px;
     margin-top: 17px; }
@@ -1262,7 +1261,8 @@ em {
     float: none; }
 
   .f2 {
-    float: none; }
+    float: none;
+    text-align: center; }
 
   .f2p-phone {
     display: inherit;
@@ -1343,14 +1343,14 @@ em {
   .footer p {
     text-align: center;
     font-size: 14px;
-    font-style: italic;
     margin-top: 10px; }
 
   .f1 {
     float: none; }
 
   .f2 {
-    float: none; }
+    float: none;
+    text-align: center; }
 
   .f2p-phone {
     display: inherit; }
@@ -1419,14 +1419,14 @@ em {
   .footer p {
     text-align: center;
     font-size: 14px;
-    font-style: italic;
     margin-top: 10px; }
 
   .f1 {
     float: none; }
 
   .f2 {
-    float: none; }
+    float: none;
+    text-align: center; }
 
   .f2p-phone {
     display: inherit; }
@@ -1498,14 +1498,14 @@ em {
   .footer p {
     text-align: center;
     font-size: 14px;
-    font-style: italic;
     margin-top: 10px; }
 
   .f1 {
     float: none; }
 
   .f2 {
-    float: none; }
+    float: none;
+    text-align: center; }
 
   .f2p-phone {
     display: inherit; }
