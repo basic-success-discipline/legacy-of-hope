@@ -89,7 +89,8 @@ a.unslider-arrow.next {
   font-style: italic; }
 
 .page .label p {
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 @media only screen and (max-width: 479px) {
   h3 {
