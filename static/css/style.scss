@@ -162,6 +162,10 @@ em{
   max-width: $wrapper-inner-width;
     // overflow: hidden;
 }
+.safari-fix-parallax-wrapper{
+  position: relative;
+  z-index: 5;
+}
 
 
 

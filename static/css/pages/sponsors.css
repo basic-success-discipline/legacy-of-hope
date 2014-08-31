@@ -8,14 +8,14 @@
   width: 75%;
   float: right; }
 
-.page {
-  padding-bottom: 64px; }
-
-.page img {
+.page .container img {
   margin-bottom: 20px; }
 
 .page a {
   white-space: nowrap; }
+
+.copy {
+  margin-bottom: 64px; }
 
 @media only screen and (max-width: 479px) {
   .hero img, .herospacer img {

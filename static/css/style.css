@@ -347,6 +347,10 @@ em {
   width: 100%;
   max-width: 1200px; }
 
+.safari-fix-parallax-wrapper {
+  position: relative;
+  z-index: 5; }
+
 .navfix, .navspacer {
   height: 50px; }
 
