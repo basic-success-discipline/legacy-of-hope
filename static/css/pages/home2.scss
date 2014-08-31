@@ -614,7 +614,7 @@ $cardpadding: 0px;
 }
 
 .sponsors .container span div{
-	width: 400px; 
+	width: 450px; 
 	margin-left: auto; 
 	margin-right: auto;
 }
@@ -724,8 +724,16 @@ h3{
 
 .sponsors .container span div img{
 	width: 100px;
-	margin-top: 0;
+	margin-top: 10px;
+	float: none;
+		text-align: center;
 }
+
+.sponsors .container .aol h5{
+	margin-top: 5px;
+}
+
+
 
 	
 }
