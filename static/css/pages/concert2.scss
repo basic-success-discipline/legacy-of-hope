@@ -219,7 +219,7 @@ p.second.copy{
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear; 
-  font-size: 14px;
+  font-size: 12px;
 
 }
 
@@ -227,7 +227,7 @@ p.second.copy{
 
 
 
-.md  .donatebuttonholder button:hover{
+.c  .donatebuttonholder button:hover{
   background-color: rgb(74, 174, 57);
 }
 
@@ -245,8 +245,8 @@ p.second.copy{
 and (max-width: $phone-landscape - 1px)  {
 
 
-	.c .donatebuttonholder  button{
-  font-size: 12px;
+.no-p{
+	display: none;
 }
 
 }
@@ -257,8 +257,9 @@ and (max-width: $phone-landscape - 1px)  {
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-	.c .donatebuttonholder  button{
-  font-size: 12px;
+
+.no-p{
+	display: none;
 }
 
 	

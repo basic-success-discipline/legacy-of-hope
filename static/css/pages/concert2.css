@@ -174,14 +174,14 @@ p.second.copy {
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
-  font-size: 14px; }
+  font-size: 12px; }
 
-.md .donatebuttonholder button:hover {
+.c .donatebuttonholder button:hover {
   background-color: #4aae39; }
 
 @media only screen and (max-width: 479px) {
-  .c .donatebuttonholder button {
-    font-size: 12px; } }
+  .no-p {
+    display: none; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .c .donatebuttonholder button {
-    font-size: 12px; } }
+  .no-p {
+    display: none; } }

@@ -2,7 +2,8 @@
   background-color: black; }
 
 .md .maincopy {
-  color: white; }
+  color: white;
+  z-index: 5; }
 
 .md .maincopy h1 {
   -webkit-font-smoothing: antialiased;
@@ -22,7 +23,8 @@
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left; }
+  text-align: left;
+  z-index: 5; }
 
 .md .maincopy a {
   color: #358fe3;
@@ -92,7 +94,8 @@
   position: absolute;
   right: 0px;
   width: 70%;
-  top: 120px; }
+  top: 120px;
+  z-index: 0; }
 
 .md .copy p {
   color: white;
@@ -145,7 +148,8 @@
   top: 110px;
   right: 50%;
   text-align: center;
-  width: 40%; }
+  width: 40%;
+  z-index: 5; }
 
 .playcontrol {
   color: white;
@@ -269,7 +273,7 @@
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
-  font-size: 14px; }
+  font-size: 12px; }
 
 .md .donatebuttonholder button:hover {
   background-color: #4aae39; }
@@ -393,11 +397,11 @@
   .md .second.copy {
     margin-top: 50px; }
 
-  .md .donatebuttonholder button {
-    font-size: 12px; }
-
   .md .powerfist {
-    margin-top: 0px; } }
+    margin-top: 0px; }
+
+  .md .no-p {
+    display: none; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .wrapper-content {
     text-align: center; }
@@ -515,8 +519,8 @@
   .md .powerfist {
     margin-top: 0px; }
 
-  .md .donatebuttonholder button {
-    font-size: 12px; } }
+  .md .no-p {
+    display: none; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .vidlightbox .vidholder {
     width: 768px;
@@ -525,7 +529,10 @@
 
   .vidlightbox .vid {
     width: 768px;
-    height: calc(768px * 0.5625); } }
+    height: calc(768px * 0.5625); }
+
+  .md .choirlabel.label {
+    top: 400px; } }
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   .vidlightbox .vidholder {
     width: 1024px;

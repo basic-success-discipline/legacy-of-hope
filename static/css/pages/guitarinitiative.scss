@@ -676,7 +676,7 @@ and (max-width : $tablet-landscape - 1px){
 //TABLET - PORTRAIT - HERO
 .hero img, .herospacer img{
   margin-top: 0px;
-  margin-bottom: -$herobuffer;
+  margin-bottom: -$herobuffer - 2px;;
 }
 
 // TABLET - PORTRAIT - HEROBLURB

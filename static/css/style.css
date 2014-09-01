@@ -726,7 +726,7 @@ em {
   background-color: #4c4c4c;
   width: 102px;
   height: 28px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 200;
   font-family: "Open Sans";
   color: white;
@@ -764,7 +764,7 @@ em {
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
-  font-size: 14px; }
+  font-size: 12px; }
 
 .prefooter .donatebuttonholder button:hover {
   background-color: #4aae39; }
@@ -1224,9 +1224,6 @@ em {
   .prefooter p {
     text-align: center; }
 
-  .prefooter .donatebuttonholder button {
-    font-size: 12px; }
-
   .pf1 {
     float: inherit;
     margin-left: auto;
@@ -1327,9 +1324,6 @@ em {
     z-index: 6;
     position: relative; }
 
-  .prefooter .donatebuttonholder button {
-    font-size: 12px; }
-
   .pf1 p {
     font-size: 12px;
     font-weight: 300; }
@@ -1407,9 +1401,6 @@ em {
   .prefooter {
     height: 65px;
     padding-top: 10px; }
-
-  .prefooter .donatebuttonholder button {
-    font-size: 12px; }
 
   .pf1 p {
     font-size: 14px;
@@ -1489,9 +1480,6 @@ em {
 
   .pf1 {
     margin-top: 9px; }
-
-  .prefooter .donatebuttonholder button {
-    font-size: 12px; }
 
   .pf1 p {
     font-size: 15px;

@@ -7,6 +7,7 @@
 
 .md .maincopy{
 	color: white;
+	 z-index: 5;
 }
 .md .maincopy h1{
 	 -webkit-font-smoothing: antialiased;
@@ -29,6 +30,7 @@
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
+    z-index: 5;
 }
 
 .md .maincopy a{
@@ -121,6 +123,7 @@
 	right: 0px;
 	width: 70%;
 	top: 120px;
+	z-index: 0;
 }
 
 
@@ -200,6 +203,7 @@
 	right: 50%;
 	text-align: center;
 	width: 40%;
+	z-index: 5;
 }
 
 
@@ -218,6 +222,7 @@ background-color: transparent;
 font-size: 20px;
 margin-left: auto;
 margin-right: auto;
+
 }
 
 .md .label .playcontrol p {
@@ -374,7 +379,7 @@ $aspect: 675px/1200px;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear; 
-  font-size: 14px;
+  font-size: 12px;
 
 }
 
@@ -562,14 +567,14 @@ and (max-width: $phone-landscape - 1px)  {
 
 
 
-.md .donatebuttonholder  button{
-  font-size: 12px;
-
-}
 
 		.md .powerfist{
 			margin-top: 0px;
 		}
+
+		.md .no-p{
+	display:none;
+}
 
 }
 
@@ -736,9 +741,10 @@ and (max-width: $tablet-portrait - 1px)  {
 		}
 
 
-		.md .donatebuttonholder  button{
-  font-size: 12px;
 
+
+.md .no-p{
+	display:none;
 }
 
 }
@@ -762,6 +768,11 @@ and (max-width : $tablet-landscape - 1px) {
 	height: calc(768px * #{$aspect});
 }
 
+
+
+.md .choirlabel.label{
+	top: 400px;
+}
 
 
 
