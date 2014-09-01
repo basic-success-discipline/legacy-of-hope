@@ -1,7 +1,7 @@
 var home = {
  title 		: "Home - Legacy of Hope",
  thumb_img	: "thumb_home.png",
- description	: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
+ description	: "The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
  stylesheet	: "home2.css",
  url: "http://legacyofhope.org",
  currentpage	: "menu-home",
@@ -83,7 +83,7 @@ var concert = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
   thumb_img: "thumb_concert.png",
-  description: "This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before.",
+  description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
   stylesheet: "concert2.css",
   currentpage: "menu-concert"
 };
@@ -99,7 +99,7 @@ var legacy_of_hope_nmcht_concert = {
   title: "Sibongile - Legacy of Hope",
   url: "http://legacyofhope.org/legacy-of-hope-nmcht-concert",
   thumb_img: "thumb_home.png",
-  description: "The loss of Sibongile Mkhabela’s son spurred her on in the almost impossible dream of creating the Nelson Mandela Children’s Hospital in South Africa.",
+  description: "Ten years ago, Nelson Mandela enriched his living legacy by unfolding his dream of the Nelson Mandela Children’s Hospital, a crucially needed institution for the millions of underserved children in South Africa. Sibongile Mkhabela, then CEO of the Nelson Mandela’s Children Fund, was chosen by Mandela to play a key role in this vision as he appointed her CEO of the Nelson Mandela Children's Hospital Trust.",
   stylesheet: "sibongile.css",
   currentpage: "menu-sibongile"
 };
@@ -108,7 +108,7 @@ var mandeladay = {
   title: "Mandela Day 2014 - Legacy of Hope",
   url: "http://legacyofhope.org/mandeladay",
   thumb_img: "thumb_mandeladay.jpg",
-  description: "Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Theatre to celebrate the ongoing work of Nelson Mandela.",
+  description: "Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Center for the Performing Arts, to celebrate the life and Legacy of Nelson Mandela. During this event held on Mandela Day (July 18th), the Legacy of Hope announced plans for a worldwide simulcast concert scheduled to take place in New York on December 13th, 2014.",
   stylesheet: "mandeladay.css",
   currentpage: "menu-mandeladay"
 };
@@ -118,7 +118,7 @@ var mission = {
   title: "Our Mission - Legacy of Hope",
   url: "http://legacyofhope.org/mission",
   thumb_img: "thumb_mission.png",
-  description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+  description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
   stylesheet: "mission.css",
   currentpage: "menu-mission"
 };
@@ -126,7 +126,7 @@ var hospital = {
   title: "The Hospital - Legacy of Hope",
   url: "http://legacyofhope.org/hospital",
   thumb_img: "thumb_hospital.png",
-  description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+  description: "This new hospital will celebrate the legacy of Mr. Mandela and his love of children while advancing his vision for future generations. The Nelson Mandela Children’s Hospital will be a turning point on how the world views specialized pediatric care to all children, regardless of their ability to pay.",
   stylesheet: "hospital.css",
   currentpage: "menu-hospital"
 };
@@ -134,7 +134,7 @@ var sponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/sponsors",
   thumb_img: "thumb_home.png",
-  description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
+  description: "The Legacy of Hope Foundation thanks you for your consideration of being part of this momentous historic event. Download the print version or the web version of the Legacy of Hope Sponsor Deck below. (Right click and choose 'Save As').",
   stylesheet: "sponsors.css",
   currentpage: "menu-sponsors"
 };
