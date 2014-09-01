@@ -82,7 +82,7 @@ var board = {
 var concert = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
-  thumb_img: "thumb_concerts.png",
+  thumb_img: "thumb_concert.png",
   description: "This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before.",
   stylesheet: "concert2.css",
   currentpage: "menu-concert"
@@ -98,7 +98,7 @@ var guitarinitiative = {
 var legacy_of_hope_nmcht_concert = {
   title: "Sibongile - Legacy of Hope",
   url: "http://legacyofhope.org/legacy-of-hope-nmcht-concert",
-  thumb_img: "thumb_sibongile.png",
+  thumb_img: "thumb_home.png",
   description: "The loss of Sibongile Mkhabela’s son spurred her on in the almost impossible dream of creating the Nelson Mandela Children’s Hospital in South Africa.",
   stylesheet: "sibongile.css",
   currentpage: "menu-sibongile"
@@ -107,7 +107,7 @@ var legacy_of_hope_nmcht_concert = {
 var mandeladay = {
   title: "Mandela Day 2014 - Legacy of Hope",
   url: "http://legacyofhope.org/mandeladay",
-  thumb_img: "thumb_mandeladay.png",
+  thumb_img: "thumb_mandeladay.jpg",
   description: "Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Theatre to celebrate the ongoing work of Nelson Mandela.",
   stylesheet: "mandeladay.css",
   currentpage: "menu-mandeladay"
@@ -133,7 +133,7 @@ var hospital = {
 var sponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/sponsors",
-  thumb_img: "thumb_mission.png",
+  thumb_img: "thumb_home.png",
   description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
   stylesheet: "sponsors.css",
   currentpage: "menu-sponsors"
