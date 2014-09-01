@@ -244,6 +244,11 @@ p.second.copy{
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
+
+	.c .donatebuttonholder  button{
+  font-size: 12px;
+}
+
 }
 
 
@@ -251,6 +256,10 @@ and (max-width: $phone-landscape - 1px)  {
 @media only screen 
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
+
+	.c .donatebuttonholder  button{
+  font-size: 12px;
+}
 
 	
 

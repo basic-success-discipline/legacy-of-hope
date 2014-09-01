@@ -410,7 +410,86 @@ $aspect: 675px/1200px;
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
-	.vidlightbox .vidholder{
+
+	.wrapper-content{
+		text-align: center;
+	}
+		.spacers{
+			display: none;
+		}
+		.md .maincopy, .md .maincopy p {
+			text-align: center;
+		}
+		.md .maincopy{
+			margin-bottom: 20px;
+		}
+		.md .maincopy a{
+			display: inline;
+		}
+
+		.md .label{
+			position: relative;
+			top: 0;
+			text-align: center;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+
+		.md .choirlabel.label{
+			display: none;
+		}
+
+
+		.md .row.one img.nice{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 90%;
+		}
+
+		.md .row.one .chuck.label{
+			right: 0;
+			margin-top: 30px;
+		}
+
+		.md .row.one .chuck.label p{
+			text-align: center;
+			
+		}
+
+
+
+
+		.md .row.two img.boikanyo{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 80%;
+			right: 0;
+		}
+
+		.md .row.two .botlhale.label{
+			right: 0;
+			margin-top: 30px;
+			top: 0;
+			width: 100%;
+		}
+
+		.md .row.two .botlhale.label p{
+			text-align: center;
+			
+		}
+
+
+			.vidlightbox .vidholder{
 	width: 320px;
 	top: calc((100% - (320px * #{$aspect}))/2);
 	left: calc((100% - 320px)/2);
@@ -419,6 +498,78 @@ and (max-width: $phone-landscape - 1px)  {
 	width: 320px;
 	height: calc(320px * #{$aspect});
 }
+
+
+
+
+
+		.md .row.three img.vega{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 80%;
+			right: 0;
+			left: 20px;
+		}
+
+		.md .row.three .tata.label{
+			left: 0;
+			margin-top: 30px;
+			top: 0;
+			width: 100%;
+		}
+
+		.md .row.three .tata.label p{
+			text-align: center;
+			
+		}
+
+
+
+
+
+		.md .row.three img.poe{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 80%;
+			right: 0;
+			left: 0px;
+		}
+
+		.md .row.three .poelabel.label{
+			left: 0;
+			margin-top: 30px;
+			top: 0;
+			width: 100%;
+		}
+
+		.md .row.three .poelabel.label p{
+			text-align: center;
+			
+		}
+
+		.md .second.copy{
+			margin-top: 50px;
+			
+		}
+
+
+
+.md .donatebuttonholder  button{
+  font-size: 12px;
+
+}
+
+		.md .powerfist{
+			margin-top: 0px;
+		}
 
 }
 
@@ -429,16 +580,166 @@ and (max-width: $phone-landscape - 1px)  {
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-.vidlightbox .vidholder{
-	width: 480px;
-	top: calc((100% - (480px * #{$aspect}))/2);
-	left: calc((100% - 480px)/2);
-}
-.vidlightbox .vid{
-	width: 480px;
-	height: calc(480px * #{$aspect});
-}
 
+
+	.wrapper-content{
+		text-align: center;
+	}
+		.spacers{
+			display: none;
+		}
+		.md .maincopy, .md .maincopy p {
+			text-align: center;
+		}
+		.md .maincopy{
+			margin-bottom: 20px;
+		}
+		.md .maincopy a{
+			display: inline;
+		}
+
+		.md .label{
+			position: relative;
+			top: 0;
+			text-align: center;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+
+		.md .choirlabel.label{
+			display: none;
+		}
+
+
+		.md .row.one img.nice{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 90%;
+		}
+
+		.md .row.one .chuck.label{
+			right: 0;
+			margin-top: 30px;
+		}
+
+		.md .row.one .chuck.label p{
+			text-align: center;
+			
+		}
+
+
+
+
+		.md .row.two img.boikanyo{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 80%;
+			right: 0;
+		}
+
+		.md .row.two .botlhale.label{
+			right: 0;
+			margin-top: 30px;
+			top: 0;
+			width: 100%;
+		}
+
+		.md .row.two .botlhale.label p{
+			text-align: center;
+			
+		}
+
+
+		.vidlightbox .vidholder{
+			width: 480px;
+			top: calc((100% - (480px * #{$aspect}))/2);
+			left: calc((100% - 480px)/2);
+		}
+		.vidlightbox .vid{
+			width: 480px;
+			height: calc(480px * #{$aspect});
+		}
+
+
+
+
+
+		.md .row.three img.vega{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 80%;
+			right: 0;
+			left: 20px;
+		}
+
+		.md .row.three .tata.label{
+			left: 0;
+			margin-top: 30px;
+			top: 0;
+			width: 100%;
+		}
+
+		.md .row.three .tata.label p{
+			text-align: center;
+			
+		}
+
+
+
+
+
+		.md .row.three img.poe{
+			position: relative;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			display: block;
+			width: 80%;
+			right: 0;
+			left: 0px;
+		}
+
+		.md .row.three .poelabel.label{
+			left: 0;
+			margin-top: 30px;
+			top: 0;
+			width: 100%;
+		}
+
+		.md .row.three .poelabel.label p{
+			text-align: center;
+			
+		}
+
+		.md .second.copy{
+			margin-top: 50px;
+			
+		}
+
+		.md .powerfist{
+			margin-top: 0px;
+		}
+
+
+		.md .donatebuttonholder  button{
+  font-size: 12px;
+
+}
 
 }
 

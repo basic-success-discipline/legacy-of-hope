@@ -16,7 +16,7 @@ var env = process.env.NODE_ENV || 'development';
 
 
 //safari has a caching problem...this disables caching, but I don't want to do it for all cases
-//app.disable('etag');
+app.disable('etag');
 
 
 // view engine setup

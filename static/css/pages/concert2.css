@@ -178,3 +178,10 @@ p.second.copy {
 
 .md .donatebuttonholder button:hover {
   background-color: #4aae39; }
+
+@media only screen and (max-width: 479px) {
+  .c .donatebuttonholder button {
+    font-size: 12px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .c .donatebuttonholder button {
+    font-size: 12px; } }

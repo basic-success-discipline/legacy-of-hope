@@ -487,9 +487,6 @@ h4.subheading hr {
   .latestnews.container .four.columns {
     margin-left: 0px; }
 
-  .latestnews .card:nth-child(2) {
-    display: none; }
-
   .honorary .left.arrow {
     left: -10px; }
 
@@ -564,9 +561,6 @@ h4.subheading hr {
 
   .latestnews.container .four.columns {
     margin-left: 0px; }
-
-  .latestnews .card:nth-child(2) {
-    display: none; }
 
   .honorary .inner-container {
     margin-left: 0px; }
