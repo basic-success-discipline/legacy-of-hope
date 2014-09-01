@@ -3,6 +3,7 @@ var home = {
  thumb_img	: "thumb_home.png",
  description	: "The Legacy of Hope Foundation is dedicated to increasing awareness and support for Nelson Mandela’s Legacy of Hope.",
  stylesheet	: "home2.css",
+ url: "http://legacyofhope.org",
  currentpage	: "menu-home",
  board: [
  {name: "Dr. Maya Angelou", image: "img/board_angelou.jpg"},
@@ -72,6 +73,7 @@ quotes:[
 
 var board = {
   title: "Board of Directors - Legacy of Hope",
+  url: "http://legacyofhope.org/board",
   thumb_img: "thumb_board.png",
   description: "The Legacy of Hope board of Directors.",
   stylesheet: "board.css",
@@ -79,6 +81,7 @@ var board = {
 };
 var concert = {
   title: "Concert - Legacy of Hope",
+  url: "http://legacyofhope.org/concert",
   thumb_img: "thumb_concerts.png",
   description: "This historic 4-6 hour concert event will feature a minimum of 10 national artists on stage and will be simulcast worldwide. This event plans to be more collaborative than any concert has ever been before.",
   stylesheet: "concert2.css",
@@ -86,6 +89,7 @@ var concert = {
 };
 var guitarinitiative = {
   title: "The Guitar Initiative - Legacy of Hope",
+  url: "http://legacyofhope.org/guitarinitiative",
   thumb_img: "thumb_guitarinitiative.png",
   description: "The Guitar Initiative is a campaign to increase awareness and support for Nelson Mandela’s Legacy of Hope, through the medium of music. The Initiative has two main goals: to obtain musician and celebrity endorsements, and to produce ongoing recordings by artists to benefit the Children’s Hospital and its young patients.",
   stylesheet: "guitarinitiative.css",
@@ -93,6 +97,7 @@ var guitarinitiative = {
 };
 var legacy_of_hope_nmcht_concert = {
   title: "Sibongile - Legacy of Hope",
+  url: "http://legacyofhope.org/legacy-of-hope-nmcht-concert",
   thumb_img: "thumb_sibongile.png",
   description: "The loss of Sibongile Mkhabela’s son spurred her on in the almost impossible dream of creating the Nelson Mandela Children’s Hospital in South Africa.",
   stylesheet: "sibongile.css",
@@ -101,6 +106,7 @@ var legacy_of_hope_nmcht_concert = {
 
 var mandeladay = {
   title: "Mandela Day 2014 - Legacy of Hope",
+  url: "http://legacyofhope.org/mandeladay",
   thumb_img: "thumb_mandeladay.png",
   description: "Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Theatre to celebrate the ongoing work of Nelson Mandela.",
   stylesheet: "mandeladay.css",
@@ -110,6 +116,7 @@ var mandeladay = {
 
 var mission = {
   title: "Our Mission - Legacy of Hope",
+  url: "http://legacyofhope.org/mission",
   thumb_img: "thumb_mission.png",
   description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
   stylesheet: "mission.css",
@@ -117,6 +124,7 @@ var mission = {
 };
 var hospital = {
   title: "The Hospital - Legacy of Hope",
+  url: "http://legacyofhope.org/hospital",
   thumb_img: "thumb_hospital.png",
   description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
   stylesheet: "hospital.css",
@@ -124,6 +132,7 @@ var hospital = {
 };
 var sponsors = {
   title: "Sponsors - Legacy of Hope",
+  url: "http://legacyofhope.org/sponsors",
   thumb_img: "thumb_mission.png",
   description: "The partnering of The Nelson Mandela Children's Hospital Trust and The Legacy of Hope Foundation was expressly formed to aid in the creation and awareness of The Nelson Mandela Children's Hospital.",
   stylesheet: "sponsors.css",
