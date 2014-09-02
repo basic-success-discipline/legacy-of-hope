@@ -33,6 +33,8 @@
   margin-bottom: -300px;
 }
 
+
+
 // HEROBLURB
 
 .heroblurbfix {
@@ -214,7 +216,7 @@ and (max-width: $phone-landscape - 1px)  {
 // MOBILE - POTRAIT - HERO
 .hero img, .herospacer img{
   margin-top: 0px;
-  margin-bottom: -$herobuffer;
+  margin-bottom: -$herobuffer - 5px;;
 }
  
 // MOBILE -- PORTRAIT -- HEROBLURB

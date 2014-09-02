@@ -154,7 +154,7 @@
 @media only screen and (max-width: 479px) {
   .hero img, .herospacer img {
     margin-top: 0px;
-    margin-bottom: -15px; }
+    margin-bottom: -20px; }
 
   .heroblurbfix {
     display: none; }
@@ -264,7 +264,7 @@
   .right {
     width: 48%; }
 
-  .right img {
+  .right img, .left img {
     display: block; }
 
   .left {

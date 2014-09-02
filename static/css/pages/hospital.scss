@@ -137,6 +137,10 @@ and (max-width: $phone-landscape - 1px)  {
 h3{
 	text-align: center;
 }
+
+.maincopy{
+	margin-bottom: 30px;
+}
 }
 
 
@@ -149,5 +153,9 @@ and (max-width: $tablet-portrait - 1px)  {
 
 h3{
 	text-align: center;
+}
+
+.maincopy{
+	margin-bottom: 30px;
 }
 }

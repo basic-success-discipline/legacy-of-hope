@@ -249,6 +249,10 @@ and (max-width: $phone-landscape - 1px)  {
 	display: none;
 }
 
+
+p.second.copy{
+	margin-bottom: 55px;
+}
 }
 
 
@@ -260,6 +264,10 @@ and (max-width: $tablet-portrait - 1px)  {
 
 .no-p{
 	display: none;
+}
+
+p.second.copy{
+	margin-bottom: 55px;
 }
 
 	
