@@ -1,19 +1,6 @@
 h5 {
   color: white; }
 
-.banner {
-  position: relative;
-  overflow: auto;
-  margin-bottom: -15px;
-  max-width: 1202px; }
-
-.banner li {
-  list-style: none;
-  float: none; }
-
-.banner ul li {
-  float: left; }
-
 .hero, .herospacer {
   overflow: hidden;
   position: relative; }
@@ -77,7 +64,8 @@ h5 {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 20%; }
+  top: 20%;
+  display: none; }
 
 .hero.second .heroblurb h3 {
   max-width: 55%;
@@ -101,7 +89,8 @@ h5 {
   width: 100%;
   position: absolute;
   text-align: center;
-  color: white; }
+  color: white;
+  display: none; }
 
 .hero.third .top.heroblurb {
   top: 20%; }

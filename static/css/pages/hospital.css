@@ -16,7 +16,8 @@
 
 .herospacer {
   margin-bottom: -15px;
-  position: relative; }
+  position: relative;
+  z-index: -1; }
 
 .safari .hero {
   display: block; }

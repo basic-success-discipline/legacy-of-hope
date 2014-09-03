@@ -354,7 +354,9 @@ em{
   background-color: black;
 }
 
-
+.herospacer{
+  z-index:-1;
+}
   
   .hero img{
   width: 100%;
@@ -382,6 +384,13 @@ em{
   display: none;
 }
 
+.slick-prev{
+  left: 10px !important;
+  } 
+
+  .slick-next{
+    right: 10px !important;
+  }
 
 
 

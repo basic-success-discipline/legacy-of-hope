@@ -6,21 +6,6 @@ h5{
 }
 
 
-.banner { 
-	position: relative; 
-	overflow: auto;
-	margin-bottom: - $herobuffer; 
-	max-width: $wrapper-inner-width + 2px;
-	
-	// width: 100% !important;
-}
-.banner li { 
-	list-style: none; 
-	float: none;
-	}
-.banner ul li { float: left;  }
-
-
 
 // HERO
 .hero, .herospacer{
@@ -34,7 +19,6 @@ h5{
 
 .hero.third img{
 	width: 100%;
-
 }
 
 .safari.herospacer img{
@@ -114,14 +98,15 @@ h5{
 
 
 
-
 .hero.second .heroblurb {
 	color: white;
 	width: 100%;
 	position: absolute;
 	left: 0;
 	top: 20%;
+	display: none;
 }
+
 
 .hero.second .heroblurb h3{
 	max-width: 55%;
@@ -148,6 +133,7 @@ h5{
 	position: absolute;
 	text-align: center;
 	color: white;
+	display: none;
 }
 
 .hero.third .top.heroblurb{

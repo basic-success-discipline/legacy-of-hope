@@ -488,6 +488,9 @@ em {
 .hero {
   background-color: black; }
 
+.herospacer {
+  z-index: -1; }
+
 .hero img {
   width: 100%; }
 
@@ -508,6 +511,12 @@ em {
 
 .safari .hero {
   display: none; }
+
+.slick-prev {
+  left: 10px !important; }
+
+.slick-next {
+  right: 10px !important; }
 
 .page {
   padding-top: 64px;
