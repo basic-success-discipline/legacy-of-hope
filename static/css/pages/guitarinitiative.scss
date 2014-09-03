@@ -66,7 +66,11 @@
 
 
 
-//  PAGE  
+//  PAGE 
+
+.page{
+  width: 101%;
+} 
 #guitar-phone-portrait{
   display: none;
 }
@@ -146,7 +150,7 @@ $bottom-divider: 43.5%;
 }
 .top{
      height: calc(100% - 438px);
-     overflow: scroll;
+     // overflow: scroll;
 }
 .guitarcopy2{
   padding-top: 40px;
@@ -751,7 +755,7 @@ $tp-bottom-divider: 48.5%;
   text-align: justify;
 }
 .guitarcopy2 p{
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.1;
   margin: 0px 20px 20px 20px;
 }
@@ -832,6 +836,9 @@ and (max-width: $desktop - 1px) {
     margin-bottom: 80px;
   }
 
+  .guitarcopy2 p{
+    font-size: 14px;
+  }
 
 }
 

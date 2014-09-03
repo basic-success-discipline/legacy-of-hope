@@ -624,50 +624,6 @@ em {
   margin-left: 30px;
   margin-top: -5px; }
 
-.sidebar .fundraiser .thermometer {
-  margin: 20px 0 0 50%;
-  left: -15px;
-  top: 0px;
-  width: 22px;
-  height: 150px;
-  display: block;
-  font: bold 14px/152px "Oswald", arial, sans-serif;
-  text-indent: 36px;
-  background: -webkit-linear-gradient(top, white 0%, white 50%, #db3f02 50%, #db3f02 100%);
-  border-radius: 20px 22px 0 0;
-  border: 3px solid #4a1c03;
-  border-bottom: none;
-  position: absolute;
-  box-shadow: inset 0 0 0 4px #fff;
-  color: #4a1c03; }
-
-/* Thermometer Bulb */
-.sidebar .fundraiser .thermometer:before {
-  content: ' ';
-  width: 44px;
-  height: 44px;
-  display: block;
-  position: absolute;
-  top: 144px;
-  left: -14px;
-  z-index: -1;
-  /* Place the bulb under the column */
-  background: #db3f02;
-  border-radius: 44px;
-  border: 3px solid #4a1c03;
-  box-shadow: inset 0 0 0 4px #fff; }
-
-/* This piece here connects the column with the bulb */
-.sidebar .fundraiser .thermometer:after {
-  content: ' ';
-  width: 14px;
-  height: 7px;
-  display: block;
-  position: absolute;
-  top: 146px;
-  left: 4px;
-  background: #db3f02; }
-
 .sidebar .fundraiser p {
   font-size: 16px;
   font-family: "Oswald";
@@ -718,38 +674,19 @@ em {
 .sidebar .sidebox.donatebox .donate {
   margin-bottom: 0px; }
 
-.sidebar .sidebox .donatebuttonholder {
-  text-align: center; }
-
 .sidebar .sidebox button {
-  border-radius: 3px;
   background-color: #4c4c4c;
   width: 102px;
   height: 28px;
-  font-size: 12px;
-  font-weight: 200;
-  font-family: "Open Sans";
-  color: white;
-  text-transform: uppercase;
-  border: 0px;
-  cursor: pointer;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear; }
+  font-weight: 200; }
 
 .sidebar .sidebox button:hover {
   background-color: #358fe3; }
 
-.prefooter {
-  width: 100%;
-  height: 60px;
-  background-color: #e46315;
-  font-style: italic;
-  font-size: 18px;
-  position: relative; }
+.donatebuttonholder {
+  text-align: center; }
 
-.prefooter .donatebuttonholder button {
+.donatebuttonholder button {
   border-radius: 3px;
   padding-top: 4px;
   background-color: #358fe3;
@@ -766,12 +703,91 @@ em {
   -o-transition: all 0.3s linear;
   font-size: 12px; }
 
-.prefooter .donatebuttonholder button:hover {
+.donatebuttonholder button:hover {
   background-color: #4aae39; }
+
+.countdown {
+  width: 203px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+
+.countdown h1 {
+  font-size: 26px;
+  font-family: "Oswald";
+  color: #3394ef;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 17px;
+  text-align: left; }
+
+.countdown span {
+  display: table-cell;
+  width: 67px;
+  font-size: 30px;
+  visibility: hidden;
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; }
+
+.countdown h2 {
+  font-family: "Open Sans", sans-serif;
+  color: #358fe3;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 18px;
+  margin-top: 17px; }
+
+#days, #hours, #minutes {
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; }
+
+.countdown .days h2, #days {
+  text-align: left; }
+
+.countdown .hours h2, #hours {
+  text-align: center;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s; }
+
+.countdown .hours {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s; }
+
+.countdown .minutes h2, #minutes {
+  text-align: right;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s; }
+
+.countdown .minutes {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s; }
+
+.prefooter {
+  width: 100%;
+  height: 60px;
+  background-color: #e46315;
+  font-size: 18px;
+  position: relative; }
+
+.prefooter .donatebuttonholder button {
+  font-style: normal; }
 
 .prefooter p {
   margin: 10px auto 15px auto;
-  display: inline-block; }
+  display: inline-block;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.45em;
+  font-family: "Open Sans";
+  font-style: italic; }
 
 .pf1 {
   float: left;
@@ -1222,7 +1238,9 @@ em {
     padding-top: 6px; }
 
   .prefooter p {
-    text-align: center; }
+    text-align: center;
+    line-height: 1.4em;
+    font-size: 15px; }
 
   .pf1 {
     float: inherit;
@@ -1269,7 +1287,17 @@ em {
     margin-bottom: 10px; }
 
   .f2p-desktop {
-    display: none; } }
+    display: none; }
+
+  .legacy-frm label > span {
+    float: none; }
+
+  .legacy-frm input[type="checkbox"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto; } }
 @media only screen and (min-width: 480px) and (max-width: 567px) {
   html {
     -webkit-text-size-adjust: none; }
@@ -1324,6 +1352,11 @@ em {
     z-index: 6;
     position: relative; }
 
+  .prefooter p {
+    text-align: justify;
+    line-height: 1.45em;
+    font-size: 14px; }
+
   .pf1 p {
     font-size: 12px;
     font-weight: 300; }
@@ -1356,7 +1389,17 @@ em {
     display: inherit; }
 
   .f2p-desktop {
-    display: none; } }
+    display: none; }
+
+  .legacy-frm label > span {
+    float: none; }
+
+  .legacy-frm input[type="checkbox"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto; } }
 @media only screen and (min-width: 568px) and (max-width: 639px) {
   html {
     -webkit-text-size-adjust: none; }
@@ -1432,7 +1475,17 @@ em {
     display: inherit; }
 
   .f2p-desktop {
-    display: none; } }
+    display: none; }
+
+  .legacy-frm label > span {
+    float: none; }
+
+  .legacy-frm input[type="checkbox"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto; } }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
   html {
     -webkit-text-size-adjust: none; }
@@ -1511,7 +1564,17 @@ em {
     display: inherit; }
 
   .f2p-desktop {
-    display: none; } }
+    display: none; }
+
+  .legacy-frm label > span {
+    float: none; }
+
+  .legacy-frm input[type="checkbox"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   h1 {
     font-size: 24px; }

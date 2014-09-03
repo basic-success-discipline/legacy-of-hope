@@ -255,29 +255,6 @@
   color: #358fe3;
   font-style: normal; }
 
-.md .donatebuttonholder {
-  text-align: center; }
-
-.md .donatebuttonholder button {
-  border-radius: 3px;
-  padding-top: 4px;
-  background-color: #358fe3;
-  width: 90px;
-  height: 32px;
-  font-family: "Open Sans", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  border: 0px;
-  cursor: pointer;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  font-size: 12px; }
-
-.md .donatebuttonholder button:hover {
-  background-color: #4aae39; }
-
 .md .powerfist {
   width: 100%;
   margin-top: -50px;

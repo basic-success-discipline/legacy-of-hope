@@ -42,6 +42,9 @@
   margin-top: 5px;
   width: 110px; }
 
+.page {
+  width: 101%; }
+
 #guitar-phone-portrait {
   display: none; }
 
@@ -101,8 +104,7 @@
   height: 100%; }
 
 .top {
-  height: calc(100% - 438px);
-  overflow: scroll; }
+  height: calc(100% - 438px); }
 
 .guitarcopy2 {
   padding-top: 40px;
@@ -264,7 +266,7 @@
   .right {
     width: 48%; }
 
-  .right img, .left img {
+  .right img {
     display: block; }
 
   .left {
@@ -564,7 +566,7 @@
     text-align: justify; }
 
   .guitarcopy2 p {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.1;
     margin: 0px 20px 20px 20px; }
 
@@ -625,4 +627,7 @@
     width: 490px; }
 
   .guitarcopy1 {
-    margin-bottom: 80px; } }
+    margin-bottom: 80px; }
+
+  .guitarcopy2 p {
+    font-size: 14px; } }
