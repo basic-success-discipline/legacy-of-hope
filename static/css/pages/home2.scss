@@ -42,39 +42,6 @@ h5{
 
 
 
-.dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  text-align: center;
-}
-
-.dots li {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin: 0 3px;
-  text-indent: -999em;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  opacity: .4;
-  -webkit-transition: background .5s, opacity .5s;
-  -moz-transition: background .5s, opacity .5s;
-  transition: background .5s, opacity .5s;
-  color: white;
-}
-
-.dots li.active {
-  background: #fff;
-  opacity: 1;
-}
-
-
-
-
-
 
 
 
@@ -609,6 +576,28 @@ h3{
 	background-color: rgba(0,0,0, 0.7);
 }
 
+
+.hero.third .mobileblurb{
+	display: block;
+}
+
+.hero.third .mobileblurb.top h3{
+	font-size: 18px;
+}
+
+
+
+.hero.third .bottom{
+	display: block;
+}
+.hero.third .bottom.heroblurb p:nth-child(1){
+	display: none;
+}
+.hero.third .bottom.heroblurb p:nth-child(2){
+	text-align: center;
+}
+
+
 	//  PAGE
 	.page{
 		position: relative;
@@ -717,7 +706,6 @@ h3{
 
 .heroblurb h3{
 	text-align: center;
-	font-size: 15px !important;
 }
 .heroblurb p{
 	display: none;
@@ -737,6 +725,28 @@ h3{
 	margin-bottom: 30px;
 }
 
+
+
+.hero.third .mobileblurb{
+	display: block;
+}
+
+.hero.third .mobileblurb.top h3{
+	font-size: 24px;
+}
+
+
+
+.hero.third .bottom{
+	display: block;
+}
+.hero.third .bottom.heroblurb p:nth-child(1){
+	display: none;
+}
+.hero.third .bottom.heroblurb p:nth-child(2){
+	text-align: center;
+	display: initial;
+}
 
 
 

@@ -24,32 +24,6 @@ h5 {
 .safari .hero {
   display: block; }
 
-.dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  text-align: center; }
-
-.dots li {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin: 0 3px;
-  text-indent: -999em;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  opacity: .4;
-  -webkit-transition: background .5s, opacity .5s;
-  -moz-transition: background .5s, opacity .5s;
-  transition: background .5s, opacity .5s;
-  color: white; }
-
-.dots li.active {
-  background: #fff;
-  opacity: 1; }
-
 .hero.first .heroblurb {
   color: white;
   position: absolute;
@@ -430,6 +404,21 @@ h4.subheading hr {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7); }
 
+  .hero.third .mobileblurb {
+    display: block; }
+
+  .hero.third .mobileblurb.top h3 {
+    font-size: 18px; }
+
+  .hero.third .bottom {
+    display: block; }
+
+  .hero.third .bottom.heroblurb p:nth-child(1) {
+    display: none; }
+
+  .hero.third .bottom.heroblurb p:nth-child(2) {
+    text-align: center; }
+
   .page {
     position: relative; }
 
@@ -496,8 +485,7 @@ h4.subheading hr {
     text-align: center; }
 
   .heroblurb h3 {
-    text-align: center;
-    font-size: 15px !important; }
+    text-align: center; }
 
   .heroblurb p {
     display: none; }
@@ -513,6 +501,22 @@ h4.subheading hr {
     margin-left: auto;
     width: 100%;
     margin-bottom: 30px; }
+
+  .hero.third .mobileblurb {
+    display: block; }
+
+  .hero.third .mobileblurb.top h3 {
+    font-size: 24px; }
+
+  .hero.third .bottom {
+    display: block; }
+
+  .hero.third .bottom.heroblurb p:nth-child(1) {
+    display: none; }
+
+  .hero.third .bottom.heroblurb p:nth-child(2) {
+    text-align: center;
+    display: initial; }
 
   .latestnews.container .four.columns {
     margin-left: 0px; }

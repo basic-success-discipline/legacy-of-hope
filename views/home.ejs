@@ -27,7 +27,7 @@
         <div class="slider">
           <div class="hero first">
             <img src="img/home_hero1.png"/>
-            <div class="heroblurb">
+            <div class="heroblurb mobileblurb">
               <div class="wrapper-content">
                 <div class="countdown">
                   <h1>Concert Begins in</h1>
@@ -62,10 +62,10 @@
           </div>
           <div class="hero third">
             <img src="img/home_hero3.png" />
-            <div class="heroblurb top">
+            <div class="heroblurb mobileblurb top">
               <h3>The Nelson Mandela Children's Hospital</h3>
             </div>
-            <span class="heroblurb bottom"> 
+            <span class="heroblurb  mobileblurb bottom"> 
               <p >A crucially needed pediatric hospital in South Africa is long overdue</p>
               <p ><a href="/hospital">find out more &nbsp<i class="fa fa-chevron-right 6x" ></i></a></p>
             </span>
@@ -89,7 +89,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 50000,
             lazyLoad: 'progressive',
             onBeforeChange: function(){
               var newQuote = false;
@@ -114,7 +114,7 @@
                   });
                 },
                 onAfterChange: function(){
-                  $('.hero.first .heroblurb').fadeIn(500,function(){});
+                  $('.mobileblurb').fadeIn(500,function(){});
                 }
               }
             }]
