@@ -12,11 +12,11 @@
 
               menu.onclick=function(){ 
                 if(!open){
-                  dd.style.opacity='1.0';
-                  dd.style.visibility='visible';
+                  $('.menu-dropdown').animate({
+                   height: 270      //this is the max-height for mobile-landscape: $mobilewidth - $navheight
+                }, 200, function(){});
                   open = true;
                   $('.ddclick').css("visibility", "visible");
-
                 }
                 else{
                   closeMenu();
@@ -24,8 +24,9 @@
               };  
 
               function closeMenu(){
-               dd.style.opacity='0.0';
-               dd.style.visibility='hidden';
+                 $('.menu-dropdown').animate({
+                  height: 0
+                }, 200, function(){});
                open= false;
                $('.ddclick').css('visibility', 'hidden');
 
