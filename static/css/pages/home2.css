@@ -420,6 +420,16 @@ h4.subheading hr {
   .heroblurb {
     display: none; }
 
+  .hero.first .heroblurb {
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    padding-top: 15%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); }
+
   .page {
     position: relative; }
 
@@ -493,7 +503,8 @@ h4.subheading hr {
     display: none; }
 
   .hero.first .heroblurb {
-    left: 8%; }
+    left: 8%;
+    top: 25%; }
 
   .hero.first .heroblurb h1 {
     text-align: left; }

@@ -89,11 +89,11 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 50000,
+            autoplaySpeed: 5000,
             lazyLoad: 'progressive',
             onBeforeChange: function(){
               var newQuote = false;
-                if($('.slider').slickCurrentSlide()==1){
+              if($('.slider').slickCurrentSlide()==1){
                 newQuote=true;
               }
               $('.heroblurb').fadeOut(100,function(){
@@ -104,67 +104,81 @@
             },
             onAfterChange: function(){
               $('.heroblurb').fadeIn(500,function(){});
-            }
+            },
+
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                onBeforeChange: function(){
+                  $('.heroblurb').fadeOut(100,function(){
+                  });
+                },
+                onAfterChange: function(){
+                  $('.hero.first .heroblurb').fadeIn(500,function(){});
+                }
+              }
+            }]
+            
           });
-        });
+});
 
-        var qs = [];
-        <% for (var i=0; i<quotes.length; i++){ %>
-          qs[<%= i %>] = "<%= quotes[i].quote %>";
-        <% } %>
+var qs = [];
+<% for (var i=0; i<quotes.length; i++){ %>
+  qs[<%= i %>] = "<%= quotes[i].quote %>";
+  <% } %>
 
-        var qas = [];
-        <% for (var i=0; i<quotes.length; i++){ %>
-          qas[<%= i %>] = "<%= quotes[i].author %>";
-        <% } %>
+  var qas = [];
+  <% for (var i=0; i<quotes.length; i++){ %>
+    qas[<%= i %>] = "<%= quotes[i].author %>";
+    <% } %>
 
-        var randprime = -1
-        var randomQuote = function(){
+    var randprime = -1
+    var randomQuote = function(){
 
-        var rand = Math.floor(Math.random() * qs.length);
-        while(rand==randprime){
-          rand = Math.floor(Math.random() * qs.length);
-        }
-        $('.randomquote').html('"' + qs[rand] + '"');
-        $('.randomquoteauthor').html("- " + qas[rand]);
-        randprime = rand;
-        }
+      var rand = Math.floor(Math.random() * qs.length);
+      while(rand==randprime){
+        rand = Math.floor(Math.random() * qs.length);
+      }
+      $('.randomquote').html('"' + qs[rand] + '"');
+      $('.randomquoteauthor').html("- " + qas[rand]);
+      randprime = rand;
+    }
 
-        $( document ).ready(function() {
-         randomQuote();
-        });
-      </script>
-
-
+    $( document ).ready(function() {
+     randomQuote();
+   });
+  </script>
 
 
 
 
 
-          <!-- PAGE -->
-          <div class="safari-fix-parallax-wrapper">
-            <div class="page">
-
-              <div class="container">
 
 
-                <div class="eight columns maincopy about">
-                  <h1>The Legacy<em>Of</em>Hope Nelson Mandela Children's Hospital Concert</h1>
-                  <h3>December 13th, 2014</h3>
-                  <p>The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa. This will be the fifth dedicated children’s hospital serving the entire continent of Africa.</p>
-                  <p>The LEGACY OF HOPE NELSON MANDELA CHILDREN'S HOSPITAL CONCERT will feature 10 premier artist/performers and will be broadcast and streamed worldwide. Interspersed with never before seen documentaries within the performances, these vignettes celebrate Nelson Mandela’s love of children and his dream of free and accessible healthcare for the children of South Africa. </p>
+  <!-- PAGE -->
+  <div class="safari-fix-parallax-wrapper">
+    <div class="page">
 
-                  <img src="/img/home_barclays.jpg" />
-
-                  <p><b>WHERE:</b><br>Barclays Center, New York City<br></p>
-
-                  <p><br><b>WHEN:</b><br>Saturday, December 13th, 2014.</p>
+      <div class="container">
 
 
-                  <p><br>Stay tuned for more details and ticket sales information.</p>
+        <div class="eight columns maincopy about">
+          <h1>The Legacy<em>Of</em>Hope Nelson Mandela Children's Hospital Concert</h1>
+          <h3>December 13th, 2014</h3>
+          <p>The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa. This will be the fifth dedicated children’s hospital serving the entire continent of Africa.</p>
+          <p>The LEGACY OF HOPE NELSON MANDELA CHILDREN'S HOSPITAL CONCERT will feature 10 premier artist/performers and will be broadcast and streamed worldwide. Interspersed with never before seen documentaries within the performances, these vignettes celebrate Nelson Mandela’s love of children and his dream of free and accessible healthcare for the children of South Africa. </p>
+
+          <img src="/img/home_barclays.jpg" />
+
+          <p><b>WHERE:</b><br>Barclays Center, New York City<br></p>
+
+          <p><br><b>WHEN:</b><br>Saturday, December 13th, 2014.</p>
 
 
-                  <p style="font-size: 15px; line-height: 1.9;"><b>EXECUTIVE PRODUCER:</b><br>This concert and media event will be produced by noted music producer, Eric Gast, CEO of the Legacy of Hope Foundation</p>
+          <p><br>Stay tuned for more details and ticket sales information.</p>
+
+
+          <p style="font-size: 15px; line-height: 1.9;"><b>EXECUTIVE PRODUCER:</b><br>This concert and media event will be produced by noted music producer, Eric Gast, CEO of the Legacy of Hope Foundation</p>
 
                 <!-- <a href="/mission" class="left">Learn more about our mission ></a>
                 <a href="/mission#about" class="right">Learn more about the hospital ></a> -->
