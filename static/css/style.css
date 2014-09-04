@@ -396,7 +396,7 @@ em {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.social-icons {
+.navbar .social-icons {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   width: 20px;
