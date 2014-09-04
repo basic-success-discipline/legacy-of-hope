@@ -79,6 +79,7 @@
 	right: 4%;
 	max-width: 200px;
 	text-align: center;
+	z-index: 5;
 }
 
 .md .row.one{
@@ -100,23 +101,23 @@
 }
 
 .md .row.one .spacer:nth-child(1){
-	width: 54%;
+	width: 60%;
 	height: 250px;
 }
 
 .md .row.one .spacer:nth-child(2){
-	width: 58%;
+	width: 64%;
 	height: 50px;
 }
 
 .md .row.one .spacer:nth-child(3){
-	width: 64%;
+	width: 70%;
 	height: 100px;
 }
 
 .md .row.one .spacer:nth-child(4){
-	width: 70%;
-	height: 140px;
+	width: 76%;
+	height: 190px;
 }
 .md .row.one img.nice{
 	position: absolute;
@@ -744,6 +745,14 @@ and (max-width : $tablet-landscape - 1px) {
 
 	.md .choirlabel.label{
 		top: 400px;
+	}
+
+
+
+	.md .chuck.label{
+		top: 520px;
+		right: 10%;
+		text-align: right;
 	}
 
 
