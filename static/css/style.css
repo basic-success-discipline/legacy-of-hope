@@ -759,6 +759,33 @@ em {
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s; }
 
+.slick-prev,
+.slick-next {
+  height: 50px;
+  width: 30px;
+  top: calc(50% - 25px);
+  margin-top: -10px; }
+
+.slick-prev {
+  left: -25px; }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px; }
+  .slick-prev:before {
+    content: url(../img/left_arrow.png); }
+    [dir="rtl"] .slick-prev:before {
+      content: url(../img/right_arrow.png); }
+
+.slick-next {
+  right: -25px; }
+  [dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto; }
+  .slick-next:before {
+    content: url(../img/right_arrow.png); }
+    [dir="rtl"] .slick-next:before {
+      content: url(../img/left_arrow.png); }
+
 .prefooter {
   width: 100%;
   height: 60px;

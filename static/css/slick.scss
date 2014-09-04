@@ -118,7 +118,7 @@ $opacity-not-active: .25;
 
     display: none;
 
-    &.dragging img{
+    &.dragging img {
         pointer-events: none;
     }
 
@@ -157,14 +157,14 @@ $opacity-not-active: .25;
 .slick-next {
     position: absolute;
     display: block;
-    height: 50px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
     background: transparent;
     color: transparent;
-    top: calc(50% - 25px);
+    top: 50%;
     margin-top: -10px;
     padding: 0;
     border: none;
@@ -197,10 +197,9 @@ $opacity-not-active: .25;
         right: -25px;
     }
     &:before {
-        // content: $slick-prev-character;
-        content: url(../img/left_arrow.png);
+        content: $slick-prev-character;
         [dir="rtl"] & {
-            content: url(../img/right_arrow.png);
+            content: $slick-next-character;
         }
     }
 }
@@ -211,9 +210,9 @@ $opacity-not-active: .25;
         right: auto;
     }
     &:before {
-        content: url(../img/right_arrow.png);
+        content: $slick-next-character;
         [dir="rtl"] & {
-            content: url(../img/left_arrow.png);
+            content: $slick-prev-character;
         }
     }
 }
@@ -254,7 +253,7 @@ $opacity-not-active: .25;
             padding: 5px;
             cursor: pointer;
             &:hover, &:focus {
-                // outline: none;
+                outline: none;
                 &:before {
                   opacity: $opacity-on-hover;
                 }

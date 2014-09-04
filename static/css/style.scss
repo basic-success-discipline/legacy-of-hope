@@ -702,6 +702,45 @@ em{
 }
 
 
+.slick-prev,
+.slick-next {
+  height: 50px;
+    width: 30px;
+    top: calc(50% - 25px);
+     margin-top: -10px;
+}
+
+
+.slick-prev {
+    left: -25px;
+    [dir="rtl"] & {
+        left:  auto;
+        right: -25px;
+    }
+    &:before {
+        // content: $slick-prev-character;
+        content: url(../img/left_arrow.png);
+        [dir="rtl"] & {
+            content: url(../img/right_arrow.png);
+        }
+    }
+}
+.slick-next {
+    right: -25px;
+    [dir="rtl"] & {
+        left:  -25px;
+        right: auto;
+    }
+    &:before {
+        content: url(../img/right_arrow.png);
+        [dir="rtl"] & {
+            content: url(../img/left_arrow.png);
+        }
+    }
+}
+
+
+
 //FOOTERS
 .prefooter {
   width: 100%;
