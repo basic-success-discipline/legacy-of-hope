@@ -26,13 +26,42 @@
 .page .container img{
 	margin-bottom: 20px;
 }
-.page a{
-	white-space:nowrap;
+// .page a{
+// 	white-space:nowrap;
+// }
+
+
+.sponsors p{
+	text-align: center;
+	clear: both;
+	margin: 10px 0;
+
+}
+.sponsors{
+	padding-bottom: 64px;
 }
 
-.copy{
-	margin-bottom: 64px;
+.deck{
+	text-align: center;
+	margin-bottom: 40px;
 }
+
+.deck a{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Open Sans", sans-serif;
+}
+.deck img{
+	max-width: 100%;
+	max-height: 300px;
+	margin: 30px auto 30px auto;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+}
+
+
 
 
 

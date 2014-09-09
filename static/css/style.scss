@@ -1,4 +1,4 @@
-@import "reset.css";
+
 @import "skeleton/skeleton.scss";
 @import "variables.scss";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,Light,400italic);
@@ -201,7 +201,7 @@ em{
 }
 
 .links {
-  height: $navheight;
+  // height: $navheight;
   display: table-cell;
   padding-top: 14px;
   vertical-align:top;
@@ -233,7 +233,7 @@ em{
 
 
 
-.social-icons {
+.navbar .social-icons {
   border-radius: 50%;
   background-color: rgba(255,255,255, 0.1);
   width: 20px;
@@ -247,9 +247,7 @@ em{
   cursor: pointer;
 }
 
-.dropdown-wrapper{
-  position: relative;
-}
+
 
 .navbar .menu-donate{
   background-color: $loh-blue; 
@@ -278,43 +276,27 @@ em{
 }
 .menu-dropdown {
   width: 100%;
-  height: 195px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  opacity: 0.0;
-  visibility: hidden;
+  height: 0px;
+  position: relative;
+  overflow: hidden;
+
+  background-color: $navcolor;
   -webkit-transition: opacity .5s; /* Safari */
   transition: opacity .5s;
 
 }
 
-
-.menu-dropdown-background{
-  background-color: #414141;
-  width: 229px;
-  height: 100%;
-  opacity: .6;
-  float: right;
-  margin-right: 10px
-
-
-}
 .nav .menu-hamburger{
   display:none;
 }
 
-.menu-content{
-  position: absolute;
-  top: 0px;
-}
 .nav-dropdown{
   text-align: right;
   display: table;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 20px;
-  position: absolute;
+  // position: absolute;
   top: 0px;
 
 }
@@ -323,13 +305,12 @@ em{
   
 }
 .nav-dropdown li a{
-  line-height: 1.7em;
+  line-height: 2.2em;
   font-family: 'Oswald', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 8px;
   z-index: 1000;
 }
 
@@ -373,7 +354,9 @@ em{
   background-color: black;
 }
 
-
+.herospacer{
+  z-index:-1;
+}
   
   .hero img{
   width: 100%;
@@ -401,6 +384,13 @@ em{
   display: none;
 }
 
+.slick-prev{
+  left: 10px !important;
+  } 
+
+  .slick-next{
+    right: 10px !important;
+  }
 
 
 
@@ -532,50 +522,6 @@ em{
   margin-left: 30px;
   margin-top: -5px;
 }
-.sidebar .fundraiser .thermometer {
-    margin:20px 0 0 50%;
-    left:-15px;
-    top:0px;
-    width:22px;
-    height:150px;
-    display:block;
-    font:bold 14px/152px "Oswald", arial, sans-serif;
-    text-indent: 36px;
-    background: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
-    border-radius:20px 22px 0 0;
-    border:3px solid #4a1c03;
-    border-bottom:none;
-    position:absolute;
-    box-shadow:inset 0 0 0 4px #fff;
-    color:#4a1c03;
-}
-/* Thermometer Bulb */
- .sidebar .fundraiser .thermometer:before {
-    content:' ';
-    width:44px;
-    height:44px;
-    display:block;
-    position:absolute;
-    top:144px;
-    left:-14px;
-    z-index:-1;
-    /* Place the bulb under the column */
-    background:#db3f02;
-    border-radius:44px;
-    border:3px solid #4a1c03;
-    box-shadow:inset 0 0 0 4px #fff;
-}
-/* This piece here connects the column with the bulb */
- .sidebar .fundraiser .thermometer:after {
-    content:' ';
-    width:14px;
-    height:7px;
-    display:block;
-    position:absolute;
-    top:146px;
-    left:4px;
-    background:#db3f02;
-}
 
 .sidebar .fundraiser p{
   font-size: 16px;
@@ -641,25 +587,11 @@ em{
   margin-bottom: 0px;
 }
 
-.sidebar .sidebox .donatebuttonholder{
-  text-align: center;
-}
 .sidebar .sidebox button{
-  border-radius: 3px;
   background-color: rgb( 76, 76, 76 );
   width: 102px;
   height: 28px;
-  font-size: 12px;
   font-weight: 200;
-  font-family: "Open Sans";
-  color: rgb( 255, 255, 255 );
-  text-transform: uppercase;
-  border: 0px;
-  cursor: pointer;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear; 
 
 }
 
@@ -667,28 +599,13 @@ em{
   background-color: $loh-blue;
 }
 
+// REUSABLE ELEMENTS
 
 
-
-
-
-
-
-
-//FOOTERS
-.prefooter {
-  width: 100%;
-  height: $foot-height;
-  background-color: #e46315;
-  font-style: italic;
-  font-size: 18px;
-  position: relative;
+.donatebuttonholder{
+  text-align: center;
 }
-
-.prefooter .donatebuttonholder{
-  // text-align: center;
-}
-.prefooter .donatebuttonholder  button{
+.donatebuttonholder  button{
   border-radius: 3px;
   padding-top: 4px;
   background-color: $loh-blue; 
@@ -704,17 +621,150 @@ em{
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear; 
   font-size: 12px;
-
 }
 
-
-.prefooter  .donatebuttonholder button:hover{
+.donatebuttonholder button:hover{
   background-color: rgb(74, 174, 57);
 }
+
+
+
+.countdown{
+  width: 203px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.countdown h1{
+  font-size: 26px;
+  font-family: "Oswald";
+  color: rgb(51, 148 ,239);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-bottom: 17px;
+    text-align: left;
+
+
+}
+.countdown span{
+  display: table-cell;
+  width: 67px;
+  font-size: 30px;
+  visibility: hidden;
+    transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
+}
+
+
+.countdown h2{
+  font-family: "Open Sans", sans-serif;
+  color: $loh-blue;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 18px;
+  margin-top: 17px;                       
+}
+
+#days, #hours, #minutes{
+    transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
+}
+.countdown .days h2, #days{
+  text-align: left;
+}
+.countdown .hours h2, #hours{
+  text-align: center;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+}
+.countdown .hours{
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+}
+
+.countdown .minutes h2, #minutes{
+  text-align: right;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+}
+.countdown .minutes{
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+}
+
+
+.slick-prev,
+.slick-next {
+  height: 50px;
+    width: 30px;
+    top: calc(50% - 25px);
+     margin-top: -10px;
+}
+
+
+.slick-prev {
+    left: -25px;
+    [dir="rtl"] & {
+        left:  auto;
+        right: -25px;
+    }
+    &:before {
+        // content: $slick-prev-character;
+        content: url(../img/left_arrow.png);
+        [dir="rtl"] & {
+            content: url(../img/right_arrow.png);
+        }
+    }
+}
+.slick-next {
+    right: -25px;
+    [dir="rtl"] & {
+        left:  -25px;
+        right: auto;
+    }
+    &:before {
+        content: url(../img/right_arrow.png);
+        [dir="rtl"] & {
+            content: url(../img/left_arrow.png);
+        }
+    }
+}
+
+
+
+//FOOTERS
+.prefooter {
+  width: 100%;
+  height: $foot-height;
+  background-color: #e46315;
+  
+  font-size: 18px;
+  position: relative;
+}
+
+.prefooter .donatebuttonholder  button{
+  font-style: normal;
+}
+
 
 .prefooter p {
   margin: 10px auto 15px auto; 
   display: inline-block;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.45em;
+  font-family: "Open Sans";
+  font-style: italic;
+  
 }
 
 .pf1 {
@@ -762,7 +812,6 @@ em{
 .footer p{
   font-size: 12px;
   margin-top: 24px;
-  // font-style: italic;
   margin-bottom: 0px;
   -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1295,6 +1344,8 @@ cursor: pointer;
   }
   .prefooter p{
     text-align: center;
+    line-height: 1.4em;
+    font-size: 15px;
 
   }
   .pf1{
@@ -1349,6 +1400,19 @@ cursor: pointer;
   }
   .f2p-desktop{
     display:none;
+  }
+
+
+  .legacy-frm label > span{
+     float: none;
+  }
+
+    .legacy-frm input[type="checkbox"]{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: auto;
   }
 }
 
@@ -1437,7 +1501,12 @@ p{
   padding-top: 10px;
   z-index: 6;
   position: relative;
+}
 
+.prefooter p{
+   text-align: justify;
+  line-height: 1.45em;
+  font-size: 14px;
 }
 .pf1 p{
   font-size: 12px;
@@ -1474,6 +1543,22 @@ p{
 .f2p-desktop{
   display:none;
 }
+
+
+  .legacy-frm label > span{
+     float: none;
+  }
+
+
+    .legacy-frm input[type="checkbox"]{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: auto;
+  }
+
+
 }
 
 
@@ -1574,6 +1659,18 @@ p{
 .f2p-desktop{
   display:none;
 }
+
+  .legacy-frm label > span{
+     float: none;
+  }
+
+    .legacy-frm input[type="checkbox"]{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: auto;
+  }
 }
 
 
@@ -1682,6 +1779,18 @@ p{
 .f2p-desktop{
   display:none;
 }
+
+  .legacy-frm label > span{
+     float: none;
+  }
+
+  .legacy-frm input[type="checkbox"]{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: auto;
+  }
 }
 
 

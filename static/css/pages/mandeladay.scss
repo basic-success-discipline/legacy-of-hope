@@ -7,30 +7,30 @@
 
 .md .maincopy{
 	color: white;
-	 z-index: 5;
+	z-index: 5;
 }
 .md .maincopy h1{
-	 -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
 }
 .md .maincopy h3{
 	color: white;
-			 -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 
 .md .maincopy p{
-		color: white;
+	color: white;
 	line-height: 1.8;
 	font-size: 16px;
 	font-family: "Helvetica Neue Light";
 	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: left;
-    z-index: 5;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: left;
+	z-index: 5;
 }
 
 .md .maincopy a{
@@ -45,22 +45,22 @@
 }
 
 .md .label h4{
- font-family: "Helvetica Neue Medium";
- margin-bottom: 3px;
- font-size: 15px;
- font-weight: normal;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
+	font-family: "Helvetica Neue Medium";
+	margin-bottom: 3px;
+	font-size: 15px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .md .label p{
-	 font-size: 14px;
-	 font-family: "Helvetica Neue Light Italic";
-	 font-weight: normal;
-	 line-height: 1.5;
- 	margin-top: 3px;
- 	 -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	font-size: 14px;
+	font-family: "Helvetica Neue Light Italic";
+	font-weight: normal;
+	line-height: 1.5;
+	margin-top: 3px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -79,6 +79,7 @@
 	right: 4%;
 	max-width: 200px;
 	text-align: center;
+	z-index: 5;
 }
 
 .md .row.one{
@@ -88,35 +89,35 @@
 
 
 .md .row.one .spacer{
-  display:block;
-  float:right;
-  clear:right;
+	display:block;
+	float:right;
+	clear:right;
   // background-color: green;
 }
 .spacer img{
-  opacity: 0.0;
-  width: 100%;
-  height: 100%;
+	opacity: 0.0;
+	width: 100%;
+	height: 100%;
 }
 
 .md .row.one .spacer:nth-child(1){
-	width: 54%;
+	width: 60%;
 	height: 250px;
 }
 
 .md .row.one .spacer:nth-child(2){
-	width: 58%;
+	width: 64%;
 	height: 50px;
 }
 
 .md .row.one .spacer:nth-child(3){
-	width: 64%;
+	width: 70%;
 	height: 100px;
 }
 
 .md .row.one .spacer:nth-child(4){
-	width: 70%;
-	height: 140px;
+	width: 76%;
+	height: 190px;
 }
 .md .row.one img.nice{
 	position: absolute;
@@ -136,9 +137,9 @@
 	font-size: 16px;
 	font-family: "Helvetica Neue Light";
 	font-weight: normal;
-		 -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
 
 }
 
@@ -161,7 +162,7 @@
 
 .copy p strong{
 	font-family: "Helvetica Neue Medium Italic";
-	 font-weight: normal;
+	font-weight: normal;
 }
 
 .md .first.copy{
@@ -209,35 +210,35 @@
 
 
 .playcontrol {
-color: white;
-border: 1px solid #aaa;
-width: 120px;
-padding: 2px 10px 7px 10px;
-cursor: pointer;
-display: block;
-color: #aaa;
-text-decoration: none;
-text-align: center;
-background-color: transparent;
-font-size: 20px;
-margin-left: auto;
-margin-right: auto;
+	color: white;
+	border: 1px solid #aaa;
+	width: 120px;
+	padding: 2px 10px 7px 10px;
+	cursor: pointer;
+	display: block;
+	color: #aaa;
+	text-decoration: none;
+	text-align: center;
+	background-color: transparent;
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 
 .md .label .playcontrol p {
-font: 20px "Oswald", Helvetica, Arial, sans-serif;
-font-weight: 300;
-color: #aaa;
-display: inline;
-margin: -5px 0 0 10px;
+	font: 20px "Oswald", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #aaa;
+	display: inline;
+	margin: -5px 0 0 10px;
 }
 
 
 .playcontrol:moz-selection{
-background-color:Transparent;
-    color:#000;
-    border:none;
+	background-color:Transparent;
+	color:#000;
+	border:none;
 }
 
 
@@ -272,13 +273,13 @@ $aspect: 675px/1200px;
 	top: -30px;
 	font-size: 30px;
 	color: white;
-			 -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: block;
 
 
-    font-family: "Helvetica Neue", sans-serif;
-    font-weight: 200;
+	font-family: "Helvetica Neue", sans-serif;
+	font-weight: 200;
 
 
 }
@@ -339,7 +340,7 @@ $aspect: 675px/1200px;
 	font-size: 18px;
 	font-family: "Helvetica Neue Light";
 	font-weight: normal;
-	}
+}
 
 
 
@@ -361,35 +362,7 @@ $aspect: 675px/1200px;
 
 
 
-.md .donatebuttonholder{
-  text-align: center;
-}
-.md .donatebuttonholder  button{
-  border-radius: 3px;
-  padding-top: 4px;
-  background-color: $loh-blue; 
-  width: 90px;
-  height: 32px;
-  font-family: "Open Sans", sans-serif;
-  color: rgb( 255, 255, 255 );
-  text-transform: uppercase;
-  border: 0px;
-  cursor: pointer;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear; 
-  font-size: 12px;
 
-}
-
-
-
-
-
-.md  .donatebuttonholder button:hover{
-  background-color: rgb(74, 174, 57);
-}
 
 
 
@@ -419,162 +392,162 @@ and (max-width: $phone-landscape - 1px)  {
 	.wrapper-content{
 		text-align: center;
 	}
-		.spacers{
-			display: none;
-		}
-		.md .maincopy, .md .maincopy p {
-			text-align: center;
-		}
-		.md .maincopy{
-			margin-bottom: 20px;
-		}
-		.md .maincopy a{
-			display: inline;
-		}
+	.spacers{
+		display: none;
+	}
+	.md .maincopy, .md .maincopy p {
+		text-align: center;
+	}
+	.md .maincopy{
+		margin-bottom: 20px;
+	}
+	.md .maincopy a{
+		display: inline;
+	}
 
-		.md .label{
-			position: relative;
-			top: 0;
-			text-align: center;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-
-		.md .choirlabel.label{
-			display: none;
-		}
+	.md .label{
+		position: relative;
+		top: 0;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 
-		.md .row.one img.nice{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 90%;
-		}
-
-		.md .row.one .chuck.label{
-			right: 0;
-			margin-top: 30px;
-		}
-
-		.md .row.one .chuck.label p{
-			text-align: center;
-			
-		}
+	.md .choirlabel.label{
+		display: none;
+	}
 
 
+	.md .row.one img.nice{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 90%;
+	}
 
+	.md .row.one .chuck.label{
+		right: 0;
+		margin-top: 30px;
+	}
 
-		.md .row.two img.boikanyo{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 80%;
-			right: 0;
-		}
-
-		.md .row.two .botlhale.label{
-			right: 0;
-			margin-top: 30px;
-			top: 0;
-			width: 100%;
-		}
-
-		.md .row.two .botlhale.label p{
-			text-align: center;
-			
-		}
-
-
-			.vidlightbox .vidholder{
-	width: 320px;
-	top: calc((100% - (320px * #{$aspect}))/2);
-	left: calc((100% - 320px)/2);
-}
-.vidlightbox .vid{
-	width: 320px;
-	height: calc(320px * #{$aspect});
-}
+	.md .row.one .chuck.label p{
+		text-align: center;
+		
+	}
 
 
 
 
+	.md .row.two img.boikanyo{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 80%;
+		right: 0;
+	}
 
-		.md .row.three img.vega{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 80%;
-			right: 0;
-			left: 20px;
-		}
+	.md .row.two .botlhale.label{
+		right: 0;
+		margin-top: 30px;
+		top: 0;
+		width: 100%;
+	}
 
-		.md .row.three .tata.label{
-			left: 0;
-			margin-top: 30px;
-			top: 0;
-			width: 100%;
-		}
+	.md .row.two .botlhale.label p{
+		text-align: center;
+		
+	}
 
-		.md .row.three .tata.label p{
-			text-align: center;
-			
-		}
+
+	.vidlightbox .vidholder{
+		width: 320px;
+		top: calc((100% - (320px * #{$aspect}))/2);
+		left: calc((100% - 320px)/2);
+	}
+	.vidlightbox .vid{
+		width: 320px;
+		height: calc(320px * #{$aspect});
+	}
 
 
 
 
 
-		.md .row.three img.poe{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 80%;
-			right: 0;
-			left: 0px;
-		}
+	.md .row.three img.vega{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 80%;
+		right: 0;
+		left: 20px;
+	}
 
-		.md .row.three .poelabel.label{
-			left: 0;
-			margin-top: 30px;
-			top: 0;
-			width: 100%;
-		}
+	.md .row.three .tata.label{
+		left: 0;
+		margin-top: 30px;
+		top: 0;
+		width: 100%;
+	}
 
-		.md .row.three .poelabel.label p{
-			text-align: center;
-			
-		}
-
-		.md .second.copy{
-			margin-top: 50px;
-			
-		}
+	.md .row.three .tata.label p{
+		text-align: center;
+		
+	}
 
 
 
 
-		.md .powerfist{
-			margin-top: 0px;
-		}
 
-		.md .no-p{
-	display:none;
-}
+	.md .row.three img.poe{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 80%;
+		right: 0;
+		left: 0px;
+	}
+
+	.md .row.three .poelabel.label{
+		left: 0;
+		margin-top: 30px;
+		top: 0;
+		width: 100%;
+	}
+
+	.md .row.three .poelabel.label p{
+		text-align: center;
+		
+	}
+
+	.md .second.copy{
+		margin-top: 50px;
+		
+	}
+
+
+
+
+	.md .powerfist{
+		margin-top: 0px;
+	}
+
+	.md .no-p{
+		display:none;
+	}
 
 }
 
@@ -590,162 +563,162 @@ and (max-width: $tablet-portrait - 1px)  {
 	.wrapper-content{
 		text-align: center;
 	}
-		.spacers{
-			display: none;
-		}
-		.md .maincopy, .md .maincopy p {
-			text-align: center;
-		}
-		.md .maincopy{
-			margin-bottom: 20px;
-		}
-		.md .maincopy a{
-			display: inline;
-		}
+	.spacers{
+		display: none;
+	}
+	.md .maincopy, .md .maincopy p {
+		text-align: center;
+	}
+	.md .maincopy{
+		margin-bottom: 20px;
+	}
+	.md .maincopy a{
+		display: inline;
+	}
 
-		.md .label{
-			position: relative;
-			top: 0;
-			text-align: center;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-
-		.md .choirlabel.label{
-			display: none;
-		}
+	.md .label{
+		position: relative;
+		top: 0;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 
-		.md .row.one img.nice{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 90%;
-		}
-
-		.md .row.one .chuck.label{
-			right: 0;
-			margin-top: 30px;
-		}
-
-		.md .row.one .chuck.label p{
-			text-align: center;
-			
-		}
+	.md .choirlabel.label{
+		display: none;
+	}
 
 
+	.md .row.one img.nice{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 90%;
+	}
 
+	.md .row.one .chuck.label{
+		right: 0;
+		margin-top: 30px;
+	}
 
-		.md .row.two img.boikanyo{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 80%;
-			right: 0;
-		}
-
-		.md .row.two .botlhale.label{
-			right: 0;
-			margin-top: 30px;
-			top: 0;
-			width: 100%;
-		}
-
-		.md .row.two .botlhale.label p{
-			text-align: center;
-			
-		}
-
-
-		.vidlightbox .vidholder{
-			width: 480px;
-			top: calc((100% - (480px * #{$aspect}))/2);
-			left: calc((100% - 480px)/2);
-		}
-		.vidlightbox .vid{
-			width: 480px;
-			height: calc(480px * #{$aspect});
-		}
+	.md .row.one .chuck.label p{
+		text-align: center;
+		
+	}
 
 
 
 
+	.md .row.two img.boikanyo{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 80%;
+		right: 0;
+	}
 
-		.md .row.three img.vega{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 80%;
-			right: 0;
-			left: 20px;
-		}
+	.md .row.two .botlhale.label{
+		right: 0;
+		margin-top: 30px;
+		top: 0;
+		width: 100%;
+	}
 
-		.md .row.three .tata.label{
-			left: 0;
-			margin-top: 30px;
-			top: 0;
-			width: 100%;
-		}
+	.md .row.two .botlhale.label p{
+		text-align: center;
+		
+	}
 
-		.md .row.three .tata.label p{
-			text-align: center;
-			
-		}
+
+	.vidlightbox .vidholder{
+		width: 480px;
+		top: calc((100% - (480px * #{$aspect}))/2);
+		left: calc((100% - 480px)/2);
+	}
+	.vidlightbox .vid{
+		width: 480px;
+		height: calc(480px * #{$aspect});
+	}
 
 
 
 
 
-		.md .row.three img.poe{
-			position: relative;
-			top: 0;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			display: block;
-			width: 80%;
-			right: 0;
-			left: 0px;
-		}
+	.md .row.three img.vega{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 80%;
+		right: 0;
+		left: 20px;
+	}
 
-		.md .row.three .poelabel.label{
-			left: 0;
-			margin-top: 30px;
-			top: 0;
-			width: 100%;
-		}
+	.md .row.three .tata.label{
+		left: 0;
+		margin-top: 30px;
+		top: 0;
+		width: 100%;
+	}
 
-		.md .row.three .poelabel.label p{
-			text-align: center;
-			
-		}
-
-		.md .second.copy{
-			margin-top: 50px;
-			
-		}
-
-		.md .powerfist{
-			margin-top: 0px;
-		}
+	.md .row.three .tata.label p{
+		text-align: center;
+		
+	}
 
 
 
 
-.md .no-p{
-	display:none;
-}
+
+	.md .row.three img.poe{
+		position: relative;
+		top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: block;
+		width: 80%;
+		right: 0;
+		left: 0px;
+	}
+
+	.md .row.three .poelabel.label{
+		left: 0;
+		margin-top: 30px;
+		top: 0;
+		width: 100%;
+	}
+
+	.md .row.three .poelabel.label p{
+		text-align: center;
+		
+	}
+
+	.md .second.copy{
+		margin-top: 50px;
+		
+	}
+
+	.md .powerfist{
+		margin-top: 0px;
+	}
+
+
+
+
+	.md .no-p{
+		display:none;
+	}
 
 }
 
@@ -758,21 +731,29 @@ and (max-width: $tablet-portrait - 1px)  {
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
-.vidlightbox .vidholder{
-	width: 768px;
-	top: calc((100% - (768px * #{$aspect}))/2);
-	left: calc((100% - 768px)/2);
-}
-.vidlightbox .vid{
-	width: 768px;
-	height: calc(768px * #{$aspect});
-}
+	.vidlightbox .vidholder{
+		width: 768px;
+		top: calc((100% - (768px * #{$aspect}))/2);
+		left: calc((100% - 768px)/2);
+	}
+	.vidlightbox .vid{
+		width: 768px;
+		height: calc(768px * #{$aspect});
+	}
 
 
 
-.md .choirlabel.label{
-	top: 400px;
-}
+	.md .choirlabel.label{
+		top: 400px;
+	}
+
+
+
+	.md .chuck.label{
+		top: 520px;
+		right: 10%;
+		text-align: right;
+	}
 
 
 
@@ -784,15 +765,15 @@ and (max-width : $tablet-landscape - 1px) {
 and (min-width : $tablet-landscape) 
 and (max-width : $desktop - 1px) {
 
-.vidlightbox .vidholder{
-	width: 1024px;
-	top: calc((100% - (1024px * #{$aspect}))/2);
-	left: calc((100% - 1024px)/2);
-}
-.vidlightbox .vid{
-	width: 1024px;
-	height: calc(1024px * #{$aspect});
-}
+	.vidlightbox .vidholder{
+		width: 1024px;
+		top: calc((100% - (1024px * #{$aspect}))/2);
+		left: calc((100% - 1024px)/2);
+	}
+	.vidlightbox .vid{
+		width: 1024px;
+		height: calc(1024px * #{$aspect});
+	}
 	
 
 }

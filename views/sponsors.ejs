@@ -3,25 +3,25 @@
 
 <head>
 
-<% include partials/loh-head %>
+  <% include partials/loh-head %>
 
 </head>
 
 <body>
   <div class="wrapper"> 
     <div class="wrapper-inner">
-    <% include partials/loh-menu %>
+      <% include partials/loh-menu %>
 
 
 
-    
+
       <!-- HERO -->
       <div class="wrapper-fix herofix">
         <div class="hero ">
-          <img src="img/home_hero.png"/>
+          <img src="img/sponsors_hero.jpg"/>
         </div>
       </div>
-      <div class="herospacer"><img src="img/home_hero.png"/></div>
+      <div class="herospacer"><img src="img/sponsors_hero.jpg"/></div>
       <div class="herobuffer"></div>
       <script src="js/hero.js"></script>
       <!-- END HERO -->
@@ -32,27 +32,32 @@
 
       <!-- PAGE -->
       <div class="safari-fix-parallax-wrapper">
-      <div id="sponsor_deck" class="page">
-        <div class="container">
-          <div class="columns three">
-            <a href="pdf/LOH_SPONSOR_DECK_82914.pdf" target="_blank"> <img src="img/sponsors.jpg" width="212" /></a>
+        <div class="page sponsors">
+          <div class="container">
+
+            <div class="columns six print deck">
+             <h2>Sponsor Deck (print)</h2>
+             <a href="pdf/LEGACYOFHOPE_Deck_Print.pdf" target="_blank"> <img src="img/deck_print.jpg"  /></a>
+              <a href="pdf/LEGACYOFHOPE_Deck_Print.pdf" target="_blank">Download Sponsor Deck (print)</a>
+
+           </div>
+           <div class="columns six digital deck">
+            <h2>Sponsor Deck (digital)</h2>
+            <a href="pdf/LEGACYOFHOPE_Deck_Digital.pdf" target="_blank"> <img src="img/deck_digital.jpg"  /></a>
+             <a href="pdf/LEGACYOFHOPE_Deck_Digital.pdf" target="_blank">Download Sponsor Deck (digital)</a>
+
           </div>
-          <div class="columns eight offset-by-one copy">
-            <h2 style="margin-top:6px;">Sponsor Deck</h2>
-            <p>The Legacy of Hope Foundation thanks you for your consideration of being part of this momentous historic event.</p>
-            <p>Download the print version or the web version of the Legacy of Hope Sponsor Deck below. (Right click and choose 'Save As').</p>
-            
-            <p style="display:inline; padding-right: 20px;"><a href="pdf/LOH_SPONSOR_DECK_82914.pdf" target="_blank">Download the Web version</a></p>
-            <p style="display:inline;"><a href="pdf/LOH_SPONSOR_DECK_82914.pdf" target="_blank">Download the Print version</a></p>
-          </div>  
+          <p>The Legacy of Hope Foundation thanks you for your consideration of being part of this momentous historic event.</p>
+
+        </div>
         </div>
 
-      <!-- END PAGE -->
+        <!-- END PAGE -->
 
 
 
-      <% include partials/loh-footer %>
-    </div>
+        <% include partials/loh-footer %>
+      </div>
     </div>
   </body>
   </html>

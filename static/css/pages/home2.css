@@ -1,19 +1,6 @@
 h5 {
   color: white; }
 
-.banner {
-  position: relative;
-  overflow: auto;
-  margin-bottom: -15px;
-  max-width: 1202px; }
-
-.banner li {
-  list-style: none;
-  float: none; }
-
-.banner ul li {
-  float: left; }
-
 .hero, .herospacer {
   overflow: hidden;
   position: relative; }
@@ -37,92 +24,22 @@ h5 {
 .safari .hero {
   display: block; }
 
-.dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  text-align: center; }
-
-.dots li {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin: 0 3px;
-  text-indent: -999em;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  opacity: .4;
-  -webkit-transition: background .5s, opacity .5s;
-  -moz-transition: background .5s, opacity .5s;
-  transition: background .5s, opacity .5s;
-  color: white; }
-
-.dots li.active {
-  background: #fff;
-  opacity: 1; }
-
 .hero.first .heroblurb {
   color: white;
   position: absolute;
   left: 15%;
   top: 33%; }
 
-.hero.first .countdown h1 {
-  font-size: 26px;
-  font-family: "Oswald";
-  color: #3394ef;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin-bottom: 17px; }
-
 .hero.first .countdown {
-  width: 203px;
   position: relative; }
-
-.hero.first .countdown span {
-  display: table-cell;
-  width: 67px;
-  font-size: 30px;
-  visibility: hidden;
-  transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear; }
-
-#days, #hours, #minutes {
-  transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear; }
-
-.hero.first .countdown h2 {
-  font-family: "Open Sans", sans-serif;
-  color: #358fe3;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 18px;
-  margin-top: 17px; }
-
-.hero.first .countdown .hours, #hours {
-  text-align: center;
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s; }
-
-.hero.first .countdown .minutes, #minutes {
-  text-align: right;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -o-animation-delay: 1s; }
 
 .hero.second .heroblurb {
   color: white;
   width: 100%;
   position: absolute;
   left: 0;
-  top: 20%; }
+  top: 20%;
+  display: none; }
 
 .hero.second .heroblurb h3 {
   max-width: 55%;
@@ -146,7 +63,8 @@ h5 {
   width: 100%;
   position: absolute;
   text-align: center;
-  color: white; }
+  color: white;
+  display: none; }
 
 .hero.third .top.heroblurb {
   top: 20%; }
@@ -181,32 +99,6 @@ h5 {
 
 .hero.third .bottom.heroblurb a:hover {
   color: #358fe3; }
-
-a.unslider-arrow {
-  top: 45%;
-  position: absolute; }
-
-a.unslider-arrow img {
-  width: 100%;
-  float: none;
-  display: block;
-  margin-bottom: 0;
-  visibility: visible;
-  opacity: .5; }
-
-a.unslider-arrow img:hover {
-  opacity: 1;
-  transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear; }
-
-a.unslider-arrow.prev {
-  right: 20px;
-  margin-top: -2px; }
-
-a.unslider-arrow.next {
-  left: 20px; }
 
 .herospacer.left {
   margin-left: calc(-100% + 70px);
@@ -371,7 +263,7 @@ h4.subheading hr {
   font-weight: 400; }
 
 .latestnews a p {
-  color: initial;
+  color: black;
   font-size: 12px;
   font-family: "Open Sans";
   line-height: 1.475;
@@ -476,6 +368,31 @@ h4.subheading hr {
   .heroblurb {
     display: none; }
 
+  .hero.first .heroblurb {
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    padding-top: 15%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); }
+
+  .hero.third .mobileblurb {
+    display: block; }
+
+  .hero.third .mobileblurb.top h3 {
+    font-size: 18px; }
+
+  .hero.third .bottom {
+    display: block; }
+
+  .hero.third .bottom.heroblurb p:nth-child(1) {
+    display: none; }
+
+  .hero.third .bottom.heroblurb p:nth-child(2) {
+    text-align: center; }
+
   .page {
     position: relative; }
 
@@ -542,14 +459,14 @@ h4.subheading hr {
     text-align: center; }
 
   .heroblurb h3 {
-    text-align: center;
-    font-size: 15px !important; }
+    text-align: center; }
 
   .heroblurb p {
     display: none; }
 
   .hero.first .heroblurb {
-    left: 8%; }
+    left: 8%;
+    top: 25%; }
 
   .hero.first .heroblurb h1 {
     text-align: left; }
@@ -558,6 +475,22 @@ h4.subheading hr {
     margin-left: auto;
     width: 100%;
     margin-bottom: 30px; }
+
+  .hero.third .mobileblurb {
+    display: block; }
+
+  .hero.third .mobileblurb.top h3 {
+    font-size: 24px; }
+
+  .hero.third .bottom {
+    display: block; }
+
+  .hero.third .bottom.heroblurb p:nth-child(1) {
+    display: none; }
+
+  .hero.third .bottom.heroblurb p:nth-child(2) {
+    text-align: center;
+    display: initial; }
 
   .latestnews.container .four.columns {
     margin-left: 0px; }

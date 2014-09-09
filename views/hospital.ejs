@@ -4,7 +4,9 @@
 <head>
 
   <% include partials/loh-head %>
- <script type="text/javascript" src="/js/unslider.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+
+
 </head>
 
 <body>
@@ -15,93 +17,34 @@
       <!-- HERO -->
       <div class="wrapper-fix herofix">
 
-      <div class="banner" >
-        <ul>
-          <li>
-            <div class="hero first">
-              <img src="img/hospital_hero1.png"/>
-              
-            </div>
-          </li>
-          <li>
-            <div class="hero second">
-              <img src="img/hospital_hero2.png" />
-            </div>
-          </li>
-          <li>
-            <div class="hero third">
-              <img src="img/hospital_hero3.png" />
-            </div>
-          </li>
-        </ul>
-      </div>
-      </div>
+        <div class="slider">
+          <div><img src="img/hospital_hero1.jpg" style="width:100%"/></div>
+          <div><img src="img/hospital_hero2.jpg" style="width:100%"/></div>
+          <div><img src="img/hospital_hero3.jpg" style="width:100%"/></div>
 
-      <div class="herospacer left">
-      <img src="/img/hospital_hero1.png"/>
-            <a href="#" class="unslider-arrow prev" ><img src="/img/left_arrow.png"/></a>
-            </div>
-      
-      <div class="herospacer right">
-      <img src="/img/hospital_hero1.png"/>
-             <a href="#" class="unslider-arrow next"><img src="/img/right_arrow.png"/></a>
-            </div>
-     
-     
-       <script type="text/javascript" src="/js/hero.js"></script>
+        </div>
+        <script type="text/javascript" src="/js/slick.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+
+            $('.slider').slick({
+              dots: false,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 5000,
+              pauseOnHover: false
+            });
+          });
+        </script>
+      </div>
+      <div class="herospacer">
+        <img src="/img/hospital_hero1.jpg"/>
+        </div>
       <div class="herobuffer"></div>
-      <script type="text/javascript">
 
-      var index = 0;
-      var numslides =3;
-      var auto = true;
-      var dir = 'next';
-      $('.prev').fadeOut(0, "linear");
-       var unslider =  $('.banner').unslider({
-          speed: 600,  
-          delay: 5000,             
-          dots: false, 
-          complete: function() {
-            updateArrows(dir);
-            dir='next';
-          } ,             
-          fluid: true,
-          pause: false        
-        });
-
-       $('.unslider-arrow').click(function() {
-        var fn = this.className.split(' ')[1];
-        
-        dir = fn;
-        unslider.data('unslider')[fn]();
-        unslider.data('unslider').start();
-      
-    });
-       var updateArrows = function(dr){
-          
-         if(dr=='next'){
-          index = (index+1) % numslides;
-         } else{
-          index--;
-         }
-          
-
-        if(index==numslides-1){
-          $('.next').fadeOut(100, "linear");
-          $('.prev').fadeIn(100, "linear");
-           
-          
-        }else if (index==0){
-           $('.prev').fadeOut(100, "linear");
-          $('.next').fadeIn(100, "linear");
-        }
-        else{
-           $('.prev').fadeIn(100, "linear");
-          $('.next').fadeIn(100, "linear");
-        }
-
-      };
-    </script>
 
 
 
@@ -109,33 +52,33 @@
 
       <!-- PAGE -->
       <div class="safari-fix-parallax-wrapper">
-      <div class="page hospital">
-        <div class="container">
-          <div class="eight columns maincopy">
-            
-          <h1>The Nelson Mandela Children's Hospital</h1>
-          <h3>A crucially needed pediatric hospital in South Africa is long overdue.</h3>
-          <p style="font-weight: 600;">THIS MUCH NEEDED FACILITY WILL ADDRESS THE FACT THAT THERE ARE ONLY FOUR DEDICATED CHILDREN’S HOSPITALS CURRENTLY SERVING THE ENTIRE CONTINENT OF AFRICA. </p>
-            <p>To put all this in perspective, there are 12 children’s hospitals in the state of Florida.</p>
-            <p>This new hospital will celebrate the legacy of Mr. Mandela and his love of children while advancing his vision for future generations. The Nelson Mandela Children’s Hospital will be a turning point on how the world views specialized pediatric care to all children, regardless of their ability to pay. Many South African children are currently ignored in their attempt to heal or survive. These children are often thrown into comprehensive facilities that lack staff, medicine, equipment and critical pediatric expertise. In these facilities, children are unfortunately viewed as ‘little adults’ where the old and young suffer and heal, side-by-side. With our collective support, this will all change because of Mr. Mandela’s vision.</p>
+        <div class="page hospital">
+          <div class="container">
+            <div class="eight columns maincopy">
+
+              <h1>The Nelson Mandela Children's Hospital</h1>
+              <h3>A crucially needed pediatric hospital in South Africa is long overdue.</h3>
+              <p style="font-weight: 600;">THIS MUCH NEEDED FACILITY WILL ADDRESS THE FACT THAT THERE ARE ONLY FOUR DEDICATED CHILDREN’S HOSPITALS CURRENTLY SERVING THE ENTIRE CONTINENT OF AFRICA. </p>
+              <p>To put all this in perspective, there are 12 children’s hospitals in the state of Florida.</p>
+              <p>This new hospital will celebrate the legacy of Mr. Mandela and his love of children while advancing his vision for future generations. The Nelson Mandela Children’s Hospital will be a turning point on how the world views specialized pediatric care to all children, regardless of their ability to pay. Many South African children are currently ignored in their attempt to heal or survive. These children are often thrown into comprehensive facilities that lack staff, medicine, equipment and critical pediatric expertise. In these facilities, children are unfortunately viewed as ‘little adults’ where the old and young suffer and heal, side-by-side. With our collective support, this will all change because of Mr. Mandela’s vision.</p>
 
 
 
-          </div>
+            </div>
 
-       
 
-           <% include partials/loh-sidebar %>
+
+            <% include partials/loh-sidebar %>
 
             <img class="hospitalphoto" src="/img/hospital.jpg" style="float:left"/>
 
             <div class="label">
-            <p>Nelson Mandela Children's Hospital<br><i>Architectural Rendering</i><br>slated to open 2016</p>
+              <p>Nelson Mandela Children's Hospital<br><i>Architectural Rendering</i><br>slated to open 2016</p>
             </div>
+          </div>
         </div>
-        </div>
-        
-  
+
+
 
 
 
@@ -146,7 +89,7 @@
 
 
         <% include partials/loh-footer %>
-        </div>
       </div>
-    </body>
-    </html>
+    </div>
+  </body>
+  </html>

@@ -2,16 +2,15 @@
 <html>
 
 <head>
- <% include partials/loh-head %>
 
- <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
-
-
- <!-- This script is modified specifically for this page at line 73  and line 56-->
- <script type="text/javascript" src="/js/home.unslider.js"></script>
-
+ <!-- CSS up here -->
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
  
 
+ <% include partials/loh-head %>
+
+<!-- scripts down here -->
+ <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
 
 </head>
 
@@ -27,168 +26,139 @@
       <!-- HERO -->
       <div class="wrapper-fix herofix">
 
-      <div class="banner" >
-        <ul>
-          <li>
-            <div class="hero first">
-              <img src="img/home_hero1.png"/>
-              <div class="heroblurb">
-                <div class="wrapper-content">
-                  <div class="countdown">
-                    <h1>Concert Begins in</h1>
-                    <span class="days">
-                      <div id="days"></div>
-                      <h2>days</h2>
-                    </span>
-                    <span class="hours">
-                      <div id="hours"></div>
-                      <h2>hrs</h2>
-                    </span>
+        <div class="slider">
+          <div class="hero first">
+            <img src="img/home_hero1.jpg"/>
+            <div class="heroblurb mobileblurb">
+              <div class="wrapper-content">
+                <div class="countdown">
+                  <h1>Concert Begins in</h1>
+                  <span class="days">
+                    <div id="days"></div>
+                    <h2>days</h2>
+                  </span>
+                  <span class="hours">
+                    <div id="hours"></div>
+                    <h2>hrs</h2>
+                  </span>
 
-                    <span class="minutes">
-                      <div id="minutes"></div>
-                      <h2>mins</h2>
-                    </span>
-                  </div>
-                  <script type="text/javascript" src="/js/countdown.js"></script>
-                  <link rel="stylesheet" href="/css/animate.css">
+                  <span class="minutes">
+                    <div id="minutes"></div>
+                    <h2>mins</h2>
+                  </span>
                 </div>
+                <script type="text/javascript" src="/js/countdown.js"></script>
+                <link rel="stylesheet" href="/css/animate.css">
               </div>
             </div>
-          </li>
-          <li>
-            <div class="hero second">
-              <img src="img/home_hero2.png" />
-              <div class="heroblurb">
-                <div class="wrapper-content">
-                  <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-                  <p class="herop1 randomquote"></p>
-                  <p class="herop2 randomquoteauthor"></p>
-                </div>
+          </div>
+          <div class="hero second">
+            <img src="img/home_hero2.jpg" />
+            <div class="heroblurb">
+              <div class="wrapper-content">
+                <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
+                <p class="herop1 randomquote"></p>
+                <p class="herop2 randomquoteauthor"></p>
               </div>
             </div>
-          </li>
-          <li>
-            <div class="hero third">
-              <img src="img/home_hero3.png" />
-              <div class="heroblurb top">
-                  <h3>The Nelson Mandela Children's Hospital</h3>
-                  </div>
-                 <div class="heroblurb bottom"> 
-                  <p >A crucially needed pediatric hospital in South Africa is long overdue</p>
-                  <p ><a href="/hospital">find out more &nbsp<i class="fa fa-chevron-right 6x" ></i></a></p>
-              </div>
+          </div>
+          <div class="hero third">
+            <img src="img/home_hero3.jpg" />
+            <div class="heroblurb mobileblurb top">
+              <h3>The Nelson Mandela Children's Hospital</h3>
             </div>
-          </li>
-        </ul>
-      </div>
-      </div>
+            <span class="heroblurb  mobileblurb bottom"> 
+              <p >A crucially needed pediatric hospital in South Africa is long overdue</p>
+              <p ><a href="/hospital">find out more &nbsp<i class="fa fa-chevron-right 6x" ></i></a></p>
+            </span>
+          </div>
 
-      <div class="herospacer left">
-      <img src="/img/home_hero1.png"/>
-            <a href="#" class="unslider-arrow prev" ><img src="/img/left_arrow.png"/></a>
-            </div>
-      
-      <div class="herospacer right">
-      <img src="/img/home_hero1.png"/>
-             <a href="#" class="unslider-arrow next"><img src="/img/right_arrow.png"/></a>
-            </div>
-     
-     
-       <script type="text/javascript" src="/js/hero.js"></script>
+        </div>
+      </div>
+      <div class="herospacer">
+        <img src="/img/home_hero1.jpg"/>
+      </div>
       <div class="herobuffer"></div>
+
+      <script type="text/javascript" src="/js/slick.js"></script>
       <script type="text/javascript">
+        $(document).ready(function(){
 
-      var index = 0;
-      var numslides =3;
-      var auto = true;
-      var dir = 'next';
-      $('.prev').fadeOut(0, "linear");
-       var unslider =  $('.banner').unslider({
-          speed: 600,  
-          delay: 5000,             
-          dots: false, 
-          complete: function() {
-            updateArrows(dir);
-            if(index!=1){
-              randomQuote();
-            }
-            dir='next';
-          } ,             
-          fluid: true ,
-          keys: false,
-          pause: false       
-        });
+          $('.slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 50000,
+            lazyLoad: 'progressive',
+            onBeforeChange: function(){
+              var newQuote = false;
+              if($('.slider').slickCurrentSlide()==1){
+                newQuote=true;
+              }
+              $('.heroblurb').fadeOut(100,function(){
+                if(newQuote){
+                  randomQuote();
+                }
+              });
+            },
+            onAfterChange: function(){
+              $('.heroblurb').fadeIn(500,function(){});
+            },
 
-       $('.unslider-arrow').click(function() {
-        var fn = this.className.split(' ')[1];
-        
-        dir = fn;
-        unslider.data('unslider')[fn]();
-        unslider.data('unslider').start();
-      
-    });
-       var updateArrows = function(dr){
-          
-         if(dr=='next'){
-          index = (index + 1) % numslides;
-         } else{
-          index--;
-         }
-          
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                onBeforeChange: function(){
+                  $('.heroblurb').fadeOut(100,function(){
+                  });
+                },
+                onAfterChange: function(){
+                  $('.mobileblurb').fadeIn(500,function(){});
+                }
+              }
+            }]
+            
+          });
+});
 
-        if(index==numslides-1){
-          $('.next').fadeOut(100, "linear");
-          $('.prev').fadeIn(100, "linear");
-           
-          
-        }else if (index==0){
-           $('.prev').fadeOut(100, "linear");
-          $('.next').fadeIn(100, "linear");
-        }
-        else{
-           $('.prev').fadeIn(100, "linear");
-          $('.next').fadeIn(100, "linear");
-        }
+var qs = [];
+<% for (var i=0; i<quotes.length; i++){ %>
+  qs[<%= i %>] = "<%= quotes[i].quote %>";
+  <% } %>
 
-      };
+  var qas = [];
+  <% for (var i=0; i<quotes.length; i++){ %>
+    qas[<%= i %>] = "<%= quotes[i].author %>";
+    <% } %>
 
-      var qs = [];
-      <% for (var i=0; i<quotes.length; i++){ %>
-        qs[<%= i %>] = "<%= quotes[i].quote %>";
-      <% } %>
+    var randprime = -1
+    var randomQuote = function(){
 
-      var qas = [];
-      <% for (var i=0; i<quotes.length; i++){ %>
-        qas[<%= i %>] = "<%= quotes[i].author %>";
-      <% } %>
-
-      var randprime = -1
-      var randomQuote = function(){
-
-        var rand = Math.floor(Math.random() * qs.length);
-        while(rand==randprime){
-            rand = Math.floor(Math.random() * qs.length);
-        }
-          $('.randomquote').html('"' + qs[rand] + '"');
-          $('.randomquoteauthor').html("- " + qas[rand]);
-          randprime = rand;
+      var rand = Math.floor(Math.random() * qs.length);
+      while(rand==randprime){
+        rand = Math.floor(Math.random() * qs.length);
       }
+      $('.randomquote').html('"' + qs[rand] + '"');
+      $('.randomquoteauthor').html("- " + qas[rand]);
+      randprime = rand;
+    }
 
-      $( document ).ready(function() {
-           randomQuote();
-           $('.herospacer').fadeIn(0,"linear");
-      });
-    </script>
-
-
-
-
-
+    $( document ).ready(function() {
+     randomQuote();
+   });
+  </script>
 
 
-    <!-- PAGE -->
-    <div class="safari-fix-parallax-wrapper">
+
+
+
+
+
+  <!-- PAGE -->
+  <div class="safari-fix-parallax-wrapper">
     <div class="page">
 
       <div class="container">
@@ -234,11 +204,11 @@
                 <div class="content-container" style="width: <%= panels *100 %>%;)">
                   <% for (var i = 0; i < board.length; i++) { %>
                   <div class="three columns board">
-                  
+
                     <div class="boardwindow">
                       <div class="innerwindow">
-                      <img src="<%= board[i].image %>"/>
-                    </div>
+                        <img src="<%= board[i].image %>"/>
+                      </div>
                     </div>
                     <p><%= board[i].name %></p>
                   </div>
@@ -260,12 +230,12 @@
                      left: scroll * -1
                    }, 500);
                     if(currentpanel==<%= panels - 1 %>){
-                    $('.left').fadeIn(0,'linear');
-                    $('.right').fadeOut(0,'linear');
-                  }else{
-                    $('.left').fadeIn(0,'linear');
-                    $('.right').fadeIn(0,'linear');
-                  }
+                      $('.left').fadeIn(0,'linear');
+                      $('.right').fadeOut(0,'linear');
+                    }else{
+                      $('.left').fadeIn(0,'linear');
+                      $('.right').fadeIn(0,'linear');
+                    }
                   })
                 }
               });
@@ -291,7 +261,7 @@
             });
               $( document ).ready(function() {
                 $('.left').fadeOut(0,'linear');
-               });
+              });
 
 
 
@@ -316,7 +286,7 @@
                 <div class="bottom">
                   <span>
                     <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
-                   <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
+                    <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
                   </span>
                 </div>
                 <hr style="border: solid 1px #DEDEDE;"/>
@@ -342,11 +312,11 @@
                   <div>
                     <img src="/img/aol_logo.png"/>
                     <h5>The AOL Cause Module is a proud provider of complimentary media services
-                    <nobr>for <strong>Legacy<em>Of</em>Hope</strong></nobr></h5>
-                  </div>
-                </span>
+                      <nobr>for <strong>Legacy<em>Of</em>Hope</strong></nobr></h5>
+                    </div>
+                  </span>
+                </div>
               </div>
-            </div>
 
 <!-- 
             <div class="container">
