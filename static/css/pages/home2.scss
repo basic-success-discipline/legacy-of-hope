@@ -80,7 +80,7 @@ h5{
 	margin-left: 0;
 }
 .hero.second .heroblurb p{
-	max-width: 40%;
+	max-width: 45%;
 	margin-left: 0;
 }
 .hero.second .herop1{
@@ -516,7 +516,7 @@ h3{
 // MOBILE - PORTRAIT - HERO
 .hero img, .herospacer img{
 	width: 100%;
-	margin-left: -100px;
+	margin-left: -18%;
 	float: none;
 }
 
@@ -703,9 +703,15 @@ h3{
 }
 
 .hero.first .heroblurb{
-		left: 8%;
-		top: 25%;
-	}
+	width: 100%;
+	left: 0;
+	right: 0;
+	display: block;
+	padding-top: 8%;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, 0.7);
+}
 
 .hero.first .heroblurb h1{
 		text-align: left;
@@ -715,13 +721,19 @@ h3{
 	padding-bottom: 20px;
 	padding-top: 40px;
 }
-.page .container .about img{
-	margin-left: auto;
-	width: 100%;
-	margin-bottom: 30px;
+
+
+
+.hero.second .heroblurb h3{
+	display: none;
 }
 
+.hero.second .heroblurb p{
+	max-width: 65%;
+	margin-top: 0px;
+	padding-left: 20px;
 
+}
 
 .hero.third .mobileblurb{
 	display: block;
@@ -746,6 +758,12 @@ h3{
 
 
 
+
+.page .container .about img{
+	margin-left: auto;
+	width: 100%;
+	margin-bottom: 30px;
+}
 
 
 

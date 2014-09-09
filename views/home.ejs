@@ -4,12 +4,12 @@
 <head>
 
  <!-- CSS up here -->
-<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+ <link rel="stylesheet" type="text/css" href="css/slick.css"/>
  
 
  <% include partials/loh-head %>
 
-<!-- scripts down here -->
+ <!-- scripts down here -->
  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
 
 </head>
@@ -29,7 +29,7 @@
         <div class="slider">
           <div class="hero first">
             <img src="img/home_hero1.jpg"/>
-            <div class="heroblurb mobileblurb">
+            <div class="heroblurb mobileblurb portraitblurb ">
               <div class="wrapper-content">
                 <div class="countdown">
                   <h1>Concert Begins in</h1>
@@ -54,20 +54,20 @@
           </div>
           <div class="hero second">
             <img src="img/home_hero2.jpg" />
-            <div class="heroblurb">
+            <div class="heroblurb mobileblurb">
               <div class="wrapper-content">
                 <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-                <p class="herop1 randomquote"></p>
-                <p class="herop2 randomquoteauthor"></p>
+                <p class="herop1 randomquote mobileblurb"></p>
+                <p class="herop2 randomquoteauthor mobileblurb"></p>
               </div>
             </div>
           </div>
           <div class="hero third">
             <img src="img/home_hero3.jpg" />
-            <div class="heroblurb mobileblurb top">
+            <div class="heroblurb mobileblurb portraitblurb top">
               <h3>The Nelson Mandela Children's Hospital</h3>
             </div>
-            <span class="heroblurb  mobileblurb bottom"> 
+            <span class="heroblurb  mobileblurb portraitblurb bottom"> 
               <p >A crucially needed pediatric hospital in South Africa is long overdue</p>
               <p ><a href="/hospital">find out more &nbsp<i class="fa fa-chevron-right 6x" ></i></a></p>
             </span>
@@ -91,7 +91,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 50000,
             lazyLoad: 'progressive',
             onBeforeChange: function(){
               var newQuote = false;
@@ -112,16 +112,31 @@
               breakpoint: 768,
               settings: {
                 onBeforeChange: function(){
-                  $('.heroblurb').fadeOut(100,function(){
-                  });
-                },
-                onAfterChange: function(){
-                  $('.mobileblurb').fadeIn(500,function(){});
-                }
+                $('.heroblurb').fadeOut(100,function(){
+                 quote(2);
+              });
+
+              },
+              onAfterChange: function(){
+                $('.mobileblurb').fadeIn(500,function(){});
               }
-            }]
-            
-          });
+            }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                onBeforeChange: function(){
+                $('.heroblurb').fadeOut(100,function(){
+              });
+
+              },
+              onAfterChange: function(){
+                $('.portraitblurb').fadeIn(500,function(){});
+              }
+            }
+          }]
+
+        });
 });
 
 var qs = [];
@@ -144,6 +159,11 @@ var qs = [];
       $('.randomquote').html('"' + qs[rand] + '"');
       $('.randomquoteauthor').html("- " + qas[rand]);
       randprime = rand;
+    }
+
+    var quote = function(index){
+      $('.randomquote').html('"' + qs[index] + '"');
+      $('.randomquoteauthor').html("- " + qas[index]);
     }
 
     $( document ).ready(function() {
