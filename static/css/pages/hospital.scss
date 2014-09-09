@@ -32,37 +32,6 @@
 
 
 
-a.unslider-arrow{
-	top: 45%;
-	position: absolute;
-}
-a.unslider-arrow img{
-	width: 100%;
-	float: none;
-	display: block ;
-margin-bottom: 0;
-visibility: visible;
-opacity: .5;
-}
-
-a.unslider-arrow img:hover{
-	opacity: 1;
-	transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear; 
-	}
-
-a.unslider-arrow.prev{
-	right: 20px;
-	margin-top: -2px;
-}
-
- a.unslider-arrow.next{
-	left: 20px;
-}
-
-
 
 
 .herospacer.left{
