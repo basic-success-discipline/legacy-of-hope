@@ -477,6 +477,16 @@ and (max-width: $phone-landscape - 1px)  {
 		height: calc(320px * #{$aspect});
 	}
 
+	.vidholder a.closevideo{
+		position: relative;
+		text-align: center;
+		top:20px;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		font-size: 40px;
+	}
+
 
 
 

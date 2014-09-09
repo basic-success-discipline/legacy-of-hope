@@ -16,8 +16,7 @@
 
 .herospacer {
   margin-bottom: -15px;
-  position: relative;
-  z-index: -1; }
+  position: relative; }
 
 .safari .hero {
   display: block; }
@@ -97,9 +96,12 @@ a.unslider-arrow.next {
   h3 {
     text-align: center; }
 
-  .maincopy {
+  .maincopy p:nth-child(5) {
     margin-bottom: 30px; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .maincopy p:nth-child(5) {
+    margin-bottom: 30px; }
+
   h3 {
     text-align: center; }
 

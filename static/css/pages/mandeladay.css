@@ -332,6 +332,15 @@
     width: 320px;
     height: calc(320px * 0.5625); }
 
+  .vidholder a.closevideo {
+    position: relative;
+    text-align: center;
+    top: 20px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 40px; }
+
   .md .row.three img.vega {
     position: relative;
     top: 0;

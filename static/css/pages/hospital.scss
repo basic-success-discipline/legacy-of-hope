@@ -139,7 +139,7 @@ h3{
 	text-align: center;
 }
 
-.maincopy{
+.maincopy p:nth-child(5){
 	margin-bottom: 30px;
 }
 }
@@ -152,6 +152,9 @@ and (min-width: $phone-landscape)
 and (max-width: $tablet-portrait - 1px)  {
 
 
+.maincopy p:nth-child(5){
+	margin-bottom: 30px;
+}
 h3{
 	text-align: center;
 }
