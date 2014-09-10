@@ -405,6 +405,11 @@ and (max-width: $phone-landscape - 1px)  {
 		display: inline;
 	}
 
+
+		.md img{
+		margin-top: 60px;
+	}
+
 	.md .label{
 		position: relative;
 		top: 0;
@@ -412,12 +417,21 @@ and (max-width: $phone-landscape - 1px)  {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	
+	}
+
+	.md .label h4{
+		font-size: 13px;
+	}
+	.md .label p{
+			font-size: 12px;
 	}
 
 
 	.md .choirlabel.label{
 		display: none;
 	}
+
 
 
 	.md .row.one img.nice{
@@ -599,6 +613,7 @@ and (max-width: $tablet-portrait - 1px)  {
 	.md .choirlabel.label{
 		display: none;
 	}
+
 
 
 	.md .row.one img.nice{
