@@ -28,7 +28,7 @@
 
         <div class="slider">
           <div class="hero first">
-            <img src="img/home_hero1.jpg"/>
+            <img src="img/home_hero1.jpg" alt="Barclays Center"/>
             <div class="heroblurb mobileblurb portraitblurb ">
               <div class="wrapper-content">
                 <div class="countdown">
@@ -53,7 +53,7 @@
             </div>
           </div>
           <div class="hero second">
-            <img src="img/home_hero2.jpg" />
+            <img src="img/home_hero2.jpg" alt="Nelson Mandela"/>
             <div class="heroblurb mobileblurb">
               <div class="wrapper-content">
                 <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
@@ -63,7 +63,7 @@
             </div>
           </div>
           <div class="hero third">
-            <img src="img/home_hero3.jpg" />
+            <img src="img/home_hero3.jpg" alt="Nelson Mandela Children's Hospital groundbreaking"/>
             <div class="heroblurb mobileblurb portraitblurb top">
               <h3>The Nelson Mandela Children's Hospital</h3>
             </div>
@@ -190,7 +190,7 @@ var qs = [];
           <p>The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa. This will be the fifth dedicated children’s hospital serving the entire continent of Africa.</p>
           <p>The LEGACY OF HOPE NELSON MANDELA CHILDREN'S HOSPITAL CONCERT will feature 10 premier artist/performers and will be broadcast and streamed worldwide. Interspersed with never before seen documentaries within the performances, these vignettes celebrate Nelson Mandela’s love of children and his dream of free and accessible healthcare for the children of South Africa. </p>
 
-          <img src="/img/home_barclays.jpg" />
+          <img src="/img/home_barclays.jpg" alt="Barclays Center" />
 
           <p><b>WHERE:</b><br>Barclays Center, New York City<br></p>
 
@@ -227,7 +227,7 @@ var qs = [];
 
                     <div class="boardwindow">
                       <div class="innerwindow">
-                        <img src="<%= board[i].image %>"/>
+                        <img src="<%= board[i].image %>" alt="<%= board[i].name %>"/>
                       </div>
                     </div>
                     <p><%= board[i].name %></p>
@@ -297,7 +297,7 @@ var qs = [];
               <% for (var i = 0; i < (stories.length <= 3 ? stories.length : 3); i++) { %>
               <a class="four columns card" href="<%= stories[i].link %>">
                 <div class="stretchy-wrapper">
-                  <img src="<%= stories[i].image %>"/>
+                  <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
                 </div>
                 <h5><%= stories[i].title %></h5>
                 <p class="cardcopy"><%= stories[i].blurb %></p>
@@ -330,7 +330,7 @@ var qs = [];
               <div class="sponsor aol">
                 <span>
                   <div>
-                    <img src="/img/aol_logo.png"/>
+                    <img src="/img/aol_logo.png" alt="AOL logo"/>
                     <h5>The AOL Cause Module is a proud provider of complimentary media services
                       <nobr>for <strong>Legacy<em>Of</em>Hope</strong></nobr></h5>
                     </div>
