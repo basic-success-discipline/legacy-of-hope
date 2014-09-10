@@ -406,7 +406,7 @@ and (max-width: $phone-landscape - 1px)  {
 	}
 
 
-		.md img{
+		.md img:not(.logo){
 		margin-top: 60px;
 	}
 

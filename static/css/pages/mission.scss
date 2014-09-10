@@ -120,6 +120,11 @@ margin-bottom: 20px;
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
+
+.hero img, .herospacer img{
+  content: url('../../img/mission_hero_pp.jpg');
+}
+
 	
 	// MOBILE - PORTRAIT - PAGE
 	.page {
@@ -136,6 +141,7 @@ and (max-width: $phone-landscape - 1px)  {
 	.missionimg1{
 		margin-bottom: -20px;
 	}
+
 
 
 

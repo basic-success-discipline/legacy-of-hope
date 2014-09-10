@@ -1,15 +1,5 @@
-.banner {
-  position: relative;
-  overflow: auto;
-  margin-bottom: -15px;
-  max-width: 1200px; }
-
-.banner li {
-  list-style: none;
-  float: none; }
-
-.banner ul li {
-  float: left; }
+.slider img {
+  width: 100%; }
 
 .safari.herospacer img {
   visibility: hidden; }
@@ -20,32 +10,6 @@
 
 .safari .hero {
   display: block; }
-
-a.unslider-arrow {
-  top: 45%;
-  position: absolute; }
-
-a.unslider-arrow img {
-  width: 100%;
-  float: none;
-  display: block;
-  margin-bottom: 0;
-  visibility: visible;
-  opacity: .5; }
-
-a.unslider-arrow img:hover {
-  opacity: 1;
-  transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear; }
-
-a.unslider-arrow.prev {
-  right: 20px;
-  margin-top: -2px; }
-
-a.unslider-arrow.next {
-  left: 20px; }
 
 .herospacer.left {
   margin-left: calc(-100% + 70px);
@@ -95,6 +59,15 @@ a.unslider-arrow.next {
 @media only screen and (max-width: 479px) {
   h3 {
     text-align: center; }
+
+  .slider .a img, .herospacer img {
+    content: url("../../img/hospital_hero1_pp.jpg"); }
+
+  .slider .b img {
+    content: url("../../img/hospital_hero2_pp.jpg"); }
+
+  .slider .c img {
+    content: url("../../img/hospital_hero3_pp.jpg"); }
 
   .maincopy p:nth-child(5) {
     margin-bottom: 30px; } }
