@@ -23,6 +23,13 @@ router.get('/board', function(req, res) {
     });
 });
 
+router.get('/botlhale', function(req, res) {
+  cmsgateway.getPageData('cms', 'botlhale', 
+    function(err, data) {
+      res.render('botlhale', data);
+    });
+});
+
 
 router.get('/concert', function(req, res) {
   cmsgateway.getPageData('cms', 'concert', 

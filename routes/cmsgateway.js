@@ -57,6 +57,14 @@ var home = {
   date: "December 13, 2014",
   likes : "654",
   link: "/concert"
+},
+{
+  title: "Youth Ambassador Botlhale Boikanyo",
+  image: "/img/card_botlhale.jpg",
+  blurb: "Botlhale Boikanyo is a young, ambitious and inspired Poet from Johannesburg, South Africa. At the age of 11 and well beyond her years in both maturity and insight, Bolthale’s early career was put to test under the bright light auditions of the 2012 South Africa’s Got Talent competition. In that setting, Bolthale’s (pronounced bo-thall-ee) took judges firmly by the heart and walked away the clear and undeniable winner for her gut wrenching and heart lifting prose, inspired by her greatest mentor, Nelson Mandela.",
+  date: "September 11, 2014",
+  likes : "654",
+  link: "/botlhale"
 }
 ],
 quotes:[
@@ -79,6 +87,16 @@ var board = {
   stylesheet: "board.css",
   currentpage: "menu-board"
 };
+
+var botlhale = {
+  title: "Youth Ambassador Botlhale Boikanyo on Fox TV - Legacy of Hope",
+  url: "http://legacyofhope.org/botlhale",
+  thumb_img: "thumb_botlhale.jpg",
+  description: "Simply known as ‘B’ by friends and family, Botlhale was asked to join the Legacy of Hope Foundation as the Official Youth Ambassador. In her acceptance of this responsibility, ‘B’ explains her passion for Mr. Mandela and her desire to pitch in and help fulfill his last living wish. -- 'I simply want to help Legacy of Hope in their efforts to support the Nelson Mandela Children’s Hospital in my native country.There would be no greater honor.'",
+  stylesheet: "botlhale.css",
+  currentpage: "menu-news"
+};
+
 var concert = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
@@ -101,7 +119,7 @@ var legacy_of_hope_nmcht_concert = {
   thumb_img: "thumb_home.jpg",
   description: "Ten years ago, Nelson Mandela enriched his living legacy by unfolding his dream of the Nelson Mandela Children’s Hospital, a crucially needed institution for the millions of underserved children in South Africa. Sibongile Mkhabela, then CEO of the Nelson Mandela’s Children Fund, was chosen by Mandela to play a key role in this vision as he appointed her CEO of the Nelson Mandela Children's Hospital Trust.",
   stylesheet: "sibongile.css",
-  currentpage: "menu-sibongile"
+  currentpage: "menu-news"
 };
 
 var mandeladay = {
@@ -110,7 +128,7 @@ var mandeladay = {
   thumb_img: "thumb_mandeladay.jpg",
   description: "Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Center for the Performing Arts, to celebrate the life and Legacy of Nelson Mandela. During this event held on Mandela Day (July 18th), the Legacy of Hope announced plans for a worldwide simulcast concert scheduled to take place in New York on December 13th, 2014.",
   stylesheet: "mandeladay.css",
-  currentpage: "menu-mandeladay"
+  currentpage: "menu-news"
 };
 
 
@@ -148,6 +166,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'board':
       callback(null, board);
+      break;
+      case 'botlhale':
+      callback(null, botlhale);
       break;
       case 'concert':
       callback(null, concert);
