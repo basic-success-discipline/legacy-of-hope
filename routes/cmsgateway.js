@@ -35,6 +35,14 @@ var home = {
  ],
  stories: [
  {
+  title: "Youth Ambassador Botlhale Boikanyo",
+  image: "/img/card_botlhale.jpg",
+  blurb: "Botlhale Boikanyo is a young, ambitious and inspired Poet from Johannesburg, South Africa. At the age of 11 and well beyond her years in both maturity and insight, Bolthale’s early career was put to test under the bright light auditions of the 2012 South Africa’s Got Talent competition. In that setting, Bolthale’s (pronounced bo-thall-ee) took judges firmly by the heart and walked away the clear and undeniable winner for her gut wrenching and heart lifting prose, inspired by her greatest mentor, Nelson Mandela.",
+  date: "September 11, 2014",
+  likes : "654",
+  link: "/botlhale"
+},
+ {
   title: "Mandela Day 2014",
   image: "/img/card_mandela_day.jpg",
   blurb: "The Legacy of Hope Foundation hosted an evening of entertainment on Mandela Day to support a global campaign to fulfill the last living wish of Nelson Mandela—to build Africa’s 4th dedicated children’s hospital in Johannesburg, South Africa in 2016. ",
@@ -57,15 +65,8 @@ var home = {
   date: "December 13, 2014",
   likes : "654",
   link: "/concert"
-},
-{
-  title: "Youth Ambassador Botlhale Boikanyo",
-  image: "/img/card_botlhale.jpg",
-  blurb: "Botlhale Boikanyo is a young, ambitious and inspired Poet from Johannesburg, South Africa. At the age of 11 and well beyond her years in both maturity and insight, Bolthale’s early career was put to test under the bright light auditions of the 2012 South Africa’s Got Talent competition. In that setting, Bolthale’s (pronounced bo-thall-ee) took judges firmly by the heart and walked away the clear and undeniable winner for her gut wrenching and heart lifting prose, inspired by her greatest mentor, Nelson Mandela.",
-  date: "September 11, 2014",
-  likes : "654",
-  link: "/botlhale"
 }
+
 ],
 quotes:[
 {author: "Graca Machel, the wife of the late Mr. Nelson Mandela   - June 2014", quote: "I am inspired by his rich legacy that promotes justice, compassion, and solidarity. Children were very dear to Madiba and his last wish was to build the Nelson Mandela Children’s Hospital."},
