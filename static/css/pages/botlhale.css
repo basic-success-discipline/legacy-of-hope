@@ -63,6 +63,12 @@ a {
 a:nth-child(17) {
   display: none; }
 
+p em {
+  font-weight: bold; }
+
 @media only screen and (max-width: 479px) {
   a:nth-child(21) {
-    display: none; } }
+    display: none; }
+
+  .botlhale p:not(.center) {
+    text-align: left; } }
