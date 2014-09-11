@@ -8,6 +8,44 @@ var cmsgateway = require('./cmsgateway.js');
 
 /* GET METHODS */
 
+router.get('/:year/:month/:day/:article', function(req, res) {
+
+  switch (req.params.year){
+    case '2014':
+    switch (req.params.month){
+      case '9':
+      switch (req.params.day){
+        case '13':
+        switch (req.params.article){
+          case 'botlhale':
+              cmsgateway.getPageData('cms', 'botlhale', 
+    function(err, data) {
+      res.render('botlhale', data);
+    });
+
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+        default:
+        res.redirect('/');
+        break;
+      }
+      break;
+      default:
+      res.redirect('/');
+      break;
+    }
+    break;
+    default:
+    res.redirect('/');
+    break;
+  }
+
+});
+
 
 router.get('/', function(req, res) {
   cmsgateway.getPageData('cms', 'home', 
@@ -23,12 +61,7 @@ router.get('/board', function(req, res) {
     });
 });
 
-router.get('/botlhale', function(req, res) {
-  cmsgateway.getPageData('cms', 'botlhale', 
-    function(err, data) {
-      res.render('botlhale', data);
-    });
-});
+
 
 
 router.get('/concert', function(req, res) {
@@ -85,7 +118,7 @@ router.get('/hospital', function(req, res) {
 
 router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
 router.get('/sponsors', function(req, res) {
-cmsgateway.getPageData('cms', 'sponsors', 
+  cmsgateway.getPageData('cms', 'sponsors', 
     function(err, data) {
       res.render('sponsors', data);
     });
@@ -93,10 +126,11 @@ cmsgateway.getPageData('cms', 'sponsors',
 
 
 
-//make error page
-router.get('*', function(req, res) {
-  res.redirect('/');
-});
+// //make error page
+// router.get('*', function(req, res) {
+//   console.log("in here");
+//   res.redirect('/');
+// });
 
 
 
@@ -108,7 +142,7 @@ router.get('*', function(req, res) {
 
 router.post('/contact', function (req, res) {
 
-    console.log('contact emailer');
+  console.log('contact emailer');
 
     var nodemailer = require('nodemailer');   //uses an old version -- can this be upgraded?
     var mailOpts, smtpTrans;
@@ -117,14 +151,14 @@ router.post('/contact', function (req, res) {
 
 
     smtpTrans = nodemailer.createTransport('sendmail', {
-        path: "/usr/sbin/sendmail",
-        args: ["-t", "eggast@legacyofhopeconcerts.org"]
+      path: "/usr/sbin/sendmail",
+      args: ["-t", "eggast@legacyofhopeconcerts.org"]
     });
 
     //console.log('sending data: ' + JSON.stringify(data));
     var text = 'name: ' + data['name'] + '\nemail: ' + data['email'] + '\nMessage: ' + data['message'];
     if (data['sponsor']==='true') {
-        text += '\n\nSponsorship Interest: YES' + '\nCompany Name: ' + data['company'] + '\nPhone: ' + data['phone'] + '\nReferrer: ' + data['referrer'] + '\nInterest: ' + data['interest'];
+      text += '\n\nSponsorship Interest: YES' + '\nCompany Name: ' + data['company'] + '\nPhone: ' + data['phone'] + '\nReferrer: ' + data['referrer'] + '\nInterest: ' + data['interest'];
     }
     
     
@@ -134,27 +168,27 @@ router.post('/contact', function (req, res) {
             to: 'eggast@legacyofhopeconcerts.org, jtrubenbach@gmail.com',
             subject: 'Website contact form',
             text: text
-    };
+          };
 
-    smtpTrans.sendMail(mailOpts, function (error, responseStatus) {
+          smtpTrans.sendMail(mailOpts, function (error, responseStatus) {
             console.log('sendmail');
             if(error) {
-                console.log("error: " + error);
-                res.json({ error : error });
+              console.log("error: " + error);
+              res.json({ error : error });
             }
             else {
                 console.log('response message: ' + responseStatus.message); // response from the server
                 console.log('response messageID: ' + responseStatus.messageId); // Message-ID value used
                 res.json({ status : 'sent' });
-            }
-            
-    });
-});
+              }
+
+            });
+        });
 
 /**
  * register proxy endpoint. Routes registrations to back-end server
  */
-router.post('/register', function(req, res) {
+ router.post('/register', function(req, res) {
   var registerUrl = 'http://ec2-54-191-42-61.us-west-2.compute.amazonaws.com/auth/register';
   var formValues = {
     username    : req.body.email,
@@ -175,4 +209,4 @@ router.post('/register', function(req, res) {
 
 
 
-module.exports = router;
+ module.exports = router;
