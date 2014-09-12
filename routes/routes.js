@@ -4,7 +4,6 @@ var router = express.Router();
 var utils = require('../utils.js');
 var cmsgateway = require('./cmsgateway.js');
 
-var served = false;
 
 /* GET METHODS */
 
@@ -20,7 +19,6 @@ router.get('/:year/:month/:day/:article', function(req, res) {
           case 'botlhale':
           cmsgateway.getPageData('cms', 'botlhale', 
             function(err, data) {
-              served=true;
               res.render('botlhale', data);
             });
 
@@ -129,10 +127,7 @@ router.get('/sponsors', function(req, res) {
 
 //make error page
 router.get('*', function(req, res) {
-  console.log("in here");
-  if(!served){
     res.redirect('/');
-  }
 });
 
 
