@@ -8,6 +8,43 @@ var cmsgateway = require('./cmsgateway.js');
 
 /* GET METHODS */
 
+router.get('/:year/:month/:day/:article', function(req, res) {
+
+  switch (req.params.year){
+    case '2014':
+    switch (req.params.month){
+      case '9':
+      switch (req.params.day){
+        case '13':
+        switch (req.params.article){
+          case 'botlhale':
+          cmsgateway.getPageData('cms', 'botlhale', 
+            function(err, data) {
+              res.render('botlhale', data);
+            });
+
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+        default:
+        res.redirect('/');
+        break;
+      }
+      break;
+      default:
+      res.redirect('/');
+      break;
+    }
+    break;
+    default:
+    res.redirect('/');
+    break;
+  }
+
+});
 
 router.get('/', function(req, res) {
   cmsgateway.getPageData('cms', 'home', 
@@ -23,12 +60,7 @@ router.get('/board', function(req, res) {
     });
 });
 
-router.get('/botlhale', function(req, res) {
-  cmsgateway.getPageData('cms', 'botlhale', 
-    function(err, data) {
-      res.render('botlhale', data);
-    });
-});
+
 
 
 router.get('/concert', function(req, res) {
