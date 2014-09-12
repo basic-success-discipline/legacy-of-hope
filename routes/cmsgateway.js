@@ -93,7 +93,7 @@ var botlhale = {
   title: "Youth Ambassador Botlhale Boikanyo on Fox TV - Legacy of Hope",
   url: "http://legacyofhope.org/botlhale",
   thumb_img: "thumb_botlhale.jpg",
-  description: "Simply known as ‘B’ by friends and family, Botlhale was asked to join the Legacy of Hope Foundation as the Official Youth Ambassador. In her acceptance of this responsibility, ‘B’ explains her passion for Mr. Mandela and her desire to pitch in and help fulfill his last living wish. -- 'I simply want to help Legacy of Hope in their efforts to support the Nelson Mandela Children’s Hospital in my native country.There would be no greater honor.'",
+  description: "Simply known as ‘B’ by friends and family, Botlhale was asked to join the Legacy of Hope Foundation as the official Youth Ambassador. In her acceptance of this responsibility, ‘B’ explains her passion for Mr. Mandela and her desire to pitch in and help fulfill his last living wish. -- 'I simply want to help Legacy of Hope in their efforts to support the Nelson Mandela Children’s Hospital in my native country.There would be no greater honor.'",
   stylesheet: "botlhale.css",
   currentpage: "menu-news"
 };

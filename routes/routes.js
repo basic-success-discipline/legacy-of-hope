@@ -18,11 +18,11 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '13':
         switch (req.params.article){
           case 'botlhale':
-              cmsgateway.getPageData('cms', 'botlhale', 
-    function(err, data) {
-      served=true;
-      res.render('botlhale', data);
-    });
+          cmsgateway.getPageData('cms', 'botlhale', 
+            function(err, data) {
+              served=true;
+              res.render('botlhale', data);
+            });
 
           break;
           default:
@@ -131,8 +131,8 @@ router.get('/sponsors', function(req, res) {
 router.get('*', function(req, res) {
   console.log("in here");
   if(!served){
-  res.redirect('/');
-}
+    res.redirect('/');
+  }
 });
 
 
