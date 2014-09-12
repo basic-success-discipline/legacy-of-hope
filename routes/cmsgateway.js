@@ -38,7 +38,7 @@ var home = {
   title: "Youth Ambassador Botlhale Boikanyo",
   image: "/img/card_botlhale.jpg",
   blurb: "Botlhale Boikanyo is a young, ambitious and inspired Poet from Johannesburg, South Africa. At the age of 11 and well beyond her years in both maturity and insight, Bolthale’s early career was put to test under the bright light auditions of the 2012 South Africa’s Got Talent competition. In that setting, Bolthale’s (pronounced bo-thall-ee) took judges firmly by the heart and walked away the clear and undeniable winner for her gut wrenching and heart lifting prose, inspired by her greatest mentor, Nelson Mandela.",
-  date: "September 11, 2014",
+  date: "September 13, 2014",
   likes : "654",
   link: "/botlhale"
 },
