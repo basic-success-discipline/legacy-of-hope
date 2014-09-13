@@ -5,6 +5,7 @@ var home = {
  stylesheet	: "home2.css",
  url: "http://legacyofhope.org",
  currentpage	: "menu-home",
+ type: "website",
  board: [
  {name: "Dr. Maya Angelou", image: "img/board_angelou.jpg"},
  {name: "Ruby Bridges", image: "img/board_bridges.jpg"},
@@ -35,6 +36,14 @@ var home = {
  ],
  stories: [
  {
+  title: "Youth Ambassador Botlhale Boikanyo",
+  image: "/img/card_botlhale.jpg",
+  blurb: "Botlhale Boikanyo is a young, ambitious and inspired Poet from Johannesburg, South Africa. At the age of 11 and well beyond her years in both maturity and insight, Bolthale’s early career was put to test under the bright light auditions of the 2012 South Africa’s Got Talent competition. In that setting, Bolthale’s (pronounced bo-thall-ee) took judges firmly by the heart and walked away the clear and undeniable winner for her gut wrenching and heart lifting prose, inspired by her greatest mentor, Nelson Mandela.",
+  date: "September 13, 2014",
+  likes : "654",
+  link: "/2014/9/13/botlhale"
+},
+ {
   title: "Mandela Day 2014",
   image: "/img/card_mandela_day.jpg",
   blurb: "The Legacy of Hope Foundation hosted an evening of entertainment on Mandela Day to support a global campaign to fulfill the last living wish of Nelson Mandela—to build Africa’s 4th dedicated children’s hospital in Johannesburg, South Africa in 2016. ",
@@ -58,6 +67,7 @@ var home = {
   likes : "654",
   link: "/concert"
 }
+
 ],
 quotes:[
 {author: "Graca Machel, the wife of the late Mr. Nelson Mandela   - June 2014", quote: "I am inspired by his rich legacy that promotes justice, compassion, and solidarity. Children were very dear to Madiba and his last wish was to build the Nelson Mandela Children’s Hospital."},
@@ -77,15 +87,28 @@ var board = {
   thumb_img: "thumb_board.jpg",
   description: "The Legacy of Hope board of Directors.",
   stylesheet: "board.css",
-  currentpage: "menu-board"
+  currentpage: "menu-board",
+  type: "website"
 };
+
+var botlhale = {
+  title: "Youth Ambassador Botlhale Boikanyo on Fox TV - Legacy of Hope",
+  url: "http://legacyofhope.org/2014/9/13/botlhale",
+  thumb_img: "thumb_botlhale.jpg",
+  description: "Botlhale Boikanyo (pronounced bo-thall-ee) is a young, ambitious and inspired poet from Johannesburg, South Africa. The following video interview is from Fox News 11 (KTTV) Anchor Susan Hirasuna, following Botlhale’s performance at the 2014 Legacy of Hope Mandela Day Event.",
+  stylesheet: "botlhale.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
 var concert = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
   thumb_img: "thumb_concert.jpg",
   description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
   stylesheet: "concert2.css",
-  currentpage: "menu-concert"
+  currentpage: "menu-concert",
+  type: "website"
 };
 var guitarinitiative = {
   title: "The Guitar Initiative - Legacy of Hope",
@@ -93,7 +116,8 @@ var guitarinitiative = {
   thumb_img: "thumb_guitarinitiative.jpg",
   description: "The Guitar Initiative is a campaign to increase awareness and support for Nelson Mandela’s Legacy of Hope, through the medium of music. The Initiative has two main goals: to obtain musician and celebrity endorsements, and to produce ongoing recordings by artists to benefit the Children’s Hospital and its young patients.",
   stylesheet: "guitarinitiative.css",
-  currentpage: "menu-guitar"
+  currentpage: "menu-guitar",
+  type: "article"
 };
 var legacy_of_hope_nmcht_concert = {
   title: "Sibongile - Legacy of Hope",
@@ -101,7 +125,8 @@ var legacy_of_hope_nmcht_concert = {
   thumb_img: "thumb_home.jpg",
   description: "Ten years ago, Nelson Mandela enriched his living legacy by unfolding his dream of the Nelson Mandela Children’s Hospital, a crucially needed institution for the millions of underserved children in South Africa. Sibongile Mkhabela, then CEO of the Nelson Mandela’s Children Fund, was chosen by Mandela to play a key role in this vision as he appointed her CEO of the Nelson Mandela Children's Hospital Trust.",
   stylesheet: "sibongile.css",
-  currentpage: "menu-sibongile"
+  currentpage: "menu-news",
+  type: "article"
 };
 
 var mandeladay = {
@@ -110,7 +135,8 @@ var mandeladay = {
   thumb_img: "thumb_mandeladay.jpg",
   description: "Legacy of Hope hosted dignitaries, celebrities and advocates at the Beverly Hills Wallis Annenberg Center for the Performing Arts, to celebrate the life and Legacy of Nelson Mandela. During this event held on Mandela Day (July 18th), the Legacy of Hope announced plans for a worldwide simulcast concert scheduled to take place in New York on December 13th, 2014.",
   stylesheet: "mandeladay.css",
-  currentpage: "menu-mandeladay"
+  currentpage: "menu-news",
+  type: "article"
 };
 
 
@@ -120,7 +146,8 @@ var mission = {
   thumb_img: "thumb_mission.jpg",
   description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
   stylesheet: "mission.css",
-  currentpage: "menu-mission"
+  currentpage: "menu-mission",
+  type: "website"
 };
 var hospital = {
   title: "The Hospital - Legacy of Hope",
@@ -128,7 +155,8 @@ var hospital = {
   thumb_img: "thumb_hospital.jpg",
   description: "This new hospital will celebrate the legacy of Mr. Mandela and his love of children while advancing his vision for future generations. The Nelson Mandela Children’s Hospital will be a turning point on how the world views specialized pediatric care to all children, regardless of their ability to pay.",
   stylesheet: "hospital.css",
-  currentpage: "menu-hospital"
+  currentpage: "menu-hospital",
+  type: "website"
 };
 var sponsors = {
   title: "Sponsors - Legacy of Hope",
@@ -136,7 +164,8 @@ var sponsors = {
   thumb_img: "thumb_home.jpg",
   description: "The Legacy of Hope Foundation thanks you for your consideration of being part of this momentous historic event. Download the print version or the web version of the Legacy of Hope Sponsor Deck below. (Right click and choose 'Save As').",
   stylesheet: "sponsors.css",
-  currentpage: "menu-sponsors"
+  currentpage: "menu-sponsors",
+  type: "website"
 };
 
 
@@ -148,6 +177,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'board':
       callback(null, board);
+      break;
+      case 'botlhale':
+      callback(null, botlhale);
       break;
       case 'concert':
       callback(null, concert);

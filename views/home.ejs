@@ -4,12 +4,12 @@
 <head>
 
  <!-- CSS up here -->
-<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+ <link rel="stylesheet" type="text/css" href="css/slick.css"/>
  
 
  <% include partials/loh-head %>
 
-<!-- scripts down here -->
+ <!-- scripts down here -->
  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
 
 </head>
@@ -28,8 +28,8 @@
 
         <div class="slider">
           <div class="hero first">
-            <img src="img/home_hero1.jpg"/>
-            <div class="heroblurb mobileblurb">
+            <img src="img/home_hero1.jpg" alt="Barclays Center"/>
+            <div class="heroblurb mobileblurb portraitblurb ">
               <div class="wrapper-content">
                 <div class="countdown">
                   <h1>Concert Begins in</h1>
@@ -53,21 +53,21 @@
             </div>
           </div>
           <div class="hero second">
-            <img src="img/home_hero2.jpg" />
-            <div class="heroblurb">
+            <img src="img/home_hero2.jpg" alt="Nelson Mandela"/>
+            <div class="heroblurb mobileblurb">
               <div class="wrapper-content">
                 <h3>Celebrating the Nelson Mandela Children's Hospital</h3>
-                <p class="herop1 randomquote"></p>
-                <p class="herop2 randomquoteauthor"></p>
+                <p class="herop1 randomquote mobileblurb"></p>
+                <p class="herop2 randomquoteauthor mobileblurb"></p>
               </div>
             </div>
           </div>
           <div class="hero third">
-            <img src="img/home_hero3.jpg" />
-            <div class="heroblurb mobileblurb top">
+            <img src="img/home_hero3.jpg" alt="Nelson Mandela Children's Hospital groundbreaking"/>
+            <div class="heroblurb mobileblurb portraitblurb top">
               <h3>The Nelson Mandela Children's Hospital</h3>
             </div>
-            <span class="heroblurb  mobileblurb bottom"> 
+            <span class="heroblurb  mobileblurb portraitblurb bottom"> 
               <p >A crucially needed pediatric hospital in South Africa is long overdue</p>
               <p ><a href="/hospital">find out more &nbsp<i class="fa fa-chevron-right 6x" ></i></a></p>
             </span>
@@ -112,16 +112,31 @@
               breakpoint: 768,
               settings: {
                 onBeforeChange: function(){
-                  $('.heroblurb').fadeOut(100,function(){
-                  });
-                },
-                onAfterChange: function(){
-                  $('.mobileblurb').fadeIn(500,function(){});
-                }
+                $('.heroblurb').fadeOut(100,function(){
+                 quote(2);
+              });
+
+              },
+              onAfterChange: function(){
+                $('.mobileblurb').fadeIn(500,function(){});
               }
-            }]
-            
-          });
+            }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                onBeforeChange: function(){
+                $('.heroblurb').fadeOut(100,function(){
+              });
+
+              },
+              onAfterChange: function(){
+                $('.portraitblurb').fadeIn(500,function(){});
+              }
+            }
+          }]
+
+        });
 });
 
 var qs = [];
@@ -144,6 +159,11 @@ var qs = [];
       $('.randomquote').html('"' + qs[rand] + '"');
       $('.randomquoteauthor').html("- " + qas[rand]);
       randprime = rand;
+    }
+
+    var quote = function(index){
+      $('.randomquote').html('"' + qs[index] + '"');
+      $('.randomquoteauthor').html("- " + qas[index]);
     }
 
     $( document ).ready(function() {
@@ -170,7 +190,7 @@ var qs = [];
           <p>The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa. This will be the fifth dedicated children’s hospital serving the entire continent of Africa.</p>
           <p>The LEGACY OF HOPE NELSON MANDELA CHILDREN'S HOSPITAL CONCERT will feature 10 premier artist/performers and will be broadcast and streamed worldwide. Interspersed with never before seen documentaries within the performances, these vignettes celebrate Nelson Mandela’s love of children and his dream of free and accessible healthcare for the children of South Africa. </p>
 
-          <img src="/img/home_barclays.jpg" />
+          <img src="/img/home_barclays.jpg" alt="Barclays Center" />
 
           <p><b>WHERE:</b><br>Barclays Center, New York City<br></p>
 
@@ -207,7 +227,7 @@ var qs = [];
 
                     <div class="boardwindow">
                       <div class="innerwindow">
-                        <img src="<%= board[i].image %>"/>
+                        <img src="<%= board[i].image %>" alt="<%= board[i].name %>"/>
                       </div>
                     </div>
                     <p><%= board[i].name %></p>
@@ -274,10 +294,10 @@ var qs = [];
               <div style="width: 100%">
                 <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4>
               </div>
-              <% for (var i = 0; i < (stories.length <= 3 ? stories.length : 3); i++) { %>
+              <% for (var i = 0; i < (stories.length <= 4 ? stories.length : 4); i++) { %>
               <a class="four columns card" href="<%= stories[i].link %>">
                 <div class="stretchy-wrapper">
-                  <img src="<%= stories[i].image %>"/>
+                  <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
                 </div>
                 <h5><%= stories[i].title %></h5>
                 <p class="cardcopy"><%= stories[i].blurb %></p>
@@ -310,7 +330,7 @@ var qs = [];
               <div class="sponsor aol">
                 <span>
                   <div>
-                    <img src="/img/aol_logo.png"/>
+                    <img src="/img/aol_logo.png" alt="AOL logo"/>
                     <h5>The AOL Cause Module is a proud provider of complimentary media services
                       <nobr>for <strong>Legacy<em>Of</em>Hope</strong></nobr></h5>
                     </div>

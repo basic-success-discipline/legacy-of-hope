@@ -15,9 +15,6 @@ h5 {
 .safari.herospacer img {
   visibility: hidden; }
 
-.herospacer {
-  margin-bottom: -15px; }
-
 .herospacer.left {
   display: block !important; }
 
@@ -46,7 +43,7 @@ h5 {
   margin-left: 0; }
 
 .hero.second .heroblurb p {
-  max-width: 40%;
+  max-width: 45%;
   margin-left: 0; }
 
 .hero.second .herop1 {
@@ -354,12 +351,11 @@ h4.subheading hr {
 
   .hero img, .herospacer img {
     width: 100%;
-    margin-left: -100px;
+    margin-left: -18%;
     float: none; }
 
   .hero.third img {
-    margin-left: 0;
-    width: 148%;
+    width: 157%;
     margin-left: -24%; }
 
   .hero.first img {
@@ -394,7 +390,9 @@ h4.subheading hr {
     text-align: center; }
 
   .page {
-    position: relative; }
+    padding-top: 40px;
+    position: relative;
+    padding-bottom: 20px; }
 
   .page .container .about img {
     margin-left: auto;
@@ -404,11 +402,20 @@ h4.subheading hr {
   .latestnews.container .four.columns {
     margin-left: 0px; }
 
+  h4.subheading {
+    text-align: center;
+    display: block; }
+
+  .honorary .arrow {
+    font-size: 30px;
+    z-index: 100;
+    top: 49%; }
+
   .honorary .left.arrow {
-    left: -10px; }
+    left: 30px; }
 
   .honorary .right.arrow {
-    right: -10px; }
+    right: 30px; }
 
   .honorary .inner-container {
     margin-left: 0px; }
@@ -417,7 +424,8 @@ h4.subheading hr {
     height: auto; }
 
   .honorary.container .three.columns {
-    width: 150px; }
+    width: 150px;
+    padding-bottom: 30px; }
 
   .honorary.container .board img {
     border-radius: 6px;
@@ -458,6 +466,9 @@ h4.subheading hr {
   h3 {
     text-align: center; }
 
+  h4 {
+    text-align: center; }
+
   .heroblurb h3 {
     text-align: center; }
 
@@ -465,16 +476,29 @@ h4.subheading hr {
     display: none; }
 
   .hero.first .heroblurb {
-    left: 8%;
-    top: 25%; }
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    padding-top: 8%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); }
 
   .hero.first .heroblurb h1 {
     text-align: left; }
 
-  .page .container .about img {
-    margin-left: auto;
-    width: 100%;
-    margin-bottom: 30px; }
+  .page {
+    padding-bottom: 20px;
+    padding-top: 40px; }
+
+  .hero.second .heroblurb h3 {
+    display: none; }
+
+  .hero.second .heroblurb p {
+    max-width: 65%;
+    margin-top: 0px;
+    padding-left: 20px; }
 
   .hero.third .mobileblurb {
     display: block; }
@@ -492,8 +516,17 @@ h4.subheading hr {
     text-align: center;
     display: initial; }
 
+  .page .container .about img {
+    margin-left: auto;
+    width: 100%;
+    margin-bottom: 30px; }
+
   .latestnews.container .four.columns {
     margin-left: 0px; }
+
+  .honorary .arrow {
+    font-size: 30px;
+    top: 49%; }
 
   .honorary .inner-container {
     margin-left: 0px; }
@@ -512,6 +545,10 @@ h4.subheading hr {
   .honorary .stretchy-wrapper {
     padding-left: 15px;
     padding-right: 15px; }
+
+  h4.subheading {
+    text-align: center;
+    display: block; }
 
   .sponsors .container span div {
     width: 100%; }

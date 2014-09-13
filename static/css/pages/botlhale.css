@@ -1,0 +1,74 @@
+.wrapper-inner {
+  background-color: black; }
+
+img.bhero {
+  width: 100%;
+  margin-bottom: -35px; }
+
+.botlhale {
+  max-width: 575px;
+  color: white; }
+
+h1, h2, h3, h4 {
+  text-align: center; }
+
+h1 {
+  font-size: 31px;
+  margin-bottom: 5px;
+  max-width: 430px;
+  margin-right: auto;
+  margin-left: auto; }
+
+h4 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  color: #a0a0a0;
+  max-width: 430px;
+  margin-right: auto;
+  margin-left: auto; }
+
+p {
+  text-align: justify;
+  font-family: "Helvetica Neue Light";
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8; }
+
+p strong {
+  font-style: italic;
+  font-weight: 700; }
+
+p.center {
+  text-align: center; }
+
+p.quote {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 45px;
+  margin-bottom: 45px; }
+
+p.watch {
+  margin-bottom: 5px;
+  font-style: italic; }
+
+a {
+  text-decoration: underline; }
+
+#divWNHeadline792962 {
+  display: none; }
+
+a:nth-child(17) {
+  display: none; }
+
+p em {
+  font-weight: bold; }
+
+@media only screen and (max-width: 479px) {
+  a:nth-child(21) {
+    display: none; }
+
+  .botlhale p:not(.center) {
+    text-align: left; } }

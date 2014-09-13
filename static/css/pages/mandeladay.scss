@@ -405,6 +405,11 @@ and (max-width: $phone-landscape - 1px)  {
 		display: inline;
 	}
 
+
+		.md img:not(.logo){
+		margin-top: 60px;
+	}
+
 	.md .label{
 		position: relative;
 		top: 0;
@@ -412,12 +417,21 @@ and (max-width: $phone-landscape - 1px)  {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	
+	}
+
+	.md .label h4{
+		font-size: 13px;
+	}
+	.md .label p{
+			font-size: 12px;
 	}
 
 
 	.md .choirlabel.label{
 		display: none;
 	}
+
 
 
 	.md .row.one img.nice{
@@ -475,6 +489,16 @@ and (max-width: $phone-landscape - 1px)  {
 	.vidlightbox .vid{
 		width: 320px;
 		height: calc(320px * #{$aspect});
+	}
+
+	.vidholder a.closevideo{
+		position: relative;
+		text-align: center;
+		top:20px;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		font-size: 40px;
 	}
 
 
@@ -589,6 +613,7 @@ and (max-width: $tablet-portrait - 1px)  {
 	.md .choirlabel.label{
 		display: none;
 	}
+
 
 
 	.md .row.one img.nice{

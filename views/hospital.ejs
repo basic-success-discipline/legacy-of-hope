@@ -3,8 +3,9 @@
 
 <head>
 
-  <% include partials/loh-head %>
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <% include partials/loh-head %>
+
 
 
 </head>
@@ -18,9 +19,9 @@
       <div class="wrapper-fix herofix">
 
         <div class="slider">
-          <div><img src="img/hospital_hero1.jpg" style="width:100%"/></div>
-          <div><img src="img/hospital_hero2.jpg" style="width:100%"/></div>
-          <div><img src="img/hospital_hero3.jpg" style="width:100%"/></div>
+          <div class="a"><img src="img/hospital_hero1.jpg" alt="Groundbreaking for the Nelson Mandela Children's Hospital"/></div>
+          <div class="b"><img src="img/hospital_hero2.jpg" alt="NMCH shovel"/></div>
+          <div class="c"><img src="img/hospital_hero3.jpg" alt="Children and adults alike celebrate the groundbreaking of the Nelson Mandela Children's Hospital"/></div>
 
         </div>
         <script type="text/javascript" src="/js/slick.js"></script>
@@ -36,13 +37,14 @@
               autoplay: true,
               autoplaySpeed: 5000,
               pauseOnHover: false
+
             });
           });
         </script>
       </div>
       <div class="herospacer">
         <img src="/img/hospital_hero1.jpg"/>
-        </div>
+      </div>
       <div class="herobuffer"></div>
 
 
@@ -70,7 +72,7 @@
 
             <% include partials/loh-sidebar %>
 
-            <img class="hospitalphoto" src="/img/hospital.jpg" style="float:left"/>
+            <img class="hospitalphoto" src="/img/hospital.jpg" style="float:left" alt="Architectural rendering of the future Nelson Mandela Children's Hospital"/>
 
             <div class="label">
               <p>Nelson Mandela Children's Hospital<br><i>Architectural Rendering</i><br>slated to open 2016</p>
