@@ -1,4 +1,4 @@
-@import "../variables.scss";
+	@import "../variables.scss";
 
 .md{
 	background-color: black;
@@ -355,24 +355,6 @@ $aspect: 675px/1200px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .md .powerfist{
 	width: 100%;
 	margin-top: -50px;
@@ -406,7 +388,7 @@ and (max-width: $phone-landscape - 1px)  {
 	}
 
 
-		.md img:not(.logo){
+		.md img:not(.logo, .f2 img){
 		margin-top: 60px;
 	}
 

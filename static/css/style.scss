@@ -773,7 +773,7 @@ em{
 
 .pf1 {
   float: left;
-  width: 100%;
+  // width: 100%;
   text-align: center;
   margin-top: 7px;
   height: auto; 
@@ -789,9 +789,10 @@ em{
 .pf2 {
   display: table-cell;
   float: right;
+
   vertical-align: middle;
   height: auto;
-  margin: 10px auto 15px auto; 
+  margin: 12px auto 15px auto; 
 }
 
 .pf2 p {
@@ -826,8 +827,9 @@ em{
 }
 
 .f2{
-  float:right;
+  float: right;
   margin-right: 6px;
+  clear: right;
 
 }
 .f2p-phone{
@@ -1413,7 +1415,7 @@ cursor: pointer;
 
   //  MOBILE -- PORTRAIT -- FOOTERS
   .prefooter{
-    height: $pp-foot-height;
+    height: $pp-foot-height * 1.5;
     padding-top: 6px;
   }
   .prefooter p{
@@ -1488,6 +1490,7 @@ cursor: pointer;
     display:block;
     width: auto;
   }
+
 }
 
 
@@ -1605,7 +1608,7 @@ p{
 
 //  MOBILE -- LANDSCAPE -- FOOTERS
 .prefooter{
-  height: 65px;
+  height: 120px;
   padding-top: 10px;
   z-index: 6;
   position: relative;
@@ -1616,6 +1619,13 @@ p{
   line-height: 1.45em;
   font-size: 14px;
 }
+.pf1{
+  width: 100%;
+}
+.pf2{
+  width: 100%;
+  text-align: center;
+}
 .pf1 p{
   font-size: 16px;
   font-weight: 300;
@@ -1625,6 +1635,7 @@ p{
 }
 .pf2 img { 
   height: 30px;
+  float: none;
 }
 .footer{
   height: 75px;
@@ -1736,6 +1747,7 @@ p{
 .f2{
   margin-top: 0px !important;
 }
+
 }
 
 // TABLET - LANDSCAPE
@@ -1755,6 +1767,7 @@ h3{
 p{
   font-size: 17px;
 }
+
 
 }
 
