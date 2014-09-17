@@ -292,7 +292,7 @@ var qs = [];
 
             <div class="container latestnews" style="display: block">
               <div style="width: 100%">
-                <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4>
+                <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4><p class="clickortap one">click on story to view</p>
               </div>
               <% for (var i = 0; i < (stories.length <= 4 ? stories.length : 4); i++) { %>
               <a class="four columns card" href="<%= stories[i].link %>">
@@ -315,9 +315,13 @@ var qs = [];
               <% } %>
             </div>
 
+
             <script type="text/javascript">
               $('.cardcopy').ellipsis({
                 row: 3
+              });
+              $('.card h5').ellipsis({
+                row: 1
               });
             </script>
 
