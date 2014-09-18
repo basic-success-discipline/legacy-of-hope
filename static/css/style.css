@@ -809,6 +809,7 @@ em {
 
 .pf1 {
   float: left;
+  width: 100%;
   text-align: center;
   margin-top: 7px;
   height: auto; }
@@ -1293,8 +1294,11 @@ em {
       content: url(../img/left_arrow_mobile.png); }
 
   .prefooter {
-    height: 150px;
+    height: 100px;
     padding-top: 6px; }
+
+  .prefooter.withsocial {
+    height: 150px; }
 
   .prefooter p {
     text-align: center;
@@ -1320,7 +1324,6 @@ em {
 
   .pf2 img {
     float: none;
-    height: 45px;
     margin: 0px auto; }
 
   .footer {
@@ -1432,10 +1435,13 @@ em {
       content: url(../img/left_arrow_mobile.png); }
 
   .prefooter {
-    height: 120px;
+    height: 65px;
     padding-top: 10px;
     z-index: 6;
     position: relative; }
+
+  .prefooter.withsocial {
+    height: 120px; }
 
   .prefooter p {
     text-align: justify;
@@ -1529,9 +1535,6 @@ em {
   .pf2 p {
     font-size: 15px;
     margin-top: 10px; }
-
-  .pf2 img {
-    height: 40px; }
 
   .f2 {
     margin-top: 0px !important; } }
