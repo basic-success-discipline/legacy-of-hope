@@ -789,9 +789,10 @@ em{
 .pf2 {
   display: table-cell;
   float: right;
+
   vertical-align: middle;
   height: auto;
-  margin: 10px auto 15px auto; 
+  margin: 12px auto 15px auto; 
 }
 
 .pf2 p {
@@ -826,8 +827,9 @@ em{
 }
 
 .f2{
-  float:right;
+  float: right;
   margin-right: 6px;
+  clear: right;
 
 }
 .f2p-phone{
@@ -1416,6 +1418,10 @@ cursor: pointer;
     height: $pp-foot-height;
     padding-top: 6px;
   }
+
+  .prefooter.withsocial{
+ height: $pp-foot-height * 1.5;
+  }
   .prefooter p{
     text-align: center;
     line-height: 1.4em;
@@ -1443,7 +1449,6 @@ cursor: pointer;
   }
   .pf2 img { 
     float: none;
-    height: 45px;
     margin: 0px auto; 
   }
 
@@ -1488,6 +1493,7 @@ cursor: pointer;
     display:block;
     width: auto;
   }
+
 }
 
 
@@ -1611,10 +1617,21 @@ p{
   position: relative;
 }
 
+.prefooter.withsocial{
+  height: 120px;
+}
+
 .prefooter p{
    text-align: justify;
   line-height: 1.45em;
   font-size: 14px;
+}
+.pf1{
+  width: 100%;
+}
+.pf2{
+  width: 100%;
+  text-align: center;
 }
 .pf1 p{
   font-size: 16px;
@@ -1625,6 +1642,7 @@ p{
 }
 .pf2 img { 
   height: 30px;
+  float: none;
 }
 .footer{
   height: 75px;
@@ -1730,12 +1748,11 @@ p{
   font-size: 15px;
   margin-top: 10px;
 }
-.pf2 img{
-  height: 40px;
-}
+
 .f2{
   margin-top: 0px !important;
 }
+
 }
 
 // TABLET - LANDSCAPE
@@ -1755,6 +1772,7 @@ h3{
 p{
   font-size: 17px;
 }
+
 
 }
 

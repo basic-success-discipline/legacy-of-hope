@@ -825,7 +825,7 @@ em {
   float: right;
   vertical-align: middle;
   height: auto;
-  margin: 10px auto 15px auto; }
+  margin: 12px auto 15px auto; }
 
 .pf2 p {
   float: right;
@@ -855,7 +855,8 @@ em {
 
 .f2 {
   float: right;
-  margin-right: 6px; }
+  margin-right: 6px;
+  clear: right; }
 
 .f2p-phone {
   display: none; }
@@ -1296,6 +1297,9 @@ em {
     height: 100px;
     padding-top: 6px; }
 
+  .prefooter.withsocial {
+    height: 150px; }
+
   .prefooter p {
     text-align: center;
     line-height: 1.4em;
@@ -1320,7 +1324,6 @@ em {
 
   .pf2 img {
     float: none;
-    height: 45px;
     margin: 0px auto; }
 
   .footer {
@@ -1437,10 +1440,20 @@ em {
     z-index: 6;
     position: relative; }
 
+  .prefooter.withsocial {
+    height: 120px; }
+
   .prefooter p {
     text-align: justify;
     line-height: 1.45em;
     font-size: 14px; }
+
+  .pf1 {
+    width: 100%; }
+
+  .pf2 {
+    width: 100%;
+    text-align: center; }
 
   .pf1 p {
     font-size: 16px;
@@ -1450,7 +1463,8 @@ em {
     display: none; }
 
   .pf2 img {
-    height: 30px; }
+    height: 30px;
+    float: none; }
 
   .footer {
     height: 75px;
@@ -1521,9 +1535,6 @@ em {
   .pf2 p {
     font-size: 15px;
     margin-top: 10px; }
-
-  .pf2 img {
-    height: 40px; }
 
   .f2 {
     margin-top: 0px !important; } }

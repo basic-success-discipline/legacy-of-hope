@@ -277,7 +277,7 @@
   .md .maincopy a {
     display: inline; }
 
-  .md img:not(.logo) {
+  .md img:not(.logo, .f2 img) {
     margin-top: 60px; }
 
   .md .label {

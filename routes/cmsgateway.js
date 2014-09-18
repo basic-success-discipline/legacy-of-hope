@@ -7,7 +7,7 @@ var home = {
  currentpage	: "menu-home",
  type: "website",
  board: [
- {name: "Dr. Maya Angelou", image: "img/board_angelou.jpg"},
+ {name: "The late Dr. Maya Angelou", image: "img/board_angelou.jpg"},
  {name: "Ruby Bridges", image: "img/board_bridges.jpg"},
  {name: "Christy Turlington Burns", image: "img/board_turlington_burns.jpg"},
  {name: "Ed Burns", image: "img/board_burns.jpg"}, 
