@@ -470,6 +470,9 @@ h4.subheading hr {
     width: 100%;
     overflow: hidden; }
 
+  .honorary .board:nth-child(1) p {
+    margin-bottom: 17px; }
+
   .sponsors {
     height: 180px; }
 
