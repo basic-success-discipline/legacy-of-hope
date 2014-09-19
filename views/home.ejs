@@ -294,7 +294,7 @@ var qs = [];
               <div style="width: 100%">
                 <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4><p class="clickortap one">click on story to view</p>
               </div>
-              <% for (var i = 0; i < (stories.length <= 4 ? stories.length : 4); i++) { %>
+              <% for (var i = 0; i < (stories.length <= 6 ? stories.length : 6); i++) { %>
               <a class="four columns card" href="<%= stories[i].link %>">
                 <div class="stretchy-wrapper">
                   <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
@@ -318,7 +318,7 @@ var qs = [];
 
             <script type="text/javascript">
               $('.cardcopy').ellipsis({
-                row: 3
+                row: 4
               });
               $('.card h5').ellipsis({
                 row: 1

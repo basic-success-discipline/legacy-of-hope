@@ -233,7 +233,7 @@ h4.subheading hr {
   margin-right: 0px;
   margin-bottom: 20px; }
 
-.latestnews .card:nth-child(3) {
+.latestnews .card:nth-child(3n) {
   margin-left: 30px;
   margin-right: 30px; }
 
