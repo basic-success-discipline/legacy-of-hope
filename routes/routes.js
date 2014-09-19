@@ -27,6 +27,19 @@ router.get('/:year/:month/:day/:article', function(req, res) {
           res.redirect('/');
           break;
         }
+        case '20':
+        switch (req.params.article){
+          case 'tata':
+          cmsgateway.getPageData('cms', 'tata', 
+            function(err, data) {
+              res.render('tata', data);
+            });
+
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
         break;
         default:
         res.redirect('/');
