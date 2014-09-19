@@ -36,7 +36,7 @@ var home = {
  ],
  stories: [
  {
-  title: "Táta Vega on Nelson Mandela",
+  title: "Táta Vega Spotlight",
   image: "/img/card_tata.jpg",
   blurb: "In a moving conversation, Táta Vega shared her thoughts following the July 18th, 2014 Legacy of Hope Mandela Day event held at the Wallis Annenberg Center for the Performing Arts, on what would have been Nelson Mandela’s 96th birthday.",
   date: "September 20, 2014",
