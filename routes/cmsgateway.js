@@ -170,7 +170,7 @@ var sponsors = {
 
 var tata = {
   title: "",
-  url: "http://legacyofhope.org/2014/9/20/tata",
+  url: "http://legacyofhope.org/2014/9/20/TataVega",
   thumb_img: "thumb_tata.jpg",
   description: "I love Nelson Mandela. I love what he stood for. I love the fact that he was willing to go to PRISON or DIE for what he believed in. I know poverty. I’ve lived on the streets. I sang on the streets for spare change so that I could eat. I slept outdoors on hard cold concrete at night. It was rough. But it’s nothing…IT WAS NOTHING, compared to being a citizen in a country where a government failed to recognize you as an intelligent and capable human being based on color. For this fact alone, I will support Mr. Mandela’s dream and be a part of seeing this hospital come to life.",
   stylesheet: "tata.css",

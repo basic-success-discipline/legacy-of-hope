@@ -29,7 +29,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         }
         case '20':
         switch (req.params.article){
-          case 'tata':
+          case 'TataVega':
           cmsgateway.getPageData('cms', 'tata', 
             function(err, data) {
               res.render('tata', data);

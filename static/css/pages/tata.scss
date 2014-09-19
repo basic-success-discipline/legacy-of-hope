@@ -76,11 +76,12 @@ p.leftalign{
 	margin-top: 35px;
 }
 
-.spotlight div{
+.spotlight .first div{
 	margin-bottom:55px;
 	border-bottom: 1px solid $loh-blue;
 }
-.spotlight img{
+
+.spotlight .second, .spotlight .second img{
 	width: 100%;
 }
 
@@ -99,6 +100,43 @@ img.barclays{
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
+	img.thero{
+		content: url('../../img/tata_hero_pp.jpg');
+	}
+	.spotlight{
+		width: 100%;
+		margin-top:20px;
+	}
+	.spotlight .first,.spotlight .second{
+		width: 300px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+.spotlight h1{
+	text-align: center;
+}
+.spotlight h2{
+	text-align: center;
+}
+.spotlight h3{
+	text-align: center;
+}
+
+p.ital{
+	text-align: justify;
+}
+
+img.barclays{
+	float:none;
+		text-align: center;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 100%;
+
+}
 
 }
 
@@ -109,7 +147,46 @@ and (min-width: $phone-landscape)
 and (max-width: $tablet-portrait - 1px)  {
 
 
+	.spotlight{
+		margin-right: 0;
+		margin-top: 20px;
+		width: 100%;
 
+	}
+	.spotlight .first{
+		display: inline-block;
+		width: 50%;
+		text-align: center;
+		float: left;
+
+	}
+	.spotlight .first div{
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: auto;
+		
+	}
+	.spotlight .second{
+		display: inline-block;
+		width: 50%;
+		float:right;
+		text-align: center;
+	}
+	.spotlight .second img{
+		width: 169px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 29px;
+	}
+
+	img.barclays{
+		float:none;
+		text-align: center;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
 
 	
 
