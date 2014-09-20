@@ -36,6 +36,14 @@ var home = {
  ],
  stories: [
  {
+  title: "Táta Vega Spotlight",
+  image: "/img/card_tata.jpg",
+  blurb: "In a moving conversation, Táta Vega shared her thoughts following the July 18th, 2014 Legacy of Hope Mandela Day event held at the Wallis Annenberg Center for the Performing Arts, on what would have been Nelson Mandela’s 96th birthday.",
+  date: "September 20, 2014",
+  likes : "654",
+  link: "/2014/9/20/TataVega"
+},
+ {
   title: "Youth Ambassador Botlhale Boikanyo",
   image: "/img/card_botlhale.jpg",
   blurb: "Botlhale Boikanyo is a young, ambitious and inspired Poet from Johannesburg, South Africa. At the age of 11 and well beyond her years in both maturity and insight, Bolthale’s early career was put to test under the bright light auditions of the 2012 South Africa’s Got Talent competition. In that setting, Bolthale’s (pronounced bo-thall-ee) took judges firmly by the heart and walked away the clear and undeniable winner for her gut wrenching and heart lifting prose, inspired by her greatest mentor, Nelson Mandela.",
@@ -168,6 +176,16 @@ var sponsors = {
   type: "website"
 };
 
+var tata = {
+  title: "",
+  url: "http://legacyofhope.org/2014/9/20/TataVega",
+  thumb_img: "thumb_tata.jpg",
+  description: "I love Nelson Mandela. I love what he stood for. I love the fact that he was willing to go to PRISON or DIE for what he believed in. I know poverty. I’ve lived on the streets. I sang on the streets for spare change so that I could eat. I slept outdoors on hard cold concrete at night. It was rough. But it’s nothing…IT WAS NOTHING, compared to being a citizen in a country where a government failed to recognize you as an intelligent and capable human being based on color. For this fact alone, I will support Mr. Mandela’s dream and be a part of seeing this hospital come to life.",
+  stylesheet: "tata.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
 
 exports.getPageData = function(category, page, callback) {
 	if(category === 'cms') {
@@ -201,6 +219,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'sponsors':
       callback(null, sponsors);
+      break;
+      case 'tata':
+      callback(null, tata);
       break;
       default:
       callback(null, home);
