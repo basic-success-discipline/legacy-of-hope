@@ -27,6 +27,8 @@ router.get('/:year/:month/:day/:article', function(req, res) {
           res.redirect('/');
           break;
         }
+        break;
+
         case '20':
         switch (req.params.article){
           case 'TataVega':
@@ -46,6 +48,8 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         break;
       }
       break;
+
+      
       default:
       res.redirect('/');
       break;
