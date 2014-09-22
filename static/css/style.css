@@ -1362,7 +1362,7 @@ em {
     width: auto; }
 
   .footer {
-    margin-bottom: 45px; } }
+    margin-bottom: 0; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   html {
     -webkit-text-size-adjust: none; }
@@ -1504,7 +1504,7 @@ em {
     width: auto; }
 
   .footer {
-    margin-bottom: 45px; } }
+    margin-bottom: 0; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   h1 {
     font-size: 24px; }
@@ -1546,7 +1546,7 @@ em {
     margin-top: 0px !important; }
 
   .footer {
-    margin-bottom: 45px; } }
+    margin-bottom: 0; } }
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   h1 {
     font-size: 35px; }
@@ -1558,4 +1558,4 @@ em {
     font-size: 17px; }
 
   .footer {
-    margin-bottom: 45px; } }
+    margin-bottom: 0; } }
