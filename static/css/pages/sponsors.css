@@ -19,6 +19,30 @@
 .sponsors {
   padding-bottom: 64px; }
 
+.sponsors .legacy-frm {
+  background-color: transparent; }
+
+.sponsors .contact-inner .card {
+  margin-top: 0; }
+
+.sponsors .legacy-frm .close-contact {
+  display: none; }
+
+.sponsors .legacy-frm h1 {
+  color: black; }
+
+.sponsors .legacy-frm h2 {
+  color: black; }
+
+.sponsors .legacy-frm label > span {
+  color: black; }
+
+.sponsors .legacy-frm .enquiry {
+  display: none; }
+
+#contactresult.contactresult-sponsors p {
+  color: #888; }
+
 .deck {
   text-align: center;
   margin-bottom: 40px; }
