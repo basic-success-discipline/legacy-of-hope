@@ -19,6 +19,9 @@
 .sponsors {
   padding-bottom: 64px; }
 
+.sponsors .contact-inner {
+  display: none; }
+
 .sponsors .legacy-frm {
   background-color: transparent; }
 
