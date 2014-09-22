@@ -1,4 +1,4 @@
-  var open=false;
+  var menuOpen=false;
   var menu = document.getElementsByClassName('menu')[0];
   var dd = document.getElementsByClassName('menu-dropdown')[0];
               // var ddclick = document.getElementsByClassName('ddclick')[0];
@@ -11,11 +11,11 @@
               ;
 
               menu.onclick=function(){ 
-                if(!open){
+                if(!menuOpen){
                   $('.menu-dropdown').animate({
                    height: 270      //this is the max-height for mobile-landscape: $mobilewidth - $navheight
                 }, 200, function(){});
-                  open = true;
+                  menuOpen = true;
                   $('.ddclick').css("visibility", "visible");
                 }
                 else{
@@ -27,7 +27,7 @@
                  $('.menu-dropdown').animate({
                   height: 0
                 }, 200, function(){});
-               open= false;
+               menuOpen= false;
                $('.ddclick').css('visibility', 'hidden');
 
              }  

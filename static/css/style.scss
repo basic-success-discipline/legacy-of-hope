@@ -1493,6 +1493,9 @@ cursor: pointer;
     display:block;
     width: auto;
   }
+  .footer{
+  margin-bottom: $sharing-margin;
+}
 
 }
 
@@ -1683,6 +1686,9 @@ p{
     display:block;
     width: auto;
   }
+  .footer{
+  margin-bottom: $sharing-margin;
+}
 
 
 }
@@ -1752,6 +1758,9 @@ p{
 .f2{
   margin-top: 0px !important;
 }
+.footer{
+  margin-bottom: $sharing-margin;
+}
 
 }
 
@@ -1771,6 +1780,10 @@ h3{
 
 p{
   font-size: 17px;
+}
+
+.footer{
+  margin-bottom: $sharing-margin;
 }
 
 
