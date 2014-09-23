@@ -111,6 +111,14 @@ router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
 });
 
 
+router.get('/LOHsponsors', function(req, res) {
+  cmsgateway.getPageData('cms', 'LOHsponsors', 
+    function(err, data) {
+      res.render('LOHsponsors', data);
+    });
+});
+
+
 router.get('/mandeladay', function(req, res) {
   cmsgateway.getPageData('cms', 'mandeladay', 
     function(err, data) {
@@ -141,6 +149,8 @@ router.get('/sponsors', function(req, res) {
       res.render('sponsors', data);
     });
 });
+
+
 
 
 

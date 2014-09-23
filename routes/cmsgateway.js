@@ -137,6 +137,17 @@ var legacy_of_hope_nmcht_concert = {
   type: "article"
 };
 
+
+var LOHsponsors = {
+  title: "Sponsors - Legacy of Hope",
+  url: "http://legacyofhope.org/LOHsponsors",
+  thumb_img: "thumb_home.jpg",
+  description: "Contact us for sponsorship enquiry.",
+  stylesheet: "LOHsponsors.css",
+  currentpage: "menu-sponsors",
+  type: "website"
+};
+
 var mandeladay = {
   title: "Mandela Day 2014 - Legacy of Hope",
   url: "http://legacyofhope.org/mandeladay",
@@ -207,6 +218,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'legacy-of-hope-nmcht-concert':
       callback(null, legacy_of_hope_nmcht_concert);
+      break;
+      case 'LOHsponsors':
+      callback(null, LOHsponsors);
       break;
       case 'mandeladay':
       callback(null, mandeladay);

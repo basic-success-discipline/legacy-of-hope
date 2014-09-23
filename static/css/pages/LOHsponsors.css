@@ -8,9 +8,6 @@
   width: 75%;
   float: right; }
 
-.page .container img {
-  margin-bottom: 20px; }
-
 .sponsors p {
   text-align: center;
   clear: both;
@@ -19,23 +16,29 @@
 .sponsors {
   padding-bottom: 64px; }
 
-.deck {
-  text-align: center;
-  margin-bottom: 40px; }
+.sponsors .legacy-frm {
+  background-color: transparent; }
 
-.deck a {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Open Sans", sans-serif; }
+.sponsors .contact-inner .card {
+  margin-top: 0; }
 
-.deck img {
-  max-width: 100%;
-  max-height: 300px;
-  margin: 30px auto 30px auto;
-  text-align: center;
-  display: block;
-  border-radius: 5px; }
+.sponsors .legacy-frm .close-contact {
+  display: none; }
+
+.sponsors .legacy-frm h1 {
+  color: black; }
+
+.sponsors .legacy-frm h2 {
+  color: black; }
+
+.sponsors .legacy-frm label > span {
+  color: black; }
+
+.sponsors .legacy-frm .enquiry {
+  display: none; }
+
+#contactresult.contactresult-sponsors p {
+  color: #888; }
 
 @media only screen and (max-width: 479px) {
   .hero img, .herospacer img {
