@@ -4,4 +4,6 @@ newrelic_agent.log
 npm-debug.log
 psd/*
 wraith-shots/
+configs/
+wraith-snaps/
 
