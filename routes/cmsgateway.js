@@ -1,40 +1,4 @@
-var home = {
- title 		: "Home - Legacy of Hope",
- thumb_img	: "thumb_home.jpg",
- description	: "The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
- stylesheet	: "home2.css",
- url: "http://legacyofhope.org",
- currentpage	: "menu-home",
- type: "website",
- board: [
- {name: "The late Dr. Maya Angelou", image: "img/board_angelou.jpg"},
- {name: "Ruby Bridges", image: "img/board_bridges.jpg"},
- {name: "Christy Turlington Burns", image: "img/board_turlington_burns.jpg"},
- {name: "Ed Burns", image: "img/board_burns.jpg"}, 
- {name: "Viola Davis", image: "img/board_davis.jpg"}, 
- {name: "Dame Judi Dench", image: "img/board_dench.jpg"}, 
- {name: "Arun Gandhi", image: "img/board_gandhi.jpg"}, 
- {name: "Whoopi Goldberg", image: "img/board_goldberg.jpg"}, 
- {name: "Dr. Sanjay Gupta", image: "img/board_gupta.jpg"}, 
- {name: "Katherine Heigl", image: "img/board_heigl.jpg"}, 
- {name: "Sir Anthony Hopkins", image: "img/board_hopkins.jpg"},
- {name: "Ashley Judd", image: "img/board_judd.jpg"}, 
- {name: "Nicole Kidman", image: "img/board_kidman.jpg"}, 
- {name: "Larry King", image: "img/board_king.jpg"}, 
-{name: "Sir Ben Kingsley", image: "img/board_kingsley.jpg"},
-{name: "Salma Hayek Pinault", image: "img/board_hayek_pinault.jpg"},
- {name: "Natalie Portman", image: "img/board_portman.jpg"},
-  {name: "Susan Sarandon", image: "img/board_sarandon.jpg"},
-    {name: "Octavia Spencer", image: "img/board_spencer.jpg"},
- {name: "Charlize Theron", image: "img/board_theron.jpg"},
-  {name: "Ben Vereen", image: "img/board_vereen.jpg"},
- {name: "Barbara Walters", image: "img/board_walters.jpg"},
- {name: "Elie and Marion Wiesel", image: "img/board_wiesel.jpg"},
-
- 
- 
- ],
- stories: [
+var newsStories = [
  {
   title: "Táta Vega Spotlight",
   image: "/img/card_tata.jpg",
@@ -76,7 +40,46 @@ var home = {
   link: "/concert"
 }
 
-],
+];
+
+
+
+
+
+var home = {
+ title 		: "Home - Legacy of Hope",
+ thumb_img	: "thumb_home.jpg",
+ description	: "The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
+ stylesheet	: "home2.css",
+ url: "http://legacyofhope.org",
+ currentpage	: "menu-home",
+ type: "website",
+ board: [
+ {name: "The late Dr. Maya Angelou", image: "img/board_angelou.jpg"},
+ {name: "Ruby Bridges", image: "img/board_bridges.jpg"},
+ {name: "Christy Turlington Burns", image: "img/board_turlington_burns.jpg"},
+ {name: "Ed Burns", image: "img/board_burns.jpg"}, 
+ {name: "Viola Davis", image: "img/board_davis.jpg"}, 
+ {name: "Dame Judi Dench", image: "img/board_dench.jpg"}, 
+ {name: "Arun Gandhi", image: "img/board_gandhi.jpg"}, 
+ {name: "Whoopi Goldberg", image: "img/board_goldberg.jpg"}, 
+ {name: "Dr. Sanjay Gupta", image: "img/board_gupta.jpg"}, 
+ {name: "Katherine Heigl", image: "img/board_heigl.jpg"}, 
+ {name: "Sir Anthony Hopkins", image: "img/board_hopkins.jpg"},
+ {name: "Ashley Judd", image: "img/board_judd.jpg"}, 
+ {name: "Nicole Kidman", image: "img/board_kidman.jpg"}, 
+ {name: "Larry King", image: "img/board_king.jpg"}, 
+{name: "Sir Ben Kingsley", image: "img/board_kingsley.jpg"},
+{name: "Salma Hayek Pinault", image: "img/board_hayek_pinault.jpg"},
+ {name: "Natalie Portman", image: "img/board_portman.jpg"},
+  {name: "Susan Sarandon", image: "img/board_sarandon.jpg"},
+    {name: "Octavia Spencer", image: "img/board_spencer.jpg"},
+ {name: "Charlize Theron", image: "img/board_theron.jpg"},
+  {name: "Ben Vereen", image: "img/board_vereen.jpg"},
+ {name: "Barbara Walters", image: "img/board_walters.jpg"},
+ {name: "Elie and Marion Wiesel", image: "img/board_wiesel.jpg"},
+ ],
+ stories: newsStories,
 quotes:[
 {author: "Graca Machel, the wife of the late Mr. Nelson Mandela   - June 2014", quote: "I am inspired by his rich legacy that promotes justice, compassion, and solidarity. Children were very dear to Madiba and his last wish was to build the Nelson Mandela Children’s Hospital."},
 {author: "Sibongile Mkhabela", quote: "Tata felt very strongly about the hospital. His heart yearned for it."},
@@ -168,6 +171,18 @@ var mission = {
   currentpage: "menu-mission",
   type: "website"
 };
+
+
+var news = {
+  title: "Latest News - Legacy of Hope",
+  url: "http://legacyofhope.org/news",
+  thumb_img: "thumb_mission.jpg",
+  description: "The latest news from the Legacy of Hope.",
+  stylesheet: "news.css",
+  currentpage: "menu-news",
+  type: "website",
+ stories: newsStories
+};
 var hospital = {
   title: "The Hospital - Legacy of Hope",
   url: "http://legacyofhope.org/hospital",
@@ -216,6 +231,9 @@ exports.getPageData = function(category, page, callback) {
       case 'guitarinitiative':
       callback(null, guitarinitiative);
       break;
+      case 'hospital':
+      callback(null, hospital);
+      break;
       case 'legacy-of-hope-nmcht-concert':
       callback(null, legacy_of_hope_nmcht_concert);
       break;
@@ -228,8 +246,8 @@ exports.getPageData = function(category, page, callback) {
       case 'mission':
       callback(null, mission);
       break;
-      case 'hospital':
-      callback(null, hospital);
+      case 'news':
+      callback(null, news);
       break;
       case 'sponsors':
       callback(null, sponsors);

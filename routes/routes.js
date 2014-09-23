@@ -96,6 +96,13 @@ router.get('/guitarinitiative', function(req, res) {
     });
 });
 
+router.get('/hospital', function(req, res) {
+  cmsgateway.getPageData('cms', 'hospital', 
+    function(err, data) {
+      res.render('hospital', data);
+    });
+});
+
 
 
 router.get('/aol/legacy-of-hope-nmcht-concert.html', function(req, res) {
@@ -133,12 +140,14 @@ router.get('/mission', function(req, res) {
     });
 });
 
-router.get('/hospital', function(req, res) {
-  cmsgateway.getPageData('cms', 'hospital', 
+router.get('/news', function(req, res) {
+  cmsgateway.getPageData('cms', 'news', 
     function(err, data) {
-      res.render('hospital', data);
+      res.render('news', data);
     });
 });
+
+
 
 
 
