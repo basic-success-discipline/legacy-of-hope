@@ -33,6 +33,9 @@ p.top {
 p.notopmargin {
   margin-top: 0; }
 
+p.nobottommargin {
+  margin-bottom: 0; }
+
 p.center {
   text-align: center; }
 
@@ -62,21 +65,43 @@ p.quote {
   text-align: right;
   margin-left: auto;
   margin-right: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   max-width: 600px;
-  line-height: 1.2em; }
+  line-height: 1.2em;
+  padding-right: 40px;
+  padding-left: 40px;
+  position: relative; }
 
-.blueline {
-  padding-top: 10px;
+div.quote:after, div.quote:before {
+  content: "";
+  opacity: 0.65;
+  position: absolute;
+  bottom: 7px;
+  height: calc(100% - 13px);
+  width: 9px; }
+
+div.quote {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 55px;
+  margin-bottom: 55px; }
+
+div.quote:after {
+  right: 0;
+  border-right: 1px solid #358fe3;
   border-top: 1px solid #358fe3;
-  margin-top: 30px;
-  height: 0;
-  width: calc(100% - 30px);
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  display: none; }
+  border-bottom: 1px solid #358fe3; }
+
+div.quote:before {
+  left: 0;
+  border-left: 1px solid #358fe3;
+  border-bottom: 1px solid #358fe3;
+  border-top: 1px solid #358fe3; }
+
+.ruby p a {
+  text-decoration: underline; }
 
 .spotlight {
   float: left;
@@ -99,8 +124,8 @@ p.quote {
 .spotlight h3 {
   text-align: right;
   font-size: 30px;
-  margin-bottom: 35px;
-  margin-top: 35px; }
+  margin-bottom: 27px;
+  margin-top: 26px; }
 
 .spotlight .first div {
   margin-bottom: 55px;
@@ -113,9 +138,7 @@ p.quote {
   width: 100%; }
 
 img.ruby1, img.ruby2 {
-  width: 100%; }
-
-img.ruby2 {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px; }
 
@@ -145,9 +168,15 @@ img.ruby2 {
   p.quote {
     margin-left: auto;
     margin-right: auto;
-    text-align: center; } }
+    text-align: center; }
+
+  div.quote:before {
+    display: block; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   p.quote {
     margin-left: auto;
     margin-right: auto;
-    text-align: center; } }
+    text-align: center; }
+
+  div.quote:before {
+    display: block; } }

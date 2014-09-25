@@ -48,6 +48,10 @@ p.notopmargin{
 	margin-top: 0;
 }
 
+p.nobottommargin{
+	
+	margin-bottom: 0;
+}
 p.center{
 	text-align: center;
 }
@@ -81,27 +85,60 @@ p.quote{
 	text-align: right;
 	margin-left: auto;
 	margin-right: 0;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	max-width: 600px;
 	line-height: 1.2em;
+	padding-right: 40px;
+	padding-left: 40px;
+	position: relative;
 }
 
 
 
+div.quote:after, div.quote:before{
+	content:""; 
+	// background: $loh-blue;
+	opacity: 0.65; 
+	position: absolute; 
+	bottom: 7px;  
+	height: calc(100% - 13px); 
+	width: 9px;
+	
 
-
-.blueline{
-	padding-top: 10px;
-	border-top: 1px solid $loh-blue;
-	margin-top: 30px;
-	height: 0;
-	width: calc(100% - 30px);
-	box-sizing: border-box;
-	margin-right: auto;
-	margin-left: auto;
-	display: none;
 }
+
+div.quote{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin-top: 55px;
+	margin-bottom: 55px;
+
+}
+
+$l: 1px;
+div.quote:after{ 
+	right: 0;  
+	border-right: $l solid $loh-blue;
+	border-top: $l solid $loh-blue;
+	border-bottom: $l solid $loh-blue;
+}
+
+div.quote:before{ 
+	left: 0;  
+	// display:none;
+border-left: $l solid $loh-blue;
+	border-bottom: $l solid $loh-blue;
+	border-top: $l solid $loh-blue;
+}
+
+.ruby p a{
+	text-decoration: underline;
+}
+
+
+
 
 
 
@@ -127,8 +164,8 @@ p.quote{
 .spotlight h3{
 	text-align: right;
 	font-size: 30px;
-	margin-bottom: 35px;
-	margin-top: 35px;
+	margin-bottom: 27px;
+	margin-top: 26px;
 }
 
 .spotlight .first div{
@@ -146,11 +183,12 @@ p.quote{
 
 img.ruby1, img.ruby2{
 	width: 100%;
+
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 img.ruby2{
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 
@@ -197,6 +235,9 @@ p.quote{
 	text-align: center;
 }
 
+div.quote:before{
+	display: block;
+}
 
 
 }
@@ -247,6 +288,10 @@ p.quote{
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+div.quote:before{
+	display: block;
 }
 
 	
