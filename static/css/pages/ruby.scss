@@ -266,7 +266,15 @@ p.quote{
 	margin-right: auto;
 	text-align: center;
 }
-
+ div.ruby2{
+ 	width: 100%;
+ 	max-width: 100%;
+ 	text-align: center;
+ }
+ img.ruby2{
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
 
 
 }
@@ -305,6 +313,17 @@ p.quote{
 		margin-right: auto;
 		margin-left: auto;
 	}
+
+	 div.ruby2{
+ 	width: 100%;
+ 	max-width: 100%;
+ 	text-align: center;
+ }
+ img.ruby2{
+ 	max-width: 370px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
 	
 
 }
