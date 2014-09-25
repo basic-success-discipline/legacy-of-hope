@@ -69,9 +69,9 @@ p.quote {
   margin-bottom: 0px;
   max-width: 600px;
   line-height: 1.2em;
-  padding-right: 40px;
-  padding-left: 40px;
-  position: relative; }
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px; }
 
 div.quote:after, div.quote:before {
   content: "";
@@ -79,7 +79,8 @@ div.quote:after, div.quote:before {
   position: absolute;
   bottom: 7px;
   height: calc(100% - 13px);
-  width: 9px; }
+  width: 9px;
+  display: none; }
 
 div.quote {
   width: 100%;
@@ -137,10 +138,20 @@ div.quote:before {
 .spotlight .second, .spotlight .second img {
   width: 100%; }
 
-img.ruby1, img.ruby2 {
+img.ruby1 {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px; }
+
+img.ruby2 {
+  max-width: 370px;
+  width: 100%;
+  float: left;
+  margin-right: 35px;
+  margin-bottom: 35px;
+  margin-top: 6px;
+  border-radius: 2px;
+  bottom: 0; }
 
 @media only screen and (max-width: 479px) {
   img.rhero {
@@ -168,15 +179,16 @@ img.ruby1, img.ruby2 {
   p.quote {
     margin-left: auto;
     margin-right: auto;
-    text-align: center; }
-
-  div.quote:before {
-    display: block; } }
+    text-align: center; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   p.quote {
     margin-left: auto;
     margin-right: auto;
     text-align: center; }
 
-  div.quote:before {
-    display: block; } }
+  img.ruby2 {
+    float: none;
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; } }

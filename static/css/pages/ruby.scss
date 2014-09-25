@@ -89,9 +89,9 @@ p.quote{
 	margin-bottom: 0px;
 	max-width: 600px;
 	line-height: 1.2em;
-	padding-right: 40px;
-	padding-left: 40px;
 	position: relative;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 
@@ -104,6 +104,7 @@ div.quote:after, div.quote:before{
 	bottom: 7px;  
 	height: calc(100% - 13px); 
 	width: 9px;
+	display: none;
 	
 
 }
@@ -181,14 +182,21 @@ border-left: $l solid $loh-blue;
 	width: 100%;
 }
 
-img.ruby1, img.ruby2{
+img.ruby1{
 	width: 100%;
-
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 }
 
 img.ruby2{
+	max-width: 370px;
+	width: 100%;
+	float: left;
+	margin-right: 35px;
+	margin-bottom: 35px;
+	margin-top: 6px;
+	border-radius: 2px;
+	bottom: 0;
 }
 
 
@@ -235,9 +243,6 @@ p.quote{
 	text-align: center;
 }
 
-div.quote:before{
-	display: block;
-}
 
 
 }
@@ -249,39 +254,6 @@ and (min-width: $phone-landscape)
 and (max-width: $tablet-portrait - 1px)  {
 
 
-	// .spotlight{
-	// 	margin-right: 0;
-	// 	margin-top: 20px;
-	// 	width: 100%;
-
-	// }
-	// .spotlight .first{
-	// 	display: inline-block;
-	// 	width: 50%;
-	// 	text-align: center;
-	// 	float: left;
-
-	// }
-	// .spotlight .first div{
-	// 	width: 200px;
-	// 	margin-left: auto;
-	// 	margin-right: auto;
-	// 	margin-bottom: auto;
-		
-	// }
-	// .spotlight .second{
-	// 	display: inline-block;
-	// 	width: 50%;
-	// 	float:right;
-	// 	text-align: center;
-	// }
-	// .spotlight .second img{
-	// 	height: 170px;
-	// 	width: auto;
-	// 	margin-right: auto;
-	// 	margin-left: auto;
-	// 	padding-right: 61px;
-	// }
 
 
 p.quote{
@@ -290,10 +262,16 @@ p.quote{
 	text-align: center;
 }
 
-div.quote:before{
-	display: block;
-}
 
+
+
+	img.ruby2{
+		float:none;
+		text-align: center;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
 	
 
 }
