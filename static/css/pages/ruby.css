@@ -119,11 +119,6 @@ img.ruby2 {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-p.quote {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; }
-
 @media only screen and (max-width: 479px) {
   img.rhero {
     content: url("../../img/ruby_hero_pp.jpg"); }
@@ -147,6 +142,11 @@ p.quote {
   .spotlight h3 {
     text-align: center; }
 
+  p.quote {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   p.quote {
     margin-left: auto;
     margin-right: auto;

@@ -152,11 +152,7 @@ img.ruby2{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-p.quote{
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
+
 
 
 
@@ -247,7 +243,11 @@ and (max-width: $tablet-portrait - 1px)  {
 	// }
 
 
-
+p.quote{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
 
 	
 
