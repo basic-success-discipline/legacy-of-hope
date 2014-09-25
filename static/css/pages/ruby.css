@@ -1,0 +1,153 @@
+.wrapper-inner {
+  background-color: black; }
+
+img.rhero {
+  width: 100%; }
+
+.ruby.wrapper-content {
+  max-width: 770px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 35px; }
+
+.ruby.wrapper-content a:hover {
+  text-decoration: underline; }
+
+p {
+  text-align: justify;
+  font-family: "Helvetica Neue Light";
+  font-size: 16px;
+  line-height: 1.7; }
+
+p.ital {
+  font-family: "Helvetica Neue Light Italic"; }
+
+p i {
+  font-family: "Helvetica Neue Light Italic"; }
+
+p.top {
+  margin-top: 0;
+  min-height: 183px; }
+
+p.notopmargin {
+  margin-top: 0; }
+
+p.center {
+  text-align: center; }
+
+p.caption {
+  font-family: "Helvetica Neue Light Italic";
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center; }
+
+p.leftalign {
+  text-align: left; }
+
+p.big {
+  font-size: 18px;
+  word-spacing: -1px;
+  line-height: 1.5em;
+  margin-top: 90px; }
+
+p.bordertop, img.bordertop {
+  padding-top: 50px;
+  border-top: 1px solid #358fe3;
+  margin-top: 30px; }
+
+p.quote {
+  font-size: 25px;
+  color: #358fe3;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 600px;
+  line-height: 1.2em; }
+
+.blueline {
+  padding-top: 10px;
+  border-top: 1px solid #358fe3;
+  margin-top: 30px;
+  height: 0;
+  width: calc(100% - 30px);
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  display: none; }
+
+.spotlight {
+  float: left;
+  min-width: 200px;
+  width: 200px;
+  margin-right: 48px;
+  margin-bottom: 40px;
+  position: relative; }
+
+.spotlight h1 {
+  font-size: 33px;
+  margin-bottom: 5px;
+  text-align: right; }
+
+.spotlight h2 {
+  color: #358fe3;
+  text-align: right;
+  font-size: 22px; }
+
+.spotlight h3 {
+  text-align: right;
+  font-size: 30px;
+  margin-bottom: 35px;
+  margin-top: 35px; }
+
+.spotlight .first div {
+  margin-bottom: 55px;
+  border-bottom: 1px solid #358fe3; }
+
+.spotlight .first.nobottommargin div {
+  margin-bottom: 0; }
+
+.spotlight .second, .spotlight .second img {
+  width: 100%; }
+
+img.ruby1, img.ruby2 {
+  width: 100%; }
+
+img.ruby2 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+p.quote {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+@media only screen and (max-width: 479px) {
+  img.rhero {
+    content: url("../../img/ruby_hero_pp.jpg"); }
+
+  .spotlight {
+    width: 100%;
+    margin-top: 20px; }
+
+  .spotlight .first, .spotlight .second {
+    width: 300px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .spotlight h1 {
+    text-align: center; }
+
+  .spotlight h2 {
+    text-align: center; }
+
+  .spotlight h3 {
+    text-align: center; }
+
+  p.quote {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; } }
