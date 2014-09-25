@@ -48,6 +48,11 @@ p.notopmargin{
 	margin-top: 0;
 }
 
+p.floatleft{
+	float: left;
+	clear: left;
+}
+
 p.nobottommargin{
 	
 	margin-bottom: 0;
@@ -189,14 +194,23 @@ img.ruby1{
 }
 
 img.ruby2{
+	width: 100%;
+	border-radius: 2px;
+}
+
+div.ruby2{
 	max-width: 370px;
 	width: 100%;
 	float: left;
 	margin-right: 35px;
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 	margin-top: 6px;
-	border-radius: 2px;
-	bottom: 0;
+
+}
+
+div.ruby2 .caption{
+	margin-bottom: 0;
+	font-size: 14px;
 }
 
 
@@ -283,7 +297,7 @@ p.quote{
 		margin-left: auto;
 	}
 
-	
+
 	img.barclays{
 		float:none;
 		text-align: center;
