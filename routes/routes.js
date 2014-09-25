@@ -43,6 +43,21 @@ router.get('/:year/:month/:day/:article', function(req, res) {
           break;
         }
         break;
+
+        case '27':
+        switch (req.params.article){
+          case 'RubyBridges':
+          cmsgateway.getPageData('cms', 'ruby', 
+            function(err, data) {
+              res.render('ruby', data);
+            });
+
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
         default:
         res.redirect('/');
         break;

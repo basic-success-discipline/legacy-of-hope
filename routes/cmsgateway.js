@@ -192,6 +192,16 @@ var hospital = {
   currentpage: "menu-hospital",
   type: "website"
 };
+
+var ruby = {
+  title: "Ruby Bridges Spotlight - Legacy of Hope",
+  url: "http://legacyofhope.org/2014/9/27/RubyBridges",
+  thumb_img: "thumb_ruby.jpg",
+  description: "My message and the message of Legacy of Hope is everything that has anything to do with children. It’s about healthcare, education, sound mental health and making that child whole again. I understand that Africa has four children’s hospitals serving the entire continent. That’s an imbalance. I think there are some 12 children’s hospitals in Florida alone. Legacy of Hope and the Nelson Mandela Children’s Hospital is a great cause and I want to see it through, and be involved to the end.",
+  stylesheet: "ruby.css",
+  currentpage: "menu-news",
+  type: "article"
+};
 var sponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/sponsors",
@@ -248,6 +258,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'news':
       callback(null, news);
+      break;
+      case 'ruby':
+      callback(null, ruby);
       break;
       case 'sponsors':
       callback(null, sponsors);
