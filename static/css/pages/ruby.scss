@@ -202,6 +202,16 @@ img.ruby2{
 
 
 
+img.barclays{
+	width: 300px;
+	float: right;
+	margin-left: 35px;
+	margin-bottom: 55px;
+	margin-top: 6px;
+}
+
+
+
 
 
 
@@ -266,6 +276,15 @@ p.quote{
 
 
 	img.ruby2{
+		float:none;
+		text-align: center;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	
+	img.barclays{
 		float:none;
 		text-align: center;
 		display: block;
