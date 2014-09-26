@@ -1,5 +1,13 @@
 var newsStories = [
  {
+  title: "Ruby Bridges Spotlight",
+  image: "/img/card_ruby.jpg",
+  blurb: "Ruby Bridges was honored on July 18th, 2014 during the Legacy of Hope Mandela Day Celebration at the Wallis Annenberg Center for the Performing Arts in Beverly Hills. Following this event, Ruby shared her thoughts on what Nelson Mandela meant to her and how a children’s hospital in his name would honor his legacy.",
+  date: "September 27, 2014",
+  likes : "654",
+  link: "/2014/9/27/RubyBridges"
+},
+ {
   title: "Táta Vega Spotlight",
   image: "/img/card_tata.jpg",
   blurb: "In a moving conversation, Táta Vega shared her thoughts following the July 18th, 2014 Legacy of Hope Mandela Day event held at the Wallis Annenberg Center for the Performing Arts, on what would have been Nelson Mandela’s 96th birthday.",
