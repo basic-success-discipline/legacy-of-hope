@@ -17,8 +17,8 @@ img.rhero {
 p {
   text-align: justify;
   font-family: "Helvetica Neue Light";
-  font-size: 16px;
-  line-height: 1.7; }
+  font-size: 19px;
+  line-height: 1.5; }
 
 p.ital {
   font-family: "Helvetica Neue Light Italic"; }
@@ -53,7 +53,7 @@ p.leftalign {
   text-align: left; }
 
 p.big {
-  font-size: 18px;
+  font-size: 19px;
   word-spacing: -1px;
   line-height: 1.5em;
   margin-top: 90px; }
