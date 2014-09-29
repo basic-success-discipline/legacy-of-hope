@@ -6,14 +6,15 @@
 
               $('.ddclick').css('visibility', 'hidden');
               $('.ddclick').click(function(){
-               closeMenu();           
+               closeMenu(); 
+               closeFollow();          
              })
               ;
 
               menu.onclick=function(){ 
                 if(!menuOpen){
                   $('.menu-dropdown').animate({
-                   height: 270      //this is the max-height for mobile-landscape: $mobilewidth - $navheight
+                   height: 240      //this is the max-height for mobile-landscape with social sharing: $mobilewidth - $navheight - $sharing-margin
                 }, 200, function(){});
                   menuOpen = true;
                   $('.ddclick').css("visibility", "visible");
@@ -31,5 +32,36 @@
                $('.ddclick').css('visibility', 'hidden');
 
              }  
+
+
+
+  var followOpen=false;
+            $('.open-follow').click(function(){
+              if(!followOpen){
+              $('.follow-dropdown').animate({
+                height: 140
+               }, 200, function(){});
+                  followOpen = true;
+                  $('.ddclick').css("visibility", "visible");
+                }
+                else{
+                  closeFollow();
+                }
+            });
+
+            function closeFollow(){
+                 $('.follow-dropdown').animate({
+                  height: 0
+                }, 200, function(){});
+               followOpen= false;
+               $('.ddclick').css('visibility', 'hidden');
+
+             } 
+
+             $('.follow-dropdown .social-icons').click(function(){
+              event.stopPropagation();
+             });
+
+
 
 

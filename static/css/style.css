@@ -396,8 +396,6 @@ em {
   -moz-osx-font-smoothing: grayscale; }
 
 .navbar .social-icons {
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
   width: 20px;
   height: 20px;
   text-align: center; }
@@ -438,6 +436,61 @@ em {
   -webkit-transition: opacity .5s;
   /* Safari */
   transition: opacity .5s; }
+
+.open-follow {
+  position: relative; }
+
+.follow-dropdown {
+  width: 150%;
+  margin-left: -25%;
+  height: 0px;
+  position: absolute;
+  top: 36px;
+  overflow: hidden;
+  -webkit-transition: opacity .5s;
+  /* Safari */
+  transition: opacity .5s; }
+
+.follow-dropdown .links .social-icons {
+  width: 100%;
+  margin-left: 0px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  text-align: center;
+  background-color: #1c1f26;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  position: relative; }
+
+.follow-dropdown .links .social-icons a {
+  font-size: 15px;
+  width: 120%;
+  margin-left: -10%;
+  display: block;
+  margin-top: 0;
+  padding-top: 2px; }
+
+.follow-dropdown .links .social-icons a:hover {
+  color: white; }
+
+.follow-dropdown .links .social-icons.pinterest {
+  padding-bottom: 9px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+.follow-dropdown .links .social-icons.facebook:hover {
+  background-color: #344d87; }
+
+.follow-dropdown .links .social-icons.twitter:hover {
+  background-color: #5999d3; }
+
+.follow-dropdown .links .social-icons.youtube:hover {
+  background-color: #c3332b; }
+
+.follow-dropdown .links .social-icons.pinterest:hover {
+  background-color: #a52a28; }
 
 .nav .menu-hamburger {
   display: none; }
