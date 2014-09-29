@@ -6,7 +6,8 @@
 
               $('.ddclick').css('visibility', 'hidden');
               $('.ddclick').click(function(){
-               closeMenu();           
+               closeMenu(); 
+               closeFollow();          
              })
               ;
 
@@ -31,5 +32,36 @@
                $('.ddclick').css('visibility', 'hidden');
 
              }  
+
+
+
+  var followOpen=false;
+            $('.open-follow').click(function(){
+              if(!followOpen){
+              $('.follow-dropdown').animate({
+                height: 140
+               }, 200, function(){});
+                  followOpen = true;
+                  $('.ddclick').css("visibility", "visible");
+                }
+                else{
+                  closeFollow();
+                }
+            });
+
+            function closeFollow(){
+                 $('.follow-dropdown').animate({
+                  height: 0
+                }, 200, function(){});
+               followOpen= false;
+               $('.ddclick').css('visibility', 'hidden');
+
+             } 
+
+             $('.follow-dropdown .social-icons').click(function(){
+              event.stopPropagation();
+             });
+
+
 
 
