@@ -164,7 +164,8 @@ div.ruby2 .caption {
   font-size: 14px; }
 
 img.barclays {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   float: right;
   margin-left: 35px;
   margin-bottom: 55px;
