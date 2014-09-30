@@ -7,8 +7,6 @@ img.rhero {
 .ruby.wrapper-content {
   max-width: 770px;
   color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   padding-bottom: 35px; }
 
 .ruby.wrapper-content a:hover {
@@ -16,15 +14,15 @@ img.rhero {
 
 p {
   text-align: justify;
-  font-family: "Helvetica Neue Light";
+  font-family: "Helvetica Neue Thin";
   font-size: 16px;
   line-height: 1.7; }
 
 p.ital {
-  font-family: "Helvetica Neue Light Italic"; }
+  font-family: "Helvetica Neue Thin Italic"; }
 
 p i {
-  font-family: "Helvetica Neue Light Italic"; }
+  font-family: "Helvetica Neue Thin Italic"; }
 
 p.top {
   margin-top: 0;
@@ -44,7 +42,7 @@ p.center {
   text-align: center; }
 
 p.caption {
-  font-family: "Helvetica Neue Light Italic";
+  font-family: "Helvetica Neue Thin Italic";
   margin-top: 10px;
   font-size: 16px;
   text-align: center; }
