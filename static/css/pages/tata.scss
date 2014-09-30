@@ -1,98 +1,6 @@
 @import "../variables.scss";
 
-.wrapper-inner{
-	background-color: black;
 
-}
-
-
-img.thero{
-	width: 100%;
-}
-
-
-.tata.wrapper-content{
-	max-width: 770px;
-		color: white;
-			-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding-bottom: 35px;
-
-}
-.tata.wrapper-content a{
-	text-decoration: underline;
-}
-
-p{
-	text-align: justify;
-	font-family: "Helvetica Neue Light";
-	font-size: 16px;
-
-    line-height: 1.7;
-}
-
-p.ital{
-	font-family: "Helvetica Neue Light Italic";
-}
-
-p.top{
-	margin-top: 0;
-	min-height: 183px;
-}
-p.notopmargin{
-	
-	margin-top: 0;
-}
-
-
-p.leftalign{
-	text-align: left;
-}
-
-
-
-
-.spotlight{
-	float: left;
-	min-width: 200px;
-	margin-right: 48px;
-	margin-bottom: 40px;
-}
-
-.spotlight h1{
-	font-size: 33px;
-	margin-bottom: 5px;
-	text-align: right;
-}
-.spotlight h2{
-	color: $loh-blue;
-	text-align: right;
-	font-size: 22px;
-}
-.spotlight h3{
-	text-align: right;
-	font-size: 30px;
-	margin-bottom: 35px;
-	margin-top: 35px;
-}
-
-.spotlight .first div{
-	margin-bottom:55px;
-	border-bottom: 1px solid $loh-blue;
-}
-
-.spotlight .second, .spotlight .second img{
-	width: 100%;
-}
-
-
-img.barclays{
-	width: 300px;
-	float: right;
-	margin-left: 35px;
-	margin-bottom: 55px;
-	margin-top: 6px;
-}
 
 
 //  MOBILE - PORTRAIT
@@ -103,40 +11,11 @@ and (max-width: $phone-landscape - 1px)  {
 	img.thero{
 		content: url('../../img/tata_hero_pp.jpg');
 	}
-	.spotlight{
-		width: 100%;
-		margin-top:20px;
-	}
-	.spotlight .first,.spotlight .second{
-		width: 300px;
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+
+	.tata p{
+		text-align: left;
 	}
 
-.spotlight h1{
-	text-align: center;
-}
-.spotlight h2{
-	text-align: center;
-}
-.spotlight h3{
-	text-align: center;
-}
-.tata p{
-	text-align: left;
-}
-
-
-img.barclays{
-	float:none;
-		text-align: center;
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
-		max-width: 100%;
-
-}
 
 }
 
@@ -145,48 +24,6 @@ img.barclays{
 @media only screen 
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
-
-
-	.spotlight{
-		margin-right: 0;
-		margin-top: 20px;
-		width: 100%;
-
-	}
-	.spotlight .first{
-		display: inline-block;
-		width: 50%;
-		text-align: center;
-		float: left;
-
-	}
-	.spotlight .first div{
-		width: 200px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: auto;
-		
-	}
-	.spotlight .second{
-		display: inline-block;
-		width: 50%;
-		float:right;
-		text-align: center;
-	}
-	.spotlight .second img{
-		width: 169px;
-		margin-right: auto;
-		margin-left: auto;
-		padding-left: 29px;
-	}
-
-	img.barclays{
-		float:none;
-		text-align: center;
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
-	}
 
 	
 

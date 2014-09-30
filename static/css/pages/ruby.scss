@@ -1,205 +1,16 @@
 @import "../variables.scss";
 
-.wrapper-inner{
-	background-color: black;
 
-}
-
-
-img.rhero{
-	width: 100%;
-}
-
-
-.ruby.wrapper-content{
-	max-width: 770px;
-		color: white;
-			// -webkit-font-smoothing: antialiased;
-   //  -moz-osx-font-smoothing: grayscale;
-    padding-bottom: 35px;
-
-}
-.ruby.wrapper-content a:hover{
-	text-decoration: underline;
-}
-
-p{
-	text-align: justify;
-	font-family: "Helvetica Neue Thin";
-	font-size: 16px;
-    line-height: 1.7;
-    // font-size: 18px;
-    // line-height: 1.5;
-}
-
-p.ital{
-	font-family: "Helvetica Neue Thin Italic";
-}
-
-p i{
-	font-family: "Helvetica Neue Thin Italic";
-}
-
-p.top{
-	margin-top: 0;
-	min-height: 183px;
-}
-p.notopmargin{
-	
-	margin-top: 0;
-}
-
-p.floatleft{
-	float: left;
-	clear: left;
-}
-
-p.nobottommargin{
-	
-	margin-bottom: 0;
-}
-p.center{
-	text-align: center;
-}
-p.caption{
-	font-family: "Helvetica Neue Thin Italic";
-	margin-top: 10px;
-	font-size: 16px;
-	text-align: center;
-}
-p.leftalign{
-	text-align: left;
-}
-
-p.big{
-	font-size: 18px;
-	// font-size: 19px;
-	word-spacing: -1px;
-	line-height: 1.5em;
-	margin-top: 90px;
-
-}
-
-p.bordertop, img.bordertop{
-	padding-top: 50px;
-	border-top: 1px solid $loh-blue;
-	margin-top: 30px;
-}
-
-p.quote{
-	font-size: 25px;
-	color: $loh-blue;
-	text-align: right;
-	margin-left: auto;
-	margin-right: 0;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	max-width: 600px;
-	line-height: 1.2em;
-	position: relative;
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-
-
-div.quote:after, div.quote:before{
-	content:""; 
-	// background: $loh-blue;
-	opacity: 0.65; 
-	position: absolute; 
-	bottom: 7px;  
-	height: calc(100% - 13px); 
-	width: 9px;
-	display: none;
-	
-
-}
-
-div.quote{
-	width: 100%;
-	height: 100%;
-	position: relative;
-	margin-top: 55px;
-	margin-bottom: 55px;
-
-}
-
-$l: 1px;
-div.quote:after{ 
-	right: 0;  
-	border-right: $l solid $loh-blue;
-	border-top: $l solid $loh-blue;
-	border-bottom: $l solid $loh-blue;
-}
-
-div.quote:before{ 
-	left: 0;  
-	// display:none;
-border-left: $l solid $loh-blue;
-	border-bottom: $l solid $loh-blue;
-	border-top: $l solid $loh-blue;
-}
-
-.ruby p a{
-	text-decoration: underline;
-}
-
-
-
-
-
-
-.spotlight{
-	float: left;
-	min-width: 200px;
-	width: 200px;
-	margin-right: 48px;
-	margin-bottom: 40px;
-	position: relative;
-}
-
-.spotlight h1{
-	font-size: 33px;
-	margin-bottom: 5px;
-	text-align: right;
-}
-.spotlight h2{
-	color: $loh-blue;
-	text-align: right;
-	font-size: 22px;
-}
-.spotlight h3{
-	text-align: right;
-	font-size: 30px;
-	margin-bottom: 27px;
-	margin-top: 26px;
-}
-
-.spotlight .first div{
-	margin-bottom:55px;
-	border-bottom: 1px solid $loh-blue;
-}
-
-.spotlight .first.nobottommargin div{
-	margin-bottom: 0;
-}
-
-.spotlight .second, .spotlight .second img{
-	width: 100%;
-}
 
 img.ruby1{
 	width: 100%;
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
-
 img.ruby2{
 	width: 100%;
 	border-radius: 2px;
 }
-
 div.ruby2{
 	max-width: 370px;
 	width: 100%;
@@ -207,7 +18,6 @@ div.ruby2{
 	margin-right: 35px;
 	margin-bottom: 30px;
 	margin-top: 6px;
-
 }
 
 div.ruby2 .caption{
@@ -217,76 +27,23 @@ div.ruby2 .caption{
 
 
 
-
-img.barclays{
-	width: 300px;
-	float: right;
-	margin-left: 35px;
-	margin-bottom: 55px;
-	margin-top: 6px;
-}
-
-
-
-
-
-
 //  MOBILE - PORTRAIT
 
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
-	img.rhero{
+	img.banner{
 		content: url('../../img/ruby_hero_pp.jpg');
 	}
-	.spotlight{
+	div.ruby2{
 		width: 100%;
-		margin-top:20px;
-	}
-	.spotlight .first,.spotlight .second{
-		width: 300px;
 		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-.spotlight h1{
-	text-align: center;
-}
-.spotlight h2{
-	text-align: center;
-}
-.spotlight h3{
-	text-align: center;
-}
-.ruby p{
-	// text-align: left;
-}
-
-p.quote{
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
- div.ruby2{
- 	width: 100%;
- 	max-width: 100%;
- 	text-align: center;
- }
- img.ruby2{
- 	margin-left: auto;
- 	margin-right: auto;
- }
-img.barclays{
-	float:none;
 		text-align: center;
-		display: block;
-		margin-right: auto;
+	}
+	img.ruby2{
 		margin-left: auto;
-		max-width: 100%;
-
-}
-
+		margin-right: auto;
+	}
 
 }
 
@@ -296,18 +53,6 @@ img.barclays{
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-
-
-
-p.quote{
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
-
-
-
 	img.ruby2{
 		float:none;
 		text-align: center;
@@ -315,34 +60,18 @@ p.quote{
 		margin-right: auto;
 		margin-left: auto;
 	}
-
-
-	img.barclays{
-		float:none;
+	div.ruby2{
+		width: 100%;
+		max-width: 100%;
 		text-align: center;
-		display: block;
-		margin-right: auto;
+	}
+	img.ruby2{
+		max-width: 370px;
 		margin-left: auto;
+		margin-right: auto;
 	}
 
-	 div.ruby2{
- 	width: 100%;
- 	max-width: 100%;
- 	text-align: center;
- }
- img.ruby2{
- 	max-width: 370px;
- 	margin-left: auto;
- 	margin-right: auto;
- }
 
-img.barclays{
-		float:none;
-		text-align: center;
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
-	}
 
 	
 

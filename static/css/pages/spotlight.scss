@@ -1,0 +1,310 @@
+@import "../variables.scss";
+
+.wrapper-inner{
+	background-color: black;
+}
+img.banner{
+	width: 100%;
+}
+.wrapper-spotlight{
+	width: 90%;
+  	margin: 0 auto;
+  	position: relative;
+	max-width: 770px;
+	color: white;
+    padding-bottom: 35px;
+}
+.wrapper-spotlight a{
+	text-decoration: underline;
+}
+
+
+
+
+// FONT STYLING
+.wrapper-spotlight p{
+	text-align: justify;
+	font-family: "Helvetica Neue Thin";
+	font-size: 16px;
+    line-height: 1.7;
+    // font-size: 18px;
+    // line-height: 1.5;
+}
+
+
+.wrapper-spotlight .ital, .wrapper-spotlight i{
+	font-family: "Helvetica Neue Thin Italic";
+}
+
+.wrapper-spotlight p.top{
+	margin-top: 0;
+	min-height: 183px;
+}
+.wrapper-spotlight p.caption{
+	font-family: "Helvetica Neue Thin Italic";
+	margin-top: 10px;
+	font-size: 16px;
+	text-align: center;
+}
+.wrapper-spotlight p.big{
+	font-size: 18px;
+	// font-size: 19px;
+	word-spacing: -1px;
+	line-height: 1.5em;
+	margin-top: 90px;
+
+}
+
+.wrapper-spotlight p.quote{
+	font-size: 25px;
+	color: $loh-blue;
+	text-align: right;
+	margin-left: auto;
+	margin-right: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	max-width: 600px;
+	line-height: 1.2em;
+	position: relative;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+.wrapper-spotlight div.quote:after, .wrapper-spotlight div.quote:before{
+	content:""; 
+	// background: $loh-blue;
+	opacity: 0.65; 
+	position: absolute; 
+	bottom: 7px;  
+	height: calc(100% - 13px); 
+	width: 9px;
+	display: none;
+	
+
+}
+
+.wrapper-spotlight div.quote{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin-top: 55px;
+	margin-bottom: 55px;
+
+}
+
+
+$l: 1px;
+.wrapper-spotlight div.quote:after{ 
+	right: 0;  
+	border-right: $l solid $loh-blue;
+	border-top: $l solid $loh-blue;
+	border-bottom: $l solid $loh-blue;
+}
+
+.wrapper-spotlight div.quote:before{ 
+	left: 0;  
+	// display:none;
+border-left: $l solid $loh-blue;
+	border-bottom: $l solid $loh-blue;
+	border-top: $l solid $loh-blue;
+}
+
+.notopmargin{ margin-top: 0;}
+.nobottommargin{margin-bottom: 0;}
+.leftalign{text-align: left;}
+.center{text-align:center;}
+.floatleft{float:left;}
+
+.bordertop{
+	padding-top: 50px;
+	border-top: 1px solid $loh-blue;
+	margin-top: 30px;
+}
+
+
+
+
+
+// SPOTLIGHT
+
+
+.spotlight{
+	float: left;
+	min-width: 200px;
+	width: 200px;
+	margin-right: 48px;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.spotlight h1{
+	font-size: 33px;
+	margin-bottom: 5px;
+	text-align: right;
+}
+
+.spotlight h2{
+	color: $loh-blue;
+	text-align: right;
+	font-size: 22px;
+}
+
+
+.spotlight h3{
+	text-align: right;
+	font-size: 30px;
+	margin-bottom: 35px;
+	margin-top: 35px;
+}
+
+.honorary.spotlight h3{
+	margin-bottom: 27px;
+	margin-top: 26px;
+}
+
+.spotlight .first div{
+	margin-bottom: 0;
+	border-bottom: 1px solid $loh-blue;
+}
+
+.spotlight.withpicture .first div{
+	margin-bottom: 55px;
+}
+
+.spotlight .second, .spotlight .second img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+// Barclays image
+
+img.barclays{
+	width: 300px;
+	float: right;
+	margin-left: 35px;
+	margin-bottom: 55px;
+	margin-top: 6px;
+}
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+
+.wrapper-spotlight p.quote{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+
+	.spotlight{
+		width: 100%;
+		margin-top:20px;
+	}
+
+
+	.spotlight .first,.spotlight .second{
+		width: 300px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+.spotlight h1{
+	text-align: center;
+}
+.spotlight h2{
+	text-align: center;
+}
+.spotlight h3{
+	text-align: center;
+}
+
+
+
+
+img.barclays{
+	float:none;
+		text-align: center;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 100%;
+
+}
+
+
+
+	}
+
+
+	//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+.wrapper-spotlight p.quote{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+
+img.barclays{
+		float:none;
+		text-align: center;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+
+
+	.spotlight.withpicture{
+		margin-right: 0;
+		margin-top: 20px;
+		width: 100%;
+
+	}
+	.spotlight.withpicture .first{
+		display: inline-block;
+		width: 50%;
+		text-align: center;
+		float: left;
+
+	}
+	.spotlight.withpicture .first div{
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: auto;
+		
+	}
+	.spotlight.withpicture .second{
+		display: inline-block;
+		width: 50%;
+		float:right;
+		text-align: center;
+	}
+	.spotlight.withpicture .second img{
+		width: 169px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 29px;
+	}
+
+
+
+
+
+
+}
+

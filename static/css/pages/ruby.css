@@ -1,145 +1,3 @@
-.wrapper-inner {
-  background-color: black; }
-
-img.rhero {
-  width: 100%; }
-
-.ruby.wrapper-content {
-  max-width: 770px;
-  color: white;
-  padding-bottom: 35px; }
-
-.ruby.wrapper-content a:hover {
-  text-decoration: underline; }
-
-p {
-  text-align: justify;
-  font-family: "Helvetica Neue Thin";
-  font-size: 16px;
-  line-height: 1.7; }
-
-p.ital {
-  font-family: "Helvetica Neue Thin Italic"; }
-
-p i {
-  font-family: "Helvetica Neue Thin Italic"; }
-
-p.top {
-  margin-top: 0;
-  min-height: 183px; }
-
-p.notopmargin {
-  margin-top: 0; }
-
-p.floatleft {
-  float: left;
-  clear: left; }
-
-p.nobottommargin {
-  margin-bottom: 0; }
-
-p.center {
-  text-align: center; }
-
-p.caption {
-  font-family: "Helvetica Neue Thin Italic";
-  margin-top: 10px;
-  font-size: 16px;
-  text-align: center; }
-
-p.leftalign {
-  text-align: left; }
-
-p.big {
-  font-size: 18px;
-  word-spacing: -1px;
-  line-height: 1.5em;
-  margin-top: 90px; }
-
-p.bordertop, img.bordertop {
-  padding-top: 50px;
-  border-top: 1px solid #358fe3;
-  margin-top: 30px; }
-
-p.quote {
-  font-size: 25px;
-  color: #358fe3;
-  text-align: right;
-  margin-left: auto;
-  margin-right: 0;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  max-width: 600px;
-  line-height: 1.2em;
-  position: relative;
-  padding-right: 10px;
-  padding-left: 10px; }
-
-div.quote:after, div.quote:before {
-  content: "";
-  opacity: 0.65;
-  position: absolute;
-  bottom: 7px;
-  height: calc(100% - 13px);
-  width: 9px;
-  display: none; }
-
-div.quote {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin-top: 55px;
-  margin-bottom: 55px; }
-
-div.quote:after {
-  right: 0;
-  border-right: 1px solid #358fe3;
-  border-top: 1px solid #358fe3;
-  border-bottom: 1px solid #358fe3; }
-
-div.quote:before {
-  left: 0;
-  border-left: 1px solid #358fe3;
-  border-bottom: 1px solid #358fe3;
-  border-top: 1px solid #358fe3; }
-
-.ruby p a {
-  text-decoration: underline; }
-
-.spotlight {
-  float: left;
-  min-width: 200px;
-  width: 200px;
-  margin-right: 48px;
-  margin-bottom: 40px;
-  position: relative; }
-
-.spotlight h1 {
-  font-size: 33px;
-  margin-bottom: 5px;
-  text-align: right; }
-
-.spotlight h2 {
-  color: #358fe3;
-  text-align: right;
-  font-size: 22px; }
-
-.spotlight h3 {
-  text-align: right;
-  font-size: 30px;
-  margin-bottom: 27px;
-  margin-top: 26px; }
-
-.spotlight .first div {
-  margin-bottom: 55px;
-  border-bottom: 1px solid #358fe3; }
-
-.spotlight .first.nobottommargin div {
-  margin-bottom: 0; }
-
-.spotlight .second, .spotlight .second img {
-  width: 100%; }
-
 img.ruby1 {
   width: 100%;
   margin-top: 30px;
@@ -161,40 +19,9 @@ div.ruby2 .caption {
   margin-bottom: 0;
   font-size: 14px; }
 
-img.barclays {
-  width: 300px;
-  float: right;
-  margin-left: 35px;
-  margin-bottom: 55px;
-  margin-top: 6px; }
-
 @media only screen and (max-width: 479px) {
-  img.rhero {
+  img.banner {
     content: url("../../img/ruby_hero_pp.jpg"); }
-
-  .spotlight {
-    width: 100%;
-    margin-top: 20px; }
-
-  .spotlight .first, .spotlight .second {
-    width: 300px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto; }
-
-  .spotlight h1 {
-    text-align: center; }
-
-  .spotlight h2 {
-    text-align: center; }
-
-  .spotlight h3 {
-    text-align: center; }
-
-  p.quote {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
 
   div.ruby2 {
     width: 100%;
@@ -203,29 +30,9 @@ img.barclays {
 
   img.ruby2 {
     margin-left: auto;
-    margin-right: auto; }
-
-  img.barclays {
-    float: none;
-    text-align: center;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 100%; } }
+    margin-right: auto; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  p.quote {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
-
   img.ruby2 {
-    float: none;
-    text-align: center;
-    display: block;
-    margin-right: auto;
-    margin-left: auto; }
-
-  img.barclays {
     float: none;
     text-align: center;
     display: block;
@@ -240,11 +47,4 @@ img.barclays {
   img.ruby2 {
     max-width: 370px;
     margin-left: auto;
-    margin-right: auto; }
-
-  img.barclays {
-    float: none;
-    text-align: center;
-    display: block;
-    margin-right: auto;
-    margin-left: auto; } }
+    margin-right: auto; } }
