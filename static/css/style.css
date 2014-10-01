@@ -261,6 +261,18 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Helvetica Neue Thin';
+  src: url("../fonts/HelveticaNeue-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeue-Thin.otf") format("opentype"), url("../fonts/HelveticaNeue-Thin.woff") format("woff"), url("../fonts/HelveticaNeue-Thin.ttf") format("truetype"), url("../fonts/HelveticaNeue-Thin.svg#HelveticaNeue-Thin") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Helvetica Neue Thin Italic';
+  src: url("../fonts/HelveticaNeue-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeue-ThinItalic.otf") format("opentype"), url("../fonts/HelveticaNeue-ThinItalic.woff") format("woff"), url("../fonts/HelveticaNeue-ThinItalic.ttf") format("truetype"), url("../fonts/HelveticaNeue-ThinItalic.svg#HelveticaNeue-ThinItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   font-family: "Oswald";
   color: #151920;
