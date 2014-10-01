@@ -100,6 +100,18 @@ quotes:[
 ]
 };
 
+
+
+var arun = {
+  title: "Arun Gandhi Spotlight - Legacy of Hope",
+  url: "http://legacyofhope.org/2014/10/4/ArunGandhi",
+  thumb_img: "thumb_arun.jpg",
+  description: "",
+  stylesheet: "arun.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
 var board = {
   title: "Board of Directors - Legacy of Hope",
   url: "http://legacyofhope.org/board",
@@ -236,6 +248,9 @@ exports.getPageData = function(category, page, callback) {
     switch (page){
       case 'home':
       callback(null, home);
+      break;
+      case 'arun':
+      callback(null, arun);
       break;
       case 'board':
       callback(null, board);

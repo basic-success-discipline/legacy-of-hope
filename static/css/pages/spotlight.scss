@@ -31,6 +31,10 @@ img.banner{
     // line-height: 1.5;
 }
 
+.wrapper-spotlight p strong{
+	font-family: "Helvetica Neue Light";
+}
+
 
 .wrapper-spotlight .ital, .wrapper-spotlight i{
 	font-family: "Helvetica Neue Thin Italic";
@@ -52,7 +56,6 @@ img.banner{
 	word-spacing: -1px;
 	line-height: 1.5em;
 	margin-top: 90px;
-
 }
 
 .wrapper-spotlight p.quote{
@@ -61,8 +64,8 @@ img.banner{
 	text-align: right;
 	margin-left: auto;
 	margin-right: 0;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-top: 55px;
+	margin-bottom: 55px;
 	max-width: 600px;
 	line-height: 1.2em;
 	position: relative;
@@ -70,50 +73,26 @@ img.banner{
 	padding-left: 10px;
 }
 
-
-.wrapper-spotlight div.quote:after, .wrapper-spotlight div.quote:before{
-	content:""; 
-	// background: $loh-blue;
-	opacity: 0.65; 
-	position: absolute; 
-	bottom: 7px;  
-	height: calc(100% - 13px); 
-	width: 9px;
-	display: none;
-	
-
-}
-
-.wrapper-spotlight div.quote{
+.wrapper-spotlight p.quote.center{
+		margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 	width: 100%;
-	height: 100%;
-	position: relative;
-	margin-top: 55px;
-	margin-bottom: 55px;
-
+	max-width: 720px;
 }
 
+.wrapper-spotlight p.quote.leftalign{
+	margin-left: 0;
+	margin-right: auto;
+	text-align: left;
+	}
 
-$l: 1px;
-.wrapper-spotlight div.quote:after{ 
-	right: 0;  
-	border-right: $l solid $loh-blue;
-	border-top: $l solid $loh-blue;
-	border-bottom: $l solid $loh-blue;
-}
 
-.wrapper-spotlight div.quote:before{ 
-	left: 0;  
-	// display:none;
-border-left: $l solid $loh-blue;
-	border-bottom: $l solid $loh-blue;
-	border-top: $l solid $loh-blue;
-}
 
 .notopmargin{ margin-top: 0;}
 .nobottommargin{margin-bottom: 0;}
 .leftalign{text-align: left;}
-.center{text-align:center;}
+.center, p.center{text-align:center;}
 .floatleft{float:left;}
 
 .bordertop{

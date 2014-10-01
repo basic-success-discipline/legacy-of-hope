@@ -17,11 +17,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '13':
         switch (req.params.article){
           case 'botlhale':
-          cmsgateway.getPageData('cms', 'botlhale', 
-            function(err, data) {
-              res.render('botlhale', data);
-            });
-
+          cmsgateway.getPageData('cms', 'botlhale', function(err, data) {res.render('botlhale', data);});
           break;
           default:
           res.redirect('/');
@@ -32,11 +28,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '20':
         switch (req.params.article){
           case 'TataVega':
-          cmsgateway.getPageData('cms', 'tata', 
-            function(err, data) {
-              res.render('tata', data);
-            });
-
+          cmsgateway.getPageData('cms', 'tata', function(err, data) { res.render('tata', data);});
           break;
           default:
           res.redirect('/');
@@ -47,11 +39,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '27':
         switch (req.params.article){
           case 'RubyBridges':
-          cmsgateway.getPageData('cms', 'ruby', 
-            function(err, data) {
-              res.render('ruby', data);
-            });
-
+          cmsgateway.getPageData('cms', 'ruby', function(err, data) {res.render('ruby', data);});
           break;
           default:
           res.redirect('/');
@@ -64,7 +52,24 @@ router.get('/:year/:month/:day/:article', function(req, res) {
       }
       break;
 
-      
+
+      case '10':
+      switch(req.params.day){
+        case '4':
+        switch(req.params.article){
+          case 'ArunGandhi':
+          cmsgateway.getPageData('cms', 'arun', function(err, data) {res.render('arun', data);});
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+        default:
+        res.redirect('/');
+        break;
+      }
+      break;
       default:
       res.redirect('/');
       break;
@@ -180,7 +185,7 @@ router.get('/sponsors', function(req, res) {
 
 //make error page
 router.get('*', function(req, res) {
-    res.redirect('/');
+  res.redirect('/');
 });
 
 
