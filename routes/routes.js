@@ -171,13 +171,13 @@ router.get('/news', function(req, res) {
 
 
 
-router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
-router.get('/sponsors', function(req, res) {
-  cmsgateway.getPageData('cms', 'sponsors', 
-    function(err, data) {
-      res.render('sponsors', data);
-    });
-});
+// router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
+// router.get('/sponsors', function(req, res) {
+//   cmsgateway.getPageData('cms', 'sponsors', 
+//     function(err, data) {
+//       res.render('sponsors', data);
+//     });
+// });
 
 
 
