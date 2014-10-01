@@ -1,0 +1,51 @@
+div.arun1 {
+  max-width: 360px;
+  width: 100%;
+  float: left;
+  margin-right: 35px;
+  margin-top: 6px; }
+
+div.arun1 p.caption {
+  margin-bottom: 15px; }
+
+img.arun1 {
+  width: 100%;
+  border-radius: 2px; }
+
+.arun .pp {
+  display: none; }
+
+@media only screen and (max-width: 479px) {
+  img.banner {
+    content: url("../../img/arun_hero_pp.jpg"); }
+
+  div.arun1 {
+    float: none;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .arun .no-pp {
+    display: none; }
+
+  .arun .pp {
+    display: block; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  p.top {
+    font-size: 14px; }
+
+  div.arun1 {
+    float: none;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .arun .no-pp {
+    display: none; }
+
+  .arun .pp {
+    display: block; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  div.arun1 {
+    max-width: 320px; }
+
+  img.barclays {
+    margin-bottom: 25px; } }

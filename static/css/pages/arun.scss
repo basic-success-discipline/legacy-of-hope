@@ -1,13 +1,48 @@
 @import "../variables.scss";
 
+div.arun1{
+	max-width: 360px;
+	width: 100%;
+	float: left;
+	margin-right: 35px;
+	// margin-bottom: 30px;
+	margin-top: 6px;
+}
 
+div.arun1 p.caption{
+	margin-bottom: 15px;
+}
 
+img.arun1{
+	width: 100%;
+	border-radius: 2px;
+}
+
+.arun .pp{
+	display:none;
+}
 
 //  MOBILE - PORTRAIT
 
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
+img.banner{
+		content: url('../../img/arun_hero_pp.jpg');
+	}
+	div.arun1{
+	float: none;
+	margin-right: auto;
+	margin-left:auto;
+}
+
+
+.arun .no-pp{
+	display:none;
+}
+.arun .pp{
+	display:block;
+}
 
 
 }
@@ -18,8 +53,23 @@ and (max-width: $phone-landscape - 1px)  {
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-	
 
+	p.top{
+		font-size: 14px;
+	}
+	div.arun1{
+	float: none;
+	margin-right: auto;
+	margin-left:auto;
+}
+
+.arun .no-pp{
+	display:none;
+}
+
+.arun .pp{
+	display:block;
+}
 }
 
 // TABLET - PORTRAIT
@@ -27,6 +77,14 @@ and (max-width: $tablet-portrait - 1px)  {
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
+div.arun1{
 
+	max-width: 320px;
+}
+
+
+img.barclays{
+	margin-bottom: 25px;
+}
 }
 

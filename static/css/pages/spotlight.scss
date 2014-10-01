@@ -71,6 +71,7 @@ img.banner{
 	position: relative;
 	padding-right: 10px;
 	padding-left: 10px;
+	box-sizing: border-box;
 }
 
 .wrapper-spotlight p.quote.center{
@@ -169,6 +170,8 @@ img.barclays{
 	margin-left: 35px;
 	margin-bottom: 55px;
 	margin-top: 6px;
+	
+	border-radius: 2px;
 }
 
 //  MOBILE - PORTRAIT

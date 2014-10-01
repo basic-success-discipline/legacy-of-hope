@@ -55,7 +55,8 @@ img.banner {
   line-height: 1.2em;
   position: relative;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  box-sizing: border-box; }
 
 .wrapper-spotlight p.quote.center {
   margin-left: auto;
@@ -132,7 +133,8 @@ img.barclays {
   float: right;
   margin-left: 35px;
   margin-bottom: 55px;
-  margin-top: 6px; }
+  margin-top: 6px;
+  border-radius: 2px; }
 
 @media only screen and (max-width: 479px) {
   .wrapper-spotlight p.quote {
