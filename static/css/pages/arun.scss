@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 div.arun1{
-	max-width: 360px;
+	max-width: 340px;
 	width: 100%;
 	float: left;
 	margin-right: 35px;
@@ -12,6 +12,7 @@ div.arun1{
 div.arun1 p.caption{
 	margin-bottom: 15px;
 }
+
 
 img.arun1{
 	width: 100%;
@@ -74,10 +75,7 @@ and (max-width: $tablet-portrait - 1px)  {
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
-div.arun1{
 
-	max-width: 320px;
-}
 
 
 img.barclays{

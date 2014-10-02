@@ -1,5 +1,5 @@
 div.arun1 {
-  max-width: 360px;
+  max-width: 340px;
   width: 100%;
   float: left;
   margin-right: 35px;
@@ -41,8 +41,5 @@ img.arun1 {
   .arun .pp {
     display: block; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  div.arun1 {
-    max-width: 320px; }
-
   img.barclays {
     margin-bottom: 25px; } }
