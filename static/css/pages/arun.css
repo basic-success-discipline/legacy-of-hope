@@ -1,14 +1,26 @@
 div.arun1 {
+  width: 100%;
+  margin-bottom: 55px; }
+
+img.arun1 {
+  width: 100%; }
+
+div.arun1 p.caption {
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+div.arun2 {
   max-width: 340px;
   width: 100%;
   float: left;
   margin-right: 35px;
   margin-top: 6px; }
 
-div.arun1 p.caption {
+div.arun2 p.caption {
   margin-bottom: 15px; }
 
-img.arun1 {
+img.arun2 {
   width: 100%;
   border-radius: 2px; }
 
