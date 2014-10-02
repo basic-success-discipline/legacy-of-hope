@@ -37,6 +37,9 @@
   display: block;
   border-radius: 5px; }
 
+.page {
+  text-align: center; }
+
 @media only screen and (max-width: 479px) {
   .hero img, .herospacer img {
     width: 100%;
