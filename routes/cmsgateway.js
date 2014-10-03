@@ -105,8 +105,7 @@ quotes:[
 var arun = {
   title: "Arun Gandhi Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/10/4/ArunGandhi",
-  thumb_img: "thumb_arun.jpg",
-  description: "",
+  description: "Millions around the world have been influenced and inspired by Nelson Mandela. Of those millions, relatively few met the great South African Leader in person. Arun Gandhi, the fifth grandson of Mahatma Gandhi, was one of those fortunate few. \"Mandela is my hero. He is the best example of how a person can change and see the light.\”",
   stylesheet: "arun.css",
   currentpage: "menu-news",
   type: "article"

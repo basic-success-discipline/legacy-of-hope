@@ -131,6 +131,16 @@ img.rounded {
 .spotlight .second, .spotlight .second img {
   width: 100%; }
 
+.spotlight.withpicture.andcaption .second {
+  margin-bottom: 45px; }
+
+.spotlight .third {
+  width: 100%; }
+
+.spotlight .third p.caption {
+  text-align: right;
+  font-size: 14px; }
+
 img.barclays {
   width: 300px;
   float: right;
@@ -140,6 +150,9 @@ img.barclays {
   border-radius: 2px; }
 
 @media only screen and (max-width: 479px) {
+  .spotlight.withpicture.andcaption .third p.caption {
+    text-align: center; }
+
   .wrapper-spotlight p.quote {
     margin-left: auto;
     margin-right: auto;
@@ -149,7 +162,7 @@ img.barclays {
     width: 100%;
     margin-top: 20px; }
 
-  .spotlight .first, .spotlight .second {
+  .spotlight .first, .spotlight .second, .spotlight .third {
     width: 300px;
     max-width: 100%;
     margin-left: auto;
@@ -172,6 +185,9 @@ img.barclays {
     margin-left: auto;
     max-width: 100%; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .spotlight.withpicture.andcaption .third {
+    clear: both; }
+
   .wrapper-spotlight p.quote {
     margin-left: auto;
     margin-right: auto;
