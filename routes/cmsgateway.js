@@ -1,4 +1,14 @@
 var newsStories = [
+
+{
+  title: "Arun Gandhi Spotlight",
+  image: "/img/card_arun.jpg",
+  blurb: "Millions around the world have been influenced and inspired by Nelson Mandela. Of those millions, relatively few met the great South African Leader in person. Arun Gandhi, the fifth grandson of Mahatma Gandhi, was one of those fortunate few.",
+  date: "October 4, 2014",
+  likes : "654",
+  link: "/2014/10/4/ArunGandhi"
+},
+
  {
   title: "Ruby Bridges Spotlight",
   image: "/img/card_ruby.jpg",
