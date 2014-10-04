@@ -36,8 +36,8 @@ div.arun2{
 	width: 100%;
 	float: left;
 	margin-right: 35px;
-	// margin-bottom: 30px;
 	margin-top: 6px;
+	margin-bottom: 55px;
 }
 
 div.arun2 p.caption{
@@ -45,11 +45,14 @@ div.arun2 p.caption{
 }
 
 
+
 img.arun2{
 	width: 100%;
 	border-radius: 2px;
 }
-
+p.clearleft{
+	clear:left;
+}
 .arun .pp{
 	display:none;
 }
