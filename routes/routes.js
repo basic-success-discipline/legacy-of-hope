@@ -167,6 +167,13 @@ router.get('/news', function(req, res) {
     });
 });
 
+router.get('/press', function(req, res) {
+  cmsgateway.getPageData('cms', 'press', 
+    function(err, data) {
+      res.render('press', data);
+    });
+});
+
 
 
 

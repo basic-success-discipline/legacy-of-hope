@@ -61,6 +61,19 @@ var newsStories = [
 ];
 
 
+var pressStories = [
+
+{
+  title: "Boxer Sam Soliman made an ambassador of Legacy of Hope Foundation",
+  image: "/img/card_soliman.jpg",
+  blurb: "AS AN ardent boxing fan all his long life - and not a bad mover in the ring when he was in his prime - Nelson Mandela might have enjoyed meeting Sam Soliman. The reverse certainly applies but, alas, that’s never going to happen now. But in New York this week/the other day, the Melbourne boxer _ Australia’s only current world champion _ eagerly seized the opportunity to align himself with the great South African statesman and humanitarian.",
+  date: "October 5, 2014",
+  likes : "654",
+  link: "http://www.foxsports.com.au/more-sports/boxing/boxer-sam-soliman-made-an-ambassador-of-legacy-of-hope-foundation/story-e6frf5h3-1227080318078?nk=cfb0d9c6994c780c6ddce669ab008471"
+}
+
+];
+
 
 
 
@@ -223,6 +236,17 @@ var hospital = {
   type: "website"
 };
 
+var press = {
+  title: "Press - Legacy of Hope",
+  url: "http://legacyofhope.org/press",
+  thumb_img: "thumb_mission.jpg",
+  description: "Legacy of Hope press",
+  stylesheet: "press.css",
+  currentpage: "menu-press",
+  type: "website",
+  stories: pressStories
+};
+
 var ruby = {
   title: "Ruby Bridges Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/9/27/RubyBridges",
@@ -291,6 +315,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'news':
       callback(null, news);
+      break;
+      case 'press':
+      callback(null, press);
       break;
       case 'ruby':
       callback(null, ruby);

@@ -1,0 +1,202 @@
+.press {
+  padding-bottom: 54px; }
+
+.press .top {
+  border-bottom: 1px solid #358fe3;
+  padding-bottom: 4px;
+  vertical-align: bottom;
+  position: relative;
+  margin-bottom: 70px; }
+
+.press .top h1 {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-left: -2px;
+  margin-bottom: 5px; }
+
+.press .top h2 {
+  font-size: 20px;
+  text-transform: lowercase;
+  font-family: "Helvetica Neue Light";
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 5px; }
+
+.latestpress {
+  margin-bottom: 40px; }
+
+.latestpress .clickortap {
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 0;
+  text-align: center;
+  clear: both;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+.latestpress .clickortap.one {
+  display: none; }
+
+.latestpress .card {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px; }
+
+.latestpress .card:nth-child(3n) {
+  margin-left: 30px;
+  margin-right: 30px; }
+
+.container .latestpress a {
+  padding: 0px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+.latestpress a .stretchy-wrapper {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 74%;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 6px; }
+
+.latestpress a img {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.latestpress a h5 {
+  font-size: 17px;
+  font-family: "Open Sans";
+  line-height: 1.375;
+  color: #1f2229;
+  text-align: left;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  margin-bottom: 10px;
+  text-transform: none;
+  font-weight: 400; }
+
+.latestpress a p {
+  color: black;
+  font-size: 12px;
+  font-family: "Open Sans";
+  line-height: 1.475;
+  text-align: justify;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  margin-bottom: 20px;
+  margin-top: 0px; }
+
+.latestpress a:hover p, .latestpress a:hover h5 {
+  color: #358fe3; }
+
+.latestpress .card .bottom {
+  height: 30px;
+  line-height: 30px; }
+
+.latestpress .card .bottom span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: right;
+  width: 100%; }
+
+.latestpress .card .date {
+  float: left;
+  color: gray; }
+
+.latestpress .card .likes {
+  float: right;
+  display: inline-block;
+  color: gray; }
+
+.latestpress a .bottom span p {
+  margin-right: 0;
+  margin-top: 3px; }
+
+@media only screen and (max-width: 479px) {
+  .page {
+    text-align: center; }
+
+  .press .top {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 27px;
+    margin-bottom: 40px; }
+
+  .press .top h1 {
+    display: block;
+    text-align: center;
+    font-size: 35px; }
+
+  .press .top h2 {
+    display: none; }
+
+  .latestpress.container .four.columns {
+    margin-left: 0px; }
+
+  .latestpress .clickortap.one {
+    display: block; }
+
+  .latestpress .clickortap.two {
+    display: none; }
+
+  .latestpress h4 {
+    margin-bottom: 0;
+    padding-bottom: 5px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .page {
+    text-align: center; }
+
+  .press .top {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 27px;
+    margin-bottom: 40px; }
+
+  .press .top h1 {
+    display: block;
+    text-align: center;
+    font-size: 35px; }
+
+  .press .top h2 {
+    display: none; }
+
+  .latestpress.container .four.columns {
+    margin-left: 0px; }
+
+  .latestpress .clickortap.one {
+    display: block; }
+
+  .latestpress .clickortap.two {
+    display: none; }
+
+  .latestpress h4 {
+    margin-bottom: 0;
+    padding-bottom: 5px; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .press .top {
+    max-width: 728px;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .press .top h1 {
+    font-size: 35px; }
+
+  .latestpress .card:nth-child(3n-1) {
+    margin-left: 20px; }
+
+  .latestpress .card:nth-child(3n) {
+    margin-left: 10px;
+    margin-right: 10px; } }
