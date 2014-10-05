@@ -6,7 +6,7 @@
   <% include partials/loh-head %>
 
 
- <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
 
 </head>
 
@@ -21,48 +21,42 @@
       <!-- PAGE -->
       <div class="safari-fix-parallax-wrapper">
         <div class="page press ">
-        <div class="wrapper-content">
-        <div class="top">
-        <h1>Press</h1>
-        <h2>From Legacy<em>Of</em>Hope</h2>
-        </div>
-        </div>
-          
-        <div class="container latestpress" style="display: block">
-
-        <p class="clickortap one">click on story to view</p>
-              <% for (var i = 0; i < (stories.length <= 6 ? stories.length : 6); i++) { %>
-              <a class="four columns card" href="<%= stories[i].link %>">
-                <div class="stretchy-wrapper">
-                  <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
-                </div>
-                <h5><%= stories[i].title %></h5>
-                <p class="cardcopy"><%= stories[i].blurb %></p>
-
-                <hr style="border: dashed 1px #DEDEDE; "/>
-                <div class="bottom">
-                  <span>
-                    <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
-                    <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
-                  </span>
-                </div>
-                <hr style="border: solid 1px #DEDEDE;"/>
-
-              </a>
-              <% } %>
+          <div class="wrapper-content">
+            <div class="top">
+              <h1>Press</h1>
+              <h2>From Legacy<em>Of</em>Hope</h2>
             </div>
+          </div>
+          
+          <div class="container latestpress" style="display: block">
+
+            <p class="clickortap one">click on story to view</p>
+            <% for (var i = 0; i < (stories.length <= 6 ? stories.length : 6); i++) { %>
+            <a class="four columns card" href="<%= stories[i].link %>">
+              <div class="stretchy-wrapper">
+                <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
+              </div>
+              <h5><%= stories[i].title %></h5>
+              <p class="cardcopy"><%= stories[i].blurb %></p>
+
+              <hr style="border: dashed 1px #DEDEDE; "/>
+              <div class="bottom">
+                <span>
+                  <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
+                  <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
+                </span>
+              </div>
+              <hr style="border: solid 1px #DEDEDE;"/>
+
+            </a>
+            <% } %>
+          </div>
 
 
-            <script type="text/javascript">
-              $('.cardcopy').ellipsis({
-                row: 4
-              });
-              $('.card h5').ellipsis({
-                row: 1
-              });
-            </script>
+         <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
+             <script type="text/javascript" src="/js/cardcopy.js"></script>
 
-    </div>
+        </div>
 
         <% include partials/loh-footer %>
       </div>
