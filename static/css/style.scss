@@ -426,7 +426,11 @@ em{
   pointer-events: none;
   cursor: default; 
 }
+.nav-dropdown .currentpage.menu-news a, .nav .currentpage.menu-news a{
 
+   pointer-events: auto;
+  cursor: pointer; 
+}
 
 
 

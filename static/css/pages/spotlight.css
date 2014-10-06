@@ -21,11 +21,14 @@ img.rounded {
 .wrapper-spotlight p {
   text-align: justify;
   font-family: "Helvetica Neue Thin";
-  font-size: 16px;
-  line-height: 1.7; }
+  color: #DDDDDD;
+  font-size: 19px;
+  line-height: 1.55;
+  text-align: left; }
 
 .wrapper-spotlight p strong {
-  font-family: "Helvetica Neue Light"; }
+  font-family: "Helvetica Neue Light";
+  color: #EFEFEF; }
 
 .wrapper-spotlight .ital, .wrapper-spotlight i {
   font-family: "Helvetica Neue Thin Italic"; }
@@ -44,7 +47,8 @@ img.rounded {
   font-size: 18px;
   word-spacing: -1px;
   line-height: 1.5em;
-  margin-top: 90px; }
+  margin-top: 90px;
+  color: #EFEFEF; }
 
 .wrapper-spotlight p.quote {
   font-size: 25px;
@@ -87,6 +91,9 @@ img.rounded {
 
 .floatleft {
   float: left; }
+
+p.rightalign {
+  text-align: right; }
 
 .bordertop {
   padding-top: 50px;
@@ -139,7 +146,8 @@ img.rounded {
 
 .spotlight .third p.caption {
   text-align: right;
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 0; }
 
 img.barclays {
   width: 300px;
@@ -148,6 +156,9 @@ img.barclays {
   margin-bottom: 55px;
   margin-top: 6px;
   border-radius: 2px; }
+
+img.barclays.withstraggler {
+  margin-bottom: 20px; }
 
 @media only screen and (max-width: 479px) {
   .spotlight.withpicture.andcaption .third p.caption {
