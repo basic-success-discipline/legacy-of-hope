@@ -639,6 +639,36 @@ em{
   box-sizing: border-box;
 
 }
+
+
+.sidebar .sidebox.chirpifybox{
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+
+}
+
+.sidebar .sidebox.chirpifybox h3{
+
+  margin-right: auto;
+  font-size: 20px;
+}
+.sidebar .sidebox.chirpifybox em{
+  font-size: 24px;
+  clear: both;
+  color: black !important;
+  line-height: 1.8;
+}
+
+.sidebar .sidebox.chirpifybox img{
+  width: 100%;
+  border-radius: 5px;
+  }
+
+ .sidebar .sidebox.chirpifybox p.nobottommargin{
+    margin-bottom: 0;
+  }
+
 .sidebar .sidebox.execsumbox {
   padding-bottom: 9px;
   display: none;
