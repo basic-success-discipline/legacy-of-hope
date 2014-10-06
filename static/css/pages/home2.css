@@ -134,6 +134,9 @@ h5 {
 .learnmore a {
   text-align: center; }
 
+.sidebar .sidebox.chirpifybox {
+  display: block; }
+
 .honorary {
   position: relative;
   margin-bottom: 40px; }

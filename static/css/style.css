@@ -707,7 +707,8 @@ em {
 .sidebar .sidebox.chirpifybox {
   margin-top: 0px;
   margin-bottom: 30px;
-  text-align: center; }
+  text-align: center;
+  display: none; }
 
 .sidebar .sidebox.chirpifybox h3 {
   margin-right: auto;
