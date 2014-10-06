@@ -14,7 +14,7 @@
               menu.onclick=function(){ 
                 if(!menuOpen){
                   $('.menu-dropdown').animate({
-                   height: 240      //this is the max-height for mobile-landscape with social sharing: $mobilewidth - $navheight - $sharing-margin
+                   height: 310      //this is the max-height for mobile-landscape with social sharing: $mobilewidth - $navheight - $sharing-margin
                 }, 200, function(){});
                   menuOpen = true;
                   $('.ddclick').css("visibility", "visible");
