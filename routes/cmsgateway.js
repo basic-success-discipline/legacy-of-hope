@@ -1,11 +1,18 @@
 var newsStories = [
 
+
+{
+  title: "Middleweight Boxer Sam Soliman Named Legacy of Hope Ambassador",
+  image: "/img/card_soliman.jpg",
+  blurb: "Soliman, the Melbourne boxer, Australia’s only current world champion, welcomed the opportunity to align himself with the great South African statesman and humanitarian by becoming an Ambassador for the Legacy of Hope Foundation, a group dedicated to bringing Mandela’s last living wish to fruition.",
+  date: "October 5, 2014",
+  link: "/2014/10/5/SamSolimanLOHAmbassador"
+},
 {
   title: "Arun Gandhi Spotlight",
   image: "/img/card_arun.jpg",
   blurb: "Millions around the world have been influenced and inspired by Nelson Mandela. Of those millions, relatively few met the great South African Leader in person. Arun Gandhi, the fifth grandson of Mahatma Gandhi, was one of those fortunate few.",
   date: "October 4, 2014",
-  likes : "654",
   link: "/2014/10/4/ArunGandhi"
 },
 
@@ -14,7 +21,6 @@ var newsStories = [
   image: "/img/card_ruby.jpg",
   blurb: "Ruby Bridges was honored on July 18th, 2014 during the Legacy of Hope Mandela Day Celebration at the Wallis Annenberg Center for the Performing Arts in Beverly Hills. Following this event, Ruby shared her thoughts on what Nelson Mandela meant to her and how a children’s hospital in his name would honor his legacy.",
   date: "September 27, 2014",
-  likes : "654",
   link: "/2014/9/27/RubyBridges"
 },
  {
@@ -22,7 +28,6 @@ var newsStories = [
   image: "/img/card_tata.jpg",
   blurb: "In a moving conversation, Táta Vega shared her thoughts following the July 18th, 2014 Legacy of Hope Mandela Day event held at the Wallis Annenberg Center for the Performing Arts, on what would have been Nelson Mandela’s 96th birthday.",
   date: "September 20, 2014",
-  likes : "654",
   link: "/2014/9/20/TataVega"
 },
  {
@@ -30,7 +35,6 @@ var newsStories = [
   image: "/img/card_botlhale.jpg",
   blurb: "Botlhale Boikanyo is a young, ambitious and inspired Poet from Johannesburg, South Africa. At the age of 11 and well beyond her years in both maturity and insight, Bolthale’s early career was put to test under the bright light auditions of the 2012 South Africa’s Got Talent competition. In that setting, Bolthale’s (pronounced bo-thall-ee) took judges firmly by the heart and walked away the clear and undeniable winner for her gut wrenching and heart lifting prose, inspired by her greatest mentor, Nelson Mandela.",
   date: "September 13, 2014",
-  likes : "654",
   link: "/2014/9/13/botlhale"
 },
  {
@@ -38,7 +42,6 @@ var newsStories = [
   image: "/img/card_mandela_day.jpg",
   blurb: "The Legacy of Hope Foundation hosted an evening of entertainment on Mandela Day to support a global campaign to fulfill the last living wish of Nelson Mandela—to build Africa’s 4th dedicated children’s hospital in Johannesburg, South Africa in 2016. ",
   date: "July 18, 2014",
-  likes : "528",
   link: "/mandeladay"
 },
 {
@@ -46,7 +49,6 @@ var newsStories = [
   image: "/img/card_guitar_initiative.jpg",
   blurb: "The Guitar Initiative is a campaign to increase awareness and support for Nelson Mandela’s Legacy of Hope, through the medium of music. This campaign is supported by Gibson and managed by veteran music producer and executive producer of Legacy of Hope Concerts, Eric Gast. ",
   date: "July 1, 2014",
-  likes : "566",
   link: "/guitarinitiative"
 },
 {
@@ -54,7 +56,6 @@ var newsStories = [
   image: "/img/card_concert.jpg",
   blurb: "Join Legacy of Hope for a worldwide simulcast concert in support of raising $30M for the Nelson Mandela Children’s Hospital. The concert will feature a collection of the world’s most talented and respected musicians and will be broadcast around the world in celebration of Mr. Mandela’s Legacy.",
   date: "December 13, 2014",
-  likes : "654",
   link: "/concert"
 }
 
@@ -68,7 +69,6 @@ var pressStories = [
   image: "/img/card_soliman.jpg",
   blurb: "AS AN ardent boxing fan all his long life - and not a bad mover in the ring when he was in his prime - Nelson Mandela might have enjoyed meeting Sam Soliman. The reverse certainly applies but, alas, that’s never going to happen now. But in New York this week/the other day, the Melbourne boxer _ Australia’s only current world champion _ eagerly seized the opportunity to align himself with the great South African statesman and humanitarian.",
   date: "October 5, 2014",
-  likes : "654",
   link: "http://www.foxsports.com.au/more-sports/boxing/boxer-sam-soliman-made-an-ambassador-of-legacy-of-hope-foundation/story-e6frf5h3-1227080318078?nk=cfb0d9c6994c780c6ddce669ab008471"
 },
  {
@@ -76,7 +76,6 @@ var pressStories = [
   image: "/img/card_botlhale.jpg",
   blurb: "Friday, July 18, Nelson Mandela would have been 96 years old. He was honored at the Legacy of Hope concert at the Wallis Annenberg Center for the Performing Arts. Guests enjoyed the setting sun, in the garden reception while drinking champagne and munching on watermelon radishes stuffed with tomato compote. Legacy of Hope is working to raise funds to build South Africa’s first children’s hospital in Mr. Mandela's name. It was Nelson Mandela’s dream. Working to make that dream come true is youth ambassador Botlhale Boikayno. At 11, she won, “South Africa’s Got Talent” competition. Now, 13, she wowed Friday’s crowd with first a reading of Dr. Maya Angelou’s and then a poem of her own.",
   date: "July 21, 2014",
-  likes : "654",
   link: "http://www.myfoxla.com/story/26070793/honoring-nelson-mandela-in-the-voice-of-a-13-year-old"
 }
 
@@ -264,6 +263,18 @@ var ruby = {
   currentpage: "menu-news",
   type: "article"
 };
+
+var soliman = {
+  title: "Middleweight Boxer Sam Soliman Named Legacy of Hope Ambassador",
+  url: "http://legacyofhope.org/2014/10/5/SamSolimanLOHAmbassador",
+  thumb_img: "soliman_hero.jpg",
+  description: "Soliman, the Melbourne boxer, Australia’s only current world champion, welcomed the opportunity to align himself with the great South African statesman and humanitarian by becoming an Ambassador for the Legacy of Hope Foundation, a group dedicated to bringing Mandela’s last living wish to fruition.",
+  stylesheet: "soliman.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
+
 var sponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/sponsors",
@@ -332,6 +343,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'sponsors':
       callback(null, sponsors);
+      break;
+      case 'soliman':
+      callback(null, soliman);
       break;
       case 'tata':
       callback(null, tata);

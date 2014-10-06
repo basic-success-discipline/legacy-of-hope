@@ -457,7 +457,18 @@ $cardpadding: 0px;
 	margin-top: 3px;
 }
 
+.latestnews a.readmore{
+	float: right;
+	font-family: "Helvetica Neue Light";
+	padding:20px;
+	font-size: 19px;
 
+}
+
+
+.latestnews a.readmore:hover{
+	text-decoration: underline;
+}
 
 
 
@@ -622,6 +633,7 @@ h3{
 	margin-bottom: 0;
 	padding-bottom: 5px;
 }
+
 
 
 // .latestnews .card:nth-child(2){

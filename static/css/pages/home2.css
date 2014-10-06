@@ -308,6 +308,15 @@ h4.subheading hr {
   margin-right: 0;
   margin-top: 3px; }
 
+.latestnews a.readmore {
+  float: right;
+  font-family: "Helvetica Neue Light";
+  padding: 20px;
+  font-size: 19px; }
+
+.latestnews a.readmore:hover {
+  text-decoration: underline; }
+
 .sponsors {
   height: 158px;
   background-color: #F2F3F3;

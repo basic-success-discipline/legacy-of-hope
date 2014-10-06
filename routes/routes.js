@@ -65,6 +65,21 @@ router.get('/:year/:month/:day/:article', function(req, res) {
           break;
         }
         break;
+
+        case '5':
+        switch(req.params.article){
+          case 'SamSolimanLOHAmbassador':
+          cmsgateway.getPageData('cms', 'soliman', function(err, data) {res.render('soliman', data);});
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+
+
+
+
         default:
         res.redirect('/');
         break;

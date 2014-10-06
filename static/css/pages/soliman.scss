@@ -1,0 +1,96 @@
+@import "../variables.scss";
+
+
+
+// SPOTLIGHT
+.wrapper-spotlight{
+	padding-top: 30px;
+}
+
+.wrapper-spotlight p.top{
+	min-height: 0px;
+}
+
+div.soliman1{
+	max-width: 240px;
+	width: 100%;
+	float: right;
+	margin-left: 35px;
+	margin-bottom: 30px;
+	margin-top: 6px;
+}
+
+div.soliman1 .caption{
+	margin-bottom: 0;
+	font-size: 14px;
+	text-align:right;
+}
+
+img.soliman1{
+	width: 100%;
+}
+
+
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+img.banner{
+		content: url('../../img/soliman_hero_pp.jpg');
+	}
+
+
+
+div.soliman1{
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+	}
+	div.soliman1 .caption{
+		text-align: center;
+
+	}
+	img.soliman1{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+
+//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+div.soliman1{
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+
+	}
+
+	div.soliman1 .caption{
+		text-align: center;
+		max-width: 370px;
+
+	}
+	img.soliman1{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 370px;
+		
+	}
+
+}
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+
+}
+
