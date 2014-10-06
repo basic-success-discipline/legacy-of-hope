@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .wrapper-inner{
-	background-color: black;
+	background-color: $loh-black;
 }
 img.banner{
 	width: 100%;
@@ -29,10 +29,11 @@ img.rounded{
 .wrapper-spotlight p{
 	text-align: justify;
 	font-family: "Helvetica Neue Thin";
-    color: #DDDDDD;
+    color: #e6e6e6;
     font-size: 19px;
     line-height: 1.55;
     text-align: left;
+    letter-spacing: 0.4px;
 }
 
 .wrapper-spotlight p strong{
@@ -61,7 +62,7 @@ img.rounded{
 	word-spacing: -1px;
 	line-height: 1.5em;
 	margin-top: 90px;
-	color: #EFEFEF;
+	color: #f5f5f5;
 }
 
 .wrapper-spotlight p.quote{
