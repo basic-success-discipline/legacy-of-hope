@@ -29,8 +29,9 @@ img.rounded {
   letter-spacing: 0.4px; }
 
 .wrapper-spotlight p strong {
-  font-family: "Helvetica Neue Light";
-  color: #EFEFEF; }
+  font-family: "Helvetica Neue Medium";
+  line-height: 1;
+  letter-spacing: 0px; }
 
 .wrapper-spotlight .ital, .wrapper-spotlight i {
   font-family: "Helvetica Neue Thin Italic"; }
@@ -96,6 +97,9 @@ img.rounded {
 
 p.rightalign {
   text-align: right; }
+
+.clearboth {
+  clear: both; }
 
 .bordertop {
   padding-top: 50px;

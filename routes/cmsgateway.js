@@ -162,6 +162,16 @@ var botlhale = {
   type: "article"
 };
 
+var chuck = {
+  title: "Chuck Nice Spotlight - Legacy of Hope",
+  url: "http://legacyofhope.org/2014/10/11/ChuckNice",
+  thumb_img: "chuck_hero.jpg",
+  description: "In support of the Legacy of Hope Foundation and the Nelson Mandela Children’s Hospital, Chuck Nice was the emcee for both the 2013 and 2014 Legacy of Hope Mandela Day events held in New York and Los Angeles. At both events, the audience certainly laughed, but they were also given a strong and meaningful message: Nelson Mandela had a final wish. It’s now our turn to work hard and honor this wish and his legacy for future generations.",
+  stylesheet: "chuck.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
 var concert = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
@@ -310,6 +320,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'botlhale':
       callback(null, botlhale);
+      break;
+      case 'chuck':
+      callback(null, chuck);
       break;
       case 'concert':
       callback(null, concert);

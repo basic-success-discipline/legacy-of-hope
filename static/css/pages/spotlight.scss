@@ -38,8 +38,13 @@ img.rounded{
 }
 
 .wrapper-spotlight p strong{
-	font-family: "Helvetica Neue Light";
-	color: #EFEFEF;
+	font-family: "Helvetica Neue Medium";
+	
+	// color: #EFEFEF;
+	// color: $loh-blue;
+	line-height: 1;
+	// font-size:23px;
+    letter-spacing: 0px;
 }
 
 
@@ -104,6 +109,7 @@ img.rounded{
 .center, p.center{text-align:center;}
 .floatleft{float:left;}
 p.rightalign{text-align:right;}
+.clearboth{clear:both};
 
 .bordertop{
 	padding-top: 50px;

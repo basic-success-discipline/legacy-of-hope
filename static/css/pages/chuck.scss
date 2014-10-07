@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+img.banner{
+		content: url('../../img/chuck_hero_pp.jpg');
+	}
+
+
+}
+
+
+//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+
+}
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+
+}
+
