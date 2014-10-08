@@ -1,7 +1,27 @@
 @import "../variables.scss";
 
+div.chuck1{
+	width: 100%;
+	position: relative;
+	margin-top: 35px;
+	margin-bottom: 75px;
+}
+div.photo-overlay{
+	width: 100%;
+	height: 100%;
+	// background-color: #716722;
+	background-color: rgb(97,48,25);
+	opacity: 0.15;
+	position: absolute;
+}
 
+div.photo-overlay img{
+	visibility: hidden;
 
+}
+img.chuck1, div.photo-overlay img{
+	width: 100%;
+}
 //  MOBILE - PORTRAIT
 
 @media only screen 
@@ -10,6 +30,10 @@ and (max-width: $phone-landscape - 1px)  {
 img.banner{
 		content: url('../../img/chuck_hero_pp.jpg');
 	}
+
+img.chuck1, div.photo-overlay img{
+	content: url('../../img/mission_hero_pp.jpg');
+}
 
 
 }

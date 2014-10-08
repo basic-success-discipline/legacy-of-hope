@@ -180,7 +180,9 @@ img.barclays {
   border-radius: 2px; }
 
 img.barclays.withstraggler {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 330px; }
 
 @media only screen and (max-width: 479px) {
   .spotlight.withpicture.andcaption .third p.caption {
@@ -190,6 +192,12 @@ img.barclays.withstraggler {
     margin-left: auto;
     margin-right: auto;
     text-align: center; }
+
+  .wrapper-spotlight p.bigquote {
+    font-size: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
 
   .spotlight {
     width: 100%;
@@ -226,12 +234,18 @@ img.barclays.withstraggler {
     margin-right: auto;
     text-align: center; }
 
+  .wrapper-spotlight p.bigquote {
+    font-size: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+
   img.barclays {
     float: none;
     text-align: center;
     display: block;
-    margin-right: auto;
-    margin-left: auto; }
+    margin-right: auto !important;
+    margin-left: auto !important; }
 
   .spotlight.withpicture {
     margin-right: 0;
@@ -261,3 +275,9 @@ img.barclays.withstraggler {
     margin-right: auto;
     margin-left: auto;
     padding-left: 29px; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper-spotlight p.bigquote {
+    font-size: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; } }
