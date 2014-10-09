@@ -1,7 +1,10 @@
+$(document).ready(function(){
+
  for (var i =0; i<$('.cardcopy').length; i++){
             var divHeight = $('.card h5').eq(i).height();
             var lineHeight = parseInt($('.card h5').eq(i).css('line-height'), 10);
-            var lines = divHeight / lineHeight;
+            var lines = Math.floor(divHeight / lineHeight);
+           
             if(lines==1){
               $('.cardcopy').eq(i).ellipsis({
                 row: 4
@@ -28,3 +31,5 @@
               $('.cardcopy').eq(i).hide();
             }
             }
+
+          });
