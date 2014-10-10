@@ -46,6 +46,9 @@ p {
   font-size: 19px;
   line-height: 1.55; }
 
+.prefooter p {
+  color: initial; }
+
 .c .countdown {
   margin-bottom: 70px; }
 
