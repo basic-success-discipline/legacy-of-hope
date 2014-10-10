@@ -1,6 +1,12 @@
 var newsStories = [
 
-
+{
+  title: "Chuck Nice Spotlight",
+  image: "/img/card_chuck.jpg",
+  blurb: "In support of the Legacy of Hope Foundation and the Nelson Mandela Children’s Hospital, Chuck Nice was the emcee for both the 2013 and 2014 Legacy of Hope Mandela Day events held in New York and Los Angeles. At both events, the audience certainly laughed, but they were also given a strong and meaningful message: Nelson Mandela had a final wish. It’s now our turn to work hard and honor this wish and his legacy for future generations.",
+  date: "October 11, 2014",
+  link: "/2014/10/11/ChuckNice"
+},
 {
   title: "Middleweight Boxer Sam Soliman Named Legacy of Hope Ambassador",
   image: "/img/card_soliman.jpg",
