@@ -10,7 +10,7 @@ var newsStories = [
 {
   title: "Middleweight Boxer Sam Soliman Named Legacy of Hope Ambassador",
   image: "/img/card_soliman.jpg",
-  blurb: "Soliman, the Melbourne boxer, Australia’s only current world champion, welcomed the opportunity to align himself with the great South African statesman and humanitarian by becoming an Ambassador for the Legacy of Hope Foundation, a group dedicated to bringing Mandela’s last living wish to fruition.",
+  blurb: "Soliman, the Melbourne boxer and former IBF World Middleweight Champion, welcomed the opportunity to align himself with the great South African statesman and humanitarian by becoming an Ambassador for the Legacy of Hope Foundation, a group dedicated to bringing Mandela’s last living wish to fruition.",
   date: "October 5, 2014",
   link: "/2014/10/5/SamSolimanLOHAmbassador"
 },
@@ -73,7 +73,7 @@ var pressStories = [
 {
   title: "Boxer Sam Soliman made an ambassador of Legacy of Hope Foundation",
   image: "/img/card_soliman.jpg",
-  blurb: "AS AN ardent boxing fan all his long life - and not a bad mover in the ring when he was in his prime - Nelson Mandela might have enjoyed meeting Sam Soliman. The reverse certainly applies but, alas, that’s never going to happen now. But in New York this week/the other day, the Melbourne boxer _ Australia’s only current world champion _ eagerly seized the opportunity to align himself with the great South African statesman and humanitarian.",
+  blurb: "AS AN ardent boxing fan all his long life - and not a bad mover in the ring when he was in his prime - Nelson Mandela might have enjoyed meeting Sam Soliman. The reverse certainly applies but, alas, that’s never going to happen now. But in New York this week/the other day, the Melbourne boxer and former IBF World Middleweight Champion eagerly seized the opportunity to align himself with the great South African statesman and humanitarian.",
   date: "October 5, 2014",
   link: "http://www.foxsports.com.au/more-sports/boxing/boxer-sam-soliman-made-an-ambassador-of-legacy-of-hope-foundation/story-e6frf5h3-1227080318078?nk=cfb0d9c6994c780c6ddce669ab008471"
 },
@@ -284,7 +284,7 @@ var soliman = {
   title: "Middleweight Boxer Sam Soliman Named Legacy of Hope Ambassador",
   url: "http://legacyofhope.org/2014/10/5/SamSolimanLOHAmbassador",
   thumb_img: "soliman_hero.jpg",
-  description: "Soliman, the Melbourne boxer, Australia’s only current world champion, welcomed the opportunity to align himself with the great South African statesman and humanitarian by becoming an Ambassador for the Legacy of Hope Foundation, a group dedicated to bringing Mandela’s last living wish to fruition.",
+  description: "Soliman, the Melbourne boxer and former IBF World Middleweight Champion, welcomed the opportunity to align himself with the great South African statesman and humanitarian by becoming an Ambassador for the Legacy of Hope Foundation, a group dedicated to bringing Mandela’s last living wish to fruition.",
   stylesheet: "soliman.css",
   currentpage: "menu-news",
   type: "article"
