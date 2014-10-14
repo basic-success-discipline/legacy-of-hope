@@ -1,12 +1,38 @@
 .wrapper {
   overflow-x: hidden; }
 
+.sponsors {
+  padding-bottom: 54px; }
+
+.sponsors .top {
+  border-bottom: 1px solid #358fe3;
+  padding-bottom: 4px;
+  vertical-align: bottom;
+  position: relative;
+  margin-bottom: 70px; }
+
+.sponsors .top h1 {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-left: -2px;
+  margin-bottom: 5px; }
+
+.sponsors .top h2 {
+  font-size: 20px;
+  text-transform: lowercase;
+  font-family: "Helvetica Neue Light";
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 5px; }
+
 .hero, .herospacer {
   overflow: hidden; }
 
 .hero img, .herospacer img {
-  width: 75%;
-  float: right; }
+  width: 100%; }
 
 .page .container img {
   margin-bottom: 20px; }
@@ -39,9 +65,7 @@
 
 @media only screen and (max-width: 479px) {
   .hero img, .herospacer img {
-    width: 100%;
-    margin-left: -100px;
-    float: none; }
+    content: url("../../img/home_hero2_pp.jpg"); }
 
   .page {
     text-align: center; } }

@@ -9,7 +9,7 @@ h5 {
   width: 64%;
   float: right; }
 
-.hero.third img {
+.hero.third img, .hero.second img {
   width: 100%; }
 
 .safari.herospacer img {
@@ -383,6 +383,11 @@ h4.subheading hr {
     width: 100%;
     margin-left: -18%;
     float: none; }
+
+  .hero.second img {
+    margin-left: auto;
+    margin-right: auto;
+    content: url("../../img/home_hero2_pp.jpg"); }
 
   .hero.third img {
     width: 157%;
