@@ -45,6 +45,9 @@
     <div class="menu-dropdown ">
       <div class="wrapper-content">
         <ul class="links nav-dropdown">
+          <%if (authUser) { %>
+          <li class="menu-sponsors" style="float:left" ><a href="/sponsors">Sponsors</a></li>
+          <% } %>
           <li class="menu-home" ><a href="/">Home</a></li>
           <li class="menu-mission" ><a href="/mission">Mission</a></li>
           <li class="menu-hospital"><a href="/hospital">Hospital</a></li>
@@ -53,7 +56,7 @@
 
           <li class="menu-news" ><a href="/news">News</a></li>
           <li class="menu-press" ><a href="/press">Press</a></li>
-
+        
           <li class="open-contact"><a>Contact</a></li>
           <li class="menu-donate" ><a>Give Now</a></li>
         </ul>
