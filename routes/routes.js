@@ -7,6 +7,12 @@ var cmsgateway = require('./cmsgateway.js');
 var authUser = false;
 
 
+
+//make error page
+
+// router.use('/', utils.isAuth('sponsor', 'lohc1049'));
+
+
 /* GET METHODS */
 
 router.get('/:year/:month/:day/:article', function(req, res) {

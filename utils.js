@@ -15,4 +15,16 @@ var basicAuth = require('basic-auth');
   };
 };
 
+ exports.isAuth = function(username, password, authUser) {
+  return function(req, res, next) {
+    var user = basicAuth(req);
+
+    if (!user || user.name !== username || user.pass !== password) {
+      authUser = false;
+    }
+    authUser=true;
+    next();
+  };
+};
+
 
