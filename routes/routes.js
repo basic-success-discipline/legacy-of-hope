@@ -4,6 +4,8 @@ var router = express.Router();
 var utils = require('../utils.js');
 var cmsgateway = require('./cmsgateway.js');
 
+var authUser = false;
+
 
 /* GET METHODS */
 
@@ -17,7 +19,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '13':
         switch (req.params.article){
           case 'botlhale':
-          cmsgateway.getPageData('cms', 'botlhale', function(err, data) {res.render('botlhale', data);});
+          cmsgateway.getPageData('cms', 'botlhale', function(err, data) {data.authUser = authUser;res.render('botlhale', data);});
           break;
           default:
           res.redirect('/');
@@ -28,7 +30,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '20':
         switch (req.params.article){
           case 'TataVega':
-          cmsgateway.getPageData('cms', 'tata', function(err, data) { res.render('tata', data);});
+          cmsgateway.getPageData('cms', 'tata', function(err, data) {data.authUser = authUser; res.render('tata', data);});
           break;
           default:
           res.redirect('/');
@@ -39,7 +41,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '27':
         switch (req.params.article){
           case 'RubyBridges':
-          cmsgateway.getPageData('cms', 'ruby', function(err, data) {res.render('ruby', data);});
+          cmsgateway.getPageData('cms', 'ruby', function(err, data) {data.authUser = authUser;res.render('ruby', data);});
           break;
           default:
           res.redirect('/');
@@ -58,7 +60,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '4':
         switch(req.params.article){
           case 'ArunGandhi':
-          cmsgateway.getPageData('cms', 'arun', function(err, data) {res.render('arun', data);});
+          cmsgateway.getPageData('cms', 'arun', function(err, data) {data.authUser = authUser;res.render('arun', data);});
           break;
           default:
           res.redirect('/');
@@ -69,7 +71,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '5':
         switch(req.params.article){
           case 'SamSolimanLOHAmbassador':
-          cmsgateway.getPageData('cms', 'soliman', function(err, data) {res.render('soliman', data);});
+          cmsgateway.getPageData('cms', 'soliman', function(err, data) {data.authUser = authUser;res.render('soliman', data);});
           break;
           default:
           res.redirect('/');
@@ -81,7 +83,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         case '11':
         switch(req.params.article){
           case 'ChuckNice':
-          cmsgateway.getPageData('cms', 'chuck', function(err, data) {res.render('chuck', data);});
+          cmsgateway.getPageData('cms', 'chuck', function(err, data) {data.authUser = authUser;res.render('chuck', data);});
           break;
           default:
           res.redirect('/');
@@ -115,6 +117,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
 router.get('/', function(req, res) {
   cmsgateway.getPageData('cms', 'home', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('home', data);
     });
 });
@@ -122,6 +125,7 @@ router.get('/', function(req, res) {
 router.get('/board', function(req, res) {
   cmsgateway.getPageData('cms', 'board', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('board', data);
     });
 });
@@ -132,6 +136,7 @@ router.get('/board', function(req, res) {
 router.get('/concert', function(req, res) {
   cmsgateway.getPageData('cms', 'concert', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('concert2', data);
     });
 });
@@ -139,6 +144,7 @@ router.get('/concert', function(req, res) {
 router.get('/guitarinitiative', function(req, res) {
   cmsgateway.getPageData('cms', 'guitarinitiative', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('guitarinitiative', data);
     });
 });
@@ -146,6 +152,7 @@ router.get('/guitarinitiative', function(req, res) {
 router.get('/hospital', function(req, res) {
   cmsgateway.getPageData('cms', 'hospital', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('hospital', data);
     });
 });
@@ -160,6 +167,7 @@ router.get('/aol/legacy-of-hope-nmcht-concert.html', function(req, res) {
 router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
   cmsgateway.getPageData('cms', 'legacy-of-hope-nmcht-concert', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('legacy-of-hope-nmcht-concert', data);
     });
 });
@@ -168,6 +176,7 @@ router.get('/legacy-of-hope-nmcht-concert', function(req, res) {
 router.get('/LOHsponsors', function(req, res) {
   cmsgateway.getPageData('cms', 'LOHsponsors', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('LOHsponsors', data);
     });
 });
@@ -176,6 +185,7 @@ router.get('/LOHsponsors', function(req, res) {
 router.get('/mandeladay', function(req, res) {
   cmsgateway.getPageData('cms', 'mandeladay', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('mandeladay', data);
     });
 });
@@ -183,6 +193,7 @@ router.get('/mandeladay', function(req, res) {
 router.get('/mission', function(req, res) {
   cmsgateway.getPageData('cms', 'mission', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('mission', data);
     });
 });
@@ -190,6 +201,7 @@ router.get('/mission', function(req, res) {
 router.get('/news', function(req, res) {
   cmsgateway.getPageData('cms', 'news', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('news', data);
     });
 });
@@ -197,18 +209,20 @@ router.get('/news', function(req, res) {
 router.get('/press', function(req, res) {
   cmsgateway.getPageData('cms', 'press', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('press', data);
     });
 });
 
 
 
-
-
+ 
 router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
 router.get('/sponsors', function(req, res) {
+  authUser = true; 
   cmsgateway.getPageData('cms', 'sponsors', 
     function(err, data) {
+      data.authUser = authUser;
       res.render('sponsors', data);
     });
 });
