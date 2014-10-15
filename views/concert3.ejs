@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <!-- CSS up here -->
+ <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css"/>
+
+  <link rel="stylesheet" href="/css/pages/spotlight.css" media="screen" type="text/css" />
+  <% include partials/loh-head %>
+
+</head>
+
+<body>
+  <div class="wrapper"> 
+    <div class="wrapper-inner">
+      <% include partials/loh-menu %>
+
+        <div class="uphero">
+        <img class="stage" src="img/concert_hero_spotlight.jpg"/>
+
+        <div class="artists">
+<div class="slider noarrows">
+
+          <% for(var i=0; i<artists.length; i++) { %>
+          <div class="artist <%=artists[i].name%>">
+            <h1><big><%=artists[i].name%></big></h1>
+          </div>
+          <% } %>
+
+        </div>
+         <script type="text/javascript" src="/js/slick.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+          $('.slider').slick({
+            dots: false,
+            infinite: true,
+            vertical: true,
+            speed: 300,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            lazyLoad: 'progressive' 
+
+        });
+});
+
+  </script>
+
+  <div class="countdown inline">
+          <span class="days">
+            <div id="days">&nbsp</div>
+            <h2>d&nbsp&nbsp</h2>
+          </span>
+          <span class="hours">
+            <div id="hours">&nbsp</div>
+            <h2>h&nbsp&nbsp</h2>
+          </span>
+          <span class="minutes">
+            <div id="minutes">&nbsp</div>
+            <h2>m&nbsp&nbsp</h2>
+          </span>
+        </div>
+        <script type="text/javascript" src="/js/countdown.js"></script>
+        <link rel="stylesheet" href="/css/animate.css">
+</div>
+
+
+      </div>
+
+        <div class="wrapper-spotlight">
+        <div class="headscroller">
+        <h1>Legacy<em>Of</em>Hope</h1>
+        <h2>Nelson Mandela</h2>
+        <h3>Children's Hospital Concert</h3>
+        <h4>December 13th, 2014, New York</h4>
+        </div>
+        <p>The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa. This will be the fifth dedicated children’s hospital serving the entire continent of Africa.</p>
+        <p>The LEGACY OF HOPE NELSON MANDELA CHILDREN'S HOSPITAL CONCERT will feature 10 premier artist/performers and will be broadcast and streamed worldwide. This concert will be Interspersed with never before seen documentary footage. These vignettes celebrate Nelson Mandela’s love of children and his dream of free and accessible healthcare for the children of South Africa. </p>
+
+
+        <!--  <div class="where label">
+            <h4>Where</h4>
+            <p>Barclays Center, New York</p>
+         </div>
+         <img class="barclays" src="img/concert_barclays.jpg"/>
+         <p class="first copy">Stay tuned for more details and ticket sales information</p>
+         <p class="second copy">Please consider supporting<br><strong>The Legacy of Hope Foundation</strong></p>
+         <div class="donatebuttonholder no-p">
+      <button onclick="showDonate()" >Give Now</button> -->
+    </div>
+
+
+
+
+   <script type="text/javascript" src="/js/concert.js"></script>
+
+
+
+      <% include partials/loh-footer %>
+    </div>
+  </body>
+  </html>

@@ -1,0 +1,180 @@
+@import "../variables.scss";
+
+
+// .wrapper-inner{
+// 	background-color: black;
+// }
+img.stage{
+	width: 100%;
+	margin-bottom: -35px;
+}
+
+
+
+
+
+
+
+
+
+h1, h2, h3, h4{
+	text-align: center;
+}
+
+h1{
+	font-size: 45px;
+	margin-bottom:0;
+}
+h1 strong{
+	font-weight: normal;
+	color: $loh-blue;
+
+}
+
+h2{
+	font-size: 39px;
+     word-spacing: -1px;
+    margin-top: 1px;
+     margin-bottom: 1px;
+
+}
+
+
+ h3{
+	font-size: 23px;
+	font-weight: 300;
+	word-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+h4{
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+    color: #a0a0a0;
+    word-spacing: 2px;
+}
+
+
+p{
+	text-align: justify;
+	font-family: "Helvetica Neue Thin";
+	color: #DDDDDD;
+    font-size: 19px;
+    line-height: 1.55;
+
+}
+
+.uphero{
+	position: relative;
+}
+.artists {
+	position: absolute;
+	width: 100%;
+	top: 30%;
+}
+
+
+.artists h2{
+	font-size: 20px;
+}
+
+.artist h1 big{
+
+	background-color: rgba(21,21,21, 0.8);
+	
+	font-size: 80px;
+	// font-family: "Helvetica Neue Light";
+	color: white; 
+	line-height: 1.6;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.prefooter p{
+	color: initial;
+}
+
+
+.countdown{
+	width: 200px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: hidden;
+	   transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
+   -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+}
+
+.countdown span div, .countdown span h2{
+	display:inline;
+
+	text-transform: lowercase;
+	font-family: "Oswald";
+	font-weight: 100;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+.artist h1 big{
+	font-size: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.countdown{
+	display:none;
+}
+
+}
+
+
+//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+.artist h1 big{
+	font-size: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+	
+
+}
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+.artist h1 big{
+	font-size: 60px;
+
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+}
+
