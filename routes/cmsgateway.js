@@ -188,8 +188,17 @@ var concert = {
   type: "website",
   artists: [
     {name: "Robert Plant"},
-    {name: "Bruce Springstein"},
-    {name: "The Crystel Method"}
+    {name: "John Legend"},
+    {name: "K'naan"},
+    {name: "The Crystal Method"},
+     {name: "De La Sol"},
+    {name: "Stevie Wonder"},
+    {name: "Shaka Khan"},
+    {name: "Macklemore"},
+    {name: "Mumford & Sons"},
+    {name: "Parliament Funkadelic"},
+    {name: "Blue Man Group"},
+    {name: "Beck"}
   ]
 };
 var guitarinitiative = {

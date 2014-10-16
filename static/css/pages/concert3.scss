@@ -7,52 +7,58 @@
 img.stage{
 	width: 100%;
 	margin-bottom: -35px;
+
+	
 }
 
 
+.headscroller{
+	display:table;
+	margin-left: auto;
+	margin-right: auto;
+	height: 0;
+}
+
+.headscroller .left{
+	display:table-cell;
+	width: 50%;
+	text-align: right;
+	// background-color: green;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	padding-right: 20px;
+	padding-left: 10px;
+	border-right: 1px solid $loh-blue;
 
 
+}
 
-
-
-
-
-h1, h2, h3, h4{
+.headscroller .left h1{
+	font-size: 50px;
+	margin-bottom: -10px;
 	text-align: center;
+	font-family: "Helvetica Neue";
+
+}	
+
+
+.headscroller .left h1 big{
+	font-size: 100px;
+	line-height: 0.7;
+}	
+
+
+.headscroller .right{
+	display:table-cell;
+	width: 50%;
+	text-align:left;
+	padding-left: 25px;
+	padding-right: 15px;
+	
 }
 
-h1{
-	font-size: 45px;
-	margin-bottom:0;
-}
-h1 strong{
-	font-weight: normal;
-	color: $loh-blue;
-
-}
-
-h2{
-	font-size: 39px;
-     word-spacing: -1px;
-    margin-top: 1px;
-     margin-bottom: 1px;
-
-}
-
-
- h3{
-	font-size: 23px;
-	font-weight: 300;
-	word-spacing: 1px;
-	margin-bottom: 15px;
-}
-
-h4{
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 22px;
-    color: #a0a0a0;
-    word-spacing: 2px;
+h2, h3, h4{
+	font-weight: 100;
 }
 
 
@@ -78,18 +84,28 @@ p{
 .artists h2{
 	font-size: 20px;
 }
-
+.artist h1{
+	text-align:center;
+}
 .artist h1 big{
 
 	background-color: rgba(21,21,21, 0.8);
 	
 	font-size: 80px;
 	// font-family: "Helvetica Neue Light";
-	color: white; 
+	color: white;
 	line-height: 1.6;
 	padding-right: 30px;
 	padding-left: 30px;
+
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
+
 
 .prefooter p{
 	color: initial;
@@ -100,6 +116,7 @@ p{
 	width: 200px;
 	text-align: center;
 	margin-left: auto;
+	margin-top: -30px;
 	margin-right: auto;
 	visibility: hidden;
 	   transition: all 0.1s linear;
@@ -109,23 +126,47 @@ p{
    -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   -o-animation-delay: 2s;
+  display: none;
+
+}
+
+.countdown span{
+
+	 // background-color: rgba(21,21,21, 0.8);
+	 padding: 5px;
+	 padding-top: 2px;
+	 padding-bottom: 2px;
+
 }
 
 .countdown span div, .countdown span h2{
 	display:inline;
 
 	text-transform: lowercase;
-	font-family: "Oswald";
+	font-family: "Helvetica Neue Thin";
 	font-weight: 100;
 	font-size: 20px;
+	color: black;
+	 display: inline;
 }
 
+.countdown span.hours, .countdown span.minutes{
+	display:none;
+}
+.artistnames{
+}
 
+.artistnames {
+	font-family: "Helvetica Neue Light";
+}
 
+p.artistnames  span{
+	white-space: nowrap;
+}
 
-
-
-
+p.artistnames span:nth-child(odd){
+	color: white;
+}
 
 
 
@@ -137,14 +178,52 @@ p{
 
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
-.artist h1 big{
-	font-size: 25px;
-	padding-left: 5px;
-	padding-right: 5px;
+.artists {
+	display: none;
 }
 
-.countdown{
-	display:none;
+
+.headscroller.pp, .headscroller .left, .headscroller .right{
+	display: block;
+	box-sizing: border-box;
+
+
+}
+
+.headscroller .left{
+	border-right: none;
+	// border-bottom: 1px solid $loh-blue;
+	width: auto;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: center;
+	margin-left: auto;
+margin-right: auto;
+}
+
+
+.headscroller .right{
+	border-top: 1px solid $loh-blue;
+padding-top: 20px;
+padding-left: 0px;
+padding-right: 0px;
+margin-left: auto;
+margin-right: auto;
+width: auto;
+text-align: center;
+}
+
+.headscroller .right h2{
+	font-size: 41px;
+	margin-bottom: 5px;
+}
+
+.headscroller .right h3{
+	font-size: 23px;
+}
+.headscroller .right h4{
+	font-size: 22px;
+	color: rgb(150,150,150);
 }
 
 }
@@ -155,12 +234,54 @@ and (max-width: $phone-landscape - 1px)  {
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-.artist h1 big{
-	font-size: 40px;
-	padding-left: 10px;
-	padding-right: 10px;
+.artists {
+	display: none;
 }
-	
+
+.headscroller.pp, .headscroller .left, .headscroller .right{
+	display: block;
+	box-sizing: border-box;
+
+
+}
+
+.headscroller .left{
+	border-right: none;
+	// border-bottom: 1px solid $loh-blue;
+	width: auto;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: center;
+	margin-left: auto;
+margin-right: auto;
+}
+
+
+.headscroller .right{
+	border-top: 1px solid $loh-blue;
+padding-top: 20px;
+padding-left: 0px;
+padding-right: 0px;
+margin-left: auto;
+margin-right: auto;
+width: auto;
+text-align: center;
+}
+
+.headscroller .right h2{
+	font-size: 41px;
+	margin-bottom: 5px;
+}
+
+.headscroller .right h3{
+	font-size: 23px;
+}
+.headscroller .right h4{
+	font-size: 22px;
+	color: rgb(150,150,150);
+}
+
+
 
 }
 

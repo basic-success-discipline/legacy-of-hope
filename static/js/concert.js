@@ -18,8 +18,15 @@
 	// $('.sl .herobuffer').attr("data-" + lim.toString(), "opacity:0.99999;");
 	// $('.sl .herobuffer').attr("data-" + (lim + 100).toString(), "opacity:0;");
 
-	$('.stage').attr("data-0", "margin-bottom:-15%;");
+	$('.stage').attr("data-0", "margin-bottom:-29%;");
 	$('.stage').attr("data-" + (lim-150).toString(), "margin-bottom:0");
+
+
+	$('.headscroller').attr("data-0", "background-color:rgba(21,21,21,0.8);");
+	$('.headscroller').attr("data-" + (lim-150).toString(), "background-color:rgba(21,21,21,0);");
+
+	$('.artistnames').attr("data-0", "opacity:0;");
+	$('.artistnames').attr("data-" + (lim-250).toString(), "opacity:1.0;");
 
 	// $('.headscroller').attr("data-0", "margin-top:-160px");
 	// $('.headscroller').attr("data-" + (lim-150).toString(), "margin-top: 0px;margin-bottom: 0px;");
