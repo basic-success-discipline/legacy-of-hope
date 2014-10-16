@@ -2,7 +2,7 @@ img.stage {
   width: 100%;
   margin-bottom: -35px; }
 
-.navbar, div.menu-dropdown {
+.navbar, div.menu-dropdown, .follow-dropdown .links .social-icons {
   background-color: rgba(21, 21, 21, 0.8); }
 
 .footer, .prefooter {
