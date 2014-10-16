@@ -240,6 +240,9 @@ text-align: center;
 	font-size: 22px;
 	color: rgb(150,150,150);
 }
+h3{
+	font-size: 24px
+}
 
 }
 
@@ -296,6 +299,9 @@ text-align: center;
 	color: rgb(150,150,150);
 }
 
+h3{
+	font-size: 24px
+}
 
 
 }
@@ -312,5 +318,19 @@ and (max-width : $tablet-landscape - 1px) {
 	padding-right: 15px;
 }
 
+
+h3{
+	font-size: 24px
 }
+
+}
+
+@media only screen 
+and (min-width : $tablet-landscape) 
+and (max-width : $desktop - 1px) {
+h3{
+	font-size: 24px
+}
+
+	}
 
