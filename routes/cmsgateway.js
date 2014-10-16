@@ -183,7 +183,7 @@ var concert = {
   url: "http://legacyofhope.org/concert",
   thumb_img: "thumb_concert.jpg",
   description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
-  stylesheet: "concert3.css",
+  stylesheet: "concert2.css",
   currentpage: "menu-concert",
   type: "website",
   artists: [

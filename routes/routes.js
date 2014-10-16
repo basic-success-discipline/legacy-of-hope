@@ -146,7 +146,7 @@ router.get('/concert', function(req, res) {
   cmsgateway.getPageData('cms', 'concert', 
     function(err, data) {
       data.authUser = authUser;
-      res.render('concert3', data);
+      res.render('concert2', data);
     });
 });
 

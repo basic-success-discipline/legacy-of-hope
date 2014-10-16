@@ -22,16 +22,6 @@ img.rounded {
 .new .navbar, .new div.menu-dropdown, .new .follow-dropdown .links .social-icons {
   background-color: rgba(21, 21, 21, 0.8); }
 
-.new .footer, .new .prefooter {
-  background-color: transparent; }
-
-.new .prefooter p {
-  color: white;
-  font-style: normal; }
-
-.new .wrapper-inner, .new .wrapper-fix {
-  max-width: 100%; }
-
 .wrapper-spotlight p {
   text-align: justify;
   font-family: "Helvetica Neue Thin";

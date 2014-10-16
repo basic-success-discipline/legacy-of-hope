@@ -1297,6 +1297,9 @@ em {
 #sponsorarea {
   display: none; }
 
+.navbar, div.menu-dropdown, .follow-dropdown .links .social-icons {
+  background-color: rgba(21, 21, 21, 0.8); }
+
 @media only screen and (max-width: 479px) {
   h1 {
     text-align: center;
