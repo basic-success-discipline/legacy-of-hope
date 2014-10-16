@@ -1,7 +1,7 @@
 
-   $(document).ready(function(){
-   	$('.stage').load(function() {
-   	var lim = $('.stage').position().top + $('.stage').height();
+$(document).ready(function(){
+	$('.stage').load(function() {
+		var lim = $('.stage').position().top + $('.stage').height();
 
 
 	// $('.navbar').attr("data-" + (lim - 150).toString(), "background-color:rgb(28, 31, 38);");
@@ -30,9 +30,12 @@
 
 	// $('.headscroller').attr("data-0", "margin-top:-160px");
 	// $('.headscroller').attr("data-" + (lim-150).toString(), "margin-top: 0px;margin-bottom: 0px;");
-    var s = skrollr.init({
-    	forceHeight: false
-    });
-    });
+	if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+		skrollr.init({
+			forceHeight: false
+		});
+	}
+	
+});
 
 });
