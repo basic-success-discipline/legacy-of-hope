@@ -150,6 +150,14 @@ router.get('/concert', function(req, res) {
     });
 });
 
+router.get('/donate', function(req, res) {
+  cmsgateway.getPageData('cms', 'donate', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('donate', data);
+    });
+});
+
 router.get('/guitarinitiative', function(req, res) {
   cmsgateway.getPageData('cms', 'guitarinitiative', 
     function(err, data) {

@@ -201,6 +201,20 @@ var concert = {
     {name: "Beck"}
   ]
 };
+
+
+var donate = {
+  title: "Donate to the Legacy of Hope",
+  url: "http://legacyofhope.org/donate",
+  thumb_img: "mission_hero.jpg",
+  description: "Donate to the Legacy of Hope",
+  stylesheet: "donate.css",
+  currentpage: "menu-donate",
+  type: "website"
+};
+
+
+
 var guitarinitiative = {
   title: "The Guitar Initiative - Legacy of Hope",
   url: "http://legacyofhope.org/guitarinitiative",
@@ -346,6 +360,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'concert':
       callback(null, concert);
+      break;
+      case 'donate':
+      callback(null, donate);
       break;
       case 'guitarinitiative':
       callback(null, guitarinitiative);
