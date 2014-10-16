@@ -11,9 +11,12 @@ img.stage{
 	
 }
 
-.navbar, .footer, .prefooter{
-	background-color: $loh-black;
+.navbar{
 
+	background-color: rgba(21,21,21,0.8);
+}
+.footer, .prefooter{
+background-color: transparent;
 }
 
 .prefooter p{

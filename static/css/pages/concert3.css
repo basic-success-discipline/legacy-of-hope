@@ -2,8 +2,11 @@ img.stage {
   width: 100%;
   margin-bottom: -35px; }
 
-.navbar, .footer, .prefooter {
-  background-color: #151515; }
+.navbar {
+  background-color: rgba(21, 21, 21, 0.8); }
+
+.footer, .prefooter {
+  background-color: transparent; }
 
 .prefooter p {
   color: white;
