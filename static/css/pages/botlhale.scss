@@ -10,10 +10,7 @@ img.bhero{
 	margin-bottom: -35px;
 }
 
-.botlhale {
-	max-width: 575px;
-	color: white;
-}
+
 h1, h2, h3, h4{
 	text-align: center;
 }
@@ -36,19 +33,16 @@ h4{
 	margin-left: auto;
 }
 
-p{
-	text-align: justify;
-	font-family: "Helvetica Neue Light";
-	font-size: 16px;
-		-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.8;
-}
+// p{
+// 	text-align: justify;
+// 	font-family: "Helvetica Neue Light";
+// 	font-size: 16px;
+// 		-webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//     line-height: 1.8;
+// }
 
-p strong{
-	font-style: italic;
-	font-weight: 700;
-}
+
 
 p.center{
 	text-align: center;
@@ -93,6 +87,12 @@ a:nth-child(21){
 .botlhale p:not(.center){
 	text-align: left;
 }
+
+
+
+.no-pp{
+	display: none;
+}
 }
 
 
@@ -103,6 +103,10 @@ and (max-width: $tablet-portrait - 1px)  {
 
 
 
+
+.no-pp{
+	display: none;
+}
 
 	
 

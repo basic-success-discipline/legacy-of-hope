@@ -5,6 +5,15 @@
 }
 
 
+.wrapper-spotlight p{
+	text-align: justify;
+	font-family: "Helvetica Neue Thin";
+    color: #e6e6e6;
+    font-size: 19px;
+    line-height: 1.55;
+    text-align: left;
+    letter-spacing: 0.4px;
+}
 .md .maincopy{
 	color: white;
 	z-index: 5;
@@ -22,15 +31,23 @@
 
 
 .md .maincopy p{
-	color: white;
-	line-height: 1.8;
-	font-size: 16px;
-	font-family: "Helvetica Neue Light";
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: left;
-	z-index: 5;
+	// color: white;
+	// line-height: 1.8;
+	// font-size: 16px;
+	// font-family: "Helvetica Neue Light";
+	// font-weight: normal;
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+	// text-align: left;
+	// z-index: 5;
+
+	text-align: justify;
+	font-family: "Helvetica Neue Thin";
+    color: #e6e6e6;
+    font-size: 19px;
+    line-height: 1.55;
+    text-align: left;
+    letter-spacing: 0.4px;
 }
 
 .md .maincopy a{
@@ -45,7 +62,7 @@
 }
 
 .md .label h4{
-	font-family: "Helvetica Neue Medium";
+	font-family: "Helvetica Neue";
 	margin-bottom: 3px;
 	font-size: 15px;
 	font-weight: normal;
@@ -55,12 +72,11 @@
 
 .md .label p{
 	font-size: 14px;
-	font-family: "Helvetica Neue Light Italic";
-	font-weight: normal;
+	font-family: "Helvetica Neue Thin Italic";
+	// font-weight: normal;
 	line-height: 1.5;
 	margin-top: 3px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	color: rgb(200,200,200);
 }
 
 
@@ -132,14 +148,20 @@
 
 
 .md .copy p{
-	color: white;
-	line-height: 1.8;
-	font-size: 16px;
-	font-family: "Helvetica Neue Light";
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-weight: 400;
+	// color: white;
+	// line-height: 1.8;
+	// font-size: 16px;
+	// font-family: "Helvetica Neue Light";
+	// font-weight: normal;
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+	// font-weight: 400;
+	font-family: "Helvetica Neue Thin";
+    color: #e6e6e6;
+    font-size: 18px;
+    line-height: 1.55;
+    text-align: center;
+    letter-spacing: 0.5px;
 
 }
 
@@ -338,7 +360,7 @@ $aspect: 675px/1200px;
 
 .md .second.copy p{
 	font-size: 18px;
-	font-family: "Helvetica Neue Light";
+	font-family: "Helvetica Neue Thin";
 	font-weight: normal;
 }
 

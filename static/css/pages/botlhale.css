@@ -5,10 +5,6 @@ img.bhero {
   width: 100%;
   margin-bottom: -35px; }
 
-.botlhale {
-  max-width: 575px;
-  color: white; }
-
 h1, h2, h3, h4 {
   text-align: center; }
 
@@ -27,18 +23,6 @@ h4 {
   max-width: 430px;
   margin-right: auto;
   margin-left: auto; }
-
-p {
-  text-align: justify;
-  font-family: "Helvetica Neue Light";
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.8; }
-
-p strong {
-  font-style: italic;
-  font-weight: 700; }
 
 p.center {
   text-align: center; }
@@ -71,4 +55,10 @@ p em {
     display: none; }
 
   .botlhale p:not(.center) {
-    text-align: left; } }
+    text-align: left; }
+
+  .no-pp {
+    display: none; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .no-pp {
+    display: none; } }
