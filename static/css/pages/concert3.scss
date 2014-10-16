@@ -11,12 +11,27 @@ img.stage{
 	
 }
 
+.navbar, .footer, .prefooter{
+	background-color: $loh-black;
 
+}
+
+.prefooter p{
+	color: white;
+	font-style: normal;
+}
+
+
+
+.headscroller-wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
 .headscroller{
 	display:table;
 	margin-left: auto;
 	margin-right: auto;
-	height: 0;
 }
 
 .headscroller .left{
@@ -52,8 +67,8 @@ img.stage{
 	display:table-cell;
 	width: 50%;
 	text-align:left;
-	padding-left: 25px;
-	padding-right: 15px;
+	padding-left: 20px;
+	padding-right: 10px;
 	
 }
 
@@ -107,9 +122,9 @@ p{
 
 
 
-.prefooter p{
-	color: initial;
-}
+// .prefooter p{
+// 	color: initial;
+// }
 
 
 .countdown{

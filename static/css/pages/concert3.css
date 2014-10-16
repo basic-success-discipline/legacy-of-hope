@@ -2,11 +2,22 @@ img.stage {
   width: 100%;
   margin-bottom: -35px; }
 
+.navbar, .footer, .prefooter {
+  background-color: #151515; }
+
+.prefooter p {
+  color: white;
+  font-style: normal; }
+
+.headscroller-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; }
+
 .headscroller {
   display: table;
   margin-left: auto;
-  margin-right: auto;
-  height: 0; }
+  margin-right: auto; }
 
 .headscroller .left {
   display: table-cell;
@@ -32,8 +43,8 @@ img.stage {
   display: table-cell;
   width: 50%;
   text-align: left;
-  padding-left: 25px;
-  padding-right: 15px; }
+  padding-left: 20px;
+  padding-right: 10px; }
 
 h2, h3, h4 {
   font-weight: 100; }
@@ -68,9 +79,6 @@ p {
   padding-left: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-.prefooter p {
-  color: initial; }
 
 .countdown {
   width: 200px;

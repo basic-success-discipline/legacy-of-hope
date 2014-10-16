@@ -22,8 +22,8 @@
 	$('.stage').attr("data-" + (lim-150).toString(), "margin-bottom:0");
 
 
-	$('.headscroller').attr("data-0", "background-color:rgba(21,21,21,0.8);");
-	$('.headscroller').attr("data-" + (lim-150).toString(), "background-color:rgba(21,21,21,0);");
+	$('.headscroller-wrapper').attr("data-0", "background-color:rgba(21,21,21,1);");
+	$('.headscroller-wrapper').attr("data-" + (lim-150).toString(), "background-color:rgba(21,21,21,0);");
 
 	$('.artistnames').attr("data-0", "opacity:0;");
 	$('.artistnames').attr("data-" + (lim-250).toString(), "opacity:1.0;");
