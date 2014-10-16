@@ -10,8 +10,11 @@ var authUser = false;
 
 //make error page
 
-// router.use('/', utils.isAuth('sponsor', 'lohc1049'));
-
+//make error page
+router.get('*', function(req, res, next) {
+  authUser = utils.isAuth(req,res, 'sponsor', 'lohc1049');
+  next();
+});
 
 /* GET METHODS */
 
