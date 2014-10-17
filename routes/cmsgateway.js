@@ -1,3 +1,8 @@
+var rss = require('node-rss');
+var fs = require('fs');
+
+
+
 var newsStories = [
 
 {
@@ -66,6 +71,23 @@ var newsStories = [
 }
 
 ];
+
+
+var feed = rss.createNewFeed('Legacy of Hope News', 'http://legacyofhope.org/news',
+                            'Keep up with the Legacy of Hope',
+                            'Legacy of Hope',
+                            'http://legacyofhope.org/rss/news.xml',
+                            {});
+
+newsStories.forEach(function (story) {
+  var d = new Date(Date.parse(story.date)).toUTCString();
+    feed.addNewItem(story.title, "http://legacyofhope.org" + story.link, d, story.blurb, {});
+});
+
+
+fs.writeFile('static/rss/news.xml', rss.getFeedXML(feed), function (err) {
+  if (err) return console.log(err);
+});
 
 
 var pressStories = [
