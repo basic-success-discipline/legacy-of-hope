@@ -19,8 +19,32 @@ img.rounded {
 .wrapper-spotlight a {
   text-decoration: underline; }
 
-.new .navbar, .new div.menu-dropdown, .new .follow-dropdown .links .social-icons {
+.navbar, div.menu-dropdown, .follow-dropdown .links .social-icons {
   background-color: rgba(21, 21, 21, 0.8); }
+
+.wrapper-inner, .wrapper-fix {
+  max-width: 100%; }
+
+.wrapper-wrapper-spotlight {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  background-color: #151515; }
+
+.wrapper-spotlight {
+  margin-top: 0; }
+
+.buffer {
+  width: 100%;
+  display: block;
+  position: relative; }
+
+.buffer img {
+  width: 100%;
+  height: 80px;
+  margin-top: -80px;
+  display: block;
+  position: relative; }
 
 .wrapper-spotlight p {
   text-align: justify;

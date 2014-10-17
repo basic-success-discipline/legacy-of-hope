@@ -1,49 +1,44 @@
 
-// $(document).ready(function(){
-// 	$('.banner').load(function() {
-// 		var lim = $('.banner').position().top + $('.banner').height();
+$(document).ready(function(){
+	$('.banner').load(function() {
+		var lim = $('.banner').position().top + $('.banner').height();
+
+		if(lim >= window.innerHeight - 170){
+			var dif = -1 * (lim - (window.innerHeight - 170)) -80;
+			var dift = .2 * dif;
+			console.log(dif);
+			window.setTimeout(function(){
+				if($(window).scrollTop() < 170){
+					if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+						$('.buffer img').animate({
+							"margin-top": dif,
+
+						}, 1000, function() {});
 
 
-// 	// $('.navbar').attr("data-" + (lim - 150).toString(), "background-color:rgb(28, 31, 38);");
-// 	// $('.navbar').attr("data-" + (lim + 80).toString(), "background-color:rgb(21, 21, 21);");
+						$('.wrapper-spotlight').animate({
+							"margin-top": dift
+						}, 1200, function() {
+							$('.buffer img').attr("data-100", "margin-top: " + dif + "px;");
+							$('.buffer img').attr("data-" + (lim-150).toString(), " margin-top: -80px; ");
+							$('.wrapper-spotlight').attr("data-100", "margin-top: " + dift + "px");
+							$('.wrapper-spotlight').attr("data-" + (lim-150).toString(), "margin-top: 0");
+
+							skrollr.init({
+								forceHeight: false
+							});
+
+						});
 
 
-// 	// $('.hero img').attr("data-0"  + (lim - 300).toString(), "opacity:1.0;");
-// 	// $('.hero img').attr("data-" + lim, "opacity:0;");
+					}
+				}
+			}, 800);
+		}
+
+	});
 
 
-// 	// $('.sl .herobuffer').attr("data-0", "height:130px;margin-top: -130px;");
-// 	// $('.sl .herobuffer').attr("data-" + (lim -70).toString(), "height:200px;margin-top: -200px;");
+	$('.prefooter')
 
-// 	// $('.sl .herobuffer').attr("data-" + lim.toString(), "opacity:0.99999;");
-// 	// $('.sl .herobuffer').attr("data-" + (lim + 100).toString(), "opacity:0;");
-
-
-// 	// $('.new .banner').attr("data-0", "margin-bottom:-12%;");
-// 	// $('.new .banner').attr("data-" + (lim-150).toString(), "margin-bottom:0");
-// 	window.setTimeout(function(){
-// 		if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-// 		$('.new .wrapper-spotlight').animate({
-// 			"margin-top": -250,
-// 		}, 1000, function() {
-
-// 			$('.new .wrapper-spotlight').attr("data-0", "margin-top: -250px;");
-// 			$('.new .wrapper-spotlight').attr("data-" + (lim-150).toString(), "margin-top: 0;");
-			
-// 				skrollr.init({
-// 					forceHeight: false
-// 				});
-			
-// 		}
-// 		);
-// 	}
-// 	}, 1000);
-
-// 	// $('.headscroller').attr("data-0", "margin-top:-160px");
-// 	// $('.headscroller').attr("data-" + (lim-150).toString(), "margin-top: 0px;margin-bottom: 0px;");
-	
-
-
-// });
-
-// });
+});
