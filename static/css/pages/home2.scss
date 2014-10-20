@@ -180,7 +180,7 @@ text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 
-.container .about img{
+.container .about img.barclays{
 	float:right; 
 	width: 348px; 
 	margin-left: 20px; 
@@ -214,6 +214,7 @@ text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 .sidebar .missionstatement{
 	display:block;
 }
+
 
 
 
@@ -367,7 +368,10 @@ h4.subheading hr{
 }
 
 
-
+.twitter-timeline{
+  // margin-top: 50px;
+  // margin-bottom: 50px;
+}
 
 .latestnews  .card{
 	margin-left: 0px;
@@ -375,9 +379,9 @@ h4.subheading hr{
 	margin-bottom: 20px;
 }
 
-.latestnews  .card:nth-child(3n){
-	margin-left: 30px;
-	margin-right: 30px;
+.latestnews  .card:nth-child(2n -1 ){
+	// margin-left: 30px;
+	margin-right: 20px;
 }
 $cardpadding: 0px;
 .container .latestnews a{
@@ -475,11 +479,20 @@ $cardpadding: 0px;
 	margin-top: 3px;
 }
 
+
+.latestnews p:last-child{
+	text-align:center;
+
+}
+
+
+
 .latestnews a.readmore{
-	float: right;
+	
 	font-family: "Helvetica Neue Light";
-	padding:20px;
+	// padding:20px;
 	font-size: 19px;
+
 
 }
 
@@ -658,6 +671,10 @@ h3{
 .latestnews h4{
 	margin-bottom: 0;
 	padding-bottom: 5px;
+}
+
+.latestnews p:last-child{
+	margin-bottom: 100px;
 }
 
 
@@ -857,6 +874,12 @@ h3{
 .latestnews h4{
 	margin-bottom: 0;
 	padding-bottom: 5px;
+}
+
+
+
+.latestnews p:last-child{
+	margin-bottom: 100px;
 }
 
 // .latestnews .card:nth-child(2){
