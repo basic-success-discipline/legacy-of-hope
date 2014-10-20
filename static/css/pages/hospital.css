@@ -4,6 +4,9 @@
 .safari.herospacer img {
   visibility: hidden; }
 
+.sidebar .sidebox.execsumbox {
+  display: block; }
+
 .herospacer {
   margin-bottom: -15px;
   position: relative; }
