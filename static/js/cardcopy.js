@@ -1,6 +1,15 @@
-$(document).ready(function(){
+$(document).ready(function(){ 
+  setEllipsis();
+});
+
+window.onresize = function(event){
+  setEllipsis();
+};
+
+var setEllipsis = function(){
 
  for (var i =0; i<$('.cardcopy').length; i++){
+  alert("ellipsis");
             var divHeight = $('.card h5').eq(i).height();
             var lineHeight = parseInt($('.card h5').eq(i).css('line-height'), 10);
             var lines = Math.floor(divHeight / lineHeight);
@@ -32,4 +41,8 @@ $(document).ready(function(){
             }
             }
 
-          });
+};
+
+
+
+

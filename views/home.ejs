@@ -300,11 +300,11 @@ var qs = [];
      <div class="container">
 
 
-          <div class="latestnews withtwitterfeed" style="display: block">
+          <div class="latestnews withouttwitterfeed" style="display: block">
             <div style="width: 100%">
               <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4><p class="clickortap one">click on story to view</p>
             </div>
-            <div class="eight columns">
+            <!-- <div class="eight columns"> -->
             <% for (var i = 0; i < (stories.length <= 6 ? stories.length : 6); i++) { %>
             <a class="four columns card" href="<%= stories[i].link %>">
               <div class="stretchy-wrapper">
@@ -327,10 +327,14 @@ var qs = [];
             <p><a class="readmore" href="/news">more news  &nbsp&nbsp<i class="fa fa-angle-right"></i></a></p>
 
 
-              </div>
+             <!--  </div>
               <div class=" four columns">
               <a class="twitter-timeline" href="https://twitter.com/Mandela_LOH" data-widget-id="524304545971568640">Tweets by @Mandela_LOH</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-              </div>
+              </div> -->
+
+
+
+
               </div>
                 </div>
 

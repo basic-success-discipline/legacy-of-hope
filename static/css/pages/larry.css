@@ -1,5 +1,25 @@
 img.larry1 {
-  width: 200px;
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 20px; }
+  width: 400px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  position: relative;
+  display: block; }
+
+.larry {
+  padding-top: 50px; }
+
+.larry .spotlight .third p.caption {
+  font-size: 15px; }
+
+@media only screen and (max-width: 479px) {
+  img.larry1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 300px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  img.larry1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; } }

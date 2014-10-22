@@ -264,41 +264,60 @@ p.rightalign{text-align:right;}
 
 
 .spotlight.withoutbanner h1{
-	text-align: left;
+	text-align: center;
 	// float: left;
+	// display: inline-block;
+
+	font-size: 23px;
+	font-weight: 300;
 
 
 
 }
+
+// .spotlight.withoutbanner h2:before{
+// 	content:":";
+// 	margin-left: 8px;
+// 	margin-right: 5px;
+// }
+
+
+.spotlight.withoutbanner h2{
+text-align: center;
+margin-top: 5px;
+margin-left: 6px;
+// display: inline-block;
+font-weight: 300;
+font-size: 18px;
+	}
+
+
 .spotlight.withoutbanner .first div{
 	position: relative;
 	border-bottom: none;
 }
 
 
+
+
 	.spotlight.withoutbanner h3{
-text-align: right;
-	margin-bottom:5px;
-	margin-top: 0;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	line-height: 1;
+// text-align: right;
+// 	margin-bottom:5px;
+// 	margin-top: 0;
+// 	position: absolute;
+// 	right: 0;
+// 	bottom: 0;
+// 	line-height: 1;
+	font-size: 60px;
+	text-align: center;
 
 	}
 
 
-.spotlight.withoutbanner .first div:nth-child(2){
-	border-bottom: none;
-}
-.spotlight.withoutbanner h2{
-text-align: left;
-margin-top: 5px;
-	}
 
 
 
-.authordivider{
+.titlebanner{
 	width: 100%;
 	clear: both;
 	padding-top: 80px;
@@ -306,36 +325,38 @@ margin-top: 5px;
 	position: relative;
 }
 
-.authordivider p{
+.titlebanner p{
 	text-align:center;
 }
 
-.authordivider p:first-child{
+.titlebanner p:first-child{
 	margin-bottom: 5px;
-	font-size: 24px;
-}
-
-
-.authordivider p:last-child{
-	margin-top: 5px;
 	font-size: 17px;
 	font-family: "Helvetica Neue Thin Italic";
+	line-height: 1;
 }
 
 
 
 
-.authordivider hr {
+
+
+
+.titlebanner hr {
     border: 0;
     height: 1px;
     background-image: -webkit-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0)); 
     background-image:    -moz-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0));
     background-image:     -ms-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0)); 
     background-image:      -o-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0)); 
+    width: 70%;
+
 }
 
 
-.authordivider.bottom{
+
+
+.titlebanner.bottom{
 	padding-top: 0;
 	margin-top: 70px;
 	margin-bottom: 100px;
@@ -417,13 +438,14 @@ and (max-width: $phone-landscape - 1px)  {
 }
 
 
-img.barclays{
+img.barclays, img.barclays.withstraggler{
 	float:none;
 		text-align: center;
 		display: block;
 		margin-right: auto;
 		margin-left: auto;
 		max-width: 100%;
+
 
 }
 
