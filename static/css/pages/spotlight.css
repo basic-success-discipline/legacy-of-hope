@@ -183,6 +183,67 @@ p.rightalign {
   font-size: 14px;
   margin-bottom: 0; }
 
+.spotlight.withoutbanner {
+  width: 100%; }
+
+.pp {
+  display: none; }
+
+.spotlight.withoutbanner h1 {
+  text-align: left; }
+
+.spotlight.withoutbanner .first div {
+  position: relative;
+  border-bottom: none; }
+
+.spotlight.withoutbanner h3 {
+  text-align: right;
+  margin-bottom: 5px;
+  margin-top: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 1; }
+
+.spotlight.withoutbanner .first div:nth-child(2) {
+  border-bottom: none; }
+
+.spotlight.withoutbanner h2 {
+  text-align: left;
+  margin-top: 5px; }
+
+.authordivider {
+  width: 100%;
+  clear: both;
+  padding-top: 80px;
+  text-align: center;
+  position: relative; }
+
+.authordivider p {
+  text-align: center; }
+
+.authordivider p:first-child {
+  margin-bottom: 5px;
+  font-size: 24px; }
+
+.authordivider p:last-child {
+  margin-top: 5px;
+  font-size: 17px;
+  font-family: "Helvetica Neue Thin Italic"; }
+
+.authordivider hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(21, 21, 21, 0), rgba(53, 143, 227, 0.75), rgba(21, 21, 21, 0));
+  background-image: -moz-linear-gradient(left, rgba(21, 21, 21, 0), rgba(53, 143, 227, 0.75), rgba(21, 21, 21, 0));
+  background-image: -ms-linear-gradient(left, rgba(21, 21, 21, 0), rgba(53, 143, 227, 0.75), rgba(21, 21, 21, 0));
+  background-image: -o-linear-gradient(left, rgba(21, 21, 21, 0), rgba(53, 143, 227, 0.75), rgba(21, 21, 21, 0)); }
+
+.authordivider.bottom {
+  padding-top: 0;
+  margin-top: 70px;
+  margin-bottom: 100px; }
+
 img.barclays {
   width: 300px;
   float: right;
@@ -229,6 +290,12 @@ img.barclays.withstraggler {
 
   .spotlight h3 {
     text-align: center; }
+
+  .pp {
+    display: block; }
+
+  .no-pp {
+    display: none; }
 
   img.barclays {
     float: none;
@@ -286,7 +353,13 @@ img.barclays.withstraggler {
     width: 169px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 29px; } }
+    padding-left: 29px; }
+
+  .pp {
+    display: block; }
+
+  .no-pp {
+    display: none; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .wrapper-spotlight p.bigquote {
     font-size: 27px;

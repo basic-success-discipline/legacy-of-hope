@@ -246,6 +246,21 @@ var guitarinitiative = {
   currentpage: "menu-guitar",
   type: "article"
 };
+
+
+var larry = {
+  title: "Larry King Spotlight - Legacy of Hope",
+  url: "http://legacyofhope.org/2014/10/25/LarryKing",
+  thumb_img: "larry_suspenders.jpg",
+  description: "In support of the Nelson Mandela Children’s Hospital, Larry King shares his thoughts and experience when he had the opportunity to meet with Mr. Mandela in South Africa.",
+  stylesheet: "larry.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
+
+
+
 var legacy_of_hope_nmcht_concert = {
   title: "Sibongile - Legacy of Hope",
   url: "http://legacyofhope.org/legacy-of-hope-nmcht-concert",
@@ -391,6 +406,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'hospital':
       callback(null, hospital);
+      break;
+      case 'larry':
+      callback(null, larry);
       break;
       case 'legacy-of-hope-nmcht-concert':
       callback(null, legacy_of_hope_nmcht_concert);
