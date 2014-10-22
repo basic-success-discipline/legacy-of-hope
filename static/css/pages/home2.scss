@@ -660,7 +660,10 @@ h3{
 
 
 
-
+.latestnews.withouttwitterfeed .card:nth-child(3n){
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .latestnews .four.columns{
 	margin-left: 0px;
@@ -868,6 +871,10 @@ h3{
 
 .latestnews .four.columns{
 	margin-left: 0px;
+}
+.latestnews.withouttwitterfeed .card:nth-child(3n){
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .latestnews .clickortap.one{
