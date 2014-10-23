@@ -85,9 +85,19 @@ newsStories.forEach(function (story) {
 });
 
 
-fs.writeFile('static/rss/news.xml', rss.getFeedXML(feed), function (err) {
+var path = 'static/rss/';
+fs.mkdir(path,function(e){
+    if(!e || (e && e.code === 'EEXIST')){
+       fs.writeFile('static/rss/news.xml', rss.getFeedXML(feed), function (err) {
   if (err) return console.log(err);
 });
+    } else {
+        //debug
+        console.log(e);
+    }
+});
+
+
 
 
 var pressStories = [
