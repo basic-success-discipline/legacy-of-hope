@@ -5,6 +5,15 @@ var fs = require('fs');
 
 var newsStories = [
 
+
+{
+  title: "Larry King shares his thoughts on 'The Last Hero,' Nelson Mandela",
+  image: "/img/card_larry.jpg",
+  blurb: "In support of the Nelson Mandela Children’s Hospital, Larry King shares his thoughts and experience when he had the opportunity to meet with Mr. Mandela in South Africa.",
+  date: "October 23, 2014",
+  link: "/2014/10/25/LarryKing"
+},
+
 {
   title: "Graça Machel mourns her husband, Mandela",
   image: "/img/card_graca.jpg",

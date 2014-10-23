@@ -203,173 +203,147 @@ var qs = [];
           <p style="font-size: 15px; line-height: 1.9;"><b>EXECUTIVE PRODUCER:</b><br>This concert and media event will be produced by noted music producer, Eric Gast, CEO of the Legacy of Hope Foundation</p>
 
 
-            </div>
-
-
-            <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
-            <script type="text/javascript" src="/js/cardcopy.js"></script>
-
-
-            <% include partials/loh-sidebar %>
-
-          </div>
-
-
-
-
-
-
-          <div class="honorary container">
-            <div class="left arrow" ><i class="fa fa-chevron-left 6x"></i></div>
-            <div class="right arrow"><i class="fa fa-chevron-right 6x"></i></div>
-
-            <div style="width: 100%">
-              <h4 class="subheading">Meet the Honorary Board<hr size="2" color="#3E3F4"></h4>
-            </div>
-
-            <div class="inner-container">
-              <% var panels = Math.ceil(board.length/4); %>
-              <div class="content-container" style="width: <%= panels *100 %>%;)">
-                <% for (var i = 0; i < board.length; i++) { %>
-                <div class="three columns board">
-
-                  <div class="boardwindow">
-                    <div class="innerwindow">
-                      <img src="<%= board[i].image %>" alt="<%= board[i].name %>"/>
-                    </div>
-                  </div>
-                  <p><%= board[i].name %></p>
-                </div>
-                <% } %>
-
-              </div>
-            </div>
-          </div>
-
-          <script type="text/javascript">
-            var currentpanel = 0;
-            $('.right').click(function(){
-              if(currentpanel < <%= panels - 1 %>){
-                var scroll = $('.inner-container').width();
-                scroll += currentpanel*scroll;
-                currentpanel++;
-                $('.board').each(function() {
-                  $(this).animate({
-                   left: scroll * -1
-                 }, 500);
-                  if(currentpanel==<%= panels - 1 %>){
-                    $('.left').fadeIn(0,'linear');
-                    $('.right').fadeOut(0,'linear');
-                  }else{
-                    $('.left').fadeIn(0,'linear');
-                    $('.right').fadeIn(0,'linear');
-                  }
-                })
-              }
-            });
-
-            $('.left').click(function(){
-             if(currentpanel > 0 ){
-              var scroll = $('.inner-container').width();
-              scroll -= currentpanel*scroll;
-              currentpanel--;
-              $('.board').each(function() {
-                $(this).animate({
-                 left: scroll
-               }, 500);
-                if(currentpanel==0){
-                  $('.left').fadeOut(0,'linear');
-                  $('.right').fadeIn(0,'linear');
-                }else{
-                  $('.left').fadeIn(0,'linear');
-                  $('.right').fadeIn(0,'linear');
-                }
-              })
-            }
-          });
-            $( document ).ready(function() {
-              $('.left').fadeOut(0,'linear');
-            });
-
-
-
-          </script>
-
-    <div class="container birthday">
-<div class="four columns offset-by-one">
-<img src="/img/gupta_birthday.jpg"/>
-</div>
-<div class="five columns offset-by-one">
-<h1>Happy Birthday Dr. Sanjay Gupta!</h1>
-<p>Dr. Gupta is an American neurosurgeon, national bestselling author, and Emmy award-winnning chief medical correspondent for CNN. His professional expertise and personal passion for healthcare make him a valued member of the Legacy of Hope Honorary Board, and we look forward to continuing our work with him to bring the Nelson Mandela Children’s Hospital into existence in South Africa!</p>
-</div>
-</div>
-
-     <div class="container">
-
-
-          <div class="latestnews withtwitterfeed" style="display: block">
-            <div style="width: 100%">
-              <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4><p class="clickortap one">click on story to view</p>
-            </div>
-            <div class="eight columns">
-            <% for (var i = 0; i < (stories.length <= 6 ? stories.length : 6); i++) { %>
-            <a class="four columns card" href="<%= stories[i].link %>">
-              <div class="stretchy-wrapper">
-                <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
-              </div>
-              <h5><%= stories[i].title %></h5>
-              <p class="cardcopy"><%= stories[i].blurb %></p>
-
-              <hr style="border: dashed 1px #DEDEDE; "/>
-              <div class="bottom">
-                <span>
-                  <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
-                  <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
-                </span>
-              </div>
-              <hr style="border: solid 1px #DEDEDE;"/>
-
-            </a>
-            <% } %>
-            <p><a class="readmore" href="/news">more news  &nbsp&nbsp<i class="fa fa-angle-right"></i></a></p>
-
-
-              </div>
-              <div class=" four columns">
-              <a class="twitter-timeline" href="https://twitter.com/Mandela_LOH" data-widget-id="524304545971568640">Tweets by @Mandela_LOH</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-              </div>
-
-
-
-
-              </div>
-                </div>
-
-
-
-
-
-
-
-
         </div>
 
 
-        
+        <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
+        <script type="text/javascript" src="/js/cardcopy.js"></script>
 
-        <div class="sponsors">
-          <div class="container">
-            <div class="sponsor aol">
-              <span>
-                <div>
-                  <img src="/img/aol_logo.png" alt="AOL logo"/>
-                  <h5>The AOL Cause Module is a proud provider of complimentary media services
-                    <nobr>for <strong>Legacy<em>Of</em>Hope</strong></nobr></h5>
-                  </div>
-                </span>
+
+        <% include partials/loh-sidebar %>
+
+      </div>
+
+
+
+
+      <div class="honorary container">
+        <div style="width: 100%">
+          <h4 class="subheading">Meet the Honorary Board<hr size="2" color="#3E3F4"></h4>
+        </div>
+        <div class="noarrows hslider">
+          <% for (var i = 0; i < board.length; i++) { %>
+          <div class="board">
+
+            <div class="boardwindow">
+              <div class="innerwindow">
+                <img src="<%= board[i].image %>" alt="<%= board[i].name %>"/>
               </div>
             </div>
+            <p><%= board[i].name %></p>
+          </div>
+          <% } %>
+
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+          $('.hslider').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            lazyLoad: 'progressive',
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                swipe: true,
+                speed: 600,
+              }
+            
+            
+            }]
+          });
+        });
+      </script>
+
+
+
+
+<div class="container birthday">
+  <div class="four columns offset-by-one">
+    <img src="/img/gupta_birthday.jpg"/>
+  </div>
+  <div class="five columns offset-by-one">
+    <h1>Happy Birthday Dr. Sanjay Gupta!</h1>
+    <p>Dr. Gupta is an American neurosurgeon, national bestselling author, and Emmy award-winnning chief medical correspondent for CNN. His professional expertise and personal passion for healthcare make him a valued member of the Legacy of Hope Honorary Board, and we look forward to continuing our work with him to bring the Nelson Mandela Children’s Hospital into existence in South Africa!</p>
+  </div>
+</div>
+
+<div class="container">
+
+
+  <div class="latestnews withtwitterfeed" style="display: block">
+    <div style="width: 100%">
+      <h4 class="subheading">Latest News<hr size="2" color="#3E3F4"></h4><p class="clickortap one">click on story to view</p>
+    </div>
+    <div class="eight columns">
+      <% for (var i = 0; i < (stories.length <= 6 ? stories.length : 6); i++) { %>
+      <a class="four columns card" href="<%= stories[i].link %>">
+        <div class="stretchy-wrapper">
+          <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
+        </div>
+        <h5><%= stories[i].title %></h5>
+        <p class="cardcopy"><%= stories[i].blurb %></p>
+
+        <hr style="border: dashed 1px #DEDEDE; "/>
+        <div class="bottom">
+          <span>
+            <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
+            <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
+          </span>
+        </div>
+        <hr style="border: solid 1px #DEDEDE;"/>
+
+      </a>
+      <% } %>
+      <p><a class="readmore" href="/news">more news  &nbsp&nbsp<i class="fa fa-angle-right"></i></a></p>
+
+
+    </div>
+    <div class=" four columns">
+      <a class="twitter-timeline" href="https://twitter.com/Mandela_LOH" data-widget-id="524304545971568640">Tweets by @Mandela_LOH</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div class="sponsors">
+  <div class="container">
+    <div class="sponsor aol">
+      <span>
+        <div>
+          <img src="/img/aol_logo.png" alt="AOL logo"/>
+          <h5>The AOL Cause Module is a proud provider of complimentary media services
+            <nobr>for <strong>Legacy<em>Of</em>Hope</strong></nobr></h5>
+          </div>
+        </span>
+      </div>
+    </div>
 
 <!-- 
             <div class="container">

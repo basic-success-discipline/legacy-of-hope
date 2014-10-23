@@ -155,33 +155,19 @@ h4.subheading hr {
   margin-left: 1px;
   margin-right: 1px; }
 
-.honorary .arrow {
-  position: absolute;
-  top: 53%;
-  cursor: pointer; }
+.honorary {
+  margin-bottom: 150px; }
 
-.honorary .arrow h3 {
-  font-weight: bold; }
+.slick-dots {
+  bottom: -10px; }
 
-.honorary .right {
-  right: -15px; }
-
-.honorary .left {
-  left: -30px; }
-
-.honorary .inner-container {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 200px;
-  margin-left: -10px;
-  width: 100%; }
-
-.honorary .content-container {
-  height: 100%; }
+.honorary .board {
+  width: 25%;
+  position: relative; }
 
 .boardwindow {
-  width: 210px;
-  height: 153px;
+  width: 100%;
+  height: 175px;
   box-sizing: border-box;
   padding: 10px; }
 
@@ -189,9 +175,10 @@ h4.subheading hr {
   border-radius: 6px;
   height: 100%;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
-.honorary .board .stretchy-wrapper {
+.honorary .stretchy-wrapper {
   width: 100%;
   padding-bottom: 73%;
   overflow: hidden;
@@ -199,19 +186,29 @@ h4.subheading hr {
   border-radius: 6px;
   box-sizing: border-box; }
 
-.honorary .board img {
+.honorary img {
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  zoom: 0; }
 
-.honorary .board p {
+.honorary p {
   margin-top: 10px;
   text-align: center;
   font-family: "Open Sans";
   font-size: 13px;
   font-weight: 400; }
+
+.honorary .slick-slide img {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none; }
+
+.honorary .slick-dots li button:before {
+  font-size: 16px; }
 
 .birthday {
   margin-top: 80px;
@@ -465,50 +462,11 @@ h4.subheading hr {
     text-align: center;
     display: block; }
 
-  .honorary .arrow {
-    font-size: 30px;
-    z-index: 100;
-    top: 49%; }
+  .honorary .boardwindow {
+    height: 216px; }
 
-  .honorary .left.arrow {
-    left: 30px; }
-
-  .honorary .right.arrow {
-    right: 30px; }
-
-  .honorary .inner-container {
-    margin-left: 0px; }
-
-  .honorary .inner-container {
-    height: auto; }
-
-  .honorary.container .three.columns {
-    width: 150px;
-    padding-bottom: 30px; }
-
-  .honorary.container .board img {
-    border-radius: 6px;
-    margin-bottom: 0;
-    display: block; }
-
-  .honorary .stretchy-wrapper {
-    padding-left: 15px;
-    padding-right: 15px; }
-
-  .boardwindow {
-    width: 150px;
-    height: 109px;
-    box-sizing: border-box;
-    padding: 10px; }
-
-  .boardwindow .innerwindow {
-    border-radius: 6px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden; }
-
-  .honorary .board:nth-child(1) p {
-    margin-bottom: 17px; }
+  .honorary {
+    margin-bottom: 0px; }
 
   .sponsors {
     height: 180px; }
@@ -530,6 +488,9 @@ h4.subheading hr {
 
   h4 {
     text-align: center; }
+
+  .honorary .boardwindow {
+    height: 291px; }
 
   .heroblurb h3 {
     text-align: center; }
@@ -603,27 +564,8 @@ h4.subheading hr {
   .latestnews p:last-child {
     margin-bottom: 100px; }
 
-  .honorary .arrow {
-    font-size: 30px;
-    top: 49%; }
-
-  .honorary .inner-container {
-    margin-left: 0px; }
-
-  .honorary .inner-container {
-    height: auto; }
-
-  .honorary.container .three.columns {
-    width: 210px; }
-
-  .honorary.container .board img {
-    border-radius: 6px;
-    margin-bottom: 0;
-    display: block; }
-
-  .honorary .stretchy-wrapper {
-    padding-left: 15px;
-    padding-right: 15px; }
+  .honorary {
+    margin-bottom: 0px; }
 
   h4.subheading {
     text-align: center;
@@ -644,6 +586,9 @@ h4.subheading hr {
 
   .honorary .left.arrow {
     left: 30%; }
+
+  .honorary .boardwindow {
+    height: 140px; }
 
   .heroblurb p {
     line-height: 1.1em;
