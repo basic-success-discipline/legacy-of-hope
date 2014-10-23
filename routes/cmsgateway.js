@@ -174,7 +174,7 @@ var home = {
  ],
  stories: newsStories,
 quotes:[
-{author: "Graca Machel, the wife of the late Mr. Nelson Mandela   - June 2014", quote: "I am inspired by his rich legacy that promotes justice, compassion, and solidarity. Children were very dear to Madiba and his last wish was to build the Nelson Mandela Children’s Hospital."},
+{author: "Graça Machel, the wife of the late Mr. Nelson Mandela   - June 2014", quote: "I am inspired by his rich legacy that promotes justice, compassion, and solidarity. Children were very dear to Madiba and his last wish was to build the Nelson Mandela Children’s Hospital."},
 {author: "Sibongile Mkhabela", quote: "Tata felt very strongly about the hospital. His heart yearned for it."},
 {author: "Nelson Mandela", quote: "The true character of a society is revealed in how it treats its children."},
 {author: "Nelson Mandela", quote: "History will judge us by the difference we make in the everyday lives of children."},
@@ -270,7 +270,7 @@ var graca = {
   thumb_img: "card_graca.jpg",
   description: "Christiane Amanpour speaks with Graça Machel about her late husband, her first TV interview after six months of mourning.",
   stylesheet: "graca.css",
-  currentpage: "menu-news",
+  currentpage: "menu-press",
   type: "article"
 };
 
