@@ -4,17 +4,13 @@ var router = express.Router();
 var utils = require('../utils.js');
 var cmsgateway = require('./cmsgateway.js');
 
-var authUser = false;
+var authUser = true;
 
 
-
-//make error page
-
-//make error page
-router.get('*', function(req, res, next) {
-  authUser = utils.isAuth(req,res, 'sponsor', 'lohc1049');
-  next();
-});
+// router.get('*', function(req, res, next) {
+//   authUser = utils.isAuth(req,res, 'sponsor', 'lohc1049');
+//   next();
+// });
 
 /* GET METHODS */
 
@@ -270,7 +266,7 @@ router.get('/press', function(req, res) {
  
 router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
 router.get('/sponsors', function(req, res) {
-  authUser = true; 
+  // authUser = true; 
   cmsgateway.getPageData('cms', 'sponsors', 
     function(err, data) {
       data.authUser = authUser;
