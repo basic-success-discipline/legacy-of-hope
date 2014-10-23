@@ -23,6 +23,28 @@ router.get('/:year/:month/:day/:article', function(req, res) {
   switch (req.params.year){
     case '2014':
     switch (req.params.month){
+
+      case '6':
+      switch (req.params.day){
+        case '30':
+        switch (req.params.article){
+          case 'GraçaMachel':
+          cmsgateway.getPageData('cms', 'graca', function(err, data) {data.authUser = authUser;res.render('graca', data);});
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+
+        
+        default:
+        res.redirect('/');
+        break;
+      }
+      break;
+
+
       case '9':
       switch (req.params.day){
         case '13':

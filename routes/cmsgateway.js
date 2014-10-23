@@ -6,6 +6,14 @@ var fs = require('fs');
 var newsStories = [
 
 {
+  title: "Graça Machel mourns her husband, Mandela",
+  image: "/img/card_graca.jpg",
+  blurb: "Christiane Amanpour speaks with Graça Machel about her late husband, her first TV interview after six months of mourning.",
+  date: "June 30, 2014",
+  link: "/2014/6/30/GraçaMachel"
+},
+
+{
   title: "Chuck Nice Spotlight",
   image: "/img/card_chuck.jpg",
   blurb: "In support of the Legacy of Hope Foundation and the Nelson Mandela Children’s Hospital, Chuck Nice was the emcee for both the 2013 and 2014 Legacy of Hope Mandela Day events held in New York and Los Angeles. At both events, the audience certainly laughed, but they were also given a strong and meaningful message: Nelson Mandela had a final wish. It’s now our turn to work hard and honor this wish and his legacy for future generations.",
@@ -92,7 +100,7 @@ fs.mkdir(path,function(e){
   if (err) return console.log(err);
 });
     } else {
-        //debug
+        //debug0
         console.log(e);
     }
 });
@@ -101,6 +109,14 @@ fs.mkdir(path,function(e){
 
 
 var pressStories = [
+
+{
+  title: "Graça Machel mourns her husband, Mandela",
+  image: "/img/card_graca.jpg",
+  blurb: "Christiane Amanpour speaks with Graça Machel about her late husband, her first TV interview after six months of mourning.",
+  date: "June 30, 2014",
+  link: "https://www.youtube.com/watch?v=8OhJwkBv1Fs#t=21"
+},
 
 {
   title: "Boxer Sam Soliman made an ambassador of Legacy of Hope Foundation",
@@ -243,6 +259,18 @@ var donate = {
   stylesheet: "donate.css",
   currentpage: "menu-donate",
   type: "website"
+};
+
+
+
+var graca = {
+  title: "Graça Machel mourns her husband, Mandela",
+  url: "http://legacyofhope.org/2014/6/30/GraçaMachel",
+  thumb_img: "card_graca.jpg",
+  description: "Christiane Amanpour speaks with Graça Machel about her late husband, her first TV interview after six months of mourning.",
+  stylesheet: "graca.css",
+  currentpage: "menu-news",
+  type: "article"
 };
 
 
@@ -410,6 +438,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'donate':
       callback(null, donate);
+      break;
+      case 'graca':
+      callback(null, graca);
       break;
       case 'guitarinitiative':
       callback(null, guitarinitiative);
