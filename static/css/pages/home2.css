@@ -376,6 +376,9 @@ h4.subheading hr {
   margin-left: auto;
   margin-right: auto; }
 
+.birthday p {
+  font-size: 20px; }
+
 .aol p {
   font-size: 12px; }
 
@@ -647,7 +650,10 @@ h4.subheading hr {
     font-size: 15px; }
 
   .hero.first .heroblurb {
-    left: 8%; } }
+    left: 8%; }
+
+  .birthday p {
+    font-size: 16px; } }
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
   .heroblurb h3 {
     font-size: 24px; } }
