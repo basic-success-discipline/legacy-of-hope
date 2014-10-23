@@ -115,7 +115,8 @@ var pressStories = [
   image: "/img/card_graca.jpg",
   blurb: "Christiane Amanpour speaks with Graça Machel about her late husband, her first TV interview after six months of mourning.",
   date: "June 30, 2014",
-  link: "https://www.youtube.com/watch?v=8OhJwkBv1Fs#t=21"
+  link: "/2014/6/30/GraçaMachel"
+
 },
 
 {
