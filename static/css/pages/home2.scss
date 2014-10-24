@@ -74,6 +74,19 @@ h5{
     background-image:      -o-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
 }
 
+.heroblurbbg2{
+	position:absolute;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0%;
+	  background-image: -webkit-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    background-image:    -moz-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    background-image:     -ms-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    background-image:      -o-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+}
+
 
 .hero.second .heroblurb {
 	color: white;
