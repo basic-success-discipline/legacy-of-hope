@@ -82,7 +82,8 @@ h5 {
 .hero.second.alt .heroblurb p {
   max-width: 40%;
   margin-left: auto;
-  margin-right: 0; }
+  margin-right: 0;
+  text-align: right; }
 
 .hero.third .heroblurb {
   width: 100%;
