@@ -61,7 +61,18 @@ h5{
 	position: relative;
 }
 
-
+.heroblurbbg{
+	position:absolute;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0%;
+	  background-image: -webkit-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    background-image:      -o-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+}
 
 
 .hero.second .heroblurb {
@@ -71,6 +82,10 @@ h5{
 	left: 0;
 	top: 20%;
 	display: none;
+}
+
+.hero.second.alt .heroblurb {
+	text-align: right;
 }
 
 
@@ -92,6 +107,22 @@ h5{
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
+
+
+.hero.second.alt .heroblurb {
+	text-align: right;
+}
+.hero.second.alt .heroblurb h3{
+	max-width: 45%;
+	margin-left: auto;
+	margin-right: 0;
+}
+.hero.second.alt .heroblurb p{
+	max-width: 40%;
+	margin-left: auto;
+	margin-right: 0;
+}
+
 
 
 .hero.third .heroblurb{
@@ -596,7 +627,9 @@ h3{
 .hero.first img{
 	margin-left: 0;
 }
-
+.hero.second .heroblurbbg{
+	display: none;
+}
 
 	//  HEROBLURB
 	.heroblurb {
@@ -753,6 +786,10 @@ h3{
 	display: none;
 }
 
+
+.hero.second .heroblurbbg{
+	display: none;
+}
 .hero.first .heroblurb{
 	width: 100%;
 	left: 0;
@@ -852,7 +889,7 @@ h3{
 
 .honorary{
 		margin-bottom: 0px;
-	}
+}
 
 
 h4.subheading{
