@@ -1,0 +1,66 @@
+@import "variables.scss";
+
+
+// STICKY FOOTER
+
+* {
+  margin: 0;
+}
+html, body, .wrapper, .wrapper-inner {
+  height: 100%;
+}
+
+
+
+.wrapper-inner {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto (-2 * $foot-height); /* the bottom margin is the negative value of the footer's height */
+}
+.push {
+  height: 2 * $foot-height; /* .push must be the same height as .footer */
+}
+
+
+.prefooter, .footer{ 
+  z-index: 5;
+  max-width: $wrapper-inner-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+.push {
+  height: 2 * $pp-foot-height; /* .push must be the same height as .footer */
+}
+.wrapper-inner{
+	margin: 0 auto (-2 * $pp-foot-height)
+}
+}
+
+
+//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+}
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+
+
+
+}
+

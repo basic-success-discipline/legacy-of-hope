@@ -1,0 +1,31 @@
+* {
+  margin: 0; }
+
+html, body, .wrapper, .wrapper-inner {
+  height: 100%; }
+
+.wrapper-inner {
+  min-height: 100%;
+  height: auto !important;
+  /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -120px;
+  /* the bottom margin is the negative value of the footer's height */ }
+
+.push {
+  height: 120px;
+  /* .push must be the same height as .footer */ }
+
+.prefooter, .footer {
+  z-index: 5;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media only screen and (max-width: 479px) {
+  .push {
+    height: 200px;
+    /* .push must be the same height as .footer */ }
+
+  .wrapper-inner {
+    margin: 0 auto -200px; } }
