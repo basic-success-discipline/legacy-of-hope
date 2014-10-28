@@ -2,9 +2,61 @@
   background-color: white; }
 
 .page {
-  text-align: center;
-  color: black; }
+  background-color: transparent; }
 
-.page .contactinfo {
-  color: black;
-  clear: both; }
+.donatepage .top {
+  padding-bottom: 20px;
+  vertical-align: bottom;
+  position: relative;
+  margin-bottom: 0px; }
+
+.donatepage .top h1 {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-left: -2px;
+  margin-bottom: 5px; }
+
+.donatepage .top hr {
+  border: 0;
+  height: 1px;
+  background-color: rgba(53, 143, 227, 0.5);
+  background-image: -moz-linear-gradient(left, rgba(21, 21, 21, 0), rgba(53, 143, 227, 0.5), rgba(21, 21, 21, 0));
+  background-image: -ms-linear-gradient(left, rgba(21, 21, 21, 0), rgba(53, 143, 227, 0.5), rgba(21, 21, 21, 0));
+  background-image: -o-linear-gradient(left, rgba(21, 21, 21, 0), rgba(53, 143, 227, 0.5), rgba(21, 21, 21, 0));
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.donatepage .top p {
+  font-size: 20px; }
+
+.option .amount {
+  text-align: center;
+  background-color: #151515;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.option .amount h1 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 15px; }
+
+.optionscontainer {
+  position: relative;
+  height: 100%; }
+
+.option {
+  position: relative; }
+
+.option .amount h2 {
+  color: white;
+  font-size: 40px; }
+
+.container .columns {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.container .four.columns:nth-child(3n-1) {
+  margin-left: 30px;
+  margin-right: 30px; }

@@ -6,7 +6,7 @@
   <% include partials/loh-head %>
 
 
-   <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
 
 </head>
 
@@ -15,43 +15,126 @@
     <div class="wrapper-inner">
       <% include partials/loh-menu %>
 
-        <div class="page container">
+      <div class="page container">
 
-            <h1>Support the Legacy of Hope Foundation</h1>
-            <div class="donate-cells">
-              <div class="six columns">
-                <h3>Paypal</h3>
-                <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="GE2HK3NWKFER2">
-                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
+
+        <div class="top">
+          <h1>Make a Donation</h1>
+          <!-- <h2>Legacy<em>Of</em>Hope</h2> -->
+          <p>Make a donation today to help our cause. Below are several key area's in which we need your support and your donations. Integer posuere erat a ante venenatis dapibus posuere velit aliquet</p>
+          <hr>
+        </div>
+        <div class="optionscontainer">
+        <% for (var i = 0; i < donate_options.length; i++) { %>
+              <div class="four columns option">
+                <div class="amount">
+                  <h1><%=donate_options[i].name %></h1>
+                  <h2>$<%=donate_options[i].amount %></h2>
+                </div>
+                <div class="stats">
+                   <% for (var j = 0; j < donate_options[i].stats.length; j++) { %>
+                    <span>
+                      <h3><%= donate_options[i].stats[j] %></h3>
+                    </span>
+                   <% } %>
+                   <span>
+                     <h3>Donate</h3>
+                   </span>
+                </div>
               </div>
-              <div class="five columns">
-                <h3>TextCode</h3>
-                <p >Text 'Mandela' to 50555</p>
-                <p style="font-size: 14px">to donate $10</p>
+              <% } %>
               </div>
-            </div>
-            <div class="donate-spacer">&nbsp;</div>
-            <lr></lr>
 
-            <div class="contactinfo">
-              <h1>For donation information, sponsorship or media opportunities, please contact:</h1><br>
-              <h2>Jennifer Trubenbach, President</h2>
-              <h2>Legacy of Hope Foundation </h2>
-              <h2>(949) 463-1795 </h2>
-              <h2>jtrubenbach@legacyofhopeconcerts.org</h2>
-              <h2>Fed Tax ID#: 46-0826445</h2>
+<!-- 
+        <div class="textcode outer">
+          <span>
+            <div>
+              <h3>Text <white>'Mandela'</white> to 50555 to donate $10 to <b>Legacy<em>of</em>Hope</b></h3>
             </div>
+          </span>
+        </div>
 
+        <div class="or ">
+          <span>
+            <div>
+              <h3>- or -</h3>
+            </div>
+          </span>
+        </div>
+
+
+         <div class="paypal outer">
+          <span>
+            <div>
+              <h3>Donate with Paypal</h3>
+            </div>
+          </span>
+        </div> -->
+
+
+
+<!-- 
+        <div class="donate-cells">
+          <div class="six columns">
+            <h3>Paypal</h3>
+            <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="GE2HK3NWKFER2">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
+          <div class="five columns">
+            <h3>TextCode</h3>
+            <p >Text 'Mandela' to 50555</p>
+            <p style="font-size: 14px">to donate $10</p>
+          </div>
+        </div>
+        <div class="donate-spacer">&nbsp;</div>
+        <lr></lr>
+
+        <div class="contactinfo">
+          <h1>For donation information, sponsorship or media opportunities, please contact:</h1><br>
+          <h2>Jennifer Trubenbach, President</h2>
+          <h2>Legacy of Hope Foundation </h2>
+          <h2>(949) 463-1795 </h2>
+          <h2>jtrubenbach@legacyofhopeconcerts.org</h2>
+          <h2>Fed Tax ID#: 46-0826445</h2>
+        </div>
+ -->
+
+<!-- 
 </div>
 
+            <div class="container swag" >
 
-<div class="push"></div>
+        <p class="clickortap one">click on story to view</p>
+              <% for (var i = 0; i < swag.length; i++) { %>
+              <a class="four columns card" >
+                <div class="stretchy-wrapper">
+                  <img src="<%= swag[i].pic %>" alt="<%= swag[i].name %>"/>
+                </div>
+                <h5 class="cardhead"><%= swag[i].name %></h5>
+                <p class="cardcopy"><%= swag[i].blurb %></p>
+
+                <hr style="border: dashed 1px #DEDEDE; "/>
+                <div class="bottom">
+                  <span>
+                    <p class="date" style="vertical-align: text-top;">$<%= swag[i].price %></p>
+                  </span>
+                </div>
+                <hr style="border: solid 1px #DEDEDE;"/>
+
+              </a>
+              <% } %>
+            </div>
+
+          </div> -->
+
+
+          <div class="push"></div>
+        </div></div>
 </div>
-
         <% include partials/loh-footer %>
         
       </div>

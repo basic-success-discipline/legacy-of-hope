@@ -146,6 +146,85 @@ var pressStories = [
 ];
 
 
+var swag = [
+
+{
+  name: "Bumper Sticker",
+  price: 10,
+  pic: "/img/swag_bumpersticker.jpg",
+  blurb: "Be the envy of cars everywhere with this LOH bumper sticker."
+},
+
+
+{
+  name: "Shirt",
+  price: 50,
+  pic: "/img/swag_shirt.jpg",
+  blurb: "Receive this totally dope LOH shirt as a gift when you select this donation option."
+},
+
+{
+  name: "Turtle",
+  price: 300,
+  pic: "/img/swag_turtle.jpg",
+  blurb: "Nelson Mandela loved children. Children love turtles. You do the math."
+},
+
+{
+  name: "Wing of the Nelson Mandela Children's Hospital",
+  price: 20000000,
+  pic: "/img/swag_wing.jpg",
+  blurb: "$20 MILLION! SERIOUSLY?! I'm sure we can get a wing of the hospital named after you. At least the cafeteria or the roof access hatch or something."
+},
+
+];
+
+
+var donate_options= [
+
+  {
+    name: "Clean a Beach",
+    amount: 9,
+    description: "Help provide essential tools needed to clean up beaches",
+    stats:[
+      "One Off Donation",
+      "10kg Trash Removal",
+      "Avatar on Site",
+      "Photo Updates",
+      "Kause Newsletter"
+    ]
+  },
+
+{
+    name: "Repair a Reef",
+    amount: 22,
+    description: "Provides much needed tools needed to repair barrier reefs.",
+    stats:[
+      "One Off Donation",
+      "10kg Trash Removal",
+      "Fills 1 Scuba tank",
+       "Avatar on Site",
+      "Photo Updates",
+      "Kause Newsletter"
+    ]
+  },
+
+  {
+    name: "Resuscitate a River",
+    amount: 34,
+    description: "Help provide essential tools to resuscitate our rivers.",
+    stats:[
+      "One Off Donation",
+      "10kg Trash Removal",
+       "Avatar on Site",
+      "Photo Updates",
+      "Kause Newsletter"
+    ]
+  }
+
+]
+
+
 
 
 var home = {
@@ -268,7 +347,9 @@ var donate = {
   description: "Donate to the Legacy of Hope",
   stylesheet: "donate.css",
   currentpage: "menu-donate",
-  type: "website"
+  type: "website",
+  swag: swag,
+  donate_options: donate_options
 };
 
 
