@@ -2,13 +2,15 @@
   background-color: white; }
 
 .page {
-  background-color: transparent; }
+  background-color: transparent;
+  display: block;
+  padding-bottom: 54px; }
 
 .donatepage .top {
   padding-bottom: 20px;
   vertical-align: bottom;
   position: relative;
-  margin-bottom: 0px; }
+  margin-bottom: 20px; }
 
 .donatepage .top h1 {
   text-align: left;
@@ -31,6 +33,15 @@
 .donatepage .top p {
   font-size: 20px; }
 
+.option {
+  background-color: #f2f3f3;
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  position: relative;
+  height: 100%; }
+
 .option .amount {
   text-align: center;
   background-color: #151515;
@@ -44,19 +55,59 @@
 
 .optionscontainer {
   position: relative;
-  height: 100%; }
-
-.option {
-  position: relative; }
+  display: table; }
 
 .option .amount h2 {
   color: white;
   font-size: 40px; }
 
+.option .stats {
+  text-align: center; }
+
+.option .stats div {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.option .stats div:first-child {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.option .stats p {
+  height: 100%;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+.option .stats p i {
+  font-family: "Helvetica Neue Thin Italic"; }
+
+.option .button {
+  background-color: #358fe3; }
+
 .container .columns {
   margin-left: 0px;
   margin-right: 0px; }
 
-.container .four.columns:nth-child(3n-1) {
+.option:hover {
+  box-shadow: 0px 0px 5px #888888;
+  background-color: white; }
+
+.container .four.columns:nth-child(2) {
   margin-left: 30px;
   margin-right: 30px; }
+
+.option:nth-child(2) {
+  box-shadow: 0px 0px 5px #888888;
+  background-color: white; }
+
+.option:nth-child(2) .amount {
+  background-color: #358fe3; }
+
+.container .four.columns:not(:nth-child(2)) {
+  margin-top: 10px;
+  margin-bottom: 20px; }
