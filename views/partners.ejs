@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <% include partials/loh-head %>
+
+
+ <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
+
+   <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+  <div class="wrapper"> 
+    <div class="wrapper-inner">
+      <% include partials/loh-menu %>
+
+
+
+
+      <!-- PAGE -->
+      <div class="safari-fix-parallax-wrapper">
+        <div class="page partners">
+        <div class="container">
+        <div class="top twelve columns">
+        <h1>Partners</h1>
+        <h2>working with Legacy<em>Of</em>Hope</h2>
+        </div>
+        
+        <% for (var i = 0; i< partnerlist.length; i++) {%>
+          <a class="three columns partner" href="%<= partnerlist[i].link">
+           
+            <img src="<%= partnerlist[i].logo %>"/>
+            
+          </a>
+
+        <% } %>
+          </div>
+        
+<div class="push"></div>
+</div>
+</div>
+        <% include partials/loh-footer %>
+     
+    </div>
+  </body>
+  </html>

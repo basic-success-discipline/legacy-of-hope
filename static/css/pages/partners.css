@@ -1,0 +1,86 @@
+.partners .top {
+  border-bottom: 1px solid #358fe3;
+  padding-bottom: 4px;
+  vertical-align: bottom;
+  position: relative;
+  margin-bottom: 70px; }
+
+.partners .top h1 {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-left: -2px;
+  margin-bottom: 5px; }
+
+.partners .top h2 {
+  font-size: 20px;
+  text-transform: lowercase;
+  font-family: "Helvetica Neue Light";
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 5px; }
+
+.partners .partner {
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  height: 220px;
+  line-height: 170px;
+  background-color: #f2f3f3;
+  vertical-align: middle;
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 5px #888888; }
+
+.partners .partner:hover {
+  box-shadow: 5px 5px 5px #888888;
+  margin-top: -5px;
+  margin-bottom: 45px; }
+
+.partners .partner img {
+  width: 100%;
+  vertical-align: middle; }
+
+@media only screen and (max-width: 479px) {
+  .partners .top {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 27px;
+    margin-bottom: 40px; }
+
+  .partners .top h1 {
+    display: block;
+    text-align: center;
+    font-size: 35px; }
+
+  .partners .top h2 {
+    display: none; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .partners .top {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 27px;
+    margin-bottom: 40px; }
+
+  .partners .top h1 {
+    display: block;
+    text-align: center;
+    font-size: 35px; }
+
+  .partners .top h2 {
+    display: none; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .partners .top {
+    max-width: 728px;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .partners .top h1 {
+    font-size: 35px; }
+
+  .partners .partner {
+    height: 172px;
+    line-height: 120px; } }

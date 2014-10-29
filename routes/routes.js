@@ -253,6 +253,14 @@ router.get('/news', function(req, res) {
     });
 });
 
+router.get('/partners', function(req, res) {
+  cmsgateway.getPageData('cms', 'partners', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('partners', data);
+    });
+});
+
 router.get('/press', function(req, res) {
   cmsgateway.getPageData('cms', 'press', 
     function(err, data) {

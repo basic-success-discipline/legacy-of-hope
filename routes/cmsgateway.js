@@ -222,7 +222,25 @@ var donate_options= [
     ]
   }
 
-]
+];
+
+
+  var partnerlist = [
+    { name:"Bespin Holdings, Inc", logo:"/img/logo_bhi.png", link:""},
+    { name:"Akamai Technologies", logo:"/img/logo_akamai.jpg", link:""},
+    { name:"Bulldog Media", logo:"/img/logo_bulldog.png", link:""},
+    { name:"LiveOne", logo:"/img/logo_liveone.png", link:""},
+    { name:"Oyster Labs", logo:"/img/logo_oyster.png", link:""},
+     { name:"Creative Artist Agency", logo:"", link:""},
+     { name:"Celebrity Services Africa", logo:"", link:""},
+     { name:"Internet Media Labs", logo:"", link:""},
+     { name:"Kirklin Ellis LLP", logo:"", link:""},
+     { name:"Langdon Wilson International", logo:"", link:""},
+     { name:"PRG Nocturne", logo:"", link:""},
+     { name:"ProjectPitcher.com", logo:"", link:""},
+     { name:"Woodstock Inc.", logo:"", link:""}
+  ];
+
 
 
 
@@ -453,6 +471,17 @@ var hospital = {
   type: "website"
 };
 
+var partners = {
+  title: "Partners - Legacy of Hope",
+  url: "http://legacyofhope.org/partners",
+  thumb_img: "thumb_mission.jpg",
+  description: "Legacy of Hope and its partners",
+  stylesheet: "partners.css",
+  currentpage: "menu-partners",
+  type: "website",
+  partnerlist: partnerlist
+};
+
 var press = {
   title: "Press - Legacy of Hope",
   url: "http://legacyofhope.org/press",
@@ -556,6 +585,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'news':
       callback(null, news);
+      break;
+      case 'partners':
+      callback(null, partners);
       break;
       case 'press':
       callback(null, press);

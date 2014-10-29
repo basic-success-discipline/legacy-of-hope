@@ -1,0 +1,173 @@
+@import "../variables.scss";
+
+
+
+
+
+
+.partners .top{
+	border-bottom: 1px solid $loh-blue;
+	padding-bottom: 4px;
+	vertical-align: bottom;
+	position: relative;
+	margin-bottom: 70px;
+}
+
+.partners .top h1{
+	text-align: left;
+	display: inline-block;
+	margin-bottom: 0px;
+	margin-left: -2px;
+	margin-bottom: 5px;
+
+
+}
+
+.partners .top h2{
+	font-size: 20px;
+	text-transform: lowercase;
+	font-family: "Helvetica Neue Light";
+	display: inline-block;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+}
+
+.partners .partner{
+	padding: 30px;
+	box-sizing: border-box;
+	position: relative;
+	height: 220px;
+	line-height: 170px;
+	background-color: $loh-gray;
+	
+	vertical-align: middle;
+
+	margin-bottom: 40px;
+
+    // -webkit-border-image: 
+    //   -webkit-gradient(linear, 0 0, 0 100%, from($loh-blue), to(white)) 1 100%;
+    // -webkit-border-image: 
+    //   -webkit-linear-gradient($loh-blue, white) 1 100%;
+    // -moz-border-image:
+    //   -moz-linear-gradient($loh-blue, white) 1 100%;    
+    // -o-border-image:
+    //   -o-linear-gradient($loh-blue, white) 1 100%;
+    // border-image:
+    //   linear-gradient(to bottom, $loh-blue, white) 1 100%;
+    //   border-left: none;
+
+
+
+    // background-image: -webkit-linear-gradient(top, $loh-gray, white); 
+    // background-image:    -moz-linear-gradient(top, $loh-gray, $loh-gray, white); 
+    // background-image:     -ms-linear-gradient(top, $loh-gray, $loh-gray, white); 
+    // background-image:      -o-linear-gradient(top, $loh-gray, $loh-gray, white); 
+
+   box-shadow: 2px 2px 5px #888888; 
+}
+
+.partners .partner:hover{
+	 box-shadow: 5px 5px 5px #888888; 
+	 margin-top: -5px;
+	 margin-bottom: 45px;
+
+
+}
+
+.top-to-bottom {
+
+}
+
+.partners .partner img{
+	width: 100%;
+	vertical-align: middle;
+}
+
+
+
+
+// MOBILE - PORTRAIT 
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+	
+
+.partners .top{
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 27px;
+	margin-bottom: 40px;
+}
+.partners .top h1{
+	display: block;
+	text-align:center;
+	font-size: 35px;
+}
+.partners .top h2{
+	display: none;
+}
+
+}
+
+
+
+// MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+
+
+
+.partners .top{
+	max-width: 420px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 27px;
+	margin-bottom: 40px;
+}
+
+.partners .top h1{
+	display: block;
+	text-align:center;
+	font-size: 35px;
+}
+.partners .top h2{
+	display: none;
+}
+
+
+
+}
+
+
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px){
+
+
+.partners .top{
+	max-width: 728px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+	.partners .top h1{
+		font-size: 35px;
+	}
+
+
+	.partners .partner{
+	height: 172px;
+	line-height: 120px;
+}
+
+	}
+
+
+
+
