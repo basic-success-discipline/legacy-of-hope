@@ -30,7 +30,7 @@
         </div>
         
         <% for (var i = 0; i< partnerlist.length; i++) {%>
-          <a class="three columns partner" href="%<= partnerlist[i].link">
+          <a class="three columns partner" href="<%= partnerlist[i].link%>">
            
             <img src="<%= partnerlist[i].logo %>"/>
             
@@ -40,6 +40,7 @@
           </div>
         
 <div class="push"></div>
+</div>
 </div>
 </div>
         <% include partials/loh-footer %>

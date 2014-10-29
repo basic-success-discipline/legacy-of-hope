@@ -226,19 +226,19 @@ var donate_options= [
 
 
   var partnerlist = [
-    { name:"Bespin Holdings, Inc", logo:"/img/logo_bhi.png", link:""},
-    { name:"Akamai Technologies", logo:"/img/logo_akamai.jpg", link:""},
-    { name:"Bulldog Media", logo:"/img/logo_bulldog.png", link:""},
-    { name:"LiveOne", logo:"/img/logo_liveone.png", link:""},
-    { name:"Oyster Labs", logo:"/img/logo_oyster.png", link:""},
-     { name:"Creative Artist Agency", logo:"", link:""},
-     { name:"Celebrity Services Africa", logo:"", link:""},
-     { name:"Internet Media Labs", logo:"", link:""},
-     { name:"Kirklin Ellis LLP", logo:"", link:""},
-     { name:"Langdon Wilson International", logo:"", link:""},
-     { name:"PRG Nocturne", logo:"", link:""},
-     { name:"ProjectPitcher.com", logo:"", link:""},
-     { name:"Woodstock Inc.", logo:"", link:""}
+    { name:"Bespin Holdings, Inc", logo:"/img/logo_bhi.png", link:"http://bespinholdings.com/"},
+    { name:"Akamai Technologies", logo:"/img/logo_akamai.png", link:"http://www.akamai.com/"},
+    { name:"Bulldog Media", logo:"/img/logo_bulldog.png", link:"http://bulldogdm.com/"},
+    { name:"LiveOne", logo:"/img/logo_liveone.png", link:"http://liveonegroup.com/"},
+    { name:"Oyster Labs", logo:"/img/logo_oyster.png", link:"http://www.oysterlabs.com/#aqua"},
+     { name:"Creative Artist Agency", logo:"/img/logo_caa.png", link:"http://www.caa.com/"},
+     { name:"Celebrity Services Africa", logo:"/img/logo_csa.png", link:"http://www.celebsa.com/"},
+     { name:"Internet Media Labs", logo:"/img/logo_iml.png", link:"http://www.internetmedialabs.com/"},
+     { name:"Kirklin Ellis LLP", logo:"/img/logo_kirklinellis.png", link:"http://www.kirkland.com/"},
+     { name:"Langdon Wilson International", logo:"/img/logo_langdonwilson.png", link:"http://www.langdonwilson.com/"},
+     { name:"PRG Nocturne", logo:"/img/logo_prg.png", link:"http://www.nocturneproductions.com/"},
+     { name:"ProjectPitcher.com", logo:"/img/logo_projectpitcher.png", link:"http://projectpitcher.com/"},
+     // { name:"Woodstock Inc.", logo:"", link:""}
   ];
 
 
