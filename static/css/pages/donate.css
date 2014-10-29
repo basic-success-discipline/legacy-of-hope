@@ -1,10 +1,14 @@
-.wrapper-inner {
-  background-color: white; }
+.nav .currentpage a {
+  color: white; }
+
+.navbar .menu-donate {
+  background-color: #4aae39; }
 
 .page {
-  background-color: transparent;
   display: block;
-  padding-bottom: 54px; }
+  padding-bottom: 54px;
+  width: 100%;
+  background-color: white; }
 
 .donatepage .top {
   padding-bottom: 20px;
@@ -137,6 +141,15 @@
 
 .textcode b {
   font-family: "Helvetica Neue"; }
+
+.prefooter {
+  display: none; }
+
+.push {
+  height: 60px; }
+
+.wrapper-inner {
+  margin-bottom: -60px; }
 
 @media only screen and (max-width: 479px) {
   .option p {

@@ -1,17 +1,28 @@
 @import "../variables.scss";
 
 
+
+
+.nav .currentpage a{
+	color: white;
+}
+
+.navbar .menu-donate{
+	background-color: $loh-green;
+}
+
 // PAGE
 
 .wrapper-inner{
-	background-color: white;
+	// background-color: white;
 		
 }
 
 .page{
-	background-color: transparent;
 	display: block;
 	padding-bottom: 54px;
+	width: 100%;
+	background-color: white;
 }
 
 
@@ -192,6 +203,27 @@
 .textcode b{
 	font-family: "Helvetica Neue";
 }
+
+
+
+
+// STICKY FOOTER
+
+.prefooter{
+	display:none;
+}
+
+.push{
+	height: $foot-height
+}
+
+.wrapper-inner{
+	margin-bottom: -$foot-height;
+
+}
+
+
+
 
 
 // MOBILE - PORTRAIT
