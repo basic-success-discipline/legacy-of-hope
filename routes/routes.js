@@ -241,7 +241,7 @@ router.get('/mission', function(req, res) {
   cmsgateway.getPageData('cms', 'mission', 
     function(err, data) {
       data.authUser = authUser;
-      res.render('mission', data);
+      res.render('mission2', data);
     });
 });
 

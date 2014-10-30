@@ -159,7 +159,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .nav .currentpage {
+    padding-right: 8px; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .option p {
     text-align: center; }
@@ -168,4 +171,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .nav .currentpage {
+    padding-right: 8px; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav .currentpage {
+    padding-right: 8px; } }

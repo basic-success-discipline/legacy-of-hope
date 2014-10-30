@@ -108,7 +108,7 @@
 .herobuffer.therm{
 	margin-top: 15px;
 	height: 70px;
-	background-color: $loh-black;
+	background-color: rgba(21,21,21, 1.0);
 	opacity: 0.99;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -116,27 +116,58 @@
 	position: relative;
 	width: 100%;
 	vertical-align:middle;
+			  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
 }
+
+
+
+
 .therm .progressbar{
 	height: 30px;
 	width: 60%;
 	background-color: white;
 	// border: 1px solid $loh-gray;
-	background:  linear-gradient(to right, $loh-orange 50%, white 50%); 
+	background:  linear-gradient(to right, $loh-blue 50%, white 50%); 
 	display: inline-block;
 	display: table-cell;
-	border-radius: 6px;
-	
+	border-radius: 15px;
+		  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+  overflow: hidden;
+  position: relative;
+  padding-right: 540px;
+  box-sizing:border-box;
+}
+
+.therm .progressbar .rise{
+	width: 100%;
+	// position: absolute;
+	height: 30px;
+	background-color: $loh-green;
 }
 
 
+$shadow: $loh-blue;
 .therm  h3{
-	color: $loh-blue;
+	color: white;
 	font-weight: 200;
+
+text-shadow: -1px 0 $shadow, 0 1px $shadow, 1px 0 $shadow, 0 -1px $shadow;
+		//   transition: all 0.3s linear;
+  // -moz-transition: all 0.3s linear;
+  // -webkit-transition: all 0.3s linear;
+  // -o-transition: all 0.3s linear; 
 }
+
 
 .therm .words{
 	text-align: center;
+
 
 }
 
@@ -148,10 +179,7 @@
 	vertical-align: middle;
 	line-height: 30px;
 	border-radius: 6px;
-	  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear; 	
+	
   position: relative;
 }
 .therm .givenow a{
@@ -165,8 +193,34 @@
 }
 
 .therm .givenow:hover{
-	background-color: $loh-green;
+
+	background-color: $loh-red !important;
 }
+
+.herobuffer.therm:hover{
+
+& .progressbar{
+	 padding-right: 270px;
+}
+
+& h3{
+
+text-shadow: -1px 0 $loh-green, 0 1px $loh-green, 1px 0 $loh-green, 0 -1px $loh-green;
+text-shadow: none;
+color: $loh-green;
+}
+
+& .givenow{
+	background-color: $loh-green;
+		//   transition: all 0.3s linear;
+  // -moz-transition: all 0.3s linear;
+  // -webkit-transition: all 0.3s linear;
+  // -o-transition: all 0.3s linear; 
+}
+
+}
+
+
 
 
 // MOBILE - PORTRAIT

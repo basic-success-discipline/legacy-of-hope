@@ -240,6 +240,10 @@ and (max-width: $phone-landscape - 1px)  {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+
+.nav .currentpage{
+	padding-right: 8px;
+}
 }
 
 
@@ -259,6 +263,9 @@ and (max-width: $tablet-portrait - 1px)  {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+.nav .currentpage{
+	padding-right: 8px;
+}
 
 }
 
@@ -271,7 +278,9 @@ and (max-width: $tablet-portrait - 1px)  {
 and (min-width : $tablet-portrait) 
 and (max-width : $tablet-landscape - 1px) {
 
-
+.nav .currentpage{
+	padding-right: 8px;
+}
 	
 
 
