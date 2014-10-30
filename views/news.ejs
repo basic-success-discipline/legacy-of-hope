@@ -6,8 +6,8 @@
   <% include partials/loh-head %>
 
 
- <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
- <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/news.xml" />
+  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/news.xml" />
 
 </head>
 
@@ -21,46 +21,80 @@
 
       <!-- PAGE -->
       <div class="safari-fix-parallax-wrapper">
-        <div class="page news ">
-        <div class="wrapper-content">
-        <div class="top">
-        <h1>Latest News</h1>
-        <h2>From Legacy<em>Of</em>Hope</h2>
-        </div>
-        </div>
-          
-        <div class="container latestnews" style="display: block">
-
-        <p class="clickortap one">click on story to view</p>
-              <% for (var i = 0; i < stories.length; i++) { %>
-              <a class="four columns card" href="<%= stories[i].link %>">
-                <div class="stretchy-wrapper">
-                  <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
-                </div>
-                <h5 class="cardhead"><%= stories[i].title %></h5>
-                <p class="cardcopy"><%= stories[i].blurb %></p>
-
-                <hr style="border: dashed 1px #DEDEDE; "/>
-                <div class="bottom">
-                  <span>
-                    <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
-                    <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
-                  </span>
-                </div>
-                <hr style="border: solid 1px #DEDEDE;"/>
-
-              </a>
-              <% } %>
+        <div class="page news withpress ">
+          <div class="wrapper-content">
+            <div class="top">
+              <h1>Latest News</h1>
+              <h2>From Legacy<em>Of</em>Hope</h2>
             </div>
-
-
+          </div>
           
-             <script type="text/javascript" src="/js/cardcopy.js"></script>
+          <div class="container latestnews" style="display: block">
 
-    </div>
+            <p class="clickortap one">click on story to view</p>
+            <% for (var i = 0; i < 6; i++) { %>
+            <a class="four columns card" href="<%= stories[i].link %>">
+              <div class="stretchy-wrapper">
+                <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
+              </div>
+              <h5 class="cardhead"><%= stories[i].title %></h5>
+              <p class="cardcopy"><%= stories[i].blurb %></p>
 
-        <% include partials/loh-footer %>
+              <hr style="border: dashed 1px #DEDEDE; "/>
+              <div class="bottom">
+                <span>
+                  <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
+                  <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
+                </span>
+              </div>
+              <hr style="border: solid 1px #DEDEDE;"/>
+
+            </a>
+            <% } %>
+          </div>
+
+          <p class="ppress">Press</p>
+          <div class="latestpress container">
+            <% for (var i = 0; i < press.length; i++) { %>
+            <div class="ten columns offset-by-one story">
+              <a href="<%= press[i].link %>"><%= press[i].title %> <b>-- <%= press[i].host %></b></a>
+            </div>
+            <% } %>
+          </div>
+
+
+
+          <div class="container latestnews" style="display: block">
+           <p class="clickortap one">click on story to view</p>
+           <% for (var i = 6; i < stories.length; i++) { %>
+           <a class="four columns card" href="<%= stories[i].link %>">
+            <div class="stretchy-wrapper">
+              <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
+            </div>
+            <h5 class="cardhead"><%= stories[i].title %></h5>
+            <p class="cardcopy"><%= stories[i].blurb %></p>
+
+            <hr style="border: dashed 1px #DEDEDE; "/>
+            <div class="bottom">
+              <span>
+                <p class="date" style="vertical-align: text-top;"><%= stories[i].date %></p>
+                <!--  <p class="likes"><i class="fa fa-heart"> </i> <%= stories[i].likes %></p> -->
+              </span>
+            </div>
+            <hr style="border: solid 1px #DEDEDE;"/>
+
+          </a>
+          <% } %>
+        </div>
+
+
+
+        <script type="text/javascript" src="/js/cardcopy.js"></script>
+
       </div>
+
+      <% include partials/loh-footer %>
     </div>
-  </body>
-  </html>
+  </div>
+</body>
+</html>

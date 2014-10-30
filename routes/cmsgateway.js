@@ -124,7 +124,8 @@ var pressStories = [
   image: "/img/card_graca.jpg",
   blurb: "Christiane Amanpour speaks with Graça Machel about her late husband, her first TV interview after six months of mourning.",
   date: "June 30, 2014",
-  link: "/2014/6/30/GraçaMachel"
+  link: "/2014/6/30/GraçaMachel",
+  host: "CNN"
 
 },
 
@@ -133,14 +134,16 @@ var pressStories = [
   image: "/img/card_soliman.jpg",
   blurb: "AS AN ardent boxing fan all his long life - and not a bad mover in the ring when he was in his prime - Nelson Mandela might have enjoyed meeting Sam Soliman. The reverse certainly applies but, alas, that’s never going to happen now. But in New York this week/the other day, the Melbourne boxer and former IBF World Middleweight Champion eagerly seized the opportunity to align himself with the great South African statesman and humanitarian.",
   date: "October 5, 2014",
-  link: "http://www.foxsports.com.au/more-sports/boxing/boxer-sam-soliman-made-an-ambassador-of-legacy-of-hope-foundation/story-e6frf5h3-1227080318078?nk=cfb0d9c6994c780c6ddce669ab008471"
+  link: "http://www.foxsports.com.au/more-sports/boxing/boxer-sam-soliman-made-an-ambassador-of-legacy-of-hope-foundation/story-e6frf5h3-1227080318078?nk=cfb0d9c6994c780c6ddce669ab008471",
+  host: "Fox Sports"
 },
  {
   title: "Honoring Nelson Mandela In the Voice of a 13-Year Old",
   image: "/img/card_botlhale.jpg",
   blurb: "Friday, July 18, Nelson Mandela would have been 96 years old. He was honored at the Legacy of Hope concert at the Wallis Annenberg Center for the Performing Arts. Guests enjoyed the setting sun, in the garden reception while drinking champagne and munching on watermelon radishes stuffed with tomato compote. Legacy of Hope is working to raise funds to build South Africa’s first children’s hospital in Mr. Mandela's name. It was Nelson Mandela’s dream. Working to make that dream come true is youth ambassador Botlhale Boikayno. At 11, she won, “South Africa’s Got Talent” competition. Now, 13, she wowed Friday’s crowd with first a reading of Dr. Maya Angelou’s and then a poem of her own.",
   date: "July 21, 2014",
-  link: "http://www.myfoxla.com/story/26070793/honoring-nelson-mandela-in-the-voice-of-a-13-year-old"
+  link: "http://www.myfoxla.com/story/26070793/honoring-nelson-mandela-in-the-voice-of-a-13-year-old",
+  host: "Fox LA"
 }
 
 ];
@@ -459,7 +462,8 @@ var news = {
   stylesheet: "news.css",
   currentpage: "menu-news",
   type: "website",
- stories: newsStories
+ stories: newsStories,
+ press: pressStories
 };
 var hospital = {
   title: "The Hospital - Legacy of Hope",
