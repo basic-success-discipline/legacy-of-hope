@@ -1,0 +1,140 @@
+.slider img {
+  width: 100%; }
+
+.safari.herospacer img {
+  visibility: hidden; }
+
+.sidebar .sidebox.execsumbox {
+  display: block; }
+
+.herospacer {
+  margin-bottom: -15px;
+  position: relative; }
+
+.safari .hero {
+  display: block; }
+
+.herospacer.left {
+  margin-left: calc(-100% + 70px);
+  float: left; }
+
+.herospacer.right {
+  margin-right: calc(-100% + 70px);
+  float: right; }
+
+.page {
+  clear: both; }
+
+.herobuffer {
+  clear: both; }
+
+.page {
+  padding-bottom: 35px; }
+
+.container .hospitalphoto {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px; }
+
+.maincopy {
+  margin-bottom: 0px; }
+
+.maincopy p:nth-child(5) {
+  margin-bottom: 0; }
+
+.page .label {
+  clear: both;
+  text-align: center;
+  background-color: #FAFAFA;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 10px; }
+
+.page .label i {
+  font-style: italic; }
+
+.page .label p {
+  margin: 0 auto;
+  text-align: center; }
+
+.herospacer {
+  margin-bottom: 0; }
+
+.herobuffer.therm {
+  margin-top: 15px;
+  height: 70px;
+  background-color: #151515;
+  opacity: 0.99;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  vertical-align: middle; }
+
+.therm .progressbar {
+  height: 30px;
+  width: 60%;
+  background-color: white;
+  background: linear-gradient(to right, #e46315 50%, white 50%);
+  display: inline-block;
+  display: table-cell;
+  border-radius: 6px; }
+
+.therm h3 {
+  color: #358fe3;
+  font-weight: 200; }
+
+.therm .words {
+  text-align: center; }
+
+.therm .givenow {
+  text-align: center;
+  background-color: #358fe3;
+  vertical-align: middle;
+  line-height: 30px;
+  border-radius: 6px;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  position: relative; }
+
+.therm .givenow a {
+  font-family: "Open Sans";
+  color: white;
+  width: 100%;
+  padding-right: 33px;
+  padding-left: 33px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.therm .givenow:hover {
+  background-color: #4aae39; }
+
+@media only screen and (max-width: 479px) {
+  h3 {
+    text-align: center; }
+
+  .slider .a img, .herospacer img {
+    content: url("../../img/hospital_hero1_pp.jpg"); }
+
+  .slider .b img {
+    content: url("../../img/hospital_hero2_pp.jpg"); }
+
+  .slider .c img {
+    content: url("../../img/hospital_hero3_pp.jpg"); }
+
+  .maincopy p:nth-child(5) {
+    margin-bottom: 30px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .maincopy p:nth-child(5) {
+    margin-bottom: 30px; }
+
+  h3 {
+    text-align: center; }
+
+  .maincopy {
+    margin-bottom: 30px; } }

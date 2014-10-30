@@ -445,7 +445,7 @@ var mission = {
   url: "http://legacyofhope.org/mission",
   thumb_img: "thumb_mission.jpg",
   description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
-  stylesheet: "mission.css",
+  stylesheet: "mission2.css",
   currentpage: "menu-mission",
   type: "website"
 };
