@@ -222,6 +222,73 @@ color: $loh-green;
 
 
 
+.head{
+	text-align: center;
+}
+
+.head h1{
+	margin-bottom: 0px;
+	
+}
+
+.head p{
+	margin-top: 10px;;
+	padding-top: 10px;
+	font-family: "Helvetica Neue Thin Italic";
+	font-size: 24px;
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 1.2;
+	border-top: 1px solid $loh-blue;
+}
+
+.line p:last-child{
+	// font-size: 22px;
+	// font-weight:bold;
+	font-size: 20px;
+	// text-align: center;
+}
+
+// .line p{
+// 	text-align: center;
+// 	font-family: "Helvetica Neue Light";
+// 	font-size: 20px;
+// }
+
+
+.page.mission.one{
+	background-color: $loh-gray;
+}
+
+.page.mission.one .fundraiser, .page.mission.one .donatebox{
+	display: none;
+
+}
+
+.page.mission.one .execsumbox{
+	margin-top: 35px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+}
+
+.page.mission.two .execsumbox{
+	display: none;
+}
+
+.page.mission.one{
+	padding-bottom: 180px;
+}
+
+.missionphotos{
+	margin-top: -160px;
+	margin-bottom: 150px;
+	width: 110%;
+	margin-left: -5%;
+}
+
+
 
 // MOBILE - PORTRAIT
 @media only screen 

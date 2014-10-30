@@ -137,6 +137,49 @@
 .herobuffer.therm:hover .givenow {
   background-color: #4aae39; }
 
+.head {
+  text-align: center; }
+
+.head h1 {
+  margin-bottom: 0px; }
+
+.head p {
+  margin-top: 10px;
+  padding-top: 10px;
+  font-family: "Helvetica Neue Thin Italic";
+  font-size: 24px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.2;
+  border-top: 1px solid #358fe3; }
+
+.line p:last-child {
+  font-size: 20px; }
+
+.page.mission.one {
+  background-color: #f2f3f3; }
+
+.page.mission.one .fundraiser, .page.mission.one .donatebox {
+  display: none; }
+
+.page.mission.one .execsumbox {
+  margin-top: 35px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.page.mission.two .execsumbox {
+  display: none; }
+
+.page.mission.one {
+  padding-bottom: 180px; }
+
+.missionphotos {
+  margin-top: -160px;
+  margin-bottom: 150px;
+  width: 110%;
+  margin-left: -5%; }
+
 @media only screen and (max-width: 479px) {
   h3 {
     text-align: center; }
