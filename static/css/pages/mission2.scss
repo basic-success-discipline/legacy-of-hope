@@ -105,6 +105,7 @@
 .herospacer{
 	margin-bottom: 0;
 }
+
 .herobuffer.therm{
 	margin-top: 15px;
 	height: 70px;
@@ -140,15 +141,19 @@
   -o-transition: all 0.3s linear; 
   overflow: hidden;
   position: relative;
-  padding-right: 540px;
+  // padding-right: 540px;
   box-sizing:border-box;
 }
 
 .therm .progressbar .rise{
-	width: 100%;
+	width: 0;
 	// position: absolute;
 	height: 30px;
 	background-color: $loh-green;
+			  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
 }
 
 
@@ -199,8 +204,8 @@ text-shadow: -1px 0 $shadow, 0 1px $shadow, 1px 0 $shadow, 0 -1px $shadow;
 
 .herobuffer.therm:hover{
 
-& .progressbar{
-	 padding-right: 270px;
+& .progressbar .rise{
+	 width: 50%;
 }
 
 & h3{
@@ -299,18 +304,97 @@ h3{
 }
 
 .slider .a img, .herospacer img{
+	content: url('../../img/mission_hero_pp.jpg');
+}
+.slider .b img, .herospacer img{
 	content: url('../../img/hospital_hero1_pp.jpg');
 }
-.slider .b img{
+.slider .c img{
 	content: url('../../img/hospital_hero2_pp.jpg');
 }
-.slider .c img{
+.slider .d img{
 	content: url('../../img/hospital_hero3_pp.jpg');
 }
 
 .maincopy p:nth-child(5){
 	margin-bottom: 30px;
 }
+
+
+
+
+.herobuffer.therm{
+	// margin-top: 15px;
+	height: 205px;
+	
+}
+
+
+
+.therm .progressbar{
+	margin-top: 10px;
+}
+
+$shadow: $loh-blue;
+.therm  h3{
+	margin-top: 20px;
+	font-size: 35px;
+
+}
+
+.therm .givenow{
+	margin-top: 5px;
+	background-color: $loh-black;
+}
+
+.therm .givenow a{
+	background-color: $loh-blue;
+	border-radius: 6px;
+}
+
+
+.therm .givenow:hover{
+
+	background-color: $loh-black !important;
+}
+
+.therm .givenow a:hover{
+
+	background-color: $loh-red !important;
+}
+
+.herobuffer.therm:hover{
+
+& .givenow{
+	background-color: $loh-black; 
+}
+
+& .givenow a{
+	background-color: $loh-green; 
+}
+
+}
+
+
+
+.head p{
+	font-size: 19px;
+	text-align: center;
+
+}
+
+
+
+.page.mission.one{
+	padding-bottom: 40px;
+}
+
+.missionphotos{
+	margin-top: -100px;
+	margin-bottom: 60px;
+}
+
+
 }
 
 
@@ -331,4 +415,139 @@ h3{
 .maincopy{
 	margin-bottom: 30px;
 }
+
+
+
+.herobuffer.therm{
+	// margin-top: 15px;
+	height: 205px;
+	
 }
+
+
+
+.therm .progressbar{
+	margin-top: 10px;
+}
+
+$shadow: $loh-blue;
+.therm  h3{
+	margin-top: 20px;
+	font-size: 35px;
+
+}
+
+.therm .givenow{
+	margin-top: 5px;
+	background-color: $loh-black;
+}
+
+.therm .givenow a{
+	background-color: $loh-blue;
+	border-radius: 6px;
+}
+
+
+.therm .givenow:hover{
+
+	background-color: $loh-black !important;
+}
+
+.therm .givenow a:hover{
+
+	background-color: $loh-red !important;
+}
+
+.herobuffer.therm:hover{
+
+& .givenow{
+	background-color: $loh-black; 
+}
+
+& .givenow a{
+	background-color: $loh-green; 
+}
+
+}
+
+
+
+.head h1{
+	font-size: 22px;
+}
+
+.head p{
+	font-size: 19px;
+	text-align: center;
+}
+
+
+
+.page.mission.one{
+	padding-bottom: 80px;
+}
+
+.missionphotos{
+	margin-top: -100px;
+	margin-bottom: 60px;
+}
+
+.maincopy h1{
+	font-size: 22px;
+}
+
+.maincopy h3{
+	font-size: 18px;
+}
+
+
+
+}
+
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+.therm .givenow a{
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.head h1{
+	font-size:35px;
+}
+
+
+.page.mission.one{
+	padding-bottom: 130px;
+}
+.missionphotos{
+	width: 96%;
+	margin-left: 2%;
+	margin-top:-130px;
+	margin-bottom: 100px;
+
+}
+
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-width : $tablet-landscape) 
+and (max-width : $desktop - 1px) {
+
+.therm h3{
+	font-size: 24px;
+}
+
+
+}
+
+
+

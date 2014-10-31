@@ -92,13 +92,16 @@
   -o-transition: all 0.3s linear;
   overflow: hidden;
   position: relative;
-  padding-right: 540px;
   box-sizing: border-box; }
 
 .therm .progressbar .rise {
-  width: 100%;
+  width: 0;
   height: 30px;
-  background-color: #4aae39; }
+  background-color: #4aae39;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; }
 
 .therm h3 {
   color: white;
@@ -128,8 +131,8 @@
 .therm .givenow:hover {
   background-color: #ff6666 !important; }
 
-.herobuffer.therm:hover .progressbar {
-  padding-right: 270px; }
+.herobuffer.therm:hover .progressbar .rise {
+  width: 50%; }
 .herobuffer.therm:hover h3 {
   text-shadow: -1px 0 #4aae39, 0 1px #4aae39, 1px 0 #4aae39, 0 -1px #4aae39;
   text-shadow: none;
@@ -185,16 +188,59 @@
     text-align: center; }
 
   .slider .a img, .herospacer img {
+    content: url("../../img/mission_hero_pp.jpg"); }
+
+  .slider .b img, .herospacer img {
     content: url("../../img/hospital_hero1_pp.jpg"); }
 
-  .slider .b img {
+  .slider .c img {
     content: url("../../img/hospital_hero2_pp.jpg"); }
 
-  .slider .c img {
+  .slider .d img {
     content: url("../../img/hospital_hero3_pp.jpg"); }
 
   .maincopy p:nth-child(5) {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .herobuffer.therm {
+    height: 205px; }
+
+  .therm .progressbar {
+    margin-top: 10px; }
+
+  .therm h3 {
+    margin-top: 20px;
+    font-size: 35px; }
+
+  .therm .givenow {
+    margin-top: 5px;
+    background-color: #151515; }
+
+  .therm .givenow a {
+    background-color: #358fe3;
+    border-radius: 6px; }
+
+  .therm .givenow:hover {
+    background-color: #151515 !important; }
+
+  .therm .givenow a:hover {
+    background-color: #ff6666 !important; }
+
+  .herobuffer.therm:hover .givenow {
+    background-color: #151515; }
+  .herobuffer.therm:hover .givenow a {
+    background-color: #4aae39; }
+
+  .head p {
+    font-size: 19px;
+    text-align: center; }
+
+  .page.mission.one {
+    padding-bottom: 40px; }
+
+  .missionphotos {
+    margin-top: -100px;
+    margin-bottom: 60px; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .maincopy p:nth-child(5) {
     margin-bottom: 30px; }
@@ -203,4 +249,76 @@
     text-align: center; }
 
   .maincopy {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .herobuffer.therm {
+    height: 205px; }
+
+  .therm .progressbar {
+    margin-top: 10px; }
+
+  .therm h3 {
+    margin-top: 20px;
+    font-size: 35px; }
+
+  .therm .givenow {
+    margin-top: 5px;
+    background-color: #151515; }
+
+  .therm .givenow a {
+    background-color: #358fe3;
+    border-radius: 6px; }
+
+  .therm .givenow:hover {
+    background-color: #151515 !important; }
+
+  .therm .givenow a:hover {
+    background-color: #ff6666 !important; }
+
+  .herobuffer.therm:hover .givenow {
+    background-color: #151515; }
+  .herobuffer.therm:hover .givenow a {
+    background-color: #4aae39; }
+
+  .head h1 {
+    font-size: 22px; }
+
+  .head p {
+    font-size: 19px;
+    text-align: center; }
+
+  .page.mission.one {
+    padding-bottom: 80px; }
+
+  .missionphotos {
+    margin-top: -100px;
+    margin-bottom: 60px; }
+
+  .maincopy h1 {
+    font-size: 22px; }
+
+  .maincopy h3 {
+    font-size: 18px; } }
+/* iPads (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .therm .givenow a {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+
+  .head h1 {
+    font-size: 35px; }
+
+  .page.mission.one {
+    padding-bottom: 130px; }
+
+  .missionphotos {
+    width: 96%;
+    margin-left: 2%;
+    margin-top: -130px;
+    margin-bottom: 100px; } }
+/* iPads (landscape) ----------- */
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .therm h3 {
+    font-size: 24px; } }

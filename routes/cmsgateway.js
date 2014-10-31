@@ -453,6 +453,16 @@ var mission = {
   type: "website"
 };
 
+var about = {
+  title: "Our Mission - Legacy of Hope",
+  url: "http://legacyofhope.org/about",
+  thumb_img: "thumb_mission.jpg",
+  description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
+  stylesheet: "mission2.css",
+  currentpage: "menu-about",
+  type: "website"
+};
+
 
 var news = {
   title: "Latest News - Legacy of Hope",
@@ -586,6 +596,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'mission':
       callback(null, mission);
+      break;
+      case 'about':
+      callback(null, about);
       break;
       case 'news':
       callback(null, news);

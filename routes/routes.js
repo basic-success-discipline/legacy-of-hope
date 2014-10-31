@@ -245,6 +245,15 @@ router.get('/mission', function(req, res) {
     });
 });
 
+
+router.get('/about', function(req, res) {
+  cmsgateway.getPageData('cms', 'about', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('mission2', data);
+    });
+});
+
 router.get('/news', function(req, res) {
   cmsgateway.getPageData('cms', 'news', 
     function(err, data) {
