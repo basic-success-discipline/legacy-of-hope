@@ -22,7 +22,17 @@
       <!-- PAGE -->
       <div class="safari-fix-parallax-wrapper">
         <div class="page news withpress ">
+            <p class="ppress">Press</p>
+          <div class="latestpress container">
+            <% for (var i = 0; i < press.length; i++) { %>
+            <div class="ten columns offset-by-one story">
+              <a href="<%= press[i].link %>"><%= press[i].title %> <b>-- <%= press[i].host %></b></a>
+            </div>
+            <% } %>
+          </div>
           <div class="wrapper-content">
+
+
             <div class="top">
               <h1>Latest News <a href="/rss/news.xml" style="font-size: 20px"><i class="fa fa-rss"></i></a></h1>
               <h2>From Legacy<em>Of</em>Hope</h2>
@@ -52,15 +62,8 @@
             </a>
             <% } %>
           </div>
-<!-- 
-          <p class="ppress">Press</p>
-          <div class="latestpress container">
-            <% for (var i = 0; i < press.length; i++) { %>
-            <div class="ten columns offset-by-one story">
-              <a href="<%= press[i].link %>"><%= press[i].title %> <b>-- <%= press[i].host %></b></a>
-            </div>
-            <% } %>
-          </div> -->
+
+    
 
 
 
