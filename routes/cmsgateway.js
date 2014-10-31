@@ -232,7 +232,7 @@ var donate_options= [
     { name:"Bespin Holdings, Inc", logo:"/img/logo_bhi.png", link:"http://bespinholdings.com/"},
     { name:"Akamai Technologies", logo:"/img/logo_akamai.png", link:"http://www.akamai.com/"},
     { name:"Bulldog Media", logo:"/img/logo_bulldog.png", link:"http://bulldogdm.com/"},
-    { name:"LiveOne", logo:"/img/logo_liveone.png", link:"http://liveonegroup.com/"},
+    { name:"LiveOne", logo:"/img/logo_liveone_crowdsurfing.png", link:"http://liveonegroup.com/"},
     { name:"Oyster Labs", logo:"/img/logo_oyster.png", link:"http://www.oysterlabs.com/#aqua"},
      { name:"Creative Artist Agency", logo:"/img/logo_caa.png", link:"http://www.caa.com/"},
      { name:"Celebrity Services Africa", logo:"/img/logo_csa.png", link:"http://www.celebsa.com/"},
