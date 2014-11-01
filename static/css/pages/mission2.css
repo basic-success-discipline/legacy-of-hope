@@ -29,7 +29,8 @@
   clear: both; }
 
 .page {
-  padding-bottom: 35px; }
+  padding-bottom: 35px;
+  padding-top: 0; }
 
 .container .hospitalphoto {
   width: 100%;
@@ -63,7 +64,9 @@
   margin-bottom: 0; }
 
 .herobuffer.therm {
-  margin-top: 15px;
+  margin-bottom: 64px;
+  z-index: 5;
+  margin-top: 10px;
   height: 70px;
   background-color: #151515;
   opacity: 0.99;
@@ -178,7 +181,7 @@
   padding-bottom: 180px; }
 
 .missionphotos {
-  margin-top: -160px;
+  margin-top: -100px;
   margin-bottom: 130px;
   width: 110%;
   margin-left: -5%; }
@@ -239,7 +242,7 @@
     padding-bottom: 40px; }
 
   .missionphotos {
-    margin-top: -100px;
+    margin-top: -30px;
     margin-bottom: 60px; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .maincopy p:nth-child(5) {
@@ -291,7 +294,7 @@
     padding-bottom: 80px; }
 
   .missionphotos {
-    margin-top: -100px;
+    margin-top: -45px;
     margin-bottom: 60px; }
 
   .maincopy h1 {
@@ -316,7 +319,7 @@
   .missionphotos {
     width: 96%;
     margin-left: 2%;
-    margin-top: -130px;
+    margin-top: -70px;
     margin-bottom: 100px; } }
 /* iPads (landscape) ----------- */
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {

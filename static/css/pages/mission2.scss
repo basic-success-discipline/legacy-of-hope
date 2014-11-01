@@ -54,6 +54,7 @@
 
 .page{
 	padding-bottom: 35px;
+	padding-top: 0;
 }
 
 
@@ -107,7 +108,9 @@
 }
 
 .herobuffer.therm{
-	margin-top: 15px;
+	margin-bottom: 64px;
+	z-index: 5;
+	margin-top: 10px;
 	height: 70px;
 	background-color: rgba(21,21,21, 1.0);
 	opacity: 0.99;
@@ -287,7 +290,7 @@ color: $loh-green;
 }
 
 .missionphotos{
-	margin-top: -160px;
+	margin-top: -100px;
 	margin-bottom: 130px;
 	width: 110%;
 	margin-left: -5%;
@@ -390,7 +393,7 @@ $shadow: $loh-blue;
 }
 
 .missionphotos{
-	margin-top: -100px;
+	margin-top: -30px;
 	margin-bottom: 60px;
 }
 
@@ -488,7 +491,7 @@ $shadow: $loh-blue;
 }
 
 .missionphotos{
-	margin-top: -100px;
+	margin-top: -45px;
 	margin-bottom: 60px;
 }
 
@@ -529,7 +532,7 @@ and (max-width : $tablet-landscape - 1px) {
 .missionphotos{
 	width: 96%;
 	margin-left: 2%;
-	margin-top:-130px;
+	margin-top:-70px;
 	margin-bottom: 100px;
 
 }
