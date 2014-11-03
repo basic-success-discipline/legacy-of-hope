@@ -138,6 +138,27 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         break;
       }
       break;
+
+      case '11':
+      switch(req.params.day){
+        case '6':
+         switch(req.params.article){
+          case 'OctaviaSpencer':
+          cmsgateway.getPageData('cms', 'octavia', function(err, data) {data.authUser = authUser;res.render('octavia', data);});
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+        default:
+        res.redirect('/');
+        break;
+      }
+      break;
+
+
+
       default:
       res.redirect('/');
       break;

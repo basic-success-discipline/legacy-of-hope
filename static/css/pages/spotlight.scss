@@ -10,6 +10,13 @@ img.banner{
 img.rounded{
 	border-radius: 2px;
 }
+
+img.bigimage{
+	width: 130%;
+	margin-left: -15%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 .wrapper-spotlight{
 	width: 92%;
   	margin: 0 auto;
@@ -313,7 +320,9 @@ font-size: 18px;
 
 	}
 
-
+.spotlight.withstraggler{
+	padding-bottom: 40px;
+}
 
 
 
@@ -351,6 +360,16 @@ font-size: 18px;
     background-image:      -o-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0)); 
     width: 70%;
 
+}
+
+hr.style-two{
+	    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0));
+    background-image:     -ms-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0)); 
+    background-image:      -o-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.75), rgba(21,21,21,0)); 
+    width: 70%;
 }
 
 

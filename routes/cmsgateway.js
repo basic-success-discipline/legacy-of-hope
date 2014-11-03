@@ -294,7 +294,15 @@ quotes:[
 ]
 };
 
-
+var about = {
+  title: "Our Mission - Legacy of Hope",
+  url: "http://legacyofhope.org/about",
+  thumb_img: "thumb_mission.jpg",
+  description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
+  stylesheet: "mission2.css",
+  currentpage: "menu-about",
+  type: "website"
+};
 
 var arun = {
   title: "Arun Gandhi Spotlight - Legacy of Hope",
@@ -397,6 +405,16 @@ var guitarinitiative = {
   type: "article"
 };
 
+var hospital = {
+  title: "The Hospital - Legacy of Hope",
+  url: "http://legacyofhope.org/hospital",
+  thumb_img: "thumb_hospital.jpg",
+  description: "This new hospital will celebrate the legacy of Mr. Mandela and his love of children while advancing his vision for future generations. The Nelson Mandela Children’s Hospital will be a turning point on how the world views specialized pediatric care to all children, regardless of their ability to pay.",
+  stylesheet: "hospital.css",
+  currentpage: "menu-hospital",
+  type: "website"
+};
+
 
 var larry = {
   title: "Larry King Spotlight - Legacy of Hope",
@@ -453,15 +471,7 @@ var mission = {
   type: "website"
 };
 
-var about = {
-  title: "Our Mission - Legacy of Hope",
-  url: "http://legacyofhope.org/about",
-  thumb_img: "thumb_mission.jpg",
-  description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
-  stylesheet: "mission2.css",
-  currentpage: "menu-about",
-  type: "website"
-};
+
 
 
 var news = {
@@ -475,15 +485,18 @@ var news = {
  stories: newsStories,
  press: pressStories
 };
-var hospital = {
-  title: "The Hospital - Legacy of Hope",
-  url: "http://legacyofhope.org/hospital",
-  thumb_img: "thumb_hospital.jpg",
-  description: "This new hospital will celebrate the legacy of Mr. Mandela and his love of children while advancing his vision for future generations. The Nelson Mandela Children’s Hospital will be a turning point on how the world views specialized pediatric care to all children, regardless of their ability to pay.",
-  stylesheet: "hospital.css",
-  currentpage: "menu-hospital",
-  type: "website"
+
+
+var octavia = {
+  title: "Octavia Spencer Spotlight - Legacy of Hope",
+  url: "http://legacyofhope.org/2014/11/6/OctaviaSpencer",
+  thumb_img: "thumb_mission.jpg",
+  description: "As a young African-American woman growing up in Alabama, Octavia reflects on how Nelson Mandela and a children’s hospital as a banner to his legacy, will continue to inspire long beyond his graceful years.",
+  stylesheet: "octavia.css",
+  currentpage: "menu-news",
+  type: "article"
 };
+
 
 var partners = {
   title: "Partners - Legacy of Hope",
@@ -602,6 +615,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'news':
       callback(null, news);
+      break;
+      case 'octavia':
+      callback(null, octavia);
       break;
       case 'partners':
       callback(null, partners);
