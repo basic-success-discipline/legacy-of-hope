@@ -1,0 +1,82 @@
+@import "../variables.scss";
+
+
+.wrapper-inner{
+	background-color: black;
+	height: 1000px;
+}
+
+.bg{
+	position: absolute;
+	width:100%;
+	// z-index: -1;
+}
+
+.copy{
+	padding-top: 50px;
+	z-index:2;
+	background-color:transparent;
+}
+img.concert1{
+	width: 100%;
+}
+
+img.concert2{
+	width: 66%;
+	float: right;
+margin-top: -25%;
+}
+
+
+h1{
+	font-size: 74px;
+	color: black;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+h2{
+	font-size: 64px;
+	color: black;
+	text-align: center;
+	margin-bottom: 3px;
+}
+
+
+h3{
+	font-size: 36px;
+	color: black;
+	text-align: center;
+	font-weight: 400;
+}
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+}
+
+
+//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+
+}
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+}
+
+@media only screen 
+and (min-width : $tablet-landscape) 
+and (max-width : $desktop - 1px) {
+
+
+	}
+

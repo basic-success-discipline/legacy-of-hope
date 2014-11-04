@@ -369,6 +369,31 @@ var concert = {
 };
 
 
+var concert4 = {
+  title: "Concert - Legacy of Hope",
+  url: "http://legacyofhope.org/concert",
+  thumb_img: "thumb_concert.jpg",
+  description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
+  stylesheet: "concert4.css",
+  currentpage: "menu-concert",
+  type: "website",
+  artists: [
+    {name: "Robert Plant"},
+    {name: "John Legend"},
+    {name: "K'naan"},
+    {name: "The Crystal Method"},
+     {name: "De La Sol"},
+    {name: "Stevie Wonder"},
+    {name: "Shaka Khan"},
+    {name: "Macklemore"},
+    {name: "Mumford & Sons"},
+    {name: "Parliament Funkadelic"},
+    {name: "Blue Man Group"},
+    {name: "Beck"}
+  ]
+};
+
+
 var donate = {
   title: "Donate to the Legacy of Hope",
   url: "http://legacyofhope.org/donate",
@@ -581,7 +606,7 @@ exports.getPageData = function(category, page, callback) {
       callback(null, chuck);
       break;
       case 'concert':
-      callback(null, concert);
+      callback(null, concert4);
       break;
       case 'donate':
       callback(null, donate);
