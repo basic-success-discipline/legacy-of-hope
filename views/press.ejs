@@ -34,7 +34,7 @@
 
             <p class="clickortap one">click on story to view</p>
             <% for (var i = 0; i < (stories.length <= 6 ? stories.length : 6); i++) { %>
-            <a class="four columns card" href="<%= stories[i].link %>">
+            <a target="_blank" class="four columns card" href="<%= stories[i].link %>">
               <div class="stretchy-wrapper">
                 <img src="<%= stories[i].image %>" alt="<%= stories[i].title %>"/>
               </div>
