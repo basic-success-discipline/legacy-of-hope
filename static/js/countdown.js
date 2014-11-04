@@ -10,7 +10,7 @@
                   var thours = document.getElementById("hours");
                   var tminutes = document.getElementById("minutes");
 
-                             var hdays = $('.countdown2 #days');
+                  var hdays = $('.countdown2 #days');
                   var hhours = $('.countdown2 #hours');
                   var hminutes = $('.countdown2 #minutes');
                   var hseconds = $('.countdown2 #seconds');
@@ -44,16 +44,17 @@
                       $('#days').addClass('animated fadeIn');
                       $('#hours').addClass('animated fadeIn');
                       $('#minutes').addClass('animated fadeIn');
+                      $('#seconds').addClass('animated fadeIn');
                       tdays.innerHTML = days;
                       thours.innerHTML = hours;
                       tminutes.innerHTML = minutes; 
 
-
-                        hdays.html(days + " days &nbsp");
-                      hhours.html(hours + " hrs &nbsp");
+                        hdays.html(days + " days");
+                      hhours.html(hours + " hrs");
                       hminutes.html(minutes + " mins");
                        hseconds.html(seconds + " sec");
-                        $('.fadey').css('visibility', 'visible');
+                      $('.countdown2').addClass('animated fadeIn');
+                      $('.fadey').css('visibility', 'visible');
 
                     }, 500);
 

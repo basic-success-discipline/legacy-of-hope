@@ -3,7 +3,7 @@
 
 .wrapper-inner{
 	background-color: black;
-	height: 1000px;
+
 }
 
 .bg{
@@ -24,7 +24,7 @@ img.concert1{
 img.concert2{
 	width: 66%;
 	float: right;
-margin-top: -25%;
+	margin-top: -25%;
 }
 
 
@@ -48,79 +48,202 @@ h3{
 	color: black;
 	text-align: center;
 	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.fadey{
+	visibility: hidden;
+	transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-webkit-transition: all 1s linear;
+	-o-transition: all 1s linear;
 }
 
 
+
+
 .countdown2{
-  width: 100%;
-  text-align:right;
-  padding-top: 25px;
-  padding-bottom: 20px;
-  position: relative;
-   
+	width: 450px;
+	text-align:center;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(21,21,21, 0.7);
+	margin-top: 0px;
+
 }
 
 
 
 .countdown2 h1{
-// font-family: "Droid Sans";
+	font-family: "League Gothic";
 // font-weight: 100;
 color: white;
-font-size: 30px;
-letter-spacing: 1.5px;
-
-
-
-
+font-size: 40px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
+
+
 .countdown2 span{
-display: inline-block;
-}
-.countdown2 span div{
-display: inline-block;
+	display: inline-block;
 }
 
 
 .countdown2 h2{
-display: inline-block;
-font-size: 45px;  
- 
-// text-shadow: -1px 0 $cdshadow, 0 1px $cdshadow, 1px 0 $cdshadow, 0 -1px $cdshadow;           
+	font-family: "League Gothic";
+	display: inline-block;
+	font-size: 38px;  
+	text-align: right;
+	color: $loh-blue;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-bottom: 0;
+	transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-webkit-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear; 
 }
 
-.countdown2 h2 em{
-}
-.countdown2 #days,  .countdown2 #hours, .countdown2 #minutes{
-    transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear; 
-}
-.countdown2 .days h2,.countdown2 #days{
-  
-}
-.countdown2 .hours h2,.countdown2 #hours{
-
-  // -webkit-animation-delay: 0.5s;
-  // -moz-animation-delay: 0.5s;
-  // -o-animation-delay: 0.5s;
-}
-.countdown2 .hours{
-  // -webkit-animation-delay: 0.5s;
-  // -moz-animation-delay: 0.5s;
-  // -o-animation-delay: 0.5s;
+.countdown2 span{
+	width: 22%;
 }
 
-.countdown2 .minutes h2,.countdown2 #minutes{
-
-  // -webkit-animation-delay: 1s;
-  // -moz-animation-delay: 1s;
-  // -o-animation-delay: 1s;
+.countdown2 .days{
+	text-align: left;
 }
-.countdown2 .minutes{
-  // -webkit-animation-delay: 1s;
-  // -moz-animation-delay: 1s;
-  // -o-animation-delay: 1s;
+
+.countdown2 .hours, .countdown2 .minutes{
+	text-align: center;
+}
+
+.countdown2 .seconds{
+	text-align: right;
+	padding-right: 5px;
+	box-sizing: border-box;
+}
+
+
+
+
+
+.headliner{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted rgba(128,128,128, 0.6);
+}
+
+
+.stevie{
+	margin-top: 60px;
+}
+
+.plus{
+	text-align: center;
+
+}
+
+.plus h4{
+	font-family: "League Gothic Italic";
+	font-size: 30px;
+	color: white;
+	text-align: center;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.plus h4:first-child{
+		margin-top: 60px;
+	text-transform: lowercase;
+}
+
+.plus h4:last-child{
+		margin-top: 50px;
+	text-transform: uppercase;
+}
+
+
+.plus img{
+	display: inline-block;
+	height: 30px;
+	text-align:center;
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+
+.plus img.vusi{
+	height: 40px;
+	line-height: 0.75em;
+	margin-bottom: 25px;
+}
+
+.plus img.imagine{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cta{
+	text-align: center;
+	margin-bottom: 150px;
+}
+
+.cta p{
+	color: white;
+	text-align: justify;
+	font-family: "Helvetica Neue Thin";
+	margin-bottom: 80px;
+}
+
+
+.cta .button{
+	border: 1px solid rgba(200,200,200, 0.9);
+	background-color: transparent;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 15px;
+	transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-webkit-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear; 
+}
+
+.cta .button:hover{
+	border: 1px solid $loh-blue;
+	background-color: $loh-blue;
+}
+
+.cta .tickets{
+	background-color: $loh-blue;
+	border: 1px solid $loh-blue;
+}
+
+// .cta .tickets:hover{
+// 	background-color: $loh-green;
+// 	border: 1px solid $loh-green;
+// }
+.cta .button h5{
+	text-transform: uppercase;
+	font-size: 12px;
+	color: white;
+	margin-bottom: 0;
+	vertical-align: middle;
+	line-height: 3;
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+
+
+.cta .tickets h5{
+	background-color: $loh-blue;
+	border: none;
+		padding-left: 40px;
+	padding-right: 40px;
 }
 
 
@@ -152,5 +275,5 @@ and (min-width : $tablet-landscape)
 and (max-width : $desktop - 1px) {
 
 
-	}
+}
 
