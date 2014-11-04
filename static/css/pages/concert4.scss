@@ -50,6 +50,80 @@ h3{
 	font-weight: 400;
 }
 
+
+.countdown2{
+  width: 100%;
+  text-align:right;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  position: relative;
+   
+}
+
+
+
+.countdown2 h1{
+// font-family: "Droid Sans";
+// font-weight: 100;
+color: white;
+font-size: 30px;
+letter-spacing: 1.5px;
+
+
+
+
+}
+.countdown2 span{
+display: inline-block;
+}
+.countdown2 span div{
+display: inline-block;
+}
+
+
+.countdown2 h2{
+display: inline-block;
+font-size: 45px;  
+ 
+// text-shadow: -1px 0 $cdshadow, 0 1px $cdshadow, 1px 0 $cdshadow, 0 -1px $cdshadow;           
+}
+
+.countdown2 h2 em{
+}
+.countdown2 #days,  .countdown2 #hours, .countdown2 #minutes{
+    transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; 
+}
+.countdown2 .days h2,.countdown2 #days{
+  
+}
+.countdown2 .hours h2,.countdown2 #hours{
+
+  // -webkit-animation-delay: 0.5s;
+  // -moz-animation-delay: 0.5s;
+  // -o-animation-delay: 0.5s;
+}
+.countdown2 .hours{
+  // -webkit-animation-delay: 0.5s;
+  // -moz-animation-delay: 0.5s;
+  // -o-animation-delay: 0.5s;
+}
+
+.countdown2 .minutes h2,.countdown2 #minutes{
+
+  // -webkit-animation-delay: 1s;
+  // -moz-animation-delay: 1s;
+  // -o-animation-delay: 1s;
+}
+.countdown2 .minutes{
+  // -webkit-animation-delay: 1s;
+  // -moz-animation-delay: 1s;
+  // -o-animation-delay: 1s;
+}
+
+
 //  MOBILE - PORTRAIT
 
 @media only screen 

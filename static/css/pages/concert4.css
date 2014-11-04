@@ -36,3 +36,31 @@ h3 {
   color: black;
   text-align: center;
   font-weight: 400; }
+
+.countdown2 {
+  width: 100%;
+  text-align: right;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  position: relative; }
+
+.countdown2 h1 {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 1.5px; }
+
+.countdown2 span {
+  display: inline-block; }
+
+.countdown2 span div {
+  display: inline-block; }
+
+.countdown2 h2 {
+  display: inline-block;
+  font-size: 45px; }
+
+.countdown2 #days, .countdown2 #hours, .countdown2 #minutes {
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear; }
