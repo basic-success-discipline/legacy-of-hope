@@ -88,9 +88,12 @@ h3 {
 .countdown2 .hours, .countdown2 .minutes {
   text-align: center; }
 
+.countdown2 .minutes {
+  margin-left: 9px;
+  margin-right: -9px; }
+
 .countdown2 .seconds {
   text-align: right;
-  padding-right: 5px;
   box-sizing: border-box; }
 
 .headliner {
@@ -194,22 +197,28 @@ h3 {
 
   h3 {
     font-size: 20px;
-    color: white; }
+    color: white;
+    margin-bottom: 60px; }
 
   .countdown2 {
-    width: 100%;
-    margin-top: 60px; }
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: transparent; }
 
   .countdown2 h1 {
-    font-size: 25px;
-    margin-bottom: 10px; }
+    font-size: 24px; }
+
+  .countdown2 h2 {
+    font-size: 22px;
+    text-align: right; }
+
+  .countdown2 .minutes {
+    margin-left: 8px;
+    margin-right: -8px; }
 
   .countdown2 span {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    text-align: center !important; }
+    width: 23%; }
 
   .headliner.stevie {
     margin-top: 20px; }
