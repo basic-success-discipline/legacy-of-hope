@@ -229,6 +229,12 @@ h3 {
 
   .plus img {
     margin-left: auto;
+    margin-right: auto; }
+
+  .cta {
+    margin-bottom: 80px; }
+
+  .cta span.button {
     margin-right: auto; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   h1 {
