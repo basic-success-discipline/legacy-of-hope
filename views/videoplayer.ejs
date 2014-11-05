@@ -9,33 +9,88 @@
   <link rel="stylesheet" href="/css/pages/spotlight.css" media="screen" type="text/css" />
 
    <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
-    <!-- <link type="text/css" rel="stylesheet" href="/akamai/resources/styles/styles.css" /> -->
+   <script type="text/javascript"  src="/akamai/resources/js/menu.js"></script>
+    <link type="text/css" rel="stylesheet" href="/akamai/resources/styles/styles.css" />
     <!--Player-->
-        <script type="text/javascript"  src="/akamai/amp/amp.min.js?amp-defaults=/akamai/samples/samples.xml"></script>
+        <script type="text/javascript"  src="/akamai/amp/amp.min.js"></script>
         <script type="text/javascript">
-            var amp;
+          akamai.amp.AMP.loadDefaults("/akamai/amp/amp.xml");
+          
+            var amp,
+                menu = new FeedMenu(),
+              media = [
+                {
+                  autoplay: true,
+                  title: "Demo Live Stream",
+                  poster: '/akamai/resources/images/bunny.jpg',
+                  temporalType: "live",
+                  source: 
+                  [
+              {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+              {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
+            ],
+            mediaanalytics:
+            {
+              dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+            }
+                }, {
+                  autoplay: true,
+                  title: "Demo Live Stream",
+                  poster: '/akamai/resources/images/bunny.jpg',
+                  temporalType: "live",
+                  source: 
+                  [
+              {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+              {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
+            ],
+            mediaanalytics:
+            {
+              dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+            }
+                }
+              ];
             
             function loadHandler(event)
             {
-              var config_overrides = 
+              menu.create(document.getElementById("sample-menu"), media);
+              
+              var config = 
               {
-                autoplay: true,
-                volumepanel: {direction: "vertical"},
-                media: 
-                {
-                  title: "Live Sample",
-                  temporalType: "live", 
-                  poster: '/akamai/resources/images/hd_world.jpg',
-                  duration: 108,
-                  source:
-                      [
-                          {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
-              {src: "http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8", type: "application/x-mpegURL"}
-                      ]
+                  rules:
+                  {
+                      android_4_gets_m3u8:
+                      {
+                          regexp: "Android 4"
+                      }
+                  },
+                  eventmanagement: {enabled: false}
+                };
                       
-                }
-              };
-                amp = new akamai.amp.AMP("akamai-media-player", config_overrides);
+                amp = new akamai.amp.AMP(document.getElementById("akamai-media-player"), config, readyHandler);
+                
+            }
+            
+            function readyHandler(event)
+            {
+              amp.addEventListener("ended", endedHandler);
+              
+              loadVideo(0);
+            }
+            
+            function advanceHandler(event)
+            {
+              loadVideo(menu.selectedIndex + 1);
+            }
+            
+            function loadVideo(index)
+            {
+              menu.select(index);
+              amp.setMedia(media[index]);
+            }
+            
+            function endedHandler(event)
+            {
+                console.log("ended");
             }
         </script>
   </head>
@@ -44,8 +99,14 @@
 <div class="wrapper"> 
     <div class="wrapper-inner">
       <% include partials/loh-menu %>
-          <div class="sample-player">
-              <div id="akamai-media-player"></div>
+           <div class="content">
+          <div id="sample-video-area" class="sample-video-area">
+            <div class="sample-ad-video-text sample-label-text">Advertisement</div>
+            <div class="sample-player">
+                <div id="akamai-media-player"></div>
+              </div>
+            </div>
+            <div id="sample-menu" class="sample-menu"></div>
             </div>
       
 <div class="push"></div>

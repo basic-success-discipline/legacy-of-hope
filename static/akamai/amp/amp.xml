@@ -2,7 +2,7 @@
 <module type="Object">
 	<head type="Object">
 	    <links type="Array">
-           <link type="String">../amp/amp.css</link>    
+           <link type="String">/akamai/amp/amp.css</link>    
         </links>
 	</head>
 	<config type="Object">
@@ -16,22 +16,22 @@
 	   	<captioning type="Object"></captioning>
         <playoverlay type="Object"></playoverlay>
         <branding type="Object">
-            <logo type="String">../resources/images/akamai_logo1.png</logo>
+            <logo type="String">/akamai/resources/images/akamai_logo1.png</logo>
         </branding>
 	   	<flash type="Object">
 	   		<static type="Object">
 	   			<enabled type="Boolean">false</enabled>
-	   			<swf type="String">../amp/AkamaiStandardPlayer-static.swf</swf>
-	   			<debug type="String">../amp/AkamaiStandardPlayer-static-debug.swf</debug>
+	   			<swf type="String">/akamai/amp/AkamaiStandardPlayer-static.swf</swf>
+	   			<debug type="String">/akamai/amp/AkamaiStandardPlayer-static-debug.swf</debug>
 	   			<plugins type="Object">
 	   				<AkamaiAdvancedStreamingPlugin type="String">com.akamai.osmf.AkamaiAdvancedStreamingPluginInfo</AkamaiAdvancedStreamingPlugin>
 	   				<OSMFCSMALoader type="String">com.akamai.playeranalytics.osmf.OSMFCSMALoaderInfo</OSMFCSMALoader>
 	   				<CaptioningPlugin type="String">org.osmf.captioning.CaptioningPluginInfo</CaptioningPlugin>
 	   			</plugins>
 	   		</static>
-	   		<swf type="String">../amp/AkamaiStandardPlayer.swf</swf>
-	   		<debug type="String">../amp/AkamaiStandardPlayer-debug.swf</debug>
-	   		<expressInstallSWF type="String">../amp/playerProductInstall.swf</expressInstallSWF>
+	   		<swf type="String">/akamai/amp/AkamaiStandardPlayer.swf</swf>
+	   		<debug type="String">/akamai/amp/AkamaiStandardPlayer-debug.swf</debug>
+	   		<expressInstallSWF type="String">/akamai/amp/playerProductInstall.swf</expressInstallSWF>
 	   		<vars type="Object">
 				<next_video_timer type="Number">0</next_video_timer>
 			</vars>
@@ -58,7 +58,7 @@
 					    caption_language ='en-us'
     					>
     				</player>
-    				<view skin="../amp/standard.assets.swf">
+    				<view skin="/akamai/amp/standard.assets.swf">
     						<element id="infoOverlay" style="top: 0px; text-align: left;" />
     						<element id="captionDisplay" initState="cookie|off" position="relative" style="bottom: 0px; windowColor:0x000000; windowOpacity:0; font:Arial; fontColor:0xffffff; fontOpacity:1; fontBGColor:0x000000; fontBGOpacity:0; edgeType:none; edgeColor:0x000000; edgeOpacity:1; scroll:None; fontSize:12;" settingsEnabled="true" />
     						<element id="controls" visible="true" autoHide="5" height="25" itemMargin="5">
@@ -88,8 +88,8 @@
     				<plugins>
     					<!-- CONSULT AKAMAI REGARDING PLUG-IN MODIFICATIONS. DO NOT MODIFY WITHOUT SUPPORT FROM AKAMAI -->
     					<plugin host='osmf' type='dynamic' absolute='true' id='AkamaiAdvancedStreamingPlugin'>http://players.edgesuite.net/flash/plugins/osmf/advanced-streaming-plugin/v3.5/osmf2.0/AkamaiAdvancedStreamingPlugin.swf</plugin>
-    					<plugin host='osmf' type='dynamic' id='CaptioningPlugin'>../resources/plugins/CaptioningPlugin.swf</plugin>
-    					<plugin host="osmf" type="dynamic" id="onCaptionInfoPlugin">../resources/plugins/onCaptionInfoPlugin.swf</plugin>
+    					<plugin host='osmf' type='dynamic' id='CaptioningPlugin'>/akamai/resources/plugins/CaptioningPlugin.swf</plugin>
+    					<plugin host="osmf" type="dynamic" id="onCaptionInfoPlugin">/akamai/resources/plugins/onCaptionInfoPlugin.swf</plugin>
     					<plugin host='osmf' type='static' id='OSMFCSMALoader'>com.akamai.playeranalytics.osmf.OSMFCSMALoaderInfo</plugin>
     				</plugins>
 			</application>
@@ -115,7 +115,7 @@
 	   	</userAgentHints>
 	   	<eventmanagement type="Object">
 	   	    <enabled type="Boolean">false</enabled>
-	   		<url type="String">../resources/eventmanagement/playerstate.txt</url>
+	   		<url type="String">/akamai/resources/eventmanagement/playerstate.txt</url>
 	   		<interval type="Number">5</interval>
 	   		<states type="Array">
 	   			<state type="Object">
@@ -126,12 +126,12 @@
 	   			<state type="Object">
 	   				<id type="String">post</id>
 	   				<url type="String"></url>
-	   				<poster type="String">../resources/eventmanagement/post_slate.png</poster>
+	   				<poster type="String">/akamai/resources/eventmanagement/post_slate.png</poster>
 	   			</state>
 	   			<state type="Object">
 	   				<id type="String">error</id>
 	   				<url type="String"></url>
-	   				<poster type="String">../resources/eventmanagement/error_slate.png</poster>
+	   				<poster type="String">/akamai/resources/eventmanagement/error_slate.png</poster>
 	   			</state>
 	   			<state type="Object">
 	   				<id type="String">off</id>

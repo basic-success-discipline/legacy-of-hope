@@ -1,5 +1,5 @@
   var menuOpen=false;
-  var menu = document.getElementsByClassName('menu')[0];
+  var lohmenu = document.getElementsByClassName('menu')[0];
   var dd = document.getElementsByClassName('menu-dropdown')[0];
               // var ddclick = document.getElementsByClassName('ddclick')[0];
 
@@ -11,7 +11,7 @@
              })
               ;
 
-              menu.onclick=function(){ 
+              lohmenu.onclick=function(){ 
                 if(!menuOpen){
                   $('.menu-dropdown').animate({
                    height: 305      //this is the max-height for mobile-landscape with social sharing: $mobilewidth - $navheight - $sharing-margin

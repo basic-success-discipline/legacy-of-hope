@@ -17,7 +17,7 @@
             <enabled type="Boolean">true</enabled>
         </playoverlay>
          <branding type="Object">
-            <logo type="String">/akamai/resources/images/akamai_logo1.png</logo>
+            <logo type="String">/img/LHlogo.png</logo>
         </branding>
 	   	<captioning type="Object"></captioning>
 	   	<flash type="Object">

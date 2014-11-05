@@ -61,6 +61,7 @@ FeedMenu.prototype = {
 			
 	    function loadFeed(url)
 	    {
+
 			akamai.amp.utils.Utils.getJson(url, function (feed) 
 		    {
 				items.push(feed);
