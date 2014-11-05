@@ -372,7 +372,7 @@ var concert = {
 var concert4 = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
-  thumb_img: "thumb_concert.jpg",
+  thumb_img: "concert_hero4.jpg",
   description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
   stylesheet: "concert4.css",
   currentpage: "menu-concert",
@@ -587,6 +587,17 @@ var tata = {
 };
 
 
+var videoplayer = {
+  title: "Legacy of Hope Video Player",
+  url: "http://legacyofhope.org/videoplayer",
+  thumb_img: "mission_hero.jpg",
+  description: "Watch the Legacy of Hope Nelson Mandela Children's Hospital Concert.",
+  stylesheet: "videoplayer.css",
+  currentpage: "menu-concert",
+  type: "website"
+};
+
+
 exports.getPageData = function(category, page, callback) {
 	if(category === 'cms') {
     switch (page){
@@ -661,6 +672,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'tata':
       callback(null, tata);
+      break;
+      case 'videoplayer':
+      callback(null, videoplayer);
       break;
       default:
       callback(null, home);

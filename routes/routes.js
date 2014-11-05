@@ -313,6 +313,14 @@ router.get('/sponsors', function(req, res) {
 });
 
 
+router.get('/videoplayer', function(req, res) {
+  cmsgateway.getPageData('cms', 'videoplayer', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('videoplayer', data);
+    });
+});
+
 
 
 
