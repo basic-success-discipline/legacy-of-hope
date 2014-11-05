@@ -1,10 +1,15 @@
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>AMP - Samples - VOD</title>
-    <link type="text/css" rel="stylesheet" href="/akamai/resources/styles/styles.css" />
+<html>
+
+<head>
+
+  <% include partials/loh-head %>
+
+  <link rel="stylesheet" href="/css/pages/spotlight.css" media="screen" type="text/css" />
+
+   <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
+    <!-- <link type="text/css" rel="stylesheet" href="/akamai/resources/styles/styles.css" /> -->
     <!--Player-->
         <script type="text/javascript"  src="/akamai/amp/amp.min.js?amp-defaults=/akamai/samples/samples.xml"></script>
         <script type="text/javascript">
@@ -38,22 +43,18 @@
   </head>
   <!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
   <body onload="loadHandler(event)" ontouchstart="">
-    <div class="page">
-      <div class="header">
-          <div class="header-logo"></div>
-          <div class="header-text">
-            <h1>AMP</h1>
-            <h2>v4.10.0.0004</h2>
-          </div>
-      </div>
-
-            <div class="content">
-              <h3>AMP: Samples</h3>
-          <h5>Video On Demand</h5>
+<div class="wrapper"> 
+    <div class="wrapper-inner">
+      <% include partials/loh-menu %>
           <div class="sample-player">
               <div id="akamai-media-player"></div>
             </div>
-            </div>
-      </div>
+      
+<div class="push"></div>
+</div>
+      <% include partials/loh-footer %>
+</div>
   </body>
-</html>
+  </html>
+
+
