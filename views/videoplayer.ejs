@@ -1,44 +1,59 @@
+
 <!DOCTYPE html>
-<html>
-
-<head>
-
-  <% include partials/loh-head %>
-
-  <link rel="stylesheet" href="/css/pages/spotlight.css" media="screen" type="text/css" />
-
-   <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
-</head>
-
-<body>
-  <div class="wrapper"> 
-    <div class="wrapper-inner">
-      <% include partials/loh-menu %>
-
-      
-        <!-- <img class="bhero" src="/img/botlhale_hero.jpg"/> -->
-
-        <div class="wrapper-spotlight graca">
-        <h1>Graça Machel mourns her husband, Mandela</h1>
-        <h4>Christiane Amanpour speaks with Graça Machel about her late husband, her first TV interview after six months of mourning</h4>
-
-        <p>Graça Mancel was at Nelson Mandela’s side in his final (and many say happiest) years. For six months after Mandela passed away, Graça Machel withdrew from the world to mourn her loss. Now she has re-emerged to continue her work and his legacy. She speaks passionately here about her activism with women and children and about life with one of history’s towering moral figures — Nelson Mandela.</p>
-
-
-        <iframe class="no-pp" width="700" height="395" src="//www.youtube.com/embed/8OhJwkBv1Fs" frameborder="0" allowfullscreen></iframe>
-
-         <iframe class="pp lilvid" width="320" height="190" src="//www.youtube.com/embed/8OhJwkBv1Fs" frameborder="0" allowfullscreen></iframe>
-
-
-         <p class="big center"><a href="
-  http://amanpour.blogs.cnn.com/2014/06/30/graca-machel-nelson-mandela/" target="_blank">Read the original story on Christiane Amanpour's blog on CNN</a></p>
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AMP - Samples - VOD</title>
+    <link type="text/css" rel="stylesheet" href="/akamai/resources/styles/styles.css" />
+    <!--Player-->
+        <script type="text/javascript"  src="/akamai/amp/amp.js?amp-defaults=/akamai/samples/samples.xml"></script>
+        <script type="text/javascript">
+            var amp;
+            
+            function loadHandler(event)
+            {
+              var config_overrides = 
+              {
+                autoplay: true,
+                volumepanel: {direction: "vertical"},
+                media: 
+                {
+                  title: "VOD Sample",
+                  poster: '/akamai/resources/images/hd_world.jpg',
+                  duration: 108,
+                  source:
+                      [
+                          {src: "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m", type: "video/f4m"},
+                          {src: "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8", type: "application/x-mpegURL"}
+                      ],
+                      track:
+                      [
+              {kind: "captions", type: "application/ttml+xml", src: "akamai/samples/captioning.xml"}
+                      ]
+                }
+              };
+                amp = new akamai.amp.AMP("akamai-media-player", config_overrides);
+            }
+        </script>
+  </head>
+  <!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+  <body onload="loadHandler(event)" ontouchstart="">
+    <div class="page">
+      <div class="header">
+          <div class="header-logo"></div>
+          <div class="header-text">
+            <h1>AMP</h1>
+            <h2>v4.10.0.0004</h2>
+          </div>
       </div>
 
-
-<div class="push"></div>
-</div>
-      <% include partials/loh-footer %>
-
+            <div class="content">
+              <h3>AMP: Samples</h3>
+          <h5>Video On Demand</h5>
+          <div class="sample-player">
+              <div id="akamai-media-player"></div>
+            </div>
+            </div>
+      </div>
   </body>
-  </html>
+</html>

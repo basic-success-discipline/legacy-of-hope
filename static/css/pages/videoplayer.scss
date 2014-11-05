@@ -1,59 +1,14 @@
 @import "../variables.scss";
 
-
-
-.wrapper-spotlight{
-	// min-height: 600px;
+.sample-player{
+	width: 604px;
+	height: 341px;
 }
 
-
-.graca.wrapper-spotlight{
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-
-h1, h2, h3, h4{
-	text-align: center;
-}
-.graca h1{
-	font-size: 31px;
-	margin-bottom:5px;
-	// max-width: 430px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-h4{
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 18px;
-    color: #a0a0a0;
-    // word-spacing: 1px;
-    // max-width: 430px;
-    margin-right: auto;
-	margin-left: auto;
-}
-
-
-.pp{
-	display: none;
-}
-
-.lilvid{
-	margin-left: auto;
-	margin-right: auto;
-}
 //  MOBILE - PORTRAIT
 
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
-
-.no-pp{
-	display: none;
-}
-.pp{
-	display: block;
-}
 
 
 }
@@ -64,13 +19,6 @@ and (max-width: $phone-landscape - 1px)  {
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-
-.no-pp{
-	display: none;
-}
-.pp{
-	display: block;
-}
 	
 
 }
