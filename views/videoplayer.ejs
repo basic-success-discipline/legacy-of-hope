@@ -23,18 +23,16 @@
                 volumepanel: {direction: "vertical"},
                 media: 
                 {
-                  title: "VOD Sample",
+                  title: "Live Sample",
+                  temporalType: "live", 
                   poster: '/akamai/resources/images/hd_world.jpg',
                   duration: 108,
                   source:
                       [
-                          {src: "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m", type: "video/f4m"},
-                          {src: "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8", type: "application/x-mpegURL"}
-                      ],
-                      track:
-                      [
-              {kind: "captions", type: "application/ttml+xml", src: "akamai/samples/captioning.xml"}
+                          {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+              {src: "http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8", type: "application/x-mpegURL"}
                       ]
+                      
                 }
               };
                 amp = new akamai.amp.AMP("akamai-media-player", config_overrides);
