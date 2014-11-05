@@ -1,0 +1,110 @@
+{
+	"@attributes" : {
+		"version" : "2.0"
+	},
+	"channel" : {
+		"category" : "",
+		"pubDate" : "Wed, 03 Aug 2011 10:00:21 -0400",
+		"language" : "en",
+		"ttl" : "10",
+		"item" : {
+			"title" : "Buffy the Vampire Slayer",
+			"link" : "http://akamai.com/player.html",
+			"description" : "Buffy the Vampire Slayer",
+			"category" : "",
+			"pubDate" : "Wed, 03 Aug 2011 10:00:21 -0400",
+			"guid" : "278426179822",
+			"media-group" : {
+				"media-content" : [
+						{
+							"@attributes" : {
+								"isDefault" : "true",
+								"url" : "http://foxnews-f.akamaihd.net/z/041014/041014_kelly_gohmert_FNC_,MED_LOW,MED,HIGH,HD,LOW,.mp4.csmil/manifest.f4m",
+								"type" : "video/f4m",
+								"medium" : "video",
+								"duration" : "1793"
+							}
+						},
+						{
+							"@attributes" : {
+								"url" : "http://link.theplatform.com/s/fx-devices/3HijHLFuHgU0?mbr=true&manifest=m3u&format=redirect&switch=customhls",
+								"type" : "application/x-mpegURL",
+								"medium" : "video",
+								"duration" : "1793"
+							}
+						},
+						{
+							"@attributes" : {
+								"url" : "http://media2.foxnews.com/041014/041014_kelly_gohmert_FNC_LOW.mp4",
+								"type" : "video/mp4",
+								"medium" : "video",
+								"duration" : "1793"
+							}
+						}],
+				"media-subTitle": [
+					{
+					    "@attributes" : {
+						"type" : "application/ttml+xml",
+						"lang" : "en-us",
+						"href" : "http://dash.edgesuite.net/dash264/TestCases/4b/qualcomm/1/English_track.xml"
+					    }
+					},
+					{
+					    "@attributes" : {
+						"type" : "application/ttml+xml",
+						"lang" : "de",
+						"href" : "http://dash.edgesuite.net/dash264/TestCases/4b/qualcomm/1/German_track.xml"
+					    }
+					}
+				],
+				"media-thumbnail": {
+					"@attributes":{
+						"url":"http://projects.mediadev.edgesuite.net/customers/akamai/mdt-html5-core-chromecast/premier/resources/images/americandad.png",
+						"width":"604",
+						"height":"341"
+					}
+				},	
+				"media-title" : "Buffy the Vampire Slayer",
+				"media-description" : "Buffy the Vampire Slayer",
+				"media-embed" : {
+					"@attributes" : {
+						"url" : "http://player.js",
+						"width" : "604",
+						"height" : "341"
+					},
+					"media-param" : {
+						"@attributes" : {
+							"name" : "type"
+						},
+						"#text" : "text/javascript"
+					}
+				},
+				"media-scenes": {
+					"media-scene": [
+						{
+							"sceneTitle": "Scene 1",
+							"sceneDescription": "Scene 1 - Description",
+							"sceneStartTime": "00:00:00",
+							"sceneEndTime": "00:00:30"
+						}, {
+							"sceneTitle": "Scene 2",
+							"sceneDescription": "Scene 2 - Description",
+							"sceneStartTime": "00:00:30",
+							"sceneEndTime": "00:01:00"
+						}, {
+							"sceneTitle": "Scene 3",
+							"sceneDescription": "Scene 3 - Description",
+							"sceneStartTime": "00:01:00",
+							"sceneEndTime": "00:01:30"
+						}, {
+							"sceneTitle": "Scene 4",
+							"sceneDescription": "Scene 4 - Description",
+							"sceneStartTime": "00:01:30",
+							"sceneEndTime": "00:01:48"
+						}
+					]
+				}
+			}
+		}
+	}
+}

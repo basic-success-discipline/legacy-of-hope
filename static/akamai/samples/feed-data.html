@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP - Samples - MRSS Feed Data</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<!--Player-->
+        <script type="text/javascript"  src="../amp/amp.min.js?amp-defaults=samples.xml"></script>
+        <script type="text/javascript">
+            var amp,
+                feeds = 
+                [
+                    {
+                        "@attributes" : {
+                            "version" : "2.0"
+                        },
+                        "channel" : {
+                            "category" : "",
+                            "pubDate" : "Wed, 03 Aug 2011 10:00:21 -0400",
+                            "language" : "en",
+                            "ttl" : "10",
+                            "item" : {
+                                "title" : "AMP Premier",
+                                "link" : "http://akamai.com/player.html",
+                                "description" : "AMP Premier Player",
+                                "category" : "",
+                                "pubDate" : "Wed, 03 Aug 2011 10:00:21 -0400",
+                                "guid" : "4255636",
+                                "media-group" : {
+                                    "media-content" : [
+                                            {
+                                                "@attributes" : {
+                                                    "isDefault" : "true",
+                                                    "url" : "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m?start=0&end=30",
+                                                    "type" : "video/f4m",
+                                                    "medium" : "video",
+                                                    "duration" : "108"
+                                                }
+                                            },
+                                            {
+                                                "@attributes" : {
+                                                    "url" : "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8?start=0&end=30",
+                                                    "duration" : "108",
+                                                    "medium" : "video",
+                                                    "type" : "application/x-mpegURL"
+                                                }
+                                            }],
+                                    "media-title" : "VOD - HD World",
+                                    "media-description" : "View world's beauty in HD",
+                                    "media-embed" : {
+                                        "@attributes" : {
+                                            "url" : "http://player.js",
+                                            "width" : "604",
+                                            "height" : "341"
+                                        },
+                                        "media-param" : {
+                                            "@attributes" : {
+                                                "name" : "type"
+                                            },
+                                            "#text" : "text/javascript"
+                                        }
+                                    },
+                                    "media-thumbnail" : {
+                                        "@attributes" : {
+                                            "url" : "../resources/images/hd_world.jpg",
+                                            "width" : "604",
+                                            "height" : "341"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }, {
+                        "@attributes" : {
+                            "version" : "2.0"
+                        },
+                        "channel" : {
+                            "category" : "",
+                            "pubDate" : "Wed, 03 Aug 2011 10:00:21 -0400",
+                            "language" : "en",
+                            "ttl" : "10",
+                            "item" : {
+                                "title" : "iHeart",
+                                "link" : "http://live.html",
+                                "temporalType" : "vod",
+                                "description" : "iHeart",
+                                "category" : "",
+                                "pubDate" : "Wed, 03 Aug 2011 10:00:21 -0400",
+                                "guid" : "4255636",
+                                "media-group" : {
+                                    "media-content" : [
+                                            {
+                                                "@attributes" : {
+                                                    "isDefault" : "true",
+                                                    "url" : "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m?start=30&end=60",
+                                                    "medium" : "video",
+                                                    "duration" : "108"
+                                                }
+                                            },
+                                            {
+                                                "@attributes" : {
+                                                    "url" : "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8?start=30&end=60",
+                                                    "medium" : "video",
+                                                    "type" : "application/x-mpegURL"
+                                                }
+                                            }],
+                                    "media-title" : "VOD - HD World",
+                                    "media-description" : "View world's beauty in HD",
+                                    "media-embed" : {
+                                        "@attributes" : {
+                                            "url" : "http://player.js",
+                                            "width" : "604",
+                                            "height" : "341"
+                                        },
+                                        "media-param" : {
+                                            "@attributes" : {
+                                                "name" : "type"
+                                            },
+                                            "#text" : "text/javascript"
+                                        }
+                                    },
+                                    "media-thumbnail" : {
+                                        "@attributes" : {
+                                            "url" : "../resources/images/hd_world.jpg",
+                                            "width" : "320",
+                                            "height" : "240"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ];
+                
+            function loadHandler(event)
+            {
+            	var config_overrides = 
+            	{
+            		autoplay: true,
+            		feed:
+            		{
+            		    url: "",
+            			data: feeds[0]
+            		}
+            	}
+                amp = new akamai.amp.AMP("akamai-media-player", config_overrides);
+            }
+            
+            function loadVideo(index)
+            {
+                amp.feed.setData(feeds[index]);
+            }
+        </script>
+	</head>
+	<!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+	<body onload="loadHandler(event)" ontouchstart="">
+		<div class="page">
+			<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+            <div class="content">
+            	<h3>AMP: Samples</h3>
+    			<h5>MRSS Feed Data</h5>
+    			<div class="sample-player">
+        			<div id="akamai-media-player"></div>
+        			<div class="menu">
+                        <a onclick="loadVideo(1)">Video 1</a>
+                    </div>
+        		</div>
+            </div>
+	   	</div>
+	</body>
+</html>

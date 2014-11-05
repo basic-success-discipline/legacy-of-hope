@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" data-cast-api-enabled="true">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP - Samples - Chromecast - Google Sender</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+		<script type="text/javascript">
+			var applicationId, messageBus = "urn:x-cast:com.akamai.amp.cast", session, currentMedia, mediaInfo, startTime = 0, videos = [{
+				guid : "198378051534",
+				type : "application/x-mpegURL",
+				src : "http://transdemohls-vh.akamaihd.net/i/XYZCorpMedia/delivery/5bcc3b38-f482-4b01-8bab-a665efc666e2/,Art-of-Flight_Clip-3_1000k.mp4,Art-of-Flight_Clip-3_2500k.mp4,Art-of-Flight_Clip-3_300k.mp4,Art-of-Flight_Clip-3_1500k.mp4,Art-of-Flight_Clip-3_600k.mp4,Art-of-Flight_Clip-3_800k.mp4,Art-of-Flight_Clip-3_200k.mp4,.csmil/master.m3u8",
+				medium : "video",
+				title : "Art of Flight",
+				duration : 157,
+				poster : "http://projects.mediadev.edgesuite.net/customers/akamai/mdt-html5-core-chromecast/premier/resources/feeds/artofflight.jpg",
+				category : ["promo"],
+				description : "Art of Flight",
+				pubDate : "2014-08-03T14:00:21.000Z"
+			}, {
+				guid : "278426179822",
+				type : "application/x-mpegURL",
+				src : "http://foxnews-f.akamaihd.net/i/041014/041014_kelly_gohmert_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/master.m3u8",
+				medium : "video",
+				title : "Rep. Louie Gohmert blasts Holder for blaming racism",
+				duration : 242,
+				poster : "http://a57.foxnews.com/media2.foxnews.com/thumbnails/i/041014/640/360/041014_kelly_gohmert_640.jpg",
+				category : ["politics", "on_air", "personality", "personality/megyn_kelly", "on_air/the_kelly_file", "settings/advertising/ad_supported"],
+				description : "Congressman discusses Holder slamming critics at Al Sharpton event",
+				pubDate : "2014-04-10T21:34:42-04:00"
+			}, {
+				guid : "278426179822",
+				type : "application/x-mpegURL",
+				src : "http://link.theplatform.com/s/fx-devices/3HijHLFuHgU0?mbr=true&manifest=m3u&format=redirect&switch=customhls",
+				medium : "video",
+				title : "Buffy the Vampire Slayer",
+				duration : 2640,
+				poster : "../resources/images/hd_world.jpg",
+				category : ["episode"],
+				description : "Buffy the Vampire Slayer",
+				pubDate : "2014-08-01T21:00:00-00:00"
+			}, {
+				guid : "278426179822",
+				type : "application/x-mpegURL",
+				src : "http://link.theplatform.com/s/fx-devices/GCcYGqvlRsPv?mbr=true&manifest=m3u&format=redirect&switch=customhls",
+				medium : "video",
+				title : "America Horror Story",
+				duration : 10,
+				poster : "../resources/images/hd_world.jpg",
+				category : ["promo"],
+				description : "America Horror Story",
+				pubDate : "2014-08-01T21:00:00-00:00"
+			}, {
+				guid : "278426179822",
+				type : "application/x-mpegURL",
+				src : "http://link.theplatform.com/s/fng-fx/dBwyMnr0rIfn?mbr=true&manifest=m3u&format=redirect",
+				medium : "video",
+				title : "SoA",
+				duration : 120,
+				poster : "../resources/images/hd_world.jpg",
+				category : ["promo"],
+				description : "Sons of Anarchy Promo",
+				pubDate : "2014-08-01T21:00:00-00:00"
+			}, {
+				guid : "278426179822",
+				type : "application/x-mpegURL",
+				src : "http://link.theplatform.com/s/TBmo1B/AFjkQDHnHrbb?mbr=true&manifest=m3u&format=redirect",
+				medium : "video",
+				title : "The Mindy Project",
+				duration : 1320,
+				poster : "../resources/images/hd_world.jpg",
+				category : ["episode"],
+				description : "S2 - E3",
+				pubDate : "2014-08-01T21:00:00-00:00"
+			}], feed = {
+				url : "chromecast-feed.json",
+				data : {
+					"@attributes" : {
+						"version" : "2.0"
+					},
+					"channel" : {
+						"category" : "video",
+						"pubDate" : "Tuesday, October 29, 2013",
+						"language" : "en",
+						"ttl" : "10",
+						"item" : {
+							"title" : "Eat Like A Man: How To Season A Steak",
+							"link" : "videos/70718-eat-like-a-man-how-to-season-a-steak/",
+							"description" : "Every man likes a good steak. For a nice New York strip, all you need is kosher salt and pepper in this quick tutorial from Knife Fight's Ilan Hall.",
+							"category" : "",
+							"pubDate" : "Tuesday, October 29, 2013",
+							"guid" : "70718",
+							"pandaid" : "92413",
+							"show" : "Knife Fight",
+							"keywords" : ["Knife Fight", "Elam", "Eat Like A Man", "ILAN HALL EAT LIKE A MAN"],
+							"media-group" : {
+								"media-title" : "Eat Like A Man: How To Season A Steak",
+								"media-description" : "Every man likes a good steak. For a nice New York strip, all you need is kosher salt and pepper in this quick tutorial from Knife Fight's Ilan Hall.",
+								"media-content" : [{
+									"@attributes" : {
+										"isDefault" : "true",
+										"url" : "http://esqtcstream-vh.akamaihd.net/z/EsquireNetwork/delivery/e23b421f-bfdb-4ccd-bf49-4efa776e0e88/70718_esquiretv_,4,16,12,8,6,20,2,40,25,30,00k.mp4.csmil/manifest.f4m",
+										"type" : "video/f4m",
+										"medium" : "video",
+										"duration" : "194"
+									}
+								}, {
+									"@attributes" : {
+										"url" : "http://esqtcstream-vh.akamaihd.net/i/EsquireNetwork/delivery/e23b421f-bfdb-4ccd-bf49-4efa776e0e88/70718_esquiretv_,4,16,12,8,6,20,2,40,25,30,00k.mp4.csmil/master.m3u8",
+										"type" : "application/x-mpegURL",
+										"medium" : "video",
+										"duration" : "194"
+									}
+								}],
+								"media-thumbnail" : {
+									"@attributes" : {
+										"url" : "http://tv.esquire.com/images/ImageDb3/317730_M/eatlikeaman_06_season_steakjpg.jpg?maxwidth=1000",
+										"width" : "341",
+										"height" : "600"
+									}
+								},
+								"media-embed" : {
+									"@attributes" : {
+										"url" : "http://player.js",
+										"width" : "604",
+										"height" : "341"
+									},
+									"media-param" : {
+										"@attributes" : {
+											"name" : "type"
+										},
+										"#text" : "text/javascript"
+									}
+								},
+								"media-subTitle" : {
+									"@attributes" : {
+										"type" : "application/ttml+xml",
+										"lang" : "en-us",
+										"href" : "http://tv.esquire.com/api/transcription?videokey=70718"
+									}
+								}
+							}
+						}
+					}
+				}
+			}, query = {}, search = location.search;
+
+			if (search != null && search != "") {
+				search.replace(/([^?=&]+)(=([^&]*))?/g, function($0, $1, $2, $3) {
+					query[decodeURIComponent($1)] = decodeURIComponent($3);
+				});
+			};
+
+			window['__onGCastApiAvailable'] = function(loaded, errorInfo) {
+				if (loaded) {
+					initializeCastApi();
+				} else {
+					onError("__onGCastApiAvailable", errorInfo);
+				}
+			};
+
+			function initializeCastApi() {
+				var appIdMap = {
+							"amp": "44B6E47D",
+							"amp-staging": "D89B5FCA",
+							"amp-freewheel": "B744C902",
+							"amp-freewheel-staging": "D8890397",
+							"amp-ima": "05F17AED",
+							"google-default": chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID
+						},
+						appId = /[A-F0-9]{8}/.test(query.appId) ? query.appId : appIdMap[query.appId] || appIdMap.amp,
+						sessionRequest = new chrome.cast.SessionRequest(appId),
+						apiConfig = new chrome.cast.ApiConfig(sessionRequest, sessionListener, receiverListener);
+				
+				applicationId = appId;
+				startTime = /^[0-9]+$/.test(query.startTime) ? parseInt(query.startTime) : 0;
+
+				chrome.cast.initialize(apiConfig, onInitSuccess, onError.bind(this, "initializeCastApi"));
+			}
+
+			function onError(from, e) {
+				console.error(from, e);
+			}
+
+			function onInitSuccess(e) {
+				console.log("Init Success");
+			}
+
+			function receiverListener(e) {
+				var available = (e === chrome.cast.ReceiverAvailability.AVAILABLE);
+				console.log("receiver available: ", available);
+				updateSection("cast", available);
+			}
+
+			function sessionListener(e) {
+				session = e;
+
+				if (session.media.length != 0) {
+					onMediaDiscovered(session.media[0]);
+					updateCasting(true);
+				} else {
+					// If the user closes the chromecast extension media before
+					// the connect is fully established, the onRequestSeesionSuccess
+					// handler never gets fired even though there is a valid session
+					onRequestSessionSuccess(e);
+				}
+			}
+
+			function onRequestSessionSuccess(e) {
+				console.log("request session success:", e);
+
+				session = e;
+				session.addUpdateListener(onUpdate);
+
+				//Listen for AMP messages
+				session.addMessageListener(messageBus, onMessage);
+
+				if (session.media.length == 0) {
+					// Load the first media item
+					var index = /^[0-9]+$/.test(query.index) ? parseInt(query.index) : 0;
+					loadMedia(index);
+				}
+
+				updateCasting(true);
+			}
+			
+			function onRequestSessionError(from, e) {
+				onError(from, e);
+				updateCasting(false);
+			}
+			
+			function onMessage(namespace, message) {
+				message = JSON.parse(message);
+				
+				console.log("message", namespace, message);
+				
+				switch (message.type) {
+					case "ads.breakstart":
+						updateAds(true);
+					break;
+					
+					case "ads.breakend":
+						updateAds(false);
+					break;
+				}
+			}
+
+			function onUpdate(isAlive) {
+				console.log("session -> isAlive:", isAlive);
+				if (!isAlive) {
+					onStopSuccess(isAlive);
+				}
+			}
+
+			function onMediaDiscovered(media) {
+				if (currentMedia != null)
+					currentMedia.removeUpdateListener(onMediaStatusUpdate);
+					
+				currentMedia = media;
+				currentMedia.addUpdateListener(onMediaStatusUpdate);
+
+				updateMedia(true, currentMedia.media.metadata.title);
+				updateStatus();
+			}
+			
+			function onMediaStatusUpdate(isAlive) {
+				console.log("media -> isAlive:", isAlive);
+				
+				updateStatus();
+			}
+
+			function onStopSuccess(e) {
+				console.log("stop sucess:", e);
+				session = null;
+				media = null;
+				
+				updateMedia(false);
+				updateCasting(false);
+				updateStatus("");
+			}
+			
+		  function requestSession() {
+				chrome.cast.requestSession(onRequestSessionSuccess, onRequestSessionError.bind(this, "requestSession"));
+			}
+			
+			function stopSession() {
+				session.stop(onStopSuccess, onError.bind(this, "stop"));
+			}
+
+			function loadMedia(index) {
+				var media = videos[index];
+
+				var metadata = new chrome.cast.media.GenericMediaMetadata();
+				metadata.title = media.title;
+				metadata.subtitle = media.description;
+				metadata.image = media.poster;
+				metadata.releaseDate = media.pubDate;
+
+				var mediaInfo = new chrome.cast.media.MediaInfo(media.src, media.type);
+				mediaInfo.duration = media.duration;
+				mediaInfo.customData = {
+					media : media
+				};
+				mediaInfo.metadata = metadata;
+				
+				updateMedia(false, metadata.title);
+				updateStatus("LOADING");
+				
+				var request = new chrome.cast.media.LoadRequest(mediaInfo);
+				request.currentTime = startTime;
+				session.loadMedia(request, onMediaDiscovered, onError.bind(this, "loadMedia"));
+				
+				startTime = 0;
+			}
+
+			function loadFeed(type) {
+				// The cast API throws an error if the value of contentId
+				// or contentType is null, undefined or ""
+				var dummyValue = Date.now().toString();
+				var mediaInfo = new chrome.cast.media.MediaInfo(dummyValue, dummyValue);
+				mediaInfo.customData = (type == "url") ? {
+					feed : {
+						url : feed.url
+					}
+				} : {
+					feed : {
+						data : feed.data
+					}
+				};
+				
+				updateMedia(false);
+				updateStatus("LOADING");
+				
+				var request = new chrome.cast.media.LoadRequest(mediaInfo);
+				session.loadMedia(request, onMediaDiscovered, onError.bind(this, "loadFeed"));
+			}
+
+			function seek() {
+				var time = parseFloat(document.getElementById("time").value);
+
+				if (isNaN(time))
+					return;
+
+				var request = new chrome.cast.media.SeekRequest();
+				request.currentTime = time;
+
+				currentMedia.seek(request, onSeekSuccess, onError.bind(this, "seek"));
+			}
+
+			function onSeekSuccess(e) {
+				console.log("seek success:", e);
+			}
+
+			function play() {
+				var request = new chrome.cast.media.PlayRequest();
+				request.customData = {
+					testing : 123
+				};
+				currentMedia.play(request, onPlaySuccess, onError.bind(this, "play"));
+			}
+
+			function onPlaySuccess(e) {
+				console.log("play success:", e);
+			}
+
+			function pause() {
+				var request = new chrome.cast.media.PauseRequest();
+				request.customData = {
+					testing : 456
+				};
+				currentMedia.pause(request, onPauseSuccess, onError.bind(this, "pause"));
+			}
+
+			function onPauseSuccess(e) {
+				console.log("pause success:", e);
+			}
+
+			/* UI */
+			var interval;
+			
+			window.addEventListener("load", function(event) {
+				document.getElementById("amp").hidden = (applicationId == chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID);
+			});
+			
+			function buttonClicked(event) {
+				if (session == null) {
+					requestSession();
+					updateButton("Requesting Session", false);
+				} else {
+					stopSession();
+					updateButton("Stopping Session", false);
+				}
+			}
+
+			function updateMessage(message) {
+				document.getElementById("message").textContent = message;
+			}
+
+			function updateButton(message, enabled) {
+				var button = document.getElementById("button");
+				button.value = message;
+				if (enabled == null)
+					enabled = true;
+				button.disabled = !enabled;
+			}
+
+			function updateSection(section, visible) {
+				document.getElementById(section).hidden = !visible;
+			}
+			
+			function updatePlayhead(time) {
+				if (time == null)
+					time = Math.round(currentMedia.getEstimatedTime());
+				document.getElementById("playhead").textContent = time;
+			}
+			
+			function updateStatus(status) {
+				if (status == null)
+					status = currentMedia.playerState;
+				document.getElementById("status").textContent = status;
+			}
+			
+			function updateAds(adPlaying) {
+				document.getElementById("ads").textContent = (adPlaying) ? "AD BREAK": "";
+			}
+			
+			function updateInterval(running) {
+				if (running) {
+					clearInterval(interval);
+					interval = setInterval(function () {
+						updatePlayhead();
+					}, 1000);
+					updatePlayhead();
+				} else {
+					clearInterval(interval);
+				}
+			}
+			
+			function updateMedia(discovered, message) {
+				updateSection("controls", discovered);
+				updateMessage(message || "");
+				updatePlayhead("");
+				updateInterval(discovered);
+			}
+			
+			function updateCasting(casting) {
+				updateSection("media", casting);
+				updateButton(casting ? "Stop Casting" : "Start Casting", true);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="page">
+			<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+			<div class="content">
+				<h3>AMP: Samples</h3>
+				<h5>Chromecast - Google Sender</h5>
+				<div class="sample-player">
+					<div class="castsection">
+						<div id="cast" hidden>
+							<input id="button" type="button" onclick="buttonClicked(event);" value="Start Casting" />
+						</div>
+					</div>
+					<div class="castsection">
+						<div class="castsubsection">
+							<div id="message"></div>
+							<div id="status"></div>
+							<div id="playhead"></div>
+							<div id="ads"></div>
+						</div>
+					</div>
+					<div class="castsection">
+						<div id="controls" class="castsubsection" hidden>
+							<input type="button" onclick="play();" value="play" />
+							<input type="button" onclick="pause();" value="pause" />
+							<input type="text" id="time" />
+							<input type="button" onclick="seek();" value="seek" />
+						</div>
+					</div>
+					<div class="castsection">
+						<div id="media" hidden>
+							<div id="google" class="castsubsection">
+								<input type="button" onclick="loadMedia(0);" value="Media 1" />
+								<input type="button" onclick="loadMedia(1);" value="Media 2" />
+							</div>
+							<div id="amp" class="castsubsection">
+								<input type="button" onclick="loadFeed('data');" value="Feed Data" />
+								<input type="button" onclick="loadFeed('url');" value="Feed URL" />
+							</div>
+							<div id="fox" class="castsubsection">
+								<input type="button" onclick="loadMedia(2);" value="Buffy" />
+								<input type="button" onclick="loadMedia(3);" value="AHS: Freak Show" />
+								<input type="button" onclick="loadMedia(4);" value="SoA" />
+								<input type="button" onclick="loadMedia(5);" value="Mindy" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

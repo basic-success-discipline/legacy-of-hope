@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP - Samples - Create/Destroy</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<style>
+			.menu
+			{
+				text-align: center;
+				margin: 20px 0px 20px 0px;
+			}
+		</style>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!--Player-->
+        <script type="text/javascript"  src="../amp/amp.min.js?amp-defaults=samples.xml"></script>
+        <script type="text/javascript">
+            var amp, currentPlayer;
+            
+            var videos = 
+            [
+           		{
+           			autoplay: true,
+            		title: "HD World",
+            		poster: '../resources/images/hd_world.jpg',
+            		source: 
+            		[
+						{src: "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m", type: "video/f4m"},
+						{src: "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8", type: "application/x-mpegURL"}
+					],
+					mediaanalytics:
+					{
+						dimensions: { title: "TITLE1", eventName: "EVENTNAME1" }
+					}
+            	},
+            	{
+            		autoplay: true,
+            		temporalType: "live",
+            		title: "KTLA Live",
+            		source: 
+            		[
+						{src: "http://ktlatribune-lh.akamaihd.net/z/KTLATribune_1@109091/manifest.f4m", type: "video/f4m"},
+						{src: "http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8", type: "application/x-mpegURL"}
+					],
+					mediaanalytics:
+					{
+						dimensions: { title: "TITLE2", eventName: "EVENTNAME2" }
+					}
+            	},
+            	{
+            		autoplay: true,
+            		title: "Demo Stream",
+            		temporalType: "live",
+            		source: 
+            		[
+						{src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+						{src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
+					],
+					mediaanalytics:
+					{
+						dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+					}
+            	},
+            	{
+            		autoplay: true,
+            		title: "Space Alone",
+            		poster: '../resources/images/space_alone.jpg',
+            		src: "http://mediapm.edgesuite.net/osmf/content/test/spacealonehd_sounas_640_700.mp4",
+            		track:
+            		[
+            			{kind: "captions", type: "application/ttml+xml", src: "captioning.xml"}
+            		],
+					mediaanalytics:
+					{
+						dimensions: { title: "TITLE4", eventName: "EVENTNAME4" }
+					}
+            	}
+            ];
+            
+            var players = [
+            	'<div id="akamai-media-player"></div><script>amp = new akamai.amp.AMP("akamai-media-player", {autoplay: true, feed: {enabled: false}, media: videos[0]});</scr'+'ipt>',
+            	'<div id="akamai-media-player"></div><script>amp = new akamai.amp.AMP("akamai-media-player", {autoplay: true, feed: {enabled: false}, media: videos[1]});</scr'+'ipt>',
+            	'<div id="akamai-media-player"></div><script>amp = new akamai.amp.AMP("akamai-media-player", {autoplay: true, feed: {enabled: false}, media: videos[2]});</scr'+'ipt>',
+            	'<div id="akamai-media-player"></div><script>amp = new akamai.amp.AMP("akamai-media-player", {autoplay: true, feed: {enabled: false}, media: videos[3]});</scr'+'ipt>'
+            ];
+            
+            function loadVideo(index)
+            {
+            	if (index == currentPlayer)
+            		return;
+            		
+            	if (amp != null)
+            		amp.destroy();
+            		
+            	currentPlayer = index;
+            	
+            	$(".sample-player").html(players[currentPlayer]);
+            }
+        </script>
+	</head>
+	<!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+	<body ontouchstart="">
+		<div class="page">
+	    	<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+            <div class="content">
+            	<h3>AMP: Samples</h3>
+	    		<h5>Create/Destroy</h5>
+            	<div class="sample-player">
+            		<script>loadVideo(0);</script>
+            	</div>
+            	<div class="menu">
+	            	<a href="#" onclick="loadVideo(0)">Video 1</a> |
+	            	<a href="#" onclick="loadVideo(1)">Video 2</a> |
+	            	<a href="#" onclick="loadVideo(2)">Video 3</a> |
+	            	<a href="#" onclick="loadVideo(3)">Video 4</a>
+	            </div>
+            </div>
+	   	</div>
+	</body>
+</html>

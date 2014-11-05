@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP</title>
+		<link type="text/css" rel="stylesheet" href="resources/styles/styles.css" />
+		<script>
+			var debug 	= /debug=true/.test(location.search),
+				rules	= document.styleSheets[0].cssRules || document.styleSheets[0].rules,
+				rule, i = 0, count = rules.length;
+			
+			if (debug)
+			{	
+				for (; i< count; i++)
+				{
+					rule = rules[i];
+					if (rule.selectorText == ".debug")
+					{
+						rule.style.display = "inline";
+						break;
+					}
+				}
+			} 
+		</script>
+
+	</head>
+	<body>
+		<div class="page">
+	    	<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+			<div class="content">
+        		<h4>Akamai Media Player</h4>
+
+        		<h3>Demo Page:</h3>
+            	<table class="samples">
+            		<tr>
+            	    	<th width="20%">Page</th>
+                	    <th width="50%">Description</th>
+                	    <th width="30%">HTML file</th>
+                  	</tr>
+                  	<tr>
+            	    	<td>Simple Implementation</td>
+                	    <td>A simple implementation of the AMP Standard player</td>
+                	    <td>
+                	    	<a href="samples/simple.html?debug=true" target="_blank">simple.html</a><span class="debug"> - 
+                	    	(<a href="samples/simple.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                	    	(<a href="samples/simple.html?debug=true&mode=html" target="_blank">HTML</a>)
+                	    	(<a href="samples/simple.html?debug=true&mode=external" target="_blank">External</a>)</span>
+                	    </td>
+          	    	</tr>
+          	    	<tr>
+            	    	<td>Advanced Implementation</td>
+                	    <td>An advanced page integration sample</td>
+                	    <td>
+                	    	<a href="samples/advanced.html?debug=true" target="_blank">advanced.html</a><span class="debug"> - 
+                	    	(<a href="samples/advanced.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                	    	(<a href="samples/advanced.html?debug=true&mode=html" target="_blank">HTML</a>)
+                	    	(<a href="samples/advanced.html?debug=true&mode=external" target="_blank">External</a>)</span>
+                	    </td>
+          	    	</tr>
+          	    	<tr>
+            	    	<td>Configuration</td>
+                	    <td>The demonstration configuration file</td>
+                	    <td>
+                	    	<a href="amp/amp.xml" target="_blank">amp/amp.xml</a>
+                	    </td>
+          	    	</tr>
+          	    </table>
+				<h3>Samples:</h3>
+            	<table class="samples">
+            		<tr>
+            	    	<th width="20%">Page</th>
+                	    <th width="50%">Description</th>
+                	    <th width="30%">HTML file</th>
+                  	</tr>
+                  	                    <tr>
+                        <td>Accessibility</td>
+                        <td>Sample implementation for accessibility</td>
+                        <td>
+                            <a href="samples/accessibility.html?debug=true" target="_blank">accessibility.html</a><span class="debug"> - 
+                            (<a href="samples/accessibility.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/accessibility.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>JavaScript API</td>
+                        <td>Sample implementation of the JavaScript API</td>
+                        <td>
+                            <a href="samples/api.html?debug=true" target="_blank">api.html</a><span class="debug"> - 
+                            (<a href="samples/api.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/api.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Audio Playback</td>
+                        <td>Sample implementation for audio playback</td>
+                        <td>
+                            <a href="samples/audio.html?debug=true" target="_blank">audio.html</a><span class="debug"> - 
+                            (<a href="samples/audio.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/audio.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Branding</td>
+                        <td>Sample implementation of the Branding feature</td>
+                        <td>
+                            <a href="samples/branding.html?debug=true" target="_blank">branding.html</a><span class="debug"> - 
+                            (<a href="samples/branding.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/branding.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - VOD / DFXP</td>
+                        <td>Sample implementation for close captioning</td>
+                        <td>
+                            <a href="samples/captioning.html?debug=true" target="_blank">captioning.html</a><span class="debug"> - 
+                            (<a href="samples/captioning.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - Live / 708</td>
+                        <td>Sample implementation of 708 closed captioning</td>
+                        <td>
+                            <a href="samples/captioning-708.html?debug=true" target="_blank">captioning-708.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-708.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-708.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - Live / Cue Point</td>
+                        <td>Sample implementation of cue point closed captioning</td>
+                        <td>
+                            <a href="samples/captioning-cuepoint.html?debug=true" target="_blank">captioning-cuepoint.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-cuepoint.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-cuepoint.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - Embedded</td>
+                        <td>Sample implementation for embedded closed captioning</td>
+                        <td>
+                            <a href="samples/captioning-embedded.html?debug=true" target="_blank">captioning-embedded.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-embedded.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-embedded.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - Multi-Language</td>
+                        <td>Sample implementation for multi-language captioning</td>
+                        <td>
+                            <a href="samples/captioning-multi-language.html?debug=true" target="_blank">captioning-multi-language.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-multi-language.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-multi-language.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - Multi-Language: Feed</td>
+                        <td>Sample implementation for multi-language captioning using a feed</td>
+                        <td>
+                            <a href="samples/captioning-multi-language-feed.html?debug=true" target="_blank">captioning-multi-language-feed.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-multi-language-feed.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-multi-language-feed.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - VOD / SRT</td>
+                        <td>Sample implementation for close captioning</td>
+                        <td>
+                            <a href="samples/captioning-srt.html?debug=true" target="_blank">captioning-srt.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-srt.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-srt.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - Live / Subply</td>
+                        <td>Sample implementation of subply Live closed captioning</td>
+                        <td>
+                            <a href="samples/captioning-subply.html?debug=true" target="_blank">captioning-subply.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-subply.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-subply.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Captioning - VOD / Subply</td>
+                        <td>Sample implementation of subply VOD closed captioning</td>
+                        <td>
+                            <a href="samples/captioning-subply-vod.html?debug=true" target="_blank">captioning-subply-vod.html</a><span class="debug"> - 
+                            (<a href="samples/captioning-subply-vod.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/captioning-subply-vod.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Chromecast</td>
+                        <td>Sample Chromecast integration. (Must be viewed in Chrome with <a href="https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd?hl=en" target="_blank">Chromecast extension</a> installed)</td>
+                        <td>
+                            <a href="samples/chromecast-sender.html?debug=true" target="_blank">chromecast-sender.html</a><span class="debug"> - 
+                            (<a href="samples/chromecast-sender.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/chromecast-sender.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Chromecast Freewheel</td>
+                        <td>Sample Chromecast integration with Freewheel ads. (Must be viewed in Chrome with <a href="https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd?hl=en" target="_blank">Chromecast extension</a> installed)</td>
+                        <td>
+                            <a href="samples/chromecast-sender-freewheel.html?debug=true" target="_blank">chromecast-sender-freewheel.html</a><span class="debug"> - 
+                            (<a href="samples/chromecast-sender-freewheel.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/chromecast-sender-freewheel.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Chromecast Google Sender</td>
+                        <td>Generic implementation of a Chromecast sender using Google's APIs. (Must be viewed in Chrome with <a href="https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd?hl=en" target="_blank">Chromecast extension</a> installed)</td>
+                        <td>
+                            <a href="samples/chromecast-sender-google.html?debug=true" target="_blank">chromecast-sender-google.html</a><span class="debug"> - 
+                            (<a href="samples/chromecast-sender-google.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/chromecast-sender-google.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Chromecast IMA</td>
+                        <td>Sample Chromecast integration with Freewheel ads. (Must be viewed in Chrome with <a href="https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd?hl=en" target="_blank">Chromecast extension</a> installed)</td>
+                        <td>
+                            <a href="samples/chromecast-sender-ima.html?debug=true" target="_blank">chromecast-sender-ima.html</a><span class="debug"> - 
+                            (<a href="samples/chromecast-sender-ima.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/chromecast-sender-ima.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>CMS Embed</td>
+                        <td>Sample implementation for embedding the player via a CMS</td>
+                        <td>
+                            <a href="samples/cms.html?debug=true" target="_blank">cms.html</a><span class="debug"> - 
+                            (<a href="samples/cms.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/cms.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Dynamic Configuration Loading</td>
+                        <td>Sample implementation using a dynamically loaded configuration file</td>
+                        <td>
+                            <a href="samples/config.html?debug=true" target="_blank">config.html</a><span class="debug"> - 
+                            (<a href="samples/config.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/config.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Controls</td>
+                        <td>Sample implementation for controls api</td>
+                        <td>
+                            <a href="samples/controls.html?debug=true" target="_blank">controls.html</a><span class="debug"> - 
+                            (<a href="samples/controls.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/controls.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Native Controls</td>
+                        <td>Sample implementation of native playback controls</td>
+                        <td>
+                            <a href="samples/controls-native.html?debug=true" target="_blank">controls-native.html</a><span class="debug"> - 
+                            (<a href="samples/controls-native.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/controls-native.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Create / Destroy</td>
+                        <td>Sample implementation of creation and destoruction of player instances</td>
+                        <td>
+                            <a href="samples/create-destroy.html?debug=true" target="_blank">create-destroy.html</a><span class="debug"> - 
+                            (<a href="samples/create-destroy.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/create-destroy.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Create / Destory - Modal Div Overlay</td>
+                        <td>Sample implementation of creation and destruction using a modal div overlay</td>
+                        <td>
+                            <a href="samples/create-destroy-modal.html?debug=true" target="_blank">create-destroy-modal.html</a><span class="debug"> - 
+                            (<a href="samples/create-destroy-modal.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/create-destroy-modal.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>MPEG DASH (Chrome only)</td>
+                        <td>Sample implementation for MPEG DASH playback</td>
+                        <td>
+                            <a href="samples/dash.html?debug=true&mode=html" target="_blank">dash.html</a><span class="debug"> - 
+                            (<a href="samples/dash.html?debug=true&mode=flash&mode=html" target="_blank">Flash</a>)
+                            (<a href="samples/dash.html?debug=true&mode=html&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>MPEG DASH with Captioning (Chrome only)</td>
+                        <td>Sample implementation for MPEG DASH playback with captioning</td>
+                        <td>
+                            <a href="samples/dash-captioning.html?debug=true&mode=html" target="_blank">dash-captioning.html</a><span class="debug"> - 
+                            (<a href="samples/dash-captioning.html?debug=true&mode=flash&mode=html" target="_blank">Flash</a>)
+                            (<a href="samples/dash-captioning.html?debug=true&mode=html&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>MPEG DASH with support for DVR playback (Chrome only)</td>
+                        <td>Sample implementation for MPEG DASH DVR playback</td>
+                        <td>
+                            <a href="samples/dash-dvr.html?debug=true&mode=html" target="_blank">dash-dvr.html</a><span class="debug"> - 
+                            (<a href="samples/dash-dvr.html?debug=true&mode=flash&mode=html" target="_blank">Flash</a>)
+                            (<a href="samples/dash-dvr.html?debug=true&mode=html&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>MPEG DASH with support for live playback (Chrome only)</td>
+                        <td>Sample implementation for MPEG DASH live playback</td>
+                        <td>
+                            <a href="samples/dash-live.html?debug=true&mode=html" target="_blank">dash-live.html</a><span class="debug"> - 
+                            (<a href="samples/dash-live.html?debug=true&mode=flash&mode=html" target="_blank">Flash</a>)
+                            (<a href="samples/dash-live.html?debug=true&mode=html&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Event Management</td>
+                        <td>Sample implementation of live event management</td>
+                        <td>
+                            <a href="samples/event-management.html?debug=true" target="_blank">event-management.html</a><span class="debug"> - 
+                            (<a href="samples/event-management.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/event-management.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>External Playback</td>
+                        <td>Sample implementation of external playback</td>
+                        <td>
+                            <a href="samples/external.html?debug=true" target="_blank">external.html</a><span class="debug"> - 
+                            (<a href="samples/external.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/external.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Feed</td>
+                        <td>Sample implementation using a MRSS feed</td>
+                        <td>
+                            <a href="samples/feed.html?debug=true" target="_blank">feed.html</a><span class="debug"> - 
+                            (<a href="samples/feed.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/feed.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Javascript Feed</td>
+                        <td>Sample implementation using a Javascript object as a feed</td>
+                        <td>
+                            <a href="samples/feed-data.html?debug=true" target="_blank">feed-data.html</a><span class="debug"> - 
+                            (<a href="samples/feed-data.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/feed-data.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>JSON Feed</td>
+                        <td>Sample implementation using a JSON formatted MRSS feed</td>
+                        <td>
+                            <a href="samples/feed-json.html?debug=true" target="_blank">feed-json.html</a><span class="debug"> - 
+                            (<a href="samples/feed-json.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/feed-json.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Feed Menu</td>
+                        <td>Sample implementation using a menu to load feed content</td>
+                        <td>
+                            <a href="samples/feed-menu.html?debug=true" target="_blank">feed-menu.html</a><span class="debug"> - 
+                            (<a href="samples/feed-menu.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/feed-menu.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Flash Embed (flash only)</td>
+                        <td>Sample implementation embedding the flash player directly to the page.</td>
+                        <td>
+                            <a href="samples/flash-embed.html?debug=true" target="_blank">flash-embed.html</a><span class="debug"> - 
+                            (<a href="samples/flash-embed.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/flash-embed.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>HD Client (flash only)</td>
+                        <td>Sample implementation using Akamai's HD Client</td>
+                        <td>
+                            <a href="samples/hd-client.html?debug=true" target="_blank">hd-client.html</a><span class="debug"> - 
+                            (<a href="samples/hd-client.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/hd-client.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>User Agent Hinting</td>
+                        <td>Sample implementation using user agent hinting</td>
+                        <td>
+                            <a href="samples/hinting.html?debug=true" target="_blank">hinting.html</a><span class="debug"> - 
+                            (<a href="samples/hinting.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/hinting.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Live</td>
+                        <td>Sample implementation of live video</td>
+                        <td>
+                            <a href="samples/live.html?debug=true" target="_blank">live.html</a><span class="debug"> - 
+                            (<a href="samples/live.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/live.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Localization</td>
+                        <td>Sample implementation for localization</td>
+                        <td>
+                            <a href="samples/localization.html?debug=true" target="_blank">localization.html</a><span class="debug"> - 
+                            (<a href="samples/localization.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/localization.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Long Form Content</td>
+                        <td>Sample implementation of long form content (duration >= 1h)</td>
+                        <td>
+                            <a href="samples/long-form.html?debug=true" target="_blank">long-form.html</a><span class="debug"> - 
+                            (<a href="samples/long-form.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/long-form.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Loop</td>
+                        <td>Sample implementation for looped playback</td>
+                        <td>
+                            <a href="samples/loop.html?debug=true" target="_blank">loop.html</a><span class="debug"> - 
+                            (<a href="samples/loop.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/loop.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Media Analytcis</td>
+                        <td>Sample implementation of the media analytics</td>
+                        <td>
+                            <a href="samples/mediaanalytics.html?debug=true&akamaianalytics_debug=1" target="_blank">mediaanalytics.html</a><span class="debug"> - 
+                            (<a href="samples/mediaanalytics.html?debug=true&mode=flash&akamaianalytics_debug=1" target="_blank">Flash</a>)
+                            (<a href="samples/mediaanalytics.html?debug=true&mode=html&akamaianalytics_debug=1" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Menu</td>
+                        <td>Sample menu implementation using the JavaScript API</td>
+                        <td>
+                            <a href="samples/menu.html?debug=true" target="_blank">menu.html</a><span class="debug"> - 
+                            (<a href="samples/menu.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/menu.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Modal Div Overlay</td>
+                        <td>Sample implementation of a modal div overlay</td>
+                        <td>
+                            <a href="samples/modal-overlay.html?debug=true" target="_blank">modal-overlay.html</a><span class="debug"> - 
+                            (<a href="samples/modal-overlay.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/modal-overlay.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Modal Div Overlay - Single Instance</td>
+                        <td>Sample implementation of a modal div overlay using a single instance of AMP</td>
+                        <td>
+                            <a href="samples/modal-overlay-single-instance.html?debug=true" target="_blank">modal-overlay-single-instance.html</a><span class="debug"> - 
+                            (<a href="samples/modal-overlay-single-instance.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/modal-overlay-single-instance.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Progressive Download</td>
+                        <td>Sample implementation for progressive download</td>
+                        <td>
+                            <a href="samples/pdl.html?debug=true" target="_blank">pdl.html</a><span class="debug"> - 
+                            (<a href="samples/pdl.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/pdl.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Persistent Controls</td>
+                        <td>Sample implementation using persistent controls</td>
+                        <td>
+                            <a href="samples/persistent-controls.html?debug=true" target="_blank">persistent-controls.html</a><span class="debug"> - 
+                            (<a href="samples/persistent-controls.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/persistent-controls.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Stats Overlay</td>
+                        <td>Sample implementation of Stats Overlay</td>
+                        <td>
+                            <a href="samples/stats.html?debug=true" target="_blank">stats.html</a><span class="debug"> - 
+                            (<a href="samples/stats.html?debug=true&mode=flash" target="_blank">Flash</a>)
+                            (<a href="samples/stats.html?debug=true&mode=html" target="_blank">HTML</a>)</span>
+                        </td>
+                    </tr>
+                              		</table>
+	       		<h3>Support:</h3>
+       			<table class="samples">
+            		<tr>
+            	    	<th width="20%">Page</th>
+                	    <th width="50%">Description</th>
+                	    <th width="30%">HTML file</th>
+                  	</tr>
+          	    	<tr>
+            	    	<td>Support</td>
+                	    <td>Support Player</td>
+                	    <td><a href="support/" target="_blank">index.html</a></td>
+          	    	</tr>
+          	    	<tr>
+                        <td>Support (populated)</td>
+                        <td>Support Player</td>
+                        <td><a href="support/?debug=true&config=%7B%22autoplay%22%3Afalse%2C%22loop%22%3Afalse%2C%22media%22%3A%7B%22title%22%3A%22HD%20World%22%2C%22poster%22%3A%22..%2Fresources%2Fimages%2Fhd_world.jpg%22%2C%22source%22%3A%5B%7B%22src%22%3A%22http%3A%2F%2Fmultiplatform-f.akamaihd.net%2Fz%2Fmulti%2Fapril11%2Fhdworld%2Fhdworld_%2C512x288_450_b%2C640x360_700_b%2C768x432_1000_b%2C1024x576_1400_m%2C1280x720_1900_m%2C1280x720_2500_m%2C1280x720_3500_m%2C.mp4.csmil%2Fmanifest.f4m%22%2C%22type%22%3A%22video%2Ff4m%22%7D%2C%7B%22src%22%3A%22http%3A%2F%2Fmultiplatform-f.akamaihd.net%2Fi%2Fmulti%2Fapril11%2Fhdworld%2Fhdworld_%2C512x288_450_b%2C640x360_700_b%2C768x432_1000_b%2C1024x576_1400_m%2C1280x720_1900_m%2C1280x720_2500_m%2C1280x720_3500_m%2C.mp4.csmil%2Fmaster.m3u8%22%2C%22type%22%3A%22application%2Fx-mpegURL%22%7D%5D%7D%2C%22controls%22%3A%7B%22mode%22%3A%22auto%22%7D%2C%22playoverlay%22%3A%7B%22enabled%22%3Atrue%7D%2C%22mediaanalytics%22%3A%7B%22config%22%3A%22http%3A%2F%2Fma188-r.analytics.edgesuite.net%2Fconfig%2Fbeacon-2114.xml%22%2C%22dimensions%22%3A%7B%22testing%22%3A%221234%22%7D%7D%7D" target="_blank">index.html</a></td>
+                    </tr>
+          		</table>
+	       		<h3>Resources:</h3>
+                <table class="samples">
+                    <tr>
+                        <th width="50%">Resource</th>
+                        <th width="50%">File</th>
+                    </tr>
+                    <tr>
+                        <td>Samples Config</td>
+                        <td><a href="samples/samples.xml" target="_blank">samples.xml</a></td>
+                    </tr>
+                    <tr>
+                        <td>Flash Config</td>
+                        <td><a href="samples/samples.flash.xml" target="_blank">samples.flash.xml</a></td>
+                    </tr>
+                    <tr>
+                        <td>Audio Config</td>
+                        <td><a href="samples/samples.audio.xml" target="_blank">samples.audio.xml</a></td>
+                    </tr>
+                </table>
+	        </div>
+	    </div>
+	</body>
+</html>

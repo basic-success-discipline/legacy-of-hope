@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<script type="text/javascript"  src="../resources/js/menu.js"></script>
+		<!--Player-->
+		<script type="text/javascript" src="../amp/amp.min.js"></script>
+        <script type="text/javascript">
+        	akamai.amp.AMP.loadDefaults("../amp/amp.xml");
+        	
+            var amp,
+                menu = new FeedMenu(),
+            	media = [
+            		{
+            			title: "VOD Sample",
+	            		poster: '../resources/images/hd_world.jpg',
+	            		duration: 108,
+	            		source:
+	                    [
+	                        {src: "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m", type: "video/f4m"},
+	                        {src: "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8", type: "application/x-mpegURL"}
+	                    ] 
+            		}, {
+	            		title: "Captioning Sample",
+	            		poster: '../resources/images/space_alone.jpg',
+	            		duration: 108,
+	            		source:
+	                    [
+	                        {src: "http://multiplatform-f.akamaihd.net/z/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/manifest.f4m", type: "video/f4m"},
+	                        {src: "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8", type: "application/x-mpegURL"}
+	                    ],
+	                    track:
+	                    [
+                            {kind: "captions", type: "application/ttml+xml", src: "captioning.xml"}
+	                    ]
+					}, {
+            			title: "Long Form Content Sample",
+	            		poster: '../resources/images/elephant-dreams.jpg',
+	            		duration: 5322,
+	            		source:
+	                    [
+	                        {src: "http://multiplatform-f.akamaihd.net/z/multi/seeker/LegendofSeeker_16x9_24fps_H264,_1.4Mbps,_1.8Mbps,_1Mbps,_2.5Mbps,_400K,_650K,.mp4.csmil/manifest.f4m", type: "video/f4m"},
+	                        {src: "http://multiplatform-f.akamaihd.net/i/multi/seeker/LegendofSeeker_16x9_24fps_H264,_1.4Mbps,_1.8Mbps,_1Mbps,_2.5Mbps,_400K,_650K,.mp4.csmil/master.m3u8", type: "application/x-mpegURL"}
+	                    ] 
+            		}, {
+	            		autoplay: true,
+	            		title: "Demo Live Stream",
+	            		poster: '../resources/images/bunny.jpg',
+	            		temporalType: "live",
+	            		source: 
+	            		[
+							{src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+							{src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
+						],
+						mediaanalytics:
+						{
+							dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+						}
+	            	}, {
+	            		autoplay: true,
+	            		title: "Space Alone",
+	            		poster: '../resources/images/space_alone.jpg',
+	            		duration: 108,
+	            		src: "http://mediapm.edgesuite.net/osmf/content/test/spacealonehd_sounas_640_700.mp4",
+	            		track:
+	            		[
+	            			{kind: "captions", type: "application/ttml+xml", src: "captioning.xml"}
+	            		],
+						mediaanalytics:
+						{
+							dimensions: { title: "TITLE4", eventName: "EVENTNAME4" }
+						}
+	            	}
+            	];
+            
+            function loadHandler(event)
+            {
+            	menu.create(document.getElementById("sample-menu"), media);
+           		
+           		var config = 
+           		{
+           		    rules:
+           		    {
+           		        android_4_gets_m3u8:
+           		        {
+           		            regexp: "Android 4"
+           		        }
+           		    },
+           		    eventmanagement: {enabled: false}
+                };
+                    	
+                amp = new akamai.amp.AMP(document.getElementById("akamai-media-player"), config, readyHandler);
+                
+            }
+            
+            function readyHandler(event)
+            {
+            	amp.addEventListener("ended", endedHandler);
+            	
+            	loadVideo(0);
+            }
+            
+            function advanceHandler(event)
+            {
+            	loadVideo(menu.selectedIndex + 1);
+            }
+            
+            function loadVideo(index)
+            {
+            	menu.select(index);
+            	amp.setMedia(media[index]);
+            }
+            
+            function endedHandler(event)
+            {
+                console.log("ended");
+            }
+        </script>
+	</head>
+	<!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+	<body onload="loadHandler(event)" ontouchstart="">
+		<div class="page">
+			<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+            <div class="content">
+    			<div id="sample-video-area" class="sample-video-area">
+    				<div class="sample-ad-video-text sample-label-text">Advertisement</div>
+	    			<div class="sample-player">
+	        			<div id="akamai-media-player"></div>
+	        		</div>
+        		</div>
+        		<div id="sample-menu" class="sample-menu"></div>
+            </div>
+	   	</div>
+	</body>
+</html>

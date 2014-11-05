@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8" />
+    	<title>AMP - Support</title>
+    	<link rel="icon" href="http://www.akamai.com/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="http://www.akamai.com/favicon.ico" type="image/x-icon">
+        <link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+        <style>
+			#browser-warning
+        	{
+        		position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: #CCCCCC;
+				top: 0px;
+				left: 0px;
+				padding-top: 25%;
+        	}
+        	
+        	table
+        	{
+        	    width: 100%;
+        	}
+        	
+        	input[type=text]
+            {
+                width: 95%;
+            }
+        </style>
+        <script type="text/javascript" src="support.js"></script>
+        <script type="text/javascript" src="../amp/amp.min.js"></script>
+        <script type="text/javascript">
+			var amp, 
+			    QueryString = akamai.amp.utils.QueryString,
+				query = window.location.search, 
+				path = location.pathname.replace("index.html", "")
+				origin = location.protocol + "//" + location.host + path,
+				sections = new SupportSectionList();
+			
+			function browserCheck()
+			{
+				//check for old IE
+				var ua = navigator.userAgent,
+					regExp = /MSIE (d.d)/;
+				
+				if (regExp.test(ua))
+				{
+					if (Number(RegExp.$1) < 9)
+					{
+						return false;
+					}
+				}
+				
+				return true;
+			}
+			
+           	function loadHandler(event) 
+           	{  	
+           		if (!browserCheck())
+           		{
+           			document.getElementById("browser-warning").className = "";
+           			return;
+           		}
+	        
+           		if (query != null)
+					populatePage();
+   			}
+   			
+   			function populatePage()
+   			{
+   				var i, length, source, 
+                    config = null,
+   					iframe = document.getElementById("player"),
+   					pageURL = document.getElementById("pageURL"),
+   					iframeURL = document.getElementById("iframeURL"),
+   					configOutput = document.getElementById("config-output");
+   				
+   				if (QueryString.config != null)
+                    config = JSON.parse(QueryString.config);
+                        
+   				if (config)
+   				{
+       				if (config.autoplay)
+       					document.getElementById("autoplay").value = config.autoplay;
+       					
+                    if (config.loop)
+                        document.getElementById("loop").value = config.loop;
+       				
+       				if (config.media)
+       				{
+       				    if (config.media.title != null)
+                            document.getElementById("title").value = config.media.title;
+                    
+                        if (config.media.poster != null)
+                            document.getElementById("poster").value = config.media.poster;
+                    
+       				    var sources = config.media.source;
+       				    if (sources != null)
+                        {
+                            for (i = 0; i < sources.length; i++)
+                            {
+                                source = sources[i];
+                                
+                                if (source.src != null)
+                                    document.getElementById("src" + i).value = source.src;
+                                
+                                if (source.type != null)
+                                    document.getElementById("type" + i).value = source.type;
+                                
+                                if (source.label != null)
+                                    document.getElementById("label" + i).value = source.label;
+                            }
+                        }
+                        
+                        if (config.media.temporalType)
+                            document.getElementById("temporalType").selectedIndex = (config.media.temporalType == "live") ? 1 : 0;
+                            
+                        if (config.media.medium)
+                            document.getElementById("temporalType").value = config.media.medium;
+       				}
+       				
+       				sections.populateForm(config);
+       				
+       				configOutput.value = JSON.stringify(config);
+       				iframeURL.value = origin + "player.html" + query;
+       				pageURL.value = location.href;
+       				
+       				iframe.contentWindow.postMessage(JSON.stringify({type:"init", data: config}), "*");
+       	        }
+   			}
+   			
+   			function updateType(index)
+   			{
+   				var src = document.getElementById("src"+index).value,
+   					ext = akamai.amp.utils.Utils.getMimeType(src);
+   					
+   				if (ext != null)
+   					document.getElementById("type"+index).value = ext;	
+   			}
+   			
+   			function generate()
+   			{
+   				var config = {}, media = {}, feed = {channel: {item: {}}}, select, value, sources = [],
+   					iframe = document.getElementById("player"),
+   					pageURL = document.getElementById("pageURL"),
+   					iframeURL = document.getElementById("iframeURL"),
+   					configOutput = document.getElementById("config-output"),
+   					feedOutput = document.getElementById("feed-output");;
+   					   		
+   			    // media
+   			    value = document.getElementById("title").value;
+   				if (value != null && value != "")
+   				{
+   					media.title                         =
+   					feed.channel.item.title             =
+   					feed.channel.item["media-title"]    = value;
+   				}	
+   				
+                value = document.getElementById("poster").value;
+   				if (value != null && value != "")
+   				{
+   					media.poster = value;
+   					feed.channel.item["media-thumbnail"] = {
+                        "@attributes" : {
+                            "url" : media.poster
+                        }
+                   };
+   				}
+   				
+   				value = document.getElementById("temporalType").value;
+                if (value != null && value != "")
+                {
+                    media.temporalType              =
+                    feed.channel.item.temporalType  = value;
+                }
+                   
+                for (i=0, length=3; i<length; i++)
+                {
+                    source = {};
+                    
+                    value = document.getElementById("src" + i).value
+                    if (value != null && value != "")
+                        source.src = value;
+                    
+                    value = document.getElementById("type" + i).value
+                    if (value != null && value != "")
+                        source.type = value;
+                    
+                    value = document.getElementById("label" + i).value
+                    if (value != null && value != "")
+                        source.label = value;
+                            
+                    if (source.src != null || source.type != null || source.label != null)
+                    {
+                        sources.push(source);
+                        
+                        if (feed.channel.item["media-group"] == null)
+                        {
+                            feed.channel.item["media-group"] = 
+                            {
+                                "media-content": []
+                            };
+                        }    
+                        
+                        feed.channel.item["media-group"]["media-content"][i] = {
+                            "@attributes" : {
+                                "url" : source.src,
+                                "type" : source.type,
+                                "medium" : document.getElementById("medium").value
+                            }
+                        };
+                    }
+                }
+                
+                if (sources.length > 0)
+                    media.source = sources;
+                   
+                // config 
+   				value = document.getElementById("autoplay").value;
+   				if (value != null && value != "")
+   					config.autoplay = (value == "true");
+   			    
+                value = document.getElementById("loop").value;
+                if (value != null && value != "")
+                    config.loop = (value == "true");
+   				
+   				if (media != {})
+                    config.media = media;
+   				
+   				// plugins
+                sections.captureConfig(config);
+                sections.captureFeed(feed);
+                
+                configOutput.value = JSON.stringify(config);
+                feedOutput.value = JSON.stringify(feed);
+                
+   				iframeURL.value = origin + "player.html?debug=true&config=" + encodeURIComponent(configOutput.value);
+   				pageURL.value = origin + "?debug=true&config=" + encodeURIComponent(configOutput.value);
+   				
+   				iframe.onload = function (event)
+   				{
+   				    iframe.contentWindow.postMessage(JSON.stringify({type:"init", data: config}), "*");
+   				};
+   				iframe.src = "player.html?debug=true&id="+new Date().getTime();
+   			}
+            
+            function log(msg)
+            {
+            	var console = document.getElementById('console-text-area'),
+            		time	= new Date();
+            		str		= time + ": " + msg + "\n" + console.value;
+            		
+            	console.value = str;
+            }
+            
+            function logEvent(event)
+            {
+                var message = JSON.parse(event.data);
+            	log(message.type);
+            }
+            
+            try
+	        {
+	        	window.addEventListener("message", logEvent, false);
+	        }
+	        catch (error)
+	        {
+	        	window.attachEvent("onmessage", logEvent);
+	        }
+	        
+	        function toggleSection(id)
+	        {
+	        	var form = document.querySelector("#" + id + " .section-body"),
+	        		button	= document.querySelector("#" + id + " button");
+	        		
+	        	form.classList.toggle("hidden");
+	        	button.textContent = (button.textContent == "hide") ? "show" : "hide";
+	        }
+	        
+	        function popout()
+	        {
+	            var url = document.getElementById("iframeURL").value;
+	        	window.open(url, "_blank", "width=604,height=341,toolbar=no,status=no,scrollbars=no,location=yes");
+	        }
+	        
+	        function selectAll(event)
+	        {
+	        	event.target.select();
+	        }
+    	</script>
+    </head>
+    <body>
+    	<div class="page">
+	    	<div id="browser-warning" class="hidden">Please view this page in a modern browser.</div>
+	    	<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+	        <section class="content">
+	        	<h3>Support Player</h3>
+	        	<p>Enter information below to preview your content in AMP.</p>
+		    	<section id="player-section" class="section">
+		    		<header class="section-header"><label class="section-header-label">AMP</label><button class="section-header-button" onclick="toggleSection('player-section');">hide</button></header>
+		    		<section class="section-body">
+		    			<div class="sample-player">
+		    				<iframe id="player" src="player.html?debug=true" onload="loadHandler(event)" width="100%" height="100%"></iframe>
+		    			</div>
+		    		</section>
+		    	</section>
+		    	<section id="player-section" class="section">
+		    		<header class="section-header"><label class="section-header-label">Player</label><button class="section-header-button" onclick="toggleSection('player-section');">hide</button></header>
+			    	<form class="section-body">
+			    		<table>
+			    			<tr>
+			    				<td><label>Autoplay:</label></td>
+			    				<td>
+			    					<select id="autoplay" name="autoplay">
+			    						<option value="false">false</option>
+			    						<option value="true">true</option>
+			    					</select>
+			    				</td>
+			    			</tr>
+			    			<tr>
+                                <td><label>Loop:</label></td>
+                                <td>
+                                    <select id="loop" name="loop">
+                                        <option value="false">false</option>
+                                        <option value="true">true</option>
+                                    </select>
+                                </td>
+                            </tr>
+			    		</table>
+			    	</form>
+		    	</section>
+		    	<section id="media-section" class="section">
+                    <header class="section-header"><label class="section-header-label">Media</label><button class="section-header-button" onclick="toggleSection('media-section');">hide</button></header>
+                    <form class="section-body">
+                        <table>
+                            <tr>
+                                <td><label>Title:</label></td>
+                                <td><input id="title" name="title" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Poster:</label></td>
+                                <td><input id="poster" name="poster" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Live:</label></td>
+                                <td>
+                                    <select id="temporalType" name="temporalType">
+                                        <option value="">No</option>
+                                        <option value="live">Yes</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Medium:</label></td>
+                                <td>
+                                    <select id="medium" name="medium">
+                                        <option value="video">Video</option>
+                                        <option value="audio">Audio</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><label>Source:</label></td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <th>Stream URL</th>
+                                            <th>Type</th>
+                                            <th>Label</th>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" id="src0" name="src0" onchange="updateType(0);" /></td>
+                                            <td><input type="text" id="type0" name="type0" /></td>
+                                            <td><input type="text" id="label0" name="label0" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" id="src1" name="src1" onchange="updateType(1);" /></td>
+                                            <td><input type="text" id="type1" name="type1" /></td>
+                                            <td><input type="text" id="label1" name="label1" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" id="src2" name="src2" onchange="updateType(2);" /></td>
+                                            <td><input type="text" id="type2" name="type2" /></td>
+                                            <td><input type="text" id="label2" name="label2" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+                                                                                                <section id="controls-section" class="section">
+                    <header class="section-header"><label class="section-header-label">Controls</label><button class="section-header-button" onclick="toggleSection('controls-section');">show</button></header>
+                    <form class="section-body hidden">
+                        <table>
+                            <tr>
+                                <td><label>Type:</label></td>
+                                <td>
+                                    <select id="controls-mode" name="controls-mode">
+                                        <option value="auto">Auto</option>
+                                        <option value="persistent">Persistent</option>
+                                        <option value="none">None</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+                <script>
+                    section = new SupportSection();
+                    section.populateForm = function (config)
+                    {
+                        if (config != null && config.controls != null)
+                        {
+                            if  (config.controls.mode != null)
+                            {
+                                document.getElementById("controls-mode").value = config.controls.mode;    
+                            }
+                        }
+                    };
+                    section.captureConfig = function (config)
+                    {
+                        var mode = document.getElementById("controls-mode").value;
+                        config.controls = {};
+                        
+                        if (mode != null && mode != "")
+                        {
+                            config.controls.mode = mode;
+                        }
+                        
+                        return config;
+                    };
+                    section.captureFeed = function (feed)
+                    {
+                        return feed;
+                    };
+                    sections.push(section);
+                </script>
+                                                                                                    <section id="playoverlay-section" class="section">
+                    <header class="section-header"><label class="section-header-label">Play Overlay</label><button class="section-header-button" onclick="toggleSection('playoverlay-section');">show</button></header>
+                    <form class="section-body hidden">
+                        <table>
+                            <tr>
+                                <td><label>Enabled:</label></td>
+                                <td>
+                                    <select id="playoverlay-enabled" name="playoverlay-enabled">
+                                        <option value="true">true</option>
+                                        <option value="false">false</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+                <script>
+                    section = new SupportSection();
+                    section.populateForm = function (config)
+                    {
+                        if (config != null && config.playoverlay != null)
+                        {
+                            config.playoverlay = (document.getElementById("playoverlay-enabled").value == 'true');    
+                        }
+                    };
+                    section.captureConfig = function (config)
+                    {
+                        var enabled = (document.getElementById("playoverlay-enabled").value == "true");
+                       
+                        if (enabled)
+                        {
+                            config.playoverlay = {enabled: true};
+                        }
+                        
+                        return config;
+                    };
+                    section.captureFeed = function (feed)
+                    {
+                        return feed;
+                    };
+                    sections.push(section);
+                </script>
+                                                                                                                                                            <section id="analytics-section" class="section">
+                    <header class="section-header"><label class="section-header-label">Analytics</label><button class="section-header-button" onclick="toggleSection('analytics-section');">hide</button></header>
+                    <form class="section-body">
+                        <table>
+                            <tr>
+                                <td><label>Config:</label></td>
+                                <td><input id="medaianalytics-config" name="medaianalytics-config" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><label>Dimensions:</label></td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <th>Key</th>
+                                            <th>Value</th>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" id="medaianalytics-key0" name="medaianalytics-key0" /></td>
+                                            <td><input type="text" id="medaianalytics-value0" name="medaianalytics-value0" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" id="medaianalytics-key1" name="medaianalytics-key1" /></td>
+                                            <td><input type="text" id="medaianalytics-value1" name="medaianalytics-value1" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" id="medaianalytics-key2" name="medaianalytics-key2" /></td>
+                                            <td><input type="text" id="medaianalytics-value2" name="medaianalytics-value2" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+                <script>
+                    section = new SupportSection();
+                    section.populateForm = function (config)
+                    {
+                        var key, value, dimensions, index = 0;
+                        
+                        if (config != null && config.mediaanalytics != null)
+                        {
+                            document.getElementById("medaianalytics-config").value = config.mediaanalytics.config;
+                            
+                            dimensions = config.mediaanalytics.dimensions;
+                            if (dimensions != null)
+                            {
+                                for (key in dimensions)
+                                {
+                                    document.getElementById("medaianalytics-key"+index).value = key;
+                                    document.getElementById("medaianalytics-value"+index).value = dimensions[key];
+                                    index++;
+                                    if (index == 3)
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                    section.captureConfig = function (config)
+                    {
+                        var value = document.getElementById("medaianalytics-config").value,
+                            dimensions, key, value, index;
+                        
+                        if (value)
+                        {
+                            config.mediaanalytics  = 
+                            {
+                                config: value
+                            }
+                            
+                            for (index = 0; index < 3; index++)
+                            {
+                                key = document.getElementById("medaianalytics-key"+index).value;
+                                value = document.getElementById("medaianalytics-value"+index).value;
+                                
+                                if (key != null && key != "")
+                                {
+                                    if (dimensions == null)
+                                        dimensions = {};
+                                
+                                    dimensions[key] = value;
+                                }
+                            }
+                            
+                            if (dimensions != null)
+                            {
+                                config.mediaanalytics.dimensions = dimensions;
+                            }
+                        }
+                        
+                        return config;
+                    }
+                    section.captureFeed = function (feed)
+                    {
+                        return feed;
+                    }
+                    sections.push(section);
+                </script>
+                                                                                                    <section id="captioning-section" class="section">
+                    <header class="section-header"><label class="section-header-label">Captioning</label><button class="section-header-button" onclick="toggleSection('captioning-section');">show</button></header>
+                    <form class="section-body hidden">
+                        <table>
+                            <tr>
+                                <td><label>Type:</label></td>
+                                <td>
+                                    <select id="captioningType" name="captioningType">
+                                        <option value="">None</option>
+                                        <option value="application/ttml+xml">VOD - DFXP</option>
+                                        <option value="live-oncaptioninfo">Live - OnCaptionInfo 708</option>
+                                        <option value="live-oncuepoint">Live - OnCuepoint</option>
+                                        <option value="live-subply">Live - SubPly</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Source:</label></td>
+                                <td><input type="text" id="captioningURI" name="captioningURI" /></td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+                <script>
+                    section = new SupportSection();
+                    section.populateForm = function (config)
+                    {
+                        if (config != null && config.media != null && config.media.track != null)
+                        {
+                            var track = config.media.track[0];
+                            
+                            document.getElementById("captioningType").value = track.type;
+                            document.getElementById("captioningURI").value = track.src;
+                        }
+                    };
+                    section.captureConfig = function (config)
+                    {
+                        var type = document.getElementById("captioningType").value,
+                            src = document.getElementById("captioningURI").value;
+                            
+                        if (type != null && type != "")
+                        {
+                            config.captioning = 
+                            {
+                                enabled: true
+                            };
+                            
+                            config.media.track = 
+                            [
+                                    {kind: "captions", src: src, type: type}
+                            ];
+                        }
+                        return config;
+                    };
+                    section.captureFeed = function (feed)
+                    {
+                        if (document.getElementById("captioningType").value != "")
+                        {
+                            feed.channel.item["media-subTitle"] = {
+                                "@attributes" : {
+                                   "type" : document.getElementById("captioningType").value,
+                                   "lang" : "en-us",
+                                   "href" : document.getElementById("captioningURI").value
+                                }
+                            };
+                        }
+                        return feed;
+                    };
+                    sections.push(section);
+                </script>
+                                                                                                                                                            <section id="feed-section" class="section">
+                    <header class="section-header"><label class="section-header-label">Feed</label><button class="section-header-button" onclick="toggleSection('feed-section');">hide</button></header>
+                    <form class="section-body">
+                        <table>
+                            <tr>
+                                <td><label>URL:</label></td>
+                                <td><input type="text" id="feed-url" name="feed-url" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>JSON:</label></td>
+                                <td><input type="text" id="feed-data" name="feed-data" /></td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+                <script>
+                    section = new SupportSection();
+                    section.populateForm = function (config)
+                    {
+                        if (config != null && config.feed != null)
+                        {
+                            if  (config.feed.url != null)
+                            {
+                                document.getElementById("feed-url").value = config.feed.url;    
+                            }
+                            if (config.feed.data != null)
+                            {
+                                document.getElementById("feed-data").value = config.feed.data;
+                            }
+                            
+                            toggleSection('media-section');
+                        }
+                    }
+                    section.captureConfig = function (config)
+                    {
+                        var url = document.getElementById("feed-url").value,
+                            data = document.getElementById("feed-data").value,
+                            feed = {};
+                        
+                        if (url != null && url != "")
+                        {
+                            feed.url = url;
+                        }
+                        
+                        if (data != null && data != "")
+                        {
+                            feed.data = JSON.parse(data);
+                        }
+                        
+                        if (feed != {})
+                        {
+                            config.feed = feed;
+                        }
+                        
+                        return config;
+                    }
+                    section.captureFeed = function (feed)
+                    {
+                        return feed;
+                    }
+                    sections.push(section);
+                </script>
+                                                                                                                                                                                                                                                                                    <section id="build-section" class="section">
+                    <header class="section-header"><label class="section-header-label">Build</label><button class="section-header-button" onclick="toggleSection('build-section');">hide</button></header>
+                    <form class="section-body">
+                        <table>
+                            <tr>
+                                <td><label>Feed:</label></td>
+                                <td><input type="text" id="feed-output" name="feed-output" onclick="selectAll(event);" readonly /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Config:</label></td>
+                                <td><input type="text" id="config-output" name="config-output" onclick="selectAll(event);" readonly /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Page:</label></td>
+                                <td><input id="pageURL" name="pageURL" type="text" onclick="selectAll(event);" readonly /></td>
+                            </tr>
+                            <tr>
+                                <td><label>IFrame:</label></td>
+                                <td>
+                                    <input id="iframeURL" name="iframeURL" type="text" onclick="selectAll(event);" readonly />
+                                    <input type="button" value="Pop out" onclick="popout()" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right"><input type="button" value="Generate" onclick="generate()" /></td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+			    <section id="console-section" class="section">
+			    	<header class="section-header"><label class="section-header-label">Console</label><button class="section-header-button" onclick="toggleSection('console-section');">hide</button></header>
+			    	<form class="section-body">
+			    		<textarea id="console-text-area" wrap='off' height="auto"></textarea>
+			    	</form>
+				</section>
+	        </section>
+		</div>
+	</body>
+</html>

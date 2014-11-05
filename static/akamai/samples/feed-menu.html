@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP - Samples - MRSS Feed Menu</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<!--Player-->
+        <script type="text/javascript"  src="../amp/amp.min.js?amp-defaults=samples.xml"></script>
+        <script type="text/javascript">
+            var amp,
+            	feeds = 
+            	[
+            		"../resources/feeds/vod-feed.json",
+            		"../resources/feeds/live-feed.json",
+            		"../resources/feeds/vod-feed.xml"
+            	];
+            
+            function loadHandler(event)
+            {
+            	var config_overrides = 
+            	{
+            		autoplay: true,
+            		feed:
+            		{
+            			url: "../resources/feeds/vod-feed.xml"
+            		}
+            	}
+                amp = new akamai.amp.AMP("akamai-media-player", config_overrides);
+            }
+            
+            function loadVideo(index)
+            {
+            	amp.feed.setURL(feeds[index])
+            }
+        </script>
+	</head>
+	<!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+	<body onload="loadHandler(event)" ontouchstart="">
+		<div class="page">
+			<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+            <div class="content">
+            	<h3>AMP: Samples</h3>
+    			<h5>MRSS Feed Menu</h5>
+    			<div class="sample-player">
+        			<div id="akamai-media-player"></div>
+        		</div>
+        		<div class="menu">
+	            	<a href="#" onclick="loadVideo(0)">Video 1</a> |
+	            	<a href="#" onclick="loadVideo(1)">Video 2</a> |
+	            	<a href="#" onclick="loadVideo(2)">Video 3</a>
+	            </div>
+            </div>
+	   	</div>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-cast-api-enabled="true">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP - Samples - Chromecast - IMA</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<!--Player-->
+		<script type="text/javascript"  src="../amp/amp.min.js?amp-defaults=samples.xml"></script>
+		<script type="text/javascript">
+			var amp;
+
+			function loadHandler(event) 
+			{
+				var config = {
+					autoplay : false,
+					debug: true,
+					// feed url must be absolute
+					feed: 
+					{ 
+						url: "chromecast-feed.json" 
+					},
+					chromecast:
+					{
+						sender:
+						{
+							applicationID: "05F17AED",
+							plugin: "//www.gstatic.com/cv/js/sender/v1/cast_sender.js"
+						}
+					},
+					ima:
+					{
+						version: 3,
+						plugin: "http://s0.2mdn.net/instream/html5/ima3.js",
+						adTagUrl: "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=%2F3510761%2FadRulesSampleTags&ciu_szs=160x600%2C300x250%2C728x90&cust_params=adrule%3Dprerollonly&impl=s&gdfp_req=1&env=vp&ad_rule=1&vid=47570401&cmsid=481&output=xml_vast2&unviewed_position_start=1&url=%5Breferrer_url%5D&correlator=%5Btimestamp%5D"
+					}
+				};
+				amp = new akamai.amp.AMP ("akamai-media-player", config, function (event)
+				{
+					amp.addEventListener("playbacktargetchange", function (event) {
+						console.log(event);
+					});
+					
+					amp.ads.addEventListener("started", function (event) {
+						console.log(event.type);
+					});
+					
+					amp.ads.addEventListener("ended", function (event) {
+						console.log(event.type);
+					});
+					
+					amp.ads.addEventListener("companion", function (event) {
+						companionHandler(event);
+						console.log(event.type);
+					});
+				});
+				
+			}
+			
+			function companionHandler(event)
+            {
+                var ads = event.data.companions,
+                    companions = document.getElementById("companions"),
+                    i = 0;
+                
+                companions.innerHTML = "";
+                   
+                for (; i < ads.length; i++)
+                {
+                    companions.innerHTML += ads[i].data;
+                }
+            }
+		</script>
+	</head>
+	<!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+	<body onload="loadHandler(event)" ontouchstart="">
+		<div class="page">
+			<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+			<div class="content">
+				<h3>AMP: Samples - IMA</h3>
+				<h5>Chromecast</h5>
+				<div class="sample-player">
+					<div id="akamai-media-player"></div>
+				</div>
+				<div id="companions"></div>
+			</div>
+		</div>
+	</body>
+</html>

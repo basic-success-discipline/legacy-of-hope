@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP - Samples - External Playbacak</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<!--Player-->
+        <script type="text/javascript"  src="../amp/amp.min.js?amp-defaults=samples.xml"></script>
+        <script type="text/javascript">
+            var amp;
+            
+            function loadHandler(event)
+            {
+            	var config_overrides = 
+            	{
+					mode: "external",
+            		autoplay: false,
+            		media:
+            		{
+	            		title: "External Playbacak Sample",
+	            		poster: '../resources/images/hd_world.jpg',
+	            		src: "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,.mp4.csmil/master.m3u8",
+	            		type: "external"
+					}
+            	};
+                amp = new akamai.amp.AMP("akamai-media-player", config_overrides);
+            }
+        </script>
+	</head>
+	<!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+	<body onload="loadHandler(event)" ontouchstart="">
+		<div class="page">
+	    	<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+            <div class="content">
+            	<h3>AMP: Samples</h3>
+	    		<h5>External Playback</h5>
+            	<div class="sample-player">
+            		<div id="akamai-media-player"></div>
+            	</div>
+            	<div style="text-align:center;"><a href="#" onclick="amp.play();">Play</a></div>
+            </div>
+	   	</div>
+	</body>
+</html>

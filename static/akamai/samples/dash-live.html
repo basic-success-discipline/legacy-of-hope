@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>AMP - Samples - MPEG DASH - Live</title>
+		<link type="text/css" rel="stylesheet" href="../resources/styles/styles.css" />
+		<!--Player-->
+        <script type="text/javascript"  src="../amp/amp.min.js?amp-defaults=samples.xml"></script>
+        <script type="text/javascript">
+            var amp;
+            
+            function loadHandler(event)
+            {
+            	var config_overrides = 
+            	{
+            		autoplay: false,
+            		media:
+            		{
+	            		title: "MPEG DASH Live Sample",
+	            		poster: '../resources/images/space_alone.jpg',
+	            		src: "http://54.201.151.65/livesim/tfdt_32/testpic_2s/Manifest.mpd",
+	            		temporalType: "live",
+	            		type: "application/dash+xml"
+					},
+					mode: "html",
+					dash:
+					{
+						plugin: "http://dashif.org/reference/players/javascript/1.2.0/dash.min.js",
+						buffer: 1
+					}
+            	};
+                amp = new akamai.amp.AMP("akamai-media-player", config_overrides);
+            }
+        </script>
+	</head>
+	<!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
+	<body onload="loadHandler(event)" ontouchstart="">
+		<div class="page">
+	    	<div class="header">
+	    		<div class="header-logo"></div>
+	    		<div class="header-text">
+	    			<h1>AMP</h1>
+	    			<h2>v4.10.0.0004</h2>
+	    		</div>
+			</div>
+
+            <div class="content">
+            	<h3>AMP: Samples</h3>
+	    		<h5>MPEG DASH Live</h5>
+            	<div class="sample-player">
+            		<div id="akamai-media-player"></div>
+            	</div>
+            </div>
+	   	</div>
+	</body>
+</html>

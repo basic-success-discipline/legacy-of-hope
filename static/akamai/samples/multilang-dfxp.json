@@ -1,0 +1,81 @@
+
+{
+	"@attributes": {
+		"version": "2.0"
+	},
+	"channel": {
+		"category": "",
+		"pubDate": "Wed, 03 Aug 2011 10:00:21 -0400",
+		"language": "en",
+		"ttl": "10",
+		"item": {
+		    "title": "DFXP Feed-based Caption Sample",
+			"link": "http://127.0.0.1:8000/drama/1/1/Coffee_Prince/",
+			"IGNOREtemporalType": "live",
+			"description": "Coffee Prince Episode 1 ",
+			"category": "Romantic Comedy",
+			"pubDate": "Feb. 4, 2014, 8:37 p.m.",
+			"guid": "1.1",
+			"media-group": {
+				"media-content": [
+					{
+						"@attributes": {
+							"isDefault": "true",
+							"url": "http://dramafeverhds-f.akamaihd.net/z/138561/region1/2d85d29f24266_,6269940,6269936,6269938,6269937,.mp4.csmil/manifest.f4m?hdnea=st%3D1391531937%7Eexp%3D1391539413%7Eacl%3D%2F138561%2Fregion1%2F2d85d29f24266%2A%7Ehmac%3D5da24712c2eb870c3c90328391cd84429230121bae9a551a77c1233dca3fa53c",
+							"medium": "video",
+							"type": "video/f4m",
+							"duration": "0"
+						}
+					},
+					{
+							"@attributes" : {
+								"url" : "http://multiplatform-f.akamaihd.net/i/multi/april11/hdworld/hdworld_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,1280x720_1900_m,1280x720_2500_m,1280x720_3500_m,.mp4.csmil/master.m3u8",
+								"duration" : "108",
+								"medium" : "video",
+								"type" : "application/x-mpegURL"
+							}
+					}],
+				"media-title": "DFXP Feed-based Caption Sample",
+				"media-description": "",
+				"media-embed": {
+					"@attributes": {
+						"url": "http://127.0.0.1:8000/drama/1/1/Coffee_Prince/",
+						"width": "604",
+						"height": "341"
+					},
+					"media-param": {
+						"@attributes": {
+							"name": "type"
+						},
+						"#text": "text/javascript"
+					}
+				},	
+				"media-subTitle": [
+						{
+							"@attributes": {
+								"type": "application/ttml+xml",
+								"lang": "en",
+								"href": "http://projects.mediadev.edgesuite.net/customers/akamai/resources/captioning/captions-en.dfxp"
+							}
+						},
+						{
+							"@attributes": {
+								"type": "application/ttml+xml",
+								"lang": "es",
+								"href": "http://projects.mediadev.edgesuite.net/customers/akamai/resources/captioning/captions-es.dfxp"
+							}
+						}
+					
+					
+				],
+				"media-thumbnail": {
+					"@attributes": {
+						"url": "../resources/images/space_alone.jpg",
+						"width": "320",
+						"height": "240"
+					}
+				}
+			}
+		}
+	}
+}

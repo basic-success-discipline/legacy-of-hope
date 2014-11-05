@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tt xml:lang="de-DE" ttp:profile="http://www.w3.org/2006/10/ttaf1#profile-dfxp" ttp:timeBase="media" ttp:frameRate="30" ttp:frameRateMultiplier="1000 1001" xsi:schemaLocation="http://www.smpte-ra.org/schemas/2052-1/2010 smpte-tt.xsd" xmlns="http://www.w3.org/ns/ttml" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:smpte="http://www.smpte-ra.org/schemas/2052-1/2010/smpte-tt" xmlns:m608="http://www.smpte-ra.org/schemas/2052-1/2010/smpte-tt#cea608" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<head >
+		<styling>
+			<style xml:id="sp" tts:fontFamily="Arial" tts:color="white" tts:backgroundColor="#00000000" tts:fontSize="55px" tts:fontWeight="normal" tts:fontStyle="normal"></style>
+			<style xml:id="spYellow" tts:fontFamily="Arial" tts:color="yellow" tts:backgroundColor="#00000000" tts:fontSize="55px" tts:fontWeight="normal" tts:fontStyle="normal"></style>
+			<style xml:id="spItalic" tts:fontFamily="Arial" tts:color="white" tts:backgroundColor="#00000000" tts:fontSize="55px" tts:fontWeight="normal" tts:fontStyle="italic"></style>
+		</styling>
+		<layout>
+			<region xml:id="bottom" tts:backgroundColor="transparent" tts:displayAlign="after" tts:origin="128px 360px" tts:extent="1024px 288px"></region>
+			<region xml:id="middle" tts:backgroundColor="transparent" tts:displayAlign="center" tts:origin="128px 216px" tts:extent="1024px 288px"></region>
+			<region xml:id="top" tts:backgroundColor="transparent" tts:displayAlign="before" tts:origin="128px 72px" tts:extent="1024px 288px"></region>
+		</layout>
+	</head>
+	<body region="bottom" style="sp" >
+		<div>
+			<p begin="00:00:15:01" end="00:00:18:01" tts:textAlign="center">Auf der linken Seite sehen wir...</p>
+			<p begin="00:00:18:22" end="00:00:20:10" tts:textAlign="center">Auf der rechten Seite sehen wir die...</p>
+			<p begin="00:00:20:12" end="00:00:21:27" tts:textAlign="center">...die Enthaupter.</p>
+			<p begin="00:00:22:00" end="00:00:24:18" tts:textAlign="center">Alles ist sicher.|Vollkommen sicher.</p>
+			<p begin="00:00:26:10" end="00:00:27:10" tts:textAlign="center">Emo?</p>
+			<p begin="00:00:28:26" end="00:00:30:07" tts:textAlign="center">Pass auf!</p>
+			<p begin="00:00:47:03" end="00:00:48:07" tts:textAlign="center">Bist du verletzt?</p>
+			<p begin="00:00:51:27" end="00:00:53:27" tts:textAlign="center">Ich glaube nicht.|Und du?</p>
+			<p begin="00:00:55:18" end="00:00:57:03" tts:textAlign="center">Mir fehlt nichts.</p>
+			<p begin="00:00:57:17" end="00:01:01:20" tts:textAlign="center">Steh auf!|Emo, es ist gefaehrlich hier.</p>
+			<p begin="00:01:02:06" end="00:01:03:20" tts:textAlign="center">Weiter!</p>
+			<p begin="00:01:03:22" end="00:01:05:22" tts:textAlign="center">Was jetzt?</p>
+			<p begin="00:01:05:26" end="00:01:07:26" tts:textAlign="center">Du wirst es sehen.</p>
+			<p begin="00:01:16:05" end="00:01:18:11" tts:textAlign="center">Emo, hier lang.</p>
+			<p begin="00:01:34:28" end="00:01:35:23" tts:textAlign="center">Mir nach!</p>
+			<p begin="00:02:11:17" end="00:02:12:23" tts:textAlign="center">Schneller, Emo!</p>
+			<p begin="00:02:48:11" end="00:02:50:02" tts:textAlign="center">Du bist unaufmerksam!</p>
+			<p begin="00:02:50:22" end="00:02:54:15" tts:textAlign="center">Ich wollte doch nur an...|...ans Telefon gehen.</p>
+			<p begin="00:02:55:00" end="00:02:58:06" tts:textAlign="center">Emo, schau,|ich meine, hoer zu.</p>
+			<p begin="00:02:59:22" end="00:03:02:08" tts:textAlign="center">Du musst lernen zuzuhoeren.</p>
+			<p begin="00:03:03:18" end="00:03:05:03" tts:textAlign="center">Das hier ist kein Spiel.</p>
+			<p begin="00:03:06:05" end="00:03:08:22" tts:textAlign="center">Du, wir, koennten hier draussen leicht sterben.</p>
+			<p begin="00:03:10:06" end="00:03:14:03" tts:textAlign="center">Hoer zu...|Hoer dem Klang der Maschine zu.</p>
+			<p begin="00:03:18:10" end="00:03:20:12" tts:textAlign="center">Hoer auf deinen Atem.</p>
+			<p begin="00:04:27:06" end="00:04:29:07" tts:textAlign="center">Hast du nie genug davon?</p>
+			<p begin="00:04:29:17" end="00:04:31:02" tts:textAlign="center">Genug?!?</p>
+			<p begin="00:04:31:22" end="00:04:34:20" tts:textAlign="center">Die Maschine ist wie ein Uhrwerk.</p>
+			<p begin="00:04:35:15" end="00:04:37:21" tts:textAlign="center">Ein falscher Schritt...</p>
+			<p begin="00:04:37:25" end="00:04:39:23" tts:textAlign="center">...und du wirst zerquetscht.</p>
+			<p begin="00:04:41:01" end="00:04:42:11" tts:textAlign="center">Aber ist es nicht...</p>
+			<p begin="00:04:42:12" end="00:04:46:16" tts:textAlign="center">Zerquetscht, Emo!|Willst du das? Zerquetscht werden?</p>
+			<p begin="00:04:48:02" end="00:04:50:00" tts:textAlign="center">Dein Lebensziel?</p>
+			<p begin="00:04:50:17" end="00:04:52:07" tts:textAlign="center">Zerquetscht!</p>
+			<p begin="00:05:41:25" end="00:05:43:13" tts:textAlign="center">Emo, schliess die Augen.</p>
+			<p begin="00:05:44:27" end="00:05:46:17" tts:textAlign="center">Warum?|- Sofort!</p>
+			<p begin="00:05:53:22" end="00:05:56:01" tts:textAlign="center">Gut.</p>
+			<p begin="00:05:59:16" end="00:06:02:23" tts:textAlign="center">Was siehst du zu deiner Linken, Emo?</p>
+			<p begin="00:06:04:12" end="00:06:06:00" tts:textAlign="center">Nichts.|- Wirklich?</p>
+			<p begin="00:06:06:10" end="00:06:07:27" tts:textAlign="center">Uberhaupt nichts.</p>
+			<p begin="00:06:08:01" end="00:06:12:12" tts:textAlign="center">Und zu deiner Rechten,|was siehst du zu deiner Rechten, Emo?</p>
+			<p begin="00:06:13:26" end="00:06:16:27" tts:textAlign="center">Dasselbe, Proog, genau dasselbe...</p>
+			<p begin="00:06:17:02" end="00:06:18:17" tts:textAlign="center">Nichts!</p>
+			<p begin="00:06:40:18" end="00:06:42:28" tts:textAlign="center">Hoer mal, Proog! Hoerst du das?</p>
+			<p begin="00:06:43:18" end="00:06:45:01" tts:textAlign="center">Koennen wir hier hingehen?</p>
+			<p begin="00:06:45:06" end="00:06:48:01" tts:textAlign="center">Dorthin?|Das ist gefaehrlich.</p>
+			<p begin="00:06:49:27" end="00:06:52:15" tts:textAlign="center">Aber...|- Vertrau mir, es ist gefaehrlich.</p>
+			<p begin="00:06:53:08" end="00:06:54:23" tts:textAlign="center">Vielleicht koennte ich...</p>
+			<p begin="00:06:54:25" end="00:06:56:10" tts:textAlign="center">Nein.</p>
+			<p begin="00:06:57:20" end="00:07:00:05" tts:textAlign="center">NEIN!</p>
+			<p begin="00:07:00:26" end="00:07:03:22" tts:textAlign="center">Sonst noch Fragen, Emo?</p>
+			<p begin="00:07:04:07" end="00:07:05:27" tts:textAlign="center">Nein.</p>
+			<p begin="00:07:09:13" end="00:07:10:25" tts:textAlign="center">Emo.</p>
+			<p begin="00:07:11:26" end="00:07:13:16" tts:textAlign="center">Emo, warum...</p>
+			<p begin="00:07:13:17" end="00:07:14:13" tts:textAlign="center">Emo...</p>
+			<p begin="00:07:14:15" end="00:07:18:15" tts:textAlign="center">...warum erkennst du nicht|die Schoenheit dieses Ortes?</p>
+			<p begin="00:07:18:25" end="00:07:20:22" tts:textAlign="center">Wie alles funktioniert.</p>
+			<p begin="00:07:20:26" end="00:07:24:00" tts:textAlign="center">Wie vollkommen es ist.</p>
+			<p begin="00:07:24:02" end="00:07:27:12" tts:textAlign="center">Nein, Proog, ich erkenne nichts.</p>
+			<p begin="00:07:27:16" end="00:07:30:10" tts:textAlign="center">Ich erkenne nichts, weil da nichts ist.</p>
+			<p begin="00:07:31:15" end="00:07:35:10" tts:textAlign="center">Und warum sollte ich mein Leben|etwas anvertrauen, das gar nicht da ist?</p>
+			<p begin="00:07:35:17" end="00:07:37:03" tts:textAlign="center">Kannst du mir das sagen?</p>
+			<p begin="00:07:37:15" end="00:07:39:05" tts:textAlign="center">Antworte mir!</p>
+			<p begin="00:07:43:06" end="00:07:44:17" tts:textAlign="center">Proog...</p>
+			<p begin="00:07:45:15" end="00:07:47:10" tts:textAlign="center">Du bist krank, Mann!</p>
+			<p begin="00:07:47:11" end="00:07:49:06" tts:textAlign="center">Bleib weg von mir!</p>
+			<p begin="00:07:52:17" end="00:07:55:02" tts:textAlign="center">Nein! Emo! Das ist eine Falle!</p>
+			<p begin="00:07:55:25" end="00:07:57:05" tts:textAlign="center">Haha, eine Falle.</p>
+			<p begin="00:07:57:06" end="00:08:01:22" tts:textAlign="center">Auf der linken Seite sieht man|die Haengenden Gaerten von Babylon.</p>
+			<p begin="00:08:02:07" end="00:08:04:08" tts:textAlign="center">Wie waer das als Falle?</p>
+			<p begin="00:08:05:13" end="00:08:07:03" tts:textAlign="center">Nein, Emo.</p>
+			<p begin="00:08:09:12" end="00:08:12:23" tts:textAlign="center">Auf der rechten Seite sieht man...|...rate mal...</p>
+			<p begin="00:08:13:00" end="00:08:14:22" tts:textAlign="center">...den Koloss von Rhodos!</p>
+			<p begin="00:08:15:25" end="00:08:16:21" tts:textAlign="center">Nein!</p>
+			<p begin="00:08:16:22" end="00:08:22:05" tts:textAlign="center">Den Koloss von Rhodos|und er ist nur fuer dich hier, Proog.</p>
+			<p begin="00:08:51:10" end="00:08:53:05" tts:textAlign="center">Es ist da...</p>
+			<p begin="00:08:53:06" end="00:08:55:15" tts:textAlign="center">Wenn ich es dir doch sage,|Emo...</p>
+			<p begin="00:08:57:10" end="00:09:00:00" tts:textAlign="center">...es ist da.</p>
+		</div>
+	</body>
+</tt>
