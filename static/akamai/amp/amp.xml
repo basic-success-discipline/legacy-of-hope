@@ -71,7 +71,7 @@
 	    							<element id="captionBtn" />
 	    							<element id="volumeBar" color="#0000FF" />
 	    							<element id="volumeBtn" />
-									<element id="fullscreenBtn" />
+									<!-- <element id="fullscreenBtn" /> -->
 									<element id="hdClientBtn" />
 									<element id="logo" style="width: 205px; height: 60px; right: 15px; top: 15px; opacity: 1.0;" />
 									<element id="streamTimeIndicator" exclude="live">
