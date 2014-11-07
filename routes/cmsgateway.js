@@ -257,6 +257,17 @@ var donate_options= [
      // { name:"Woodstock Inc.", logo:"", link:""}
   ];
 
+  var quotes = [
+{author: "Graça Machel, the wife of the late Mr. Nelson Mandela   - June 2014", quote: "I am inspired by his rich legacy that promotes justice, compassion, and solidarity. Children were very dear to Madiba and his last wish was to build the Nelson Mandela Children’s Hospital."},
+{author: "Sibongile Mkhabela", quote: "Tata felt very strongly about the hospital. His heart yearned for it."},
+{author: "Nelson Mandela", quote: "The true character of a society is revealed in how it treats its children."},
+{author: "Nelson Mandela", quote: "History will judge us by the difference we make in the everyday lives of children."},
+{author: "Nelson Mandela", quote: "One way that we can build a better future for children is by empowering them through allowing them to speak up for themselves. Of course, we as adults have to guide them and to take ultimate responsibility but that is something quite different from patronizing them. The rights of children must, importantly, include the right to be themselves and to talk for themselves."},
+{author: "Nelson Mandela", quote: "We understand and promote the notion that while children need to be guided they also have an entrenched right to be whatever they want to be and that they can achieve this only if they are given the space to dream and live out their dreams."},
+{author: "Nelson Mandela", quote: "It always gives me great pleasure to be surrounded by the beautiful children of our land. Whenever I am with the energetic young people … I feel like a recharged battery, confident that our country can look forward to great things."},
+{author: "Nelson Mandela", quote: "Together as a nation, we have the obligation to put sunshine into the hearts of our little ones. They are our precious possessions. They deserve what happiness life can offer."}
+];
+
 
 
 
@@ -295,16 +306,7 @@ var home = {
  {name: "Elie and Marion Wiesel", image: "img/board_wiesel.jpg"},
  ],
  stories: newsStories,
-quotes:[
-{author: "Graça Machel, the wife of the late Mr. Nelson Mandela   - June 2014", quote: "I am inspired by his rich legacy that promotes justice, compassion, and solidarity. Children were very dear to Madiba and his last wish was to build the Nelson Mandela Children’s Hospital."},
-{author: "Sibongile Mkhabela", quote: "Tata felt very strongly about the hospital. His heart yearned for it."},
-{author: "Nelson Mandela", quote: "The true character of a society is revealed in how it treats its children."},
-{author: "Nelson Mandela", quote: "History will judge us by the difference we make in the everyday lives of children."},
-{author: "Nelson Mandela", quote: "One way that we can build a better future for children is by empowering them through allowing them to speak up for themselves. Of course, we as adults have to guide them and to take ultimate responsibility but that is something quite different from patronizing them. The rights of children must, importantly, include the right to be themselves and to talk for themselves."},
-{author: "Nelson Mandela", quote: "We understand and promote the notion that while children need to be guided they also have an entrenched right to be whatever they want to be and that they can achieve this only if they are given the space to dream and live out their dreams."},
-{author: "Nelson Mandela", quote: "It always gives me great pleasure to be surrounded by the beautiful children of our land. Whenever I am with the energetic young people … I feel like a recharged battery, confident that our country can look forward to great things."},
-{author: "Nelson Mandela", quote: "Together as a nation, we have the obligation to put sunshine into the hearts of our little ones. They are our precious possessions. They deserve what happiness life can offer."}
-]
+quotes: quotes
 };
 
 var about = {
@@ -324,7 +326,8 @@ var app = {
   description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
   stylesheet: "app.css",
   currentpage: "menu-app",
-  type: "website"
+  type: "website",
+  quotes: quotes
 };
 
 var arun = {
