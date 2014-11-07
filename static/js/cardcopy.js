@@ -13,7 +13,7 @@ var setEllipsis = function(){
             var lineHeight = parseInt($('.card h5').eq(i).css('line-height'), 10);
             var lines = Math.floor(divHeight / lineHeight);
            
-            if(lines==1){
+            if(lines<=1){
               $('.cardcopy').eq(i).ellipsis({
                 row: 4
               });

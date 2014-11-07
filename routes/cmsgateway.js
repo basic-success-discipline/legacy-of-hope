@@ -6,6 +6,15 @@ var fs = require('fs');
 var newsStories = [
 
 
+
+{
+  title: "Octavia Spencer Spotlight",
+  image: "/img/octavia_hero.jpg",
+  blurb: " As a young African-American woman growing up in Alabama, Octavia reflects on how Nelson Mandela and a children’s hospital as a banner to his legacy will continue to inspire long beyond his graceful years.",
+  date: "November 6, 2014",
+  link: "/2014/11/6/OctaviaSpencer"
+},
+
 {
   title: "Larry King shares his thoughts on 'The Last Hero,' Nelson Mandela",
   image: "/img/card_larry.jpg",
@@ -227,20 +236,24 @@ var donate_options= [
 
 ];
 
-
+ var sponsorlist = [
+ { name:"Puku", logo:"/img/logo_puku.png", link:"http://www.gotpuku.com/"}
+ ];
   var partnerlist = [
     { name:"Bespin Holdings, Inc", logo:"/img/logo_bhi.png", link:"http://bespinholdings.com/"},
-    { name:"Akamai Technologies", logo:"/img/logo_akamai.png", link:"http://www.akamai.com/"},
+     { name:"Kirkland Ellis LLP", logo:"/img/logo_kirklinellis.png", link:"http://www.kirkland.com/"},
+    { name:"Akamai Technologies", logo:"/img/logo_akamai.png", link:"http://www.aol.com/"},
+     { name:"AOL", logo:"/img/logo_aol.png", link:"http://www.akamai.com/"},
     { name:"Bulldog Media", logo:"/img/logo_bulldog.png", link:"http://bulldogdm.com/"},
     { name:"LiveOne", logo:"/img/logo_liveone_crowdsurfing.png", link:"http://liveonegroup.com/"},
     { name:"Oyster Labs", logo:"/img/logo_oyster.png", link:"http://www.oysterlabs.com/#aqua"},
+     { name:"Internet Media Labs", logo:"/img/logo_iml.png", link:"http://www.internetmedialabs.com/"},
+    { name:"PRG Nocturne", logo:"/img/logo_prg.png", link:"http://www.nocturneproductions.com/"},
      { name:"Creative Artist Agency", logo:"/img/logo_caa.png", link:"http://www.caa.com/"},
      { name:"Celebrity Services Africa", logo:"/img/logo_csa.png", link:"http://www.celebsa.com/"},
-     { name:"Internet Media Labs", logo:"/img/logo_iml.png", link:"http://www.internetmedialabs.com/"},
-     { name:"Kirklin Ellis LLP", logo:"/img/logo_kirklinellis.png", link:"http://www.kirkland.com/"},
-     { name:"Langdon Wilson International", logo:"/img/logo_langdonwilson.png", link:"http://www.langdonwilson.com/"},
-     { name:"PRG Nocturne", logo:"/img/logo_prg.png", link:"http://www.nocturneproductions.com/"},
      { name:"ProjectPitcher.com", logo:"/img/logo_projectpitcher.png", link:"http://projectpitcher.com/"},
+
+     { name:"Langdon Wilson International", logo:"/img/logo_langdonwilson.png", link:"http://www.langdonwilson.com/"},
      // { name:"Woodstock Inc.", logo:"", link:""}
   ];
 
@@ -515,7 +528,7 @@ var news = {
 var octavia = {
   title: "Octavia Spencer Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/11/6/OctaviaSpencer",
-  thumb_img: "thumb_mission.jpg",
+  thumb_img: "octavia_hero2.jpg",
   description: "As a young African-American woman growing up in Alabama, Octavia reflects on how Nelson Mandela and a children’s hospital as a banner to his legacy, will continue to inspire long beyond his graceful years.",
   stylesheet: "octavia.css",
   currentpage: "menu-news",
@@ -531,7 +544,8 @@ var partners = {
   stylesheet: "partners.css",
   currentpage: "menu-partners",
   type: "website",
-  partnerlist: partnerlist
+  partnerlist: partnerlist,
+  sponsorlist: sponsorlist
 };
 
 var press = {
