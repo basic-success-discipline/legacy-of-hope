@@ -317,6 +317,16 @@ var about = {
   type: "website"
 };
 
+var app = {
+  title: "Get the App - Legacy of Hope",
+  url: "http://legacyofhope.org/app",
+  thumb_img: "thumb_mission.jpg",
+  description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
+  stylesheet: "app.css",
+  currentpage: "menu-app",
+  type: "website"
+};
+
 var arun = {
   title: "Arun Gandhi Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/10/4/ArunGandhi",

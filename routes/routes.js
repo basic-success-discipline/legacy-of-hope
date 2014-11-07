@@ -182,6 +182,24 @@ router.get('/', function(req, res) {
     });
 });
 
+
+router.get('/about', function(req, res) {
+  cmsgateway.getPageData('cms', 'about', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('mission2', data);
+    });
+});
+
+
+router.get('/app', function(req, res) {
+  cmsgateway.getPageData('cms', 'app', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('app', data);
+    });
+});
+
 router.get('/board', function(req, res) {
   cmsgateway.getPageData('cms', 'board', 
     function(err, data) {
@@ -267,13 +285,6 @@ router.get('/mission', function(req, res) {
 });
 
 
-router.get('/about', function(req, res) {
-  cmsgateway.getPageData('cms', 'about', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('mission2', data);
-    });
-});
 
 router.get('/news', function(req, res) {
   cmsgateway.getPageData('cms', 'news', 
