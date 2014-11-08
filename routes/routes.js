@@ -5,6 +5,7 @@ var utils = require('../utils.js');
 var cmsgateway = require('./cmsgateway.js');
 
 var authUser = true;
+var env = process.env.NODE_ENV || 'development';
 
 
 // router.get('*', function(req, res, next) {
@@ -339,6 +340,21 @@ router.get('/sponsors', function(req, res) {
 router.get('*', function(req, res) {
   res.redirect('/');
 });
+
+
+
+// robots
+if (env === 'development') {
+  router.use(function (req, res, next) {
+    if ('/robots.txt' == req.url) {
+        res.type('text/plain')
+        res.send("User-agent: *\nDisallow: /");
+    } else {
+        next();
+    }
+});
+
+  }
 
 
 
