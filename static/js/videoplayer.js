@@ -102,9 +102,7 @@ function endedHandler(event)
 
 var csfs = new CsFullscreen({
   wrapper: '#sample-video-area', //css selector
-
 csWrapper: document.getElementById('crowdsurfing-wrapper'), //DOM node
-
 playerWrapper: '.sample-player',
 
 });

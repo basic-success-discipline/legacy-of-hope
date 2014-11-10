@@ -342,6 +342,15 @@ router.get('/videoplayer', function(req, res) {
 
 
 
+// robots
+
+var env = process.env.NODE_ENV || 'development';
+if (env === 'development') {
+  router.get('/robots.txt', function(req, res) {
+      res.type('text/plain')
+      res.send("User-agent: *\nDisallow: /");
+});
+};
 
 
 //make error page
@@ -349,20 +358,7 @@ router.get('*', function(req, res) {
   res.redirect('/');
 });
 
-// robots
 
-var env = process.env.NODE_ENV || 'development';
-if (env === 'development') {
-  router.use(function (req, res, next) {
-    if ('/robots.txt' == req.url) {
-      res.type('text/plain')
-      res.send("User-agent: *\nDisallow: /");
-    } else {
-      next();
-    }
-  });
-
-}
 
 
 

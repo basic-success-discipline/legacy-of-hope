@@ -6,3 +6,9 @@
 .sample-menu {
   z-index: 200;
   background-color: rgba(21, 21, 21, 0.7) !important; }
+
+.sample-player {
+  display: inline-block; }
+
+#crowdsurfing-wrapper {
+  display: inline-block; }
