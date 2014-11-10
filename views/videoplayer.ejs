@@ -16,86 +16,6 @@
     <link rel="stylesheet" type="text/css" href="http://d28u0ctzyej8pl.cloudfront.net/fullscreen/cs-fullscreen.css" />
     <!--Player-->
         <script type="text/javascript"  src="/akamai/amp/amp.min.js"></script>
-        <script type="text/javascript">
-          akamai.amp.AMP.loadDefaults("/akamai/amp/amp.xml");
-          
-            var amp,
-                menu = new FeedMenu(),
-              media = [
-                {
-                  autoplay: true,
-                  title: "Demo Live Stream",
-                  poster: '/akamai/resources/images/bunny.jpg',
-                  temporalType: "live",
-                  source: 
-                  [
-              // {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
-              {src: "<%= endpoint.URL %>", type: "video/mp4"}
-            ],
-            mediaanalytics:
-            {
-              dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
-            }
-                }, {
-                  autoplay: true,
-                  title: "Demo Live Stream",
-                  poster: '/akamai/resources/images/bunny.jpg',
-                  temporalType: "live",
-                  source: 
-                  [
-              {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
-              {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
-            ],
-            mediaanalytics:
-            {
-              dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
-            }
-                }
-              ];
-            
-            function loadHandler(event)
-            {
-              menu.create(document.getElementById("sample-menu"), media);
-              
-              var config = 
-              {
-                  rules:
-                  {
-                      android_4_gets_m3u8:
-                      {
-                          regexp: "Android 4"
-                      }
-                  },
-                  eventmanagement: {enabled: false}
-                };
-                      
-                amp = new akamai.amp.AMP(document.getElementById("akamai-media-player"), config, readyHandler);
-                
-            }
-            
-            function readyHandler(event)
-            {
-              amp.addEventListener("ended", endedHandler);
-              
-              loadVideo(0);
-            }
-            
-            function advanceHandler(event)
-            {
-              loadVideo(menu.selectedIndex + 1);
-            }
-            
-            function loadVideo(index)
-            {
-              menu.select(index);
-              amp.setMedia(media[index]);
-            }
-            
-            function endedHandler(event)
-            {
-                console.log("ended");
-            }
-        </script>
 
   </head>
   <!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
@@ -103,7 +23,7 @@
     <div class="wrapper"> 
     <div class="wrapper-inner">
       <% include partials/loh-menu %>
-      <h1><%= endpoint.URL %></h1>
+      <!-- <h1><%= endpoint.URL %></h1> -->
            <div class="content">
           <div id="sample-video-area" class="sample-video-area">
             <div class="sample-ad-video-text sample-label-text">Advertisement</div>
@@ -119,18 +39,7 @@
           </div>
 
 
-<script>
-
-var csfs = new CsFullscreen({
-  wrapper: '#sample-video-area', //css selector
-
-csWrapper: document.getElementById('crowdsurfing-wrapper'), //DOM node
-
-playerWrapper: '.sample-player',
-
-});
-
-</script>
+        <script type="text/javascript" src="/js/videoplayer.js"></script>
 
              <span class="donatebuttonholder">
       <button onclick="showDonate()" >Give Now</button>

@@ -326,32 +326,20 @@ router.get('/sponsors', function(req, res) {
 
 
 
-var request = require('request');
 
 
 router.get('/videoplayer', function(req, res) {
-  var url = "no url";
-  var options = {
-    uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/urls/hds',
-    method: 'POST',
-    json: {
-      'Angle': 1, 
-      'GiftCode': '' 
-    }
-  };
 
-  request(options, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-     url=body;
-     cmsgateway.getPageData('cms', 'videoplayer', 
+  cmsgateway.getPageData('cms', 'videoplayer', 
       function(err, data) {
         data.authUser = authUser;
-        data.endpoint = url;
+        data.endpoint = "no url";
         res.render('videoplayer', data);
       });
-   }
- });
 });
+
+
+
 
 
 
@@ -449,6 +437,53 @@ router.post('/contact', function (req, res) {
     });
 });
 
+
+
+
+
+
+// router.get('/videoplayer', function(req, res) {
+//   var url = "no url";
+//   var options = {
+//     uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/urls/hds',
+//     method: 'POST',
+//     json: {
+//       'Angle': 1, 
+//       'GiftCode': '' 
+//     }
+//   };
+
+//   request(options, function (error, response, body) {
+//     if (!error && response.statusCode == 200) {
+//      url=body;
+//      cmsgateway.getPageData('cms', 'videoplayer', 
+//       function(err, data) {
+//         data.authUser = authUser;
+//         data.endpoint = url;
+//         res.render('videoplayer', data);
+//       });
+//    }
+//  });
+// });
+
+
+
+router.post('/video', function(req, res){
+ var url = "no url";
+  var options = {
+    uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/urls/hds',
+    method: 'POST',
+    json: { 'Angle': parseInt(req.body.Angle), 'GiftCode': req.body.GiftCode }
+  };
+
+   request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+     res.send(body);
+   }else{
+    console.log("Status code: " + response.statusCode + "/nError: " +error);
+   }
+ });
+});
 
 
 
