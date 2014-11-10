@@ -119,7 +119,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         break;
 
 
-         case '25':
+        case '25':
         switch(req.params.article){
           case 'LarryKing':
           cmsgateway.getPageData('cms', 'larry', function(err, data) {data.authUser = authUser;res.render('larry', data);});
@@ -142,7 +142,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
       case '11':
       switch(req.params.day){
         case '6':
-         switch(req.params.article){
+        switch(req.params.article){
           case 'OctaviaSpencer':
           cmsgateway.getPageData('cms', 'octavia', function(err, data) {data.authUser = authUser;res.render('octavia', data);});
           break;
@@ -312,7 +312,7 @@ router.get('/press', function(req, res) {
 
 
 
- 
+
 router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
 router.get('/sponsors', function(req, res) {
   // authUser = true; 
@@ -324,13 +324,34 @@ router.get('/sponsors', function(req, res) {
 });
 
 
-// router.get('/videoplayer', function(req, res) {
-//   cmsgateway.getPageData('cms', 'videoplayer', 
-//     function(err, data) {
-//       data.authUser = authUser;
-//       res.render('videoplayer', data);
-//     });
-// });
+
+
+var request = require('request');
+
+
+router.get('/videoplayer', function(req, res) {
+  var url = "no url";
+  var options = {
+    uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/urls/hds',
+    method: 'POST',
+    json: {
+      'Angle': 1, 
+      'GiftCode': '' 
+    }
+  };
+
+  request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+     url=body;
+     cmsgateway.getPageData('cms', 'videoplayer', 
+      function(err, data) {
+        data.authUser = authUser;
+        data.endpoint = url;
+        res.render('videoplayer', data);
+      });
+   }
+ });
+});
 
 
 
@@ -346,14 +367,14 @@ var env = process.env.NODE_ENV || 'development';
 if (env === 'development') {
   router.use(function (req, res, next) {
     if ('/robots.txt' == req.url) {
-        res.type('text/plain')
-        res.send("User-agent: *\nDisallow: /");
+      res.type('text/plain')
+      res.send("User-agent: *\nDisallow: /");
     } else {
-        next();
+      next();
     }
-});
+  });
 
-  }
+}
 
 
 

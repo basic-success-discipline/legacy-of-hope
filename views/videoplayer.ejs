@@ -1,4 +1,4 @@
-
+  
 <!DOCTYPE html>
 <html>
 
@@ -29,8 +29,8 @@
                   temporalType: "live",
                   source: 
                   [
-              {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
-              {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
+              // {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+              {src: "<%= endpoint.URL %>", type: "video/mp4"}
             ],
             mediaanalytics:
             {
@@ -103,6 +103,7 @@
     <div class="wrapper"> 
     <div class="wrapper-inner">
       <% include partials/loh-menu %>
+      <h1><%= endpoint.URL %></h1>
            <div class="content">
           <div id="sample-video-area" class="sample-video-area">
             <div class="sample-ad-video-text sample-label-text">Advertisement</div>
@@ -130,6 +131,7 @@ playerWrapper: '.sample-player',
 });
 
 </script>
+
              <span class="donatebuttonholder">
       <button onclick="showDonate()" >Give Now</button>
     </span>
