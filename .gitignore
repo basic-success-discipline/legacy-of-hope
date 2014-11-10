@@ -8,7 +8,6 @@ configs/
 wraith-snaps/
 original-assets/
 static/rss/news.xml
-robots.txt
 static/app/PSDFiles/
 static/app/Documentation/
 static/app/*.html
