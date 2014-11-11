@@ -467,7 +467,7 @@ router.post('/contact', function (req, res) {
 router.post('/video', function(req, res){
  var url = "no url";
   var options = {
-    uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/urls/hds',
+    uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/{angle 1, 2}/hds?giftcode=13123',
     method: 'POST',
     json: { 'Angle': parseInt(req.body.Angle), 'GiftCode': req.body.GiftCode }
   };
