@@ -333,16 +333,6 @@ router.get('/sponsors', function(req, res) {
 //     });
 // });
 
-
-
-
-//make error page
-router.get('*', function(req, res) {
-  res.redirect('/');
-});
-
-
-
 // robots
 if (env === 'development') {
   router.use(function (req, res, next) {
@@ -355,6 +345,16 @@ if (env === 'development') {
 });
 
   }
+
+
+//make error page
+router.get('*', function(req, res) {
+  res.redirect('/');
+});
+
+
+
+
 
 
 
