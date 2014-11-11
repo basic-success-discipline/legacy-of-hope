@@ -1,0 +1,14 @@
+img.scootup {
+  margin-top: -10%;
+  width: 100%; }
+
+@media only screen and (max-width: 479px) {
+  img.banner {
+    content: url("../../img/botlhale2_1_pp.jpg"); }
+
+  img.scootup {
+    content: url("../../img/botlhale2_2_pp.jpg");
+    margin-bottom: 40px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  img.scootup {
+    margin-bottom: 40px; } }

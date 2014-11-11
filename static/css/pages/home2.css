@@ -257,6 +257,9 @@ h4.subheading hr {
   width: 100%;
   margin-bottom: 30px; }
 
+.birthday p {
+  font-size: 17px; }
+
 .latestnews {
   margin-bottom: 40px; }
 
@@ -410,9 +413,6 @@ h4.subheading hr {
   width: 450px;
   margin-left: auto;
   margin-right: auto; }
-
-.birthday p {
-  font-size: 20px; }
 
 .aol p {
   font-size: 12px; }

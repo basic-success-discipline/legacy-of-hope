@@ -357,6 +357,19 @@ var botlhale = {
   type: "article"
 };
 
+
+var botlhale2 = {
+  title: "Youth Ambassador Botlhale Boikanyo Spotlight",
+  url: "http://legacyofhope.org/2014/11/13/BotlhaleBoikanyo",
+  thumb_img: "thumb_botlhale2.jpg",
+  description: "Botlhale Boikanyo (pronounced bo-thall-ee) is a young, ambitious and inspired poet from Johannesburg, South Africa. She has taken the inspiration of the Madiba dance and turned it into an opportunity to teach and influence others through her poetic and powerful visual performances.",
+  stylesheet: "botlhale2.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
+
+
 var chuck = {
   title: "Chuck Nice Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/10/11/ChuckNice",
@@ -515,7 +528,7 @@ var mission = {
   thumb_img: "thumb_mission.jpg",
   description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
   stylesheet: "mission.css",
-  currentpage: "menu-about",
+  currentpage: "menu-mission",
   type: "website"
 };
 
@@ -636,6 +649,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'botlhale':
       callback(null, botlhale);
+      break;
+      case 'botlhale2':
+      callback(null, botlhale2);
       break;
       case 'chuck':
       callback(null, chuck);
