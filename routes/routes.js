@@ -153,6 +153,18 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         }
         break;
 
+
+         case '11':
+         switch(req.params.article){
+          case 'PressRelease':
+          cmsgateway.getPageData('cms', 'pr1', function(err, data) {data.authUser = authUser;res.render('pr1', data);});
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+
         case '13':
          switch(req.params.article){
           case 'BotlhaleBoikanyo':

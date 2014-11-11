@@ -131,11 +131,11 @@ var pressStories = [
 
 {
   title: "Legacy Of Hope Foundation Names Honorary Board In Support Of The Nelson Mandela Children's Hospital",
-  image: "/img/card_LOH_press.jpg",
+  image: "/img/card_pr1.jpg",
   blurb: "The Legacy of Hope Foundation, whose mission is to support medical care and facilities for underserved children and communities around the world is focusing all of its efforts on bringing Nelson Mandela's last wish to create a much needed children's hospital on the continent of Africa, (home to over 450 million children).",
   date: "November 11, 2014",
-  link: "http://www.prnewswire.com/news-releases/legacy-of-hope-foundation-names-honorary-board-in-support-of-the-nelson-mandela-childrens-hospital-282303181.html",
-  host: "PR Newswire"
+  link: "/2014/11/11/PressRelease",
+   host: "PR Newswire"
 
 },
 
@@ -593,6 +593,18 @@ var press = {
   stories: pressStories
 };
 
+var pr1 = {
+
+  title: "Legacy Of Hope Foundation Names Honorary Board In Support Of The Nelson Mandela Children's Hospital",
+  url: "http://legacyofhope.org/2014/11/11/PressRelease",
+  thumb_img: "card_pr1.jpg",
+  description: "The Legacy of Hope Foundation, whose mission is to support medical care and facilities for underserved children and communities around the world is focusing all of its efforts on bringing Nelson Mandela's last wish to create a much needed children's hospital on the continent of Africa, (home to over 450 million children).",
+  stylesheet: "pr1.css",
+  currentpage: "menu-press",
+  type: "article"
+
+};
+
 var ruby = {
   title: "Ruby Bridges Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/9/27/RubyBridges",
@@ -711,6 +723,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'press':
       callback(null, press);
+      break;
+      case 'pr1':
+      callback(null, pr1);
       break;
       case 'ruby':
       callback(null, ruby);
