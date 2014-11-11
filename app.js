@@ -76,10 +76,7 @@ if ('development' === env) {
     console.log('development');
     // Authenticator
     //app.use(express.basicAuth('testuser', 'lohc889'));
-    var robots = "User-agent: *\nDisallow: /";
-    fs.writeFile('robots.txt', robots, function (err) {
-  if (err) return console.log(err);
-});
+    
 
     process.argv.forEach(function (val, index, array) {
       if (val=='local')

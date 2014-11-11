@@ -33,7 +33,7 @@ function makeCorsRequest(angle, giftcode) {
 if(giftcode && giftcode !=""){
   url= url+"?giftcode="+giftcode;
 }
-url = 'http://updates.html5rocks.com';
+// url = 'http://updates.html5rocks.com';
 
   var xhr = createCORSRequest('GET', url);
   if (!xhr) {
