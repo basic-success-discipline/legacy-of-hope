@@ -465,15 +465,22 @@ router.post('/contact', function (req, res) {
 
 
 router.post('/video', function(req, res){
- var url = "no url";
+ var angle = req.body.Angle;
+ var giftcode = req.body.GiftCode;
+ var url = 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/' + angle + "/hds";
+ if(giftcode!=""){
+  url = url + "?giftcode=" + giftcode;
+ }else if (angle==2){
+  res.send("Error -- need a gift code");
+ }
   var options = {
-    uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/{angle 1, 2}/hds?giftcode=13123',
-    method: 'POST',
-    json: { 'Angle': parseInt(req.body.Angle), 'GiftCode': req.body.GiftCode }
+    uri: url,
+    method: 'GET',
   };
 
    request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
+      console.log(body);
      res.send(body);
    }else{
     console.log("Status code: " + response.statusCode + "/nError: " +error);

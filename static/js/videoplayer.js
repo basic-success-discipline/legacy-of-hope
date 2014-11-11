@@ -1,14 +1,17 @@
  akamai.amp.AMP.loadDefaults("/akamai/amp/amp.xml");
 
  var amp,
- menu = new FeedMenu();
+ menu = new FeedMenu(),
+ giftcode = "",
+ premium = true,
+ media = [];
 
- function getMedia(callback){
-  $.post( "/video", { Angle: 1, GiftCode: "" })
+ function getMedia(angle, callback){
+  $.post( "/video", { Angle: angle, GiftCode: giftcode })
   .done(function( data ) {
 
-    var url = data.URL;
-
+    var url = $.parseJSON(data).URL;
+    console.log(url);
     media = [
     {
       autoplay: true,
@@ -23,22 +26,41 @@
       {
         dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
       }
-    }, {
-      autoplay: true,
-      title: "Demo Live Stream",
-      poster: '/akamai/resources/images/bunny.jpg',
-      temporalType: "live",
-      source: 
-      [
-      {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
-      {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
-      ],
-      mediaanalytics:
+    }];
+
+    if(premium){
+      media = [
       {
-        dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+        autoplay: true,
+        title: "Demo Live Stream",
+        poster: '/akamai/resources/images/bunny.jpg',
+        temporalType: "live",
+        source: 
+        [
+        {src: url, type:"video/mp4"}
+        ],
+        mediaanalytics:
+        {
+          dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+        }
+      },
+
+      {
+        autoplay: true,
+        title: "Demo Live Stream",
+        poster: '/akamai/resources/images/bunny.jpg',
+        temporalType: "live",
+        source: 
+        [
+        {src: url, type:"video/mp4"}
+        ],
+        mediaanalytics:
+        {
+          dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+        }
       }
+      ];
     }
-    ];
 
   }).fail(function() {
     alert( "error" );
@@ -50,7 +72,7 @@
 function loadHandler(event)
 {
 
-  getMedia(function(media){
+  getMedia(1, function(media){
     menu.create(document.getElementById("sample-menu"), media);
     var config = 
     {
@@ -85,10 +107,12 @@ function advanceHandler(event)
 function loadVideo(index)
 {
 
+
   menu.select(index);
-  getMedia(function(media){
-  amp.setMedia(media[index]);
-});
+  getMedia(index+1, function(media){
+    console.log(media[index]);
+    amp.setMedia(media[index]);
+  });
 }
 
 function endedHandler(event)
@@ -106,3 +130,13 @@ csWrapper: document.getElementById('crowdsurfing-wrapper'), //DOM node
 playerWrapper: '.sample-player',
 
 });
+
+
+
+function toggle(){
+  // premium = !premium;
+
+  // getMedia(1, function(media){
+  //   menu.create(document.getElementById("sample-menu"), media);
+  // });
+}
