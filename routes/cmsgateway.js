@@ -128,6 +128,17 @@ fs.mkdir(path,function(e){
 
 var pressStories = [
 
+
+{
+  title: "Legacy Of Hope Foundation Names Honorary Board In Support Of The Nelson Mandela Children's Hospital",
+  image: "/img/card_LOH_press.jpg",
+  blurb: "The Legacy of Hope Foundation, whose mission is to support medical care and facilities for underserved children and communities around the world is focusing all of its efforts on bringing Nelson Mandela's last wish to create a much needed children's hospital on the continent of Africa, (home to over 450 million children).",
+  date: "November 11, 2014",
+  link: "http://www.prnewswire.com/news-releases/legacy-of-hope-foundation-names-honorary-board-in-support-of-the-nelson-mandela-childrens-hospital-282303181.html",
+  host: "PR Newswire"
+
+},
+
 {
   title: "Graça Machel mourns her husband, Mandela",
   image: "/img/card_graca.jpg",
