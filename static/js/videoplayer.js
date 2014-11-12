@@ -3,58 +3,58 @@
 
 
 
-// Create the XHR object.
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
-    // XHR for Chrome/Firefox/Opera/Safari.
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    // XDomainRequest for IE.
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  } else {
-    // CORS not supported.
-    xhr = null;
-  }
-  return xhr;
-}
+// // Create the XHR object.
+// function createCORSRequest(method, url) {
+//   var xhr = new XMLHttpRequest();
+//   if ("withCredentials" in xhr) {
+//     // XHR for Chrome/Firefox/Opera/Safari.
+//     xhr.open(method, url, true);
+//   } else if (typeof XDomainRequest != "undefined") {
+//     // XDomainRequest for IE.
+//     xhr = new XDomainRequest();
+//     xhr.open(method, url);
+//   } else {
+//     // CORS not supported.
+//     xhr = null;
+//   }
+//   return xhr;
+// }
 
-// Helper method to parse the title tag from the response.
-function getTitle(text) {
-  return text.match('<title>(.*)?</title>')[1];
-}
+// // Helper method to parse the title tag from the response.
+// function getTitle(text) {
+//   return text.match('<title>(.*)?</title>')[1];
+// }
 
-// Make the actual CORS request.
-function makeCorsRequest(angle, giftcode) {
-  // All HTML5 Rocks properties support CORS.
+// // Make the actual CORS request.
+// function makeCorsRequest(angle, giftcode) {
+//   // All HTML5 Rocks properties support CORS.
  
- var url = 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/' + angle + "/hds";
-if(giftcode && giftcode !=""){
-  url= url+"?giftcode="+giftcode;
-}
-// url = 'http://updates.html5rocks.com';
+//  var url = 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/' + angle + "/hds";
+// if(giftcode && giftcode !=""){
+//   url= url+"?giftcode="+giftcode;
+// }
+// // url = 'http://updates.html5rocks.com';
 
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
+//   var xhr = createCORSRequest('GET', url);
+//   if (!xhr) {
+//     alert('CORS not supported');
+//     return;
+//   }
 
-  // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    var title = getTitle(text);
-    console.log("response Text: " + text);
-    alert('Response from CORS request to ' + url + ': ' + title);
-  };
+//   // Response handlers.
+//   xhr.onload = function() {
+//     var text = xhr.responseText;
+//     var title = getTitle(text);
+//     console.log("response Text: " + text);
+//     alert('Response from CORS request to ' + url + ': ' + title);
+//   };
 
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
+//   xhr.onerror = function() {
+//     alert('Woops, there was an error making the request.');
+//   };
 
-  xhr.send();
-}
+//   xhr.send();
+// }
 
 
 
@@ -64,10 +64,42 @@ if(giftcode && giftcode !=""){
  menu = new FeedMenu(),
  giftcode = "",
  premium = true,
- media = [];
+      media = [
+      {
+        autoplay: true,
+        title: "Demo Live Stream",
+        poster: '/akamai/resources/images/bunny.jpg',
+        temporalType: "live",
+        source: 
+        [
+        {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+              {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
+        ],
+        mediaanalytics:
+        {
+          dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+        }
+      },
 
- function getMedia(angle, callback){
-  makeCorsRequest(angle, giftcode);
+      {
+        autoplay: true,
+        title: "Demo Live Stream",
+        poster: '/akamai/resources/images/bunny.jpg',
+        temporalType: "live",
+        source: 
+        [
+        {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+              {src: "http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8", type: "application/x-mpegURL"}
+        ],
+        mediaanalytics:
+        {
+          dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+        }
+      }
+      ];
+
+ // function getMedia(angle, callback){
+  // makeCorsRequest(angle, giftcode);
   // $.post( "/video", { Angle: angle, GiftCode: giftcode })
   // .done(function( data ) {
 
@@ -128,12 +160,12 @@ if(giftcode && giftcode !=""){
   // }).always(function(){
   //   callback(media);
   // });
-}
+// }
 
 function loadHandler(event)
 {
 
-  getMedia(1, function(media){
+  // getMedia(1, function(media){
     menu.create(document.getElementById("sample-menu"), media);
     var config = 
     {
@@ -148,7 +180,7 @@ function loadHandler(event)
     };
 
     amp = new akamai.amp.AMP(document.getElementById("akamai-media-player"), config, readyHandler);
-  });
+  // });
 
 }
 
@@ -170,10 +202,10 @@ function loadVideo(index)
 
 
   menu.select(index);
-  getMedia(index+1, function(media){
+  // getMedia(index+1, function(media){
     console.log(media[index]);
     amp.setMedia(media[index]);
-  });
+  // });
 }
 
 function endedHandler(event)
