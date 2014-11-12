@@ -268,6 +268,7 @@ var donate_options= [
     { name:"LiveOne", logo:"/img/logo_liveone_crowdsurfing.png", link:"http://liveonegroup.com/"},
     { name:"Oyster Labs", logo:"/img/logo_oyster.png", link:"http://www.oysterlabs.com/#aqua"},
      { name:"OneQube", logo:"/img/logo_oneqube.png", link:"http://oneqube.com/"},
+       { name:"Kik", logo:"/img/logo_kik.png", link:"http://kik.com/"},
     { name:"PRG Nocturne", logo:"/img/logo_prg.png", link:"http://www.nocturneproductions.com/"},
      { name:"Creative Artist Agency", logo:"/img/logo_caa.png", link:"http://www.caa.com/"},
      { name:"Celebrity Services Africa", logo:"/img/logo_csa.png", link:"http://www.celebsa.com/"},
