@@ -166,7 +166,7 @@ function loadHandler(event)
 {
 
   // getMedia(1, function(media){
-    menu.create(document.getElementById("sample-menu"), media);
+    menu.create(document.getElementById("video-menu"), media);
     var config = 
     {
       rules:
@@ -218,9 +218,9 @@ function endedHandler(event)
 
 
 var csfs = new CsFullscreen({
-  wrapper: '#sample-video-area', //css selector
+  wrapper: '.video-area', //css selector
 csWrapper: document.getElementById('crowdsurfing-wrapper'), //DOM node
-playerWrapper: '.sample-player',
+playerWrapper: '.video-player',
 
 });
 

@@ -1,13 +1,18 @@
-.sample-player {
-  width: 604px;
-  height: 341px; }
+.csvideo {
+  width: 100%;
+  height: auto;
+  position: relative; }
 
-.sample-menu {
-  z-index: 200;
-  background-color: rgba(21, 21, 21, 0.7) !important; }
+.video-area {
+  display: inline-block;
+  width: 100%; }
 
-.sample-player {
-  display: inline-block; }
+.video-player {
+  height: 500px;
+  display: inline-block;
+  width: calc(100% - 304px);
+  box-sizing: border-box; }
 
 #crowdsurfing-wrapper {
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: border-box; }
