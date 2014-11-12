@@ -212,8 +212,9 @@ p
 
 .sample-video-area
 {
-	padding: 10px 0px 10px 0px;
-	margin: -20px -20px 0px -20px;
+	padding: 0px 0px 0px 0px;
+	/*padding: 10px 0px 10px 0px;*/
+	/*margin: -20px -20px 0px -20px;*/
 	position: relative;
 }
 
@@ -221,7 +222,7 @@ p
 {
 	width: 604px;
 	height: 341px;
-	margin: 20px auto 20px auto;
+	/*margin: 20px auto 20px auto;*/
 }
 
 .sample-ad-content
