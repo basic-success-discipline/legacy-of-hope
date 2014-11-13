@@ -96,10 +96,9 @@ FeedMenu.prototype = {
 		    c = (index % this.columnCount) + 1,
 		    r = Math.floor(index / this.columnCount) + 1;
 
-		element.className = "sample-menu-item sample-menu-r" + r + " sample-menu-c" + c;
+		element.className = "angle angle-r" + r;
 		element.setAttribute("onclick", "loadVideo("+index+")");
-		element.innerHTML = '<img class="sample-item-thumb" src="'+item.poster+'" />'+
-			            	'<div class="sample-item-title">'+item.title+'</div>';
+		element.innerHTML = '<span></span>';
 		          	
 		this.view.appendChild(element);
 		this.items.splice(index, 0, element);

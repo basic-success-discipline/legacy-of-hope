@@ -16,11 +16,53 @@
 	display: inline-block;
 	width: calc(100% - 304px);
 	box-sizing: border-box;
+	position:relative;
 }
+
+
 #crowdsurfing-wrapper{
 	display:inline-block;
 	box-sizing: border-box;
 }
+
+
+
+.video-menu-wrapper{
+	width: 100%;
+	// background-color: green;
+	position: absolute;
+	top:90%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.video-menu{
+	width: 100%;
+	background-color: rgba(21,21,21, 0.8);
+	position: absolute;
+	top:100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.video-menu-wrapper:hover, .video-menu:hover{
+	&.video-menu{
+		top: 0;
+	}
+}
+
+
+.video-menu img{
+	height: 100%;
+	display: inline-block;
+}
+
+.video-menu .sample-item-title{
+	display: inline-block;
+}
+
 
 // .full-screen .csWrapper{
 // 	height: 50%;
