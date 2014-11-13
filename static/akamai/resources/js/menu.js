@@ -40,8 +40,6 @@ FeedMenu.prototype = {
 
 		var item, i, xhr;
 
-		this.addFront();
-
 		for (i = 0; i < this.data.length; i++)
     	{
     		item = this.data[i];
@@ -51,9 +49,8 @@ FeedMenu.prototype = {
     			item = this.transform(item);
     		}
 
-    		this.addStreams(i, item);
+    		this.add(i, item);
     	}
-    	this.addBack();
     	this.select(0);
 	},
 	load: function (feeds)
@@ -93,10 +90,7 @@ FeedMenu.prototype = {
 		
 		nextFeed();
 	},
-	addFront: function(){
-
-	},
-	addStreams: function (index, item)
+	add: function (index, item)
 	{
 		var element = document.createElement("a"),
 		    c = (index % this.columnCount) + 1,
@@ -121,9 +115,6 @@ FeedMenu.prototype = {
 			cn = cn.replace(/ rows-\d/, "");
 			this.view.className = cn + " " + rows;
 		}
-	},
-	addBack: function(){
-
 	},
 	transform: function (feed)
 	{

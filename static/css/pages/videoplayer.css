@@ -48,3 +48,10 @@
 
 .video-menu .angle2 button {
   content: "Back Stage"; }
+
+.video-menu .playbutton {
+  color: white;
+  cursor: pointer; }
+
+.video-menu .playbutton:hover {
+  color: #358fe3; }

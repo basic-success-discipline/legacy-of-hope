@@ -69,6 +69,16 @@
 	content: "Back Stage";
 }
 
+.video-menu .playbutton{
+	color: white;
+	cursor: pointer;
+}
+
+.video-menu .playbutton:hover{
+	color: $loh-blue;
+
+	}
+
 
 // .full-screen .csWrapper{
 // 	height: 50%;

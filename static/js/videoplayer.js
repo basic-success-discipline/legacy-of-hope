@@ -28,7 +28,7 @@
 // // Make the actual CORS request.
 // function makeCorsRequest(angle, giftcode) {
 //   // All HTML5 Rocks properties support CORS.
- 
+
 //  var url = 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/' + angle + "/hds";
 // if(giftcode && giftcode !=""){
 //   url= url+"?giftcode="+giftcode;
@@ -60,49 +60,48 @@
 
 
 
- var amp,
- menu = new FeedMenu(),
- giftcode = "",
- premium = true,
-      media = [
-      {
-        autoplay: true,
-        title: "Demo Live Stream",
-        poster: '/akamai/resources/images/bunny.jpg',
-        temporalType: "live",
-        controls: {
-            mode: "none"
-          },
-        source: 
-        [
-        {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
-              {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
-        ],
-        mediaanalytics:
-        {
-          dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
-        }
-      },
+var amp,
+giftcode = "",
+premium = true,
+media = [
+{
+  autoplay: true,
+  title: "Demo Live Stream",
+  poster: '/akamai/resources/images/bunny.jpg',
+  temporalType: "live",
+  controls: {
+    mode: "none"
+  },
+  source: 
+  [
+  {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+  {src: "http://multiformatlive-f.akamaihd.net/i/demostream_1@2131/master.m3u8", type: "application/x-mpegURL"}
+  ],
+  mediaanalytics:
+  {
+    dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+  }
+},
 
-      {
-        autoplay: true,
-        title: "Demo Live Stream",
-        poster: '/akamai/resources/images/bunny.jpg',
-        temporalType: "live",
-        controls: {
-            mode: "none"
-          },
-        source: 
-        [
-        {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
-              {src: "http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8", type: "application/x-mpegURL"}
-        ],
-        mediaanalytics:
-        {
-          dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
-        }
-      }
-      ];
+{
+  autoplay: true,
+  title: "Demo Live Stream",
+  poster: '/akamai/resources/images/bunny.jpg',
+  temporalType: "live",
+  controls: {
+    mode: "none"
+  },
+  source: 
+  [
+  {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
+  {src: "http://www.nasa.gov/multimedia/nasatv/NTV-Public-IPS.m3u8", type: "application/x-mpegURL"}
+  ],
+  mediaanalytics:
+  {
+    dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+  }
+}
+];
 
  // function getMedia(angle, callback){
   // makeCorsRequest(angle, giftcode);
@@ -172,7 +171,6 @@ function loadHandler(event)
 {
 
   // getMedia(1, function(media){
-    menu.create(document.getElementById("video-menu"), media);
     var config = 
     {
       rules:
@@ -186,6 +184,7 @@ function loadHandler(event)
     };
 
     amp = new akamai.amp.AMP(document.getElementById("akamai-media-player"), config, readyHandler);
+
   // });
 
 }
@@ -197,17 +196,10 @@ function readyHandler(event)
   loadVideo(0);
 }
 
-function advanceHandler(event)
-{
-
-  loadVideo(menu.selectedIndex + 1);
-}
 
 function loadVideo(index)
 {
 
-
-  menu.select(index);
   // getMedia(index+1, function(media){
     console.log(media[index]);
     amp.setMedia(media[index]);
@@ -232,10 +224,14 @@ playerWrapper: '.video-player',
 
 
 
-function toggle(){
-  // premium = !premium;
+function playPause(){
+ if(amp.getPaused()){
+  amp.play();
+}else{
+ amp.pause();
+}
+}
 
-  // getMedia(1, function(media){
-  //   menu.create(document.getElementById("sample-menu"), media);
-  // });
+function setVolume(value){
+  amp.setVolume(value/20);
 }
