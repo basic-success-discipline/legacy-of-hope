@@ -64,3 +64,22 @@
 
 .full-screen .cs-hidden {
   visibility: hidden; }
+
+.gc-prompt {
+  position: absolute;
+  background-color: rgba(21, 21, 21, 0.8);
+  bottom: 100%;
+  width: 100%;
+  top: -40px;
+  display: none; }
+
+.gc-prompt p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+  display: inline-block; }
+
+.submit-gc-btn {
+  display: inline-block; }

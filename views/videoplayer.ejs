@@ -25,11 +25,15 @@
         <div class="video-area" >
           <div class="video-player">
             <div id="akamai-media-player"></div>
+
             <div class="video-menu-wrapper">
+              <div class="gc-prompt">
+              <p>Enter your gift code</p><input type="text" class="gc-text"></input><button class="submit-gc-btn" onclick="inputGC()">Submit</button>
+              <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp<i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
               <div id="video-menu" class="video-menu">
                 <i class="fa fa-play playbutton" onClick="playPause()"></i>
                 <button class="mainBtn" onclick="loadVideo(0)">Main Stage</button>
-                <button class="backstageBtn" onclick="loadVideo(1)">Backstage</button>
+                <button class="backstageBtn">Backstage</button>
                 <button onclick="gotoDonate()" >Give Now</button>
                 <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
                 <button class="csBtn" onclick="toggleCS()">Close Crowdsurfing</button>
@@ -58,45 +62,4 @@
 </html>
 
 
-<!-- 
-
-  <!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-<title>CS Fullscreen Demo</title>
-
-
-
-</head>
-
-<body>
-
-<h1 id="header">Page Header</h1>
-
-<div id="fs">
-
-<div id="player-wrapper">
-
-<iframe width="100%" height="100%"
-
-src="http://www.youtube.com/embed/nXGh7aVHqHo?fs=0" frameborder="0" scrolling="no"
-
-allowtransparency="true"></iframe>
-
-</div>
-
-
-
-
-</div>
-
-</body>
-
-</html>
--->
 

@@ -15,9 +15,9 @@
         </fullscreen>
 	   	<captioning type="Object"></captioning>
         <playoverlay type="Object"></playoverlay>
-        <branding type="Object">
+<!--         <branding type="Object">
             <logo type="String"></logo>
-        </branding>
+        </branding> -->
 	   	<flash type="Object">
 	   		<static type="Object">
 	   			<enabled type="Boolean">false</enabled>

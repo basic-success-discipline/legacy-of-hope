@@ -3,11 +3,10 @@
 
 
 
-var amp,
-giftcode = "",
-premium = true,
-media = [],
-isPlaying = true;
+ var amp,
+ giftcode = "",
+ media = [],
+ isPlaying = true;
 
 
 
@@ -30,10 +29,9 @@ isPlaying = true;
   xhr.onload = function() {
     var text = xhr.responseText;
     var data = JSON.parse(text);
-    console.log(data.URL);
     media=[
     {
-      autoplay: isPlaying,
+      autoplay: true,
       title: "Demo Live Stream",
       poster: '/akamai/resources/images/bunny.jpg',
       temporalType: "live",
@@ -102,7 +100,6 @@ function readyHandler(event)
 function loadVideo(index)
 {
   getMedia(index+1, function(media){
-    console.log(media[0]);
     amp.setMedia(media[0]);
   });
 }
@@ -124,15 +121,16 @@ playerWrapper: '.video-player',
 
 });
 
+
 function togglePlayButton(event){
-  if(isPlaying){
-  $('.playbutton').removeClass('fa-play');
-  $('.playbutton').addClass('fa-pause');
-}else{
-  $('.playbutton').removeClass('fa-pause');
-  $('.playbutton').addClass('fa-play');
-}
-isPlaying=!isPlaying;
+  if(event.type=="playing"){
+    $('.playbutton').removeClass('fa-play');
+    $('.playbutton').addClass('fa-pause');
+  }else{
+    $('.playbutton').removeClass('fa-pause');
+    $('.playbutton').addClass('fa-play');
+  }
+
 }
 
 function playPause(){
@@ -151,12 +149,12 @@ function setVolume(value){
 
 function toggleCS(){
   if($('.full-screen #crowdsurfing-wrapper').hasClass('cs-hidden')){
-  $('.full-screen #crowdsurfing-wrapper').removeClass('cs-hidden');
-  $('.csBtn').html('Hide Crowdsurfing');
-}else{
-  $('.full-screen #crowdsurfing-wrapper').addClass('cs-hidden');
-  $('.csBtn').html('Show Crowdsurfing');
-}
+    $('.full-screen #crowdsurfing-wrapper').removeClass('cs-hidden');
+    $('.csBtn').html('Hide Crowdsurfing');
+  }else{
+    $('.full-screen #crowdsurfing-wrapper').addClass('cs-hidden');
+    $('.csBtn').html('Show Crowdsurfing');
+  }
 }
 
 
@@ -165,6 +163,36 @@ function gotoDonate(){
 }
 
 
+$(document).ready(function() {
+
+ if(!(giftcode && giftcode !="")){
+  $('.backstageBtn').attr("onclick", "gcPrompt()");
+
+}else{
+  $('.backstageBtn').attr("onclick", "loadVideo(1)");
+}
+
+});
+
+
+function gcPrompt(){
+  $('.gc-prompt').show();
+}
+function closeGCPrompt(){
+  $('.gc-prompt').hide();
+}
+
+function inputGC(){
+  giftcode = $('.gc-text').val();
+  if(!(giftcode && giftcode !="")){
+    alert("invalid giftcode");
+
+  }else{
+    $('.backstageBtn').attr("onclick", "loadVideo(1)");
+    loadVideo(1);
+    closeGCPrompt();
+  }
+}
 
 
 
