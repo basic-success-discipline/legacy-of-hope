@@ -70,6 +70,9 @@
         title: "Demo Live Stream",
         poster: '/akamai/resources/images/bunny.jpg',
         temporalType: "live",
+        controls: {
+            mode: "none"
+          },
         source: 
         [
         {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
@@ -86,6 +89,9 @@
         title: "Demo Live Stream",
         poster: '/akamai/resources/images/bunny.jpg',
         temporalType: "live",
+        controls: {
+            mode: "none"
+          },
         source: 
         [
         {src: "http://multiformatlive-f.akamaihd.net/z/demostream_1@2131/manifest.f4m", type: "video/f4m"},
