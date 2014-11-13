@@ -17,6 +17,7 @@
 	width: calc(100% - 304px);
 	box-sizing: border-box;
 	position:relative;
+	overflow:hidden;
 }
 
 
@@ -56,18 +57,16 @@
 .video-menu-wrapper:hover, .video-menu:hover{
 	& .video-menu{
 		top: 0;
-
 	}
 }
 
 
-.video-menu img{
-	height: 100%;
-	display: inline-block;
+.video-menu .angle1 button{
+	content: "Main Stage";
 }
 
-.video-menu .sample-item-title{
-	display: inline-block;
+.video-menu .angle2 button{
+	content: "Back Stage";
 }
 
 

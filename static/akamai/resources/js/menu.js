@@ -40,6 +40,8 @@ FeedMenu.prototype = {
 
 		var item, i, xhr;
 
+		this.addFront();
+
 		for (i = 0; i < this.data.length; i++)
     	{
     		item = this.data[i];
@@ -49,8 +51,9 @@ FeedMenu.prototype = {
     			item = this.transform(item);
     		}
 
-    		this.add(i, item);
+    		this.addStreams(i, item);
     	}
+    	this.addBack();
     	this.select(0);
 	},
 	load: function (feeds)
@@ -90,15 +93,21 @@ FeedMenu.prototype = {
 		
 		nextFeed();
 	},
-	add: function (index, item)
+	addFront: function(){
+
+	},
+	addStreams: function (index, item)
 	{
 		var element = document.createElement("a"),
 		    c = (index % this.columnCount) + 1,
 		    r = Math.floor(index / this.columnCount) + 1;
 
-		element.className = "angle angle-r" + r;
+		var buttonTitles= ["Main Stage", "Backstage"];
+
+
+		element.className = "angle angle" + c;
 		// element.setAttribute("onclick", "loadVideo("+index+")");
-		element.innerHTML = '<button onclick="loadVideo('+ index +')"></button>';
+		element.innerHTML = '<button onclick="loadVideo('+ index +')">'+buttonTitles[index]+ '</button>';
 		          	
 		this.view.appendChild(element);
 		this.items.splice(index, 0, element);
@@ -112,6 +121,9 @@ FeedMenu.prototype = {
 			cn = cn.replace(/ rows-\d/, "");
 			this.view.className = cn + " " + rows;
 		}
+	},
+	addBack: function(){
+
 	},
 	transform: function (feed)
 	{
