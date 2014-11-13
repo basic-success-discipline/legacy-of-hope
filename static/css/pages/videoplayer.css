@@ -31,7 +31,7 @@
   width: 100%;
   background-color: rgba(21, 21, 21, 0.8);
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -60,4 +60,7 @@
   display: none; }
 
 .full-screen .csBtn {
-  display: block; }
+  display: inline-block; }
+
+.full-screen .cs-hidden {
+  visibility: hidden; }

@@ -6,7 +6,8 @@
 var amp,
 giftcode = "",
 premium = true,
-media = [];
+media = [],
+isPlaying = true;
 
 
 
@@ -32,7 +33,7 @@ media = [];
     console.log(data.URL);
     media=[
     {
-      autoplay: true,
+      autoplay: isPlaying,
       title: "Demo Live Stream",
       poster: '/akamai/resources/images/bunny.jpg',
       temporalType: "live",
@@ -84,8 +85,8 @@ function loadHandler(event)
 
     amp = new akamai.amp.AMP(document.getElementById("akamai-media-player"), config, readyHandler);
     
-    amp.addEventListener("pause", togglePlayButton(false));
-    amp.addEventListener("play", togglePlayButton(true));
+    amp.addEventListener("pause", togglePlayButton);
+    amp.addEventListener("playing", togglePlayButton);
 
   });
 
@@ -123,7 +124,7 @@ playerWrapper: '.video-player',
 
 });
 
-function togglePlayButton(isPlaying){
+function togglePlayButton(event){
   if(isPlaying){
   $('.playbutton').removeClass('fa-play');
   $('.playbutton').addClass('fa-pause');
@@ -131,15 +132,16 @@ function togglePlayButton(isPlaying){
   $('.playbutton').removeClass('fa-pause');
   $('.playbutton').addClass('fa-play');
 }
+isPlaying=!isPlaying;
 }
 
 function playPause(){
  if(amp.getPaused()){
   amp.play();
-  togglePlayButton(true);
+  // togglePlayButton(true);
 }else{
  amp.pause();
-togglePlayButton(false);
+// togglePlayButton(false);
 }
 }
 
@@ -148,13 +150,18 @@ function setVolume(value){
 }
 
 function toggleCS(){
-  if($('.full-screen #crowdsurfing-wrapper').is(":visible")){
-  $('.full-screen #crowdsurfing-wrapper').hide();
-  $('.csBtn').html('Show Crowdsurfing');
-}else{
-  $('.full-screen #crowdsurfing-wrapper').show();
+  if($('.full-screen #crowdsurfing-wrapper').hasClass('cs-hidden')){
+  $('.full-screen #crowdsurfing-wrapper').removeClass('cs-hidden');
   $('.csBtn').html('Hide Crowdsurfing');
+}else{
+  $('.full-screen #crowdsurfing-wrapper').addClass('cs-hidden');
+  $('.csBtn').html('Show Crowdsurfing');
 }
+}
+
+
+function gotoDonate(){
+  window.location.href = "/donate";
 }
 
 
