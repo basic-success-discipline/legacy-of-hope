@@ -4,7 +4,7 @@
 
 
 var amp,
-giftcode = "asas",
+giftcode = "",
 premium = true,
 media = [];
 
@@ -108,6 +108,8 @@ function loadVideo(index)
 
 function endedHandler(event)
 {
+  togglePlayButton(false);
+
   console.log("ended");
 }
 
@@ -146,11 +148,11 @@ function setVolume(value){
 }
 
 function toggleCS(){
-  if($('#crowdsurfing-wrapper').is(":visible")){
-  $('#crowdsurfing-wrapper').hide();
+  if($('.full-screen #crowdsurfing-wrapper').is(":visible")){
+  $('.full-screen #crowdsurfing-wrapper').hide();
   $('.csBtn').html('Show Crowdsurfing');
 }else{
-  $('#crowdsurfing-wrapper').show();
+  $('.full-screen #crowdsurfing-wrapper').show();
   $('.csBtn').html('Hide Crowdsurfing');
 }
 }
