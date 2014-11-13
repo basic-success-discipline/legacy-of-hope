@@ -55,3 +55,9 @@
 
 .video-menu .playbutton:hover {
   color: #358fe3; }
+
+.csBtn {
+  display: none; }
+
+.full-screen .csBtn {
+  display: block; }
