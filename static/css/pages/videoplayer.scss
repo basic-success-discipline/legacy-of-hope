@@ -31,11 +31,13 @@
 	width: 100%;
 	// background-color: green;
 	position: absolute;
-	top:90%;
+	height: 50px;
 	left: 0;
 	right: 0;
 	bottom: 0;
 }
+
+
 
 .video-menu{
 	width: 100%;
@@ -45,11 +47,16 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+		transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
 }
 
 .video-menu-wrapper:hover, .video-menu:hover{
-	&.video-menu{
+	& .video-menu{
 		top: 0;
+
 	}
 }
 

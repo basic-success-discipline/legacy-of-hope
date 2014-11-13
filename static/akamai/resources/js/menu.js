@@ -97,8 +97,8 @@ FeedMenu.prototype = {
 		    r = Math.floor(index / this.columnCount) + 1;
 
 		element.className = "angle angle-r" + r;
-		element.setAttribute("onclick", "loadVideo("+index+")");
-		element.innerHTML = '<span></span>';
+		// element.setAttribute("onclick", "loadVideo("+index+")");
+		element.innerHTML = '<button onclick="loadVideo('+ index +')"></button>';
 		          	
 		this.view.appendChild(element);
 		this.items.splice(index, 0, element);
