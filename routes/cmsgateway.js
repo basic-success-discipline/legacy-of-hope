@@ -8,13 +8,13 @@ var newsStories = [
 
 
 
-{
-  title: "Botlhale Boikanyo Spotlight",
-  image: "/img/card_botlhale2.jpg",
-  blurb: "Winner of South Africa’s Got Talent and Legacy of Hope Youth Ambassador, 13-year-old Botlhale Boikanyo grew up inspired by Nelson Mandela. Looking back at his influence on her career as a young girl and poet growing up in South Africa, Bothale recalls — 'He taught me to cherish each moment. I vividly remember seeing him doing the Madiba dance with a smile on his face. You could tell he loved people. He engaged with people. He was an optimist. He believed in so much positivity that nothing could ever bring him down or make him feel sad.'",
-  date: "November 13, 2014",
-  link: "/2014/11/13/BotlhaleBoikanyo"
-},
+// {
+//   title: "Botlhale Boikanyo Spotlight",
+//   image: "/img/card_botlhale2.jpg",
+//   blurb: "Winner of South Africa’s Got Talent and Legacy of Hope Youth Ambassador, 13-year-old Botlhale Boikanyo grew up inspired by Nelson Mandela. Looking back at his influence on her career as a young girl and poet growing up in South Africa, Bothale recalls — 'He taught me to cherish each moment. I vividly remember seeing him doing the Madiba dance with a smile on his face. You could tell he loved people. He engaged with people. He was an optimist. He believed in so much positivity that nothing could ever bring him down or make him feel sad.'",
+//   date: "November 13, 2014",
+//   link: "/2014/11/13/BotlhaleBoikanyo"
+// },
 
 {
   title: "Octavia Spencer Spotlight",
