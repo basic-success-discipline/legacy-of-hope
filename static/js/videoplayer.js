@@ -6,16 +6,17 @@
  var amp,
  giftcode = "",
  media = [],
- isPlaying = true;
+ isPlaying = true,
+ angle = 0;
 
 
 
 
- function getMedia(angle, callback) {
-   var url = 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/' + angle + "/hds?zotz=161803";
-   if(giftcode && giftcode !="" && angle == 2){
+ function getMedia(ang, callback) {
+   var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
+   if(giftcode && giftcode !="" && ang == 2){
     url= url+"&giftcode="+giftcode;
-  }else if (angle==2){
+  }else if (ang==2){
     alert("need a giftcode!");
   }
 
@@ -68,6 +69,7 @@
 
 function loadHandler(event)
 {
+    
   getMedia(1, function(media){
     var config = 
     {
@@ -99,9 +101,12 @@ function readyHandler(event)
 
 function loadVideo(index)
 {
+  if(angle!=index+1){
   getMedia(index+1, function(media){
     amp.setMedia(media[0]);
+    angle = index +1;
   });
+}
 }
 
 function endedHandler(event)
