@@ -40,6 +40,9 @@
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear; }
 
+.full-screen .video-menu {
+  top: 100%; }
+
 .video-menu-wrapper:hover .video-menu, .video-menu:hover .video-menu {
   top: 0; }
 
@@ -91,3 +94,10 @@
   padding-bottom: 0;
   color: white;
   display: inline-block; }
+
+.gc-text {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text; }
