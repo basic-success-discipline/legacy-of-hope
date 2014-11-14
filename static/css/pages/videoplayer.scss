@@ -24,6 +24,7 @@
 
 .akamai-media-player{
 	z-index: 1 !important;
+
 }
 
 
@@ -94,7 +95,7 @@
 	}
 
 .csBtn{
-	display:none;
+	// display:none;
 }
 
 .full-screen .csBtn{
@@ -102,7 +103,8 @@
 }
 
 .full-screen .cs-hidden{
-	visibility: hidden;
+	// visibility: hidden;
+	display: none !important;
 }
 
 

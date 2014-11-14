@@ -67,14 +67,11 @@
 .video-menu .playbutton:hover {
   color: #358fe3; }
 
-.csBtn {
-  display: none; }
-
 .full-screen .csBtn {
   display: inline-block; }
 
 .full-screen .cs-hidden {
-  visibility: hidden; }
+  display: none !important; }
 
 .gc-prompt {
   position: absolute;

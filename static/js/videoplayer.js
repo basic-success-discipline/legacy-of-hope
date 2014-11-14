@@ -94,7 +94,7 @@ function loadHandler(event)
 
 function readyHandler(event)
 {
-  
+
 // $('.akamai-video object').attr('wmode', 'transparent');
   amp.addEventListener("ended", endedHandler);
   loadVideo(0);
@@ -158,6 +158,7 @@ function setVolume(value){
 }
 
 function toggleCS(){
+
   if($('.full-screen #crowdsurfing-wrapper').hasClass('cs-hidden')){
     $('.full-screen #crowdsurfing-wrapper').removeClass('cs-hidden');
     $('.csBtn').html('Hide Crowdsurfing');
@@ -165,6 +166,7 @@ function toggleCS(){
     $('.full-screen #crowdsurfing-wrapper').addClass('cs-hidden');
     $('.csBtn').html('Show Crowdsurfing');
   }
+  $("body").addClass("dummyClass").removeClass("dummyClass");
 }
 
 
