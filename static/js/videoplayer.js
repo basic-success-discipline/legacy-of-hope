@@ -98,15 +98,18 @@ function readyHandler(event)
   loadVideo(0);
 }
 
-
+function clickVideo(index){
+  if(angle!=index+1){
+    loadVideo(index);
+  }
+}
 function loadVideo(index)
 {
-  if(angle!=index+1){
+  
   getMedia(index+1, function(media){
     amp.setMedia(media[0]);
     angle = index +1;
   });
-}
 }
 
 function endedHandler(event)
@@ -174,7 +177,7 @@ $(document).ready(function() {
   $('.backstageBtn').attr("onclick", "gcPrompt()");
 
 }else{
-  $('.backstageBtn').attr("onclick", "loadVideo(1)");
+  $('.backstageBtn').attr("onclick", "clickVideo(1)");
 }
 
 });
@@ -193,8 +196,8 @@ function inputGC(){
     alert("invalid giftcode");
 
   }else{
-    $('.backstageBtn').attr("onclick", "loadVideo(1)");
-    loadVideo(1);
+    $('.backstageBtn').attr("onclick", "clickVideo(1)");
+    clickVideo(1);
     closeGCPrompt();
   }
 }
