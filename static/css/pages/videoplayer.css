@@ -83,3 +83,11 @@
 
 .submit-gc-btn {
   display: inline-block; }
+
+.gc-enter p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+  display: inline-block; }
