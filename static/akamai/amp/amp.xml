@@ -7,7 +7,7 @@
 	</head>
 	<config type="Object">
 	   	<controls type="Object">
-	   	    <enabled type="Boolean">true</enabled>
+	   	    <enabled type="Boolean">false</enabled>
 	   	</controls>
 	   	<fullscreen type="Object">
             <native type="Boolean">true</native>
@@ -15,9 +15,9 @@
         </fullscreen>
 	   	<captioning type="Object"></captioning>
         <playoverlay type="Object"></playoverlay>
-        <branding type="Object">
-            <logo type="String">/akamai/resources/images/akamai_logo1.png</logo>
-        </branding>
+<!--         <branding type="Object">
+            <logo type="String"></logo>
+        </branding> -->
 	   	<flash type="Object">
 	   		<static type="Object">
 	   			<enabled type="Boolean">false</enabled>
@@ -52,36 +52,15 @@
     					auto_play_list = 'false'
     					auto_replay = 'false'
     					mbr_starting_index = '0'
-    					controls = 'true'
+    					controls = 'false'
 						hds_fragment_retry_data_gap_threshold= '20'
 						caption_type =''
 					    caption_language ='en-us'
     					>
     				</player>
     				<view skin="/akamai/amp/standard.assets.swf">
-    						<element id="infoOverlay" style="top: 0px; text-align: left;" />
-    						<element id="captionDisplay" initState="cookie|off" position="relative" style="bottom: 0px; windowColor:0x000000; windowOpacity:0; font:Arial; fontColor:0xffffff; fontOpacity:1; fontBGColor:0x000000; fontBGOpacity:0; edgeType:none; edgeColor:0x000000; edgeOpacity:1; scroll:None; fontSize:12;" settingsEnabled="true" />
-    						<element id="controls" visible="true" autoHide="5" height="25" itemMargin="5">
-									<element id="replayBtn" />
-	    							<element id="playPauseBtn" />
-	    							<element id="rewindBtn" />
-	    							<element id="progressBar" color="#FF0000" />
-	    							<element id="loadedBar" color="#00FF00" />
-	    							<element id="scrubBar" style="height: 18px;" />
-	    							<element id="captionBtn" />
-	    							<element id="volumeBar" color="#0000FF" />
-	    							<element id="volumeBtn" />
-									<!-- <element id="fullscreenBtn" /> -->
-									<element id="hdClientBtn" />
-									<element id="logo" style="width: 205px; height: 60px; right: 15px; top: 15px; opacity: 1.0;" />
-									<element id="streamTimeIndicator" exclude="live">
-											<element id="streamTime" />
-											<element id="streamDuration" />
-									</element>
-									<element id="timeLocationIndicator" type="arrow" color="#FFFFFF" />
-									<element id="liveIndicator" />
-									<element id="goLiveBtn" />
-    						</element>
+    						<!-- <element id="infoOverlay" style="top: 0px; text-align: left;" /> -->
+    						<element id="controls" visible="false" autoHide="0" height="0" itemMargin="0"></element>
 							<element id="replayView" /> 
 							<element id="bufferingView" mode="default" tether="false" />
     				</view>

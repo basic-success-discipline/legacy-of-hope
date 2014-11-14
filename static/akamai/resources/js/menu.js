@@ -96,10 +96,12 @@ FeedMenu.prototype = {
 		    c = (index % this.columnCount) + 1,
 		    r = Math.floor(index / this.columnCount) + 1;
 
-		element.className = "sample-menu-item sample-menu-r" + r + " sample-menu-c" + c;
-		element.setAttribute("onclick", "loadVideo("+index+")");
-		element.innerHTML = '<img class="sample-item-thumb" src="'+item.poster+'" />'+
-			            	'<div class="sample-item-title">'+item.title+'</div>';
+		var buttonTitles= ["Main Stage", "Backstage"];
+
+
+		element.className = "angle angle" + c;
+		// element.setAttribute("onclick", "loadVideo("+index+")");
+		element.innerHTML = '<button onclick="loadVideo('+ index +')">'+buttonTitles[index]+ '</button>';
 		          	
 		this.view.appendChild(element);
 		this.items.splice(index, 0, element);

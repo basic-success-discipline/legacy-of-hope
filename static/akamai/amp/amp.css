@@ -1331,7 +1331,7 @@ Copyright 2011 Akamai Technologies, Inc.  All Rights Reserved.
 }
 .akamai-loading .akamai-branding-image,
 .akamai-ended .akamai-branding-image {
-  display: inline;
+  display: none;
   opacity: 1;
 }
 .akamai-loading .akamai-branding-image {
