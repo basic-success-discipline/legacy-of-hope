@@ -12,12 +12,16 @@
   display: inline-block;
   width: calc(100% - 304px);
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   position: relative;
   overflow: hidden; }
 
 #crowdsurfing-wrapper {
   display: inline-block;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
 
 .video-menu-wrapper {
   width: 100%;
