@@ -197,6 +197,8 @@ function inputGC(){
 
   }else{
     $('.backstageBtn').attr("onclick", "clickVideo(1)");
+    $('.backstageBtn').html("Backstage Unlocked");
+    $('.gc-enter').hide();
     clickVideo(1);
     closeGCPrompt();
   }
