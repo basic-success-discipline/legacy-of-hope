@@ -94,6 +94,8 @@ function loadHandler(event)
 
 function readyHandler(event)
 {
+  
+// $('.akamai-video object').attr('wmode', 'transparent');
   amp.addEventListener("ended", endedHandler);
   loadVideo(0);
 }

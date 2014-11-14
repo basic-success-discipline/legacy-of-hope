@@ -5786,7 +5786,7 @@ FlashPlayer.prototype.createParams = function(flash) {
       params.bgColor = flash.params.bgColor;
     }
   }
-  if (params.wmode === "direct" && /MSIE/.test(navigator.userAgent)) {
+  if (params.wmode === "direct" && (/MSIE/.test(navigator.userAgent) || /Firefox/.test(navigator.userAgent))) {
     params.wmode = "transparent";
   }
   return params;
