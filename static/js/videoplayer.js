@@ -47,6 +47,20 @@
       {
         dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
       }
+      mediaanalytics: 
+                    {
+                        config: "http://ma1-r.analytics.edgesuite.net/config/beacon-3018.xml?setVideoObject=1",
+                        plugin:
+                        {
+                            js: "http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js",
+                            swf: "http://79423.analytics.edgesuite.net/csma/plugin/csma.swf"
+                        },
+                        dimensions: 
+                        {
+                            eventName: "Legacy of Hope Concert",
+                            title: "Legacy of Hope Concert"
+                        }
+                    }
     },
     ];
 

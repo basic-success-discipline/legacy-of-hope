@@ -408,21 +408,7 @@ var concert = {
   description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
   stylesheet: "concert2.css",
   currentpage: "menu-concert",
-  type: "website",
-  artists: [
-    {name: "Robert Plant"},
-    {name: "John Legend"},
-    {name: "K'naan"},
-    {name: "The Crystal Method"},
-     {name: "De La Sol"},
-    {name: "Stevie Wonder"},
-    {name: "Shaka Khan"},
-    {name: "Macklemore"},
-    {name: "Mumford & Sons"},
-    {name: "Parliament Funkadelic"},
-    {name: "Blue Man Group"},
-    {name: "Beck"}
-  ]
+  type: "website"
 };
 
 
@@ -691,6 +677,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'concert':
       callback(null, concert);
+      break;
+      case 'concert4':
+      callback(null, concert4);
       break;
       case 'donate':
       callback(null, donate);
