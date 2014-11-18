@@ -285,7 +285,7 @@ var donate_options= [
 
 var home = {
  title 		: "Home - Legacy of Hope",
- thumb_img	: "thumb_home.jpg",
+ thumb_img	: "thumb_home2.jpg",
  description	: "The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
  stylesheet	: "home2.css",
  url: "http://legacyofhope.org",
@@ -405,7 +405,7 @@ var chuck = {
 var concert = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
-  thumb_img: "thumb_concert.jpg",
+  thumb_img: "thumb_concert2.jpg",
   description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
   stylesheet: "concert2.css",
   currentpage: "menu-concert",
@@ -501,7 +501,7 @@ var larry = {
 var legacy_of_hope_nmcht_concert = {
   title: "Sibongile - Legacy of Hope",
   url: "http://legacyofhope.org/legacy-of-hope-nmcht-concert",
-  thumb_img: "thumb_home.jpg",
+  thumb_img: "thumb_home2.jpg",
   description: "Ten years ago, Nelson Mandela enriched his living legacy by unfolding his dream of the Nelson Mandela Children’s Hospital, a crucially needed institution for the millions of underserved children in South Africa. Sibongile Mkhabela, then CEO of the Nelson Mandela’s Children Fund, was chosen by Mandela to play a key role in this vision as he appointed her CEO of the Nelson Mandela Children's Hospital Trust.",
   stylesheet: "sibongile.css",
   currentpage: "menu-news",
@@ -512,7 +512,7 @@ var legacy_of_hope_nmcht_concert = {
 var LOHsponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/LOHsponsors",
-  thumb_img: "thumb_home.jpg",
+  thumb_img: "thumb_home2.jpg",
   description: "Contact us for sponsorship enquiry.",
   stylesheet: "LOHsponsors.css",
   currentpage: "menu-sponsors",
@@ -626,7 +626,7 @@ var soliman = {
 var sponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/sponsors",
-  thumb_img: "thumb_home.jpg",
+  thumb_img: "thumb_home2.jpg",
   description: "The Legacy of Hope Foundation thanks you for your consideration of being part of this momentous historic event. Download the print version or the web version of the Legacy of Hope Sponsor Deck below. (Right click and choose 'Save As').",
   stylesheet: "sponsors.css",
   currentpage: "menu-sponsors",
