@@ -5,6 +5,7 @@
 	width: 100%;
 	height: auto;
 	position: relative;
+	padding-top: 40px;
 
 }
 .video-area{
@@ -48,14 +49,14 @@
 	height: calc(100% - 50px) !important;
 }
 
-$video-bar-height: 50px;
+$video-bar-height: 35px;
 .video-bar-wrapper{
 	width: 100%;
 	height: $video-bar-height;
 	position: absolute;
 	left: 0;
 	right: 0;
-	z-index: 1000;
+	// z-index: 1000;
 }
 
 .video-title-wrapper{
@@ -89,6 +90,9 @@ $video-bar-height: 50px;
   -o-transition: all 0.3s linear; 
   -webkit-transition-delay: 2s; /* Safari */
     	transition-delay: 2s;
+    	padding-left: 10px;
+    	padding-right: 10px;
+    	box-sizing: border-box;
 }
 
 .outer{
@@ -180,25 +184,24 @@ $video-bar-height: 50px;
 .video-menu .half-menu{
 	width: 50%;
 	height: 100%;
+	box-sizing: border-box;
+
 }
 .video-menu .left-menu{
 	left:0;
+	padding-left: 10px;
+	padding-right: 10px;
 	}
 
 	.video-menu .right-menu{
 	right: 0;
+	padding-right: 10px;
+	padding-left: 7px;
 	}
 
 	.video-menu .half-menu .middle{
 		width: 100%;
 	}
-
-	// .floatleft{
-	// 	float: left;
-	// }
-	// .floatright{
-	// 	float: right;
-	// }
 
 	.video-menu .playbutton{
 	color: white;
@@ -214,20 +217,47 @@ $video-bar-height: 50px;
 		float: left;
 	}
 
+
+
+.video-bar .btn{
+	cursor: pointer;
+}
+
+.video-bar .btn h1{
+	font-size: 15px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.video-bar .btn p{
+	font-size: 10px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+
+
 .video-menu .mainBtn{
-	content: "Main Stage";
 	float:right;
+	text-align: right;
+	width: 100px;
+	
+}
+
+.mainStream{
 	
 }
 
 .video-menu .backstageBtn{
-	content: "Back Stage";
 	float: left;
+	text-align: left;
 }
 
 .video-menu .donateBtn{
 	float: right;
+	text-align: right;
 }
+
 
 
 

@@ -1,7 +1,8 @@
 .csvideo {
   width: 100%;
   height: auto;
-  position: relative; }
+  position: relative;
+  padding-top: 40px; }
 
 .video-area {
   display: inline-block;
@@ -38,11 +39,10 @@
 
 .video-bar-wrapper {
   width: 100%;
-  height: 50px;
+  height: 35px;
   position: absolute;
   left: 0;
-  right: 0;
-  z-index: 1000; }
+  right: 0; }
 
 .video-title-wrapper {
   top: 0; }
@@ -71,7 +71,10 @@
   -o-transition: all 0.3s linear;
   -webkit-transition-delay: 2s;
   /* Safari */
-  transition-delay: 2s; }
+  transition-delay: 2s;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box; }
 
 .outer {
   display: table;
@@ -144,13 +147,18 @@
 
 .video-menu .half-menu {
   width: 50%;
-  height: 100%; }
+  height: 100%;
+  box-sizing: border-box; }
 
 .video-menu .left-menu {
-  left: 0; }
+  left: 0;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .video-menu .right-menu {
-  right: 0; }
+  right: 0;
+  padding-right: 10px;
+  padding-left: 7px; }
 
 .video-menu .half-menu .middle {
   width: 100%; }
@@ -166,16 +174,31 @@
 .video-menu .left-menu input {
   float: left; }
 
+.video-bar .btn {
+  cursor: pointer; }
+
+.video-bar .btn h1 {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+.video-bar .btn p {
+  font-size: 10px;
+  margin-bottom: 0;
+  margin-top: 0; }
+
 .video-menu .mainBtn {
-  content: "Main Stage";
-  float: right; }
+  float: right;
+  text-align: right;
+  width: 100px; }
 
 .video-menu .backstageBtn {
-  content: "Back Stage";
-  float: left; }
+  float: left;
+  text-align: left; }
 
 .video-menu .donateBtn {
-  float: right; }
+  float: right;
+  text-align: right; }
 
 .full-screen .csBtn {
   display: inline-block; }
