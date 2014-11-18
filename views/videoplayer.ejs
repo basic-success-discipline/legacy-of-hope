@@ -37,12 +37,16 @@
               <div class="gc-prompt">
               <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp <i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
               <div id="video-menu" class="video-menu video-bar">
+                <div class="left-menu half-menu">
                 <i class="fa fa-play playbutton" onClick="playPause()"></i>
-                <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
-                <button class="backstageBtn">Backstage Locked</button>
-                <button onclick="gotoDonate()" >Give Now</button>
                 <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
-                <button class="csBtn" onclick="toggleCS()">Close Crowdsurfing</button>
+                <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
+                </div>
+                <div class="right-menu half-menu">
+                <button class="backstageBtn">Backstage Locked</button>
+                <button class="donateBtn" onclick="gotoDonate()" >Give Now</button>
+                </div>
+                
               </div>
             </div>
           </div>

@@ -38,6 +38,14 @@
 	box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+			transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+}
+
+.shrink-wrapper{
+	height: calc(100% - 50px) !important;
 }
 
 $video-bar-height: 50px;
@@ -84,7 +92,11 @@ $video-bar-height: 50px;
 
 .video-player:hover{
 	& .video-bar{bottom:0; top: 0}
+	& #crowdsurfing-wrapper{display: none !important;}
 }
+// .video-bar.showBars{
+// 	bottom:0; top: 0
+// }
 
 
 .video-title .LOH-branding{
@@ -128,15 +140,21 @@ $video-bar-height: 50px;
 
 
 
-.video-menu .angle1 button{
-	content: "Main Stage";
-}
 
-.video-menu .angle2 button{
-	content: "Back Stage";
+.video-menu .half-menu{
+	width: 50%;
+	position:relative;
+	display: inline-block;
 }
+.video-menu .left-menu{
+	float: left;
+	}
 
-.video-menu .playbutton{
+	.video-menu .right-menu{
+	float: right;
+	}
+
+	.video-menu .playbutton{
 	color: white;
 	cursor: pointer;
 }
@@ -145,6 +163,22 @@ $video-bar-height: 50px;
 	color: $loh-blue;
 
 	}
+
+.video-menu .angle1 button{
+	content: "Main Stage";
+	float: right;
+}
+
+.video-menu .angle2 button{
+	content: "Back Stage";
+	float: left;
+}
+
+.video-menu .donateBtn{
+	float: right;
+}
+
+
 
 .csBtn{
 	// display:none;
