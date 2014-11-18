@@ -59,6 +59,9 @@
 .full-screen .fs-menu, .full-screen .fs-title {
   display: inline-block; }
 
+.fs-bar-wrapper {
+  z-index: 10; }
+
 .video-bar {
   width: 100%;
   background-color: rgba(200, 200, 200, 0.8);
@@ -152,13 +155,11 @@
 
 .video-menu .left-menu {
   left: 0;
-  padding-left: 10px;
-  padding-right: 10px; }
+  padding-left: 10px; }
 
 .video-menu .right-menu {
   right: 0;
-  padding-right: 10px;
-  padding-left: 7px; }
+  padding-right: 10px; }
 
 .video-menu .half-menu .middle {
   width: 100%; }
@@ -175,7 +176,9 @@
   float: left; }
 
 .video-bar .btn {
-  cursor: pointer; }
+  cursor: pointer;
+  height: 100%;
+  width: 150px; }
 
 .video-bar .btn h1 {
   font-size: 15px;
@@ -190,11 +193,18 @@
 .video-menu .mainBtn {
   float: right;
   text-align: right;
-  width: 100px; }
+  padding-right: 10px; }
+
+.main-stream {
+  background-image: -webkit-linear-gradient(right, #358fe3, #358fe3, rgba(53, 143, 227, 0)); }
+
+.premium-stream {
+  background-image: -webkit-linear-gradient(left, #4aaf39, #4aaf39, rgba(74, 175, 57, 0)); }
 
 .video-menu .backstageBtn {
   float: left;
-  text-align: left; }
+  text-align: left;
+  padding-left: 10px; }
 
 .video-menu .donateBtn {
   float: right;

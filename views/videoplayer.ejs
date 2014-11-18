@@ -52,13 +52,13 @@
                   </div>
                   <div class="right-menu half-menu outer">
                     <div class="middle">
-                    <div class="backstageBtn btn">
+                    <div class="backstageBtn btn ">
                         <h1><b>VIP</b>Stage</h1>
                         <p>premium access</p>
                       </div>
                       <div class="donateBtn btn" onclick="gotoDonate()">
                         <h1><b>Donate Here</b></h1>
-                        <p>and receive VIP Backstage premium content access</p>
+                        <!-- <p>and receive VIP Backstage premium content access</p> -->
                       </div>
                     </div>
                   </div>
@@ -67,29 +67,49 @@
               </div>
             </div>
 
-            <div class="video-title-wrapper video-bar-wrapper fs-title">
-              <div class="video-title video-bar">
-                <div class="LOH-branding"><h5>Legacy<em>of</em>Hope</h5><p>live</p></div>
-                <div class="inplay-branding"><p>powered by</p><p>in:play streaming</p></div>
+            <div class="video-title-wrapper video-bar-wrapper fs-title fs-bar-wrapper">
+              <div class="video-title video-bar outer">
+                <div class="middle">
+                  <div class="LOH-branding"><h5>Legacy<em>of</em>Hope</h5><p>live</p></div>
+                  <div class="inplay-branding"><p>powered by</p><p>in:play streaming</p></div>
+                </div>
               </div>
 
             </div>
-            <div class="video-menu-wrapper video-bar-wrapper fs-menu">
+
+            <div class="video-menu-wrapper video-bar-wrapper fs-menu fs-bar-wrapper">
               <div class="gc-prompt">
                 <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp <i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
                 <div id="video-menu" class="video-menu video-bar">
-                  <div class="left-menu half-menu">
-                    <i class="fa fa-play playbutton" onClick="playPause()"></i>
-                    <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
-                    <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
+                  <div class="left-menu half-menu outer">
+                    <div class="middle">
+                      <i class="fa fa-play playbutton" onClick="playPause()"></i>
+                      <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
+                    
+                      <div class="mainBtn btn" onclick="clickVideo(0)">
+                        <h1><b>Main</b>Stage</h1>
+                        <p>the concert</p>
+                      </div>
+                       </div>
                   </div>
-                  <div class="right-menu half-menu">
-                    <button class="backstageBtn">Backstage Locked</button>
-                    <button class="donateBtn" onclick="gotoDonate()" >Give Now</button>
+                  <div class="right-menu half-menu outer">
+                    <div class="middle">
+                    <div class="backstageBtn btn ">
+                        <h1><b>VIP</b>Stage</h1>
+                        <p>premium access</p>
+                      </div>
+                      <div class="donateBtn btn" onclick="gotoDonate()">
+                        <h1><b>Donate Here</b></h1>
+                        <!-- <p>and receive VIP Backstage premium content access</p> -->
+                      </div>
+                    </div>
                   </div>
 
                 </div>
               </div>
+
+           
+           
 
               <div id="crowdsurfing-wrapper">
 

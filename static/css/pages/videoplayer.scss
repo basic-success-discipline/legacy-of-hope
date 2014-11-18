@@ -77,6 +77,10 @@ $video-bar-height: 35px;
 	display: inline-block;
 }
 
+.fs-bar-wrapper{
+	z-index: 10;
+}
+
 
 .video-bar{
 	width: 100%;
@@ -190,13 +194,11 @@ $video-bar-height: 35px;
 .video-menu .left-menu{
 	left:0;
 	padding-left: 10px;
-	padding-right: 10px;
 	}
 
 	.video-menu .right-menu{
 	right: 0;
 	padding-right: 10px;
-	padding-left: 7px;
 	}
 
 	.video-menu .half-menu .middle{
@@ -221,6 +223,9 @@ $video-bar-height: 35px;
 
 .video-bar .btn{
 	cursor: pointer;
+	height: 100%;
+	width: 150px;
+	
 }
 
 .video-bar .btn h1{
@@ -240,17 +245,31 @@ $video-bar-height: 35px;
 .video-menu .mainBtn{
 	float:right;
 	text-align: right;
-	width: 100px;
+	padding-right: 10px;
 	
 }
 
-.mainStream{
-	
+.main-stream{
+	// #358fe3
+	background-image: -webkit-linear-gradient(right, rgba(53,143,227,1),rgba(53,143,227,1), rgba(53,143,227,0)); 
+    // background-image:    -moz-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    // background-image:     -ms-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    // background-image:      -o-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0));
+}
+
+
+.premium-stream{
+	// #358fe3
+	background-image: -webkit-linear-gradient(left, rgba(74,175,57,1),rgba(74,175,57,1), rgba(74,175,57,0)); 
+    // background-image:    -moz-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    // background-image:     -ms-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+    // background-image:      -o-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0));
 }
 
 .video-menu .backstageBtn{
 	float: left;
 	text-align: left;
+	padding-left: 10px;
 }
 
 .video-menu .donateBtn{

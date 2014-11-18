@@ -50,6 +50,8 @@
     }
     ];
 
+
+    setStreamButton(ang);
     callback(media);
   };
 
@@ -112,6 +114,7 @@ function loadVideo(index)
   getMedia(index+1, function(media){
     amp.setMedia(media[0]);
     angle = index +1;
+
   });
 }
 
@@ -185,6 +188,8 @@ $(document).ready(function() {
   $('.backstageBtn').attr("onclick", "clickVideo(1)");
 }
 
+setStreamButton(angle);
+
 });
 
 
@@ -209,18 +214,7 @@ function inputGC(){
   }
 }
 
-$('.fs-title').hover(
-  function(e) {
-   $('.video-bar').addClass("show-bars");
-  },
-  function(e) {
-    $('.video-bar').removeClass("show-bars");
-    // $("#crowdsurfing-wrapper").style("height", "100%", "important");
-
-  }
-);
-
-$('.fs-menu').hover(
+$('.fs-bar-wrapper').hover(
   function(e) {
    $('.video-bar').addClass("show-bars");
   },
@@ -232,15 +226,18 @@ $('.fs-menu').hover(
 );
 
 
-$(".full-screen #crowdsurfing-wrapper").hover( 
-  function(e) {
-    console.log(e.pageY);
-   
-  },
-  function(e) {
-    // $(".full-screen #crowdsurfing-wrapper").style("height", "100%", "important");
 
-  });
+function setStreamButton(ang){
+  if(ang==1){
+    $('.mainBtn').addClass("main-stream");
+     $('.backstageBtn').removeClass("premium-stream");
+  }else if(ang ==2){
+        $('.mainBtn').removeClass("main-stream");
+     $('.backstageBtn').addClass("premium-stream");
+  }
+}
+
+
 
 
 
@@ -262,70 +259,5 @@ function createCORSRequest(method, url) {
 }
 
 
-
-(function($) {    
-  if ($.fn.style) {
-    return;
-  }
-
-  // Escape regex chars with \
-  var escape = function(text) {
-    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-  };
-
-  // For those who need them (< IE 9), add support for CSS functions
-  var isStyleFuncSupported = !!CSSStyleDeclaration.prototype.getPropertyValue;
-  if (!isStyleFuncSupported) {
-    CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
-      return this.getAttribute(a);
-    };
-    CSSStyleDeclaration.prototype.setProperty = function(styleName, value, priority) {
-      this.setAttribute(styleName, value);
-      var priority = typeof priority != 'undefined' ? priority : '';
-      if (priority != '') {
-        // Add priority manually
-        var rule = new RegExp(escape(styleName) + '\\s*:\\s*' + escape(value) +
-            '(\\s*;)?', 'gmi');
-        this.cssText =
-            this.cssText.replace(rule, styleName + ': ' + value + ' !' + priority + ';');
-      }
-    };
-    CSSStyleDeclaration.prototype.removeProperty = function(a) {
-      return this.removeAttribute(a);
-    };
-    CSSStyleDeclaration.prototype.getPropertyPriority = function(styleName) {
-      var rule = new RegExp(escape(styleName) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?',
-          'gmi');
-      return rule.test(this.cssText) ? 'important' : '';
-    }
-  }
-
-  // The style function
-  $.fn.style = function(styleName, value, priority) {
-    // DOM node
-    var node = this.get(0);
-    // Ensure we have a DOM node
-    if (typeof node == 'undefined') {
-      return this;
-    }
-    // CSSStyleDeclaration
-    var style = this.get(0).style;
-    // Getter/Setter
-    if (typeof styleName != 'undefined') {
-      if (typeof value != 'undefined') {
-        // Set style property
-        priority = typeof priority != 'undefined' ? priority : '';
-        style.setProperty(styleName, value, priority);
-        return this;
-      } else {
-        // Get style property
-        return style.getPropertyValue(styleName);
-      }
-    } else {
-      // Get CSSStyleDeclaration
-      return style;
-    }
-  };
-})(jQuery);
 
 
