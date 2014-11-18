@@ -56,6 +56,8 @@
 						hds_fragment_retry_data_gap_threshold= '20'
 						caption_type =''
 					    caption_language ='en-us'
+					    branding_preload='none'
+					    playback_clicktoggle_enabled='false'
     					>
     				</player>
     				<view skin="/akamai/amp/standard.assets.swf">
@@ -126,8 +128,8 @@
 				<swf type="String">http://79423.analytics.edgesuite.net/csma/plugin/csma.swf</swf>
 			</plugin>
 			<dimensions type="Object">
-                <eventName type="String">AMP Sample Event</eventName>
-                <title type="String">AMP Sample Title</title>
+                <eventName type="String">Legacy of Hope Concert</eventName>
+                <title type="String">Legacy of Hope</title>
                 <playerId type="String">#{player.mode} Player</playerId>
             </dimensions>
 		</mediaanalytics>

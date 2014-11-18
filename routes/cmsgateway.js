@@ -123,6 +123,7 @@ newsStories.forEach(function (story) {
 var path = 'static/rss/';
 fs.mkdir(path,function(e){
     if(!e || (e && e.code === 'EEXIST')){
+      console.log("created new xml");
        fs.writeFile('static/rss/news.xml', rss.getFeedXML(feed), function (err) {
   if (err) return console.log(err);
 });

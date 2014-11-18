@@ -30,6 +30,7 @@
   xhr.onload = function() {
     var text = xhr.responseText;
     var data = JSON.parse(text);
+    console.log(data.URL);
     media=[
     {
       autoplay: true,
@@ -45,23 +46,9 @@
       ],
       mediaanalytics:
       {
-        dimensions: { title: "TITLE3", eventName: "EVENTNAME3" }
+        dimensions: { title: "Legacy of Hope", eventName: "Legacy of Hope Concert" }
       }
-      mediaanalytics: 
-                    {
-                        config: "http://ma1-r.analytics.edgesuite.net/config/beacon-3018.xml?setVideoObject=1",
-                        plugin:
-                        {
-                            js: "http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js",
-                            swf: "http://79423.analytics.edgesuite.net/csma/plugin/csma.swf"
-                        },
-                        dimensions: 
-                        {
-                            eventName: "Legacy of Hope Concert",
-                            title: "Legacy of Hope Concert"
-                        }
-                    }
-    },
+    }
     ];
 
     callback(media);
@@ -93,6 +80,7 @@ function loadHandler(event)
         {
           regexp: "Android 4"
         }
+
       },
       eventmanagement: {enabled: false}
     };
