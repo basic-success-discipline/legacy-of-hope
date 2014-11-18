@@ -210,11 +210,23 @@ function inputGC(){
   }
 }
 
-$('.video-player').hover(
+$('.fs-title').hover(
   function(e) {
-    // $(".full-screen #crowdsurfing-wrapper").style("height", "calc(100% - 50px)", "important");
+   $('.video-bar').addClass("show-bars");
   },
   function(e) {
+    $('.video-bar').removeClass("show-bars");
+    // $("#crowdsurfing-wrapper").style("height", "100%", "important");
+
+  }
+);
+
+$('.fs-menu').hover(
+  function(e) {
+   $('.video-bar').addClass("show-bars");
+  },
+  function(e) {
+    $('.video-bar').removeClass("show-bars");
     // $("#crowdsurfing-wrapper").style("height", "100%", "important");
 
   }

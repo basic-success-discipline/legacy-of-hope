@@ -103,7 +103,7 @@ $video-bar-height: 50px;
 	bottom: -100%;
 }
 
-.video-player:hover {
+.video-player:not(.full-screen):hover {
 	& .video-bar{
 		bottom:0; 
 		top: 0; 
@@ -112,18 +112,14 @@ $video-bar-height: 50px;
 		}
 }
 
-.full-screen .video-area:hover{
-	& .video-bar{
-		bottom:0; 
+
+.show-bars{
+			bottom:0; 
 		top: 0; 
 		  -webkit-transition-delay: 0s; /* Safari */
     	transition-delay: 0s;  
-		}
-
 }
-// .video-bar.showBars{
-// 	bottom:0; top: 0
-// }
+
 
 
 .video-title .LOH-branding{
