@@ -50,6 +50,15 @@
 .video-menu-wrapper {
   bottom: 0; }
 
+.fs-menu, .fs-title {
+  display: none; }
+
+.full-screen .video-menu-wrapper, .full-screen .video-title-wrapper {
+  display: none; }
+
+.full-screen .fs-menu, .full-screen .fs-title {
+  display: inline-block; }
+
 .video-bar {
   width: 100%;
   background-color: rgba(200, 200, 200, 0.8);
@@ -59,7 +68,10 @@
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear; }
+  -o-transition: all 0.3s linear;
+  -webkit-transition-delay: 2s;
+  /* Safari */
+  transition-delay: 2s; }
 
 .video-title {
   top: -100%;
@@ -71,9 +83,17 @@
 
 .video-player:hover .video-bar {
   bottom: 0;
-  top: 0; }
-.video-player:hover #crowdsurfing-wrapper {
-  display: none !important; }
+  top: 0;
+  -webkit-transition-delay: 0s;
+  /* Safari */
+  transition-delay: 0s; }
+
+.full-screen .video-area:hover .video-bar {
+  bottom: 0;
+  top: 0;
+  -webkit-transition-delay: 0s;
+  /* Safari */
+  transition-delay: 0s; }
 
 .video-title .LOH-branding {
   float: left; }
@@ -108,6 +128,9 @@
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1; }
+
+.fs-title {
+  width: calc(100% - 300px); }
 
 .video-menu .half-menu {
   width: 50%;

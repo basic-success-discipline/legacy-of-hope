@@ -212,13 +212,24 @@ function inputGC(){
 
 $('.video-player').hover(
   function(e) {
-    $(".full-screen #crowdsurfing-wrapper").style("height", "calc(100% - 50px)", "important");
+    // $(".full-screen #crowdsurfing-wrapper").style("height", "calc(100% - 50px)", "important");
   },
   function(e) {
-    $(".full-screen #crowdsurfing-wrapper").style("height", "100%", "important");
+    // $("#crowdsurfing-wrapper").style("height", "100%", "important");
 
   }
 );
+
+
+$(".full-screen #crowdsurfing-wrapper").hover( 
+  function(e) {
+    console.log(e.pageY);
+   
+  },
+  function(e) {
+    // $(".full-screen #crowdsurfing-wrapper").style("height", "100%", "important");
+
+  });
 
 
 
