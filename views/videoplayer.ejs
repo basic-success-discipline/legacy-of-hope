@@ -26,78 +26,85 @@
           <div class="video-player">
             <div id="akamai-media-player"></div>
             <div class="video-title-wrapper video-bar-wrapper">
-                <div class="video-title video-bar">
+              <div class="video-title video-bar outer">
+                <div class="middle">
                   <div class="LOH-branding"><h5>Legacy<em>of</em>Hope</h5><p>live</p></div>
                   <div class="inplay-branding"><p>powered by</p><p>in:play streaming</p></div>
                 </div>
+              </div>
 
             </div>
 
             <div class="video-menu-wrapper video-bar-wrapper">
               <div class="gc-prompt">
-              <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp <i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
-              <div id="video-menu" class="video-menu video-bar">
-                <div class="left-menu half-menu">
-                <i class="fa fa-play playbutton" onClick="playPause()"></i>
-                <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
-                <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
+                <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp <i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
+                <div id="video-menu" class="video-menu video-bar">
+                  <div class="left-menu half-menu outer">
+                    <div class="middle">
+                      <i class="fa fa-play playbutton" onClick="playPause()"></i>
+                      <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
+                     
+                      <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
+                       </div>
+                  </div>
+                  <div class="right-menu half-menu outer">
+                    <div class="middle">
+                      <button class="backstageBtn">Backstage Locked</button>
+                      <button class="donateBtn" onclick="gotoDonate()" >Give Now</button>
+                    </div>
+                  </div>
+
                 </div>
-                <div class="right-menu half-menu">
-                <button class="backstageBtn">Backstage Locked</button>
-                <button class="donateBtn" onclick="gotoDonate()" >Give Now</button>
-                </div>
-                
               </div>
             </div>
-          </div>
-     
- <div class="video-title-wrapper video-bar-wrapper fs-title">
-                <div class="video-title video-bar">
-                  <div class="LOH-branding"><h5>Legacy<em>of</em>Hope</h5><p>live</p></div>
-                  <div class="inplay-branding"><p>powered by</p><p>in:play streaming</p></div>
-                </div>
+
+            <div class="video-title-wrapper video-bar-wrapper fs-title">
+              <div class="video-title video-bar">
+                <div class="LOH-branding"><h5>Legacy<em>of</em>Hope</h5><p>live</p></div>
+                <div class="inplay-branding"><p>powered by</p><p>in:play streaming</p></div>
+              </div>
 
             </div>
             <div class="video-menu-wrapper video-bar-wrapper fs-menu">
               <div class="gc-prompt">
-              <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp <i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
-              <div id="video-menu" class="video-menu video-bar">
-                <div class="left-menu half-menu">
-                <i class="fa fa-play playbutton" onClick="playPause()"></i>
-                <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
-                <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
+                <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp <i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
+                <div id="video-menu" class="video-menu video-bar">
+                  <div class="left-menu half-menu">
+                    <i class="fa fa-play playbutton" onClick="playPause()"></i>
+                    <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
+                    <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
+                  </div>
+                  <div class="right-menu half-menu">
+                    <button class="backstageBtn">Backstage Locked</button>
+                    <button class="donateBtn" onclick="gotoDonate()" >Give Now</button>
+                  </div>
+
                 </div>
-                <div class="right-menu half-menu">
-                <button class="backstageBtn">Backstage Locked</button>
-                <button class="donateBtn" onclick="gotoDonate()" >Give Now</button>
-                </div>
-                
+              </div>
+
+              <div id="crowdsurfing-wrapper">
+
+                <script id="crowdsurfing_event" src="https://d28u0ctzyej8pl.cloudfront.net/events/5448240304ffa9e84e8b4568.js" type="text/javascript"></script>
+              </div>
+              <div class="gc-enter">
+                <p>Enter your gift code</p><input type="text" class="gc-text"> </input><button class="submit-gc-btn" onclick="inputGC()">Submit</button>
               </div>
             </div>
 
-          <div id="crowdsurfing-wrapper">
+          </div>
 
-            <script id="crowdsurfing_event" src="https://d28u0ctzyej8pl.cloudfront.net/events/5448240304ffa9e84e8b4568.js" type="text/javascript"></script>
-          </div>
-<div class="gc-enter">
-          <p>Enter your gift code</p><input type="text" class="gc-text"> </input><button class="submit-gc-btn" onclick="inputGC()">Submit</button>
-          </div>
+
+
+
+          <script type="text/javascript" src="/js/videoplayer.js"></script>
         </div>
 
+        <div class="push"></div>
       </div>
-
-
-
-
-      <script type="text/javascript" src="/js/videoplayer.js"></script>
+      <% include partials/loh-footer %>
     </div>
-
-    <div class="push"></div>
-  </div>
-  <% include partials/loh-footer %>
-</div>
-</body>
-</html>
+  </body>
+  </html>
 
 
 

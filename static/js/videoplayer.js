@@ -30,7 +30,6 @@
   xhr.onload = function() {
     var text = xhr.responseText;
     var data = JSON.parse(text);
-    console.log(data.URL);
     media=[
     {
       autoplay: true,

@@ -43,7 +43,7 @@
     					dvr_enabled = '1'
     					rewind_interval = '15'
     					font_size='18'
-    					media_analytics_logging_enabled='false'
+    					media_analytics_logging_enabled='true'
     					enable_alternate_server_mapping='false'
     					enable_end_user_mapping='false'
 						set_resume_dvr_at_live='true'
@@ -122,7 +122,7 @@
 	   		</states>
 	   	</eventmanagement>
 		<mediaanalytics type="Object">
-			<config type="String">http://ma1-r.analytics.edgesuite.net/config/beacon-3018.xml?setVideoObject=1</config>
+			<config type="String">http://ma463-r.analytics.edgesuite.net/config/beacon-5712.xml</config>
 			<plugin type="Object">
 				<js type="String">http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js</js>
 				<swf type="String">http://79423.analytics.edgesuite.net/csma/plugin/csma.swf</swf>
@@ -130,7 +130,7 @@
 			<dimensions type="Object">
                 <eventName type="String">Legacy of Hope Concert</eventName>
                 <title type="String">Legacy of Hope</title>
-                <playerId type="String">#{player.mode} Player</playerId>
+                <playerId type="String">Web Player</playerId>
             </dimensions>
 		</mediaanalytics>
 		<locales type="Object">  

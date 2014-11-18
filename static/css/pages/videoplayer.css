@@ -73,6 +73,16 @@
   /* Safari */
   transition-delay: 2s; }
 
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.middle {
+  display: table-cell;
+  vertical-align: middle; }
+
 .video-title {
   top: -100%;
   bottom: 100%; }
@@ -134,27 +144,33 @@
 
 .video-menu .half-menu {
   width: 50%;
-  position: relative;
-  display: inline-block; }
+  height: 100%; }
 
 .video-menu .left-menu {
-  float: left; }
+  left: 0; }
 
 .video-menu .right-menu {
-  float: right; }
+  right: 0; }
+
+.video-menu .half-menu .middle {
+  width: 100%; }
 
 .video-menu .playbutton {
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  float: left; }
 
 .video-menu .playbutton:hover {
   color: #358fe3; }
 
-.video-menu .angle1 button {
+.video-menu .left-menu input {
+  float: left; }
+
+.video-menu .mainBtn {
   content: "Main Stage";
   float: right; }
 
-.video-menu .angle2 button {
+.video-menu .backstageBtn {
   content: "Back Stage";
   float: left; }
 
