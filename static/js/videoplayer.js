@@ -16,6 +16,7 @@
 
 
 
+
  function getMedia(ang, callback) {
    var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
    if(giftcode && giftcode !="" && ang == 2){
@@ -283,11 +284,13 @@ function inputGC(){
 $('.fs-bar-wrapper').hover(
   function(e) {
    $('.video-bar').addClass("show-bars");
+   $('#crowdsurfing-wrapper').addClass("make-cs-opaque");
    
   // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").removeClass("cs-fullscreen-on");
  },
  function(e) {
   $('.video-bar').removeClass("show-bars");
+  $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
   // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").addClass("cs-fullscreen-on");
    // $("#crowdsurfing").addClass("cs-fullscreen-on");
     // $("#crowdsurfing-wrapper").style("height", "100%", "important");
@@ -328,6 +331,9 @@ document.addEventListener(
     },
     false
 );
+
+
+
 
 
 
