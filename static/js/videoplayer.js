@@ -3,13 +3,14 @@
 
 
 
- var amp,
+ var amp, csfs,
  giftcode = "",
  media = [],
  isPlaying = true,
  angle = 0,
  volume = 10,
- vfactor = 20;
+ vfactor = 20,
+ defaultv = 3;
 
 
 
@@ -74,7 +75,7 @@
 
 function loadHandler(event)
 {
-    
+
   getMedia(1, function(media){
     var config = 
     {
@@ -103,17 +104,14 @@ function readyHandler(event)
 {
 
 // $('.akamai-video object').attr('wmode', 'transparent');
-  amp.addEventListener("ended", endedHandler);
-  loadVideo(0);
-  volume = amp.getVolume()*vfactor;
-  $('.range input').attr('value', volume);
-  if(volume ==0){
-    $('.volumebutton').removeClass('fa-volume-up');
-    $('.volumebutton').addClass('fa-volume-off');
-    amp.mute();
-  }else{
-    unmute();
-  }
+amp.addEventListener("ended", endedHandler);
+loadVideo(0);
+volume = amp.getVolume()*vfactor;
+if(volume ==0){
+  mute();
+}else{
+  unmute();
+}
 }
 
 function clickVideo(index){
@@ -123,7 +121,7 @@ function clickVideo(index){
 }
 function loadVideo(index)
 {
-  
+
   getMedia(index+1, function(media){
     amp.setMedia(media[0]);
     angle = index +1;
@@ -141,7 +139,7 @@ function endedHandler(event)
 
 
 
-var csfs = new CsFullscreen({
+csfs = new CsFullscreen({
   wrapper: '.video-area', //css selector
 csWrapper: document.getElementById('crowdsurfing-wrapper'), //DOM node
 playerWrapper: '.video-player',
@@ -171,31 +169,59 @@ function playPause(){
 }
 
 function setVolume(value){
-  amp.setVolume(value/20);
+
+ volume = value;
+ if(volume ==0){
+  $('.volumebutton').removeClass('fa-volume-up');
+  $('.volumebutton').addClass('fa-volume-off');
+  amp.mute();
+}else{
+  unmute();
+}
+amp.setVolume(value/vfactor);
+
+}
+
+function mute(){
+// Mute the video
+    amp.mute();
+    $('.volumebutton').removeClass('fa-volume-up');
+    $('.volumebutton').addClass('fa-volume-off');
+    $('.range input').attr('value','0');
 }
 
 function unmute(){
   amp.unmute();
-    $('.volumebutton').addClass('fa-volume-up');
-    $('.volumebutton').removeClass('fa-volume-off');
-    if(volume==0){
-      volume = 3 *vfactor;
-       setVolume(volume);
-    }
-    $('.range input').attr('value',volume);
-}
-
-function toggleCS(){
-
-  if($('.full-screen #crowdsurfing-wrapper').hasClass('cs-hidden')){
-    $('.full-screen #crowdsurfing-wrapper').removeClass('cs-hidden');
-    $('.csBtn').html('Hide Crowdsurfing');
-  }else{
-    $('.full-screen #crowdsurfing-wrapper').addClass('cs-hidden');
-    $('.csBtn').html('Show Crowdsurfing');
+  $('.volumebutton').addClass('fa-volume-up');
+  $('.volumebutton').removeClass('fa-volume-off');
+  if(volume==0){
+    volume = defaultv *vfactor;
+    setVolume(volume);
   }
-  $("body").addClass("dummyClass").removeClass("dummyClass");
+  $('.range input').attr('value',volume);
 }
+
+// Event listener for the mute button
+$('.volumebutton').click(function(){
+  if (amp.getVolume()>0) {
+    mute()
+  } else {
+    // Unmute the video
+    unmute();
+  }
+});
+
+$('.fstogglebutton').click(function(){
+  if($('body').hasClass('full-screen')){
+    csfs.toggle(false);
+    $('.fstogglebutton').addClass('fa-arrows-alt');
+    $('.fstogglebutton').removeClass('fa-compress');
+  }else{
+    csfs.toggle(true);
+    $('.fstogglebutton').removeClass('fa-arrows-alt');
+    $('.fstogglebutton').addClass('fa-compress');
+  }
+})
 
 
 function gotoDonate(){
@@ -245,59 +271,34 @@ function inputGC(){
 $('.fs-bar-wrapper').hover(
   function(e) {
    $('.video-bar').addClass("show-bars");
-  },
-  function(e) {
-    $('.video-bar').removeClass("show-bars");
+ },
+ function(e) {
+  $('.video-bar').removeClass("show-bars");
     // $("#crowdsurfing-wrapper").style("height", "100%", "important");
 
   }
-);
+  );
 
 
 
 function setStreamButton(ang){
   if(ang==1){
     $('.left-menu').addClass("main-stream");
-     $('.right-menu').removeClass("premium-stream");
+    $('.right-menu').removeClass("premium-stream");
   }else if(ang ==2){
-        $('.left-menu').removeClass("main-stream");
-     $('.right-menu').addClass("premium-stream");
+    $('.left-menu').removeClass("main-stream");
+    $('.right-menu').addClass("premium-stream");
   }
 }
 
 
 
-// Event listener for the mute button
-$('.volumebutton').click(function(){
-  if (amp.getVolume()>0) {
-    // Mute the video
-    amp.mute();
-    $('.volumebutton').removeClass('fa-volume-up');
-    $('.volumebutton').addClass('fa-volume-off');
-    volume =  $('.range input').attr('value');
-    $('.range input').attr('value','0');
-    ;
-
-
-  } else {
-    // Unmute the video
-    unmute();
-  }
-
-});
 
 
 
-$('.range input').on("change", function() {
-    volume = $('.range input').attr('value');
-  if(volume ==0){
-    $('.volumebutton').removeClass('fa-volume-up');
-    $('.volumebutton').addClass('fa-volume-off');
-    amp.mute();
-  }else{
-    unmute();
-  }
-});
+
+
+
 
 
 
