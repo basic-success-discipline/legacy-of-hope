@@ -212,18 +212,30 @@ $('.volumebutton').click(function(){
 });
 
 $('.fstogglebutton').click(function(){
+  csfs.toggle($('.fstogglebutton').hasClass('fa-arrows-alt'));
+});
+
+
+function updateFSButton(){
   if($('body').hasClass('full-screen')){
-    csfs.toggle(false);
-    $('.fstogglebutton').addClass('fa-arrows-alt');
-    $('.fstogglebutton').removeClass('fa-compress');
-  }else{
-    csfs.toggle(true);
     $('.fstogglebutton').removeClass('fa-arrows-alt');
     $('.fstogglebutton').addClass('fa-compress');
+  }else{
+    $('.fstogglebutton').addClass('fa-arrows-alt');
+    $('.fstogglebutton').removeClass('fa-compress');
   }
-})
+}
 
 
+function updateFSButton(fs){
+  if(fs){
+    $('.fstogglebutton').removeClass('fa-arrows-alt');
+    $('.fstogglebutton').addClass('fa-compress');
+  }else{
+    $('.fstogglebutton').addClass('fa-arrows-alt');
+    $('.fstogglebutton').removeClass('fa-compress');
+  }
+}
 function gotoDonate(){
   window.location.href = "/donate";
 }
@@ -271,9 +283,13 @@ function inputGC(){
 $('.fs-bar-wrapper').hover(
   function(e) {
    $('.video-bar').addClass("show-bars");
+   
+  // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").removeClass("cs-fullscreen-on");
  },
  function(e) {
   $('.video-bar').removeClass("show-bars");
+  // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").addClass("cs-fullscreen-on");
+   // $("#crowdsurfing").addClass("cs-fullscreen-on");
     // $("#crowdsurfing-wrapper").style("height", "100%", "important");
 
   }
@@ -295,7 +311,23 @@ function setStreamButton(ang){
 
 
 
-
+document.addEventListener(
+    'CrowdSurfingControlEvent',
+    function checkIfIsInFullScreen(param) {
+        if (param.data[0] === 'fullScreen' && param.data[1] === true) {
+            
+            updateFSButton(true);
+        } else if (param.data[0] === 'fullScreen' && param.data[1] === false) {
+           
+            updateFSButton(false);
+        } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
+          // CrowdSurfing has been minimized
+        } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "maximizeCSWidget") {
+          // CrowdSurfing has been maximized
+        }
+    },
+    false
+);
 
 
 
