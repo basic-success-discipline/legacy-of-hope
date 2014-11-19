@@ -331,7 +331,9 @@ document.addEventListener(
 
 
 
-
+$(".gc-text").mouseup(function(e){
+  e.preventDefault();
+});
 
 
 
