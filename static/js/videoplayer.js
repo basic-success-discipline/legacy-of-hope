@@ -7,7 +7,10 @@
  giftcode = "",
  media = [],
  isPlaying = true,
- angle = 0;
+ angle = 0,
+ volume = 10,
+ vfactor = 20;
+
 
 
 
@@ -91,6 +94,7 @@ function loadHandler(event)
     amp.addEventListener("pause", togglePlayButton);
     amp.addEventListener("playing", togglePlayButton);
 
+
   });
 
 }
@@ -101,6 +105,15 @@ function readyHandler(event)
 // $('.akamai-video object').attr('wmode', 'transparent');
   amp.addEventListener("ended", endedHandler);
   loadVideo(0);
+  volume = amp.getVolume()*vfactor;
+  $('.range input').attr('value', volume);
+  if(volume ==0){
+    $('.volumebutton').removeClass('fa-volume-up');
+    $('.volumebutton').addClass('fa-volume-off');
+    amp.mute();
+  }else{
+    unmute();
+  }
 }
 
 function clickVideo(index){
@@ -161,6 +174,17 @@ function setVolume(value){
   amp.setVolume(value/20);
 }
 
+function unmute(){
+  amp.unmute();
+    $('.volumebutton').addClass('fa-volume-up');
+    $('.volumebutton').removeClass('fa-volume-off');
+    if(volume==0){
+      volume = 3 *vfactor;
+       setVolume(volume);
+    }
+    $('.range input').attr('value',volume);
+}
+
 function toggleCS(){
 
   if($('.full-screen #crowdsurfing-wrapper').hasClass('cs-hidden')){
@@ -189,6 +213,7 @@ $(document).ready(function() {
 }
 
 setStreamButton(angle);
+
 
 });
 
@@ -239,6 +264,40 @@ function setStreamButton(ang){
      $('.right-menu').addClass("premium-stream");
   }
 }
+
+
+
+// Event listener for the mute button
+$('.volumebutton').click(function(){
+  if (amp.getVolume()>0) {
+    // Mute the video
+    amp.mute();
+    $('.volumebutton').removeClass('fa-volume-up');
+    $('.volumebutton').addClass('fa-volume-off');
+    volume =  $('.range input').attr('value');
+    $('.range input').attr('value','0');
+    ;
+
+
+  } else {
+    // Unmute the video
+    unmute();
+  }
+
+});
+
+
+
+$('.range input').on("change", function() {
+    volume = $('.range input').attr('value');
+  if(volume ==0){
+    $('.volumebutton').removeClass('fa-volume-up');
+    $('.volumebutton').addClass('fa-volume-off');
+    amp.mute();
+  }else{
+    unmute();
+  }
+});
 
 
 

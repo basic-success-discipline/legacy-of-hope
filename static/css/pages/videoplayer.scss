@@ -209,23 +209,76 @@ $video-menu-bar-height: 50px;
 	}
 
 	.video-menu .half-menu .middle{
-		width: 100%;
+		// width: 100%;
 	}
+.video-menu .half-menu .middle:first-child{
+	width: 50px;
+}
 
-	.video-menu .playbutton{
+
+	.left-menu i{
 	color: white;
 	cursor: pointer;
 	float: left;
 	font-size: 19px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
-.video-menu .playbutton:hover{
+.left-menu i:hover{
 	color: $loh-blue;
 	}
 
-	.video-menu .left-menu input{
-		float: left;
+	.left-menu .volume{
+		width: 40px;
+		text-align: center;
+		position: relative;
 	}
+
+
+	.left-menu .volumebutton{
+		position:relative;
+	}
+.volume .range{
+	// display: none;
+	position: absolute;
+	// top: -120px;
+	top: 0;
+	// bottom: 33px;
+	bottom: 100% ;
+	left: 6px;
+	width: 30px;
+	background-color: rgba(200,200,200, 0.8);
+	text-align:center;
+	padding-top: 0px;
+	border-radius: 1px;
+	overflow:hidden;
+				transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; 
+}
+
+
+.volume .range input{
+	writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 90px;
+    // padding: 0 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+	.left-menu .volume:hover{
+		& .range{top: -110px; bottom: 100%;padding-top: 12px;}	
+	}
+
+
+// .left-menu .volumebutton:hover{
+// 	& .
+// }
+
 
 
 
