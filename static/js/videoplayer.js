@@ -206,8 +206,11 @@ function inputGC(){
     alert("invalid giftcode");
 
   }else{
+    $('.premium-stream-locked').css("display", "none");
     $('.backstageBtn').attr("onclick", "clickVideo(1)");
-    $('.backstageBtn').html("Backstage Unlocked");
+    // $('.backstageBtn').html("Backstage Unlocked");
+    $('.backstageBtn .lock').css("display", "none");
+    $('.backstageBtn').css('padding-left', '10px');
     $('.gc-enter').hide();
     clickVideo(1);
     closeGCPrompt();
@@ -229,11 +232,11 @@ $('.fs-bar-wrapper').hover(
 
 function setStreamButton(ang){
   if(ang==1){
-    $('.mainBtn').addClass("main-stream");
-     $('.backstageBtn').removeClass("premium-stream");
+    $('.left-menu').addClass("main-stream");
+     $('.right-menu').removeClass("premium-stream");
   }else if(ang ==2){
-        $('.mainBtn').removeClass("main-stream");
-     $('.backstageBtn').addClass("premium-stream");
+        $('.left-menu').removeClass("main-stream");
+     $('.right-menu').addClass("premium-stream");
   }
 }
 

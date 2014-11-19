@@ -39,16 +39,17 @@
 
 .video-bar-wrapper {
   width: 100%;
-  height: 35px;
   position: absolute;
   left: 0;
   right: 0; }
 
 .video-title-wrapper {
-  top: 0; }
+  top: 0;
+  height: 35px; }
 
 .video-menu-wrapper {
-  bottom: 0; }
+  bottom: 0;
+  height: 50px; }
 
 .fs-menu, .fs-title {
   display: none; }
@@ -117,12 +118,17 @@
 .video-title .LOH-branding h5 {
   text-align: left;
   margin-bottom: 0;
-  display: inline-block; }
+  display: inline-block;
+  padding-right: 5px;
+  border-right: 1px solid rgba(21, 21, 21, 0.4);
+  line-height: 1.2; }
 
 .video-title .LOH-branding p {
+  padding-left: 5px;
   display: inline-block;
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1.2; }
 
 .video-title .inplay-branding {
   float: right; }
@@ -150,7 +156,7 @@
 
 .video-menu .half-menu {
   width: 50%;
-  height: 100%;
+  height: 50px;
   box-sizing: border-box; }
 
 .video-menu .left-menu {
@@ -167,7 +173,8 @@
 .video-menu .playbutton {
   color: white;
   cursor: pointer;
-  float: left; }
+  float: left;
+  font-size: 19px; }
 
 .video-menu .playbutton:hover {
   color: #358fe3; }
@@ -177,44 +184,71 @@
 
 .video-bar .btn {
   cursor: pointer;
-  height: 100%;
   width: 150px; }
 
 .video-bar .btn h1 {
   font-size: 15px;
+  line-height: 0.8;
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  font-family: "Helvetica Neue Light"; }
+
+.video-bar .btn h1 b {
+  font-family: "Helvetica Neue Medium"; }
 
 .video-bar .btn p {
   font-size: 10px;
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 0.8; }
 
 .video-menu .mainBtn {
   float: right;
   text-align: right;
   padding-right: 10px; }
 
-.main-stream {
-  background-image: -webkit-linear-gradient(right, #358fe3, #358fe3, rgba(53, 143, 227, 0)); }
-
-.premium-stream {
-  background-image: -webkit-linear-gradient(left, #4aaf39, #4aaf39, rgba(74, 175, 57, 0)); }
-
 .video-menu .backstageBtn {
   float: left;
   text-align: left;
-  padding-left: 10px; }
+  padding-left: 30px; }
+
+.video-menu .backstageBtn .lock {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 120px;
+  line-height: 0.8; }
+
+.video-menu .backstageBtn .lock .fa-lock {
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
 
 .video-menu .donateBtn {
   float: right;
   text-align: right; }
 
-.full-screen .csBtn {
-  display: inline-block; }
+.video-menu .donateBtn h1 {
+  font-family: "Oswald"; }
 
-.full-screen .cs-hidden {
-  display: none !important; }
+.main-stream {
+  background-image: -webkit-linear-gradient(right, #358fe3, #358fe3, rgba(53, 143, 227, 0.2), rgba(53, 143, 227, 0), rgba(53, 143, 227, 0)); }
+
+.premium-stream {
+  background-image: -webkit-linear-gradient(left, #4aaf39, #4aaf39, rgba(74, 175, 57, 0.2), rgba(74, 175, 57, 0), rgba(74, 175, 57, 0)); }
+
+.premium-stream-locked {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
+.premium-stream-locked img {
+  height: 100%;
+  width: 60%;
+  float: left; }
 
 .gc-prompt {
   position: absolute;
