@@ -149,23 +149,25 @@ playerWrapper: '.video-player',
 
 
 function togglePlayButton(event){
-  // if(event.type=="playing"){
-  //   $('.playbutton').removeClass('fa-play');
-  //   $('.playbutton').addClass('fa-pause');
-  // }else{
-  //   $('.playbutton').removeClass('fa-pause');
-  //   $('.playbutton').addClass('fa-play');
-  // }
-
-   if(event.type=="playing"){
-    $('.playbutton').removeClass('play');
-    $('.playbutton').addClass('pause');
+  if(event.type=="playing"){
+    $('.playbutton').removeClass('fa-play');
+    $('.playbutton').addClass('fa-pause');
   }else{
-    $('.playbutton').removeClass('pause');
-    $('.playbutton').addClass('play');
+    $('.playbutton').removeClass('fa-pause');
+    $('.playbutton').addClass('fa-play');
   }
 
+  //  if(event.type=="playing"){
+  //   $('.playbutton').removeClass('play');
+  //   $('.playbutton').addClass('pause');
+  // }else{
+  //   $('.playbutton').removeClass('pause');
+  //   $('.playbutton').addClass('play');
+  // }
+
 }
+
+
 
 function playPause(){
  if(amp.getPaused()){
