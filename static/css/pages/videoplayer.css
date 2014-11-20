@@ -124,9 +124,7 @@
 
 .video-menu {
   top: 100%;
-  bottom: -100%;
-  top: 0;
-  bottom: 0; }
+  bottom: -100%; }
 
 .video-player:not(.full-screen):hover .video-bar {
   bottom: 0;
