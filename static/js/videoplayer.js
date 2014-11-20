@@ -261,6 +261,12 @@ $(document).ready(function() {
   $('.backstageBtn').attr("onclick", "clickVideo(1)");
 }
 
+if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0){
+  $("#crowdsurfing-wrapper").addClass("ie");
+  $(".volume .range input").addClass("ie");
+}
+
+
 setStreamButton(angle);
 
 
@@ -338,6 +344,11 @@ document.addEventListener(
           // CrowdSurfing has been minimized
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "maximizeCSWidget") {
           // CrowdSurfing has been maximized
+        } else if(param.data[0] === 'fullScreen' && $("body").hasClass("full-screen")){
+
+            updateFSButton(false);
+        }else if(param.data[0] === 'fullScreen' && !$("body").hasClass("full-screen")){
+            updateFSButton(true);
         }
     },
     false

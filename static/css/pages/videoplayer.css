@@ -41,10 +41,10 @@
   -moz-transition-delay: 1.5s;
   -o-transition-delay: 1.5s; }
 
-.full-screen #crowdsurfing-wrapper {
+.full-screen #crowdsurfing-wrapper:not(.ie) {
   opacity: 0.15; }
 
-#crowdsurfing-wrapper:hover {
+.full-screen #crowdsurfing-wrapper:hover:not(.ie) {
   opacity: 1;
   -webkit-transition-delay: 0s;
   /* Safari */
@@ -124,7 +124,9 @@
 
 .video-menu {
   top: 100%;
-  bottom: -100%; }
+  bottom: -100%;
+  top: 0;
+  bottom: 0; }
 
 .video-player:not(.full-screen):hover .video-bar {
   bottom: 0;
@@ -200,7 +202,7 @@
   left: 0; }
 
 .video-menu .right-menu {
-  right: 0; }
+  left: 50%; }
 
 .left-menu i {
   color: #333333;
@@ -257,6 +259,34 @@
   height: 90px;
   margin-left: auto;
   margin-right: auto; }
+
+.volume .range input.ie {
+  width: 18px;
+  padding-left: 6px; }
+
+.volume .range input.ie::-ms-track {
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 0px 6px;
+  /*remove default tick marks*/
+  color: transparent; }
+
+.volume .range input.ie::-ms-fill-lower {
+  background: #333333;
+  border-radius: 5px; }
+
+.volume .range input.ie::-ms-fill-upper {
+  background: #333333;
+  border-radius: 10px; }
+
+.volume .range input.ie::-ms-thumb {
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: white; }
 
 .left-menu .volume:hover .range {
   top: -110px;
@@ -337,7 +367,8 @@
 .premium-stream-locked img {
   height: 100%;
   width: 60%;
-  float: left; }
+  float: left;
+  position: relative; }
 
 .gc-prompt {
   position: absolute;
