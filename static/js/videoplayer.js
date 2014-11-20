@@ -266,6 +266,8 @@ if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent
   $(".volume .range input").addClass("ie");
 }
 
+$('.gc-text').watermark("paste premium code here");
+
 
 setStreamButton(angle);
 
@@ -274,24 +276,23 @@ setStreamButton(angle);
 
 
 function gcPrompt(){
-  $('.gc-prompt').show();
+  $('.gc-prompt-wrapper').css("display", "table");
 }
 function closeGCPrompt(){
-  $('.gc-prompt').hide();
+  $('.gc-prompt-wrapper').css("display", "none");
 }
 
 function inputGC(){
   giftcode = $('.gc-text').val();
-  if(!(giftcode && giftcode !="")){
-    alert("invalid giftcode");
-
+  if(!(giftcode && giftcode !="") || giftcode=="test"){
+    $('.gc-prompt p.error').show();
   }else{
     $('.premium-stream-locked').css("display", "none");
     $('.backstageBtn').attr("onclick", "clickVideo(1)");
     // $('.backstageBtn').html("Backstage Unlocked");
     $('.backstageBtn .lock').css("display", "none");
     $('.backstageBtn').css('padding-left', '10px');
-    $('.gc-enter').hide();
+    $('.gc-enter-wrapper').css('display', 'none');
     $('.backstageBtn.withpngs').addClass('unlocked');
     clickVideo(1);
     closeGCPrompt();

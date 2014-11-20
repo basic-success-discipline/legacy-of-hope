@@ -368,31 +368,50 @@
   float: left;
   position: relative; }
 
-.gc-prompt {
+.gc-prompt-wrapper {
   position: absolute;
-  background-color: rgba(21, 21, 21, 0.8);
-  bottom: 100%;
-  width: 100%;
-  top: -40px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
   display: none; }
+
+.gc-prompt {
+  background-color: rgba(59, 59, 59, 0.9);
+  padding: 25px 25px 25px 25px;
+  border-radius: 10px;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  position: relative; }
+
+.gc-prompt .fa-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px; }
 
 .gc-prompt p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-top: 0;
   padding-bottom: 0;
   color: white;
-  display: inline-block; }
+  display: inline-block;
+  font-size: 14px;
+  text-align: justify; }
+
+.gc-prompt p.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 0;
+  display: none; }
 
 .submit-gc-btn {
-  display: inline-block; }
-
-.gc-enter p {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: white;
   display: inline-block; }
 
 .gc-text {
@@ -400,7 +419,35 @@
   -khtml-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
-  user-select: text; }
+  user-select: text;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 8px; }
+
+.gc-prompt .submit-gc-btn {
+  background-color: #358fe3;
+  padding: 10px;
+  padding-top: 5px;
+  margin-top: 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  color: white;
+  cursor: pointer; }
+
+.gc-prompt .submit-gc-btn:hover {
+  background-color: #4aae39; }
+
+.gc-prompt .submit-gc-btn p {
+  margin-bottom: 0;
+  line-height: 1; }
 
 .playerimg1 {
   padding-top: 0px;
