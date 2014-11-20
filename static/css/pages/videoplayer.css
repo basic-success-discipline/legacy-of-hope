@@ -207,7 +207,7 @@
   padding-right: 10px; }
 
 .left-menu i {
-  color: white;
+  color: #333333;
   cursor: pointer;
   float: left;
   font-size: 19px;
@@ -326,10 +326,10 @@
   background-image: -o-linear-gradient(right, #358fe3, #358fe3, rgba(53, 143, 227, 0.2), rgba(53, 143, 227, 0), rgba(53, 143, 227, 0)); }
 
 .premium-stream {
-  background-image: -webkit-linear-gradient(left, #4aaf39, #4aaf39, rgba(74, 175, 57, 0.2), rgba(74, 175, 57, 0), rgba(74, 175, 57, 0));
-  background-image: -moz-linear-gradient(left, #4aaf39, #4aaf39, rgba(74, 175, 57, 0.2), rgba(74, 175, 57, 0), rgba(74, 175, 57, 0));
-  background-image: -ms-linear-gradient(left, #4aaf39, #4aaf39, rgba(74, 175, 57, 0.2), rgba(74, 175, 57, 0), rgba(74, 175, 57, 0));
-  background-image: -o-linear-gradient(left, #4aaf39, #4aaf39, rgba(74, 175, 57, 0.2), rgba(74, 175, 57, 0), rgba(74, 175, 57, 0)); }
+  background-image: -webkit-linear-gradient(left, #358fe3, #358fe3, rgba(53, 143, 227, 0.2), rgba(53, 143, 227, 0), rgba(53, 143, 227, 0));
+  background-image: -moz-linear-gradient(left, #358fe3, #358fe3, rgba(53, 143, 227, 0.2), rgba(53, 143, 227, 0), rgba(53, 143, 227, 0));
+  background-image: -ms-linear-gradient(left, #358fe3, #358fe3, rgba(53, 143, 227, 0.2), rgba(53, 143, 227, 0), rgba(53, 143, 227, 0));
+  background-image: -o-linear-gradient(left, #358fe3, #358fe3, rgba(53, 143, 227, 0.2), rgba(53, 143, 227, 0), rgba(53, 143, 227, 0)); }
 
 .premium-stream-locked {
   position: absolute;
@@ -376,3 +376,48 @@
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text; }
+
+.playerimg1 {
+  padding-top: 3px;
+  height: 25px; }
+
+.playerimg2 {
+  padding-top: 6px;
+  height: 22px;
+  float: right; }
+
+.playerimg5 {
+  height: 30px; }
+
+.backstageBtn.withpngs {
+  padding-left: 10px;
+  width: auto; }
+
+.playerimg6 {
+  height: 30px;
+  display: inline-block; }
+
+.playerimg7 {
+  height: 30px;
+  display: inline-block; }
+
+.backstageBtn.withpngs.unlocked .playerimg6 {
+  display: none; }
+
+img.playbutton {
+  height: 25px;
+  padding-left: 15px;
+  cursor: pointer; }
+
+img.playbutton.play {
+  content: url("../../img/player9.png"); }
+
+img.playbutton.play:hover {
+  content: url("../../img/player8.png"); }
+
+img.playbutton.pause {
+  content: url("../../img/player3.png");
+  height: 20px; }
+
+img.playbutton.pause:hover {
+  content: url("../../img/player4.png"); }

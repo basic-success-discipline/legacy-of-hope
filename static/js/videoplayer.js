@@ -149,12 +149,20 @@ playerWrapper: '.video-player',
 
 
 function togglePlayButton(event){
-  if(event.type=="playing"){
-    $('.playbutton').removeClass('fa-play');
-    $('.playbutton').addClass('fa-pause');
+  // if(event.type=="playing"){
+  //   $('.playbutton').removeClass('fa-play');
+  //   $('.playbutton').addClass('fa-pause');
+  // }else{
+  //   $('.playbutton').removeClass('fa-pause');
+  //   $('.playbutton').addClass('fa-play');
+  // }
+
+   if(event.type=="playing"){
+    $('.playbutton').removeClass('play');
+    $('.playbutton').addClass('pause');
   }else{
-    $('.playbutton').removeClass('fa-pause');
-    $('.playbutton').addClass('fa-play');
+    $('.playbutton').removeClass('pause');
+    $('.playbutton').addClass('play');
   }
 
 }
@@ -276,6 +284,7 @@ function inputGC(){
     $('.backstageBtn .lock').css("display", "none");
     $('.backstageBtn').css('padding-left', '10px');
     $('.gc-enter').hide();
+    $('.backstageBtn.withpngs').addClass('unlocked');
     clickVideo(1);
     closeGCPrompt();
   }
