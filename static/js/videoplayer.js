@@ -387,7 +387,7 @@ document.addEventListener(
 
 
 
-
+document.addEventListener('CrowdSurfingControlEvent',function checkIfIsInFullScreen(param) {console.warn(param);},false);
 
 
 $(".gc-text").mouseup(function(e){
