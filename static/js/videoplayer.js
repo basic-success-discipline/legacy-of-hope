@@ -274,12 +274,35 @@ setStreamButton(angle);
 
 });
 
-
+function updateGCPrompt(fs){
+  if(fs){
+    if($('.gc-prompt-wrapper').is(':visible')){
+      $('.gc-prompt-wrapper').css('display', 'none');
+      $('.fs-gc-prompt').css('display', 'table');
+    }
+  }
+  else{
+    if($('.fs-gc-prompt').is(':visible')){
+      $('.gc-prompt-wrapper').css('display', 'table');
+      $('.fs-gc-prompt').css('display', 'none');
+    }
+  }
+}
 function gcPrompt(){
-  $('.gc-prompt-wrapper').css("display", "table");
+  if($("body").hasClass("full-screen")){
+    $('.fs-gc-prompt').css("display", "table");
+  }else{
+
+  $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "table");
+  }
 }
 function closeGCPrompt(){
-  $('.gc-prompt-wrapper').css("display", "none");
+ if($("body").hasClass("full-screen")){
+    $('.fs-gc-prompt').css("display", "none");
+  }else{
+
+  $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "none");
+  }
 }
 
 function inputGC(){
@@ -338,9 +361,11 @@ document.addEventListener(
         if (param.data[0] === 'fullScreen' && param.data[1] === true) {
             
             updateFSButton(true);
+            updateGCPrompt(true);
         } else if (param.data[0] === 'fullScreen' && param.data[1] === false) {
            
             updateFSButton(false);
+            updateGCPrompt(false);
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
           // CrowdSurfing has been minimized
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "maximizeCSWidget") {
@@ -348,8 +373,10 @@ document.addEventListener(
         } else if(param.data[0] === 'fullScreen' && $("body").hasClass("full-screen")){
 
             updateFSButton(false);
+            updateGCPrompt(false);
         }else if(param.data[0] === 'fullScreen' && !$("body").hasClass("full-screen")){
             updateFSButton(true);
+            updateGCPrompt(true);
         }
     },
     false

@@ -99,16 +99,21 @@ $video-menu-bar-height: 50px;
 	bottom: 0;
 	height: $video-menu-bar-height;
 }
-.fs-menu, .fs-title{
+.fs-menu, .fs-title, .fs-gc-prompt{
 	display:none;
 }
-.full-screen .video-menu-wrapper, .full-screen .video-title-wrapper{
+.full-screen .video-menu-wrapper, .full-screen .video-title-wrapper, .full-screen .gc-prompt-wrapper{
 	display:none;
 
 }
-.full-screen .fs-menu, .full-screen .fs-title{
+.full-screen .fs-menu, .full-screen .fs-title {
 	display: inline-block;
 }
+
+.fs-gc-prompt{
+	z-index: 1;
+}
+
 
 .fs-bar-wrapper{
 	z-index: 10;
@@ -527,6 +532,8 @@ $video-menu-bar-height: 50px;
 	text-align:justify;
 }
 
+
+
 .gc-prompt p.error{
 	color: red;
 	text-align:center;
@@ -575,6 +582,17 @@ cursor: pointer;
 .gc-prompt .submit-gc-btn p{
 	margin-bottom: 0;
 	line-height: 1;
+}
+
+
+.fs-gc-prompt .gc-prompt{
+	width: 400px;
+}
+
+
+.fs-gc-prompt .gc-prompt p{
+	font-size: 16px;
+	margin-bottom: 0;
 }
 
 
