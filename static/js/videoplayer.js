@@ -367,8 +367,11 @@ document.addEventListener(
             updateFSButton(false);
             updateGCPrompt(false);
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
+          alert("minimized");
+          $(".fs-menu").removeClass("cs-expanded");
           // CrowdSurfing has been minimized
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "maximizeCSWidget") {
+          $(".fs-menu").addClass("cs-expanded");
           // CrowdSurfing has been maximized
         } else if(param.data[0] === 'fullScreen' && $("body").hasClass("full-screen")){
 
