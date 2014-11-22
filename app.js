@@ -18,7 +18,7 @@ var env = process.env.NODE_ENV || 'development';
 
 
 
-// app.disable('etag');
+var oneDay = 86400000;  // cache-control
 
 
 // view engine setup
@@ -31,7 +31,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'static')));
+
+
+app.use(express.static(path.join(__dirname, 'static'), { maxAge: oneDay }));
 
 
 
