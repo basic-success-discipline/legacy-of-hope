@@ -39,7 +39,7 @@
     {
       autoplay: true,
       title: "Demo Live Stream",
-      poster: '/akamai/resources/images/bunny.jpg',
+      // poster: '/akamai/resources/eventmanagement/waiting_slate.png',
       temporalType: "live",
       controls: {
         mode: "none"
@@ -271,6 +271,8 @@ if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent
 
 $('.gc-text').watermark("paste premium code here");
 
+ document.querySelector('body').webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+
 
 setStreamButton(angle);
 
@@ -310,6 +312,24 @@ function closeGCPrompt(){
 
 function inputGC(){
   giftcode = $('.gc-text').val();
+  if(!(giftcode && giftcode !="") || giftcode=="test"){
+    $('.gc-prompt p.error').show();
+  }else{
+    $('.premium-stream-locked').css("display", "none");
+    $('.backstageBtn').attr("onclick", "clickVideo(1)");
+    // $('.backstageBtn').html("Backstage Unlocked");
+    $('.backstageBtn .lock').css("display", "none");
+    $('.backstageBtn').css('padding-left', '10px');
+    $('.gc-enter-wrapper').css('display', 'none');
+    $('.backstageBtn.withpngs').addClass('unlocked');
+    clickVideo(1);
+    closeGCPrompt();
+  }
+}
+
+
+function inputFSGC(){
+  giftcode = $('.fs-gc-text').val();
   if(!(giftcode && giftcode !="") || giftcode=="test"){
     $('.gc-prompt p.error').show();
   }else{
