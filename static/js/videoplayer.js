@@ -103,10 +103,13 @@ function loadHandler(event)
 
 function readyHandler(event)
 {
-
 // $('.akamai-video object').attr('wmode', 'transparent');
 amp.addEventListener("ended", endedHandler);
-loadVideo(0);
+if(angle==0){
+  loadVideo(0);
+}else{
+  loadVideo(angle-1);
+}
 volume = amp.getVolume()*vfactor;
 if(volume ==0){
   mute();
@@ -157,7 +160,17 @@ function togglePlayButton(event){
     $('.playbutton').addClass('fa-play');
   }
 
+  //  if(event.type=="playing"){
+  //   $('.playbutton').removeClass('play');
+  //   $('.playbutton').addClass('pause');
+  // }else{
+  //   $('.playbutton').removeClass('pause');
+  //   $('.playbutton').addClass('play');
+  // }
+
 }
+
+
 
 function playPause(){
  if(amp.getPaused()){
@@ -251,31 +264,62 @@ $(document).ready(function() {
   $('.backstageBtn').attr("onclick", "clickVideo(1)");
 }
 
+if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0){
+  $("#crowdsurfing-wrapper").addClass("ie");
+  $(".volume .range input").addClass("ie");
+}
+
+$('.gc-text').watermark("paste premium code here");
+
+
 setStreamButton(angle);
 
 
 });
 
-
+function updateGCPrompt(fs){
+  if(fs){
+    if($('.gc-prompt-wrapper').is(':visible')){
+      $('.gc-prompt-wrapper').css('display', 'none');
+      $('.fs-gc-prompt').css('display', 'table');
+    }
+  }
+  else{
+    if($('.fs-gc-prompt').is(':visible')){
+      $('.gc-prompt-wrapper').css('display', 'table');
+      $('.fs-gc-prompt').css('display', 'none');
+    }
+  }
+}
 function gcPrompt(){
-  $('.gc-prompt').show();
+  if($("body").hasClass("full-screen")){
+    $('.fs-gc-prompt').css("display", "table");
+  }else{
+
+  $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "table");
+  }
 }
 function closeGCPrompt(){
-  $('.gc-prompt').hide();
+ if($("body").hasClass("full-screen")){
+    $('.fs-gc-prompt').css("display", "none");
+  }else{
+
+  $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "none");
+  }
 }
 
 function inputGC(){
   giftcode = $('.gc-text').val();
-  if(!(giftcode && giftcode !="")){
-    alert("invalid giftcode");
-
+  if(!(giftcode && giftcode !="") || giftcode=="test"){
+    $('.gc-prompt p.error').show();
   }else{
     $('.premium-stream-locked').css("display", "none");
     $('.backstageBtn').attr("onclick", "clickVideo(1)");
     // $('.backstageBtn').html("Backstage Unlocked");
     $('.backstageBtn .lock').css("display", "none");
     $('.backstageBtn').css('padding-left', '10px');
-    $('.gc-enter').hide();
+    $('.gc-enter-wrapper').css('display', 'none');
+    $('.backstageBtn.withpngs').addClass('unlocked');
     clickVideo(1);
     closeGCPrompt();
   }
@@ -320,13 +364,25 @@ document.addEventListener(
         if (param.data[0] === 'fullScreen' && param.data[1] === true) {
             
             updateFSButton(true);
+            updateGCPrompt(true);
         } else if (param.data[0] === 'fullScreen' && param.data[1] === false) {
            
             updateFSButton(false);
+            updateGCPrompt(false);
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
+          alert("minimized");
+          $(".fs-menu").removeClass("cs-expanded");
           // CrowdSurfing has been minimized
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "maximizeCSWidget") {
+          $(".fs-menu").addClass("cs-expanded");
           // CrowdSurfing has been maximized
+        } else if(param.data[0] === 'fullScreen' && $("body").hasClass("full-screen")){
+
+            updateFSButton(false);
+            updateGCPrompt(false);
+        }else if(param.data[0] === 'fullScreen' && !$("body").hasClass("full-screen")){
+            updateFSButton(true);
+            updateGCPrompt(true);
         }
     },
     false
@@ -334,7 +390,7 @@ document.addEventListener(
 
 
 
-
+document.addEventListener('CrowdSurfingControlEvent',function checkIfIsInFullScreen(param) {console.warn(param);},false);
 
 
 $(".gc-text").mouseup(function(e){
