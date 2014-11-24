@@ -103,10 +103,13 @@ function loadHandler(event)
 
 function readyHandler(event)
 {
-
 // $('.akamai-video object').attr('wmode', 'transparent');
 amp.addEventListener("ended", endedHandler);
-loadVideo(0);
+if(angle==0){
+  loadVideo(0);
+}else{
+  loadVideo(angle-1);
+}
 volume = amp.getVolume()*vfactor;
 if(volume ==0){
   mute();
