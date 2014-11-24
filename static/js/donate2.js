@@ -7,11 +7,20 @@ $('.donatepage .step1 .buttons .button').click(function(){
 });
 
 
+var ccamount = $('input[name="ccamount"]');
 var ccnumber = $('input[name="ccnumber"]');
 var ccfname = $('input[name="ccfirst-name"]');
 var cclname = $('input[name="cclast-name"]');
 var ccexpiry = $('input[name="ccexpiry"]');
 var cccvc = $('input[name="cccvc"]');
+
+var vamount = $('.vamount');
+var vnumber = $('.vnumber');
+var vfname = $('.vfname');
+var vlname = $('.vlname');
+var vexpiry = $('.vexpiry');
+var vcvc = $('.vcvc');
+
 
 $('.active form').card({
   container: '.card-wrapper',
@@ -31,29 +40,77 @@ cccvc.payment('formatCardCVC');
 
 var submitCC =  function(){
 
+$('.validate').hide();
+var valid = validateCC();
+
+  if(valid){
+    alert("all good brother!");
+  }
+ return false;
+}
 
 
+
+
+
+var validateCC =  function(){
+  var valid = true;
+
+
+  alert(ccamount.val());
+   if( !ccamount.val() || ccamount.val() == "" || !(isNumeric(ccamount.val()))){
+    valid=false;
+      vamount.html("You must enter how much you would like to donate");
+      vamount.show();
+  }
+
+
+
+  
   var validnum = $.payment.validateCardNumber(ccnumber.val());
   if (!validnum) {
-    alert('Your card number is not valid!');
-  }else{
-    alert($.payment.cardType(ccnumber.val()));
-    // alert('Your card number is totally valid homie!');
+    valid=false;
+    vnumber.html("You must enter a valid credit card number.");
+    vnumber.show();
   }
 
-   var validexpiry = $.payment.validateCardExpiry(ccexpiry.val().split("/")[0].trim(),ccexpiry.val().split("/")[1].trim() );
-  if (!validexpiry) {
-    alert('Your card expiry is not valid!');
-  }else{
-    alert('Your card expiry is totally valid homie!');
+
+  if( !ccfname.val() || ccfname.val() == ""){
+    valid=false;
+      vfname.html("You must enter your first name.");
+      vfname.show();
   }
 
-   var validcvc = $.payment.validateCardCVC(cccvc.val());
+   if( !cclname.val() || cclname.val() == ""){
+    valid=false;
+      vlname.html("You must enter your last name.");
+      vlname.show();
+  }
+
+  if (ccexpiry.val().split("/").length == 2){
+    var validexpiry = $.payment.validateCardExpiry(ccexpiry.val().split("/")[0].trim(),ccexpiry.val().split("/")[1].trim() );
+    if (!validexpiry) {
+      valid=false;
+      vexpiry.html("You must enter a valid expiration year.");
+      vexpiry.show();
+    }
+  }else{
+      valid=false;
+      vexpiry.html("You must enter a valid expiration year.");
+      vexpiry.show();
+  }
+
+  var validcvc = $.payment.validateCardCVC(cccvc.val());
   if (!validcvc) {
-    alert('Your card cvc is not valid!');
-  }else{
-    alert('Your card cvc  is totally valid homie!');
+    valid=false;
+    vcvc.html("You must enter a valid CVC code.");
+    vcvc.show();
   }
 
-    return false;
+  return valid;
+
 }
+
+
+
+

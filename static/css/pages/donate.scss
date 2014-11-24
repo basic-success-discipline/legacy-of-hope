@@ -132,10 +132,28 @@
 	text-align:center;
 }
 
+.step3 form{
+	margin-top: 30px;
+}
 form div{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.validate{
+	display: none;
 }
 
 
