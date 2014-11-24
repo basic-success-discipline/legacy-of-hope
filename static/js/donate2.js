@@ -7,6 +7,7 @@ $('.donatepage .step1 .buttons .button').click(function(){
 });
 
 
+
 var ccamount = $('input[name="ccamount"]');
 var ccnumber = $('input[name="ccnumber"]');
 var ccfname = $('input[name="ccfirst-name"]');
@@ -14,12 +15,13 @@ var cclname = $('input[name="cclast-name"]');
 var ccexpiry = $('input[name="ccexpiry"]');
 var cccvc = $('input[name="cccvc"]');
 
-var vamount = $('.vamount');
-var vnumber = $('.vnumber');
-var vfname = $('.vfname');
-var vlname = $('.vlname');
-var vexpiry = $('.vexpiry');
-var vcvc = $('.vcvc');
+
+var vamount = $('.vamount p');
+var vnumber = $('.vnumber p');
+var vfname = $('.vfname p');
+var vlname = $('.vlname p');
+var vexpiry = $('.vexpiry p');
+var vcvc = $('.vcvc p');
 
 
 $('.active form').card({
@@ -40,7 +42,6 @@ cccvc.payment('formatCardCVC');
 
 var submitCC =  function(){
 
-$('.validate').hide();
 var valid = validateCC();
 
   if(valid){
@@ -54,14 +55,16 @@ var valid = validateCC();
 
 
 var validateCC =  function(){
+  
+$('.validate-container').hide();
+$('.validate p').html("");
+
   var valid = true;
 
 
-  alert(ccamount.val());
    if( !ccamount.val() || ccamount.val() == "" || !(isNumeric(ccamount.val()))){
     valid=false;
       vamount.html("You must enter how much you would like to donate");
-      vamount.show();
   }
 
 
@@ -71,20 +74,17 @@ var validateCC =  function(){
   if (!validnum) {
     valid=false;
     vnumber.html("You must enter a valid credit card number.");
-    vnumber.show();
   }
 
 
   if( !ccfname.val() || ccfname.val() == ""){
     valid=false;
       vfname.html("You must enter your first name.");
-      vfname.show();
   }
 
    if( !cclname.val() || cclname.val() == ""){
     valid=false;
       vlname.html("You must enter your last name.");
-      vlname.show();
   }
 
   if (ccexpiry.val().split("/").length == 2){
@@ -92,19 +92,25 @@ var validateCC =  function(){
     if (!validexpiry) {
       valid=false;
       vexpiry.html("You must enter a valid expiration year.");
-      vexpiry.show();
     }
   }else{
       valid=false;
       vexpiry.html("You must enter a valid expiration year.");
-      vexpiry.show();
   }
 
   var validcvc = $.payment.validateCardCVC(cccvc.val());
   if (!validcvc) {
     valid=false;
     vcvc.html("You must enter a valid CVC code.");
-    vcvc.show();
+  }
+
+  if(!valid){
+    $('.validate-container').show();
+     $('.form-container').removeClass('six');
+     // $('.card-container').removeClass('six');
+       $('.form-container').addClass('three');
+     // $('.card-container').addClass('four');
+
   }
 
   return valid;

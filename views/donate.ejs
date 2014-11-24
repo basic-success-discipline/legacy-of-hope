@@ -57,19 +57,29 @@
 
 
           <div class="step3">
-           <div class="twelve columns">
+           <div class="six columns ccard-container">
              <div class="card-wrapper"></div>
-             <div class="form-container active">
+             </div>
+             <div class="six columns form-container active">
+             
               <form onsubmit="return submitCC()">
-                <div><input placeholder="Amount" type="text" name="ccamount"><span class="validate vamount">Validate</span></div>
-                <div><input placeholder="Card number" type="text" name="ccnumber"><span class="validate vnumber">Validate</span></div>
-                 <div><input placeholder="First name"type="text" name="ccfirst-name"/><span class="validate vfname">Validate</span></div>
-                 <div><input placeholder="Last name" type="text" name="cclast-name"/><span class="validate vlname">Validate</span></div>
-                 <div><input placeholder="MM/YY" type="text" name="ccexpiry"><span class="validate vexpiry">Validate</span></div>
-                 <div><input placeholder="CVC" type="text" name="cccvc"><span class="validate vcvc">Validate</span></div>
-                <div> <input type="submit" value="Submit"><span class="validate vsubmit">Validate</span></div>
+                <input placeholder="Amount" type="text" name="ccamount">
+                <input placeholder="Card number" type="text" name="ccnumber">
+                <input placeholder="First name"type="text" name="ccfirst-name"/>
+                <input placeholder="Last name" type="text" name="cclast-name"/>
+                <input placeholder="MM/YY" type="text" name="ccexpiry">
+                <input placeholder="CVC" type="text" name="cccvc">
+                <input type="submit" value="Submit">
               </form>
-            </div>
+          </div>
+          <div class="three colums validate-container">
+            <div class="validate vamount"><p></p></div>
+            <div class="validate vnumber"><p></p></div>
+            <div class="validate vfname"><p></p></div>
+            <div class="validate vlname"><p></p></div>
+            <div class="validate vexpiry"><p></p></div>
+            <div class="validate vcvc"><p></p></div>
+            <div class="validate vsubmit"><p></p></div>
           </div>
           <hr>
         </div>

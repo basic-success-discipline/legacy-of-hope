@@ -89,13 +89,19 @@
   text-align: center; }
 
 .step3 form {
-  margin-top: 30px; }
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
 
-form div {
+form input {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  max-width: 300px;
+  width: 100%;
+  height: 21px;
+  text-align: left; }
 
 input[type="text"] {
   font-size: 18px;
@@ -106,8 +112,22 @@ input[type="text"] {
 input[type="text"]:focus {
   outline: none; }
 
-.validate {
+.validate-container {
   display: none; }
+
+.validate {
+  height: 37px;
+  box-sizing: border-box;
+  padding-top: 5px;
+  margin-left: 10px; }
+
+.donatepage .top .validate p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  line-height: 1;
+  font-size: 12px;
+  color: red; }
 
 .prefooter {
   display: none; }
@@ -128,8 +148,8 @@ input[type="text"]:focus {
   .donatepage .top h1 {
     text-align: center; }
 
-  .card-wrapper {
-    margin-left: -6.5px; } }
+  .ccard-container {
+    display: none !important; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .nav .currentpage {
     padding-right: 8px; }
