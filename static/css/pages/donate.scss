@@ -118,7 +118,7 @@
 }
 
 
-.step2{
+.step2, .step3{
 		transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
@@ -127,6 +127,19 @@
 	overflow: hidden;
 	padding-top: 50px;
 }
+
+.step3{
+	text-align:center;
+}
+
+form div{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
 
 // STICKY FOOTER
 
@@ -140,7 +153,6 @@
 
 .wrapper-inner{
 	margin-bottom: -$foot-height !important;
-
 }
 
 
@@ -160,6 +172,10 @@ and (max-width: $phone-landscape - 1px)  {
 }
 .donatepage .top h1{
 	text-align: center;
+}
+
+.card-wrapper{
+	margin-left: -6.5px;
 }
 
 }

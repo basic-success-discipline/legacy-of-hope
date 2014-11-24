@@ -7,6 +7,8 @@
 
 
   <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="/css/ccard.css" media="screen" type="text/css" >
+
 
 </head>
 
@@ -24,50 +26,76 @@
             </div>
 
             <div class="step1">
-            <!-- <h2>Legacy<em>Of</em>Hope</h2> -->
-            <div class="eight columns">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="buttons four columns">
-              <p>Paypal & credit card</p>
-              <div class="button option1" amount="5"><h5>$5</h5></div>
-              <div class="button option2" amount="50"><h5>$50</h5></div>
-              <div class="button option3" amount="other"><h5>Other amount</h5></div>
-            </div>
-            <hr>
+              <!-- <h2>Legacy<em>Of</em>Hope</h2> -->
+              <div class="eight columns">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="buttons four columns">
+                <p>Paypal & credit card</p>
+                <div class="button option1" amount="5"><h5>$5</h5></div>
+                <div class="button option2" amount="50"><h5>$50</h5></div>
+                <div class="button option3" amount="other"><h5>Other amount</h5></div>
+              </div>
+              <hr>
             </div>
 
             <div class="step2">
 
-            <div class="heading twelve columns">
-            <h3 class="donatevia"></h3>
-            </div>
-            <div class ="six columns paypal">
+              <div class="heading twelve columns">
+                <h3 class="donatevia">Donate via</h3>
+              </div>
+              <div class ="six columns paypal">
                <div class="button paypaloption"><h5>Paypal</h5></div>
-            </div>
+             </div>
              <div class ="six columns cc">
               <div class="button ccoption"><h5>Credit/Debit</h5></div>
             </div>
             <hr>
-            </div>
-
-
-
-
-
-
-            <script type='text/javascript' src="/js/donate2.js"></script>
           </div>
 
-          <p class="textcode">Or text <b><em>Mandela</em></b> to 50555 to donate $10 via text message</p>
 
 
-          <div class="push"></div>
+
+          <div class="step3">
+           <div class="twelve columns">
+             <div class="card-wrapper"></div>
+             <div class="form-container active">
+              <form onsubmit="return submitCC()">
+
+                <div><input placeholder="Amount" type="text" name="ccamount"><span>Validate</span></div>
+                <div><input placeholder="Card number" type="text" name="ccnumber"><span>Validate</span></div>
+                 <div><input placeholder="First name"type="text" name="ccfirst-name"/><span>Validate</span></div>
+                 <div><input placeholder="Last name" type="text" name="cclast-name"/><span>Validate</span></div>
+                 <div><input placeholder="MM/YY" type="text" name="ccexpiry"><span>Validate</span></div>
+                 <div><input placeholder="CVC" type="text" name="cccvc"><span>Validate</span></div>
+                <div> <input type="submit" value="Submit"><span>Validate</span></div>
+              </form>
+            </div>
+          </div>
+          <hr>
         </div>
-      </div>
-    </div>
-    <% include partials/loh-footer %>
 
+
+
+
+
+
+
+
+        
+      </div>
+      <script src="/js/ccard.js"></script>
+      <script type='text/javascript' src="/js/donate2.js"></script>
+
+
+
+
+      <div class="push"></div>
+    </div>
   </div>
+</div>
+<% include partials/loh-footer %>
+
+</div>
 </body>
 </html>
