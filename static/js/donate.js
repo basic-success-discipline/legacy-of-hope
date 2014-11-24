@@ -12,3 +12,9 @@ var showDonate = function(){
   $('.black-overlay').click(function(){
     $('.lb').hide(500, "swing");
    });
+
+
+
+  $('.donatepage .buttons .button').click(function(){
+  	alert("congratulations, you're a donor!");
+  });

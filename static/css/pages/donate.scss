@@ -40,6 +40,7 @@
 	margin-bottom: 0px;
 	margin-left: -2px;
 	margin-bottom: 5px;
+	// clear:right;
 
 
 }
@@ -62,137 +63,6 @@
 }
 
 
-.option{
-
-	background-color: $loh-gray;
-	  transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  position: relative;
-  height: 100%;
-  border-radius: 2px;
-  overflow: hidden;
-
-}
-
-.option .amount{
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
-
-	background-color: $loh-black;
-	background-image: -webkit-linear-gradient(bottom, $loh-black, rgb(60,60,60)); 
-    background-image:    -moz-linear-gradient(bottom, $loh-black, rgb(60,60,60));
-    background-image:     -ms-linear-gradient(bottom, $loh-black, rgb(60,60,60)); 
-    background-image:      -o-linear-gradient(bottom, $loh-black, rgb(60,60,60));
-}
-
-.option .amount h1{
-	color: white;
-	font-size: 20px;
-	margin-bottom: 15px;
-
-}
-
-.optionscontainer{
-	position: relative;
-	// height: 100%;
-	display: table;
-
-}
-	
-.option .amount h2{
-	color: white;
-	font-size: 40px;
-}
-
-.option .stats{
-	text-align: center;
-
-}
-
-
-
-.option .stats div{
-	position: relative;
-	height: 100%;
-	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.option .stats div:not(:last-child){
-
-	border-bottom: 1px solid rgba(21,21,21,0.2);
-	}
-
-.option .stats div:first-child{
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.option .stats p{
-	height: 100%;
-	margin-bottom: 0;
-	margin-top: 0;
-
-}
-
-.option .stats p i{
-	font-family: "Helvetica Neue Thin Italic";
-	}
-
-	.option .button{
-	background-color: $loh-blue;
-	}
-
-
-.container .columns{
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-.option:hover{
-
-	box-shadow: 0px 0px 5px #888888;
-	background-color: white;
-}
-
-.container .four.columns:nth-child(2){
-	margin-left: 30px;
-	margin-right: 30px;
-}
-.option:nth-child(2){
-	box-shadow: 0px 0px 5px #888888;
-	background-color: white;
-}
-
-.option:nth-child(2) .amount{
-	background-color: $loh-blue;
-	background-image: -webkit-linear-gradient(bottom, $loh-blue, rgb(117, 165, 236)); 
-    background-image:    -moz-linear-gradient(bottom, $loh-black, rgb(60,60,60));
-    background-image:     -ms-linear-gradient(bottom, $loh-black, rgb(60,60,60)); 
-    background-image:      -o-linear-gradient(bottom, $loh-black, rgb(60,60,60));
-}
-
-.option:nth-child(2) .donatebuttonholder button{
-	background-color: $loh-green;
-}
-
-.option:nth-child(2) .donatebuttonholder button:hover{
-  background-color: $loh-red;
-}
-
-
-
-
-.container .four.columns:not(:nth-child(2)){
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
 
 .textcode{
 	text-align: center;
@@ -205,6 +75,47 @@
 }
 
 
+.buttons{
+	// float:right;
+	// margin-top: 35px;
+	// margin-left: 20px;
+}
+
+.buttons p{
+	margin-top: 20px;
+	text-align:center;
+}
+.button{
+	width: 100%;
+	text-align: center;
+	padding: 10px 20px;
+	background-color: $loh-blue;
+	border-radius: 5px;
+	margin-bottom: 20px;
+		cursor: pointer;
+	transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+
+   box-shadow: 1px 1px 2px #888888; 
+}
+
+.button:hover{
+	background-color: $loh-green;
+}
+.button h5{
+	margin-bottom: 0;
+	color: white;
+	font-family: "Helvetica Neue Light";
+	text-transform: none;
+	line-height: 1;
+	padding-top: 5px;
+
+}
 
 
 // STICKY FOOTER
@@ -218,7 +129,7 @@
 }
 
 .wrapper-inner{
-	margin-bottom: -$foot-height;
+	margin-bottom: -$foot-height !important;
 
 }
 
@@ -231,19 +142,16 @@
 and (max-width: $phone-landscape - 1px)  {
 
 
-.option p{
-	text-align: center;
-}
-.container .four.columns:nth-child(2){
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
 .nav .currentpage{
 	padding-right: 8px;
 }
+.donatepage .top .heading{
+	text-align: center;
+}
+.donatepage .top h1{
+	text-align: center;
+}
+
 }
 
 
@@ -254,17 +162,15 @@ and (min-width: $phone-landscape)
 and (max-width: $tablet-portrait - 1px)  {
 
 
-.option p{
-	text-align: center;
-}
-.container .four.columns:nth-child(2){
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
 .nav .currentpage{
 	padding-right: 8px;
+}
+
+.donatepage .top .heading{
+	text-align: center;
+}
+.donatepage .top h1{
+	text-align: center;
 }
 
 }
@@ -281,6 +187,9 @@ and (max-width : $tablet-landscape - 1px) {
 .nav .currentpage{
 	padding-right: 8px;
 }
+
+
+
 	
 
 
