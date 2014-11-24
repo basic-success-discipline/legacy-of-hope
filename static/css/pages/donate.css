@@ -77,6 +77,14 @@
   line-height: 1;
   padding-top: 5px; }
 
+.step2 {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  overflow: hidden;
+  padding-top: 50px; }
+
 .prefooter {
   display: none; }
 
@@ -90,7 +98,7 @@
   .nav .currentpage {
     padding-right: 8px; }
 
-  .donatepage .top .heading {
+  .heading {
     text-align: center; }
 
   .donatepage .top h1 {
@@ -99,7 +107,7 @@
   .nav .currentpage {
     padding-right: 8px; }
 
-  .donatepage .top .heading {
+  .heading {
     text-align: center; }
 
   .donatepage .top h1 {

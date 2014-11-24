@@ -118,6 +118,16 @@
 }
 
 
+.step2{
+		transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	// height: 0;
+	overflow: hidden;
+	padding-top: 50px;
+}
+
 // STICKY FOOTER
 
 .prefooter{
@@ -145,7 +155,7 @@ and (max-width: $phone-landscape - 1px)  {
 .nav .currentpage{
 	padding-right: 8px;
 }
-.donatepage .top .heading{
+.heading{
 	text-align: center;
 }
 .donatepage .top h1{
@@ -166,7 +176,7 @@ and (max-width: $tablet-portrait - 1px)  {
 	padding-right: 8px;
 }
 
-.donatepage .top .heading{
+.heading{
 	text-align: center;
 }
 .donatepage .top h1{

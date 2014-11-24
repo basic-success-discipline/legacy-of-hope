@@ -2,5 +2,6 @@
 
 
   $('.donatepage .buttons .button').click(function(){
-  	alert("congratulations, you're a donor!");
+    $('.step2 h3.donatevia').html("Donate $" + $(this).attr('amount') + " via");
+  	$('.step2').css('height', '200px');
   });
