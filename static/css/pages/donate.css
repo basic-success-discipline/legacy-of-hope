@@ -4,6 +4,9 @@
 .navbar .menu-donate {
   background-color: #4aae39; }
 
+.wrapper-inner {
+  background-color: white; }
+
 .page {
   display: block;
   padding-bottom: 54px;
@@ -45,6 +48,9 @@
 .textcode b {
   font-family: "Helvetica Neue"; }
 
+.buttons {
+  margin-top: 40px; }
+
 .buttons p {
   margin-top: 20px;
   text-align: center; }
@@ -83,7 +89,8 @@
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   overflow: hidden;
-  padding-top: 50px; }
+  padding-top: 50px;
+  display: none; }
 
 .step3 {
   text-align: center; }
@@ -99,7 +106,7 @@ form input {
   margin-right: auto;
   margin-bottom: 10px;
   max-width: 300px;
-  width: 100%;
+  width: calc(100% - 6px);
   height: 21px;
   text-align: left; }
 
@@ -107,12 +114,12 @@ input[type="text"] {
   font-size: 18px;
   appearance: none;
   box-shadow: none;
-  border-radius: none; }
+  border-radius: 5px; }
 
 input[type="text"]:focus {
   outline: none; }
 
-.validate-container {
+.container .columns.validate-container {
   display: none; }
 
 .validate {
@@ -128,6 +135,10 @@ input[type="text"]:focus {
   line-height: 1;
   font-size: 12px;
   color: red; }
+
+.submit.button {
+  max-width: 300px;
+  margin-top: 15px; }
 
 .prefooter {
   display: none; }
@@ -149,7 +160,14 @@ input[type="text"]:focus {
     text-align: center; }
 
   .ccard-container {
-    display: none !important; } }
+    display: none !important; }
+
+  .donatepage .top .validate {
+    height: 47px; }
+
+  .donatepage .top .validate p {
+    text-align: center;
+    font-size: 16px; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .nav .currentpage {
     padding-right: 8px; }
@@ -158,7 +176,10 @@ input[type="text"]:focus {
     text-align: center; }
 
   .donatepage .top h1 {
-    text-align: center; } }
+    text-align: center; }
+
+  .ccard-container {
+    display: none !important; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .nav .currentpage {
     padding-right: 8px; } }

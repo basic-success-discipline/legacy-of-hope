@@ -14,7 +14,7 @@
 // PAGE
 
 .wrapper-inner{
-	// background-color: white;
+	background-color: white;
 		
 }
 
@@ -77,7 +77,7 @@
 
 .buttons{
 	// float:right;
-	// margin-top: 35px;
+	margin-top: 40px;
 	// margin-left: 20px;
 }
 
@@ -126,6 +126,7 @@
 	// height: 0;
 	overflow: hidden;
 	padding-top: 50px;
+	display: none;
 }
 
 .step3{
@@ -143,7 +144,7 @@ form input{
 	margin-right: auto;
 	margin-bottom: 10px;
 	max-width: 300px;
-	width: 100%;
+	width: calc(100% - 6px);
 	height: 21px;
 	text-align:left;
 }
@@ -152,13 +153,14 @@ input[type="text"] {
   font-size: 18px;
   appearance: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 5px;
+
 }
 input[type="text"]:focus {
   outline: none;
 }
 
-.validate-container{
+.container .columns.validate-container{
 	display: none;
 }
 .validate{
@@ -177,6 +179,11 @@ input[type="text"]:focus {
 
  }
 
+ .submit.button{
+ 	max-width:300px;
+ 	margin-top: 15px;
+ }
+
 
 
 // STICKY FOOTER
@@ -186,7 +193,7 @@ input[type="text"]:focus {
 }
 
 .push{
-	height: $foot-height
+	height: $foot-height;
 }
 
 .wrapper-inner{
@@ -216,6 +223,16 @@ and (max-width: $phone-landscape - 1px)  {
 	display: none !important;
 }
 
+.donatepage .top .validate{
+
+ 	height: 47px;
+}
+ .donatepage .top .validate p{
+ 	text-align: center;
+ 	font-size: 16px;
+
+ }
+
 }
 
 
@@ -235,6 +252,10 @@ and (max-width: $tablet-portrait - 1px)  {
 }
 .donatepage .top h1{
 	text-align: center;
+}
+
+.ccard-container{
+	display: none !important;
 }
 
 }

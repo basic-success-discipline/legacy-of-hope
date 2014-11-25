@@ -3,8 +3,16 @@
 $('.donatepage .step1 .buttons .button').click(function(){
   $('.step2 h3.donatevia').html("Donate $" + $(this).attr('amount') + " via");
    $('input[name="ccamount"]').val($(this).attr('amount'));
-  $('.step2').css('height', '200px');
+  $('.step2').show();
+  $('.step2').addClass("fadeInDown");
 });
+
+
+$('.donatepage .step2 .button.ccoption').click(function(){
+  $('.step3').show();
+  $('.step3').addClass("fadeInDown");
+});
+
 
 
 
@@ -22,6 +30,7 @@ var vfname = $('.vfname p');
 var vlname = $('.vlname p');
 var vexpiry = $('.vexpiry p');
 var vcvc = $('.vcvc p');
+  var valid = true;
 
 
 $('.active form').card({
@@ -59,23 +68,20 @@ var validateCC =  function(){
 $('.validate-container').hide();
 $('.validate p').html("");
 
-  var valid = true;
+  valid=true;
 
-
-   if( !ccamount.val() || ccamount.val() == "" || !(isNumeric(ccamount.val()))){
+   if( !ccamount.val() || ccamount.val() == ""){
     valid=false;
       vamount.html("You must enter how much you would like to donate");
   }
 
 
 
-  
   var validnum = $.payment.validateCardNumber(ccnumber.val());
   if (!validnum) {
     valid=false;
     vnumber.html("You must enter a valid credit card number.");
   }
-
 
   if( !ccfname.val() || ccfname.val() == ""){
     valid=false;
@@ -86,7 +92,6 @@ $('.validate p').html("");
     valid=false;
       vlname.html("You must enter your last name.");
   }
-
   if (ccexpiry.val().split("/").length == 2){
     var validexpiry = $.payment.validateCardExpiry(ccexpiry.val().split("/")[0].trim(),ccexpiry.val().split("/")[1].trim() );
     if (!validexpiry) {
@@ -105,14 +110,13 @@ $('.validate p').html("");
   }
 
   if(!valid){
-    $('.validate-container').show();
+    $('.validate-container').css('display', 'inline');
      $('.form-container').removeClass('six');
      // $('.card-container').removeClass('six');
        $('.form-container').addClass('three');
      // $('.card-container').addClass('four');
 
   }
-
   return valid;
 
 }

@@ -445,9 +445,7 @@ var donate = {
   description: "Donate to the Legacy of Hope",
   stylesheet: "donate.css",
   currentpage: "menu-donate",
-  type: "website",
-  swag: swag,
-  donate_options: donate_options
+  type: "website"
 };
 
 
