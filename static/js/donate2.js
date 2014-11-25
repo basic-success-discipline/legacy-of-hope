@@ -23,6 +23,7 @@ var ccfname = $('input[name="ccfirst-name"]');
 var cclname = $('input[name="cclast-name"]');
 var ccexpiry = $('input[name="ccexpiry"]');
 var cccvc = $('input[name="cccvc"]');
+var ccemail = $('input[name="ccemail"]');
 
 
 var vamount = $('.vamount p');
@@ -31,7 +32,12 @@ var vfname = $('.vfname p');
 var vlname = $('.vlname p');
 var vexpiry = $('.vexpiry p');
 var vcvc = $('.vcvc p');
+var vemail = $('.vemail p');
+
 var valid = true;
+
+var CreditCardDonation;
+var CreditCard;
 
 
 
@@ -52,12 +58,11 @@ cccvc.payment('formatCardCVC');
 
 var confirmCC = function(confirm){
   if(confirm){
-
+    alert("you got it! submitting the payment!");
   }else{
   $('.step4').removeClass("fadeInDown");
   $('.step4').addClass("fadeOutUp");
-
-    $(".active form input").removeAttr('disabled');
+  $(".active form input").removeAttr('disabled');
   }
 }
 
@@ -66,14 +71,30 @@ var submitCC =  function(){
 var valid = validateCC();
 
   if(valid){
-    
+    CreditCardDonation = {
+      "Amount": ccamount.val(),
+      "Email": ccemail.val(),
+      "CreditCard": {
+        "Number": ccnumber.val(),
+        "CCType": $.payment.cardType(ccnumber.val()),
+        "ExpireMonth": $.payment.cardExpiryVal(ccexpiry.val()).month,
+        "ExpireYear": $.payment.cardExpiryVal(ccexpiry.val()).year,
+        "CVV": cccvc.val(),
+        "FirstName": ccfname.val(),
+        "LastName": cclname.val()
+      }
+    };
+
+    console.log(CreditCardDonation);
+
     $(".active form input").attr('disabled','disabled');
-    $('.step4 .cfamount p span').html(ccamount.val());
-    $('.step4 .cfnumber p span').html(ccnumber.val());
-    $('.step4 .cffname p span').html(ccfname.val());
-    $('.step4 .cflname p span').html(cclname.val());
-    $('.step4 .cfexpiry p span').html(ccexpiry.val());
-    $('.step4 .cfcvc p span').html(cccvc.val());
+    $('.step4 .cfamount p span').html(CreditCardDonation.Amount);
+    $('.step4 .cfnumber p span').html(CreditCardDonation.CreditCard.Number);
+    $('.step4 .cffname p span').html(CreditCardDonation.CreditCard.FirstName);
+    $('.step4 .cflname p span').html(CreditCardDonation.CreditCard.LastName);
+    $('.step4 .cfexpiry p span').html(CreditCardDonation.CreditCard.ExpireMonth + " / " + CreditCardDonation.CreditCard.ExpireYear);
+    $('.step4 .cfcvc p span').html(CreditCardDonation.CreditCard.CVV);
+     $('.step4 .cfemail p span').html(CreditCardDonation.Email);
      $('.step4').show();
      $('.step4').removeClass("fadeOutUp");
   $('.step4').addClass("fadeInDown");
@@ -122,13 +143,21 @@ $('.validate p').html("");
     }
   }else{
       valid=false;
-      vexpiry.html("You must enter a valid expiration year.");
+      vexpiry.html("You must enter a valid expiration date.");
   }
 
   var validcvc = $.payment.validateCardCVC(cccvc.val());
   if (!validcvc) {
     valid=false;
     vcvc.html("You must enter a valid CVC code.");
+  }
+
+
+
+   var validemail = ccemail.val().match(/.+@.+\..+/i);
+  if (!validemail) {
+    valid=false;
+    vemail.html("You must enter a valid email address");
   }
 
   if(!valid){
