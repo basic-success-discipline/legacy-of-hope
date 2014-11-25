@@ -54,7 +54,14 @@ var submitCC =  function(){
 var valid = validateCC();
 
   if(valid){
-    alert("all good brother!");
+    $('.step4 .cfamount p').html(ccamount.val());
+    $('.step4 .cfnumber p').html(ccnumber.val());
+    $('.step4 .cffname p').html(ccfname.val());
+    $('.step4 .cflname p').html(cclname.val());
+    $('.step4 .cfexpiry p').html(ccexpiry.val());
+    $('.step4 .cfcvc p').html(cccvc.val());
+     $('.step4').show();
+  $('.step4').addClass("fadeInDown");
   }
  return false;
 }

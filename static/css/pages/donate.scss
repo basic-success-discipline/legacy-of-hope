@@ -118,7 +118,7 @@
 }
 
 
-.step2, .step3{
+.step2, .step3, .step4{
 		transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
@@ -182,6 +182,27 @@ input[type="text"]:focus {
  .submit.button{
  	max-width:300px;
  	margin-top: 15px;
+ }
+
+.confirm{
+	width: 100%;
+	position: relative;
+}
+
+
+.confirm p{
+	display: inline;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+ .confirm-label-container p{
+ 	text-align: right;
+ 	width: 50%;
+ 	font-family: "Helvetica Neue";
+ }
+ .confirm-container p{
+ 	text-align: left;
+ 	width: 50%;
  }
 
 
