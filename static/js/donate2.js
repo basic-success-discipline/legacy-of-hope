@@ -38,6 +38,7 @@ var valid = true;
 
 var CreditCardDonation;
 var CreditCard;
+var acceptedCCTypes= new Array("visa", "mastercard", "discover", "amex");
 
 
 
@@ -75,7 +76,7 @@ var valid = validateCC();
       "Amount": ccamount.val(),
       "Email": ccemail.val(),
       "CreditCard": {
-        "Number": ccnumber.val(),
+        "Number": ccnumber.val().replace(/\s/g,""),
         "CCType": $.payment.cardType(ccnumber.val()),
         "ExpireMonth": $.payment.cardExpiryVal(ccexpiry.val()).month,
         "ExpireYear": $.payment.cardExpiryVal(ccexpiry.val()).year,
@@ -90,6 +91,7 @@ var valid = validateCC();
     $(".active form input").attr('disabled','disabled');
     $('.step4 .cfamount p span').html(CreditCardDonation.Amount);
     $('.step4 .cfnumber p span').html(CreditCardDonation.CreditCard.Number);
+    $('.step4 .cftype p span').html(CreditCardDonation.CreditCard.CCType);
     $('.step4 .cffname p span').html(CreditCardDonation.CreditCard.FirstName);
     $('.step4 .cflname p span').html(CreditCardDonation.CreditCard.LastName);
     $('.step4 .cfexpiry p span').html(CreditCardDonation.CreditCard.ExpireMonth + " / " + CreditCardDonation.CreditCard.ExpireYear);
@@ -124,7 +126,14 @@ $('.validate p').html("");
   if (!validnum) {
     valid=false;
     vnumber.html("You must enter a valid credit card number.");
+  }else {
+    var a = $.payment.cardType(ccnumber.val());
+    var b= acceptedCCTypes;
+    if(!(a == b[0] || a == b[1] || a == b[2] || a == b[3])){
+    valid=false;
+    vnumber.html("Credit card must be Visa, Mastercard, Discover, or American Express.");
   }
+}
 
   if( !ccfname.val() || ccfname.val() == ""){
     valid=false;
@@ -139,7 +148,7 @@ $('.validate p').html("");
     var validexpiry = $.payment.validateCardExpiry(ccexpiry.val().split("/")[0].trim(),ccexpiry.val().split("/")[1].trim() );
     if (!validexpiry) {
       valid=false;
-      vexpiry.html("You must enter a valid expiration year.");
+      vexpiry.html("You must enter a valid expiration date.");
     }
   }else{
       valid=false;
