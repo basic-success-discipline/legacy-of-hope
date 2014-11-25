@@ -5,6 +5,7 @@ $('.donatepage .step1 .buttons .button').click(function(){
    $('input[name="ccamount"]').val($(this).attr('amount'));
   $('.step2').show();
   $('.step2').addClass("fadeInDown");
+
 });
 
 
@@ -30,7 +31,9 @@ var vfname = $('.vfname p');
 var vlname = $('.vlname p');
 var vexpiry = $('.vexpiry p');
 var vcvc = $('.vcvc p');
-  var valid = true;
+var valid = true;
+
+
 
 
 $('.active form').card({
@@ -47,20 +50,32 @@ ccnumber.payment('formatCardNumber');
 ccexpiry.payment('formatCardExpiry');
 cccvc.payment('formatCardCVC');
 
+var confirmCC = function(confirm){
+  if(confirm){
 
+  }else{
+  $('.step4').removeClass("fadeInDown");
+  $('.step4').addClass("fadeOutUp");
+
+    $(".active form input").removeAttr('disabled');
+  }
+}
 
 var submitCC =  function(){
 
 var valid = validateCC();
 
   if(valid){
-    $('.step4 .cfamount p').html(ccamount.val());
-    $('.step4 .cfnumber p').html(ccnumber.val());
-    $('.step4 .cffname p').html(ccfname.val());
-    $('.step4 .cflname p').html(cclname.val());
-    $('.step4 .cfexpiry p').html(ccexpiry.val());
-    $('.step4 .cfcvc p').html(cccvc.val());
+    
+    $(".active form input").attr('disabled','disabled');
+    $('.step4 .cfamount p span').html(ccamount.val());
+    $('.step4 .cfnumber p span').html(ccnumber.val());
+    $('.step4 .cffname p span').html(ccfname.val());
+    $('.step4 .cflname p span').html(cclname.val());
+    $('.step4 .cfexpiry p span').html(ccexpiry.val());
+    $('.step4 .cfcvc p span').html(cccvc.val());
      $('.step4').show();
+     $('.step4').removeClass("fadeOutUp");
   $('.step4').addClass("fadeInDown");
   }
  return false;
