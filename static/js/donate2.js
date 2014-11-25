@@ -59,7 +59,9 @@ cccvc.payment('formatCardCVC');
 
 var confirmCC = function(confirm){
   if(confirm){
-    alert("you got it! submitting the payment!");
+    sendCC(function(){
+      alert("you did it!");
+    });
   }else{
   $('.step4').removeClass("fadeInDown");
   $('.step4').addClass("fadeOutUp");
@@ -180,6 +182,56 @@ $('.validate p').html("");
   return valid;
 
 }
+
+
+
+// CORS STUFF
+
+
+function sendCC(callback) {
+   var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
+
+
+  var xhr = createCORSRequest('POST', url);
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+
+  // Response handlers.
+  xhr.onload = function() {
+    var text = xhr.responseText;
+    var data = JSON.parse(text);
+    alert(data.GiftCode);
+    callback();
+  };
+
+  xhr.onerror = function() {
+    alert('Whoops, there was an error making the request.');
+  };
+
+  xhr.send(JSON.stringify(CreditCardDonation));
+}
+
+
+// Create the XHR object.
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+
 
 
 
