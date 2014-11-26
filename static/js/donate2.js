@@ -26,8 +26,9 @@ $('.part .heading').click(function(){
 })
 
 $('.submit.button.enabled').click(function(){
-
+  if($(this).hasClass("enabled")){
   submitCC();
+}
 
 });
 
