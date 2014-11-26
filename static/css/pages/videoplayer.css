@@ -1,3 +1,6 @@
+.wrapper-inner {
+  min-width: 1200px; }
+
 .csvideo {
   width: 100%;
   height: auto;
