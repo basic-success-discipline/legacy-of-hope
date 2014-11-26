@@ -90,6 +90,12 @@
   padding-top: 50px;
   display: none; }
 
+.nextstep {
+  display: none;
+  text-align: center;
+  font-size: 13px;
+  font-family: "Helvetica Neue Light Italic"; }
+
 .step3 {
   text-align: center; }
 
@@ -136,13 +142,16 @@ input:disabled {
   padding-top: 5px;
   margin-left: 10px; }
 
-.donatepage .validate p {
+.donatepage .validate p, .page p.validatemessage {
   margin-top: 0;
   margin-bottom: 0;
   text-align: left;
   line-height: 1;
   font-size: 12px;
   color: red; }
+
+.page p.validatemessage {
+  display: none; }
 
 .submit.button {
   max-width: 300px;
@@ -183,6 +192,9 @@ input:disabled {
   margin-bottom: -60px !important; }
 
 @media only screen and (max-width: 479px) {
+  .nextstep.nextstep-active {
+    display: block; }
+
   .nav .currentpage {
     padding-right: 8px; }
 
@@ -202,6 +214,9 @@ input:disabled {
     text-align: center;
     font-size: 16px; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .nextstep.nextstep-active {
+    display: block; }
+
   .nav .currentpage {
     padding-right: 8px; }
 

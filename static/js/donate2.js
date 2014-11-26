@@ -5,10 +5,7 @@ $('.donatepage .step1 .buttons .button').click(function(){
    $('input[name="ccamount"]').val($(this).attr('amount'));
   $('.step2').show();
   $('.step2').addClass("fadeInDown");
-  $('.wrapper').animate({ 
-            scrollTop: $('.step2').offset().top
-        }, 600);
-console.log($('.step2').offset().top);
+  $('.step1 .nextstep').addClass('nextstep-active');
 
 
 });
@@ -17,6 +14,7 @@ console.log($('.step2').offset().top);
 $('.donatepage .step2 .button.ccoption').click(function(){
   $('.step3').show();
   $('.step3').addClass("fadeInDown");
+  $('.step2 .nextstep').addClass('nextstep-active');
 });
 
 
@@ -108,6 +106,7 @@ var valid = validateCC();
      $('.step4').removeClass("fadeOutUp");
   $('.step4').addClass("fadeInDown");
   }
+  $('.step3 .nextstep').addClass('nextstep-active');
  return false;
 }
 
@@ -118,6 +117,7 @@ var valid = validateCC();
 var validateCC =  function(){
   
 $('.validate-container').hide();
+$('.validatemessage').hide();
 $('.validate p').html("");
 
   valid=true;
@@ -178,12 +178,14 @@ $('.validate p').html("");
 
   if(!valid){
     $('.validate-container').css('display', 'inline');
+    $('.validatemessage').css('display', 'block');
      $('.form-container').removeClass('six');
      // $('.card-container').removeClass('six');
        $('.form-container').addClass('three');
      // $('.card-container').addClass('four');
   } else{
     $('.validate-container').css('display', 'none');
+    $('.validatemessage').css('display', 'none');
     $('.form-container').removeClass('three');
     $('.form-container').addClass('six');
   }

@@ -129,6 +129,13 @@
 	display: none;
 }
 
+.nextstep{
+	display: none;
+	text-align:center;
+	font-size: 13px;
+	font-family: "Helvetica Neue Light Italic";
+}
+
 .step3{
 	text-align:center;
 }
@@ -180,7 +187,7 @@ input:disabled{
  	padding-top: 5px;
  	margin-left: 10px;
 }
- .donatepage .validate p{
+ .donatepage .validate p, .page p.validatemessage{
  	margin-top: 0;
  	margin-bottom: 0;
  	text-align: left;
@@ -188,6 +195,10 @@ input:disabled{
  	font-size: 12px;
  	color: red;
 
+ }
+
+ .page p.validatemessage{
+ 	display: none;
  }
 
  .submit.button{
@@ -252,7 +263,9 @@ input:disabled{
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
 
-
+.nextstep.nextstep-active{
+	display: block;
+}
 .nav .currentpage{
 	padding-right: 8px;
 }
@@ -286,7 +299,9 @@ and (max-width: $phone-landscape - 1px)  {
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
 
-
+.nextstep.nextstep-active{
+	display: block ;
+}
 .nav .currentpage{
 	padding-right: 8px;
 }
