@@ -1,22 +1,29 @@
 
 
 $('.donatepage .step1 .buttons .button').click(function(){
-  $('.step2 h3.donatevia').html("Donate " + $(this).attr('amount') + " via");
    $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
-  $('.step2').show();
-  $('.step2').addClass("fadeInDown");
-  $('.step1 .nextstep').addClass('nextstep-active');
+  $('.part').addClass("collapse");
+  $('.part2').removeClass("collapse");
+  $('.part2').show();
+  $('.part2').addClass("fadeInDown");
 
 
 });
 
 
 $('.donatepage .step2 .button.ccoption').click(function(){
-  $('.step3').show();
-  $('.step3').addClass("fadeInDown");
-  $('.step2 .nextstep').addClass('nextstep-active');
+  $('.part').addClass("collapse");
+  $('.part3').removeClass("collapse");
+  $('.part3').show();
+  $('.part3').addClass("fadeInDown");
 });
 
+$('.part .heading').click(function(){
+  if($(this).parent().hasClass("collapse")){
+    $('.part').addClass("collapse");
+    $(this).parent().removeClass("collapse");
+  }
+})
 
 
 
@@ -66,8 +73,11 @@ var confirmCC = function(confirm){
     alert("you did it!");
     // });
   }else{
-  $('.step4').removeClass("fadeInDown");
-  $('.step4').addClass("fadeOutUp");
+  $('.part4').removeClass("fadeInDown");
+  $('.part4').addClass("fadeOutUp");
+  $('.part4').hide();
+  // $('.part').addClass("collapse");
+  $('.part3').removeClass("collapse");
   $(".active form input").removeAttr('disabled');
   }
 }
@@ -95,6 +105,7 @@ var valid = validateCC();
 
     var cccensored = "************" + CreditCardDonation.CreditCard.Number.substr(CreditCardDonation.CreditCard.Number.length - 4);
     $(".active form input").attr('disabled','disabled');
+    $(".active form input").attr('disabled','disabled');
     $('.step4 .cfamount p span').html("$" + CreditCardDonation.Amount + " (USD)");
     $('.step4 .cfnumber p span').html(cccensored);
     $('.step4 .cftype p span').html(CreditCardDonation.CreditCard.CCType);
@@ -103,11 +114,13 @@ var valid = validateCC();
     $('.step4 .cfexpiry p span').html(CreditCardDonation.CreditCard.ExpireMonth + " / " + CreditCardDonation.CreditCard.ExpireYear);
     $('.step4 .cfcvc p span').html(CreditCardDonation.CreditCard.CVV);
      $('.step4 .cfemail p span').html(CreditCardDonation.Email);
-     $('.step4').show();
-     $('.step4').removeClass("fadeOutUp");
-  $('.step4').addClass("fadeInDown");
+
+      $('.part').addClass("collapse");
+      $('.part4').removeClass("collapse");
+     $('.part4').show();
+     $('.part4').removeClass("fadeOutUp");
+  $('.part4').addClass("fadeInDown");
   }
-  $('.step3 .nextstep').addClass('nextstep-active');
  return false;
 }
 

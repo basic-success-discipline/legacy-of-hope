@@ -118,6 +118,15 @@
 }
 
 
+.part2, .part3, .part4{
+		transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	overflow: hidden;
+	padding-top: 50px;
+	display: none;
+}
 .step2, .step3, .step4{
 		transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -125,21 +134,15 @@
 	-o-transition: all 0.2s linear;
 	// height: 0;
 	overflow: hidden;
-	padding-top: 50px;
-	display: none;
+	clear:both;
 }
 
-.nextstep{
-	display: none;
-	text-align:center;
-	font-size: 13px;
-	font-family: "Helvetica Neue Light Italic";
-}
 
 
 .heading{
 	text-align:left;
 	margin-bottom: 20px;
+	display:none;
 }
 .step3{
 	text-align:center;
@@ -302,6 +305,15 @@ and (max-width: $phone-landscape - 1px)  {
 
  .confirm p{
  	font-size: 14px;
+ }
+
+ .part.collapse .step{
+ 	display: none !important;
+ }
+
+ .part.collapse .heading{
+ 	color: rgb(200,200,200)  !important;
+ 	cursor: pointer;	
  }
 
 }

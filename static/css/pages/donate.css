@@ -81,7 +81,7 @@
   line-height: 1;
   padding-top: 5px; }
 
-.step2, .step3, .step4 {
+.part2, .part3, .part4 {
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
@@ -90,15 +90,18 @@
   padding-top: 50px;
   display: none; }
 
-.nextstep {
-  display: none;
-  text-align: center;
-  font-size: 13px;
-  font-family: "Helvetica Neue Light Italic"; }
+.step2, .step3, .step4 {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  overflow: hidden;
+  clear: both; }
 
 .heading {
   text-align: left;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: none; }
 
 .step3 {
   text-align: center; }
@@ -223,7 +226,14 @@ input:disabled {
     font-size: 16px; }
 
   .confirm p {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .part.collapse .step {
+    display: none !important; }
+
+  .part.collapse .heading {
+    color: #c8c8c8 !important;
+    cursor: pointer; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .nextstep.nextstep-active {
     display: block; }
