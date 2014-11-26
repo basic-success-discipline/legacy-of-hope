@@ -151,7 +151,8 @@ input:disabled {
   color: red; }
 
 .page p.validatemessage {
-  display: none; }
+  display: none;
+  text-align: center; }
 
 .submit.button {
   max-width: 300px;
