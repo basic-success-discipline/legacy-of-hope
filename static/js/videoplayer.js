@@ -349,19 +349,29 @@ $('.fs-bar-wrapper').hover(
   function(e) {
    $('.video-bar').addClass("show-bars");
    $('#crowdsurfing-wrapper').addClass("make-cs-opaque");
-   
-  // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").removeClass("cs-fullscreen-on");
+  $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').addClass("make-minimized-cs-appear");
  },
  function(e) {
   $('.video-bar').removeClass("show-bars");
   $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
-  // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").addClass("cs-fullscreen-on");
-   // $("#crowdsurfing").addClass("cs-fullscreen-on");
-    // $("#crowdsurfing-wrapper").style("height", "100%", "important");
+  $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
 
   }
   );
 
+
+
+
+
+function updateVideoBars(csminimized){
+  if(csminimized){
+    $('.fs-menu').css('width', "100%");
+    // $('.cs-minimized-hoverfix').show();
+  }else{
+    $('.fs-menu').css('width', "calc(100% - 300px)");
+    // $('.cs-minimized-hoverfix').hide();
+  }
+}
 
 
 function setStreamButton(ang){
@@ -410,9 +420,6 @@ document.addEventListener(
 
 
 
-document.addEventListener('CrowdSurfingControlEvent',function checkIfIsInFullScreen(param) {console.warn(param);},false);
-
-
 $(".gc-text").mouseup(function(e){
   e.preventDefault();
 });
@@ -437,6 +444,46 @@ function createCORSRequest(method, url) {
   return xhr;
 }
 
+
+
+
+
+// Detecting attribute changes -- WHERE HAS THIS BEEN ALL OF MY LIFE!??!?!
+
+$(function() {
+(function($) {
+    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+    $.fn.attrchange = function(callback) {
+        if (MutationObserver) {
+            var options = {
+                subtree: false,
+                attributes: true
+            };
+
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(e) {
+                    callback.call(e.target, e.attributeName);
+                });
+            });
+
+            return this.each(function() {
+                observer.observe(this, options);
+            });
+
+        }
+    }
+})(jQuery);
+
+//Now you need to append event listener
+$('.video-area').attrchange(function(attrName) {
+
+    if(attrName=='class'){
+            updateVideoBars($('.video-area').hasClass('cs-fullscreen-minimized'));
+    }
+
+});
+});
 
 
 

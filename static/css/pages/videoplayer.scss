@@ -49,20 +49,19 @@
 	transition-delay: 1.5s;
 	-moz-transition-delay: 1.5s;
 	-o-transition-delay: 1.5s;
-
-
 }
+
+
 
 .full-screen #crowdsurfing-wrapper:not(.ie){
 	opacity: 0.15;
 }
-.full-screen #crowdsurfing-wrapper:hover:not(.ie){
+.full-screen .video-area:not(.cs-fullscreen-minimized) #crowdsurfing-wrapper:hover:not(.ie){
 	opacity: 1;
 	-webkit-transition-delay: 0s; /* Safari */
 	transition-delay: 0s;
 	-moz-transition-delay: 0s;
 	-o-transition-delay: 0s;
-
 }
 
 .make-cs-opaque{
@@ -73,6 +72,39 @@
 	-o-transition-delay: 0s !important;
 
 }
+
+
+.full-screen .cs-fullscreen-minimized #crowdsurfing-wrapper{
+	top: -65px  !important;
+	bottom:65px !important;
+	height: 130px !important;
+	min-height: 130px !important;
+	opacity: 0.15;
+}
+.full-screen .cs-fullscreen-minimized #crowdsurfing-wrapper:hover{
+	top: 0 !important;
+	bottom: 0 !important;
+	-webkit-transition-delay: 0s !important; /* Safari */
+	transition-delay: 0s !important;
+	-moz-transition-delay: 0s !important;
+	-o-transition-delay: 0s !important;
+	opacity: 1;
+	height: 65px !important;
+	min-height: 65px !important;
+}
+
+.cs-fullscreen-minimized #crowdsurfing-wrapper.make-minimized-cs-appear{
+	top: 0 !important;
+	bottom: 0 !important;
+	-webkit-transition-delay: 0s !important; /* Safari */
+	transition-delay: 0s !important;
+	-moz-transition-delay: 0s !important;
+	-o-transition-delay: 0s !important;
+	opacity: 1;
+	height: 65px !important;
+	min-height: 65px !important;
+}
+
 
 
 
@@ -433,20 +465,20 @@ $video-menu-bar-height: 50px;
 
 .video-menu .donate-btn{
 	float: right;
-padding: 3px 12px 5px 12px;
-border-radius: 3px;
--webkit-border-radius: 3px;
-transition: all 0.1s linear;
--moz-transition: all 0.1s linear;
--webkit-transition: all 0.1s linear;
--o-transition: all 0.1s linear;
-color:white;
-cursor: pointer;
-display: inline-block;
-margin-right: 10px;
-   box-shadow: -2px 2px 5px #888888;
-   background-color: rgb( 86, 152,45);
- position:relative;
+	padding: 3px 12px 5px 12px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-webkit-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	color:white;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	box-shadow: -2px 2px 5px #888888;
+	background-color: rgb( 86, 152,45);
+	position:relative;
 
 }
 
@@ -582,22 +614,22 @@ margin-right: 10px;
 
 .gc-prompt .submit-gc-btn{
 	background-color: #358fe3;
-padding: 10px;
-padding-top: 5px;
-margin-top: 20px;
-border-radius: 3px;
--webkit-border-radius: 3px;
-transition: all 0.3s linear;
--moz-transition: all 0.3s linear;
--webkit-transition: all 0.3s linear;
--o-transition: all 0.3s linear;
-color:white;
-cursor: pointer;
+	padding: 10px;
+	padding-top: 5px;
+	margin-top: 20px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	color:white;
+	cursor: pointer;
 
 }
 .gc-prompt .submit-gc-btn:hover{
 	background-color: $loh-green;
-	}
+}
 .gc-prompt .submit-gc-btn p{
 	margin-bottom: 0;
 	line-height: 1;
