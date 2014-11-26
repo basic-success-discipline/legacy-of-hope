@@ -19,22 +19,14 @@
 }
 
 .page{
-	display: block;
+	// display: block;
 	padding-bottom: 54px;
-	width: 100%;
-	background-color: white;
+	// width: 100%;
+	// background-color: white;
 }
 
 
-.donatepage .top{
-	// border-bottom: 1px solid rgba(53,143,227,0.5);
-	padding-bottom: 20px;
-	vertical-align: bottom;
-	position: relative;
-	margin-bottom: 20px;
-}
-
-.donatepage .top h1{
+.page h1{
 	text-align: left;
 	display: inline-block;
 	margin-bottom: 0px;
@@ -45,20 +37,23 @@
 
 }
 
-.donatepage .top hr {
+.page hr {
     border: 0;
     height: 1px;
     background-color: rgba(53,143,227,0.5); 
+    background-image:    -webkit-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0));
     background-image:    -moz-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0));
     background-image:     -ms-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0)); 
     background-image:      -o-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0)); 
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    clear:both;
+
 
 
 }
-.donatepage .top p{
+.page  p{
 	font-size: 20px;
 }
 
@@ -91,6 +86,7 @@
 	padding: 10px 20px;
 	background-color: $loh-blue;
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
 	margin-bottom: 20px;
 		cursor: pointer;
 	transition: all 0.2s linear;
@@ -100,8 +96,12 @@
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 
-   box-shadow: 1px 1px 2px #888888; 
+   box-shadow: 1px 1px 2px #888888;
+   -webkit-box-shadow: 1px 1px 2px #888888; 
+   -moz-box-shadow: 1px 1px 2px #888888; 
 }
 
 .button:hover{
@@ -152,8 +152,13 @@ form input{
 input[type="text"] {
   font-size: 18px;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   box-shadow: none;
+   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
 
 }
 input[type="text"]:focus {
@@ -170,10 +175,12 @@ input:disabled{
 .validate{
 	height: 37px;
 	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
  	padding-top: 5px;
  	margin-left: 10px;
 }
- .donatepage .top .validate p{
+ .donatepage .validate p{
  	margin-top: 0;
  	margin-bottom: 0;
  	text-align: left;
@@ -230,7 +237,7 @@ input:disabled{
 }
 
 .push{
-	height: $foot-height;
+	height: $foot-height !important;
 }
 
 .wrapper-inner{
@@ -252,7 +259,7 @@ and (max-width: $phone-landscape - 1px)  {
 .heading{
 	text-align: center;
 }
-.donatepage .top h1{
+.page h1{
 	text-align: center;
 }
 
@@ -260,11 +267,11 @@ and (max-width: $phone-landscape - 1px)  {
 	display: none !important;
 }
 
-.donatepage .top .validate{
+.page .validate{
 
  	height: 47px;
 }
- .donatepage .top .validate p{
+ .page .validate p{
  	text-align: center;
  	font-size: 16px;
 
@@ -287,7 +294,7 @@ and (max-width: $tablet-portrait - 1px)  {
 .heading{
 	text-align: center;
 }
-.donatepage .top h1{
+.page h1{
 	text-align: center;
 }
 

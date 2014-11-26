@@ -5,6 +5,11 @@ $('.donatepage .step1 .buttons .button').click(function(){
    $('input[name="ccamount"]').val($(this).attr('amount'));
   $('.step2').show();
   $('.step2').addClass("fadeInDown");
+  $('.wrapper').animate({ 
+            scrollTop: $('.step2').offset().top
+        }, 600);
+console.log($('.step2').offset().top);
+
 
 });
 
@@ -177,7 +182,10 @@ $('.validate p').html("");
      // $('.card-container').removeClass('six');
        $('.form-container').addClass('three');
      // $('.card-container').addClass('four');
-
+  } else{
+    $('.validate-container').css('display', 'none');
+    $('.form-container').removeClass('three');
+    $('.form-container').addClass('six');
   }
   return valid;
 
