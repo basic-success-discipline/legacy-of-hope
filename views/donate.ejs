@@ -32,9 +32,9 @@
               </div>
               <div class="buttons four columns">
                 <p class="nextstep">Please scroll down</p>
-                <div class="button option1" amount="5"><h5>$5</h5></div>
-                <div class="button option2" amount="50"><h5>$50</h5></div>
-                <div class="button option3" amount="other"><h5>Other amount</h5></div>
+                <div class="button option1" amount="$5"><h5>$5</h5></div>
+                <div class="button option2" amount="$50"><h5>$50</h5></div>
+                <div class="button option3" amount=""><h5>Other amount</h5></div>
                 <p>Paypal & credit card</p>
               </div>
               <hr>
@@ -65,7 +65,7 @@
              <div class="six columns form-container active">
              <p class="nextstep">Please scroll down</p>
               <form >
-                <input placeholder="Amount" type="text" name="ccamount">
+                <input placeholder="Amount" type="text" name="ccamount" onkeypress="return isNumber(event)">
                 <input placeholder="Card number" type="text" name="ccnumber">
                 <input placeholder="First name"type="text" name="ccfirst-name">
                 <input placeholder="Last name" type="text" name="cclast-name">

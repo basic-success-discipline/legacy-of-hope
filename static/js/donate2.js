@@ -1,8 +1,8 @@
 
 
 $('.donatepage .step1 .buttons .button').click(function(){
-  $('.step2 h3.donatevia').html("Donate $" + $(this).attr('amount') + " via");
-   $('input[name="ccamount"]').val($(this).attr('amount'));
+  $('.step2 h3.donatevia').html("Donate " + $(this).attr('amount') + " via");
+   $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
   $('.step2').show();
   $('.step2').addClass("fadeInDown");
   $('.step1 .nextstep').addClass('nextstep-active');
@@ -93,9 +93,10 @@ var valid = validateCC();
 
     console.log(CreditCardDonation);
 
+    var cccensored = "************" + CreditCardDonation.CreditCard.Number.substr(CreditCardDonation.CreditCard.Number.length - 4);
     $(".active form input").attr('disabled','disabled');
-    $('.step4 .cfamount p span').html(CreditCardDonation.Amount);
-    $('.step4 .cfnumber p span').html(CreditCardDonation.CreditCard.Number);
+    $('.step4 .cfamount p span').html("$" + CreditCardDonation.Amount + " (USD)");
+    $('.step4 .cfnumber p span').html(cccensored);
     $('.step4 .cftype p span').html(CreditCardDonation.CreditCard.CCType);
     $('.step4 .cffname p span').html(CreditCardDonation.CreditCard.FirstName);
     $('.step4 .cflname p span').html(CreditCardDonation.CreditCard.LastName);
@@ -122,6 +123,7 @@ $('.validate p').html("");
 
   valid=true;
 
+  var money = /^\d+(?:\.\d{0,2})$/;
    if( !ccamount.val() || ccamount.val() == ""){
     valid=false;
       vamount.html("You must enter how much you would like to donate");
@@ -241,6 +243,15 @@ function createCORSRequest(method, url) {
   return xhr;
 }
 
+
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
 
 
 
