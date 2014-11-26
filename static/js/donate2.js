@@ -25,6 +25,12 @@ $('.part .heading').click(function(){
   }
 })
 
+$('.submit.button.enabled').click(function(){
+
+  submitCC();
+
+});
+
 
 
 var ccamount = $('input[name="ccamount"]');
@@ -63,6 +69,7 @@ $('.active form').card({
 
 
 
+
 ccnumber.payment('formatCardNumber');
 ccexpiry.payment('formatCardExpiry');
 cccvc.payment('formatCardCVC');
@@ -79,6 +86,7 @@ var confirmCC = function(confirm){
   // $('.part').addClass("collapse");
   $('.part3').removeClass("collapse");
   $(".active form input").removeAttr('disabled');
+  $('.submit.button').addClass("enabled");
   }
 }
 
@@ -105,7 +113,7 @@ var valid = validateCC();
 
     var cccensored = "************" + CreditCardDonation.CreditCard.Number.substr(CreditCardDonation.CreditCard.Number.length - 4);
     $(".active form input").attr('disabled','disabled');
-    $(".active form input").attr('disabled','disabled');
+    $('.submit.button').removeClass("enabled");
     $('.step4 .cfamount p span').html("$" + CreditCardDonation.Amount + " (USD)");
     $('.step4 .cfnumber p span').html(cccensored);
     $('.step4 .cftype p span').html(CreditCardDonation.CreditCard.CCType);
@@ -120,6 +128,7 @@ var valid = validateCC();
      $('.part4').show();
      $('.part4').removeClass("fadeOutUp");
   $('.part4').addClass("fadeInDown");
+
   }
  return false;
 }

@@ -165,7 +165,19 @@ form .validate {
 
 .submit.button {
   max-width: 300px;
-  margin-top: 15px; }
+  margin-top: 15px;
+  opacity: 0.5;
+  cursor: default; }
+
+.submit.button:hover {
+  background-color: #358fe3; }
+
+.submit.button.enabled {
+  opacity: 1;
+  cursor: pointer; }
+
+.submit.button.enabled:hover {
+  background-color: #4aae39; }
 
 .confirm {
   width: 100%;
