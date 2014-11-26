@@ -193,14 +193,14 @@ $('.validate p').html("");
 
   if(!valid){
     $('.validate-container').css('display', 'inline');
-    $('.validatemessage').css('display', 'block');
+     $('.validate p').css('display', 'block');
      $('.form-container').removeClass('six');
      // $('.card-container').removeClass('six');
        $('.form-container').addClass('three');
      // $('.card-container').addClass('four');
   } else{
     $('.validate-container').css('display', 'none');
-    $('.validatemessage').css('display', 'none');
+    $('.validate p').css('display', 'none');
     $('.form-container').removeClass('three');
     $('.form-container').addClass('six');
   }

@@ -68,15 +68,14 @@
              </div>
              <div class="six columns form-container active">
               <form >
-                <input placeholder="Amount (USD)" type="text" name="ccamount" onkeypress="return isNumber(event)" autocomplete="off">
-                <input placeholder="Card number" type="text" name="ccnumber" autocomplete="off">
-                <input placeholder="First name"type="text" name="ccfirst-name" autocomplete="off">
-                <input placeholder="Last name" type="text" name="cclast-name" autocomplete="off">
-                <input placeholder="MM/YY" type="text" name="ccexpiry" autocomplete="off">
-                <input placeholder="CVC" type="text" name="cccvc" autocomplete="off">
-                <input placeholder="Email address" type="text" name="ccemail" autocomplete="off">
+                <input placeholder="Amount (USD)" type="text" name="ccamount" onkeypress="return isNumber(event)" autocomplete="off"> <div class="validate vamount"><p></p></div>
+                <input placeholder="Card number" type="text" name="ccnumber" autocomplete="off"><div class="validate vnumber"><p></p></div>
+                <input placeholder="First name"type="text" name="ccfirst-name" autocomplete="off"><div class="validate vfname"><p></p></div>
+                <input placeholder="Last name" type="text" name="cclast-name" autocomplete="off"> <div class="validate vlname"><p></p></div>
+                <input placeholder="MM/YY" type="text" name="ccexpiry" autocomplete="off"><div class="validate vexpiry"><p></p></div>
+                <input placeholder="CVC (code on back of card)" type="text" name="cccvc" autocomplete="off"><div class="validate vcvc"><p></p></div>
+                <input placeholder="Email address" type="text" name="ccemail" autocomplete="off"><div class="validate vemail"><p></p></div>
 
-                <p class="validatemessage">Error with form</p>
                 <div class="button submit" onclick="submitCC()"><h5>Submit</h5></div>
               </form>
           </div>

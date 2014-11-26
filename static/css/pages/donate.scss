@@ -148,6 +148,10 @@
 	text-align:center;
 }
 
+.ccard-container{
+	margin-bottom: 40px;
+}
+
 .step3 form{
 	margin-left: auto;
 	margin-right: auto;
@@ -195,7 +199,7 @@ input:disabled{
  	padding-top: 5px;
  	margin-left: 10px;
 }
- .donatepage .validate p, .page p.validatemessage{
+ .donatepage .validate p{
  	margin-top: 0;
  	margin-bottom: 0;
  	text-align: left;
@@ -205,9 +209,9 @@ input:disabled{
 
  }
 
- .page p.validatemessage{
+
+ form .validate{
  	display: none;
- 	text-align: center;
  }
 
  .submit.button{
@@ -288,9 +292,13 @@ and (max-width: $phone-landscape - 1px)  {
 .page h1{
 	text-align: center;
 }
-
+.part3, .step3{
+	overflow:visible !important;
+}
 .ccard-container{
-	display: none !important;
+	width: 105% !important;
+	margin-left: -2.5% !important;
+
 }
 
 .page .validate{
@@ -314,6 +322,26 @@ and (max-width: $phone-landscape - 1px)  {
  .part.collapse .heading{
  	color: rgb(200,200,200)  !important;
  	cursor: pointer;	
+ }
+
+
+ form input{
+ 	margin-bottom: 0;
+ 	margin-top: 10px;
+ }
+ .page form .validate{
+ 	height: auto;
+ 	display: block;
+ }
+
+ .page form .validate p{
+ 	margin-bottom: 30px;
+ }
+ .page form .validate p:empty{
+ 	margin-bottom: 0px;
+ }
+ .validate-container {
+ 	display: none !important;
  }
 
 }
@@ -342,9 +370,44 @@ and (max-width: $tablet-portrait - 1px)  {
 	text-align: center;
 }
 
-.ccard-container{
-	display: none !important;
+ .part.collapse .step{
+ 	display: none !important;
+ }
+
+ .part.collapse .heading{
+ 	color: rgb(200,200,200)  !important;
+ 	cursor: pointer;	
+ }
+
+
+.page .validate{
+
+ 	height: 47px;
 }
+ .page .validate p{
+ 	text-align: center;
+ 	font-size: 16px;
+
+ }
+ form input{
+ 	margin-bottom: 0;
+ 	margin-top: 10px;
+ }
+ .page form .validate{
+ 	height: auto;
+ 	display: block;
+ }
+
+ .page form .validate p{
+ 	margin-bottom: 30px;
+ }
+ .page form .validate p:empty{
+ 	margin-bottom: 0px;
+ }
+ .validate-container {
+ 	display: none !important;
+ }
+
 
 }
 
