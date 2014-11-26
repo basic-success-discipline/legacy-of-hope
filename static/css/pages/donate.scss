@@ -136,6 +136,11 @@
 	font-family: "Helvetica Neue Light Italic";
 }
 
+
+.heading{
+	text-align:left;
+	margin-bottom: 20px;
+}
 .step3{
 	text-align:center;
 }
@@ -273,6 +278,10 @@ and (max-width: $phone-landscape - 1px)  {
 .heading{
 	text-align: center;
 }
+
+.heading h3{
+	font-size: 24px;
+}
 .page h1{
 	text-align: center;
 }
@@ -313,6 +322,9 @@ and (max-width: $tablet-portrait - 1px)  {
 
 .heading{
 	text-align: center;
+}
+.heading h3{
+	font-size: 24px;
 }
 .page h1{
 	text-align: center;

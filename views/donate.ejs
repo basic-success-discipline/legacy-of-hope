@@ -59,19 +59,22 @@
 
 
           <div class="step3 animated fadeInDown">
+          <div class="heading twelve columns">
+                <h3>Enter Credit Card Information</h3>
+              </div>
            <div class="six columns ccard-container">
              <div class="card-wrapper"></div>
              </div>
              <div class="six columns form-container active">
              <p class="nextstep">Please scroll down</p>
               <form >
-                <input placeholder="Amount" type="text" name="ccamount" onkeypress="return isNumber(event)">
-                <input placeholder="Card number" type="text" name="ccnumber">
-                <input placeholder="First name"type="text" name="ccfirst-name">
-                <input placeholder="Last name" type="text" name="cclast-name">
-                <input placeholder="MM/YY" type="text" name="ccexpiry">
-                <input placeholder="CVC" type="text" name="cccvc">
-                <input placeholder="Email address" type="text" name="ccemail">
+                <input placeholder="Amount (USD)" type="text" name="ccamount" onkeypress="return isNumber(event)" autocomplete="off">
+                <input placeholder="Card number" type="text" name="ccnumber" autocomplete="off">
+                <input placeholder="First name"type="text" name="ccfirst-name" autocomplete="off">
+                <input placeholder="Last name" type="text" name="cclast-name" autocomplete="off">
+                <input placeholder="MM/YY" type="text" name="ccexpiry" autocomplete="off">
+                <input placeholder="CVC" type="text" name="cccvc" autocomplete="off">
+                <input placeholder="Email address" type="text" name="ccemail" autocomplete="off">
 
                 <p class="validatemessage">Error with form</p>
                 <div class="button submit" onclick="submitCC()"><h5>Submit</h5></div>
@@ -93,6 +96,9 @@
 
 
         <div class="step4 animated fadeInDown">
+        <div class="heading twelve columns">
+                <h3>Confirm Credit Card Payment</h3>
+              </div>
            <div class="eight columns confirm-container offset-by-two">
             <div class="confirm cfamount"><p><b>Amount: </b><span></span></p></div>
             <div class="confirm cfnumber"><p><b>Credit Card Number: </b><span></span></p></div>

@@ -62,9 +62,9 @@ cccvc.payment('formatCardCVC');
 
 var confirmCC = function(confirm){
   if(confirm){
-    sendCC(function(){
-      alert("you did it!");
-    });
+    // sendCC(function(){
+    alert("you did it!");
+    // });
   }else{
   $('.step4').removeClass("fadeInDown");
   $('.step4').addClass("fadeOutUp");

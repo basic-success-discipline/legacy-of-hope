@@ -96,6 +96,10 @@
   font-size: 13px;
   font-family: "Helvetica Neue Light Italic"; }
 
+.heading {
+  text-align: left;
+  margin-bottom: 20px; }
+
 .step3 {
   text-align: center; }
 
@@ -202,6 +206,9 @@ input:disabled {
   .heading {
     text-align: center; }
 
+  .heading h3 {
+    font-size: 24px; }
+
   .page h1 {
     text-align: center; }
 
@@ -226,6 +233,9 @@ input:disabled {
 
   .heading {
     text-align: center; }
+
+  .heading h3 {
+    font-size: 24px; }
 
   .page h1 {
     text-align: center; }
