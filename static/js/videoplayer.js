@@ -39,7 +39,8 @@
           $('.gc-prompt p.error').show();
 
     }else if (xhr.status ==500){
-      alert("500 error");
+      $('.general-error-wrapper p').html("I'm sorry, there was an error.");
+          $('.general-error-wrapper').css('display', 'table');
     }else if(xhr.status ==200)
       {
 
@@ -74,7 +75,8 @@
 };
 
 xhr.onerror = function() {
-  alert('Woops, there was an error making the request.');
+    $('.general-error-wrapper p').html("I'm sorry, there was an error.");
+    $('.general-error-wrapper').css('display', 'table');
 };
 
 xhr.send();
@@ -328,6 +330,11 @@ function closeGCPrompt(){
   $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "none");
   $('.gc-prompt p.error').hide();
 }
+}
+
+
+function closeGeneralError(){
+  $('.general-error-wrapper').css("display", "none");
 }
 
 function inputGC(){

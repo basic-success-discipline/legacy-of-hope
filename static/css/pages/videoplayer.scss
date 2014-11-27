@@ -554,7 +554,7 @@ $video-menu-bar-height: 50px;
 
 
 
-.gc-prompt-wrapper{
+.gc-prompt-wrapper, .general-error-wrapper{
 	position:absolute;
 	top:0;
 	bottom: 0;
@@ -564,7 +564,12 @@ $video-menu-bar-height: 50px;
 	display:none;
 }
 
-.gc-prompt{
+.general-error-wrapper{
+	min-height: 592px;
+	z-index:3;
+}
+
+.gc-prompt, .general-error{
 	// position: absolute;
 	// background-color: rgba(21,21,21, 0.8);
 	background-color: rgba(59,59,59, 0.9);
@@ -579,8 +584,14 @@ $video-menu-bar-height: 50px;
 	
 }
 
+.general-error{
+	padding: 15px 15px;
+	background-color: rgba(59,59,59,1);
+	box-shadow: -2px 2px 5px #111;
+}
 
-.gc-prompt .fa-close{
+
+.gc-prompt .fa-close, .general-error .fa-close{
 	position:absolute;
 	top: 8px;
 	right: 10px;
@@ -589,7 +600,7 @@ $video-menu-bar-height: 50px;
 	font-size: 12px;
 }
 
-.gc-prompt p{
+.gc-prompt p, .general-error p{
 	margin-top: 0;
 	margin-bottom: 10px;
 	padding-top: 0;
@@ -599,6 +610,10 @@ $video-menu-bar-height: 50px;
 
 	font-size: 14px;
 	text-align:justify;
+}
+
+.general-error p{
+	margin-bottom: 0;
 }
 
 
@@ -733,6 +748,9 @@ img.playbutton.pause:hover{
 	// content: url('../../img/player4.png');
 	background-image: url('../../img/player4.png');
 }
+
+
+
 
 
 @media only screen 
