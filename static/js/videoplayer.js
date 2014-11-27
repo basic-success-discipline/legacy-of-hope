@@ -251,7 +251,7 @@ function updateFSButton(fs){
   }
 }
 function gotoDonate(){
-  window.location.href = "/donate";
+  window.open("/donate");
 }
 
 
@@ -345,21 +345,50 @@ function inputFSGC(){
   }
 }
 
-$('.fs-bar-wrapper').hover(
-  function(e) {
-   $('.video-bar').addClass("show-bars");
+// $('.fs-bar-wrapper').hover(
+//   function(e) {
+//    $('.video-bar').addClass("show-bars");
+//    $('#crowdsurfing-wrapper').addClass("make-cs-opaque");
+//   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').addClass("make-minimized-cs-appear");
+//  },
+//  function(e) {
+//   $('.video-bar').removeClass("show-bars");
+//   $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
+//   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
+
+//   }
+//   );
+
+var timeout = null;
+
+$(".fs-bar-wrapper").on('mousemove', function() {
+  // if($(this).hasClass("full-screen")){
+     $('.video-bar').addClass("show-bars");
+     $('.video-bar').removeClass("nocursor");
    $('#crowdsurfing-wrapper').addClass("make-cs-opaque");
   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').addClass("make-minimized-cs-appear");
- },
- function(e) {
-  $('.video-bar').removeClass("show-bars");
+    if (timeout !== null) {
+        clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(function() {
+        timeout = null;
+          $('.video-bar').removeClass("show-bars");
+          $('.video-bar').addClass("nocursor");
   $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
 
-  }
-  );
 
+        console.log("mouse idle for 3 scond");
+    }, 3000);
+  // }
+});
 
+$("body").mousemove(
+  function(e) {
+   // $(this).removeClass("nocursor");
+   // $(this).addClass("nocursor");
+ });
 
 
 

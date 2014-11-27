@@ -15,6 +15,18 @@
 	display: inline-block;
 	width: 100%;
 }
+
+.full-screen .video-area{
+	cursor: auto;
+		-webkit-transition-delay: 0s; /* Safari */
+	transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+}
+
+.nocursor *{
+	cursor: none !important;
+}
 .video-player{
 	height: 500px;
 	display: inline-block;
@@ -31,6 +43,9 @@
 
 }
 
+.akamai-video{
+	position:absolute;
+}
 
 
 #crowdsurfing-crowd{
@@ -208,7 +223,7 @@ $video-menu-bar-height: 50px;
     		-webkit-transition-delay: 0s; /* Safari */
     		-moz-transition-delay: 0s;
     		-o-transition-delay: 0s;
-    		transition-delay: 0s;  
+    		transition-delay: 0s;  	
     	}
     }
 
