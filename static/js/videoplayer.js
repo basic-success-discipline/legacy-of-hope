@@ -33,12 +33,22 @@
 
   // Response handlers.
   xhr.onload = function() {
-    var text = xhr.responseText;
-    var data = JSON.parse(text);
-    media=[
-    {
-      autoplay: true,
-      title: "Demo Live Stream",
+    if (xhr.status==400){
+
+          $('.gc-prompt p.error').html("I'm sorry, your code is invalid!");
+          $('.gc-prompt p.error').show();
+
+    }else if (xhr.status ==500){
+      alert("500 error");
+    }else if(xhr.status ==200)
+      {
+
+      var text = xhr.responseText;
+      var data = JSON.parse(text);
+      media=[
+      {
+        autoplay: true,
+        title: "Demo Live Stream",
       // poster: '/akamai/resources/eventmanagement/waiting_slate.png',
       temporalType: "live",
       controls: {
@@ -55,16 +65,19 @@
     }
     ];
 
-
+    if(ang==2){
+      unlockPremium();
+    }
     setStreamButton(ang);
     callback(media);
-  };
+  }
+};
 
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
+xhr.onerror = function() {
+  alert('Woops, there was an error making the request.');
+};
 
-  xhr.send();
+xhr.send();
 }
 
 
@@ -198,10 +211,10 @@ amp.setVolume(value/vfactor);
 
 function mute(){
 // Mute the video
-    amp.mute();
-    $('.volumebutton').removeClass('fa-volume-up');
-    $('.volumebutton').addClass('fa-volume-off');
-    $('.range input').attr('value','0');
+amp.mute();
+$('.volumebutton').removeClass('fa-volume-up');
+$('.volumebutton').addClass('fa-volume-off');
+$('.range input').attr('value','0');
 }
 
 function unmute(){
@@ -269,9 +282,14 @@ if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent
   $(".volume .range input").addClass("ie");
 }
 
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+ $('.fs-gc-prompt p').html("To view the VIP Stage, please exit fullscreen and enter your Premium Code. If you do not have a code yet, simply donate to the Legacy of Hope and receive your free Code in your email!");
+  $('.fs-gc-prompt .gc-enter').hide();
+}
+
 $('.gc-text').watermark("paste premium code here");
 
- document.querySelector('body').webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+document.querySelector('body').webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
 
 
 setStreamButton(angle);
@@ -298,32 +316,28 @@ function gcPrompt(){
     $('.fs-gc-prompt').css("display", "table");
   }else{
 
-  $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "table");
+    $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "table");
   }
 }
 function closeGCPrompt(){
  if($("body").hasClass("full-screen")){
-    $('.fs-gc-prompt').css("display", "none");
-  }else{
+  $('.fs-gc-prompt').css("display", "none");
+  $('.gc-prompt p.error').hide();
+}else{
 
   $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "none");
-  }
+  $('.gc-prompt p.error').hide();
+}
 }
 
 function inputGC(){
   giftcode = $('.gc-text').val();
-  if(!(giftcode && giftcode !="") || giftcode=="test"){
+  $('.gc-prompt p.error').hide();
+  if(!(giftcode && giftcode !="")){
+    $('.gc-prompt p.error').html("Please enter a gift code.");
     $('.gc-prompt p.error').show();
   }else{
-    $('.premium-stream-locked').css("display", "none");
-    $('.backstageBtn').attr("onclick", "clickVideo(1)");
-    // $('.backstageBtn').html("Backstage Unlocked");
-    $('.backstageBtn .lock').css("display", "none");
-    $('.backstageBtn').css('padding-left', '10px');
-    $('.gc-enter-wrapper').css('display', 'none');
-    $('.backstageBtn.withpngs').addClass('unlocked');
     clickVideo(1);
-    closeGCPrompt();
   }
 }
 
@@ -333,16 +347,19 @@ function inputFSGC(){
   if(!(giftcode && giftcode !="") || giftcode=="test"){
     $('.gc-prompt p.error').show();
   }else{
-    $('.premium-stream-locked').css("display", "none");
+    clickVideo(1);
+  }
+}
+
+function unlockPremium(){
+  $('.premium-stream-locked').css("display", "none");
     $('.backstageBtn').attr("onclick", "clickVideo(1)");
     // $('.backstageBtn').html("Backstage Unlocked");
     $('.backstageBtn .lock').css("display", "none");
     $('.backstageBtn').css('padding-left', '10px');
     $('.gc-enter-wrapper').css('display', 'none');
     $('.backstageBtn.withpngs').addClass('unlocked');
-    clickVideo(1);
     closeGCPrompt();
-  }
 }
 
 // $('.fs-bar-wrapper').hover(
@@ -359,32 +376,32 @@ function inputFSGC(){
 //   }
 //   );
 
-var timeout = null;
+ var timeout = null;
 
-$(".fs-bar-wrapper").on('mousemove', function() {
+ $(".fs-bar-wrapper").on('mousemove', function() {
   // if($(this).hasClass("full-screen")){
-     $('.video-bar').addClass("show-bars");
-     $('.video-bar').removeClass("nocursor");
+   $('.video-bar').addClass("show-bars");
+   $('.fs-bar-wrapper').removeClass("nocursor");
    $('#crowdsurfing-wrapper').addClass("make-cs-opaque");
-  $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').addClass("make-minimized-cs-appear");
-    if (timeout !== null) {
-        clearTimeout(timeout);
-    }
+   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').addClass("make-minimized-cs-appear");
+   if (timeout !== null) {
+    clearTimeout(timeout);
+  }
 
-    timeout = setTimeout(function() {
-        timeout = null;
-          $('.video-bar').removeClass("show-bars");
-          $('.video-bar').addClass("nocursor");
-  $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
-  $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
+  timeout = setTimeout(function() {
+    timeout = null;
+    $('.video-bar').removeClass("show-bars");
+    $('.fs-bar-wrapper').addClass("nocursor");
+    $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
+    $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
 
 
-        console.log("mouse idle for 3 scond");
-    }, 3000);
+    console.log("mouse idle for 3 scond");
+  }, 3000);
   // }
 });
 
-$("body").mousemove(
+ $("body").mousemove(
   function(e) {
    // $(this).removeClass("nocursor");
    // $(this).addClass("nocursor");
@@ -392,7 +409,7 @@ $("body").mousemove(
 
 
 
-function updateVideoBars(csminimized){
+ function updateVideoBars(csminimized){
   if(csminimized){
     $('.fs-menu').css('width', "100%");
     // $('.cs-minimized-hoverfix').show();
@@ -418,38 +435,38 @@ function setStreamButton(ang){
 
 
 document.addEventListener(
-    'CrowdSurfingControlEvent',
-    function checkIfIsInFullScreen(param) {
-        if (param.data[0] === 'fullScreen' && param.data[1] === true) {
-            
-            updateFSButton(true);
-            updateGCPrompt(true);
-        } else if (param.data[0] === 'fullScreen' && param.data[1] === false) {
-           
-            updateFSButton(false);
-            updateGCPrompt(false);
-        } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
-          alert("minimized");
-          $(".fs-menu").removeClass("cs-expanded");
+  'CrowdSurfingControlEvent',
+  function checkIfIsInFullScreen(param) {
+    if (param.data[0] === 'fullScreen' && param.data[1] === true) {
+
+      updateFSButton(true);
+      updateGCPrompt(true);
+    } else if (param.data[0] === 'fullScreen' && param.data[1] === false) {
+
+      updateFSButton(false);
+      updateGCPrompt(false);
+    } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
+      alert("minimized");
+      $(".fs-menu").removeClass("cs-expanded");
           // CrowdSurfing has been minimized
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "maximizeCSWidget") {
           $(".fs-menu").addClass("cs-expanded");
           // CrowdSurfing has been maximized
         } else if(param.data[0] === 'fullScreen' && $("body").hasClass("full-screen")){
 
-            updateFSButton(false);
-            updateGCPrompt(false);
+          updateFSButton(false);
+          updateGCPrompt(false);
         }else if(param.data[0] === 'fullScreen' && !$("body").hasClass("full-screen")){
-            updateFSButton(true);
-            updateGCPrompt(true);
+          updateFSButton(true);
+          updateGCPrompt(true);
         }
-    },
-    false
-);
+      },
+      false
+      );
 
 
 
-$(".gc-text").mouseup(function(e){
+ $(".gc-text").mouseup(function(e){
   e.preventDefault();
 });
 
@@ -480,36 +497,36 @@ function createCORSRequest(method, url) {
 // Detecting attribute changes -- WHERE HAS THIS BEEN ALL OF MY LIFE!??!?!
 
 $(function() {
-(function($) {
+  (function($) {
     var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 
     $.fn.attrchange = function(callback) {
-        if (MutationObserver) {
-            var options = {
-                subtree: false,
-                attributes: true
-            };
+      if (MutationObserver) {
+        var options = {
+          subtree: false,
+          attributes: true
+        };
 
-            var observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(e) {
-                    callback.call(e.target, e.attributeName);
-                });
-            });
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(e) {
+            callback.call(e.target, e.attributeName);
+          });
+        });
 
-            return this.each(function() {
-                observer.observe(this, options);
-            });
+        return this.each(function() {
+          observer.observe(this, options);
+        });
 
-        }
+      }
     }
-})(jQuery);
+  })(jQuery);
 
 //Now you need to append event listener
 $('.video-area').attrchange(function(attrName) {
 
-    if(attrName=='class'){
-            updateVideoBars($('.video-area').hasClass('cs-fullscreen-minimized'));
-    }
+  if(attrName=='class'){
+    updateVideoBars($('.video-area').hasClass('cs-fullscreen-minimized'));
+  }
 
 });
 });
