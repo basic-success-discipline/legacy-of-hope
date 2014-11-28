@@ -122,7 +122,7 @@
 	   		</states>
 	   	</eventmanagement>
 		<mediaanalytics type="Object">
-			<config type="String">http://ma463-r.analytics.edgesuite.net/config/beacon-5712.xml</config>
+			<config type="String">http://ma463-r.analytics.edgesuite.net/config/beacon-7614.xml</config>
 			<plugin type="Object">
 				<js type="String">http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js</js>
 				<swf type="String">http://79423.analytics.edgesuite.net/csma/plugin/csma.swf</swf>
