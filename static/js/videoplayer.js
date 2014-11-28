@@ -4,7 +4,7 @@
 
 
  var amp, csfs,
- giftcode = "",
+ giftcode = getQueryVariable("giftcode"),
  media = [],
  isPlaying = true,
  angle = 0,
@@ -19,10 +19,12 @@
 
  function getMedia(ang, callback) {
    var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
-   if(giftcode && giftcode !="" && ang == 2){
+   if(giftcode && giftcode !=""){
     url= url+"&giftcode="+giftcode;
   }else if (ang==2){
-    alert("need a giftcode!");
+    alert("You need a giftcode to view the premium stream!");
+    getMedia(1, callback);
+    return;
   }
 
   var xhr = createCORSRequest('GET', url);
@@ -35,12 +37,12 @@
   xhr.onload = function() {
     if (xhr.status==400){
 
-          $('.gc-prompt p.error').html("I'm sorry, your code is invalid!");
-          $('.gc-prompt p.error').show();
+          $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
+          $('.general-error-wrapper').css('display', 'table');
 
     }else if (xhr.status ==500){
       $('.general-error-wrapper p').html("I'm sorry, there was an error.");
-          $('.general-error-wrapper').css('display', 'table');
+      $('.general-error-wrapper').css('display', 'table');
     }else if(xhr.status ==200)
       {
 
@@ -272,11 +274,10 @@ function gotoDonate(){
 
 $(document).ready(function() {
 
- if(!(giftcode && giftcode !="")){
   $('.backstageBtn').attr("onclick", "gcPrompt()");
-
-}else{
-  $('.backstageBtn').attr("onclick", "clickVideo(1)");
+ if(giftcode && giftcode !=""){
+  clickVideo(1);
+ 
 }
 
 if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0){
@@ -324,11 +325,9 @@ function gcPrompt(){
 function closeGCPrompt(){
  if($("body").hasClass("full-screen")){
   $('.fs-gc-prompt').css("display", "none");
-  $('.gc-prompt p.error').hide();
 }else{
 
   $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "none");
-  $('.gc-prompt p.error').hide();
 }
 }
 
@@ -339,10 +338,9 @@ function closeGeneralError(){
 
 function inputGC(){
   giftcode = $('.gc-text').val();
-  $('.gc-prompt p.error').hide();
   if(!(giftcode && giftcode !="")){
-    $('.gc-prompt p.error').html("Please enter a gift code.");
-    $('.gc-prompt p.error').show();
+    $('.general-error-wrapper p').html("Please enter a gift code.");
+          $('.general-error-wrapper').css('display', 'table');
   }else{
     clickVideo(1);
   }
@@ -351,8 +349,9 @@ function inputGC(){
 
 function inputFSGC(){
   giftcode = $('.fs-gc-text').val();
-  if(!(giftcode && giftcode !="") || giftcode=="test"){
-    $('.gc-prompt p.error').show();
+  if(!(giftcode && giftcode !="")){
+    $('.general-error-wrapper p').html("Please enter a gift code.");
+          $('.general-error-wrapper').css('display', 'table');
   }else{
     clickVideo(1);
   }
@@ -538,5 +537,18 @@ $('.video-area').attrchange(function(attrName) {
 });
 });
 
+
+
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+}
 
 
