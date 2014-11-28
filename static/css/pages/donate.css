@@ -81,7 +81,7 @@
   line-height: 1;
   padding-top: 5px; }
 
-.part2, .part3, .part4 {
+.part:not(.part1) {
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
@@ -90,7 +90,7 @@
   padding-top: 50px;
   display: none; }
 
-.step2, .step3, .step4 {
+.step:not(.step1) {
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
@@ -202,7 +202,32 @@ form .validate {
 .confirm-buttons-container .button {
   max-width: 300px;
   width: 100%;
+  display: inline-block;
+  opacity: 0.5;
+  cursor: default; }
+
+.confirm-buttons-container .button.enabled {
+  opacity: 1;
+  cursor: pointer; }
+
+.confirm-buttons-container .button:hover {
+  background-color: #358fe3; }
+
+.confirm-buttons-container .button.enabled:hover {
+  background-color: #4aae39; }
+
+.code-wrapper {
+  text-align: center; }
+
+.code-wrapper p {
   display: inline-block; }
+
+p.giftcode {
+  color: #4aae39;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 25px;
+  cursor: pointer; }
 
 .prefooter {
   display: none; }

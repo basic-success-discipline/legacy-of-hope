@@ -1,7 +1,9 @@
 
 
 $('.donatepage .step1 .buttons .button').click(function(){
-   $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
+  if(!($('input[name="ccamount"]').is(":disabled")) ){
+     $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
+  }
   $('.part').addClass("collapse");
   $('.part2').removeClass("collapse");
   $('.part2').show();
@@ -78,7 +80,14 @@ cccvc.payment('formatCardCVC');
 var confirmCC = function(confirm){
   if(confirm){
     // sendCC(function(){
-    alert("you did it!");
+      $('.part').addClass("collapse");
+      $('.part5').removeClass("collapse");
+     $('.part5').show();
+     $('.part5').removeClass("fadeOutUp");
+  $('.part5').addClass("fadeInDown");
+  $('.confirm-buttons-container .button').removeClass("enabled");
+  $('.confirm-buttons-container .button').removeAttr("onclick");
+
     // });
   }else{
   $('.part4').removeClass("fadeInDown");
@@ -218,7 +227,10 @@ $('.validate p').html("");
 
 }
 
-
+var gotoVideoPlayer = function(){
+  var giftcode="cRFeAcAxLN4=";
+  window.location.href="/videoplayer?giftcode=" + giftcode;
+}
 
 // CORS STUFF
 

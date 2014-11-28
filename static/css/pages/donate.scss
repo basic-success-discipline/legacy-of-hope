@@ -118,7 +118,7 @@
 }
 
 
-.part2, .part3, .part4{
+.part:not(.part1){
 		transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
@@ -127,12 +127,11 @@
 	padding-top: 50px;
 	display: none;
 }
-.step2, .step3, .step4{
+.step:not(.step1){
 		transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
-	// height: 0;
 	overflow: hidden;
 	clear:both;
 }
@@ -261,9 +260,38 @@ input:disabled{
  	max-width: 300px;
  	width: 100%;
  	display: inline-block;
+ 	opacity: 0.5;
+ 	cursor: default;
+ }
 
+ .confirm-buttons-container .button.enabled{
+ 	opacity: 1;
+ 	cursor: pointer;
+ }
+
+ .confirm-buttons-container .button:hover{
+	background-color: $loh-blue;
+ }
+ .confirm-buttons-container .button.enabled:hover{
+	background-color: $loh-green;
+ }
+
+ .code-wrapper{
+	text-align:center;
 
  }
+
+.code-wrapper p{
+	display: inline-block;
+}
+p.giftcode{
+	color: $loh-green;
+	text-align:center;
+	font-family: "Helvetica Neue";
+	font-size: 25px;
+	cursor:pointer;
+}
+
 
 
 
@@ -280,6 +308,8 @@ input:disabled{
 .wrapper-inner{
 	margin-bottom: -$foot-height !important;
 }
+
+
 
 
 
