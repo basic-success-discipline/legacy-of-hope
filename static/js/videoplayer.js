@@ -15,14 +15,15 @@
 
 
 
-
+// This function is called whenever a new stream is initiated (such as on page load and switching streams)
 
  function getMedia(ang, callback) {
    var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
    if(giftcode && giftcode !=""){
     url= url+"&giftcode="+giftcode;
   }else if (ang==2){
-    alert("You need a giftcode to view the premium stream!");
+    $('.general-error-wrapper p').html("You need a gift code to view the premium stream!");
+     $('.general-error-wrapper').css('display', 'table');
     getMedia(1, callback);
     return;
   }
@@ -36,7 +37,6 @@
   // Response handlers.
   xhr.onload = function() {
     if (xhr.status==400){
-
           $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
           $('.general-error-wrapper').css('display', 'table');
 
