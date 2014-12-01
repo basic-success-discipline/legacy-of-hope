@@ -91,15 +91,21 @@
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	 	opacity: 0.5;
+ 	cursor: default;
 
    box-shadow: 1px 1px 2px #888888;
    -webkit-box-shadow: 1px 1px 2px #888888; 
    -moz-box-shadow: 1px 1px 2px #888888; 
 }
-
-.button:hover{
+.button.enabled{
+ 	opacity: 1;
+ 	cursor: pointer;
+ }
+.button.enabled:hover{
 	background-color: $loh-green;
 }
+
 .button h5{
 	margin-bottom: 0;
 	color: white;
@@ -120,6 +126,8 @@
 	padding-top: 50px;
 	display: none;
 }
+
+
 .step:not(.step1){
 		transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -260,20 +268,8 @@ input:disabled{
  .submit.button{
  	max-width:300px;
  	margin-top: 15px;
- 	opacity: 0.5;
- 	cursor: default;
- }
- .submit.button:hover{
-	background-color: $loh-blue;
  }
 
- .submit.button.enabled{
- 	opacity: 1;
- 	cursor: pointer;
- }
- .submit.button.enabled:hover{
-	background-color: $loh-green;
- }
 
 .confirm{
 	width: 100%;
@@ -423,8 +419,11 @@ and (max-width: $phone-landscape - 1px)  {
 
  .part.collapse .heading{
  	color: rgb(200,200,200)  !important;
- 	cursor: pointer;	
+	
  }
+ .part.collapse.enabled .heading{
+ 	 	cursor: pointer;
+ 	 }
 
 
  form input{
@@ -485,9 +484,11 @@ and (max-width: $tablet-portrait - 1px)  {
  }
 
  .part.collapse .heading{
- 	color: rgb(200,200,200)  !important;
- 	cursor: pointer;	
+ 	color: rgb(200,200,200)  !important;	
  }
+  .part.collapse.enabled .heading{
+ 	 	cursor: pointer;
+ 	 }
 
 
 .page .validate{

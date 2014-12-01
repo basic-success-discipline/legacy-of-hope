@@ -1,26 +1,27 @@
 
 
-$('.donatepage .step1 .button').click(function(){
+$('.donatepage .step1 .button.enabled').click(function(){
   if(!($('input[name="ccamount"]').is(":disabled")) ){
-     $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
-     $('.ccamount p').html("Amount: " + $(this).attr('amount'));
-  }
-  $('.part').addClass("collapse");
-  $('.part2').removeClass("collapse");
-  $('.part2').show();
-  $('.part2').addClass("fadeInDown");
+   $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
+   $('.ccamount p').html("Amount: " + $(this).attr('amount'));
+   $('.howmuch').html($(this).attr('amount'));
+ }
+ $('.part').addClass("collapse");
+ $('.part2').removeClass("collapse");
+ $('.part2').show();
+ $('.part2').addClass("fadeInDown");
 
-  if($(this).hasClass("option3")){
-    $('input[name="ccamount"]').show();
-    $('.ccamount').hide();
-  }else{
-    $('input[name="ccamount"]').hide();
-    $('.ccamount').show();
-  }
+ if($(this).hasClass("option3")){
+  $('input[name="ccamount"]').show();
+  $('.ccamount').hide();
+}else{
+  $('input[name="ccamount"]').hide();
+  $('.ccamount').show();
+}
 });
 
 
-$('.donatepage .step2 .button.ccoption').click(function(){
+$('.donatepage .step2 .button.ccoption.enabled').click(function(){
   $('.part').addClass("collapse");
   $('.part3').removeClass("collapse");
   $('.part3').show();
@@ -28,16 +29,16 @@ $('.donatepage .step2 .button.ccoption').click(function(){
 });
 
 $('.part .heading').click(function(){
-  if($(this).parent().hasClass("collapse")){
+  if($(this).parent().hasClass("collapse") && $(this).parent().hasClass("enabled")){
     $('.part').addClass("collapse");
     $(this).parent().removeClass("collapse");
   }
-})
+});
 
 $('.submit.button.enabled').click(function(){
   if($(this).hasClass("enabled")){
-  submitCC();
-}
+    submitCC();
+  }
 
 });
 
@@ -89,27 +90,29 @@ var confirmCC = function(confirm){
     // sendCC(function(){
       $('.part').addClass("collapse");
       $('.part5').removeClass("collapse");
-     $('.part5').show();
-     $('.part5').removeClass("fadeOutUp");
-  $('.part5').addClass("fadeInDown");
-  $('.confirm-buttons-container .button').removeClass("enabled");
-  $('.confirm-buttons-container .button').removeAttr("onclick");
+      $('.part5').show();
+      $('.part5').removeClass("fadeOutUp");
+      $('.part5').addClass("fadeInDown");
+      $('.confirm-buttons-container .button').removeClass("enabled");
+      $('.confirm-buttons-container .button').removeAttr("onclick");
+    $('.part4').removeClass("enabled");
 
     // });
-  }else{
+}else{
   $('.part4').removeClass("fadeInDown");
   $('.part4').addClass("fadeOutUp");
   $('.part4').hide();
   // $('.part').addClass("collapse");
   $('.part3').removeClass("collapse");
   $(".active form input").removeAttr('disabled');
-  $('.submit.button').addClass("enabled");
-  }
+  $('.button').addClass("enabled");
+  $('.part').addClass("enabled");
+}
 }
 
 var submitCC =  function(){
 
-var valid = validateCC();
+  var valid = validateCC();
 
   if(valid){
     CreditCardDonation = {
@@ -130,7 +133,8 @@ var valid = validateCC();
 
     var cccensored = "************" + CreditCardDonation.CreditCard.Number.substr(CreditCardDonation.CreditCard.Number.length - 4);
     $(".active form input").attr('disabled','disabled');
-    $('.submit.button').removeClass("enabled");
+    $('.button').removeClass("enabled");
+    $('.part').removeClass("enabled");
     $('.step4 .cfamount p span').html("$" + CreditCardDonation.Amount + " (USD)");
     $('.step4 .cfnumber p span').html(cccensored);
     $('.step4 .cftype p span').html(CreditCardDonation.CreditCard.CCType);
@@ -138,16 +142,19 @@ var valid = validateCC();
     $('.step4 .cflname p span').html(CreditCardDonation.CreditCard.LastName);
     $('.step4 .cfexpiry p span').html(CreditCardDonation.CreditCard.ExpireMonth + " / " + CreditCardDonation.CreditCard.ExpireYear);
     $('.step4 .cfcvc p span').html(CreditCardDonation.CreditCard.CVV);
-     $('.step4 .cfemail p span').html(CreditCardDonation.Email);
+    $('.step4 .cfemail p span').html(CreditCardDonation.Email);
 
-      $('.part').addClass("collapse");
-      $('.part4').removeClass("collapse");
-     $('.part4').show();
-     $('.part4').removeClass("fadeOutUp");
-  $('.part4').addClass("fadeInDown");
-
+    $('.part').addClass("collapse");
+    $('.part4').removeClass("collapse");
+    $('.part4').show();
+    $('.part4').removeClass("fadeOutUp");
+    $('.part4').addClass("fadeInDown");
+    $('.part4 .button').addClass("enabled");
+    $('.part5 .button').addClass("enabled");
+    $('.part4').addClass("enabled");
+    $('.part5').addClass("enabled");
   }
- return false;
+  return false;
 }
 
 
@@ -155,17 +162,17 @@ var valid = validateCC();
 
 
 var validateCC =  function(){
-  
-$('.validate-container').hide();
-$('.validatemessage').hide();
-$('.validate p').html("");
+
+  $('.validate-container').hide();
+  $('.validatemessage').hide();
+  $('.validate p').html("");
 
   valid=true;
 
   var money = /^\d+(?:\.\d{0,2})$/;
-   if( !ccamount.val() || ccamount.val() == ""){
+  if( !ccamount.val() || ccamount.val() == ""){
     valid=false;
-      vamount.html("You must enter how much you would like to donate");
+    vamount.html("You must enter how much you would like to donate");
   }
 
 
@@ -178,19 +185,19 @@ $('.validate p').html("");
     var a = $.payment.cardType(ccnumber.val());
     var b= acceptedCCTypes;
     if(!(a == b[0] || a == b[1] || a == b[2] || a == b[3])){
-    valid=false;
-    vnumber.html("Credit card must be Visa, Mastercard, Discover, or American Express.");
+      valid=false;
+      vnumber.html("Credit card must be Visa, Mastercard, Discover, or American Express.");
+    }
   }
-}
 
   if( !ccfname.val() || ccfname.val() == ""){
     valid=false;
-      vfname.html("You must enter your first name.");
+    vfname.html("You must enter your first name.");
   }
 
-   if( !cclname.val() || cclname.val() == ""){
+  if( !cclname.val() || cclname.val() == ""){
     valid=false;
-      vlname.html("You must enter your last name.");
+    vlname.html("You must enter your last name.");
   }
   if (ccexpiry.val().split("/").length == 2){
     var validexpiry = $.payment.validateCardExpiry(ccexpiry.val().split("/")[0].trim(),ccexpiry.val().split("/")[1].trim() );
@@ -199,8 +206,8 @@ $('.validate p').html("");
       vexpiry.html("You must enter a valid expiration date.");
     }
   }else{
-      valid=false;
-      vexpiry.html("You must enter a valid expiration date.");
+    valid=false;
+    vexpiry.html("You must enter a valid expiration date.");
   }
 
   var validcvc = $.payment.validateCardCVC(cccvc.val());
@@ -211,7 +218,7 @@ $('.validate p').html("");
 
 
 
-   var validemail = ccemail.val().match(/.+@.+\..+/i);
+  var validemail = ccemail.val().match(/.+@.+\..+/i);
   if (!validemail) {
     valid=false;
     vemail.html("You must enter a valid email address");
@@ -219,12 +226,12 @@ $('.validate p').html("");
 
   if(!valid){
     $('.validate-container').css('display', 'inline');
-     $('.validate p').css('display', 'block');
-     $('.form-container').removeClass('six');
+    $('.validate p').css('display', 'block');
+    $('.form-container').removeClass('six');
      // $('.card-container').removeClass('six');
-       $('.form-container').addClass('three');
+     $('.form-container').addClass('three');
      // $('.card-container').addClass('four');
-  } else{
+   } else{
     $('.validate-container').css('display', 'none');
     $('.validate p').css('display', 'none');
     $('.form-container').removeClass('three');
@@ -243,14 +250,14 @@ var gotoVideoPlayer = function(){
 
 
 function sendCC(callback) {
-   var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
+ var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
 
 
-  var xhr = createCORSRequest('POST', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
+ var xhr = createCORSRequest('POST', url);
+ if (!xhr) {
+  alert('CORS not supported');
+  return;
+}
 
   // Response handlers.
   xhr.onload = function() {
@@ -287,12 +294,12 @@ function createCORSRequest(method, url) {
 
 
 function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-    }
-    return true;
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    return false;
+  }
+  return true;
 }
 
 

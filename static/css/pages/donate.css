@@ -62,11 +62,17 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  opacity: 0.5;
+  cursor: default;
   box-shadow: 1px 1px 2px #888888;
   -webkit-box-shadow: 1px 1px 2px #888888;
   -moz-box-shadow: 1px 1px 2px #888888; }
 
-.button:hover {
+.button.enabled {
+  opacity: 1;
+  cursor: pointer; }
+
+.button.enabled:hover {
   background-color: #4aae39; }
 
 .button h5 {
@@ -205,19 +211,7 @@ form .validate {
 
 .submit.button {
   max-width: 300px;
-  margin-top: 15px;
-  opacity: 0.5;
-  cursor: default; }
-
-.submit.button:hover {
-  background-color: #358fe3; }
-
-.submit.button.enabled {
-  opacity: 1;
-  cursor: pointer; }
-
-.submit.button.enabled:hover {
-  background-color: #4aae39; }
+  margin-top: 15px; }
 
 .confirm {
   width: 100%;
@@ -328,7 +322,9 @@ p.giftcode {
     display: none !important; }
 
   .part.collapse .heading {
-    color: #c8c8c8 !important;
+    color: #c8c8c8 !important; }
+
+  .part.collapse.enabled .heading {
     cursor: pointer; }
 
   form input {
@@ -374,7 +370,9 @@ p.giftcode {
     display: none !important; }
 
   .part.collapse .heading {
-    color: #c8c8c8 !important;
+    color: #c8c8c8 !important; }
+
+  .part.collapse.enabled .heading {
     cursor: pointer; }
 
   .page .validate {
