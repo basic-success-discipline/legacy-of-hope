@@ -30,7 +30,8 @@
 
   var xhr = createCORSRequest('GET', url);
   if (!xhr) {
-    alert('CORS not supported');
+    $('.general-error-wrapper p').html("I'm sorry, your browser does not support CORS. Please use another browser to view the concert.");
+     $('.general-error-wrapper').css('display', 'table');
     return;
   }
 
@@ -69,8 +70,10 @@
     ];
 
     if(ang==2){
+      //updates the UI for toggling between streams.
       unlockPremium();
     }
+
     setStreamButton(ang);
     callback(media);
   }
