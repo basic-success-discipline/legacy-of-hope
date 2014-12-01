@@ -3,13 +3,20 @@
 $('.donatepage .step1 .button').click(function(){
   if(!($('input[name="ccamount"]').is(":disabled")) ){
      $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
+     $('.ccamount p').html("Amount: " + $(this).attr('amount'));
   }
   $('.part').addClass("collapse");
   $('.part2').removeClass("collapse");
   $('.part2').show();
   $('.part2').addClass("fadeInDown");
 
-
+  if($(this).hasClass("option3")){
+    $('input[name="ccamount"]').show();
+    $('.ccamount').hide();
+  }else{
+    $('input[name="ccamount"]').hide();
+    $('.ccamount').show();
+  }
 });
 
 
