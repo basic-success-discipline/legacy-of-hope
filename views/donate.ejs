@@ -19,97 +19,101 @@
       <% include partials/loh-menu %>
 
       <div class="page container">
-        
-      <div class="part part1">
-            <div class="heading twelve columns heading1">
-              <h1 >Make a Donation</h1>
-            </div>
-
-            <div class="step step1">
-              <!-- <h2>Legacy<em>Of</em>Hope</h2> -->
-              <div class="eight columns">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              <div class="buttons four columns">
-                <div class="button option1" amount="$5"><h5>$5</h5></div>
-                <div class="button option2" amount="$50"><h5>$50</h5></div>
-                <div class="button option3" amount=""><h5>Other amount</h5></div>
-                <p>Paypal & credit card</p>
-              </div>
-              
-            </div>
-            <hr>
-            </div>
-
-            <div class="part part2">
-            <div class="heading twelve columns heading2">
-                <h3>Select Method</h3>
-              </div>
-            <div class="step step2 animated fadeInDown">
-              <div class ="six columns paypal">
-               <div class="button paypaloption"><h5>Paypal</h5></div>
-             </div>
-             <div class ="six columns cc">
-              <div class="button ccoption"><h5>Credit Card</h5></div>
-            </div>
-          </div>
-          <hr>
-          </div>
-
-
-<div class="part part3">
-          <div class="heading twelve columns heading3">
-                <h3>Enter Credit Card Information</h3>
-          </div>
-          <div class="step step3 animated fadeInDown">
-          
-           <div class="six columns ccard-container">
-             <div class="card-wrapper"></div>
-             </div>
-             <div class="six columns form-container active">
-              <form >
-                <input placeholder="Amount (USD)" type="text" name="ccamount" onkeypress="return isNumber(event)" autocomplete="off"> <div class="validate vamount"><p></p></div>
-                <input placeholder="Card number" type="text" name="ccnumber" autocomplete="off"><div class="validate vnumber"><p></p></div>
-                <input placeholder="First name"type="text" name="ccfirst-name" autocomplete="off"><div class="validate vfname"><p></p></div>
-                <input placeholder="Last name" type="text" name="cclast-name" autocomplete="off"> <div class="validate vlname"><p></p></div>
-                <input placeholder="MM/YY" type="text" name="ccexpiry" autocomplete="off"><div class="validate vexpiry"><p></p></div>
-                <input placeholder="CVC (code on back of card)" type="text" name="cccvc" autocomplete="off"><div class="validate vcvc"><p></p></div>
-                <input placeholder="Email address" type="text" name="ccemail" autocomplete="off"><div class="validate vemail"><p></p></div>
-
-                <div class="button submit enabled" ><h5>Submit</h5></div>
-              </form>
-          </div>
-          <div class="three columns validate-container ">
-            <div class="validate vamount"><p></p></div>
-            <div class="validate vnumber"><p></p></div>
-            <div class="validate vfname"><p></p></div>
-            <div class="validate vlname"><p></p></div>
-            <div class="validate vexpiry"><p></p></div>
-            <div class="validate vcvc"><p></p></div>
-            <div class="validate vemail"><p></p></div>
-            <div class="validate vsubmit"><p></p></div>
-          </div>
-          
-        </div>
-        <hr>
+        <div class="twelve columns">
+          <h1>Make a Donation</h1>
         </div>
 
-        <div class="part part4">
-         <div class="heading twelve columns heading4">
-                <h3>Confirm Credit Card Payment</h3>
-              </div>
-        <div class="step4 step animated fadeInDown">
-       
-           <div class="eight columns confirm-container offset-by-two">
-            <div class="confirm cfamount"><p><b>Amount: </b><span></span></p></div>
-            <div class="confirm cfnumber"><p><b>Credit Card Number: </b><span></span></p></div>
-            <div class="confirm cftype"><p><b>Type: </b><span></span></p></div>
-            <div class="confirm cffname"><p><b>First Name: </b><span></span></p></div>
-            <div class="confirm cflname"><p><b>Last Name: </b><span></span></p></div>
-            <div class="confirm cfexpiry"><p><b>Expiration Date: </b><span></span></p></div>
-            <div class="confirm cfcvc"><p><b>CVC: </b><span></span></p></div>
-            <div class="confirm cfemail"><p><b>Email: </b><span></span></p></div>
+        <div class="eight columns">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+
+
+        <div class="part part1 four columns">
+          <div class="heading heading1">
+
+            <h3><i class="fa fa-angle-down caret"></i>Select amount</h3>
+
           </div>
+        <div class="step step1">
+          <div class="button option1" amount="$5"><h5>$5</h5></div>
+          <div class="button option2" amount="$50"><h5>$50</h5></div>
+          <div class="button option3" amount=""><h5>Other amount</h5></div>
+          <p>Paypal & credit card</p>
+        </div>
+
+      </div>
+      <hr>
+
+      <div class="part part2">
+        <div class="heading twelve columns heading2">
+          <h3><i class="fa fa-angle-down caret"></i>Select Method</h3>
+        </div>
+        <div class="step step2 animated fadeInDown">
+          <div class ="six columns paypal">
+           <div class="button paypaloption"><h5>Paypal</h5></div>
+         </div>
+         <div class ="six columns cc">
+          <div class="button ccoption"><h5>Credit Card</h5></div>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+
+    <div class="part part3">
+      <div class="heading twelve columns heading3">
+        <h3><i class="fa fa-angle-down caret"></i>Enter Credit Card Information</h3>
+      </div>
+      <div class="step step3 animated fadeInDown">
+
+       <div class="six columns ccard-container">
+         <div class="card-wrapper"></div>
+       </div>
+       <div class="six columns form-container active">
+        <form >
+          <input placeholder="Amount (USD)" type="text" name="ccamount" onkeypress="return isNumber(event)" autocomplete="off"> <div class="validate vamount"><p></p></div>
+          <input placeholder="Card number" type="text" name="ccnumber" autocomplete="off"><div class="validate vnumber"><p></p></div>
+          <input placeholder="First name"type="text" name="ccfirst-name" autocomplete="off"><div class="validate vfname"><p></p></div>
+          <input placeholder="Last name" type="text" name="cclast-name" autocomplete="off"> <div class="validate vlname"><p></p></div>
+          <input placeholder="MM/YY" type="text" name="ccexpiry" autocomplete="off"><div class="validate vexpiry"><p></p></div>
+          <input placeholder="CVC (code on back of card)" type="text" name="cccvc" autocomplete="off"><div class="validate vcvc"><p></p></div>
+          <input placeholder="Email address" type="text" name="ccemail" autocomplete="off"><div class="validate vemail"><p></p></div>
+
+          <div class="button submit enabled" ><h5>Submit</h5></div>
+        </form>
+      </div>
+      <div class="three columns validate-container ">
+        <div class="validate vamount"><p></p></div>
+        <div class="validate vnumber"><p></p></div>
+        <div class="validate vfname"><p></p></div>
+        <div class="validate vlname"><p></p></div>
+        <div class="validate vexpiry"><p></p></div>
+        <div class="validate vcvc"><p></p></div>
+        <div class="validate vemail"><p></p></div>
+        <div class="validate vsubmit"><p></p></div>
+      </div>
+
+    </div>
+    <hr>
+  </div>
+
+  <div class="part part4">
+   <div class="heading twelve columns heading4">
+    <h3><i class="fa fa-angle-down caret"></i>Confirm Credit Card Payment</h3>
+  </div>
+  <div class="step4 step animated fadeInDown">
+
+   <div class="eight columns confirm-container offset-by-two">
+    <div class="confirm cfamount"><p><b>Amount: </b><span></span></p></div>
+    <div class="confirm cfnumber"><p><b>Credit Card Number: </b><span></span></p></div>
+    <div class="confirm cftype"><p><b>Type: </b><span></span></p></div>
+    <div class="confirm cffname"><p><b>First Name: </b><span></span></p></div>
+    <div class="confirm cflname"><p><b>Last Name: </b><span></span></p></div>
+    <div class="confirm cfexpiry"><p><b>Expiration Date: </b><span></span></p></div>
+    <div class="confirm cfcvc"><p><b>CVC: </b><span></span></p></div>
+    <div class="confirm cfemail"><p><b>Email: </b><span></span></p></div>
+  </div>
         <!--   <div class="six columns confirm-container">
             <div class="confirm cfamount"><p></p></div>
             <div class="confirm cfnumber"><p></p></div>
@@ -119,7 +123,7 @@
             <div class="confirm cfcvc"><p></p></div>
           </div> -->
           <div class="twelve columns payment-error-container">
-          <p class="payment-error">I'm sorry, your credit card was declined.</p>
+            <p class="payment-error">I'm sorry, your credit card was declined.</p>
           </div>
           <div class="twelve columns confirm-buttons-container">
             <div class="button confirmBtn enabled" onclick="confirmCC(true)"><h5>Confirm</h5></div>
@@ -128,34 +132,34 @@
           
         </div>
         <hr>
-        </div>
+      </div>
 
 
-        <div class="part part5">
-         <div class="heading twelve columns heading5">
-                <h1>Donation Complete</h1>
-              </div>
-        <div class="step5 step animated fadeInDown">
+      <div class="part part5">
+       <div class="heading twelve columns heading5">
+        <h1><i class="fa fa-angle-down caret"></i>Donation Complete</h1>
+      </div>
+      <div class="step5 step animated fadeInDown">
 
-         <div class="eight columns">
-                <p>Thank you for donating to the Legacy of Hope Foundation! Please enjoy backstage access to the concert and HD-quality streaming by using this free gift code. This gift code has also been sent to the email address you provided.</p>
-              </div>
-          <div class="four columns code-wrapper">
-                <p>Gift Code: &nbsp</p>
-                <p class="giftcode" onclick="gotoVideoPlayer()">nISna0n</p>
-                <div class="button returnBtn" onclick="gotoVideoPlayer()"><h5>Watch the concert</h5></div>
-              </div>
-        </div>
-        </div>
-
-      <script src="/js/ccard.js"></script>
-      <script type='text/javascript' src="/js/donate2.js"></script>
-
-
-
-
-      <div class="push"></div>
+       <div class="eight columns">
+        <p>Thank you for donating to the Legacy of Hope Foundation! Please enjoy backstage access to the concert and HD-quality streaming by using this free gift code. This gift code has also been sent to the email address you provided.</p>
+      </div>
+      <div class="four columns code-wrapper">
+        <p>Gift Code: &nbsp</p>
+        <p class="giftcode" onclick="gotoVideoPlayer()">nISna0n</p>
+        <div class="button returnBtn" onclick="gotoVideoPlayer()"><h5>Watch the concert</h5></div>
+      </div>
+    </div>
   </div>
+
+  <script src="/js/ccard.js"></script>
+  <script type='text/javascript' src="/js/donate2.js"></script>
+
+
+
+
+  <div class="push"></div>
+</div>
 </div>
 <% include partials/loh-footer %>
 

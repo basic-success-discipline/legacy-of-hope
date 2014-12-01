@@ -1,6 +1,6 @@
 
 
-$('.donatepage .step1 .buttons .button').click(function(){
+$('.donatepage .step1 .button').click(function(){
   if(!($('input[name="ccamount"]').is(":disabled")) ){
      $('input[name="ccamount"]').val($(this).attr('amount').replace("$",""));
   }
