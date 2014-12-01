@@ -195,6 +195,12 @@ form .validate {
   float: left;
   clear: left; }
 
+.payment-error {
+  text-align: center;
+  color: red;
+  margin-bottom: 0;
+  display: none; }
+
 .confirm-buttons-container {
   text-align: center;
   margin-top: 40px; }
