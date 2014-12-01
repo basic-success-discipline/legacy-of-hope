@@ -180,20 +180,20 @@
 .video-player:not(.full-screen):hover .video-bar {
   bottom: 0;
   top: 0;
-  -webkit-transition-delay: 0s;
+  -webkit-transition-delay: 0.5s;
   /* Safari */
-  -moz-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s; }
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s; }
 
 .show-bars {
   bottom: 0;
   top: 0;
-  -webkit-transition-delay: 0s;
+  -webkit-transition-delay: 0.5s;
   /* Safari */
-  -moz-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s; }
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s; }
 
 .video-title .LOH-branding {
   float: left;
