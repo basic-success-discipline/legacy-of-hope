@@ -87,7 +87,9 @@ cccvc.payment('formatCardCVC');
 
 var confirmCC = function(confirm){
   if(confirm){
+    $('.payment-message').css('visibility','visible');
     sendCC(function(){
+      $('.payment-message').css('visibility','hidden');
       $('.part').addClass("collapse");
       $('.part5').removeClass("collapse");
       $('.part5').show();
