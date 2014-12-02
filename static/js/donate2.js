@@ -256,16 +256,20 @@ function sendCC(callback) {
 
  var xhr = createCORSRequest('POST', url);
  if (!xhr) {
-  alert('CORS not supported');
+  alert('This site uses Cross-Origin Resource Sharing (CORS). Please use a browser that supports CORS.');
   return;
 }
 
   // Response handlers.
   xhr.onload = function() {
     if(xhr.status==400){
-      alert("I'm sorry there is an error with the information you provided.");
+      $('.payment-error').html("I'm sorry there is an error with the information you provided.");
+      $('.payment-error').show();
+      $('.payment-message').css('visibility', 'hidden');
     }else if(xhr.status==500){
-      alert("I'm sorry there was an error processing your donation.");
+       $('.payment-error').html("I'm sorry there was an error processing your donation.");
+      $('.payment-error').show();
+      $('.payment-message').css('visibility', 'hidden');
     }else if(xhr.status==201){
     var text = xhr.responseText;
     var data = JSON.parse(text);
@@ -277,7 +281,9 @@ function sendCC(callback) {
   };
 
   xhr.onerror = function() {
-    alert("I'm sorry there was an error processing your donation.");
+      $('.payment-error').html("I'm sorry there was an error processing your donation.");
+      $('.payment-error').show();
+      $('.payment-message').css('visibility', 'hidden');
   };
 
   xhr.send(JSON.stringify(CreditCardDonation));
