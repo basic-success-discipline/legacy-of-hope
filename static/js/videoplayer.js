@@ -2,9 +2,9 @@
 
 
 
-
+ var domstorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
  var amp, csfs,
- giftcode = getQueryVariable("giftcode"),
+ giftcode = getGiftCode(),
  media = [],
  isPlaying = true,
  angle = 0,
@@ -17,35 +17,40 @@
 
 // This function is called whenever a new stream is initiated (such as on page load and switching streams)
 
- function getMedia(ang, callback) {
-   var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
-   if(giftcode && giftcode !=""){
-    url= url+"&giftcode="+giftcode;
-  }else if (ang==2){
-    $('.general-error-wrapper p').html("You need a gift code to view the premium stream!");
-     $('.general-error-wrapper').css('display', 'table');
-    getMedia(1, callback);
-    return;
-  }
+function getMedia(ang, callback) {
+ var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
+ if(giftcode && giftcode !=""){
+  url= url+"&giftcode="+giftcode;
+}else if (ang==2){
+  $('.general-error-wrapper p').html("You need a gift code to view the premium stream!");
+  $('.general-error-wrapper').css('display', 'table');
+  getMedia(1, callback);
+  return;
+}
 
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    $('.general-error-wrapper p').html("I'm sorry, your browser does not support CORS. Please use another browser to view the concert.");
-     $('.general-error-wrapper').css('display', 'table');
-    return;
-  }
+var xhr = createCORSRequest('GET', url);
+if (!xhr) {
+  $('.general-error-wrapper p').html("I'm sorry, your browser does not support CORS. Please use another browser to view the concert.");
+  $('.general-error-wrapper').css('display', 'table');
+  return;
+}
 
   // Response handlers.
   xhr.onload = function() {
     if (xhr.status==400){
-          $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
-          $('.general-error-wrapper').css('display', 'table');
+      if (getGiftCode()==""){
+        $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
+        $('.general-error-wrapper').css('display', 'table');
+      }
+      if(domstorage){
+        domstorage.removeItem("giftcode");
+      }
 
     }else if (xhr.status ==500){
       $('.general-error-wrapper p').html("I'm sorry, there was an error.");
       $('.general-error-wrapper').css('display', 'table');
     }else if(xhr.status ==200)
-      {
+    {
 
       var text = xhr.responseText;
       var data = JSON.parse(text);
@@ -64,14 +69,18 @@
       ],
       mediaanalytics:
       {
-        dimensions: { title: "Legacy of Hope", eventName: "Legacy of Hope Concert" }
+        dimensions: { title: "Legacy of Hope TEST TITLE", eventName: "Legacy of Hope Concert Angle: " + ang , viewerID: "CHECK OUT MY TEST VIEWER ID!!" }
       }
     }
     ];
 
     if(ang==2){
       //updates the UI for toggling between streams.
+
       unlockPremium();
+      if(domstorage){
+        domstorage.giftcode=giftcode;
+      }
     }
 
     setStreamButton(ang);
@@ -80,8 +89,8 @@
 };
 
 xhr.onerror = function() {
-    $('.general-error-wrapper p').html("I'm sorry, there was an error.");
-    $('.general-error-wrapper').css('display', 'table');
+  $('.general-error-wrapper p').html("I'm sorry, there was an error.");
+  $('.general-error-wrapper').css('display', 'table');
 };
 
 xhr.send();
@@ -167,6 +176,7 @@ csfs = new CsFullscreen({
   wrapper: '.video-area', //css selector
 csWrapper: document.getElementById('crowdsurfing-wrapper'), //DOM node
 playerWrapper: '.video-player',
+fullscreen: true
 
 });
 
@@ -278,27 +288,27 @@ function gotoDonate(){
 $(document).ready(function() {
 
   $('.backstageBtn').attr("onclick", "gcPrompt()");
- if(giftcode && giftcode !=""){
-  clickVideo(1);
- 
-}
+  if(giftcode && giftcode !=""){
+    clickVideo(1);
 
-if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0){
-  $("#crowdsurfing-wrapper").addClass("ie");
-  $(".volume .range input").addClass("ie");
-}
+  }
 
-if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
- $('.fs-gc-prompt p').html("To view the VIP Stage, please exit fullscreen and enter your Premium Code. If you do not have a code yet, simply donate to the Legacy of Hope and receive your free Code in your email!");
-  $('.fs-gc-prompt .gc-enter').hide();
-}
+  if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0){
+    $("#crowdsurfing-wrapper").addClass("ie");
+    $(".volume .range input").addClass("ie");
+  }
 
-$('.gc-text').watermark("paste premium code here");
+  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+   $('.fs-gc-prompt p').html("To view the VIP Stage, please exit fullscreen and enter your Premium Code. If you do not have a code yet, simply donate to the Legacy of Hope and receive your free Code in your email!");
+   $('.fs-gc-prompt .gc-enter').hide();
+ }
 
-document.querySelector('body').webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+ $('.gc-text').watermark("paste premium code here");
+
+ document.querySelector('body').webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
 
 
-setStreamButton(angle);
+ setStreamButton(angle);
 
 
 });
@@ -343,7 +353,7 @@ function inputGC(){
   giftcode = $('.gc-text').val();
   if(!(giftcode && giftcode !="")){
     $('.general-error-wrapper p').html("Please enter a gift code.");
-          $('.general-error-wrapper').css('display', 'table');
+    $('.general-error-wrapper').css('display', 'table');
   }else{
     clickVideo(1);
   }
@@ -354,7 +364,7 @@ function inputFSGC(){
   giftcode = $('.fs-gc-text').val();
   if(!(giftcode && giftcode !="")){
     $('.general-error-wrapper p').html("Please enter a gift code.");
-          $('.general-error-wrapper').css('display', 'table');
+    $('.general-error-wrapper').css('display', 'table');
   }else{
     clickVideo(1);
   }
@@ -362,14 +372,14 @@ function inputFSGC(){
 
 function unlockPremium(){
   $('.premium-stream-locked').css("display", "none");
-    $('.backstageBtn').attr("onclick", "clickVideo(1)");
+  $('.backstageBtn').attr("onclick", "clickVideo(1)");
     // $('.backstageBtn').html("Backstage Unlocked");
     $('.backstageBtn .lock').css("display", "none");
     $('.backstageBtn').css('padding-left', '10px');
     $('.gc-enter-wrapper').css('display', 'none');
     $('.backstageBtn.withpngs').addClass('unlocked');
     closeGCPrompt();
-}
+  }
 
 // $('.fs-bar-wrapper').hover(
 //   function(e) {
@@ -542,16 +552,36 @@ $('.video-area').attrchange(function(attrName) {
 
 
 
-function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=');
-        if (decodeURIComponent(pair[0]) == variable) {
-            return decodeURIComponent(pair[1]);
-        }
+function getGiftCode(){
+  var qv = getQueryVariable("giftcode");
+  if(qv && qv!=""){
+    console.log("Using gift code in query string.");
+    return qv;
+  }else{
+    if (domstorage){
+      if (domstorage.giftcode){
+        console.log("Using gift code in local storage.");
+        return domstorage.giftcode
+      }
     }
-    console.log('Query variable %s not found', variable);
+  }
+
+  console.log("No gift code found on page load.");
+  return "";
+}
+
+
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split('&');
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split('=');
+    if (decodeURIComponent(pair[0]) == variable) {
+      return decodeURIComponent(pair[1]);
+    }
+  }
+  console.log('Query variable %s not found', variable);
 }
 
 
