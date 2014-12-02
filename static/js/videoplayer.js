@@ -54,10 +54,11 @@ if (!xhr) {
 
       var text = xhr.responseText;
       var data = JSON.parse(text);
+      console.log(data.URL);
       media=[
       {
         autoplay: true,
-        title: "Demo Live Stream",
+        title: "Legacy of Hope Concert",
       // poster: '/akamai/resources/eventmanagement/waiting_slate.png',
       temporalType: "live",
       controls: {
@@ -69,7 +70,7 @@ if (!xhr) {
       ],
       mediaanalytics:
       {
-        dimensions: { title: "Legacy of Hope TEST TITLE", eventName: "Legacy of Hope Concert Angle: " + ang , viewerID: "CHECK OUT MY TEST VIEWER ID!!" }
+        dimensions: { title: "Legacy of Hope TEST TITLE", eventName: "Legacy of Hope Concert Angle: " + ang , viewerID: "123456789" }
       }
     }
     ];
@@ -256,7 +257,8 @@ $('.volumebutton').click(function(){
 });
 
 $('.fstogglebutton').click(function(){
-  csfs.toggle($('.fstogglebutton').hasClass('fa-arrows-alt'));
+  // csfs.toggle();
+  crowdSurfingControl('fullScreen', $('.fstogglebutton').hasClass('fa-arrows-alt'));
 });
 
 
@@ -414,8 +416,6 @@ function unlockPremium(){
     $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
     $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
 
-
-    console.log("mouse idle for 3 scond");
   }, 3000);
   // }
 });
@@ -581,7 +581,6 @@ function getQueryVariable(variable) {
       return decodeURIComponent(pair[1]);
     }
   }
-  console.log('Query variable %s not found', variable);
 }
 
 

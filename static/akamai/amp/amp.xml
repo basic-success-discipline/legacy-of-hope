@@ -128,10 +128,10 @@
 				<swf type="String">http://79423.analytics.edgesuite.net/csma/plugin/csma.swf</swf>
 			</plugin>
 			<dimensions type="Object">
-                <!-- <eventName type="String">Legacy of Hope Concert TEST NAME</eventName>
+                <eventName type="String">Legacy of Hope Concert TEST NAME</eventName>
                 <title type="String">Legacy of Hope TEST EVENT TITLE</title>
-                <playerId type="String">Web Player TEST PLAYER</playerId> -->
-                <viewerId type="String">TEST VIEWER ID CAN YOU SEE ME STEVE?!?!?!</viewerId>
+                <playerId type="String">Web Player TEST PLAYER</playerId>
+                <viewerId type="String">987654321</viewerId>
             </dimensions>
 		</mediaanalytics>
 		<locales type="Object">  
