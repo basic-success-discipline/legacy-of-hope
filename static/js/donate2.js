@@ -67,7 +67,7 @@ var CreditCardDonation;
 var CreditCard;
 var acceptedCCTypes= new Array("visa", "mastercard", "discover", "amex");
 
-
+var giftcode;
 
 
 $('.active form').card({
@@ -87,7 +87,7 @@ cccvc.payment('formatCardCVC');
 
 var confirmCC = function(confirm){
   if(confirm){
-    // sendCC(function(){
+    sendCC(function(){
       $('.part').addClass("collapse");
       $('.part5').removeClass("collapse");
       $('.part5').show();
@@ -95,9 +95,9 @@ var confirmCC = function(confirm){
       $('.part5').addClass("fadeInDown");
       $('.confirm-buttons-container .button').removeClass("enabled");
       $('.confirm-buttons-container .button').removeAttr("onclick");
-    $('.part4').removeClass("enabled");
-
-    // });
+      $('.part4').removeClass("enabled");
+      $('.giftcode').html(giftcode);
+    });
 }else{
   $('.part4').removeClass("fadeInDown");
   $('.part4').addClass("fadeOutUp");
@@ -116,13 +116,13 @@ var submitCC =  function(){
 
   if(valid){
     CreditCardDonation = {
-      "Amount": ccamount.val(),
+      "Amount": ccamount.val() + ".00",
       "Email": ccemail.val(),
       "CreditCard": {
         "Number": ccnumber.val().replace(/\s/g,""),
         "CCType": $.payment.cardType(ccnumber.val()),
-        "ExpireMonth": $.payment.cardExpiryVal(ccexpiry.val()).month,
-        "ExpireYear": $.payment.cardExpiryVal(ccexpiry.val()).year,
+        "ExpireMonth": $.payment.cardExpiryVal(ccexpiry.val()).month.toString(),
+        "ExpireYear": $.payment.cardExpiryVal(ccexpiry.val()).year.toString(),
         "CVV": cccvc.val(),
         "FirstName": ccfname.val(),
         "LastName": cclname.val()
@@ -242,7 +242,6 @@ var validateCC =  function(){
 }
 
 var gotoVideoPlayer = function(){
-  var giftcode="cRFeAcAxLN4=";
   window.location.href="/videoplayer?giftcode=" + giftcode;
 }
 
@@ -250,7 +249,7 @@ var gotoVideoPlayer = function(){
 
 
 function sendCC(callback) {
- var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
+ var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/donations/?zotz=161803';
 
 
  var xhr = createCORSRequest('POST', url);
@@ -261,14 +260,22 @@ function sendCC(callback) {
 
   // Response handlers.
   xhr.onload = function() {
+    if(xhr.status==400){
+      alert("I'm sorry there is an error with the information you provided.");
+    }else if(xhr.status==500){
+      alert("I'm sorry there was an error processing your donation.");
+    }else if(xhr.status==201){
     var text = xhr.responseText;
     var data = JSON.parse(text);
-    alert(data.GiftCode);
+    giftcode=data.GiftCode;
     callback();
+    }
+    
+
   };
 
   xhr.onerror = function() {
-    alert('Whoops, there was an error making the request.');
+    alert("I'm sorry there was an error processing your donation.");
   };
 
   xhr.send(JSON.stringify(CreditCardDonation));
