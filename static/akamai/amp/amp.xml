@@ -63,7 +63,6 @@
     				<view skin="/akamai/amp/standard.assets.swf">
     						<!-- <element id="infoOverlay" style="top: 0px; text-align: left;" /> -->
     						<element id="controls" visible="false" autoHide="0" height="0" itemMargin="0"></element>
-							<element id="replayView" /> 
 							<element id="bufferingView" mode="default" tether="false" />
     				</view>
     				<plugins>
@@ -131,7 +130,6 @@
                 <eventName type="String">Legacy of Hope Concert TEST NAME</eventName>
                 <title type="String">Legacy of Hope TEST EVENT TITLE</title>
                 <playerId type="String">Web Player TEST PLAYER</playerId>
-                <viewerId type="String">987654321</viewerId>
             </dimensions>
 		</mediaanalytics>
 		<locales type="Object">  

@@ -5,6 +5,7 @@
  var domstorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
  var amp, csfs,
  giftcode = getGiftCode(),
+ fingerprint = new Fingerprint().get(),
  media = [],
  isPlaying = true,
  angle = 0,
@@ -37,13 +38,18 @@ if (!xhr) {
 
   // Response handlers.
   xhr.onload = function() {
+
     if (xhr.status==400){
-      if (getGiftCode()==""){
+      if ($('.gc-text').val()!=""){
         $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
         $('.general-error-wrapper').css('display', 'table');
       }
       if(domstorage){
         domstorage.removeItem("giftcode");
+      }
+      giftcode="";
+      if(media.length==0){
+        getMedia(1, callback);
       }
 
     }else if (xhr.status ==500){
@@ -54,11 +60,11 @@ if (!xhr) {
 
       var text = xhr.responseText;
       var data = JSON.parse(text);
-      console.log(data.URL);
-      media=[
-      {
-        autoplay: true,
-        title: "Legacy of Hope Concert",
+      if(data.Error.Status!="InvalidData"){
+        media=[
+        {
+          autoplay: true,
+          title: "Legacy of Hope Concert",
       // poster: '/akamai/resources/eventmanagement/waiting_slate.png',
       temporalType: "live",
       controls: {
@@ -70,7 +76,7 @@ if (!xhr) {
       ],
       mediaanalytics:
       {
-        dimensions: { title: "Legacy of Hope TEST TITLE", eventName: "Legacy of Hope Concert Angle: " + ang , viewerID: "123456789" }
+        dimensions: { title: "Legacy of Hope TEST TITLE", eventName: "Legacy of Hope Concert Angle: " + ang , viewerID: fingerprint.toString() }
       }
     }
     ];
@@ -86,7 +92,20 @@ if (!xhr) {
 
     setStreamButton(ang);
     callback(media);
+  }else{
+   if ($('.gc-text').val()!=""){
+    $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
+    $('.general-error-wrapper').css('display', 'table');
   }
+  if(domstorage){
+    domstorage.removeItem("giftcode");
+  }
+   giftcode="";
+      if(media.length==0){
+        getMedia(1, callback);
+      }
+}
+}
 };
 
 xhr.onerror = function() {
@@ -107,7 +126,8 @@ xhr.send();
 function loadHandler(event)
 {
 
-  getMedia(1, function(media){
+  // getMedia(1, function(media){
+
     var config = 
     {
       rules:
@@ -127,7 +147,7 @@ function loadHandler(event)
     amp.addEventListener("playing", togglePlayButton);
 
 
-  });
+  // });
 
 }
 
@@ -558,12 +578,12 @@ function getGiftCode(){
     console.log("Using gift code in query string.");
     return qv;
   }else{
-    if (domstorage){
-      if (domstorage.giftcode){
-        console.log("Using gift code in local storage.");
-        return domstorage.giftcode
-      }
-    }
+    // if (domstorage){
+    //   if (domstorage.giftcode){
+    //     console.log("Using gift code in local storage.");
+    //     return domstorage.giftcode
+    //   }
+    // }
   }
 
   console.log("No gift code found on page load.");

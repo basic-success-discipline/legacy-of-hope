@@ -1,0 +1,240 @@
+#cs-setlist {
+	box-sizing: border-box;
+	width:300px;
+	height:50px;
+	bottom:0;
+	right:0;
+	position:fixed;
+	z-index:999;
+	background:url('img/setlistbackground.png');
+    -webkit-transition: all 0.3s ease-in-out;                  
+    -moz-transition: all 0.3s ease-in-out;                 
+    -o-transition: all 0.3s ease-in-out;   
+    -ms-transition: all 0.3s ease-in-out;           
+    transition: all 0.3sease-in-out;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#cs-setlist:hover {
+	background-color:rgba(255,255,255,.5);
+}
+
+#cs-setlist.active {
+	background:black;
+	height:0px;
+}
+
+#cs-trigger {
+	width:300px;
+	height:50px;
+	bottom:0;
+	right:0;
+	position:absolute;
+	z-index:9999;
+	cursor:pointer;
+}
+
+#current-item {
+	width:100%;
+	height:50px;
+	padding:0px 15px 8px 15px;
+	display:block;
+	color:white;
+	font:12px arial;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 275px;
+}
+
+#nowWatching {
+	position:relative;
+	height:50px;
+}
+
+#nowWatchingText {
+	display:block;
+	width:100%;
+	padding:11px 0px 0px 15px;
+	display:block;
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+	font:bold 14px arial;
+	text-transform:uppercase;	
+}
+
+#nowWatchingLogo {
+	height:40px;
+	width:40px;
+	position:absolute;
+	right:5px;
+	bottom:5px;
+	background:url("img/gooseisland.png");
+	background-size:100% 100%;
+}
+
+#scheduleBar {
+	height:50px;
+	width:100%;
+	background:url("img/setlistheader.png");
+	background-size:100% 100%;
+	position:relative;
+}
+
+#fullSetlist {
+	display:none;
+	position: absolute;
+	height: auto;
+	width: 300px;
+	overflow-x:hidden;
+	padding:0;
+	bottom: 0px;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,1) 86%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(20%,rgba(0,0,0,0.8)), color-stop(86%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,1) 86%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,1) 86%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,1) 86%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 20%,rgba(0,0,0,1) 86%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+#tabs {
+	width:100%;
+	list-style:none;
+	margin:0;
+	padding:0;
+	background: url('img/tab_gradient.png');
+	background-color:#999;
+	background-size:100% 100%;
+}
+
+#tabs li {
+	text-align:center;
+	display:inline-block;
+	padding:10px;
+	font:500 14px Helvetica;
+	width:33.3%;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	text-shadow:1px 1px 2px #333;
+	-webkit-transition: all 0.3s ease-in-out;                  
+    -moz-transition: all 0.3s ease-in-out;                 
+    -o-transition: all 0.3s ease-in-out;   
+    -ms-transition: all 0.3s ease-in-out;           
+    transition: all 0.3sease-in-out; 
+}
+
+#tabs li.active {
+	background:rgba(0,0,0,.3);
+	text-shadow:1px 1px 2px #333;
+	color:white;
+}
+
+#tabs li:hover {
+	cursor:pointer;
+	background:rgba(255,255,255,.23);
+	text-shadow:1px 1px 2px #333;
+	color:white;
+}
+
+#tabs li.active:hover {
+	background:rgba(0,0,0,.3);
+}
+
+.setlistContainer{
+	display:none;
+	position:relative;
+	overflow: auto;
+}
+
+.setlistContainer.active {
+	display:block;
+	opacity:1;
+}
+
+.setlist {
+	list-style: none;
+	margin: 0px;
+	padding: 10px 15px 10px;
+}
+
+.setlistBranding {
+	display:none;
+	width:300px;
+	height:300px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-150px;
+	background-image:url("img/gooseislandSetlist.png");
+	background-repeat: no-repeat;
+	background-size: 80% auto;
+	background-position: center center;
+	opacity:0;
+	overflow:hidden;
+}
+
+.setlist .timePlaying {float: left;
+	margin-right: 10px;
+	clear: both;
+	height: 20px;
+	font-weight:900;
+}
+
+.setlist li {
+	display:block;
+	padding:5px 4px;
+	color:#fff;
+	font:12px arial;
+	text-transform:uppercase;
+	-webkit-transition: all 0.3s ease-in-out;                  
+    -moz-transition: all 0.3s ease-in-out;                 
+    -o-transition: all 0.3s ease-in-out;   
+    -ms-transition: all 0.3s ease-in-out;           
+    transition: all 0.3sease-in-out; 
+}
+.setlist li:hover {
+	cursor: default;
+}
+.setlist li.current {
+	font-weight:bold;
+}
+
+.setlist li.cancelled {
+	text-decoration:line-through;
+	color:#999;
+}
+
+.setlist li.green:hover {
+	background-color:rgba(40, 251, 45, 0.7);
+}
+
+.setlist li.red:hover {
+	background-color:rgba(248, 13, 66, 0.7);
+}
+
+.setlist li.blue:hover {
+	background-color:rgba(9, 31, 227, 0.7);
+}
+
+.setlist li.isStreaming {
+	background-image: url("img/radio.png");
+	background-size:20px auto;
+	background-position:right 3px center;
+	background-repeat:no-repeat;
+}
+
+.setlist li.current {
+	background-color:white;
+	color:black;
+	background-image: url("img/radioInverse.png");
+	background-size:20px auto;
+	background-position:right 3px center;
+	background-repeat:no-repeat;
+}

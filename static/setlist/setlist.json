@@ -1,0 +1,271 @@
+{
+  "settings": {
+	  "topbar": "Now Watching:",
+	  "today": "friday",
+	  "timezone": "GMT-0500 (CDT)"
+  },
+  "friday": {
+	  "Friday Jul 18 2014 15:30:00": {
+		  "band": "Hundred Waters",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Friday Jul 18 2014 16:15:00": {
+		  "band": "Factory Floor",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Friday Jul 18 2014 16:35:00": {
+		  "band": "Neneh Cherry with Rocketnumbernine",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Friday Jul 18 2014 17:15:00": {
+		  "band": "The Haxan Cloak",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Friday Jul 18 2014 17:30:00": {
+		  "band": "Sharon van Etten",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Friday Jul 18 2014 18:15:00": {
+		  "band": "SZA",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Friday Jul 18 2014 18:25:00": {
+		  "band": "Sun Kil Moon",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Friday Jul 18 2014 19:15:00": {
+		  "band": "Avey Tare's Slasher Flicks",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Friday Jul 18 2014 19:20:00": {
+		  "band": "Giorgio Moroder",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Friday Jul 18 2014 20:30:00": {
+		  "band": "Beck",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "green"
+	  }
+  },
+  "saturday": {
+	  "Saturday Jul 19 2014 13:00:00": {
+		  "band": "Twin Peaks",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Saturday Jul 19 2014 13:45:00": {
+		  "band": "Ka",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Saturday Jul 19 2014 13:55:00": {
+		  "band": "Circulatory System",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Saturday Jul 19 2014 14:30:00": {
+		  "band": "Wild Beasts",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Saturday Jul 19 2014 14:50:00": {
+		  "band": "Empress Of",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Saturday Jul 19 2014 15:20:00": {
+		  "band": "Cloud Nothings",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Saturday Jul 19 2014 15:45:00": {
+		  "band": "MAS YSA",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Saturday Jul 19 2014 16:15:00": {
+		  "band": "Pusha T",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Saturday Jul 19 2014 16:45:00": {
+		  "band": "The Range",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Saturday Jul 19 2014 17:15:00": {
+		  "band": "Tune-Yards",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Saturday Jul 19 2014 17:45:00": {
+		  "band": "Kelela",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Saturday Jul 19 2014 18:15:00": {
+		  "band": "Danny Brown",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Saturday Jul 19 2014 18:45:00": {
+		  "band": "The Field",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Saturday Jul 19 2014 19:25:00": {
+		  "band": "St. Vincent",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Saturday Jul 19 2014 19:45:00": {
+		  "band": "FKA Twigs",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Saturday Jul 19 2014 20:30:00": {
+		  "band": "Neutral Milk Hotel",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "green"
+	  }
+  },
+  "sunday": {
+	  "Sunday Jul 20 2014 13:00:00": {
+		  "band": "Speedy Ortiz",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 13:00:00": {
+		  "band": "Mutual Benefit",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Sunday Jul 20 2014 13:45:00": {
+		  "band": "DIIV",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Sunday Jul 20 2014 13:55:00": {
+		  "band": "Perfect Pussy",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 14:30:00": {
+		  "band": "Deafheaven",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Sunday Jul 20 2014 14:50:00": {
+		  "band": "Isaiah Rashad",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 15:20:00": {
+		  "band": "Earl Sweatshirt",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Sunday Jul 20 2014 15:45:00": {
+		  "band": "Dum Dum Girls",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 16:15:00": {
+		  "band": "Schoolboy Q",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Sunday Jul 20 2014 16:45:00": {
+		  "band": "Jon Hopkins",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 17:15:00": {
+		  "band": "Real Estate",
+		  "streaming": "true",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Sunday Jul 20 2014 17:45:00": {
+		  "band": "Majical Cloudz",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 18:15:00": {
+		  "band": "Slowdive",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "green"
+	  },
+	  "Sunday Jul 20 2014 18:45:00": {
+		  "band": "DJ Spinn",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 19:25:00": {
+		  "band": "Grimes",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "red"
+	  },
+	  "Sunday Jul 20 2014 19:45:00": {
+		  "band": "Hudson Mohawke",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "blue"
+	  },
+	  "Sunday Jul 20 2014 20:30:00": {
+		  "band": "Kendrick Lamar",
+		  "streaming": "false",
+		  "status": "ontime",
+		  "stage": "green"
+	  }
+  }
+}
