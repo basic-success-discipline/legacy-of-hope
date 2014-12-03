@@ -757,6 +757,11 @@ body:not(.fullscreen) #cs-setlist{
 	margin-top: -50px;
 }
 
+body:not(.fullscreen) #cs-setlist.active{
+	margin-top: 0px;
+}
+
+
 
 
 @media only screen 

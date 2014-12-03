@@ -589,3 +589,6 @@ img.playbutton.pause:hover {
 body:not(.fullscreen) #cs-setlist {
   position: relative !important;
   margin-top: -50px; }
+
+body:not(.fullscreen) #cs-setlist.active {
+  margin-top: 0px; }
