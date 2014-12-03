@@ -587,4 +587,5 @@ img.playbutton.pause:hover {
   background-image: url("../../img/player4.png"); }
 
 body:not(.fullscreen) #cs-setlist {
-  position: relative !important; }
+  position: relative !important;
+  margin-top: -50px; }

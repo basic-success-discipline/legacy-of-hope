@@ -186,7 +186,7 @@ function loadVideo(index)
 function endedHandler(event)
 {
   togglePlayButton(false);
-
+  loadVideo(angle-1);
   console.log("ended");
 }
 

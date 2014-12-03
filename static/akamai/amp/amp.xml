@@ -63,7 +63,7 @@
     				<view skin="/akamai/amp/standard.assets.swf">
     						<!-- <element id="infoOverlay" style="top: 0px; text-align: left;" /> -->
     						<element id="controls" visible="false" autoHide="0" height="0" itemMargin="0"></element>
-							<element id="bufferingView" mode="default" tether="false" />
+							<!-- <element id="bufferingView" mode="default" tether="false" /> -->
     				</view>
     				<plugins>
     					<!-- CONSULT AKAMAI REGARDING PLUG-IN MODIFICATIONS. DO NOT MODIFY WITHOUT SUPPORT FROM AKAMAI -->
