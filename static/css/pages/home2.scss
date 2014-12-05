@@ -93,7 +93,7 @@ h5{
 	width: 100%;
 	position: absolute;
 	left: 0;
-	top: 20%;
+	top: 30%;
 	// display: none;
 }
 
@@ -110,6 +110,21 @@ h5{
 	max-width: 45%;
 	margin-left: 0;
 }
+
+.hero.second.alt .heroblurb {
+	text-align: right;
+}
+
+.hero.second .heroblurb h3{
+
+	max-width: 55%;
+	margin-left: 0;
+	font-family: "Josefin Slab";
+	font-style: italic;
+	letter-spacing: 1px;
+	text-transform: none;
+}
+
 .hero.second .herop1{
 	font-size: 16px;
 	font-style: italic;
@@ -119,6 +134,21 @@ h5{
 	font-family: "Oswald";
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+}
+
+.hero.second.alt .heroblurb {
+	text-align: right;
+}
+.hero.second.alt .heroblurb h3{
+	max-width: 45%;
+	margin-left: auto;
+	margin-right: 0;
+}
+.hero.second.alt .heroblurb p{
+	max-width: 40%;
+	margin-left: auto;
+	margin-right: 0;
+	text-align: right;
 }
 
 
@@ -858,6 +888,20 @@ h3{
 	display: initial;
 }
 
+
+.hero.second.alt .heroblurb{
+	top: 12%;
+}
+.hero.second.alt .heroblurb h3{
+	top: 10%;
+	display: block;
+	text-align: right;
+}
+.hero.second.alt .heroblurb h4{
+	text-align: right;
+	
+	font-size: 15px;
+}
 
 
 
