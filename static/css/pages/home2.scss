@@ -651,16 +651,16 @@ h3{
 
 
 // MOBILE - PORTRAIT - HERO
-.hero img, .herospacer img{
-	width: 100%;
-	margin-left: -18%;
-	float: none;
-}
+// .hero img, .herospacer img{
+// 	width: 100%;
+// 	margin-left: -18%;
+// 	float: none;
+// }
 
 .hero.second img{
 	margin-left: auto;
 	margin-right: auto;
-	content: url('../../img/home_hero2_pp.jpg');
+	// content: url('../../img/home_hero2_pp.jpg');
 }
 .hero.third img{
 	width: 157%;
@@ -676,20 +676,33 @@ h3{
 }
 
 	//  HEROBLURB
-	.heroblurb {
-		display: none;
+	.alt .heroblurb.mobileblurb {
+		// display: none;
+		top: 10%;
+	}
+	.heroblurb h3{
+		margin-top: 0;
+		font-size: 12px;
 	}
 
-.hero.first .heroblurb{
-	width: 100%;
-	left: 0;
-	right: 0;
-	display: block;
-	padding-top: 15%;
-	top: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0, 0.7);
-}
+	.heroblurb h4{
+		font-size: 14px;
+		max-width: 45%;
+		text-align: center;
+		margin-right: 0;
+		margin-left: auto;
+	}
+
+// .hero.first .heroblurb{
+// 	width: 100%;
+// 	left: 0;
+// 	right: 0;
+// 	display: block;
+// 	padding-top: 15%;
+// 	top: 0;
+// 	bottom: 0;
+// 	background-color: rgba(0,0,0, 0.7);
+// }
 
 
 .hero.third .mobileblurb{
@@ -899,7 +912,7 @@ h3{
 }
 .hero.second.alt .heroblurb h4{
 	text-align: right;
-	
+
 	font-size: 15px;
 }
 
