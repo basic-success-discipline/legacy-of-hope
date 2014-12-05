@@ -1,3 +1,6 @@
+.wrapper-inner {
+  min-width: 1200px; }
+
 .csvideo {
   width: 100%;
   height: auto;
@@ -7,6 +10,17 @@
 .video-area {
   display: inline-block;
   width: 100%; }
+
+.full-screen .video-area {
+  cursor: auto;
+  -webkit-transition-delay: 0s;
+  /* Safari */
+  transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s; }
+
+.nocursor * {
+  cursor: none !important; }
 
 .video-player {
   height: 500px;
@@ -20,6 +34,9 @@
 
 .akamai-media-player {
   z-index: 1 !important; }
+
+.akamai-video {
+  position: absolute; }
 
 #crowdsurfing-crowd {
   box-shadow: 0px 0 0px 0px rgba(0, 0, 0, 0) !important;
@@ -44,7 +61,7 @@
 .full-screen #crowdsurfing-wrapper:not(.ie) {
   opacity: 0.15; }
 
-.full-screen #crowdsurfing-wrapper:hover:not(.ie) {
+.full-screen .video-area:not(.cs-fullscreen-minimized) #crowdsurfing-wrapper:hover:not(.ie) {
   opacity: 1;
   -webkit-transition-delay: 0s;
   /* Safari */
@@ -59,6 +76,37 @@
   transition-delay: 0s !important;
   -moz-transition-delay: 0s !important;
   -o-transition-delay: 0s !important; }
+
+.full-screen .cs-fullscreen-minimized #crowdsurfing-wrapper {
+  top: -65px  !important;
+  bottom: 65px !important;
+  height: 130px !important;
+  min-height: 130px !important;
+  opacity: 0.15; }
+
+.full-screen .cs-fullscreen-minimized #crowdsurfing-wrapper:hover {
+  top: 0 !important;
+  bottom: 0 !important;
+  -webkit-transition-delay: 0s !important;
+  /* Safari */
+  transition-delay: 0s !important;
+  -moz-transition-delay: 0s !important;
+  -o-transition-delay: 0s !important;
+  opacity: 1;
+  height: 65px !important;
+  min-height: 65px !important; }
+
+.cs-fullscreen-minimized #crowdsurfing-wrapper.make-minimized-cs-appear {
+  top: 0 !important;
+  bottom: 0 !important;
+  -webkit-transition-delay: 0s !important;
+  /* Safari */
+  transition-delay: 0s !important;
+  -moz-transition-delay: 0s !important;
+  -o-transition-delay: 0s !important;
+  opacity: 1;
+  height: 65px !important;
+  min-height: 65px !important; }
 
 .shrink-wrapper {
   height: calc(100% - 50px) !important; }
@@ -132,20 +180,20 @@
 .video-player:not(.full-screen):hover .video-bar {
   bottom: 0;
   top: 0;
-  -webkit-transition-delay: 0s;
+  -webkit-transition-delay: 0.5s;
   /* Safari */
-  -moz-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s; }
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s; }
 
 .show-bars {
   bottom: 0;
   top: 0;
-  -webkit-transition-delay: 0s;
+  -webkit-transition-delay: 0.5s;
   /* Safari */
-  -moz-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s; }
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s; }
 
 .video-title .LOH-branding {
   float: left;
@@ -388,7 +436,7 @@
   float: left;
   position: relative; }
 
-.gc-prompt-wrapper {
+.gc-prompt-wrapper, .general-error-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -397,7 +445,11 @@
   text-align: center;
   display: none; }
 
-.gc-prompt {
+.general-error-wrapper {
+  min-height: 592px;
+  z-index: 3; }
+
+.gc-prompt, .general-error {
   background-color: rgba(59, 59, 59, 0.9);
   padding: 25px 25px 25px 25px;
   border-radius: 10px;
@@ -407,7 +459,12 @@
   text-align: center;
   position: relative; }
 
-.gc-prompt .fa-close {
+.general-error {
+  padding: 15px 15px;
+  background-color: #3b3b3b;
+  box-shadow: -2px 2px 5px #111; }
+
+.gc-prompt .fa-close, .general-error .fa-close {
   position: absolute;
   top: 8px;
   right: 10px;
@@ -415,7 +472,7 @@
   cursor: pointer;
   font-size: 12px; }
 
-.gc-prompt p {
+.gc-prompt p, .general-error p {
   margin-top: 0;
   margin-bottom: 10px;
   padding-top: 0;
@@ -424,6 +481,9 @@
   display: inline-block;
   font-size: 14px;
   text-align: justify; }
+
+.general-error p {
+  margin-bottom: 0; }
 
 .gc-prompt p.error {
   color: red;
@@ -452,7 +512,7 @@
   background-color: #358fe3;
   padding: 10px;
   padding-top: 5px;
-  margin-top: 20px;
+  margin-top: 5px;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   transition: all 0.3s linear;
@@ -525,3 +585,10 @@ img.playbutton.pause {
 
 img.playbutton.pause:hover {
   background-image: url("../../img/player4.png"); }
+
+body:not(.fullscreen) #cs-setlist {
+  position: relative !important;
+  margin-top: -50px; }
+
+body:not(.fullscreen) #cs-setlist.active {
+  margin-top: 0px; }

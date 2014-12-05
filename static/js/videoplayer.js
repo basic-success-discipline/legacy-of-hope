@@ -2,9 +2,10 @@
 
 
 
-
+ var domstorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
  var amp, csfs,
- giftcode = "",
+ giftcode = getGiftCode(),
+ fingerprint = new Fingerprint().get(),
  media = [],
  isPlaying = true,
  angle = 0,
@@ -15,30 +16,55 @@
 
 
 
+// This function is called whenever a new stream is initiated (such as on page load and switching streams)
 
+function getMedia(ang, callback) {
+ var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
+ if(giftcode && giftcode !=""){
+  url= url+"&giftcode="+giftcode;
+}else if (ang==2){
+  $('.general-error-wrapper p').html("You need a gift code to view the premium stream!");
+  $('.general-error-wrapper').css('display', 'table');
+  getMedia(1, callback);
+  return;
+}
 
- function getMedia(ang, callback) {
-   var url = 'https://ipms-dev.appspot.com/ipms/events/LOH-AUTH/streams/' + ang + "/hds?zotz=161803";
-   if(giftcode && giftcode !="" && ang == 2){
-    url= url+"&giftcode="+giftcode;
-  }else if (ang==2){
-    alert("need a giftcode!");
-  }
-
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
+var xhr = createCORSRequest('GET', url);
+if (!xhr) {
+  $('.general-error-wrapper p').html("I'm sorry, your browser does not support CORS. Please use another browser to view the concert.");
+  $('.general-error-wrapper').css('display', 'table');
+  return;
+}
 
   // Response handlers.
   xhr.onload = function() {
-    var text = xhr.responseText;
-    var data = JSON.parse(text);
-    media=[
+
+    if (xhr.status==400){
+      if ($('.gc-text').val()!=""){
+        $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
+        $('.general-error-wrapper').css('display', 'table');
+      }
+      if(domstorage){
+        domstorage.removeItem("giftcode");
+      }
+      giftcode="";
+      if(media.length==0){
+        getMedia(1, callback);
+      }
+
+    }else if (xhr.status ==500){
+      $('.general-error-wrapper p').html("I'm sorry, there was an error.");
+      $('.general-error-wrapper').css('display', 'table');
+    }else if(xhr.status ==200)
     {
-      autoplay: true,
-      title: "Demo Live Stream",
+
+      var text = xhr.responseText;
+      var data = JSON.parse(text);
+      if(data.Error.Status!="InvalidData"){
+        media=[
+        {
+          autoplay: true,
+          title: "Legacy of Hope Concert",
       // poster: '/akamai/resources/eventmanagement/waiting_slate.png',
       temporalType: "live",
       controls: {
@@ -50,21 +76,44 @@
       ],
       mediaanalytics:
       {
-        dimensions: { title: "Legacy of Hope", eventName: "Legacy of Hope Concert" }
+        dimensions: { title: "Legacy of Hope TEST TITLE", eventName: "Legacy of Hope Concert Angle: " + ang , viewerID: fingerprint.toString() }
       }
     }
     ];
 
+    if(ang==2){
+      //updates the UI for toggling between streams.
+
+      unlockPremium();
+      if(domstorage){
+        domstorage.giftcode=giftcode;
+      }
+    }
 
     setStreamButton(ang);
     callback(media);
-  };
+  }else{
+   if ($('.gc-text').val()!=""){
+    $('.general-error-wrapper p').html("I'm sorry, your gift code is invalid!");
+    $('.general-error-wrapper').css('display', 'table');
+  }
+  if(domstorage){
+    domstorage.removeItem("giftcode");
+  }
+   giftcode="";
+      if(media.length==0){
+        getMedia(1, callback);
+      }
+}
+}
+};
 
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
+xhr.onerror = function() {
+  $('.general-error-wrapper p').html("I'm sorry, there was an error.");
+  $('.general-error-wrapper').css('display', 'table');
+};
 
-  xhr.send();
+xhr.send();
 }
 
 
@@ -77,7 +126,8 @@
 function loadHandler(event)
 {
 
-  getMedia(1, function(media){
+  // getMedia(1, function(media){
+
     var config = 
     {
       rules:
@@ -97,7 +147,7 @@ function loadHandler(event)
     amp.addEventListener("playing", togglePlayButton);
 
 
-  });
+  // });
 
 }
 
@@ -136,7 +186,7 @@ function loadVideo(index)
 function endedHandler(event)
 {
   togglePlayButton(false);
-
+  loadVideo(angle-1);
   console.log("ended");
 }
 
@@ -147,6 +197,7 @@ csfs = new CsFullscreen({
   wrapper: '.video-area', //css selector
 csWrapper: document.getElementById('crowdsurfing-wrapper'), //DOM node
 playerWrapper: '.video-player',
+fullscreen: true
 
 });
 
@@ -198,10 +249,10 @@ amp.setVolume(value/vfactor);
 
 function mute(){
 // Mute the video
-    amp.mute();
-    $('.volumebutton').removeClass('fa-volume-up');
-    $('.volumebutton').addClass('fa-volume-off');
-    $('.range input').attr('value','0');
+amp.mute();
+$('.volumebutton').removeClass('fa-volume-up');
+$('.volumebutton').addClass('fa-volume-off');
+$('.range input').attr('value','0');
 }
 
 function unmute(){
@@ -226,7 +277,8 @@ $('.volumebutton').click(function(){
 });
 
 $('.fstogglebutton').click(function(){
-  csfs.toggle($('.fstogglebutton').hasClass('fa-arrows-alt'));
+  // csfs.toggle();
+  crowdSurfingControl('fullScreen', $('.fstogglebutton').hasClass('fa-arrows-alt'));
 });
 
 
@@ -251,30 +303,34 @@ function updateFSButton(fs){
   }
 }
 function gotoDonate(){
-  window.location.href = "/donate";
+  window.open("/donate");
 }
 
 
 $(document).ready(function() {
 
- if(!(giftcode && giftcode !="")){
   $('.backstageBtn').attr("onclick", "gcPrompt()");
+  if(giftcode && giftcode !=""){
+    clickVideo(1);
 
-}else{
-  $('.backstageBtn').attr("onclick", "clickVideo(1)");
-}
+  }
 
-if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0){
-  $("#crowdsurfing-wrapper").addClass("ie");
-  $(".volume .range input").addClass("ie");
-}
+  if (window.navigator.userAgent.indexOf("MSIE") > 0 || window.navigator.userAgent.indexOf("Trident/") > 0){
+    $("#crowdsurfing-wrapper").addClass("ie");
+    $(".volume .range input").addClass("ie");
+  }
 
-$('.gc-text').watermark("paste premium code here");
+  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+   $('.fs-gc-prompt p').html("To view the VIP Stage, please exit fullscreen and enter your Premium Code. If you do not have a code yet, simply donate to the Legacy of Hope and receive your free Code in your email!");
+   $('.fs-gc-prompt .gc-enter').hide();
+ }
+
+ $('.gc-text').watermark("paste premium code here");
 
  document.querySelector('body').webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
 
 
-setStreamButton(angle);
+ setStreamButton(angle);
 
 
 });
@@ -298,70 +354,109 @@ function gcPrompt(){
     $('.fs-gc-prompt').css("display", "table");
   }else{
 
-  $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "table");
+    $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "table");
   }
 }
 function closeGCPrompt(){
  if($("body").hasClass("full-screen")){
-    $('.fs-gc-prompt').css("display", "none");
-  }else{
+  $('.fs-gc-prompt').css("display", "none");
+}else{
 
   $('.gc-prompt-wrapper:not(.fs-gc-prompt)').css("display", "none");
-  }
+}
+}
+
+
+function closeGeneralError(){
+  $('.general-error-wrapper').css("display", "none");
 }
 
 function inputGC(){
   giftcode = $('.gc-text').val();
-  if(!(giftcode && giftcode !="") || giftcode=="test"){
-    $('.gc-prompt p.error').show();
+  if(!(giftcode && giftcode !="")){
+    $('.general-error-wrapper p').html("Please enter a gift code.");
+    $('.general-error-wrapper').css('display', 'table');
   }else{
-    $('.premium-stream-locked').css("display", "none");
-    $('.backstageBtn').attr("onclick", "clickVideo(1)");
-    // $('.backstageBtn').html("Backstage Unlocked");
-    $('.backstageBtn .lock').css("display", "none");
-    $('.backstageBtn').css('padding-left', '10px');
-    $('.gc-enter-wrapper').css('display', 'none');
-    $('.backstageBtn.withpngs').addClass('unlocked');
     clickVideo(1);
-    closeGCPrompt();
   }
 }
 
 
 function inputFSGC(){
   giftcode = $('.fs-gc-text').val();
-  if(!(giftcode && giftcode !="") || giftcode=="test"){
-    $('.gc-prompt p.error').show();
+  if(!(giftcode && giftcode !="")){
+    $('.general-error-wrapper p').html("Please enter a gift code.");
+    $('.general-error-wrapper').css('display', 'table');
   }else{
-    $('.premium-stream-locked').css("display", "none");
-    $('.backstageBtn').attr("onclick", "clickVideo(1)");
+    clickVideo(1);
+  }
+}
+
+function unlockPremium(){
+  $('.premium-stream-locked').css("display", "none");
+  $('.backstageBtn').attr("onclick", "clickVideo(1)");
     // $('.backstageBtn').html("Backstage Unlocked");
     $('.backstageBtn .lock').css("display", "none");
     $('.backstageBtn').css('padding-left', '10px');
     $('.gc-enter-wrapper').css('display', 'none');
     $('.backstageBtn.withpngs').addClass('unlocked');
-    clickVideo(1);
     closeGCPrompt();
   }
-}
 
-$('.fs-bar-wrapper').hover(
-  function(e) {
+// $('.fs-bar-wrapper').hover(
+//   function(e) {
+//    $('.video-bar').addClass("show-bars");
+//    $('#crowdsurfing-wrapper').addClass("make-cs-opaque");
+//   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').addClass("make-minimized-cs-appear");
+//  },
+//  function(e) {
+//   $('.video-bar').removeClass("show-bars");
+//   $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
+//   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
+
+//   }
+//   );
+
+ var timeout = null;
+
+ $(".fs-bar-wrapper").on('mousemove', function() {
+  // if($(this).hasClass("full-screen")){
    $('.video-bar').addClass("show-bars");
+   $('.fs-bar-wrapper').removeClass("nocursor");
    $('#crowdsurfing-wrapper').addClass("make-cs-opaque");
-   
-  // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").removeClass("cs-fullscreen-on");
- },
- function(e) {
-  $('.video-bar').removeClass("show-bars");
-  $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
-  // $("#crowdsurfing-crowd").contents().find("#crowdsurfing").addClass("cs-fullscreen-on");
-   // $("#crowdsurfing").addClass("cs-fullscreen-on");
-    // $("#crowdsurfing-wrapper").style("height", "100%", "important");
-
+   $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').addClass("make-minimized-cs-appear");
+   if (timeout !== null) {
+    clearTimeout(timeout);
   }
-  );
 
+  timeout = setTimeout(function() {
+    timeout = null;
+    $('.video-bar').removeClass("show-bars");
+    $('.fs-bar-wrapper').addClass("nocursor");
+    $('.full-screen #crowdsurfing-wrapper').removeClass("make-cs-opaque");
+    $('.video-area.cs-fullscreen-minimized #crowdsurfing-wrapper').removeClass("make-minimized-cs-appear");
+
+  }, 3000);
+  // }
+});
+
+ $("body").mousemove(
+  function(e) {
+   // $(this).removeClass("nocursor");
+   // $(this).addClass("nocursor");
+ });
+
+
+
+ function updateVideoBars(csminimized){
+  if(csminimized){
+    $('.fs-menu').css('width', "100%");
+    // $('.cs-minimized-hoverfix').show();
+  }else{
+    $('.fs-menu').css('width', "calc(100% - 300px)");
+    // $('.cs-minimized-hoverfix').hide();
+  }
+}
 
 
 function setStreamButton(ang){
@@ -379,41 +474,38 @@ function setStreamButton(ang){
 
 
 document.addEventListener(
-    'CrowdSurfingControlEvent',
-    function checkIfIsInFullScreen(param) {
-        if (param.data[0] === 'fullScreen' && param.data[1] === true) {
-            
-            updateFSButton(true);
-            updateGCPrompt(true);
-        } else if (param.data[0] === 'fullScreen' && param.data[1] === false) {
-           
-            updateFSButton(false);
-            updateGCPrompt(false);
-        } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
-          alert("minimized");
-          $(".fs-menu").removeClass("cs-expanded");
+  'CrowdSurfingControlEvent',
+  function checkIfIsInFullScreen(param) {
+    if (param.data[0] === 'fullScreen' && param.data[1] === true) {
+
+      updateFSButton(true);
+      updateGCPrompt(true);
+    } else if (param.data[0] === 'fullScreen' && param.data[1] === false) {
+
+      updateFSButton(false);
+      updateGCPrompt(false);
+    } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "minimizeCSWidget") {
+      alert("minimized");
+      $(".fs-menu").removeClass("cs-expanded");
           // CrowdSurfing has been minimized
         } else if (param.data[0] === '"navMenuMessage"' && param.data[1] === "maximizeCSWidget") {
           $(".fs-menu").addClass("cs-expanded");
           // CrowdSurfing has been maximized
         } else if(param.data[0] === 'fullScreen' && $("body").hasClass("full-screen")){
 
-            updateFSButton(false);
-            updateGCPrompt(false);
+          updateFSButton(false);
+          updateGCPrompt(false);
         }else if(param.data[0] === 'fullScreen' && !$("body").hasClass("full-screen")){
-            updateFSButton(true);
-            updateGCPrompt(true);
+          updateFSButton(true);
+          updateGCPrompt(true);
         }
-    },
-    false
-);
+      },
+      false
+      );
 
 
 
-document.addEventListener('CrowdSurfingControlEvent',function checkIfIsInFullScreen(param) {console.warn(param);},false);
-
-
-$(".gc-text").mouseup(function(e){
+ $(".gc-text").mouseup(function(e){
   e.preventDefault();
 });
 
@@ -438,5 +530,77 @@ function createCORSRequest(method, url) {
 }
 
 
+
+
+
+// Detecting attribute changes -- WHERE HAS THIS BEEN ALL OF MY LIFE!??!?!
+
+$(function() {
+  (function($) {
+    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+    $.fn.attrchange = function(callback) {
+      if (MutationObserver) {
+        var options = {
+          subtree: false,
+          attributes: true
+        };
+
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(e) {
+            callback.call(e.target, e.attributeName);
+          });
+        });
+
+        return this.each(function() {
+          observer.observe(this, options);
+        });
+
+      }
+    }
+  })(jQuery);
+
+//Now you need to append event listener
+$('.video-area').attrchange(function(attrName) {
+
+  if(attrName=='class'){
+    updateVideoBars($('.video-area').hasClass('cs-fullscreen-minimized'));
+  }
+
+});
+});
+
+
+
+function getGiftCode(){
+  var qv = getQueryVariable("giftcode");
+  if(qv && qv!=""){
+    console.log("Using gift code in query string.");
+    return qv;
+  }else{
+    // if (domstorage){
+    //   if (domstorage.giftcode){
+    //     console.log("Using gift code in local storage.");
+    //     return domstorage.giftcode
+    //   }
+    // }
+  }
+
+  console.log("No gift code found on page load.");
+  return "";
+}
+
+
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split('&');
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split('=');
+    if (decodeURIComponent(pair[0]) == variable) {
+      return decodeURIComponent(pair[1]);
+    }
+  }
+}
 
 

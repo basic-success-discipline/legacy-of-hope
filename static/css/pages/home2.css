@@ -59,8 +59,7 @@ h5 {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 20%;
-  display: none; }
+  top: 20%; }
 
 .hero.second.alt .heroblurb {
   text-align: right; }
@@ -101,8 +100,7 @@ h5 {
   width: 100%;
   position: absolute;
   text-align: center;
-  color: white;
-  display: none; }
+  color: white; }
 
 .hero.third .top.heroblurb {
   top: 20%; }
