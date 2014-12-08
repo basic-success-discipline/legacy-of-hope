@@ -71,6 +71,9 @@ p.giftcode {
   font-size: 25px;
   cursor: pointer; }
 
+.paymentid-wrapper {
+  text-align: left; }
+
 .prefooter {
   display: none; }
 
