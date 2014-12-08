@@ -70,19 +70,23 @@
 	padding-right: 20px;
 	padding-left: 20px;
 }
+
+.heading.disabled h3{
+	color: rgb(200,200,200);
+}
 .button{
 	width: 100%;
 	text-align: center;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	background-color: $loh-blue;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	margin-bottom: 20px;
 		cursor: pointer;
-	transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-webkit-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
+	// transition: all 0.2s linear;
+	// -moz-transition: all 0.2s linear;
+	// -webkit-transition: all 0.2s linear;
+	// -o-transition: all 0.2s linear;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
@@ -100,7 +104,11 @@
  	opacity: 1;
  	cursor: pointer;
  }
-.button.enabled:hover{
+// .button.enabled:hover{
+// 	background-color: $loh-green;
+// }
+
+.button.enabled.selected{
 	background-color: $loh-green;
 }
 
@@ -157,6 +165,8 @@ margin-top: 30px;
 }
 
 
+
+
 // STICKY FOOTER
 
 .prefooter{
@@ -195,6 +205,9 @@ and (max-width: $phone-landscape - 1px)  {
 .page h1{
 	text-align: center;
 }
+.button{
+	max-width: 600px;
+}
 
 }
 
@@ -219,6 +232,9 @@ and (max-width: $tablet-portrait - 1px)  {
 	text-align: center;
 }
 
+.button{
+	max-width: 600px;
+}
 
 }
 

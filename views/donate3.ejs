@@ -28,27 +28,26 @@
           <div class="heading">
             <h3>1) Select amount</h3>
           </div>
-          <div class="button option1 enabled" amount="5.00"><h5>$5</h5></div>
-          <div class="button option2 enabled" amount="50.00"><h5>$50</h5></div>
-          <div class="button option3 enabled" amount=""><h5>Other</h5></div>
-          <input type="text" class="otheramount" disabled></input>
+          <div class="button enabled" amount="5.00"><h5>$5</h5></div>
+          <div class="button enabled" amount="50.00"><h5>$50</h5></div>
+          <div class="button other enabled" amount=""><h5>Other</h5></div>
+          <input type="text" class="otheramount" onkeypress="return isNumber(event)" onkeyup="updateAmount()" disabled></input>
         </div>
-        <div class="four columns step2 step">
-          <div class="heading">
+        <div class="four columns step2 step ">
+          <div class="heading disabled">
             <h3>2) Select Method</h3>
           </div>
-          <div class="button option1 enabled" ><h5>Paypal Account</h5></div>
-          <div class="button option2 enabled"><h5>Credit Card</h5></div>
+          <div class="button option1" method="paypal"><h5>Paypal Account</h5></div>
+          <div class="button option2" method="credit_card"><h5>Credit Card</h5></div>
         </div>
         <div class="four columns step3 step">
-          <div class="heading">
+          <div class="heading disabled">
             <h3>3) Enter Email Address</h3>
           </div>
-          <input type="text" class="emailaddress"></input>
+          <input type="text" class="emailaddress" disabled onkeyup="updateEmailAddress()"></input>
 
           <div class="button submit"><h5>Submit</h5></div>
         </div>
-        <hr>
       </div>
       
 

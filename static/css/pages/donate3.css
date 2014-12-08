@@ -42,19 +42,18 @@
   padding-right: 20px;
   padding-left: 20px; }
 
+.heading.disabled h3 {
+  color: #c8c8c8; }
+
 .button {
   width: 100%;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #358fe3;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   margin-bottom: 20px;
   cursor: pointer;
-  transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -71,7 +70,7 @@
   opacity: 1;
   cursor: pointer; }
 
-.button.enabled:hover {
+.button.enabled.selected {
   background-color: #4aae39; }
 
 .button h5 {
@@ -138,7 +137,10 @@ input:disabled {
     font-size: 24px; }
 
   .page h1 {
-    text-align: center; } }
+    text-align: center; }
+
+  .button {
+    max-width: 600px; } }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .nav .currentpage {
     padding-right: 8px; }
@@ -150,7 +152,10 @@ input:disabled {
     font-size: 24px; }
 
   .page h1 {
-    text-align: center; } }
+    text-align: center; }
+
+  .button {
+    max-width: 600px; } }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .nav .currentpage {
     padding-right: 8px; } }
