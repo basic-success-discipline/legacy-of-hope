@@ -448,6 +448,16 @@ var donate = {
   type: "website"
 };
 
+var donate3 = {
+  title: "Donate to the Legacy of Hope",
+  url: "http://legacyofhope.org/donate",
+  thumb_img: "mission_hero.jpg",
+  description: "Donate to the Legacy of Hope",
+  stylesheet: "donate3.css",
+  currentpage: "menu-donate",
+  type: "website"
+};
+
 
 
 var graca = {
@@ -695,6 +705,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'donate':
       callback(null, donate);
+      break;
+       case 'donate3':
+      callback(null, donate3);
       break;
       case 'graca':
       callback(null, graca);

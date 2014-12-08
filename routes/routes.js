@@ -254,10 +254,10 @@ router.get('/concert', function(req, res) {
 // });
 
 router.get('/donate', function(req, res) {
-  cmsgateway.getPageData('cms', 'donate', 
+  cmsgateway.getPageData('cms', 'donate3', 
     function(err, data) {
       data.authUser = authUser;
-      res.render('donate', data);
+      res.render('donate3', data);
     });
 });
 
