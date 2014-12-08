@@ -336,6 +336,14 @@ router.get('/partners', function(req, res) {
     });
 });
 
+router.get('/paymentconfirmed', function(req, res) {
+  cmsgateway.getPageData('cms', 'paymentconfirmed', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('paymentconfirmed', data);
+    });
+});
+
 router.get('/press', function(req, res) {
   cmsgateway.getPageData('cms', 'press', 
     function(err, data) {

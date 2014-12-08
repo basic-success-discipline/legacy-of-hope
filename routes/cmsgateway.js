@@ -577,6 +577,18 @@ var partners = {
   sponsorlist: sponsorlist
 };
 
+
+var paymentconfirmed = {
+  title: "Payment Confirmed",
+  url: "http://legacyofhope.org/paymentconfirmed",
+  thumb_img: "",
+  description: "",
+  stylesheet: "paymentconfirmed.css",
+  currentpage: "menu-donate",
+  type: "website"
+}
+
+
 var press = {
   title: "Press - Legacy of Hope",
   url: "http://legacyofhope.org/press",
@@ -599,6 +611,7 @@ var pr1 = {
   type: "article"
 
 };
+
 
 var ruby = {
   title: "Ruby Bridges Spotlight - Legacy of Hope",
@@ -718,6 +731,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'partners':
       callback(null, partners);
+      break;
+      case 'paymentconfirmed':
+      callback(null, paymentconfirmed);
       break;
       case 'press':
       callback(null, press);
