@@ -100,10 +100,12 @@ input[type="text"] {
   -webkit-border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 8px;
   margin-bottom: 18px;
-  text-align: center; }
+  text-align: center;
+  font-family: "Helvetica Neue Light";
+  vertical-align: middle; }
 
 input[type="text"]:focus {
   outline: none; }

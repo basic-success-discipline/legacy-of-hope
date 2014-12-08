@@ -93,8 +93,68 @@ function initiatePayment(){
 var baseurl = 'https://ipms-dev.appspot.com/ipms/donations/donate';
 var returnurl = $.url.encode('http://' + window.location.host + "/paymentconfirmed");
 
-var url = baseurl +'?zotz=161803&amount=' + amount + '&event=LOH-CONCERT&email=' + email + '&payby=' + paymentmethod + '&returnurl=' + returnurl;
+var url = baseurl +'?zotz=161803&amount=' + amount + '&event=LOH-AUTH&email=' + email + '&payby=' + paymentmethod + '&returnurl=' + returnurl;
+
+
+ var xhr = createCORSRequest('GET', url);
+ if (!xhr) {
+  alert('This site uses Cross-Origin Resource Sharing (CORS). Please use a browser that supports CORS.');
+  return;
 }
+
+  // Response handlers.
+  xhr.onload = function() {
+    // if(xhr.status==400){
+    //   $('.payment-error').html("I'm sorry there is an error with the information you provided.");
+    //   $('.payment-error').show();
+    //   $('.payment-message').css('visibility', 'hidden');
+    // }else if(xhr.status==500){
+    //    $('.payment-error').html("I'm sorry there was an error processing your donation.");
+    //   $('.payment-error').show();
+    //   $('.payment-message').css('visibility', 'hidden');
+    // }else if(xhr.status==201){
+    // var text = xhr.responseText;
+    // var data = JSON.parse(text);
+    // giftcode=data.GiftCode;
+    // callback();
+    // }
+    
+
+  };
+
+  xhr.onerror = function() {
+      // $('.payment-error').html("I'm sorry there was an error processing your donation.");
+      // $('.payment-error').show();
+      // $('.payment-message').css('visibility', 'hidden');
+  };
+
+  xhr.send();
+}
+
+
+
+
+
+// Create the XHR object.
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+
+
+
 
 
 
