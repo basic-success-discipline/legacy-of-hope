@@ -76,9 +76,9 @@
 
 .button.enabled:hover {
   -ms-transform: translate(-1px, -1px);
-  /* IE 9 */
   -webkit-transform: translate(-1px, -1px);
-  /* Chrome, Safari, Opera */
+  -moz-transform: translate(-1px, -1px);
+  -o-transform: translate(-1px, -1px);
   transform: translate(-1px, -1px);
   box-shadow: 2px 2px 4px #888888;
   -webkit-box-shadow: 2px 2px 4px #888888;
@@ -118,6 +118,8 @@ input[type="text"] {
   border: 1px inset;
   width: 100%;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   padding-top: 11px;
   padding-bottom: 8px;
   margin-bottom: 18px;
