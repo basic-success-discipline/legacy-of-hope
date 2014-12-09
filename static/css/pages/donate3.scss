@@ -78,15 +78,15 @@
 	width: 100%;
 	text-align: center;
 	padding: 10px 15px;
-	background-color: $loh-blue;
+	background-color: #3498db;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	margin-bottom: 20px;
 		cursor: pointer;
-	// transition: all 0.2s linear;
-	// -moz-transition: all 0.2s linear;
-	// -webkit-transition: all 0.2s linear;
-	// -o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
@@ -104,12 +104,17 @@
  	opacity: 1;
  	cursor: pointer;
  }
-// .button.enabled:hover{
-// 	background-color: $loh-green;
-// }
+.button.enabled:hover{
+	-ms-transform: translate(-1px,-1px); /* IE 9 */
+    -webkit-transform:  translate(-1px,-1px); /* Chrome, Safari, Opera */
+    transform:  translate(-1px,-1px);
+	box-shadow: 2px 2px 4px #888888;
+   -webkit-box-shadow: 2px 2px 4px #888888; 
+   -moz-box-shadow: 2px 2px 4px #888888; 
+}
 
 .button.enabled.selected{
-	background-color: $loh-green;
+	background-color:#27ae60;
 }
 
 .button h5{
@@ -120,6 +125,10 @@
 	line-height: 1;
 	padding-top: 5px;
 
+}
+
+.step{
+	margin-top: 50px;
 }
 .step1{
 	text-align:center;
@@ -140,6 +149,7 @@ input[type="text"] {
   -moz-box-shadow: none;
   border-radius: 5px;
   -webkit-border-radius: 5px;
+  border: 1px inset;
   width: 100%;
   box-sizing: border-box;
     padding-top: 11px;
@@ -155,7 +165,7 @@ input[type="text"]:focus {
 }
 
 input:disabled{
-	background-color: rgb(212,212,212);
+	background-color: rgb(240,240,240);
 }
 
 
