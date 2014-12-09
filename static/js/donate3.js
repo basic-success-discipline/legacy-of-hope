@@ -87,48 +87,13 @@ $('.submit.button').click(function(){
 
 function initiatePayment(){
 
-// returns
-// file.htm%3Farg1%3Dvalue1%20%40%23456%26arg2%3Dvalue2%20touch%C3%A9
-// Note: "@" is replaced with "%40" and "é" is replaced with "%C3%A9"
 var baseurl = 'https://ipms-dev.appspot.com/ipms/donations/donate';
 var returnurl = $.url.encode('http://' + window.location.host + "/paymentconfirmed");
 
 var url = baseurl +'?zotz=161803&amount=' + amount + '&event=LOH-AUTH&email=' + email + '&payby=' + paymentmethod + '&returnurl=' + returnurl;
 
+window.open(url);
 
- var xhr = createCORSRequest('GET', url);
- if (!xhr) {
-  alert('This site uses Cross-Origin Resource Sharing (CORS). Please use a browser that supports CORS.');
-  return;
-}
-
-  // Response handlers.
-  xhr.onload = function() {
-    // if(xhr.status==400){
-    //   $('.payment-error').html("I'm sorry there is an error with the information you provided.");
-    //   $('.payment-error').show();
-    //   $('.payment-message').css('visibility', 'hidden');
-    // }else if(xhr.status==500){
-    //    $('.payment-error').html("I'm sorry there was an error processing your donation.");
-    //   $('.payment-error').show();
-    //   $('.payment-message').css('visibility', 'hidden');
-    // }else if(xhr.status==201){
-    // var text = xhr.responseText;
-    // var data = JSON.parse(text);
-    // giftcode=data.GiftCode;
-    // callback();
-    // }
-    
-
-  };
-
-  xhr.onerror = function() {
-      // $('.payment-error').html("I'm sorry there was an error processing your donation.");
-      // $('.payment-error').show();
-      // $('.payment-message').css('visibility', 'hidden');
-  };
-
-  xhr.send();
 }
 
 
