@@ -92,7 +92,7 @@ var returnurl = $.url.encode('http://' + window.location.host + "/paymentconfirm
 
 var url = baseurl +'?zotz=161803&amount=' + amount + '&event=LOH-AUTH&email=' + email + '&payby=' + paymentmethod + '&returnurl=' + returnurl;
 
-window.open(url);
+window.location.href = url;
 
 }
 
