@@ -315,6 +315,7 @@ var home = {
   {name: "Ben Vereen", image: "img/board_vereen.jpg"},
  {name: "Barbara Walters", image: "img/board_walters.jpg"},
  {name: "Elie and Marion Wiesel", image: "img/board_wiesel.jpg"},
+  {name: "Her Highness Princess Dalal Al-Saud", image: "img/board_dalal.jpg"},
  ],
  stories: newsStories,
 quotes:[

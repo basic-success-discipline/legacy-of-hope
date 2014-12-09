@@ -63,8 +63,7 @@
     				<view skin="/akamai/amp/standard.assets.swf">
     						<!-- <element id="infoOverlay" style="top: 0px; text-align: left;" /> -->
     						<element id="controls" visible="false" autoHide="0" height="0" itemMargin="0"></element>
-							<element id="replayView" /> 
-							<element id="bufferingView" mode="default" tether="false" />
+							<!-- <element id="bufferingView" mode="default" tether="false" /> -->
     				</view>
     				<plugins>
     					<!-- CONSULT AKAMAI REGARDING PLUG-IN MODIFICATIONS. DO NOT MODIFY WITHOUT SUPPORT FROM AKAMAI -->
@@ -122,15 +121,15 @@
 	   		</states>
 	   	</eventmanagement>
 		<mediaanalytics type="Object">
-			<config type="String">http://ma463-r.analytics.edgesuite.net/config/beacon-5712.xml</config>
+			<config type="String">http://ma463-r.analytics.edgesuite.net/config/beacon-7614.xml</config>
 			<plugin type="Object">
 				<js type="String">http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js</js>
 				<swf type="String">http://79423.analytics.edgesuite.net/csma/plugin/csma.swf</swf>
 			</plugin>
 			<dimensions type="Object">
-                <eventName type="String">Legacy of Hope Concert</eventName>
-                <title type="String">Legacy of Hope</title>
-                <playerId type="String">Web Player</playerId>
+                <eventName type="String">Legacy of Hope Concert TEST NAME</eventName>
+                <title type="String">Legacy of Hope TEST EVENT TITLE</title>
+                <playerId type="String">Web Player TEST PLAYER</playerId>
             </dimensions>
 		</mediaanalytics>
 		<locales type="Object">  
