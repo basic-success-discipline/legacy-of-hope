@@ -218,13 +218,13 @@ router.get('/about', function(req, res) {
 });
 
 
-// router.get('/app', function(req, res) {
-//   cmsgateway.getPageData('cms', 'app', 
-//     function(err, data) {
-//       data.authUser = authUser;
-//       res.render('app', data);
-//     });
-// });
+router.get('/app', function(req, res) {
+  cmsgateway.getPageData('cms', 'app', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('app', data);
+    });
+});
 
 router.get('/board', function(req, res) {
   cmsgateway.getPageData('cms', 'board', 
@@ -253,13 +253,13 @@ router.get('/concert', function(req, res) {
 //     });
 // });
 
-router.get('/donate', function(req, res) {
-  cmsgateway.getPageData('cms', 'donate', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('donate', data);
-    });
-});
+// router.get('/donate', function(req, res) {
+//   cmsgateway.getPageData('cms', 'donate', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('donate', data);
+//     });
+// });
 
 router.get('/guitarinitiative', function(req, res) {
   cmsgateway.getPageData('cms', 'guitarinitiative', 
