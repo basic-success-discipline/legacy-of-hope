@@ -5,6 +5,7 @@ var utils = require('../utils.js');
 var cmsgateway = require('./cmsgateway.js');
 
 var authUser = true;
+var env = process.env.NODE_ENV || 'development';
 
 
 // router.get('*', function(req, res, next) {
@@ -151,6 +152,31 @@ router.get('/:year/:month/:day/:article', function(req, res) {
           break;
         }
         break;
+
+
+         case '11':
+         switch(req.params.article){
+          case 'PressRelease':
+          cmsgateway.getPageData('cms', 'pr1', function(err, data) {data.authUser = authUser;res.render('pr1', data);});
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+
+        case '13':
+         switch(req.params.article){
+          case 'BotlhaleBoikanyo':
+          cmsgateway.getPageData('cms', 'botlhale2', function(err, data) {data.authUser = authUser;res.render('botlhale2', data);});
+          break;
+          default:
+          res.redirect('/');
+          break;
+        }
+        break;
+
+
         default:
         res.redirect('/');
         break;
@@ -192,13 +218,13 @@ router.get('/about', function(req, res) {
 });
 
 
-router.get('/app', function(req, res) {
-  cmsgateway.getPageData('cms', 'app', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('app', data);
-    });
-});
+// router.get('/app', function(req, res) {
+//   cmsgateway.getPageData('cms', 'app', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('app', data);
+//     });
+// });
 
 router.get('/board', function(req, res) {
   cmsgateway.getPageData('cms', 'board', 
@@ -215,9 +241,17 @@ router.get('/concert', function(req, res) {
   cmsgateway.getPageData('cms', 'concert', 
     function(err, data) {
       data.authUser = authUser;
-      res.render('concert4', data);
+      res.render('concert2', data);
     });
 });
+
+// router.get('/concert4', function(req, res) {
+//   cmsgateway.getPageData('cms', 'concert4', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('concert4', data);
+//     });
+// });
 
 router.get('/donate', function(req, res) {
   cmsgateway.getPageData('cms', 'donate', 
@@ -324,8 +358,28 @@ router.get('/sponsors', function(req, res) {
 });
 
 
+// router.get('/videoplayer', function(req, res) {
 
+//   cmsgateway.getPageData('cms', 'videoplayer', 
+//       function(err, data) {
+//         data.authUser = authUser;
+//         data.endpoint = "no url";
+//         res.render('videoplayer', data);
+//       });
+// });
 
+// robots
+if (env === 'development') {
+  router.use(function (req, res, next) {
+    if ('/robots.txt' == req.url) {
+        res.type('text/plain')
+        res.send("User-agent: *\nDisallow: /");
+    } else {
+        next();
+    }
+});
+
+  }
 
 
 router.get('/videoplayer', function(req, res) {
@@ -357,8 +411,6 @@ if (env === 'development') {
 router.get('*', function(req, res) {
   res.redirect('/');
 });
-
-
 
 
 

@@ -59,8 +59,7 @@ h5 {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 20%;
-  display: none; }
+  top: 30%; }
 
 .hero.second.alt .heroblurb {
   text-align: right; }
@@ -72,6 +71,17 @@ h5 {
 .hero.second .heroblurb p {
   max-width: 45%;
   margin-left: 0; }
+
+.hero.second.alt .heroblurb {
+  text-align: right; }
+
+.hero.second .heroblurb h3 {
+  max-width: 55%;
+  margin-left: 0;
+  font-family: "Josefin Slab";
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: none; }
 
 .hero.second .herop1 {
   font-size: 16px;
@@ -97,12 +107,25 @@ h5 {
   margin-right: 0;
   text-align: right; }
 
+.hero.second.alt .heroblurb {
+  text-align: right; }
+
+.hero.second.alt .heroblurb h3 {
+  max-width: 45%;
+  margin-left: auto;
+  margin-right: 0; }
+
+.hero.second.alt .heroblurb p {
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right; }
+
 .hero.third .heroblurb {
   width: 100%;
   position: absolute;
   text-align: center;
-  color: white;
-  display: none; }
+  color: white; }
 
 .hero.third .top.heroblurb {
   top: 20%; }
@@ -256,6 +279,9 @@ h4.subheading hr {
   border-radius: 5px !important;
   width: 100%;
   margin-bottom: 30px; }
+
+.birthday p {
+  font-size: 17px; }
 
 .latestnews {
   margin-bottom: 40px; }
@@ -411,9 +437,6 @@ h4.subheading hr {
   margin-left: auto;
   margin-right: auto; }
 
-.birthday p {
-  font-size: 20px; }
-
 .aol p {
   font-size: 12px; }
 
@@ -421,15 +444,9 @@ h4.subheading hr {
   h3 {
     text-align: center; }
 
-  .hero img, .herospacer img {
-    width: 100%;
-    margin-left: -18%;
-    float: none; }
-
   .hero.second img {
     margin-left: auto;
-    margin-right: auto;
-    content: url("../../img/home_hero2_pp.jpg"); }
+    margin-right: auto; }
 
   .hero.third img {
     width: 157%;
@@ -441,18 +458,19 @@ h4.subheading hr {
   .hero.second .heroblurbbg {
     display: none; }
 
-  .heroblurb {
-    display: none; }
+  .alt .heroblurb.mobileblurb {
+    top: 10%; }
 
-  .hero.first .heroblurb {
-    width: 100%;
-    left: 0;
-    right: 0;
-    display: block;
-    padding-top: 15%;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); }
+  .heroblurb h3 {
+    margin-top: 0;
+    font-size: 12px; }
+
+  .heroblurb h4 {
+    font-size: 14px;
+    max-width: 45%;
+    text-align: center;
+    margin-right: 0;
+    margin-left: auto; }
 
   .hero.third .mobileblurb {
     display: block; }
@@ -582,6 +600,18 @@ h4.subheading hr {
   .hero.third .bottom.heroblurb p:nth-child(2) {
     text-align: center;
     display: initial; }
+
+  .hero.second.alt .heroblurb {
+    top: 12%; }
+
+  .hero.second.alt .heroblurb h3 {
+    top: 10%;
+    display: block;
+    text-align: right; }
+
+  .hero.second.alt .heroblurb h4 {
+    text-align: right;
+    font-size: 15px; }
 
   .page .container .about img {
     margin-left: auto;

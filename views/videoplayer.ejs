@@ -10,10 +10,16 @@
 
   <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
 
+  <link rel="stylesheet" href="/setlist/setlist.css" media="screen" type="text/css" />
+
   <script src="http://d28u0ctzyej8pl.cloudfront.net/fullscreen/cs-fullscreen.js"></script>
   <link rel="stylesheet" type="text/css" href="http://d28u0ctzyej8pl.cloudfront.net/fullscreen/cs-fullscreen.css" />
   <!--Player-->
   <script type="text/javascript"  src="/akamai/amp/amp.min.js"></script>
+
+  <script type="text/javascript"  src="/js/jquery.watermark.min.js"></script>
+  <script type="text/javascript"  src="/js/fingerprint.js"></script>
+
 
 </head>
 <!-- HACK: ontouchstart="" is a workaround that enables the use of the CSS :active psuedo class on iOS -->
@@ -25,43 +31,201 @@
         <div class="video-area" >
           <div class="video-player">
             <div id="akamai-media-player"></div>
+            <div class="video-title-wrapper video-bar-wrapper">
+              <div class="video-title video-bar outer">
+                <div class="middle">
+                  <!-- <div class="LOH-branding"><h5>Legacy<em>of</em>Hope</h5><p>live</p></div>
+                  <div class="inplay-branding"><p>powered by</p><p>in:play streaming</p></div> -->
+                  <img class="playerimg1" src="/img/player1.png"/>
+                  <img class="playerimg2" src="/img/player2.png"/>
 
-            <div class="video-menu-wrapper">
-              <div class="gc-prompt">
-              <p>Donate $1 and get a free gift code that will get you backstage! &nbsp&nbsp <i class="fa fa-close" onclick="closeGCPrompt()"></i></p></div>
-              <div id="video-menu" class="video-menu">
-                <i class="fa fa-play playbutton" onClick="playPause()"></i>
-                <button class="mainBtn" onclick="clickVideo(0)">Main Stage</button>
-                <button class="backstageBtn">Backstage Locked</button>
-                <button onclick="gotoDonate()" >Give Now</button>
-                <input type="range" min="0" max="80" value="60" step="2" onchange="setVolume(this.value)"/>
-                <button class="csBtn" onclick="toggleCS()">Close Crowdsurfing</button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="gc-prompt-wrapper outer">
+              <div class="middle">
+                <div class="gc-prompt">
+                  <i class="fa fa-close" onclick="closeGCPrompt()"></i>
+                  <p>To view the VIP Stage, please enter your Premium Code below. If you do not have a code yet, simply donate to the Legacy of Hope and receive your free Code in your email!</p>
+                  <div class="gc-enter">
+                    <input type="text" class="gc-text" autofocus></input>
+                    <!-- <p class="error">I'm sorry, your code is invalid!</p> -->
+                    <div class="submit-gc-btn" onclick="inputGC()"><p>Enter the VIP Room!</p></div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <div class="video-menu-wrapper video-bar-wrapper">
+              <div id="video-menu" class="video-menu video-bar">
+
+                <div class="left-menu half-menu outer">
+                  <div class="middle">
+                    <!-- <img class="playbutton play" src="/img/player9.png" onClick="playPause()"/> -->
+                    <i class="fa fa-play playbutton" onClick="playPause()"></i>
+                  </div>
+                  <div class="middle">
+                   <i class="fa fa-arrows-alt fstogglebutton" ></i>
+                 </div>
+                 <div class="volume middle">
+                  <i class="fa fa-volume-up volumebutton"></i>
+                  <div class="range"><input type="range" min="0" max="80" step="1" onchange="setVolume(this.value)" orient="vertical"/></div>
+                </div>
+                <div class="middle">
+
+
+
+                      <!-- <div class="mainBtn btn" onclick="clickVideo(0)">
+                        <h1><b>Main</b>Stage</h1>
+                        <p>the concert</p>
+                      </div>
+                    </div> -->
+                    <div class="mainBtn btn" onclick="clickVideo(0)">
+                      <img class="playerimg5"  src="/img/player5.png"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-menu half-menu outer">
+                  <div class="premium-stream-locked">
+                    <img src="/img/premium_stream_locked.png"/>
+                  </div>
+                  <div class="middle">
+
+                    <!-- <div class="backstageBtn btn ">
+                    <div class="outer lock"><div class="middle"> <i class="fa fa-lock"></i></div></div>
+                      
+                        <h1><b>VIP</b>Stage</h1>
+                        <p>premium access</p>
+                      </div> -->
+                      <div class="backstageBtn btn withpngs">
+                        <img class="playerimg6"  src="/img/player6.png"/>
+                        <img class="playerimg7"  src="/img/player7.png"/>
+                      </div>
+
+                      <div class="donate-btn" onclick="gotoDonate()"><p>Donate</p></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="video-title-wrapper video-bar-wrapper fs-title fs-bar-wrapper">
+             <div class="video-title video-bar outer ">
+              <div class="middle">
+                  <!-- <div class="LOH-branding"><h5>Legacy<em>of</em>Hope</h5><p>live</p></div>
+                  <div class="inplay-branding"><p>powered by</p><p>in:play streaming</p></div> -->
+                  <img class="playerimg1" src="/img/player1.png"/>
+                  <img class="playerimg2" src="/img/player2.png"/>
+
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="gc-prompt-wrapper outer fs-gc-prompt">
+              <div class="middle">
+                <div class="gc-prompt">
+                  <i class="fa fa-close" onclick="closeGCPrompt()"></i>
+                  <p>To view the VIP Stage, please enter your Premium Code below. If you do not have a code yet, simply donate to the Legacy of Hope and receive your free Code in your email!</p>
+                  <div class="gc-enter">
+                    <input type="text" class="fs-gc-text gc-text" autofocus></input>
+                    <!-- <p class="error">I'm sorry, your code is invalid!</p> -->
+                    <div class="submit-gc-btn" onclick="inputFSGC()"><p>Enter the VIP Room!</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="general-error-wrapper outer">
+              <div class="middle">
+                <div class="general-error">
+                  <i class="fa fa-close" onclick="closeGeneralError()"></i>
+                  <p>I'm sorry, there was an error.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-menu-wrapper video-bar-wrapper fs-menu fs-bar-wrapper">
+              
+              <div id="video-menu" class="video-menu video-bar">
+                <div class="left-menu half-menu outer">
+                  <div class="middle">
+                    <!-- <img class="playbutton play" onClick="playPause()"/> -->
+                    <i class="fa fa-play playbutton" onClick="playPause()"></i>
+                  </div>
+                  <div class="middle">
+                   <i class="fa fa-arrows-alt fstogglebutton" ></i>
+                 </div>
+                 <div class="volume middle">
+                  <i class="fa fa-volume-up volumebutton"></i>
+                  <div class="range"><input type="range" min="0" max="80" step="1" onchange="setVolume(this.value)" orient="vertical"/></div>
+                </div>
+                <div class="middle">
+
+
+
+                      <!-- <div class="mainBtn btn" onclick="clickVideo(0)">
+                        <h1><b>Main</b>Stage</h1>
+                        <p>the concert</p>
+                      </div>
+                    </div> -->
+                    <div class="mainBtn btn" onclick="clickVideo(0)">
+                      <img class="playerimg5"  src="/img/player5.png"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-menu half-menu outer">
+                  <div class="premium-stream-locked">
+                    <img src="/img/premium_stream_locked.png"/>
+                  </div>
+                  <div class="middle">
+
+                    <!-- <div class="backstageBtn btn ">
+                    <div class="outer lock"><div class="middle"> <i class="fa fa-lock"></i></div></div>
+                      
+                        <h1><b>VIP</b>Stage</h1>
+                        <p>premium access</p>
+                      </div> -->
+                      <div class="backstageBtn btn withpngs">
+                        <img class="playerimg6"  src="/img/player6.png"/>
+                        <img class="playerimg7"  src="/img/player7.png"/>
+                      </div>
+
+                      <div class="donate-btn" onclick="gotoDonate()"><p>Donate</p></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+
+              <div id="crowdsurfing-wrapper">
+
+                <script id="crowdsurfing_event" src="https://d28u0ctzyej8pl.cloudfront.net/events/5448240304ffa9e84e8b4568.js" type="text/javascript"></script>
+              </div>
+              
+            </div>
+
           </div>
 
-          <div id="crowdsurfing-wrapper">
-            <script id="crowdsurfing_event" src="https://d28u0ctzyej8pl.cloudfront.net/events/5448240304ffa9e84e8b4568.js" type="text/javascript"></script>
-          </div>
-<div class="gc-enter">
-          <p>Enter your gift code</p><input type="text" class="gc-text"> </input><button class="submit-gc-btn" onclick="inputGC()">Submit</button>
-          </div>
+          <script type="text/javascript" src="/js/videoplayer.js"></script>
+          <script type="text/javascript"  src="/setlist/setlist.js"></script>
         </div>
 
+        <div class="push"></div>
       </div>
-
-
-
-
-      <script type="text/javascript" src="/js/videoplayer.js"></script>
+      <% include partials/loh-footer %>
     </div>
-
-    <div class="push"></div>
-  </div>
-  <% include partials/loh-footer %>
-</div>
-</body>
-</html>
+  </body>
+  </html>
 
 
 

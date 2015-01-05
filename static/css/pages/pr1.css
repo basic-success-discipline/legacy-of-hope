@@ -1,0 +1,28 @@
+.pr1.wrapper-spotlight {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.pr1.wrapper-spotlight.first {
+  padding-bottom: 30px; }
+
+h1, h2, h3, h4 {
+  text-align: center; }
+
+.pr1 h1 {
+  font-size: 31px;
+  margin-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  letter-spacing: 0.7px; }
+
+.pr1 p b {
+  font-family: "Helvetica Neue";
+  font-weight: bold; }
+
+h4 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  color: #a0a0a0;
+  margin-right: auto;
+  margin-left: auto; }

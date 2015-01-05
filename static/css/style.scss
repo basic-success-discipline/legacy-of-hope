@@ -287,6 +287,7 @@ em{
   padding-top: 3px;
   margin-top: -5px;
   border-radius: 3px;
+  -webkit-border-radius: 3px;
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
@@ -315,6 +316,9 @@ em{
   background-color: $navcolor;
   -webkit-transition: opacity .5s; /* Safari */
   transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -o-transition: opacity .5s;
+
 
 }
 
@@ -333,6 +337,8 @@ em{
  
   -webkit-transition: opacity .5s; /* Safari */
   transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -o-transition: opacity .5s;
 }
 
 
@@ -578,6 +584,8 @@ em{
   float:right;
   padding-left: 31px;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 
@@ -659,6 +667,8 @@ em{
   padding-bottom: 20px;
   text-align: left;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 
 }
 
@@ -686,6 +696,7 @@ em{
 .sidebar .sidebox.chirpifybox img{
   width: 100%;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
   }
 
  .sidebar .sidebox.chirpifybox p.nobottommargin{
@@ -749,6 +760,7 @@ em{
 }
 .donatebuttonholder  button{
   border-radius: 3px;
+  -webkit-border-radius: 3px;
   padding-top: 4px;
   background-color: $loh-blue; 
   width: 90px;
@@ -824,11 +836,13 @@ em{
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .countdown .hours{
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .countdown .minutes h2,.countdown #minutes{
@@ -836,11 +850,13 @@ em{
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
+  animation-delay: 1s;
 }
 .countdown .minutes{
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 
@@ -1069,6 +1085,7 @@ em{
   padding: 4px 16px 5px 16px;
   background: #1c1f26;
   border-radius: 14px;
+  -webkit-border-radius: 14px;
   font-size: 11px;
   color: white;
   font-weight: 600;
@@ -1165,6 +1182,7 @@ margin-bottom: 70px;
   background-color: #E6E6E6;
   text-decoration: none;
   border-radius: 2px;
+  -webkit-border-radius: 2px;
   cursor: pointer;
 }
 
@@ -1219,6 +1237,7 @@ background-color: white;
 padding-bottom: 40px;
 padding-top: 40px;
 border-radius: 20px;
+-webkit-border-radius: 20px;
 }
 .lightbox h1{
 text-align: center;
@@ -1387,6 +1406,7 @@ cursor: pointer;
   padding: 10px 25px 10px 25px;
   color: #333;
   border-radius: 4px;
+  -webkit-border-radius: 4px;
 }
 .legacy-frm .button:hover {
   color: #333;
@@ -1661,6 +1681,8 @@ cursor: pointer;
 
   html{
     -webkit-text-size-adjust: none ;
+    -ms-text-size-adjust: none ;
+    text-size-adjust: none ;
   }
 
 //  MOBILE -- LANDSCAPE -- TYPOGRAPHY

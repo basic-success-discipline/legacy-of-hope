@@ -76,7 +76,7 @@ if ('development' === env) {
     console.log('development');
     // Authenticator
     //app.use(express.basicAuth('testuser', 'lohc889'));
-    
+
 
     process.argv.forEach(function (val, index, array) {
       if (val=='local')

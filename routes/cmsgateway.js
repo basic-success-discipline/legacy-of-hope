@@ -7,6 +7,15 @@ var newsStories = [
 
 
 
+
+{
+  title: "Botlhale Boikanyo Spotlight",
+  image: "/img/card_botlhale2.jpg",
+  blurb: "Winner of South Africa’s Got Talent and Legacy of Hope Youth Ambassador, 13-year-old Botlhale Boikanyo grew up inspired by Nelson Mandela. Looking back at his influence on her career as a young girl and poet growing up in South Africa, Bothale recalls — 'He taught me to cherish each moment. I vividly remember seeing him doing the Madiba dance with a smile on his face. You could tell he loved people. He engaged with people. He was an optimist. He believed in so much positivity that nothing could ever bring him down or make him feel sad.'",
+  date: "November 13, 2014",
+  link: "/2014/11/13/BotlhaleBoikanyo"
+},
+
 {
   title: "Octavia Spencer Spotlight",
   image: "/img/octavia_hero.jpg",
@@ -114,6 +123,7 @@ newsStories.forEach(function (story) {
 var path = 'static/rss/';
 fs.mkdir(path,function(e){
     if(!e || (e && e.code === 'EEXIST')){
+      console.log("created new xml");
        fs.writeFile('static/rss/news.xml', rss.getFeedXML(feed), function (err) {
   if (err) return console.log(err);
 });
@@ -127,6 +137,17 @@ fs.mkdir(path,function(e){
 
 
 var pressStories = [
+
+
+{
+  title: "Legacy Of Hope Foundation Names Honorary Board In Support Of The Nelson Mandela Children's Hospital",
+  image: "/img/card_pr1.jpg",
+  blurb: "The Legacy of Hope Foundation, whose mission is to support medical care and facilities for underserved children and communities around the world is focusing all of its efforts on bringing Nelson Mandela's last wish to create a much needed children's hospital on the continent of Africa, (home to over 450 million children).",
+  date: "November 11, 2014",
+  link: "/2014/11/11/PressRelease",
+   host: "PR Newswire"
+
+},
 
 {
   title: "Graça Machel mourns her husband, Mandela",
@@ -247,7 +268,8 @@ var donate_options= [
     { name:"Bulldog Media", logo:"/img/logo_bulldog.png", link:"http://bulldogdm.com/"},
     { name:"LiveOne", logo:"/img/logo_liveone_crowdsurfing.png", link:"http://liveonegroup.com/"},
     { name:"Oyster Labs", logo:"/img/logo_oyster.png", link:"http://www.oysterlabs.com/#aqua"},
-     { name:"Internet Media Labs", logo:"/img/logo_iml.png", link:"http://www.internetmedialabs.com/"},
+     { name:"OneQube", logo:"/img/logo_oneqube.png", link:"http://oneqube.com/"},
+       { name:"Kik", logo:"/img/logo_kik.png", link:"http://kik.com/"},
     { name:"PRG Nocturne", logo:"/img/logo_prg.png", link:"http://www.nocturneproductions.com/"},
      { name:"Creative Artist Agency", logo:"/img/logo_caa.png", link:"http://www.caa.com/"},
      { name:"Celebrity Services Africa", logo:"/img/logo_csa.png", link:"http://www.celebsa.com/"},
@@ -274,7 +296,7 @@ var donate_options= [
 
 var home = {
  title 		: "Home - Legacy of Hope",
- thumb_img	: "thumb_home.jpg",
+ thumb_img	: "thumb_home2.jpg",
  description	: "The LEGACY OF HOPE FOUNDATION will produce a historical evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
  stylesheet	: "home2.css",
  url: "http://legacyofhope.org",
@@ -304,6 +326,7 @@ var home = {
   {name: "Ben Vereen", image: "img/board_vereen.jpg"},
  {name: "Barbara Walters", image: "img/board_walters.jpg"},
  {name: "Elie and Marion Wiesel", image: "img/board_wiesel.jpg"},
+  {name: "Her Highness Princess Dalal Al-Saud", image: "img/board_dalal.jpg"},
  ],
  stories: newsStories,
 quotes: quotes
@@ -360,6 +383,19 @@ var botlhale = {
   type: "article"
 };
 
+
+var botlhale2 = {
+  title: "Youth Ambassador Botlhale Boikanyo Spotlight",
+  url: "http://legacyofhope.org/2014/11/13/BotlhaleBoikanyo",
+  thumb_img: "botlhale2_2.jpg",
+  description: "Botlhale Boikanyo (pronounced bo-thall-ee) is a young, ambitious and inspired poet from Johannesburg, South Africa. She has taken the inspiration of the Madiba dance and turned it into an opportunity to teach and influence others through her poetic and powerful visual performances.",
+  stylesheet: "botlhale2.css",
+  currentpage: "menu-news",
+  type: "article"
+};
+
+
+
 var chuck = {
   title: "Chuck Nice Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/10/11/ChuckNice",
@@ -373,25 +409,11 @@ var chuck = {
 var concert = {
   title: "Concert - Legacy of Hope",
   url: "http://legacyofhope.org/concert",
-  thumb_img: "thumb_concert.jpg",
+  thumb_img: "thumb_concert2.jpg",
   description: "The LEGACY OF HOPE FOUNDATION will produce a historic evening of music and entertainment this December in support of a global campaign to fulfill the last living wish of Nelson Mandela—to build a dedicated children’s hospital in Johannesburg, South Africa.",
   stylesheet: "concert2.css",
   currentpage: "menu-concert",
-  type: "website",
-  artists: [
-    {name: "Robert Plant"},
-    {name: "John Legend"},
-    {name: "K'naan"},
-    {name: "The Crystal Method"},
-     {name: "De La Sol"},
-    {name: "Stevie Wonder"},
-    {name: "Shaka Khan"},
-    {name: "Macklemore"},
-    {name: "Mumford & Sons"},
-    {name: "Parliament Funkadelic"},
-    {name: "Blue Man Group"},
-    {name: "Beck"}
-  ]
+  type: "website"
 };
 
 
@@ -483,7 +505,7 @@ var larry = {
 var legacy_of_hope_nmcht_concert = {
   title: "Sibongile - Legacy of Hope",
   url: "http://legacyofhope.org/legacy-of-hope-nmcht-concert",
-  thumb_img: "thumb_home.jpg",
+  thumb_img: "thumb_home2.jpg",
   description: "Ten years ago, Nelson Mandela enriched his living legacy by unfolding his dream of the Nelson Mandela Children’s Hospital, a crucially needed institution for the millions of underserved children in South Africa. Sibongile Mkhabela, then CEO of the Nelson Mandela’s Children Fund, was chosen by Mandela to play a key role in this vision as he appointed her CEO of the Nelson Mandela Children's Hospital Trust.",
   stylesheet: "sibongile.css",
   currentpage: "menu-news",
@@ -494,7 +516,7 @@ var legacy_of_hope_nmcht_concert = {
 var LOHsponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/LOHsponsors",
-  thumb_img: "thumb_home.jpg",
+  thumb_img: "thumb_home2.jpg",
   description: "Contact us for sponsorship enquiry.",
   stylesheet: "LOHsponsors.css",
   currentpage: "menu-sponsors",
@@ -518,7 +540,7 @@ var mission = {
   thumb_img: "thumb_mission.jpg",
   description: "The Legacy of Hope Foundation was created to provide medical care and facilities for underserved children and communities around the world. The first initiative for Legacy of Hope is to help build the Nelson Mandela Children’s Hospital in Johannesburg, South Africa.",
   stylesheet: "mission.css",
-  currentpage: "menu-about",
+  currentpage: "menu-mission",
   type: "website"
 };
 
@@ -572,6 +594,18 @@ var press = {
   stories: pressStories
 };
 
+var pr1 = {
+
+  title: "Legacy Of Hope Foundation Names Honorary Board In Support Of The Nelson Mandela Children's Hospital",
+  url: "http://legacyofhope.org/2014/11/11/PressRelease",
+  thumb_img: "card_pr1.jpg",
+  description: "The Legacy of Hope Foundation, whose mission is to support medical care and facilities for underserved children and communities around the world is focusing all of its efforts on bringing Nelson Mandela's last wish to create a much needed children's hospital on the continent of Africa, (home to over 450 million children).",
+  stylesheet: "pr1.css",
+  currentpage: "menu-press",
+  type: "article"
+
+};
+
 var ruby = {
   title: "Ruby Bridges Spotlight - Legacy of Hope",
   url: "http://legacyofhope.org/2014/9/27/RubyBridges",
@@ -596,7 +630,7 @@ var soliman = {
 var sponsors = {
   title: "Sponsors - Legacy of Hope",
   url: "http://legacyofhope.org/sponsors",
-  thumb_img: "thumb_home.jpg",
+  thumb_img: "thumb_home2.jpg",
   description: "The Legacy of Hope Foundation thanks you for your consideration of being part of this momentous historic event. Download the print version or the web version of the Legacy of Hope Sponsor Deck below. (Right click and choose 'Save As').",
   stylesheet: "sponsors.css",
   currentpage: "menu-sponsors",
@@ -643,10 +677,16 @@ exports.getPageData = function(category, page, callback) {
       case 'botlhale':
       callback(null, botlhale);
       break;
+      case 'botlhale2':
+      callback(null, botlhale2);
+      break;
       case 'chuck':
       callback(null, chuck);
       break;
       case 'concert':
+      callback(null, concert);
+      break;
+      case 'concert4':
       callback(null, concert4);
       break;
       case 'donate':
@@ -690,6 +730,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'press':
       callback(null, press);
+      break;
+      case 'pr1':
+      callback(null, pr1);
       break;
       case 'ruby':
       callback(null, ruby);

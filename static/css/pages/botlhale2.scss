@@ -1,0 +1,55 @@
+@import "../variables.scss";
+
+
+
+// SPOTLIGHT
+
+img.scootup{
+	margin-top: -10%;
+	width: 100%;
+}
+
+
+//  MOBILE - PORTRAIT
+
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+img.banner{
+		content: url('../../img/botlhale2_1_pp.jpg');
+	}
+
+		img.scootup{
+			content: url('../../img/botlhale2_2_pp.jpg');
+		margin-bottom: 40px;
+	}
+
+
+}
+
+
+//  MOBILE - LANDSCAPE
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+	img.scootup{
+		margin-bottom: 40px;
+	}
+
+
+}
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+
+
+
+// img.barclays{
+// 	margin-bottom: 25px;
+// }
+}
+

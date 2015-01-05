@@ -43,7 +43,7 @@
     					dvr_enabled = '1'
     					rewind_interval = '15'
     					font_size='18'
-    					media_analytics_logging_enabled='false'
+    					media_analytics_logging_enabled='true'
     					enable_alternate_server_mapping='false'
     					enable_end_user_mapping='false'
 						set_resume_dvr_at_live='true'
@@ -56,13 +56,14 @@
 						hds_fragment_retry_data_gap_threshold= '20'
 						caption_type =''
 					    caption_language ='en-us'
+					    branding_preload='none'
+					    playback_clicktoggle_enabled='false'
     					>
     				</player>
     				<view skin="/akamai/amp/standard.assets.swf">
     						<!-- <element id="infoOverlay" style="top: 0px; text-align: left;" /> -->
     						<element id="controls" visible="false" autoHide="0" height="0" itemMargin="0"></element>
-							<element id="replayView" /> 
-							<element id="bufferingView" mode="default" tether="false" />
+							<!-- <element id="bufferingView" mode="default" tether="false" /> -->
     				</view>
     				<plugins>
     					<!-- CONSULT AKAMAI REGARDING PLUG-IN MODIFICATIONS. DO NOT MODIFY WITHOUT SUPPORT FROM AKAMAI -->
@@ -120,15 +121,15 @@
 	   		</states>
 	   	</eventmanagement>
 		<mediaanalytics type="Object">
-			<config type="String">http://ma1-r.analytics.edgesuite.net/config/beacon-3018.xml?setVideoObject=1</config>
+			<config type="String">http://ma463-r.analytics.edgesuite.net/config/beacon-7614.xml</config>
 			<plugin type="Object">
 				<js type="String">http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js</js>
 				<swf type="String">http://79423.analytics.edgesuite.net/csma/plugin/csma.swf</swf>
 			</plugin>
 			<dimensions type="Object">
-                <eventName type="String">AMP Sample Event</eventName>
-                <title type="String">AMP Sample Title</title>
-                <playerId type="String">#{player.mode} Player</playerId>
+                <eventName type="String">Legacy of Hope Concert TEST NAME</eventName>
+                <title type="String">Legacy of Hope TEST EVENT TITLE</title>
+                <playerId type="String">Web Player TEST PLAYER</playerId>
             </dimensions>
 		</mediaanalytics>
 		<locales type="Object">  
