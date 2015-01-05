@@ -75,7 +75,10 @@ $cardpadding: 0px;
 	padding: $cardpadding;
 	position: relative;
 	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	border-radius: 5px;	
+	-webkit-border-radius: 5px;	
 }
 
 
@@ -86,6 +89,7 @@ $cardpadding: 0px;
 	margin-bottom: 24px;
 	overflow: hidden;
 	border-radius: 6px;
+	-webkit-border-radius: 6px;
 }
 
 .latestnews a img{
@@ -265,6 +269,8 @@ and (max-width: $phone-landscape - 1px)  {
 	padding-left: 25px;
 
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 .news.withpress .latestpress .story:last-child{
@@ -336,6 +342,8 @@ and (max-width: $tablet-portrait - 1px)  {
 	padding-left: 25px;
 
 	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 .news.withpress .latestpress .story:last-child{

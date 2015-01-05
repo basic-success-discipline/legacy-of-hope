@@ -85,6 +85,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
 	padding: 10px;
 }
 
@@ -117,6 +118,8 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	position: relative;
 	width: 100%;
 	vertical-align:middle;
@@ -138,6 +141,7 @@
 	display: inline-block;
 	display: table-cell;
 	border-radius: 15px;
+	-webkit-border-radius: 15px;
 		  transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
@@ -146,6 +150,8 @@
   position: relative;
   // padding-right: 540px;
   box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
 }
 
 .therm .progressbar .rise{
@@ -187,6 +193,7 @@ text-shadow: -1px 0 $shadow, 0 1px $shadow, 1px 0 $shadow, 0 -1px $shadow;
 	vertical-align: middle;
 	line-height: 30px;
 	border-radius: 6px;
+	-webkit-border-radius: 6px;
 	
   position: relative;
 }
@@ -357,6 +364,7 @@ $shadow: $loh-blue;
 .therm .givenow a{
 	background-color: $loh-blue;
 	border-radius: 6px;
+	-webkit-border-radius: 6px;
 }
 
 
@@ -452,6 +460,7 @@ $shadow: $loh-blue;
 .therm .givenow a{
 	background-color: $loh-blue;
 	border-radius: 6px;
+	-webkit-border-radius: 6px;
 }
 
 

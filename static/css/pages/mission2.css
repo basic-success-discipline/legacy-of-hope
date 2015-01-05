@@ -51,6 +51,7 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
   padding: 10px; }
 
 .page .label i {
@@ -73,6 +74,8 @@
   padding-top: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   position: relative;
   width: 100%;
   vertical-align: middle;
@@ -89,13 +92,16 @@
   display: inline-block;
   display: table-cell;
   border-radius: 15px;
+  -webkit-border-radius: 15px;
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   overflow: hidden;
   position: relative;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
 
 .therm .progressbar .rise {
   width: 0;
@@ -120,6 +126,7 @@
   vertical-align: middle;
   line-height: 30px;
   border-radius: 6px;
+  -webkit-border-radius: 6px;
   position: relative; }
 
 .therm .givenow a {
@@ -221,7 +228,8 @@
 
   .therm .givenow a {
     background-color: #358fe3;
-    border-radius: 6px; }
+    border-radius: 6px;
+    -webkit-border-radius: 6px; }
 
   .therm .givenow:hover {
     background-color: #151515 !important; }
@@ -270,7 +278,8 @@
 
   .therm .givenow a {
     background-color: #358fe3;
-    border-radius: 6px; }
+    border-radius: 6px;
+    -webkit-border-radius: 6px; }
 
   .therm .givenow:hover {
     background-color: #151515 !important; }
