@@ -1014,7 +1014,7 @@ footer .copyright{
 }
 @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 119.9dppx){
 	.ios .floating-phone{
-		background: url(../img/iPhone-isometric.png) no-repeat;
+		background: url(../img/LOH_iPhone-isometric.png) no-repeat;
 		background-size: cover;
 	}
 	.android .floating-phone{
@@ -1028,7 +1028,7 @@ footer .copyright{
 }
 @media (-webkit-min-device-pixel-ratio: 1.1), (min-resolution: 120dppx){
 	.ios .floating-phone{
-		background: url(../img/iPhone-isometric@2x.png) no-repeat;
+		background: url(../img/LOH_iPhone-isometric@2x.png) no-repeat;
 		background-size: cover;
 	}
 	.android .floating-phone{
