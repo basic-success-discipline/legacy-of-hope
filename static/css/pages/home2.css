@@ -187,6 +187,7 @@ h5 {
   color: #fff;
   font-size: 14px;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
   text-decoration: none;
   display: inline-block;
   padding: 10px 22px 11px;
@@ -777,6 +778,9 @@ h4.subheading hr {
 
   .hero.first .heroblurb {
     left: 8%; }
+
+  .hero.second .heroblurb {
+    top: 20%; }
 
   .birthday p {
     font-size: 16px; } }
