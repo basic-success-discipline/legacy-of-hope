@@ -556,7 +556,9 @@ h4.subheading hr {
     display: none; }
 
   .getApp {
-    text-align: center; }
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: 20px; }
 
   .download-buttons {
     text-align: center; }
@@ -705,7 +707,9 @@ h4.subheading hr {
     display: none; }
 
   .getApp {
-    text-align: center; }
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: 20px; }
 
   .download-buttons {
     text-align: center; }

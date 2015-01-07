@@ -208,7 +208,12 @@ router.get('/', function(req, res) {
     });
 });
 
-
+router.get('/mission', function(req, res) {
+  res.redirect('/about');
+});
+router.get('/hospital', function(req, res) {
+  res.redirect('/about');
+});
 router.get('/about', function(req, res) {
   cmsgateway.getPageData('cms', 'about', 
     function(err, data) {
@@ -269,13 +274,13 @@ router.get('/guitarinitiative', function(req, res) {
     });
 });
 
-router.get('/hospital', function(req, res) {
-  cmsgateway.getPageData('cms', 'hospital', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('hospital', data);
-    });
-});
+// router.get('/hospital', function(req, res) {
+//   cmsgateway.getPageData('cms', 'hospital', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('hospital', data);
+//     });
+// });
 
 
 
@@ -310,16 +315,18 @@ router.get('/mandeladay', function(req, res) {
     });
 });
 
-router.get('/mission', function(req, res) {
-  cmsgateway.getPageData('cms', 'mission', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('mission', data);
-    });
+// router.get('/mission', function(req, res) {
+//   cmsgateway.getPageData('cms', 'mission', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('mission', data);
+//     });
+// });
+
+
+router.get('/press', function(req, res) {
+  res.redirect('/news');
 });
-
-
-
 router.get('/news', function(req, res) {
   cmsgateway.getPageData('cms', 'news', 
     function(err, data) {
@@ -336,13 +343,14 @@ router.get('/partners', function(req, res) {
     });
 });
 
-router.get('/press', function(req, res) {
-  cmsgateway.getPageData('cms', 'press', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('press', data);
-    });
-});
+// router.get('/press', function(req, res) {
+//   cmsgateway.getPageData('cms', 'press', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('press', data);
+//     });
+// });
+
 
 
 
