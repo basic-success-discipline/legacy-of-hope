@@ -68,10 +68,10 @@ h5{
 	bottom: 0;
 	left: 0;
 	right: 0%;
-	background-image: -webkit-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
-    background-image:    -moz-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
-    background-image:     -ms-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
-    background-image:      -o-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+	// background-image: -webkit-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+ //    background-image:    -moz-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+ //    background-image:     -ms-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+ //    background-image:      -o-linear-gradient(left, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
 }
 
 .heroblurbbg2{
@@ -81,10 +81,10 @@ h5{
 	bottom: 0;
 	left: 0;
 	right: 0%;
-	  background-image: -webkit-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
-    background-image:    -moz-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
-    background-image:     -ms-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
-    background-image:      -o-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+	  // background-image: -webkit-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+   //  background-image:    -moz-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+   //  background-image:     -ms-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
+   //  background-image:      -o-linear-gradient(right, rgba(21,21,21,0.9), rgba(21,21,21,0)); 
 }
 
 
@@ -220,6 +220,59 @@ text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 	color: $loh-blue;
 }
 
+
+.hero .getApp{
+	// background-color: green;
+	position:absolute;
+	bottom: calc(5px + 5%);
+	right: 0;
+	width: 100%;
+	// height: 40px;
+	text-align: right;
+}
+
+.getApp a:first-child{
+	color: white;
+	margin-right: 10px;
+	font-size: 16px;
+}
+.getApp a:hover{
+	text-decoration: underline;
+
+}
+ .getApp a.btn{
+ 	line-height: 24px;
+ color: #fff;
+font-size: 14px;
+border-radius: 10px;
+text-decoration: none;
+display: inline-block;
+padding: 10px 22px 11px;
+z-index: 1;
+position: relative;
+border: none;
+background: transparent;
+background-color: $loh-blue;
+margin-left: 2px;
+
+ }
+
+
+ .getApp a.btn.btn-primary{
+ 	background-color: $loh-green;
+ }
+ //  .getApp a.btn:hover, .getApp a.btn.btn-primary:hover{
+ // 	background-color: $loh-red;
+ // }
+
+ 
+
+ .getApp .btn .icon {
+vertical-align: bottom;
+font-size: 24px;
+margin-right: 7px;
+display: inline-block;
+}
 
 
 

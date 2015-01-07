@@ -36,11 +36,7 @@ h5 {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0%;
-  background-image: -webkit-linear-gradient(left, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0));
-  background-image: -moz-linear-gradient(left, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0));
-  background-image: -ms-linear-gradient(left, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0));
-  background-image: -o-linear-gradient(left, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0)); }
+  right: 0%; }
 
 .heroblurbbg2 {
   position: absolute;
@@ -48,11 +44,7 @@ h5 {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0%;
-  background-image: -webkit-linear-gradient(right, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0));
-  background-image: -moz-linear-gradient(right, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0));
-  background-image: -ms-linear-gradient(right, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0));
-  background-image: -o-linear-gradient(right, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0)); }
+  right: 0%; }
 
 .hero.second .heroblurb {
   color: white;
@@ -160,6 +152,45 @@ h5 {
 
 .hero.third .bottom.heroblurb a:hover {
   color: #358fe3; }
+
+.hero .getApp {
+  position: absolute;
+  bottom: calc(5px + 5%);
+  right: 0;
+  width: 100%;
+  text-align: right; }
+
+.getApp a:first-child {
+  color: white;
+  margin-right: 10px;
+  font-size: 16px; }
+
+.getApp a:hover {
+  text-decoration: underline; }
+
+.getApp a.btn {
+  line-height: 24px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 22px 11px;
+  z-index: 1;
+  position: relative;
+  border: none;
+  background: transparent;
+  background-color: #358fe3;
+  margin-left: 2px; }
+
+.getApp a.btn.btn-primary {
+  background-color: #4aae39; }
+
+.getApp .btn .icon {
+  vertical-align: bottom;
+  font-size: 24px;
+  margin-right: 7px;
+  display: inline-block; }
 
 .herospacer.left {
   margin-left: calc(-100% + 70px);

@@ -5,9 +5,14 @@
 
  <!-- CSS up here -->
  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+
+  <link href="/app/css/ionicons.css" rel="stylesheet" media="screen">
  
 
  <% include partials/loh-head %>
+
+ <!-- <meta name="apple-itunes-app" content="app-id=894117091, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+ <!-- <meta name="apple-itunes-app" content="app-id=894117091">  -->
 
  <!-- scripts down here -->
  <script type="text/javascript" src="/js/jquery.ellipsis.min.js"></script>
@@ -27,7 +32,7 @@
       <div class="wrapper-fix herofix">
 
         <div class="slider">
-        <div class="hero second alt">
+          <div class="hero second alt">
             <img src="img/home_hero2.jpg" alt="Nelson Mandela"/>
             <div class="heroblurbbg2 no-pp"></div>
             <div class="heroblurb mobileblurb">
@@ -37,10 +42,21 @@
                 <h4>Nelson Mandela</h4>
 
                <!--  <p class="herop1 randomquote mobileblurb"></p>
-                <p class="herop2 randomquoteauthor mobileblurb"></p> -->
-              </div>
+               <p class="herop2 randomquoteauthor mobileblurb"></p> -->
+             </div>
+           </div>
+           <div class="getApp">
+            <div class="wrapper-content">
+
+              <p class='download-buttons'>
+                <a href="/app">Get the App</a>
+                <a class='btn btn-secondary'href="https://itunes.apple.com/us/app/legacy-of-hope-mandela/id894117091?mt=8&uo=4" target="itunes_store"><span class='icon ion-social-apple'></span>App Store</a>
+                <a class='btn btn-primary' href="http://play.google.com/store/apps/details?id=com.bigbluecouch.MandelaLegacy" target="_blank"><span class='icon ion-social-android'></span>Play Store</a>
+              </p>
+              
             </div>
           </div>
+        </div>
           <!-- <div class="hero first">
             <img src="img/home_hero1.jpg" alt="Barclays Center"/>
             <div class="heroblurbbg no-pp"></div>
@@ -276,8 +292,8 @@ var qs = [];
                 swipe: true,
                 speed: 600,
               }
-            
-            
+
+
             }]
           });
         });
