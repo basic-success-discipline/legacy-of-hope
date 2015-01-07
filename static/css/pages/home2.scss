@@ -229,17 +229,52 @@ text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 	width: 100%;
 	// height: 40px;
 	text-align: right;
+	font-family: "Helvetica Neue";
 }
 
-.getApp a:first-child{
+// .getApp a:first-child{
+// 	color: white;
+// 	margin-right: 10px;
+// 	font-size: 16px;
+// 	position:relative;
+// 	// display: block;
+// }
+
+.moreinfo{
 	color: white;
+	position:relative;
+	display: inline-block;
+	vertical-align: bottom;
+	// margin-top: 50px;
+	text-align: center;
+	line-height: 17px;
+	margin-bottom: -1px;
 	margin-right: 10px;
-	font-size: 16px;
-}
-.getApp a:hover{
-	text-decoration: underline;
 
 }
+
+.moreinfo a{
+	display: block;
+	color: white;
+	font-style: italic;
+	font-size: 12px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+.moreinfo a:hover{
+	// text-decoration: underline;
+	color: $loh-blue;
+
+}
+
+// .moreinfo{
+// 	position: relative;
+// 	text-align:center;
+// 	clear:both;
+// 	float: none;
+
+// }
  .getApp a.btn{
  	line-height: 24px;
  color: #fff;

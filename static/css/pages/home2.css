@@ -158,15 +158,29 @@ h5 {
   bottom: calc(5px + 5%);
   right: 0;
   width: 100%;
-  text-align: right; }
+  text-align: right;
+  font-family: "Helvetica Neue"; }
 
-.getApp a:first-child {
+.moreinfo {
   color: white;
-  margin-right: 10px;
-  font-size: 16px; }
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  line-height: 17px;
+  margin-bottom: -1px;
+  margin-right: 10px; }
 
-.getApp a:hover {
-  text-decoration: underline; }
+.moreinfo a {
+  display: block;
+  color: white;
+  font-style: italic;
+  font-size: 12px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+.moreinfo a:hover {
+  color: #358fe3; }
 
 .getApp a.btn {
   line-height: 24px;
