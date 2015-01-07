@@ -206,6 +206,9 @@ h5 {
   margin-right: 7px;
   display: inline-block; }
 
+.getApp.mobile {
+  display: none; }
+
 .herospacer.left {
   margin-left: calc(-100% + 70px);
   float: left; }
@@ -545,6 +548,29 @@ h4.subheading hr {
   .hero.third .bottom.heroblurb p:nth-child(2) {
     text-align: center; }
 
+  .getApp.mobile {
+    display: block; }
+
+  .getApp.no-mobile {
+    display: none; }
+
+  .getApp {
+    text-align: center; }
+
+  .download-buttons {
+    text-align: center; }
+
+  .moreinfo {
+    display: block;
+    color: #151515;
+    margin-bottom: 30px;
+    font-size: 27px;
+    line-height: 27px; }
+
+  .moreinfo a {
+    color: #151515;
+    font-size: 15px; }
+
   .page {
     padding-top: 40px;
     position: relative;
@@ -669,6 +695,29 @@ h4.subheading hr {
 
   .hero.second.alt .heroblurb h4 {
     text-align: right;
+    font-size: 15px; }
+
+  .getApp.mobile {
+    display: block; }
+
+  .getApp.no-mobile {
+    display: none; }
+
+  .getApp {
+    text-align: center; }
+
+  .download-buttons {
+    text-align: center; }
+
+  .moreinfo {
+    display: block;
+    color: #151515;
+    margin-bottom: 30px;
+    font-size: 27px;
+    line-height: 27px; }
+
+  .moreinfo a {
+    color: #151515;
     font-size: 15px; }
 
   .page .container .about img {
