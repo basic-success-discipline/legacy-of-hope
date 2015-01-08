@@ -2,6 +2,7 @@
 
 
 
+
  var domstorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
  var amp, csfs,
  giftcode = getGiftCode(),
@@ -12,9 +13,6 @@
  volume = 10,
  vfactor = 20,
  defaultv = 3;
-
-
-
 
 // This function is called whenever a new stream is initiated (such as on page load and switching streams)
 
@@ -66,6 +64,7 @@ if (!xhr) {
           autoplay: true,
           title: "Legacy of Hope Concert",
       // poster: '/akamai/resources/eventmanagement/waiting_slate.png',
+
       temporalType: "live",
       controls: {
         mode: "none"
@@ -76,6 +75,7 @@ if (!xhr) {
       ],
       mediaanalytics:
       {
+
         dimensions: { title: "Legacy of Hope TEST TITLE", eventName: "Legacy of Hope Concert Angle: " + ang , viewerID: fingerprint.toString() }
       }
     }
@@ -126,6 +126,7 @@ xhr.send();
 function loadHandler(event)
 {
 
+
   // getMedia(1, function(media){
 
     var config = 
@@ -153,6 +154,7 @@ function loadHandler(event)
 
 function readyHandler(event)
 {
+
 // $('.akamai-video object').attr('wmode', 'transparent');
 amp.addEventListener("ended", endedHandler);
 if(angle==0){
@@ -176,6 +178,7 @@ function clickVideo(index){
 function loadVideo(index)
 {
 
+
   getMedia(index+1, function(media){
     amp.setMedia(media[0]);
     angle = index +1;
@@ -186,11 +189,10 @@ function loadVideo(index)
 function endedHandler(event)
 {
   togglePlayButton(false);
+
   loadVideo(angle-1);
   console.log("ended");
 }
-
-
 
 
 csfs = new CsFullscreen({
@@ -234,6 +236,7 @@ function playPause(){
 }
 
 function setVolume(value){
+
 
  volume = value;
  if(volume ==0){
@@ -293,6 +296,7 @@ function updateFSButton(){
 }
 
 
+
 function updateFSButton(fs){
   if(fs){
     $('.fstogglebutton').removeClass('fa-arrows-alt');
@@ -308,6 +312,7 @@ function gotoDonate(){
 
 
 $(document).ready(function() {
+
 
   $('.backstageBtn').attr("onclick", "gcPrompt()");
   if(giftcode && giftcode !=""){
@@ -374,6 +379,7 @@ function closeGeneralError(){
 function inputGC(){
   giftcode = $('.gc-text').val();
   if(!(giftcode && giftcode !="")){
+
     $('.general-error-wrapper p').html("Please enter a gift code.");
     $('.general-error-wrapper').css('display', 'table');
   }else{
@@ -527,6 +533,7 @@ function createCORSRequest(method, url) {
     xhr = null;
   }
   return xhr;
+
 }
 
 

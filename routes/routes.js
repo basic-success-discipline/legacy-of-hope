@@ -120,7 +120,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
         break;
 
 
-         case '25':
+        case '25':
         switch(req.params.article){
           case 'LarryKing':
           cmsgateway.getPageData('cms', 'larry', function(err, data) {data.authUser = authUser;res.render('larry', data);});
@@ -143,7 +143,7 @@ router.get('/:year/:month/:day/:article', function(req, res) {
       case '11':
       switch(req.params.day){
         case '6':
-         switch(req.params.article){
+        switch(req.params.article){
           case 'OctaviaSpencer':
           cmsgateway.getPageData('cms', 'octavia', function(err, data) {data.authUser = authUser;res.render('octavia', data);});
           break;
@@ -208,7 +208,12 @@ router.get('/', function(req, res) {
     });
 });
 
-
+router.get('/mission', function(req, res) {
+  res.redirect('/about');
+});
+router.get('/hospital', function(req, res) {
+  res.redirect('/about');
+});
 router.get('/about', function(req, res) {
   cmsgateway.getPageData('cms', 'about', 
     function(err, data) {
@@ -218,13 +223,13 @@ router.get('/about', function(req, res) {
 });
 
 
-// router.get('/app', function(req, res) {
-//   cmsgateway.getPageData('cms', 'app', 
-//     function(err, data) {
-//       data.authUser = authUser;
-//       res.render('app', data);
-//     });
-// });
+router.get('/app', function(req, res) {
+  cmsgateway.getPageData('cms', 'app', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('app', data);
+    });
+});
 
 router.get('/board', function(req, res) {
   cmsgateway.getPageData('cms', 'board', 
@@ -253,13 +258,13 @@ router.get('/concert', function(req, res) {
 //     });
 // });
 
-router.get('/donate', function(req, res) {
-  cmsgateway.getPageData('cms', 'donate', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('donate', data);
-    });
-});
+// router.get('/donate', function(req, res) {
+//   cmsgateway.getPageData('cms', 'donate', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('donate', data);
+//     });
+// });
 
 router.get('/guitarinitiative', function(req, res) {
   cmsgateway.getPageData('cms', 'guitarinitiative', 
@@ -269,13 +274,13 @@ router.get('/guitarinitiative', function(req, res) {
     });
 });
 
-router.get('/hospital', function(req, res) {
-  cmsgateway.getPageData('cms', 'hospital', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('hospital', data);
-    });
-});
+// router.get('/hospital', function(req, res) {
+//   cmsgateway.getPageData('cms', 'hospital', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('hospital', data);
+//     });
+// });
 
 
 
@@ -310,16 +315,18 @@ router.get('/mandeladay', function(req, res) {
     });
 });
 
-router.get('/mission', function(req, res) {
-  cmsgateway.getPageData('cms', 'mission', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('mission', data);
-    });
+// router.get('/mission', function(req, res) {
+//   cmsgateway.getPageData('cms', 'mission', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('mission', data);
+//     });
+// });
+
+
+router.get('/press', function(req, res) {
+  res.redirect('/news');
 });
-
-
-
 router.get('/news', function(req, res) {
   cmsgateway.getPageData('cms', 'news', 
     function(err, data) {
@@ -336,17 +343,18 @@ router.get('/partners', function(req, res) {
     });
 });
 
-router.get('/press', function(req, res) {
-  cmsgateway.getPageData('cms', 'press', 
-    function(err, data) {
-      data.authUser = authUser;
-      res.render('press', data);
-    });
-});
+// router.get('/press', function(req, res) {
+//   cmsgateway.getPageData('cms', 'press', 
+//     function(err, data) {
+//       data.authUser = authUser;
+//       res.render('press', data);
+//     });
+// });
 
 
 
- 
+
+
 router.use('/sponsors', utils.basicAuth('sponsor', 'lohc1049'));
 router.get('/sponsors', function(req, res) {
   // authUser = true; 
@@ -382,15 +390,35 @@ if (env === 'development') {
   }
 
 
-//make error page
-router.get('*', function(req, res) {
-  res.redirect('/');
+router.get('/videoplayer', function(req, res) {
+
+  cmsgateway.getPageData('cms', 'videoplayer', 
+      function(err, data) {
+        data.authUser = authUser;
+        data.endpoint = "no url";
+        res.render('videoplayer', data);
+      });
 });
 
 
 
 
 
+// robots
+
+var env = process.env.NODE_ENV || 'development';
+if (env === 'development') {
+  router.get('/robots.txt', function(req, res) {
+      res.type('text/plain')
+      res.send("User-agent: *\nDisallow: /");
+});
+};
+
+
+//make error page
+router.get('*', function(req, res) {
+  res.redirect('/');
+});
 
 
 
@@ -465,6 +493,60 @@ router.post('/contact', function (req, res) {
     });
 });
 
+
+
+
+
+
+// router.get('/videoplayer', function(req, res) {
+//   var url = "no url";
+//   var options = {
+//     uri: 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/urls/hds',
+//     method: 'POST',
+//     json: {
+//       'Angle': 1, 
+//       'GiftCode': '' 
+//     }
+//   };
+
+//   request(options, function (error, response, body) {
+//     if (!error && response.statusCode == 200) {
+//      url=body;
+//      cmsgateway.getPageData('cms', 'videoplayer', 
+//       function(err, data) {
+//         data.authUser = authUser;
+//         data.endpoint = url;
+//         res.render('videoplayer', data);
+//       });
+//    }
+//  });
+// });
+
+
+
+router.post('/video', function(req, res){
+ var angle = req.body.Angle;
+ var giftcode = req.body.GiftCode;
+ var url = 'https://ipms-dev.appspot.com/ipms/events/LOH20141203/streams/' + angle + "/hds";
+ if(giftcode!=""){
+  url = url + "?giftcode=" + giftcode;
+ }else if (angle==2){
+  res.send("Error -- need a gift code");
+ }
+  var options = {
+    uri: url,
+    method: 'GET',
+  };
+
+   request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      console.log(body);
+     res.send(body);
+   }else{
+    console.log("Status code: " + response.statusCode + "/nError: " +error);
+   }
+ });
+});
 
 
 

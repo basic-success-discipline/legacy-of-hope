@@ -550,6 +550,15 @@
 .playerimg5 {
   height: 30px; }
 
+.video-menu .playbutton:hover {
+  color: #358fe3; }
+
+.csBtn {
+  display: none; }
+
+.full-screen .csBtn {
+  display: inline-block; }
+
 .backstageBtn.withpngs {
   padding-left: 10px;
   width: auto; }

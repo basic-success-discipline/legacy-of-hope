@@ -700,6 +700,18 @@ $video-menu-bar-height: 50px;
 	height: 30px;
 }
 
+.video-menu .playbutton:hover{
+	color: $loh-blue;
+
+	}
+
+.csBtn{
+	display:none;
+}
+
+.full-screen .csBtn{
+	display: inline-block;
+}
 
 
 .backstageBtn.withpngs{
@@ -760,6 +772,7 @@ body:not(.fullscreen) #cs-setlist{
 body:not(.fullscreen) #cs-setlist.active{
 	margin-top: 0px;
 }
+
 
 
 

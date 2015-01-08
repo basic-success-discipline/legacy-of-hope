@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Rego - Documentation</title>
+   <link rel="stylesheet" href="assets/style.css" type="text/css">
+</head>
+
+<body>
+   <div class="container">
+   
+      <h3 class="center alt">&ldquo;Rego - App Landing Page&rdquo; Documentation by &ldquo;Tanguy Albrici&rdquo; v1.0</h3>
+      
+      <hr>
+      
+      <h1 class="center">&ldquo;Rego - App Landing Page&rdquo;</h1>
+      
+      <div class="borderTop">
+         <div class="span-6 colborder info prepend-1">
+            <p class="prepend-top">
+               <strong>Created:</strong> 08/17/2014<br>
+               <strong>By: </strong><a href="http://themeforest.net/user/TanguyAlbrici">Tanguy Albrici</a>
+            </p>
+         </div>   
+   
+         <div class="span-12 last">
+            <p class="prepend-top append-0">Thank you for purchasing my template! If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/TanguyAlbrici">here</a>.</p>
+         </div>
+      </div>
+      
+      <hr>
+      
+      <h2 id="toc" class="alt">Table of Contents</h2>
+      <ol>
+         <li><a href="#icons">Icons</a></li>
+         <li><a href="#animations">Animations</a></li>
+         <li><a href="#scrollTo">jQuery scrollTo</a></li>
+         <li><a href="#owl-nivo">Owl Carousel & Nivo Lightbox</a></li>
+         <li><a href="#retina">Retina Images</a></li>
+      </ol>
+      
+      <hr>
+      
+      <h3 id="icons"><strong>1) Icons</strong> - <a href="#toc">top</a></h3>
+      <p>This template uses the open source icon font <a href="http://ionicons.com/">ionicons</a> which contains more than 600 resizeable icons. You can use <a href="http://ionicons.com/">ionicons.com</a> search feature to easily find the icon you want to use. Once you've copied the desired icon's CSS classname, simply add the class 'icon' and the desired icon's classname, such as ion-home to an HTML element.</p>
+      <pre>&lt;span class="icon ion-home"&gt;&lt;/span&gt;</pre>
+      <p>You can then easily resize and change the color of your icon with the  CSS properties 'font-size' and 'color'.</p>
+
+      <hr>
+
+      <h3 id="animations"><strong>3) Animations</strong> - <a href="#toc">top</a></h3>
+
+      <p>This template uses the CSS animation library <a href="http://daneden.github.io/animate.css/">animate.css</a> completed by the javascript library <a href="http://mynameismatthieu.com/WOW/">wow.js</a> to create beautiful animations that reveal as you scroll. To animate an HTML element, select an animation name on <a href="http://daneden.github.io/animate.css/">animate.css</a> and simply add it as a class of the element. If you want the animation to start only once you scroll past it, simply add the classname 'wow' to your element.</p> 
+
+      <pre>&lt;div class="wow fadeInUp"&gt;&lt;/div&gt;</pre>
+
+      <p>For more information about advanced options, please refer to the respective documentation pages of <a href="https://github.com/daneden/animate.css">animate.css</a> and <a href="http://mynameismatthieu.com/WOW/docs.html">wow.js</a>.</p> 
+      <hr>
+      
+      <h3 id="scrollTo"><strong>4) jQuery scrollTo</strong> - <a href="#toc">top</a></h3>
+      
+      <p>This template uses the jQuery library <a href="http://demos.flesler.com/jquery/scrollTo/">scrollTo</a> and the <a href="http://trevordavis.net/blog/jquery-one-page-navigation-plugin/">jQuery One Page Navigation Plugin</a> to create smooth scrolling animations to navigate within the page.</p>
+      <p>In order to set up a navigation bar, you first need to make sure that its markup is as followed:</p>
+      <pre>
+&lt;ul id='nav'&gt;
+   &lt;li class='current'&gt;&lt;a href="#section-1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="#section-2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="#section-3"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id='section-1'&gt;This is section 1&lt;/div&gt;
+&lt;div id='section-2'&gt;This is section 2&lt;/div&gt;
+&lt;div id='section-3'&gt;This is section 3&lt;/div&gt;</pre>
+      <p>Then, simply call the plugin on the navigation with this javascript code:</p>
+      <pre>
+$(document).ready(function() {
+  $('#nav').onePageNav();
+});</pre>
+
+      <p>If you would like a button (#my-button) to bring the user to a specific HTML element (#target-element) with a scroll animation, simply add this javascript code:</p>
+      <pre>
+$('#my-button').click(function(){
+   $.scrollTo( $('#target-element').offset(), 800 );
+});</pre>
+      <p>There are many other ways to specify the target of a scrollTo animation that you can discover on the <a href="http://demos.flesler.com/jquery/scrollTo/">jQuery.ScrollTo Documentation Page</a></p>
+      <hr>
+      
+      <h3 id="owl-nivo"><strong>4) Owl Carousel & Nivo Lightbox</strong> - <a href="#toc">top</a></h3>
+      
+      <p>This template uses the jQuery plugins <a href="http://owlgraphic.com/owlcarousel/">Owl Carousel</a> and <a href="http://dev7studios.com/plugins/nivo-lightbox/">Nivo Lightbox</a> to display responsive and touch friendly carousels. In order to setup an new carousel, you first need to add the following markup :</p>
+      <pre>
+&lt;div id="owl-example" class="owl-carousel"&gt;
+   &lt;div&gt; Your Content &lt;/div&gt;
+   &lt;div&gt; Your Content &lt;/div&gt;
+   &lt;div&gt; Your Content &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <p>Then, simply call the plugin and the carousel is ready:</p>
+      <pre>
+$(document).ready(function() {
+   $("#owl-example").owlCarousel();
+});</pre>
+      <p>If you want your carousel items to appear in a lightbox (pop-up) when clicked, you will need to create a link to the content you want to display in the lightbox (for exemple an image) and then call th Nivo Lightbox plugin on this link, as shown below :</p>
+      <pre>
+&lt;div id="owl-example" class="owl-carousel"&gt;
+   &lt;div&gt;
+      &lt;a href="image_large.jpg" title="This is an image title"&gt;
+         &lt;img src="image_thumb.jpg"/&gt;
+      &lt;/a&gt;
+   &lt;/div&gt;
+   &lt;div&gt;
+      &lt;a href="image_large.jpg" title="This is an image title"&gt;
+         &lt;img src="image_thumb.jpg"/&gt;
+      &lt;/a&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+<pre>
+$(document).ready(function() {
+   $('#owl-example a').nivoLightbox();
+});</pre>
+      <p>To learn more about advanced settings that you can use to customize your carousel, please refer to the respective documentation pages of <a href="http://owlgraphic.com/owlcarousel/#customizing">Owl Carousel</a> and <a href="http://docs.dev7studios.com/jquery-plugins/nivo-lightbox">Nivo Lightbox</a>. </p>
+
+      <hr>
+
+      <h3 id="retina"><strong>5) Retina Images</strong> - <a href="#toc">top</a></h3>
+      
+      <p>This template uses the javascript plugin <a href="http://imulus.github.io/retinajs/">retina.js</a> to serve @2x retina images for HiDPI screens. That means that for every image that is displayed with the HTML img tag, this script will search for the corresponding high resolution image that uses Apple's prescribed high-resolution modifier (@2x). <p>
+      <p>For example, if you have an image on your page that looks like this:</p>
+      <pre>&lt;img src="/images/my_image.png" &gt;</pre>
+      <p>The script will check your server to see if an alternative image exists at this path:</p>
+      <pre>"/images/my_image@2x.png"</pre>
+      <p>To include retina graphics when displaying an image via the CSS property 'background', add the retina-specific rule at the very end of the style.css file, inside the apropriate media query :</p>
+      <pre>
+@media (-webkit-min-device-pixel-ratio: 1.1), (min-resolution: 120dppx){
+   /* Retina-specific rule(s) here */
+}</pre>
+
+      <p><a href="#toc">Go To Table of Contents</a></p>
+      
+      <hr class="space">
+   </div><!-- end div .container -->
+</body>
+</html>
