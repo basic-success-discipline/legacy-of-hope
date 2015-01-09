@@ -138,6 +138,14 @@ fs.mkdir(path,function(e){
 
 var pressStories = [
 
+{
+  title: "U2 Shows Support for the Legacy of Hope Foundation",
+  image: "/img/U2_guitars.jpg",
+  blurb: "Legendary rock band U2 has thrown its support behind the Legacy of Hope Foundation, a nonprofit organization aiding to bring one of Nelson Mandela's final wishes to fruition - the construction of the 5th dedicated children's hospital on the entire continent of Africa.",
+  date: "January 9, 2015",
+  link: "http://www.prnewswire.com/news-releases/u2-shows-support-for-the-legacy-of-hope-foundation-and-their-campaign-to-help-build-the-nelson-mandela-childrens-hospital-300018435.html",
+  host: "PR Newswire"
+},
 
 {
   title: "Legacy Of Hope Foundation Names Honorary Board In Support Of The Nelson Mandela Children's Hospital",
