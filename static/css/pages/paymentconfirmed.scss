@@ -1,0 +1,195 @@
+@import "../variables.scss";
+
+
+
+
+.nav .currentpage a{
+	color: white;
+}
+
+.navbar .menu-donate{
+	background-color: $loh-green;
+}
+
+// PAGE
+
+.wrapper-inner{
+	background-color: white;	
+}
+
+.page{
+	// display: block;
+	padding-bottom: 54px;
+	// width: 100%;
+	// background-color: white;
+}
+
+
+.page h1{
+	text-align: left;
+	// display: inline-block;
+	margin-bottom: 0px;
+	margin-left: -2px;
+	margin-bottom: 5px;
+	// clear:right;
+
+
+}
+
+
+.page  p{
+	font-size: 20px;
+}
+
+
+.button{
+	width: 100%;
+	text-align: center;
+	padding: 10px 20px;
+	background-color: $loh-blue;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 20px;
+		cursor: pointer;
+	transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	 	opacity: 0.5;
+ 	cursor: default;
+
+   box-shadow: 1px 1px 2px #888888;
+   -webkit-box-shadow: 1px 1px 2px #888888; 
+   -moz-box-shadow: 1px 1px 2px #888888; 
+}
+.button.enabled{
+ 	opacity: 1;
+ 	cursor: pointer;
+ }
+.button.enabled:hover{
+	background-color: $loh-green;
+}
+
+.button h5{
+	margin-bottom: 0;
+	color: white;
+	font-family: "Helvetica Neue Light";
+	text-transform: none;
+	line-height: 1;
+	padding-top: 5px;
+
+}
+
+
+
+ .code-wrapper{
+	text-align:center;
+
+ }
+
+.code-wrapper p{
+	display: inline-block;
+}
+p.giftcode{
+	color: $loh-green;
+	text-align:center;
+	font-family: "Helvetica Neue";
+	font-size: 25px;
+	cursor:pointer;
+}
+
+
+.paymentid-wrapper{
+	text-align: left;
+}
+
+
+
+
+// STICKY FOOTER
+
+.prefooter{
+	display:none;
+}
+
+.push{
+	height: $foot-height !important;
+}
+
+.wrapper-inner{
+	margin-bottom: -$foot-height !important;
+}
+
+
+
+
+
+
+
+// MOBILE - PORTRAIT
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+.nav .currentpage{
+	padding-right: 8px;
+}
+
+.page h1{
+	text-align: center;
+}
+
+
+}
+
+
+// MOBILE - LANDSCAPE
+
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+.nav .currentpage{
+	padding-right: 8px;
+}
+.page h1{
+	text-align: center;
+}
+
+
+}
+
+
+
+
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+.nav .currentpage{
+	padding-right: 8px;
+}
+
+
+
+	
+
+
+}
+
+
+// TABLET - LANDSCAPE
+@media only screen 
+and (min-width : $tablet-landscape) 
+and (max-width : $desktop - 1px) {
+
+
+
+
+}

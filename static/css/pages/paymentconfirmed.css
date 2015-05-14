@@ -1,0 +1,100 @@
+.nav .currentpage a {
+  color: white; }
+
+.navbar .menu-donate {
+  background-color: #4aae39; }
+
+.wrapper-inner {
+  background-color: white; }
+
+.page {
+  padding-bottom: 54px; }
+
+.page h1 {
+  text-align: left;
+  margin-bottom: 0px;
+  margin-left: -2px;
+  margin-bottom: 5px; }
+
+.page p {
+  font-size: 20px; }
+
+.button {
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #358fe3;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: 1px 1px 2px #888888;
+  -webkit-box-shadow: 1px 1px 2px #888888;
+  -moz-box-shadow: 1px 1px 2px #888888; }
+
+.button.enabled {
+  opacity: 1;
+  cursor: pointer; }
+
+.button.enabled:hover {
+  background-color: #4aae39; }
+
+.button h5 {
+  margin-bottom: 0;
+  color: white;
+  font-family: "Helvetica Neue Light";
+  text-transform: none;
+  line-height: 1;
+  padding-top: 5px; }
+
+.code-wrapper {
+  text-align: center; }
+
+.code-wrapper p {
+  display: inline-block; }
+
+p.giftcode {
+  color: #4aae39;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 25px;
+  cursor: pointer; }
+
+.paymentid-wrapper {
+  text-align: left; }
+
+.prefooter {
+  display: none; }
+
+.push {
+  height: 60px !important; }
+
+.wrapper-inner {
+  margin-bottom: -60px !important; }
+
+@media only screen and (max-width: 479px) {
+  .nav .currentpage {
+    padding-right: 8px; }
+
+  .page h1 {
+    text-align: center; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .nav .currentpage {
+    padding-right: 8px; }
+
+  .page h1 {
+    text-align: center; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav .currentpage {
+    padding-right: 8px; } }

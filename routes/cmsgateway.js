@@ -457,9 +457,17 @@ var donate = {
   description: "Donate to the Legacy of Hope",
   stylesheet: "donate.css",
   currentpage: "menu-donate",
-  type: "website",
-  swag: swag,
-  donate_options: donate_options
+  type: "website"
+};
+
+var donate3 = {
+  title: "Donate to the Legacy of Hope",
+  url: "http://legacyofhope.org/donate",
+  thumb_img: "mission_hero.jpg",
+  description: "Donate to the Legacy of Hope",
+  stylesheet: "donate3.css",
+  currentpage: "menu-donate",
+  type: "website"
 };
 
 
@@ -591,6 +599,18 @@ var partners = {
   sponsorlist: sponsorlist
 };
 
+
+var paymentconfirmed = {
+  title: "Payment Confirmed",
+  url: "http://legacyofhope.org/paymentconfirmed",
+  thumb_img: "",
+  description: "",
+  stylesheet: "paymentconfirmed.css",
+  currentpage: "menu-donate",
+  type: "website"
+}
+
+
 var press = {
   title: "Press - Legacy of Hope",
   url: "http://legacyofhope.org/press",
@@ -613,6 +633,7 @@ var pr1 = {
   type: "article"
 
 };
+
 
 var ruby = {
   title: "Ruby Bridges Spotlight - Legacy of Hope",
@@ -700,6 +721,9 @@ exports.getPageData = function(category, page, callback) {
       case 'donate':
       callback(null, donate);
       break;
+       case 'donate3':
+      callback(null, donate3);
+      break;
       case 'graca':
       callback(null, graca);
       break;
@@ -735,6 +759,9 @@ exports.getPageData = function(category, page, callback) {
       break;
       case 'partners':
       callback(null, partners);
+      break;
+      case 'paymentconfirmed':
+      callback(null, paymentconfirmed);
       break;
       case 'press':
       callback(null, press);

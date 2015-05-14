@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <% include partials/loh-head %>
+
+
+  <link rel="stylesheet" href="/css/stickyfooter.css" media="screen" type="text/css" />
+
+
+</head>
+
+<body>
+  <div class="wrapper pcpage"> 
+    <div class="wrapper-inner">
+      <% include partials/loh-menu %>
+
+      <div class="page container">
+        <div class="twelve columns">
+          <h1>Payment Confirmed</h1>
+        </div>
+
+        <div class="eight columns">
+        <p>Thank you for donating to the Legacy of Hope Foundation! Please enjoy backstage access to the concert and HD-quality streaming by using this free gift code. This gift code has also been sent to the email address you provided.</p>
+      </div>
+      <div class="four columns code-wrapper">
+        <p>Gift Code: &nbsp</p>
+        <p class="giftcode" onclick="gotoVideoPlayer()"></p>
+        <div class="button returnBtn enabled" onclick="gotoVideoPlayer()"><h5>Watch the concert</h5></div>
+      </div>
+      <div class="twelve columns code-wrapper paymentid-wrapper">
+
+      <p>Payment ID: &nbsp</p>
+        <p class="paymentid"></p>
+        </div>
+
+
+
+        
+  <script type='text/javascript' src="/js/paymentconfirmed.js"></script>
+
+  <div class="push"></div>
+</div>
+</div>
+<% include partials/loh-footer %>
+
+</div>
+</body>
+</html>

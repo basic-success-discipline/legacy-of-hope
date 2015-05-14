@@ -38,6 +38,12 @@ html, body, .wrapper, .wrapper-inner {
 
 @media only screen 
 and (max-width: $phone-landscape - 1px)  {
+
+// Fix for IOS scrolling
+  html, body, .wrapper, .wrapper-inner {
+  height: initial;
+}
+
 .push {
   height: 2 * $pp-foot-height; /* .push must be the same height as .footer */
 }
@@ -51,6 +57,10 @@ and (max-width: $phone-landscape - 1px)  {
 @media only screen 
 and (min-width: $phone-landscape) 
 and (max-width: $tablet-portrait - 1px)  {
+  // Fix for IOS scrolling
+  html, body, .wrapper, .wrapper-inner {
+  height: initial;
+}
 
 }
 

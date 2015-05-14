@@ -372,6 +372,7 @@ $video-menu-bar-height: 50px;
 	-ms-writing-mode: bt-lr; /* IE */
 	-webkit-appearance: slider-vertical; /* WebKit */
 	-moz-appearance: slider-vertical; /* WebKit */
+	appearance: slider-vertical;
 	width: 20px;
 	height: 90px;
     // padding: 0 5px;
@@ -403,16 +404,19 @@ $video-menu-bar-height: 50px;
 .volume .range input.ie::-ms-fill-lower {
 	background: rgb(51,51,51);
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 .volume .range input.ie::-ms-fill-upper {
 	background: rgb(51,51,51);
 	border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 .volume .range input.ie::-ms-thumb {
 	border: none;
 	height: 14px;
 	width: 14px;
 	border-radius: 50%;
+	-webkit-border-radius: 50%;
 	background: white;
 }
 .left-menu .volume:hover{
@@ -494,6 +498,8 @@ $video-menu-bar-height: 50px;
 	cursor: pointer;
 	display: inline-block;
 	margin-right: 10px;
+	-webkit-box-shadow: -2px 2px 5px #888888;
+	-moz-box-shadow: -2px 2px 5px #888888;
 	box-shadow: -2px 2px 5px #888888;
 	background-color: rgb( 86, 152,45);
 	position:relative;
@@ -574,6 +580,7 @@ $video-menu-bar-height: 50px;
 	// background-color: rgba(21,21,21, 0.8);
 	background-color: rgba(59,59,59, 0.9);
 	padding: 25px 25px 25px 25px;
+	-webkit-border-radius:10px;
 	border-radius:10px;
 	// bottom: 100%;
 	width: 300px;
@@ -587,6 +594,8 @@ $video-menu-bar-height: 50px;
 .general-error{
 	padding: 15px 15px;
 	background-color: rgba(59,59,59,1);
+	-webkit-box-shadow: -2px 2px 5px #111;
+	-moz-box-shadow: -2px 2px 5px #111;
 	box-shadow: -2px 2px 5px #111;
 }
 
@@ -641,6 +650,7 @@ $video-menu-bar-height: 50px;
 	margin-left:auto;
 	margin-right: auto;
 	width: 200px;
+	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	text-align: center;
 	margin-bottom: 8px;

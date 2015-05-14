@@ -258,13 +258,14 @@ router.get('/concert', function(req, res) {
 //     });
 // });
 
-// router.get('/donate', function(req, res) {
-//   cmsgateway.getPageData('cms', 'donate', 
-//     function(err, data) {
-//       data.authUser = authUser;
-//       res.render('donate', data);
-//     });
-// });
+router.get('/donate', function(req, res) {
+  cmsgateway.getPageData('cms', 'donate3', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('donate3', data);
+    });
+});
+
 
 router.get('/guitarinitiative', function(req, res) {
   cmsgateway.getPageData('cms', 'guitarinitiative', 
@@ -343,6 +344,7 @@ router.get('/partners', function(req, res) {
     });
 });
 
+
 // router.get('/press', function(req, res) {
 //   cmsgateway.getPageData('cms', 'press', 
 //     function(err, data) {
@@ -351,7 +353,13 @@ router.get('/partners', function(req, res) {
 //     });
 // });
 
-
+router.get('/paymentconfirmed', function(req, res) {
+  cmsgateway.getPageData('cms', 'paymentconfirmed', 
+    function(err, data) {
+      data.authUser = authUser;
+      res.render('paymentconfirmed', data);
+    });
+});
 
 
 
@@ -366,15 +374,15 @@ router.get('/sponsors', function(req, res) {
 });
 
 
-// router.get('/videoplayer', function(req, res) {
+router.get('/videoplayer', function(req, res) {
 
-//   cmsgateway.getPageData('cms', 'videoplayer', 
-//       function(err, data) {
-//         data.authUser = authUser;
-//         data.endpoint = "no url";
-//         res.render('videoplayer', data);
-//       });
-// });
+  cmsgateway.getPageData('cms', 'videoplayer', 
+      function(err, data) {
+        data.authUser = authUser;
+        data.endpoint = "no url";
+        res.render('videoplayer', data);
+      });
+});
 
 // robots
 if (env === 'development') {

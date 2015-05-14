@@ -1,0 +1,286 @@
+@import "../variables.scss";
+
+
+
+
+.nav .currentpage a{
+	color: white;
+}
+
+.navbar .menu-donate{
+	background-color: $loh-green;
+}
+
+// PAGE
+
+.wrapper-inner{
+	background-color: white;
+		
+}
+
+.page hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(53,143,227,0.5); 
+    background-image:    -webkit-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0));
+    background-image:    -moz-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0));
+    background-image:     -ms-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0)); 
+    background-image:      -o-linear-gradient(left, rgba(21,21,21,0), rgba(53,143,227,0.5), rgba(21,21,21,0)); 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    clear:both;
+
+
+
+}
+
+.page{
+	// display: block;
+	padding-bottom: 54px;
+	// width: 100%;
+	// background-color: white;
+}
+
+
+.page h1{
+	text-align: left;
+	// display: inline-block;
+	margin-bottom: 0px;
+	margin-left: -2px;
+	margin-bottom: 5px;
+	// clear:right;
+
+
+}
+
+
+.page  p{
+	font-size: 20px;
+}
+
+
+.heading{
+	text-align:left;
+	margin-bottom: 20px;
+}
+.heading h3{
+		text-align: center;
+	margin-bottom: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.heading.disabled h3{
+	color: rgb(200,200,200);
+}
+.button{
+	width: 100%;
+	text-align: center;
+	padding: 10px 15px;
+	background-color: #3498db;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 20px;
+		cursor: pointer;
+	transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	 	opacity: 0.5;
+ 	cursor: default;
+
+   box-shadow: 1px 1px 2px #888888;
+   -webkit-box-shadow: 1px 1px 2px #888888; 
+   -moz-box-shadow: 1px 1px 2px #888888; 
+   max-width: 200px;
+}
+.button.enabled{
+ 	opacity: 1;
+ 	cursor: pointer;
+ }
+.button.enabled:hover{
+	-ms-transform: translate(-1px,-1px);
+    -webkit-transform:  translate(-1px,-1px); 
+    -moz-transform: translate(-1px,-1px);
+    -o-transform:  translate(-1px,-1px); 
+    transform:  translate(-1px,-1px);
+	box-shadow: 2px 2px 4px #888888;
+   -webkit-box-shadow: 2px 2px 4px #888888; 
+   -moz-box-shadow: 2px 2px 4px #888888; 
+}
+
+.button.enabled.selected{
+	background-color:#27ae60;
+}
+
+.button h5{
+	margin-bottom: 0;
+	color: white;
+	font-family: "Helvetica Neue Light";
+	text-transform: none;
+	line-height: 1;
+	padding-top: 5px;
+
+}
+
+.step{
+	margin-top: 50px;
+}
+.step1{
+	text-align:center;
+}
+.step1 .button{
+	width: 32%;
+	display: inline-block;
+
+}
+
+input[type="text"] {
+  font-size: 18px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px inset;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    padding-top: 11px;
+ padding-bottom: 8px;
+ margin-bottom: 18px;
+ text-align: center;
+ font-family: "Helvetica Neue Light";
+ vertical-align: middle;
+ // line-height: 1.6em;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+input:disabled{
+	background-color: rgb(240,240,240);
+}
+
+
+.submission{
+margin-top: 30px;
+}
+.submit.button{
+	max-width: 600px;
+}
+
+
+
+
+// STICKY FOOTER
+
+.prefooter{
+	display:none;
+}
+
+.push{
+	height: $foot-height !important;
+}
+
+.wrapper-inner{
+	margin-bottom: -$foot-height !important;
+}
+
+
+
+
+
+
+
+// MOBILE - PORTRAIT
+@media only screen 
+and (max-width: $phone-landscape - 1px)  {
+
+.nav .currentpage{
+	padding-right: 8px;
+}
+
+.heading{
+	text-align: center;
+}
+.heading h3{
+	font-size: 24px;
+}
+
+.page h1{
+	text-align: center;
+}
+.button{
+	max-width: 600px;
+}
+
+}
+
+
+// MOBILE - LANDSCAPE
+
+@media only screen 
+and (min-width: $phone-landscape) 
+and (max-width: $tablet-portrait - 1px)  {
+
+.nav .currentpage{
+	padding-right: 8px;
+}
+.heading{
+	text-align: center;
+}
+.heading h3{
+	font-size: 24px;
+}
+
+.page h1{
+	text-align: center;
+}
+
+.button{
+	max-width: 600px;
+}
+
+}
+
+
+
+
+
+// TABLET - PORTRAIT
+@media only screen 
+and (min-width : $tablet-portrait) 
+and (max-width : $tablet-landscape - 1px) {
+
+.nav .currentpage{
+	padding-right: 8px;
+}
+
+
+
+	
+
+
+}
+
+
+// TABLET - LANDSCAPE
+@media only screen 
+and (min-width : $tablet-landscape) 
+and (max-width : $desktop - 1px) {
+
+
+
+
+}
