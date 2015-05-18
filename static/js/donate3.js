@@ -87,7 +87,7 @@ $('.submit.button').click(function(){
 
 function initiatePayment(){
 
-var baseurl = 'https://ipms-dev.appspot.com/ipms/donations/donate';
+var baseurl = 'https://ipms-ua.appspot.com/ipms/donations/donate';
 var returnurl = $.url.encode('http://' + window.location.host + "/paymentconfirmed");
 
 var url = baseurl +'?zotz=161803&amount=' + amount + '&event=LOH-AUTH&email=' + email + '&payby=' + paymentmethod + '&returnurl=' + returnurl;

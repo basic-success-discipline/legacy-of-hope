@@ -148,6 +148,38 @@ input:disabled {
 .wrapper-inner {
   margin-bottom: -60px !important; }
 
+ul.donate {
+  font-family: "Open Sans", serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #151920;
+  text-align: left;
+  list-style: disc;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+ul.donate li {
+  color: #151920;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#donations {
+  padding-top: 30px;
+}
+
+#donations p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#donations h1 {
+  
+}
+
 @media only screen and (max-width: 479px) {
   .nav .currentpage {
     padding-right: 8px; }
